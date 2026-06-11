@@ -6955,12 +6955,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "LB",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/otux671757089023.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/otux671757089023.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cook-bournemouth",
@@ -7091,9 +7091,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bournemouth",
         "clubBadge": "🍒",
         "position": "ST",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cvegel1757018013.png"
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cvegel1757018013.png",
+        "cardTheme": "standard"
     },
     {
         "id": "flekken-brentford",
@@ -8540,9 +8541,10 @@ const DEFAULT_PLAYERS = [
         "club": "Fulham",
         "clubBadge": "⚪⚫",
         "position": "RB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uc84ft1757070324.png"
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uc84ft1757070324.png",
+        "cardTheme": "standard"
     },
     {
         "id": "berge-fulham",
@@ -10057,13 +10059,13 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "clubBadge": "🇧🇪",
         "position": "RB",
-        "rating": 77,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LB",
             "RWB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "theate-wc26",
@@ -10207,12 +10209,13 @@ const DEFAULT_PLAYERS = [
         "nationality": "France",
         "flag": "🇫🇷",
         "league": "Ligue 1",
-        "club": "PSG",
-        "clubBadge": "🔴🔵",
+        "club": "",
+        "clubBadge": "",
         "position": "GK",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4fuexc1766334585.png"
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4fuexc1766334585.png",
+        "cardTheme": "standard"
     },
     {
         "id": "safonov-psg",
@@ -10221,12 +10224,13 @@ const DEFAULT_PLAYERS = [
         "nationality": "Russia",
         "flag": "🇷🇺",
         "league": "Ligue 1",
-        "club": "PSG",
+        "club": "Paris Saint-Germain",
         "clubBadge": "🔴🔵",
         "position": "GK",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j9y7db1766335525.png"
+        "altPositions": [],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j9y7db1766335525.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pacho-psg",
@@ -14372,20 +14376,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "standard"
     },
     {
-        "id": "chevalier-lille-s26",
-        "name": "Lucas Chevalier",
-        "cardName": "Chevalier",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Ligue 1",
-        "club": "Lille",
-        "clubBadge": "🔴🔵",
-        "position": "GK",
-        "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4fuexc1766334585.png",
-        "cardTheme": "standard"
-    },
-    {
         "id": "fofana-lyon-s26",
         "name": "Malick Fofana",
         "cardName": "M. Fofana",
@@ -17933,7 +17923,7 @@ const DEFAULT_PLAYERS = [
             "CB"
         ],
         "rating": 81,
-        "photo": "",
+        "photo": "https://e2.365dm.com/09/08/800x600/AlfIngeHaaland_2349198.jpg?20090818120406",
         "cardTheme": "mm"
     },
     {
@@ -19087,14 +19077,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
+        "clubBadge": "⭐",
         "position": "CF",
         "altPositions": [
-            "CAM",
-            "ST"
+            "ST",
+            "CAM"
         ],
         "rating": 92,
-        "photo": "",
+        "photo": "https://cdn.artphotolimited.com/images/60913d60bd40b85323893a87/1000x1000/francesco-totti.jpg",
         "cardTheme": "icons"
     },
     {
@@ -19795,8 +19785,9 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 84,
-        "photo": "",
+        "photo": "https://thanhnien.mediacdn.vn/Uploaded/quocviet/2022_10_31/01-paul-robinson-afp-cap-4234.jpeg",
         "cardTheme": "mm"
     },
     {
@@ -20146,8 +20137,11 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://backend.liverpoolfc.com/sites/default/files/styles/xl/public/2025-02/past-players-fernando-torres-06022025_0a72d7e5d2811dbe9e95c229a600083e.webp?itok=R4ViNtlw",
         "cardTheme": "mm"
     },
     {
@@ -20872,9 +20866,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 92,
-        "photo": "",
+        "photo": "https://images2.thanhnien.vn/528068263637045248/2024/11/11/00-cong-vinh-afc-1731314382874573488114.jpg",
         "cardTheme": "vnlegends"
     },
     {
@@ -20885,12 +20881,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 91,
-        "photo": "",
+        "photo": "https://vcdn1-thethao.vnecdn.net/2013/07/11/qq-1373529884.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=ObgCVvN1i1HhIDqF7UCy2A",
         "cardTheme": "vnlegends"
     },
     {
@@ -20901,9 +20898,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 90,
-        "photo": "",
+        "photo": "https://photo.znews.vn/w660/Uploaded/neg_yrznslt/2018_11_09/HOng_Son_2_1.jpg",
         "cardTheme": "vnlegends"
     },
     {
@@ -20932,13 +20931,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "LM",
         "altPositions": [
-            "RM",
-            "CAM"
+            "CAM",
+            "RM"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://images2.thanhnien.vn/thumb_w/686/528068263637045248/2023/9/6/thanhluongngay912lbqa-1693985417702858921814-0-56-960-776-crop-16939855771151559164412.jpg",
         "cardTheme": "vnlegends"
     },
     {
@@ -21142,15 +21142,15 @@ const DEFAULT_PLAYERS = [
         "nationality": "Turkey",
         "flag": "🇹🇷",
         "league": "",
-        "club": "Reading",
+        "club": "",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
         "rating": 78,
-        "photo": "",
-        "cardTheme": "mm",
-        "clubBadge": "🔵⚪"
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUwsxzlY4BKrko541WS5ij2xSYgiFVqXUu41jSdsno4-vaBiNvYUmmNxDxWzVsq8vModXBAN77dRt4xifFeV1lT54qTHVtRz2v-GI8Hg&s=10",
+        "cardTheme": "mm"
     },
     {
         "id": "senturk-mm",
@@ -21173,15 +21173,15 @@ const DEFAULT_PLAYERS = [
         "nationality": "Greece",
         "flag": "🇬🇷",
         "league": "",
-        "club": "PAOK",
+        "club": "",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
-        "rating": 88,
-        "photo": "",
-        "cardTheme": "mm",
-        "clubBadge": "⚫⚪"
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1AUoqASUugl3w3WA2MEWrI2yiznIGckJLp29WHFyXAnbKOwjo36vPl_ppHMHMbN1VtbK-1nvT4yyEwgHEYtnmBtVKaTZZvngmzDK0g&s=10",
+        "cardTheme": "mm"
     },
     {
         "id": "coentrao-mm",
@@ -21746,10 +21746,10 @@ const DEFAULT_PLAYERS = [
         "league": "Championship",
         "club": "Burnley",
         "clubBadge": "🍇",
-        "position": "CAM",
+        "position": "CF",
         "altPositions": [
             "ST",
-            "CF"
+            "CAM"
         ],
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jtbhgu1757174479.png",
@@ -26826,6 +26826,69 @@ const DEFAULT_PLAYERS = [
             "LB",
             "RB"
         ]
+    },
+    {
+        "id": "huynhduc-vnlegend",
+        "name": "Lê Huỳnh Đức",
+        "cardName": "Huỳnh Đức",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "Icons",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 90,
+        "photo": "https://images2.thanhnien.vn/528068263637045248/2025/4/29/huynh-duc-17459224730341822181120.jpg",
+        "cardTheme": "vnlegends"
+    },
+    {
+        "id": "nhuthanh-vnlegend",
+        "name": "Vũ Như Thành",
+        "cardName": "Như Thành",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "Icons",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "vnlegends"
+    },
+    {
+        "id": "tamlang-vnlegend",
+        "name": "Phạm Huỳnh Tam Lang",
+        "cardName": "Tam Lang",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "Icons",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "vnlegends"
+    },
+    {
+        "id": "vanrang-vnlegend",
+        "name": "Phạm Văn Rạng",
+        "cardName": "Văn Rạng",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "Icons",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "vnlegends"
     }
 ];
 
