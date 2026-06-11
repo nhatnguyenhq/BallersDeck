@@ -1,0 +1,4322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BallersDeck - Football Card Library</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="football_data.js"></script>
+
+    <style>
+        :root {
+            --bg-darker: #080b0e;
+            --bg-dark: #0f1319;
+            --bg-card: #151b23;
+            --bg-card-hover: #1e2631;
+            
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --text-dark: #111827;
+            
+            --accent: #10b981; /* Emerald green */
+            --accent-glow: rgba(16, 185, 129, 0.15);
+            
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-focus: rgba(16, 185, 129, 0.4);
+            
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Card Theme Colors */
+            --color-icon-bg: linear-gradient(135deg, #1e1e1e 0%, #111 50%, #000 100%);
+            --color-icon-accent: #e5c158; /* Gold foil */
+            
+            --color-gold-bg: linear-gradient(135deg, #ffe082 0%, #e5a93b 50%, #b87b1c 100%);
+            --color-gold-text: #451a03;
+            --color-gold-accent: #78350f;
+            
+            --color-silver-bg: linear-gradient(135deg, #f3f4f6 0%, #9ca3af 50%, #4b5563 100%);
+            --color-silver-text: #111827;
+            --color-silver-accent: #374151;
+            
+            --color-bronze-bg: linear-gradient(135deg, #d8b4fe 0%, #a16207 50%, #451a03 100%);
+            --color-bronze-text: #fef08a;
+            --color-bronze-accent: #fef08a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b0f19;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 60%);
+            color: var(--text-main);
+            line-height: 1.5;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, var(--accent), #3b82f6);
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .logo-area h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-area span {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.25rem;
+            border-radius: 12px;
+            gap: 0.25rem;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab-btn.active {
+            background: var(--bg-card-hover);
+            color: #fff;
+            box-shadow: var(--shadow-sm);
+            border-left: 2px solid var(--accent);
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* --- Main Layout Sections --- */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- CONTROL PANEL (Modern 2-row design) --- */
+        .control-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+        }
+
+        /* Row 1: Search bar full-width */
+        .search-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-main {
+            position: relative;
+            flex: 1;
+        }
+
+        .search-main input {
+            width: 100%;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.85rem 1rem 0.85rem 3rem;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            outline: none;
+            transition: var(--transition);
+        }
+        .search-main input::placeholder { color: var(--text-muted); }
+        .search-main input:focus {
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+            background: #0d1117;
+        }
+        .search-main .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+            width: 18px; height: 18px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Row 2: Filter chips */
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            display: inline-flex;
+            align-items: center;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.35rem 1.85rem 0.35rem 0.85rem;
+            gap: 0.4rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .filter-chip label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            pointer-events: none;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-chip select {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            transition: var(--transition);
+            white-space: nowrap;
+            max-width: 150px;
+            padding: 0;
+            color-scheme: dark;
+        }
+
+        .filter-chip select option {
+            background: #1a2030;
+            color: #f3f4f6;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+
+        .filter-chip select option:checked {
+            background: #10b981;
+            color: #fff;
+        }
+
+        /* Also fix standalone squad builder selects */
+        .select-wrapper select option {
+            background: #1a2030;
+            color: #f3f4f6;
+        }
+
+        .form-group select option {
+            background: #1a2030;
+            color: #f3f4f6;
+        }
+
+        .filter-chip select:disabled {
+            cursor: not-allowed;
+        }
+
+        .filter-chip:has(select:disabled) {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+
+        .filter-chip:focus-within {
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        .filter-chip.active {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.08);
+        }
+        .filter-chip.active label {
+            color: var(--accent);
+        }
+
+        .filter-chip::after {
+            content: '▾';
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            position: absolute;
+            right: 0.65rem;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .filter-chip.active::after {
+            color: var(--accent);
+        }
+
+        /* Custom Dropdown in Form Drawer */
+        .form-group.custom-dropdown {
+            position: relative;
+        }
+        .form-select-trigger {
+            width: 100%;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.7rem 0.9rem;
+            color: #fff;
+            font-family: inherit;
+            outline: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.88rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .form-select-trigger::after {
+            content: '▼';
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+        .form-group.custom-dropdown:hover .form-select-trigger {
+            border-color: var(--accent);
+        }
+        .drawer .custom-dropdown-menu {
+            width: 220px;
+            left: auto;
+            right: 0;
+        }
+        .drawer .custom-dropdown-submenu {
+            left: auto;
+            right: 98%;
+            width: 180px;
+            animation: fadeInSubmenuLeft 0.15s ease-out;
+        }
+        .drawer .custom-dropdown-item.has-submenu:hover .custom-dropdown-submenu {
+            display: block;
+        }
+        @keyframes fadeInSubmenuLeft {
+            from { opacity: 0; transform: translateX(5px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Custom Nationality Dropdown Hover Menu */
+        .filter-chip.custom-dropdown {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .custom-select-trigger {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #fff;
+            padding-right: 0.8rem;
+            display: inline-block;
+        }
+
+        .custom-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: #111827;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            z-index: 1000;
+            display: none;
+            min-width: 200px;
+            padding: 0.5rem 0;
+            animation: fadeInDropdown 0.15s ease-out;
+        }
+        
+        .custom-dropdown-menu.show {
+            display: block;
+        }
+        
+        @keyframes fadeInDropdown {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .custom-dropdown-item {
+            padding: 0.6rem 1rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.15s ease;
+            cursor: pointer;
+        }
+        
+        .custom-dropdown-item:hover {
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--accent);
+        }
+        
+        /* Submenu container */
+        .custom-dropdown-item.has-submenu {
+            position: relative;
+        }
+        
+        .custom-dropdown-submenu {
+            position: absolute;
+            top: -5px;
+            left: 98%;
+            background: #111827;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            z-index: 1001;
+            display: none;
+            min-width: 180px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 0.5rem 0;
+            animation: fadeInSubmenu 0.15s ease-out;
+        }
+        
+        .custom-dropdown-item.has-submenu:hover .custom-dropdown-submenu {
+            display: block;
+        }
+        
+        @keyframes fadeInSubmenu {
+            from { opacity: 0; transform: translateX(-5px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .submenu-item {
+            padding: 0.55rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all 0.12s ease;
+            cursor: pointer;
+        }
+        
+        .submenu-item:hover {
+            background: var(--accent);
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        /* Custom scrollbar for submenu */
+        .custom-dropdown-submenu::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-dropdown-submenu::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-dropdown-submenu::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        .custom-dropdown-submenu::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        .filter-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--border-color);
+            flex-shrink: 0;
+            margin: 0 0.25rem;
+        }
+
+        .filter-reset-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            border-radius: 8px;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-left: auto;
+        }
+        .filter-reset-btn:hover {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        /* Legacy .search-box used in modal */
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+        }
+        .search-box input:focus {
+            border-color: var(--border-focus);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+        .search-box i {
+            position: absolute;
+            left: 0.85rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        /* Standalone select-wrapper (squad builder) */
+        .select-wrapper {
+            position: relative;
+        }
+        .select-wrapper select {
+            width: 100%;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 2rem 0.75rem 1rem;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            transition: var(--transition);
+        }
+        .select-wrapper select:disabled { opacity: 0.4; cursor: not-allowed; }
+        .select-wrapper select:focus:not(:disabled) { border-color: var(--border-focus); }
+        .select-wrapper::after {
+            content: '▼';
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        /* Form selects in drawer */
+        .form-group select:disabled { opacity: 0.4; cursor: not-allowed; background: rgba(8,11,14,0.5); }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: var(--text-dark);
+            border: none;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--accent-glow);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card-hover);
+            color: #fff;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        /* --- PLAYER GRID & CASUAL CARDS (SMALLER) --- */
+        .player-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+        @media (max-width: 1400px) {
+            .player-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+        @media (max-width: 1024px) {
+            .player-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.6rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .player-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .player-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 5rem 2rem;
+            background: var(--bg-card);
+            border: 1px dashed var(--border-color);
+            border-radius: 16px;
+            color: var(--text-muted);
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+
+        /* PANINI STICKER CARD STYLING */
+        .player-card-wrapper {
+            cursor: pointer;
+        }
+
+        .player-card {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.55);
+            transition: transform 0.15s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.8);
+            background: #1a2030;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .player-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+        }
+
+        /* Panini top band — colored by theme */
+        .panini-band {
+            width: 100%;
+            padding: 0.28rem 0.45rem 0.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .card-gold .panini-band   { background: linear-gradient(135deg, #c8860a, #e5a93b); }
+        .card-silver .panini-band { background: linear-gradient(135deg, #4b5563, #9ca3af); }
+        .card-bronze .panini-band { background: linear-gradient(135deg, #78350f, #a16207); }
+        .card-icon .panini-band   { background: linear-gradient(135deg, #1a1a1a, #3a3a3a); border-bottom: 2px solid #e5c158; }
+
+        /* World Cup 2026 Theme */
+        .card-wc26 {
+            background: linear-gradient(135deg, #020c1b 0%, #08203e 50%, #1c0220 100%) !important;
+            border: 2px solid #ffd700 !important;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2) !important;
+        }
+        .card-wc26::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 60%),
+                        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 8px);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .card-wc26 .panini-band {
+            background: linear-gradient(135deg, #1f4068 0%, #162447 100%) !important;
+            border-bottom: 2px solid #ffd700;
+            position: relative;
+            z-index: 2;
+        }
+        .card-wc26 .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 32px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIj48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQtZ3JhZCkiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTkiIGZpbGw9InJnYmEoMiwgMTIsIDI3LCAwLjg1KSIgc3Ryb2tlPSJ1cmwoI2dvbGQtZ3JhZCkiIHN0cm9rZS13aWR0aD0iMSIvPjxwYXRoIGQ9Ik0xNiAxMmgxNnYxMGMwIDQuNDItMy41OCA4LTggOHMtOC0zLjU4LTgtOFYxMnoiIGZpbGw9InVybCgjZ29sZC1ncmFkKSIvPjxwYXRoIGQ9Ik0xMyAxNGMtMS41IDAtMyAxLjUtMyAzLjVzMSAzLjUgMyAzLjVoM3YtN2gtM3ptMjIgMGMxLjUgMCAzIDEuNSAzIDMuNXMtMSAzLjUtMyAzLjVoLTN2LTdoM3oiIGZpbGw9InVybCgjZ29sZC1ncmFkKSIvPjxwYXRoIGQ9Ik0yMCAzMGg4djRoLTh6bS0yIDRoMTJ2M0gxOHoiIGZpbGw9InVybCgjZ29sZC1ncmFkKSIvPjx0ZXh0IHg9IjI0IiB5PSIyMiIgZm9udC1mYW1pbHk9IkltcGFjdCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI5IiBmaWxsPSIjMDIwYzFiIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4yNjwvdGV4dD48cGF0aCBkPSJNMjQgNWwwLjggMS42IDEuOCAwLjMtMS4zIDEuMyAwLjMgMS44LTEuNi0wLjgtMS42IDAuOCAwLjMtMS44LTEuMy0xLjMgMS44LTAuM3oiIGZpbGw9IiNmZmZmZmYiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQtZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZTg3NSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZjdiODAxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGI5NjAwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.95;
+            z-index: 1;
+        }
+        .card-wc26 .panini-ovr {
+            color: #ffd700 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5) !important;
+            z-index: 2;
+        }
+        .card-wc26 .panini-pos {
+            z-index: 2;
+            color: #ffd700 !important;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5) !important;
+        }
+        .card-wc26 .panini-photo {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-wc26 .panini-footer {
+            background: linear-gradient(180deg, rgba(22, 36, 71, 0.5) 0%, rgba(2, 12, 27, 0.9) 100%) !important;
+            border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-wc26 .panini-name {
+            color: #ffd700 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 0.8px !important;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.3) !important;
+        }
+        .card-wc26 .panini-club {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 700 !important;
+            font-size: 0.52rem !important;
+            letter-spacing: 0.8px !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+        }
+        
+        /* Mini slot styles for WC26 */
+        .slot-player-mini.card-wc26 {
+            background: linear-gradient(135deg, #020c1b 0%, #08203e 100%) !important;
+            border: 2px solid #ffd700 !important;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.35) !important;
+        }
+        .slot-player-mini.card-wc26 .mini-ovr {
+            color: #ffd700 !important;
+            text-shadow: 0 0 4px rgba(255, 215, 0, 0.5) !important;
+        }
+        .slot-player-mini.card-wc26 .mini-name {
+            color: #ffd700 !important;
+        }
+
+        /* ===== ICONS THEME — Legends / Hall of Fame ===== */
+        .card-icons {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.18) 0%, transparent 60%),
+                linear-gradient(160deg, #0d0d0d 0%, #1a1505 40%, #0a0a0a 100%) !important;
+            border: 2px solid #b8960c !important;
+            box-shadow:
+                0 0 0 1px rgba(212,175,55,0.15),
+                0 6px 28px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(255,215,0,0.12) !important;
+        }
+        /* Inner shimmer layer */
+        .card-icons::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 6px,
+                    rgba(212,175,55,0.025) 6px,
+                    rgba(212,175,55,0.025) 7px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Star corner decorations */
+        .card-icons::after {
+            content: '★';
+            position: absolute;
+            bottom: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.55rem;
+            color: rgba(212,175,55,0.4);
+            letter-spacing: 4px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-icons .panini-band {
+            background: linear-gradient(135deg, #1a1200 0%, #2e2000 50%, #1a1200 100%) !important;
+            border-bottom: 1px solid rgba(212,175,55,0.5) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-icons .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%23d4af37' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%230d0d0d' stroke='%23d4af37' stroke-width='1'/%3E%3Cpath d='M24 12l2.5 7.5h7.9l-6.4 4.6 2.5 7.5L24 27l-6.5 4.6 2.5-7.5-6.4-4.6h7.9z' fill='%23d4af37'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.9;
+            z-index: 1;
+        }
+        .card-icons .panini-ovr {
+            color: #d4af37 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 12px rgba(212,175,55,0.6), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-icons .panini-pos {
+            color: rgba(212,175,55,0.9) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 12px rgba(212,175,55,0.6), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-icons .panini-photo {
+            background: radial-gradient(ellipse at 50% 80%, rgba(212,175,55,0.06) 0%, transparent 65%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-icons .panini-footer {
+            background: linear-gradient(180deg, rgba(26,18,0,0.6) 0%, rgba(10,8,0,0.95) 100%) !important;
+            border-top: 1px solid rgba(212,175,55,0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-icons .panini-name {
+            color: #d4af37 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(212,175,55,0.4) !important;
+        }
+        .card-icons .panini-era {
+            font-size: 0.46rem;
+            font-weight: 700;
+            color: rgba(212,175,55,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+            line-height: 1.1;
+        }
+        /* Silhouette tinted gold for Icons cards */
+        .card-icons .panini-photo-silhouette {
+            fill: rgba(212,175,55,0.15) !important;
+        }
+
+
+        /* ===== MM (MEMOIR) THEME — Vintage Nostalgia ===== */
+        .card-mm {
+            background:
+                radial-gradient(ellipse at 50% 15%, rgba(180,120,50,0.22) 0%, transparent 60%),
+                linear-gradient(160deg, #1c1208 0%, #2a1c0c 40%, #150e06 100%) !important;
+            border: 2px solid #8b6338 !important;
+            box-shadow:
+                0 0 0 1px rgba(180,130,60,0.18),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 1px 0 rgba(220,170,90,0.1) !important;
+        }
+        /* Film-grain + aged paper texture overlay */
+        .card-mm::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E"),
+                repeating-linear-gradient(
+                    -30deg,
+                    transparent,
+                    transparent 14px,
+                    rgba(160,100,30,0.018) 14px,
+                    rgba(160,100,30,0.018) 15px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Corner ribbon decoration */
+        .card-mm::after {
+            content: '✦';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5rem;
+            color: rgba(180,130,60,0.45);
+            letter-spacing: 5px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-mm .panini-band {
+            background: linear-gradient(135deg, #1a0e05 0%, #2e1d09 50%, #1a0e05 100%) !important;
+            border-bottom: 1px solid rgba(180,130,60,0.5) !important;
+            position: relative;
+            z-index: 2;
+        }
+        /* MM logo icon: vintage camera/film reel in sepia gold */
+        .card-mm .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%23b88a3c' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%231a0e05' stroke='%23b88a3c' stroke-width='1'/%3E%3Crect x='13' y='17' width='22' height='15' rx='2' fill='none' stroke='%23b88a3c' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24.5' r='5' fill='none' stroke='%23b88a3c' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24.5' r='2' fill='%23b88a3c'/%3E%3Crect x='10' y='20' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Crect x='35' y='20' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Crect x='10' y='25' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Crect x='35' y='25' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Ctext x='24' y='14' font-family='Impact%2Csans-serif' font-size='5' fill='%23b88a3c' text-anchor='middle'%3EMM%3C/text%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.92;
+            z-index: 1;
+        }
+        .card-mm .panini-ovr {
+            color: #c8943a !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 10px rgba(180,130,50,0.55), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-mm .panini-pos {
+            color: rgba(200,148,58,0.9) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 10px rgba(180,130,50,0.55), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-mm .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 80%, rgba(160,100,30,0.08) 0%, transparent 65%),
+                linear-gradient(180deg, rgba(30,18,5,0.15) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+            /* Sepia photo filter */
+            filter: sepia(0.35) contrast(0.95) brightness(0.92);
+        }
+        /* Override sepia for silhouette */
+        .card-mm .panini-photo-silhouette {
+            fill: rgba(180,130,50,0.18) !important;
+        }
+        .card-mm .panini-footer {
+            background: linear-gradient(180deg, rgba(26,14,5,0.6) 0%, rgba(10,6,2,0.96) 100%) !important;
+            border-top: 1px solid rgba(180,130,60,0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-mm .panini-name {
+            color: #d4a054 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(200,148,58,0.35) !important;
+        }
+        .card-mm .panini-era {
+            font-size: 0.46rem;
+            font-weight: 700;
+            color: rgba(180,130,60,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+            line-height: 1.1;
+        }
+        /* Mini slot styles for MM */
+        .slot-player-mini.card-mm {
+            background: linear-gradient(135deg, #1c1208 0%, #2a1c0c 100%) !important;
+            border: 2px solid #8b6338 !important;
+            box-shadow: 0 0 10px rgba(180,130,60,0.3) !important;
+        }
+        .slot-player-mini.card-mm .mini-ovr {
+            color: #c8943a !important;
+            text-shadow: 0 0 4px rgba(180,130,50,0.5) !important;
+        }
+        .slot-player-mini.card-mm .mini-name {
+            color: #d4a054 !important;
+        }
+
+
+        /* ===== TOTY (Team of the Year) THEME — Ice Blue Electric ===== */
+        .card-toty {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.22) 0%, transparent 65%),
+                linear-gradient(160deg, #020b18 0%, #051a2e 40%, #020b18 100%) !important;
+            border: 2px solid #00b4d8 !important;
+            box-shadow:
+                0 0 0 1px rgba(0, 180, 216, 0.2),
+                0 6px 28px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(0, 212, 255, 0.15) !important;
+        }
+        .card-toty::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    60deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(0, 212, 255, 0.03) 10px,
+                    rgba(0, 212, 255, 0.03) 11px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-toty::after {
+            content: '❄';
+            position: absolute;
+            bottom: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5rem;
+            color: rgba(0, 212, 255, 0.35);
+            letter-spacing: 4px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-toty .panini-band {
+            background: linear-gradient(135deg, #00253a 0%, #003d5c 50%, #00253a 100%) !important;
+            border-bottom: 1px solid rgba(0, 180, 216, 0.6) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-toty .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%2300b4d8' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23020b18' stroke='%2300b4d8' stroke-width='1'/%3E%3Cpath d='M24 10v28M10 24h28M16 16l16 16M32 16L16 32' stroke='%2300d4ff' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%2300d4ff'/%3E%3Ccircle cx='24' cy='10' r='2' fill='%2300d4ff'/%3E%3Ccircle cx='24' cy='38' r='2' fill='%2300d4ff'/%3E%3Ccircle cx='10' cy='24' r='2' fill='%2300d4ff'/%3E%3Ccircle cx='38' cy='24' r='2' fill='%2300d4ff'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.92;
+            z-index: 1;
+        }
+        .card-toty .panini-ovr {
+            color: #00d4ff !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 12px rgba(0, 212, 255, 0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-toty .panini-pos {
+            color: rgba(0, 212, 255, 0.95) !important;
+            text-shadow: 0 0 12px rgba(0, 212, 255, 0.7) !important;
+            z-index: 2;
+        }
+        .card-toty .panini-photo {
+            background: radial-gradient(ellipse at 50% 80%, rgba(0, 180, 216, 0.08) 0%, transparent 65%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-toty .panini-footer {
+            background: linear-gradient(180deg, rgba(0, 25, 50, 0.6) 0%, rgba(2, 11, 24, 0.95) 100%) !important;
+            border-top: 1px solid rgba(0, 180, 216, 0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-toty .panini-name {
+            color: #00d4ff !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(0, 212, 255, 0.5) !important;
+        }
+        .card-toty .panini-era {
+            font-size: 0.46rem;
+            font-weight: 700;
+            color: rgba(0, 180, 216, 0.55);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+            line-height: 1.1;
+        }
+        .card-toty .panini-photo-silhouette { fill: rgba(0, 180, 216, 0.15) !important; }
+        .card-toty { --triangle-bg: linear-gradient(135deg, transparent 50%, #00b4d8 50%); --triangle-color: #020b18; }
+        .slot-player-mini.card-toty {
+            background: linear-gradient(135deg, #020b18 0%, #051a2e 100%) !important;
+            border: 2px solid #00b4d8 !important;
+            box-shadow: 0 0 10px rgba(0, 180, 216, 0.35) !important;
+        }
+        .slot-player-mini.card-toty .mini-ovr { color: #00d4ff !important; text-shadow: 0 0 4px rgba(0,212,255,0.5) !important; }
+        .slot-player-mini.card-toty .mini-name { color: #00d4ff !important; }
+
+
+        /* ===== UCL HERO THEME — Champions League Purple/Navy ===== */
+        .card-ucl {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(135, 60, 230, 0.22) 0%, transparent 65%),
+                linear-gradient(160deg, #0a0414 0%, #160828 40%, #0a0414 100%) !important;
+            border: 2px solid #7c3aed !important;
+            box-shadow:
+                0 0 0 1px rgba(124, 58, 237, 0.2),
+                0 6px 28px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(167, 139, 250, 0.12) !important;
+        }
+        .card-ucl::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    -60deg,
+                    transparent,
+                    transparent 12px,
+                    rgba(124, 58, 237, 0.03) 12px,
+                    rgba(124, 58, 237, 0.03) 13px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-ucl::after {
+            content: '✦';
+            position: absolute;
+            bottom: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5rem;
+            color: rgba(167, 139, 250, 0.4);
+            letter-spacing: 4px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-ucl .panini-band {
+            background: linear-gradient(135deg, #160828 0%, #2a0f50 50%, #160828 100%) !important;
+            border-bottom: 1px solid rgba(124, 58, 237, 0.55) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-ucl .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%237c3aed' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%230a0414' stroke='%237c3aed' stroke-width='1'/%3E%3Cpath d='M24 8 l3 9h9l-7.5 5.5 2.9 9L24 27l-7.4 4.5 2.9-9L12 17h9z' fill='%23a78bfa'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.92;
+            z-index: 1;
+        }
+        .card-ucl .panini-ovr {
+            color: #a78bfa !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 12px rgba(167, 139, 250, 0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-ucl .panini-pos {
+            color: rgba(167, 139, 250, 0.95) !important;
+            text-shadow: 0 0 12px rgba(167, 139, 250, 0.7) !important;
+            z-index: 2;
+        }
+        .card-ucl .panini-photo {
+            background: radial-gradient(ellipse at 50% 80%, rgba(124, 58, 237, 0.08) 0%, transparent 65%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-ucl .panini-footer {
+            background: linear-gradient(180deg, rgba(22, 8, 40, 0.6) 0%, rgba(10, 4, 20, 0.95) 100%) !important;
+            border-top: 1px solid rgba(124, 58, 237, 0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-ucl .panini-name {
+            color: #a78bfa !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(167, 139, 250, 0.5) !important;
+        }
+        .card-ucl .panini-era {
+            font-size: 0.46rem;
+            font-weight: 700;
+            color: rgba(124, 58, 237, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+            line-height: 1.1;
+        }
+        .card-ucl .panini-photo-silhouette { fill: rgba(124, 58, 237, 0.15) !important; }
+        .card-ucl { --triangle-bg: linear-gradient(135deg, transparent 50%, #7c3aed 50%); --triangle-color: #a78bfa; }
+        .slot-player-mini.card-ucl {
+            background: linear-gradient(135deg, #0a0414 0%, #160828 100%) !important;
+            border: 2px solid #7c3aed !important;
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.35) !important;
+        }
+        .slot-player-mini.card-ucl .mini-ovr { color: #a78bfa !important; text-shadow: 0 0 4px rgba(167,139,250,0.5) !important; }
+        .slot-player-mini.card-ucl .mini-name { color: #a78bfa !important; }
+
+        /* ===== VN LEGENDS (Vietnam Legends) THEME — Crimson & Gold ===== */
+        .card-vnlegends {
+            background:
+                radial-gradient(ellipse at 50% 15%, rgba(220,38,38,0.25) 0%, transparent 60%),
+                linear-gradient(160deg, #1c0505 0%, #360a0a 40%, #170404 100%) !important;
+            border: 2px solid #b91c1c !important;
+            box-shadow:
+                0 0 0 1px rgba(220,38,38,0.2),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 1px 0 rgba(239,68,68,0.1) !important;
+        }
+        .card-vnlegends::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E"),
+                repeating-linear-gradient(
+                    -30deg,
+                    transparent,
+                    transparent 14px,
+                    rgba(220,38,38,0.02) 14px,
+                    rgba(220,38,38,0.02) 15px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-vnlegends::after {
+            content: '★ 🇻🇳 ★';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5rem;
+            color: rgba(220,38,38,0.65);
+            letter-spacing: 5px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-vnlegends .panini-band {
+            background: linear-gradient(135deg, #1f0404 0%, #450a0a 50%, #1f0404 100%) !important;
+            border-bottom: 1px solid rgba(220,38,38,0.4) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-vnlegends .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z' fill='%23b91c1c' stroke='%23ffd700' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z' fill='%23ffd700'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.95;
+            z-index: 1;
+        }
+        .card-vnlegends .panini-ovr {
+            color: #fca5a5 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 10px rgba(220,38,38,0.55), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-vnlegends .panini-pos {
+            color: rgba(248,113,113,0.9) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 10px rgba(220,38,38,0.55), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-vnlegends .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 80%, rgba(220,38,38,0.08) 0%, transparent 65%),
+                linear-gradient(180deg, rgba(30,5,5,0.15) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-vnlegends .panini-photo-silhouette {
+            fill: rgba(220,38,38,0.18) !important;
+        }
+        .card-vnlegends .panini-footer {
+            background: linear-gradient(180deg, rgba(26,5,5,0.6) 0%, rgba(10,2,2,0.96) 100%) !important;
+            border-top: 1px solid rgba(220,38,38,0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-vnlegends .panini-name {
+            color: #fca5a5 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(220,38,38,0.35) !important;
+        }
+        .card-vnlegends .panini-era {
+            font-size: 0.46rem;
+            font-weight: 700;
+            color: rgba(239,68,68,0.55);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+        .slot-player-mini.card-vnlegends {
+            background: linear-gradient(135deg, #1c0505 0%, #360a0a 100%) !important;
+            border: 2px solid #b91c1c !important;
+            box-shadow: 0 0 10px rgba(220,38,38,0.35) !important;
+        }
+        .slot-player-mini.card-vnlegends .mini-ovr { color: #fca5a5 !important; text-shadow: 0 0 4px rgba(239,68,68,0.5) !important; }
+        .slot-player-mini.card-vnlegends .mini-name { color: #fca5a5 !important; }
+
+
+        .panini-ovr {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: -0.5px;
+        }
+        .card-icon .panini-ovr { color: #e5c158; }
+
+
+        .panini-pos {
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.95);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .panini-card-flag {
+            position: absolute;
+            left: 6px;
+            bottom: 6px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.75));
+            pointer-events: none;
+        }
+        .panini-card-flag img {
+            width: 22px !important;
+            height: 15px !important;
+            border-radius: 2px !important;
+            border: 1.5px solid rgba(255,255,255,0.7) !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
+        }
+        .panini-card-flag span {
+            font-size: 1.2rem !important;
+            line-height: 1 !important;
+        }
+
+        /* Card Theme Triangle & Icon */
+        .player-card {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #7c2d12 50%);
+            --triangle-color: #f3f4f6;
+        }
+        .card-silver {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #4b5563 50%);
+            --triangle-color: #f3f4f6;
+        }
+        .card-gold {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #b45309 50%);
+            --triangle-color: #ffd700;
+        }
+        .card-icon {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #b45309 50%);
+            --triangle-color: #e5c158;
+        }
+        .card-wc26 {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #ffd700 50%);
+            --triangle-color: #020c1b;
+        }
+        .card-icons {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #e5c158 50%);
+            --triangle-color: #1a1a1a;
+        }
+        .card-mm {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #d4a054 50%);
+            --triangle-color: #1a1a1a;
+        }
+
+        .card-theme-triangle {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 26px;
+            height: 26px;
+            background: var(--triangle-bg);
+            z-index: 5;
+            pointer-events: none;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 4px;
+            padding-bottom: 2px;
+            box-sizing: border-box;
+        }
+        .card-theme-triangle-icon {
+            font-size: 0.58rem;
+            font-weight: 900;
+            color: var(--triangle-color);
+            line-height: 1;
+        }
+
+        /* Photo area — takes 58% of card height */
+        .panini-photo {
+            width: 100%;
+            flex: 1 1 0;
+            min-height: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+        }
+        .panini-photo img {
+            width: 100%;
+            height: 105%;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .panini-photo-silhouette {
+            width: 50%;
+            height: 50%;
+            fill: rgba(255,255,255,0.10);
+            margin-bottom: 10px;
+            max-width: 60px;
+        }
+
+        /* Name footer — fixed height, no flex-grow */
+        .panini-footer {
+            flex-shrink: 0;
+            padding: 0.3rem 0.4rem 0.35rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.1rem;
+            background: rgba(0,0,0,0.2);
+        }
+        .panini-name {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 0.68rem;
+            font-weight: 900;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            line-height: 1.1;
+        }
+        .panini-club {
+            font-size: 0.52rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.1;
+        }
+
+        .card-actions {
+            position: absolute;
+            top: 0.4rem;
+            right: 0.4rem;
+            display: flex;
+            gap: 0.25rem;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            z-index: 10;
+        }
+        .player-card-wrapper:hover .card-actions { opacity: 1; }
+
+        .card-action-btn {
+            background: rgba(0,0,0,0.7);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .card-action-btn:hover { background: var(--accent); color: var(--text-dark); transform: scale(1.1); }
+        .card-action-btn.btn-delete:hover { background: #ef4444; color: #fff; }
+
+        /* Alt-position checkboxes in form */
+        .pos-checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.4rem;
+            margin-top: 0.4rem;
+        }
+        .pos-cb-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.35rem 0.2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            user-select: none;
+        }
+        .pos-cb-label:hover { border-color: var(--accent); }
+        .pos-cb-label input { display: none; }
+        .pos-cb-label.checked {
+            background: rgba(16,185,129,0.15);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* --- SQUAD BUILDER SECTION --- */
+        .squad-builder-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        /* Football Pitch Styling (Vertical Half Pitch) */
+        .pitch-container {
+            width: 100%;
+            border: 4px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            aspect-ratio: 1 / 1.35;
+            max-width: 680px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            overflow: visible; /* Allows cards to pop out slightly at the bottom boundary */
+        }
+
+        .pitch-bg-wrapper {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #143819;
+            /* Premium realistic vertical grass stripes + dramatic stadium lighting vignette */
+            background-image: 
+                radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.5) 100%),
+                repeating-linear-gradient(90deg, #1b4b23 0px, #1b4b23 45px, #143819 45px, #143819 90px);
+            background-size: 100% 100%, 90px 100%;
+            pointer-events: none;
+            z-index: 1;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Pitch markings for Vertical Half Pitch */
+        .pitch-halfway-line {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+        }
+
+        .pitch-center-arc {
+            position: absolute;
+            top: -10%; left: 50%;
+            transform: translate(-50%, 0);
+            width: 35%;
+            height: 20%;
+            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .pitch-penalty-box {
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 62%;
+            height: 24%;
+            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            border-bottom: none;
+            pointer-events: none;
+        }
+
+        .pitch-goal-area {
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 28%;
+            height: 8%;
+            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            border-bottom: none;
+            pointer-events: none;
+        }
+
+        .pitch-penalty-arc {
+            position: absolute;
+            bottom: 24%; left: 50%;
+            transform: translate(-50%, 50%);
+            width: 22%;
+            height: 10%;
+            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            border-bottom: none;
+            border-radius: 50% 50% 0 0;
+            pointer-events: none;
+        }
+
+        /* Pitch Player Slot */
+        .pitch-slot {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 5;
+            transition: var(--transition);
+        }
+
+        .slot-circle {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: rgba(8, 11, 14, 0.85);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .slot-circle:hover {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.15);
+            transform: scale(1.08);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .slot-circle i {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 0.1rem;
+        }
+
+        .slot-circle span {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--text-muted);
+        }
+
+        /* Redesigned Pitch Slot Cards & Placeholders */
+        .slot-empty-placeholder {
+            width: 80px;
+            height: 120px;
+            border-radius: 8px;
+            border: 2px dashed rgba(255, 255, 255, 0.25);
+            background: rgba(8, 11, 14, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.5);
+            gap: 0.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .slot-empty-placeholder:hover {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .slot-empty-placeholder i {
+            width: 18px;
+            height: 18px;
+        }
+        .slot-empty-placeholder span {
+            font-size: 0.75rem;
+            font-weight: 800;
+        }
+
+        .pitch-player-card-container {
+            width: 80px;
+            height: 120px;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .pitch-player-card-container:hover {
+            transform: translateY(-5px) scale(1.05);
+            z-index: 10;
+        }
+        .pitch-player-card-container .player-card {
+            width: 140px !important;
+            height: 210px !important;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0) scale(0.57);
+            transform-origin: top center;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .mini-remove-btn {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ef4444;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 15;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            transition: all 0.2s;
+        }
+        .mini-remove-btn:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+
+        /* Squad Stats Panel */
+        .squad-stats-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .squad-stat-box {
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .squad-stat-lbl {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .squad-stat-val {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .squad-stat-val.chem {
+            color: var(--text-muted);
+            text-shadow: none;
+        }
+
+        .squad-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        /* --- EDIT/ADD PANEL MODAL & DRAWER --- */
+        .drawer-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+            display: none;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .drawer {
+            width: 100%;
+            max-width: 500px;
+            background: var(--bg-card);
+            height: 100%;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+            padding: 2rem;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-left: 1px solid var(--border-color);
+        }
+
+        .drawer-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .drawer-overlay.active .drawer {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .drawer-header h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.7rem 0.9rem;
+            color: #fff;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--accent);
+        }
+
+        .form-group select:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            background: rgba(8, 11, 14, 0.5);
+        }
+
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* --- SQUAD PLAYER SELECTOR MODAL --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 110;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal {
+            width: 90%;
+            max-width: 600px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h3 {
+            font-size: 1.25rem;
+            font-weight: 850;
+        }
+
+        .modal-search {
+            margin-bottom: 1rem;
+        }
+
+        .player-selector-list {
+            overflow-y: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .player-select-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .player-select-row:hover {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .player-select-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .select-row-ovr {
+            background: var(--accent-glow);
+            color: var(--accent);
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .select-row-name {
+            font-weight: 700;
+        }
+
+        .select-row-pos {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.05);
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 800;
+            margin-left: 0.5rem;
+        }
+
+        .select-row-details {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* --- TOAST NOTIFICATIONS --- */
+        .toast-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            z-index: 1000;
+        }
+
+        .toast {
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transform: translateX(120%);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 1200px) {
+            .control-panel {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .action-buttons {
+                grid-column: 1 / -1;
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .squad-builder-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .control-panel {
+                grid-template-columns: 1fr;
+            }
+            .nav-tabs {
+                width: 100%;
+            }
+            .tab-btn {
+                flex-grow: 1;
+                justify-content: center;
+            }
+            header {
+                justify-content: center;
+            }
+            .action-buttons {
+                width: 100%;
+            }
+            .action-buttons button {
+                flex-grow: 1;
+                justify-content: center;
+            }
+        }
+        
+        /* --- Database Connection Button --- */
+        .db-connect-btn {
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px dashed var(--accent);
+            color: var(--accent);
+            padding: 0.6rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .db-connect-btn:hover {
+            background: rgba(16, 185, 129, 0.15);
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+        }
+        .db-connect-btn.connected {
+            border: 1px solid var(--accent);
+            background: rgba(16, 185, 129, 0.1);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i data-lucide="shield-check" style="color: #fff;"></i>
+                </div>
+                <div>
+                    <h1>BALLERS<span>DECK</span></h1>
+                </div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <button id="btn-export-db" class="db-connect-btn" onclick="exportDatabaseFile()">
+                    <i data-lucide="download"></i> Xuất Database JS
+                </button>
+                <div class="nav-tabs">
+                    <button class="tab-btn active" onclick="switchTab('library')">
+                        <i data-lucide="layout-grid"></i> Thư viện Thẻ
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('squad')">
+                        <i data-lucide="footprints"></i> Squad Builder
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= TAB: LIBRARY ================= -->
+        <div id="library-tab" class="tab-content active">
+            <div class="control-panel">
+                <!-- ROW 1: Search + Actions -->
+                <div class="search-row">
+                    <div class="search-main">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input type="text" id="search-input" placeholder="Tìm kiếm cầu thủ theo tên..." oninput="applyFilters()">
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="exportData()" title="Xuất JSON">
+                            <i data-lucide="download"></i>
+                        </button>
+                        <button class="btn btn-secondary" onclick="triggerImport()" title="Nhập JSON">
+                            <i data-lucide="upload"></i>
+                        </button>
+                        <input type="file" id="import-file-input" style="display:none;" accept=".json" onchange="importData(event)">
+                        <button class="btn" onclick="openAddDrawer()">
+                            <i data-lucide="plus-circle"></i> Thêm Thẻ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Filter Chips -->
+                <div class="filter-row">
+                    <!-- League -->
+                    <div class="filter-chip custom-dropdown" id="chip-league">
+                        <label>Giải đấu</label>
+                        <span class="custom-select-trigger" id="league-trigger-val">All</span>
+                        <input type="hidden" id="filter-league" value="">
+                        <div class="custom-dropdown-menu" id="league-dropdown-menu"></div>
+                    </div>
+
+                    <!-- Club -->
+                    <div class="filter-chip custom-dropdown" id="chip-club">
+                        <label>CLB</label>
+                        <span class="custom-select-trigger" id="club-trigger-val">All</span>
+                        <input type="hidden" id="filter-club" value="">
+                        <div class="custom-dropdown-menu" id="club-dropdown-menu"></div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <!-- Nationality -->
+                    <div class="filter-chip custom-dropdown" id="chip-nation">
+                        <label>Quốc tịch</label>
+                        <span class="custom-select-trigger" id="nation-trigger-val">All</span>
+                        <input type="hidden" id="filter-nation" value="">
+                        <div class="custom-dropdown-menu" id="nation-dropdown-menu"></div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <!-- Position -->
+                    <div class="filter-chip custom-dropdown" id="chip-position">
+                        <label>Vị trí</label>
+                        <span class="custom-select-trigger" id="position-trigger-val">All</span>
+                        <input type="hidden" id="filter-position" value="">
+                        <div class="custom-dropdown-menu" id="position-dropdown-menu"></div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <!-- Season / Theme -->
+                    <div class="filter-chip custom-dropdown" id="chip-theme">
+                        <label>Mùa thẻ</label>
+                        <span class="custom-select-trigger" id="theme-trigger-val">All</span>
+                        <input type="hidden" id="filter-theme" value="">
+                        <div class="custom-dropdown-menu" id="theme-dropdown-menu"></div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <!-- Sort -->
+                    <div class="filter-chip custom-dropdown" id="chip-sort">
+                        <label>Sắp xếp</label>
+                        <span class="custom-select-trigger" id="sort-trigger-val">OVR ↓</span>
+                        <input type="hidden" id="sort-by" value="rating-desc">
+                        <div class="custom-dropdown-menu" id="sort-dropdown-menu"></div>
+                    </div>
+
+                    <button class="filter-reset-btn" onclick="resetFilters()" title="Xóa bộ lọc">
+                        <i data-lucide="x" style="width:12px;height:12px;"></i> Xóa lọc
+                    </button>
+                </div>
+            </div>
+
+            <!-- Player Grid -->
+            <div class="player-grid" id="player-grid"></div>
+        </div>
+
+        <!-- ================= TAB: SQUAD BUILDER ================= -->
+        <div id="squad-tab" class="tab-content">
+            <div class="squad-builder-container">
+                <!-- Pitch Area -->
+                <div class="pitch-container" id="football-pitch">
+                    <div class="pitch-bg-wrapper">
+                        <div class="pitch-halfway-line"></div>
+                        <div class="pitch-center-arc"></div>
+                        <div class="pitch-penalty-box"></div>
+                        <div class="pitch-goal-area"></div>
+                        <div class="pitch-penalty-arc"></div>
+                    </div>
+                    <!-- Dynamically generated slots will go here -->
+                </div>
+
+                <!-- Squad Stats and Actions Sidebar -->
+                <div class="squad-stats-panel">
+                    <div class="squad-stat-box">
+                        <div class="squad-stat-lbl">Chỉ số Đội hình</div>
+                        <div class="squad-stat-val" id="team-rating">00</div>
+                    </div>
+                    
+                    <div class="squad-stat-box">
+                        <div class="squad-stat-lbl">Độ ăn ý (Chemistry)</div>
+                        <div class="squad-stat-val chem" id="team-chemistry">0/33</div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom:0;">
+                        <label for="formation-select">Sơ đồ chiến thuật</label>
+                        <div class="select-wrapper">
+                            <select id="formation-select" onchange="changeFormation()">
+                                <option value="4-3-3">4 - 3 - 3</option>
+                                <option value="4-3-3 Holding">4 - 3 - 3 Holding</option>
+                                <option value="4-4-2">4 - 4 - 2</option>
+                                <option value="4-4-2 Diamond">4 - 4 - 2 Diamond</option>
+                                <option value="4-2-3-1">4 - 2 - 3 - 1</option>
+                                <option value="3-5-2">3 - 5 - 2</option>
+                                <option value="3-4-2-1">3 - 4 - 2 - 1</option>
+                                <option value="3-5-1-1">3 - 5 - 1 - 1</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="squad-controls">
+                        <button class="btn btn-danger btn-secondary" onclick="clearSquad()" style="border-color: rgba(239,68,68,0.2);">
+                            <i data-lucide="trash-2"></i> Xóa đội hình
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= ADD/EDIT DRAWER ================= -->
+    <div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawerOnOverlay(event)">
+        <div class="drawer" id="player-drawer">
+            <div class="drawer-header">
+                <h2 id="drawer-title">Tạo Thẻ Cầu Thủ Mới</h2>
+                <button class="close-btn" onclick="closeDrawer()">×</button>
+            </div>
+            
+            <form id="player-form" onsubmit="savePlayer(event)">
+                <input type="hidden" id="player-id">
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="player-name">Tên đầy đủ</label>
+                        <input type="text" id="player-name" required placeholder="Ví dụ: Erling Haaland">
+                    </div>
+                    <div class="form-group">
+                        <label for="player-card-name">Tên trên thẻ (Ngắn)</label>
+                        <input type="text" id="player-card-name" placeholder="Ví dụ: Haaland (để trống tự rút gọn)">
+                    </div>
+                </div>
+
+                <div class="form-group custom-dropdown" id="form-chip-nation" style="margin-bottom: 1.25rem;">
+                    <label>Quốc gia</label>
+                    <div class="form-select-trigger" id="form-nation-trigger-val">-- Chọn Quốc gia --</div>
+                    <div class="custom-dropdown-menu" id="form-nation-dropdown-menu"></div>
+                    <input type="hidden" id="player-nation" required>
+                    <input type="hidden" id="player-flag" required>
+                </div>
+
+                <div class="form-group custom-dropdown" id="form-chip-league" style="margin-bottom: 1.25rem;">
+                    <label>Giải đấu (không bắt buộc)</label>
+                    <div class="form-select-trigger" id="form-league-trigger-val">-- Chọn Giải đấu --</div>
+                    <div class="custom-dropdown-menu" id="form-league-dropdown-menu"></div>
+                    <input type="hidden" id="player-league">
+                </div>
+
+                <div class="form-group">
+                    <label for="player-club">Câu lạc bộ (không bắt buộc)</label>
+                    <select id="player-club" disabled>
+                        <option value="">-- Chọn Câu lạc bộ --</option>
+                    </select>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="player-position">Vị trí</label>
+                        <select id="player-position">
+                            <option value="ST">ST (Tiền đạo cắm)</option>
+                            <option value="CF">CF (Hộ công)</option>
+                            <option value="LW">LW (Tiền đạo cánh trái)</option>
+                            <option value="RW">RW (Tiền đạo cánh phải)</option>
+                            <option value="LM">LM (Tiền vệ cánh trái)</option>
+                            <option value="RM">RM (Tiền vệ cánh phải)</option>
+                            <option value="CAM">CAM (Tiền vệ tấn công)</option>
+                            <option value="CM">CM (Tiền vệ trung tâm)</option>
+                            <option value="CDM">CDM (Tiền vệ phòng ngự)</option>
+                            <option value="LWB">LWB (Hậu vệ cánh tấn công trái)</option>
+                            <option value="RWB">RWB (Hậu vệ cánh tấn công phải)</option>
+                            <option value="CB">CB (Trung vệ)</option>
+                            <option value="LB">LB (Hậu vệ cánh trái)</option>
+                            <option value="RB">RB (Hậu vệ cánh phải)</option>
+                            <option value="GK">GK (Thủ môn)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="player-rating">Chỉ số Overall (OVR)</label>
+                        <input type="number" id="player-rating" required min="40" max="99" value="85" style="font-weight: 800; color: var(--accent);">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="player-theme">Loại Thẻ (Theme)</label>
+                    <select id="player-theme" style="width: 100%; background: var(--bg-darker); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem 1rem; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer;">
+                        <option value="standard">Mùa 26 (Standard)</option>
+                        <option value="worldcup26">World Cup 2026 (Special)</option>
+                        <option value="icons">⭐ Icons (Huyền thoại)</option>
+                        <option value="mm">📷 Memoir</option>
+                        <option value="toty">❄️ TOTY</option>
+                        <option value="vnlegends">🇻🇳 VN Legends</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Vị trí phụ (Alt Positions)</label>
+                    <div class="pos-checkbox-grid" id="alt-positions-grid">
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="ST">ST</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="CF">CF</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="LW">LW</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="RW">RW</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="CAM">CAM</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="CM">CM</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="CDM">CDM</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="LM">LM</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="RM">RM</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="LB">LB</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="RB">RB</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="CB">CB</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="LWB">LWB</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="RWB">RWB</label>
+                        <label class="pos-cb-label" onclick="togglePosChip(this)"><input type="checkbox" value="GK">GK</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="player-photo">URL ảnh chân dung (tùy chọn)</label>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <input type="url" id="player-photo" placeholder="https://example.com/photo.png" style="flex: 1;">
+                        <button type="button" class="btn btn-secondary" onclick="searchPlayerPhoto()" style="padding: 0.55rem 1rem; font-size: 0.85rem;" title="Tìm ảnh PNG của cầu thủ trên Google">
+                            🔍 Tìm ảnh nhanh
+                        </button>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:1rem; margin-top:2rem;">
+                    <button type="button" class="btn btn-secondary" onclick="closeDrawer()" style="flex:1; justify-content:center;">Hủy</button>
+                    <button type="submit" class="btn" style="flex:2; justify-content:center;">Lưu Thẻ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= SQUAD PLAYER SELECTOR MODAL ================= -->
+    <div class="modal-overlay" id="squad-selector-modal" onclick="closeModalOnOverlay(event)">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Chọn Cầu thủ cho vị trí</h3>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-search" style="display: flex; gap: 0.5rem; align-items: center;">
+                <div class="search-box" style="flex: 1;">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="modal-search-input" placeholder="Tìm tên cầu thủ..." oninput="filterModalPlayers()">
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="selectRandomPlayerForActiveSlot()" style="padding: 0 1rem; height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px;">
+                    <i data-lucide="dices" style="width: 16px; height: 16px;"></i>
+                    <span>Random</span>
+                </button>
+            </div>
+            <div class="player-selector-list" id="modal-player-list">
+                <!-- JS will render rows here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script>
+        function getConfederation(nationality) {
+            const lower = (nationality || "").trim().toLowerCase();
+            return CONFEDERATIONS[lower] || "Khác";
+        }
+
+        function getLeagueConfederation(leagueName) {
+            const uefaLeagues = [
+                'Premier League', 'La Liga', 'Serie A', 'Bundesliga', 'Ligue 1',
+                'Eredivisie', 'Liga Portugal', 'Süper Lig', 'Championship',
+                'Scottish Premiership', 'Danish Superliga', 'Russian Premier League'
+            ];
+            const conmebolLeagues = ['Brasileirao Serie A', 'Liga Profesional de Fútbol'];
+            const concacafLeagues = ['MLS'];
+            const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League'];
+            
+            if (uefaLeagues.includes(leagueName)) return 'UEFA';
+            if (conmebolLeagues.includes(leagueName)) return 'CONMEBOL';
+            if (concacafLeagues.includes(leagueName)) return 'CONCACAF';
+            if (afcLeagues.includes(leagueName)) return 'AFC';
+            
+            return 'Khác';
+        }
+
+        const POSITION_ORDER = {
+            'GK': 1,
+            'CB': 2, 'LB': 3, 'RB': 4, 'LWB': 5, 'RWB': 6,
+            'CDM': 7, 'CM': 8, 'LM': 9, 'RM': 10, 'CAM': 11,
+            'LW': 12, 'RW': 13, 'CF': 14, 'ST': 15
+        };
+
+        function getPositionRank(pos) {
+            return POSITION_ORDER[pos] || 99;
+        }
+
+        function getDisplayPos(slotPos) {
+            if (slotPos === 'LST' || slotPos === 'RST' || slotPos === 'ST1' || slotPos === 'ST2') {
+                return 'ST';
+            }
+            if (slotPos === 'CF1' || slotPos === 'CF2') {
+                return 'CF';
+            }
+            return slotPos;
+        }
+
+        function isCompatiblePosition(slotPos, playerPos, altPositions = []) {
+            const allPos = [playerPos, ...(altPositions || [])];
+            const mapping = {
+                "GK": ["GK"],
+                "LB": ["LB", "LWB"],
+                "RB": ["RB", "RWB"],
+                "CB": ["CB"],
+                "LCB": ["CB"],
+                "RCB": ["CB"],
+                "CDM": ["CDM"],
+                "LDM": ["CDM"],
+                "RDM": ["CDM"],
+                "CM": ["CM"],
+                "LCM": ["CM"],
+                "RCM": ["CM"],
+                "LM": ["LM", "LW"],
+                "RM": ["RM", "RW"],
+                "CAM": ["CAM"],
+                "LW": ["LW", "LM"],
+                "RW": ["RW", "RM"],
+                "ST": ["ST", "CF"],
+                "LST": ["ST", "CF"],
+                "RST": ["ST", "CF"],
+                "ST1": ["ST", "CF"],
+                "ST2": ["ST", "CF"],
+                "CF1": ["CF", "ST"],
+                "CF2": ["CF", "ST"]
+            };
+            const allowed = mapping[slotPos] || [slotPos];
+            return allPos.some(pos => allowed.includes(pos));
+        }
+
+        function getFlagImgHTML(nationality, flagEmoji) {
+            const nationLower = (nationality || "").trim().toLowerCase();
+            const code = COUNTRY_CODES[nationLower];
+            if (code) {
+                return `<img src="https://flagcdn.com/w40/${code}.png" class="panini-flag-img" alt="${nationality}" style="width: 20px; height: 13px; object-fit: cover; border-radius: 1px; box-shadow: 0 1px 2px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15); display: inline-block; vertical-align: middle;">`;
+            }
+            return `<span class="panini-flag" title="${nationality}">${flagEmoji || ""}</span>`;
+        }
+
+        // --- 3. GLOBAL STATE ---
+        let players = [];
+        let squad = {}; // formation slot -> player ID mapping
+        let activeSlotSelection = null; // Current slot being edited in squad builder
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // --- 4. ON INIT ---
+        // Generic helper: wire up all custom-dropdown chips
+        function initCustomDropdowns() {
+            const allDropdownChips = document.querySelectorAll('.filter-chip.custom-dropdown, .form-group.custom-dropdown');
+            allDropdownChips.forEach(chip => {
+                if (chip.dataset.dropdownInitialized) return;
+                chip.dataset.dropdownInitialized = "true";
+                
+                const menu = chip.querySelector('.custom-dropdown-menu');
+                if (!menu) return;
+                chip.addEventListener('click', (e) => {
+                    // Close all others first
+                    document.querySelectorAll('.custom-dropdown-menu.show').forEach(m => {
+                        if (m !== menu) m.classList.remove('show');
+                    });
+                    menu.classList.toggle('show');
+                    e.stopPropagation();
+                });
+            });
+            if (!window.documentClickBound) {
+                document.addEventListener('click', () => {
+                    document.querySelectorAll('.custom-dropdown-menu.show').forEach(m => m.classList.remove('show'));
+                });
+                window.documentClickBound = true;
+            }
+        }
+
+        // Generic select for any simple custom dropdown
+        function selectCustomValue(hiddenId, triggerId, menuId, value, label) {
+            document.getElementById(hiddenId).value = value;
+            document.getElementById(triggerId).innerHTML = label || value || 'All';
+            const menu = document.getElementById(menuId);
+            if (menu) menu.classList.remove('show');
+        }
+
+        function exportDatabaseFile() {
+            try {
+                const fileContent = `// --- FOOTBALL CARD LIBRARY DATABASE & STATIC CONFIGURATIONS ---
+
+const LEAGUES_DATA = ${JSON.stringify(LEAGUES_DATA, null, 4)};
+
+const CONFEDERATIONS = ${JSON.stringify(CONFEDERATIONS, null, 4)};
+
+const COUNTRY_FLAGS = ${JSON.stringify(COUNTRY_FLAGS, null, 4)};
+
+const COUNTRY_CODES = ${JSON.stringify(COUNTRY_CODES, null, 4)};
+
+const CLUB_BADGES = ${JSON.stringify(CLUB_BADGES, null, 4)};
+
+const SOFIFA_IDS = ${JSON.stringify(SOFIFA_IDS, null, 4)};
+
+const DEFAULT_PLAYERS = ${JSON.stringify(players, null, 4)};
+
+const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
+`;
+
+                const blob = new Blob([fileContent], { type: 'text/javascript;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'football_data.js');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+                showToast("Đã tạo file football_data.js mới để tải xuống!");
+            } catch (err) {
+                console.error('Lỗi khi xuất file database:', err);
+                alert('Không thể xuất file database.');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadDatabase();
+            applyFilters();
+            buildPitch();
+            updateSquadStats();
+            populateFormDropdowns();
+            initCustomDropdowns();
+            buildStaticDropdowns();
+        });
+
+        // Build the static dropdowns (position, theme, sort) that don't change with data
+        function buildStaticDropdowns() {
+            // --- Position ---
+            const posItems = [
+                { value: '', label: 'All' },
+                { value: 'FW', label: 'FW — Hàng công' },
+                { value: 'MF', label: 'MF — Tiền vệ' },
+                { value: 'DF', label: 'DF — Phòng ngự' },
+                { value: 'GK', label: 'GK — Thủ môn' }
+            ];
+            buildSimpleDropdown('position-dropdown-menu', posItems, (val, lbl) => {
+                selectCustomValue('filter-position', 'position-trigger-val', 'position-dropdown-menu', val, lbl.split(' — ')[0] || 'All');
+                updateChipActiveStates();
+                applyFilters();
+            });
+
+            // --- Theme / Season ---
+            const themeItems = [
+                { value: '', label: 'All' },
+                { value: 'standard', label: '⚽ Mùa 26' },
+                { value: 'worldcup26', label: '🏆 WC26' },
+                { value: 'icons', label: '⭐ Icons' },
+                { value: 'mm', label: '📷 Memoir' },
+                { value: 'toty', label: '❄️ TOTY' },
+                {
+                value: 'vnlegends',
+                label: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px; margin-top: -2px;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>VN Legends`
+            }
+            ];
+            buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
+                selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
+                updateChipActiveStates();
+                applyFilters();
+            });
+
+            // --- Sort ---
+            const sortItems = [
+                { value: 'rating-desc', label: 'OVR ↓ Cao nhất' },
+                { value: 'rating-asc', label: 'OVR ↑ Thấp nhất' },
+                { value: 'name-asc', label: 'Tên A → Z' },
+                { value: 'pos-gk-fw', label: 'GK → FW' },
+                { value: 'pos-fw-gk', label: 'FW → GK' }
+            ];
+            buildSimpleDropdown('sort-dropdown-menu', sortItems, (val, lbl) => {
+                selectCustomValue('sort-by', 'sort-trigger-val', 'sort-dropdown-menu', val, lbl || 'OVR ↓');
+                updateChipActiveStates();
+                applyFilters();
+            });
+        }
+
+        // Helper: build a flat list dropdown from an array of {value, label}
+        function buildSimpleDropdown(menuId, items, onSelect) {
+            const menu = document.getElementById(menuId);
+            if (!menu) return;
+            menu.innerHTML = '';
+            items.forEach(item => {
+                const el = document.createElement('div');
+                el.className = 'custom-dropdown-item';
+                el.innerHTML = `<span style="display: flex; align-items: center; gap: 4px; width: 100%;">${item.label}</span>`;
+                el.onclick = (e) => {
+                    e.stopPropagation();
+                    onSelect(item.value, item.label);
+                };
+                menu.appendChild(el);
+            });
+        }
+
+        function selectCustomNation(nation) {
+            selectCustomValue('filter-nation', 'nation-trigger-val', 'nation-dropdown-menu', nation, nation || 'All');
+            updateChipActiveStates();
+            applyFilters();
+        }
+
+        // Load data from LocalStorage or seed defaults
+        function loadDatabase() {
+            const savedPlayers = localStorage.getItem('pitchdeck_players');
+            const savedSquad = localStorage.getItem('pitchdeck_squad');
+
+            if (savedPlayers) {
+                try {
+                    players = JSON.parse(savedPlayers);
+                    
+                    let needsSave = false;
+
+                    // Remove duplicate Van Dijk (vvd-4) from local storage
+                    const initialLen = players.length;
+                    players = players.filter(p => p.id !== 'vvd-4');
+                    if (players.length !== initialLen) {
+                        needsSave = true;
+                    }
+
+                    // Remove Chile WC26 players from local storage
+                    const chileIdsToRemove = ['maripan-wc26', 'pulgar-wc26', 'brereton-wc26', 'sanchez-wc26'];
+                    const beforeChileLen = players.length;
+                    players = players.filter(p => !chileIdsToRemove.includes(p.id));
+                    if (players.length !== beforeChileLen) {
+                        needsSave = true;
+                    }
+
+                    // Update Hendrio nationality/flag to Vietnam
+                    const hendrio = players.find(p => p.id === "hendrio-10-s26");
+                    if (hendrio && (hendrio.nationality !== "Vietnam" || hendrio.flag !== "🇻🇳")) {
+                        hendrio.nationality = "Vietnam";
+                        hendrio.flag = "🇻🇳";
+                        needsSave = true;
+                    }
+
+                    // Migrate rimario-icons to romario-icons
+                    const rimarioIdx = players.findIndex(p => p.id === "rimario-icons");
+                    if (rimarioIdx !== -1) {
+                        players[rimarioIdx] = {
+                            id: "romario-icons",
+                            name: "Romário",
+                            cardName: "Romário",
+                            nationality: "Brazil",
+                            flag: "🇧🇷",
+                            league: "Icons",
+                            club: "",
+                            position: "ST",
+                            altPositions: ["CF"],
+                            rating: 94,
+                            photo: "",
+                            cardTheme: "icons"
+                        };
+                        needsSave = true;
+                    }
+                    for (let slot in squad) {
+                        if (squad[slot] === "rimario-icons") {
+                            squad[slot] = "romario-icons";
+                            needsSave = true;
+                        }
+                    }
+
+                    // Migrate Mbeumo club to Man United
+                    const mbeumoLocal = players.find(p => p.id === "mbeumo-brentford");
+                    if (mbeumoLocal && mbeumoLocal.club !== "Man United") {
+                        mbeumoLocal.club = "Man United";
+                        mbeumoLocal.clubBadge = "";
+                        needsSave = true;
+                    }
+
+                    // Clear Premier League league for icons and memoirs in local storage
+                    players.forEach(p => {
+                        if ((p.cardTheme === 'icons' || p.cardTheme === 'mm') && p.league === 'Premier League') {
+                            p.league = '';
+                            needsSave = true;
+                        }
+                    });
+
+                    // Update Hwang Hee-chan nationality
+                    const hwangLocal = players.find(p => p.id === "hwang-wolves-s26");
+                    if (hwangLocal && hwangLocal.nationality !== "South Korea") {
+                        hwangLocal.nationality = "South Korea";
+                        hwangLocal.flag = "🇰🇷";
+                        needsSave = true;
+                    }
+
+                    // Clear league property for all icons and memoirs in local storage
+                    players.forEach(p => {
+                        if ((p.cardTheme === 'icons' || p.cardTheme === 'mm') && p.league !== '') {
+                            p.league = '';
+                            needsSave = true;
+                        }
+                    });
+
+                    // Update Le Thuy Hai cardName to Thuy Hai
+                    const lethuyhai = players.find(p => p.id === "lethuyhai-vnlegend");
+                    if (lethuyhai && lethuyhai.cardName !== "Thụy Hải") {
+                        lethuyhai.cardName = "Thụy Hải";
+                        needsSave = true;
+                    }
+
+                    // Remove duplicate Hanoi FC players from local storage
+                    const dupIdsToRemove = ['vanquyet-hanoi-s26', 'tuanhai-hanoi-s26', 'hungdung-hanoi-s26'];
+                    const beforeDupLen = players.length;
+                    players = players.filter(p => !dupIdsToRemove.includes(p.id));
+                    if (players.length !== beforeDupLen) {
+                        needsSave = true;
+                    }
+
+                    // Remove 16 bugged Icons with singular -icon IDs from local storage
+                    const iconIdsToRemove = [
+                        'cech-icon', 'lehmann-icon', 'casillas-icon', 'makelele-icon', 'bergkamp-icon',
+                        'beckham-icon', 'boniek-icon', 'ceni-icon', 'chilavert-icon', 'totti-icon',
+                        'abidal-icon', 'evra-icon', 'gneville-icon', 'shilton-icon', 'nedved-icon', 'puskas-icon'
+                    ];
+                    const beforeIconLen = players.length;
+                    players = players.filter(p => !iconIdsToRemove.includes(p.id));
+                    if (players.length !== beforeIconLen) {
+                        needsSave = true;
+                    }
+
+                    // Migration guards for team transfers, ratings, and legends
+                    players.forEach(p => {
+                        // Update Santiago Gimenez WC26 cardName
+                        if (p.id === 'sgimenez-wc26' && p.cardName !== 'S. Gimenez') {
+                            p.cardName = 'S. Gimenez';
+                            needsSave = true;
+                        }
+                        // Update Ben White photo
+                        if (p.id === 'white-4' && p.photo !== 'https://r2.thesportsdb.com/images/media/player/cutout/78nyo71769331924.png') {
+                            p.photo = 'https://r2.thesportsdb.com/images/media/player/cutout/78nyo71769331924.png';
+                            needsSave = true;
+                        }
+
+                        // Update Desire Doue WC26 stats
+                        if (p.id === 'd-doue-wc26' && (p.rating !== 87 || p.position !== 'RW')) {
+                            p.rating = 87;
+                            p.position = 'RW';
+                            p.altPositions = ['CF', 'LW'];
+                            needsSave = true;
+                        }
+
+                        // Trent to Real Madrid
+                        if (p.id === 'arnold-66' && (p.club !== 'Real Madrid' || p.league !== 'La Liga')) {
+                            p.club = 'Real Madrid';
+                            p.league = 'La Liga';
+                            p.clubBadge = '⚪';
+                            needsSave = true;
+                        }
+                        // L. Diaz to Bayern Munich
+                        if (p.id === 'diaz-7' && (p.club !== 'Bayern Munich' || p.league !== 'Bundesliga')) {
+                            p.club = 'Bayern Munich';
+                            p.league = 'Bundesliga';
+                            p.clubBadge = '🔴';
+                            needsSave = true;
+                        }
+                        // Kerkez to Liverpool
+                        if (p.id === 'kerkez-bournemouth' || p.id === 'kerkez-3') {
+                            if (p.id === 'kerkez-bournemouth') {
+                                p.id = 'kerkez-3';
+                            }
+                            if (p.club !== 'Liverpool' || p.league !== 'Premier League') {
+                                p.club = 'Liverpool';
+                                p.league = 'Premier League';
+                                p.clubBadge = '🔴';
+                                needsSave = true;
+                            }
+                        }
+                        // Maldini should be Icons only, not EPL
+                        if (p.id === 'maldini-icons' && (p.league !== '' || p.club !== '' || p.clubBadge !== '')) {
+                            p.league = '';
+                            p.club = '';
+                            p.clubBadge = '';
+                            needsSave = true;
+                        }
+                        // Dominik Szoboszlai rating 86
+                        if (p.id === 'szoboszlai-8' && p.rating !== 86) {
+                            p.rating = 86;
+                            needsSave = true;
+                        }
+                    });
+
+                    // Migrate photos for existing players in local storage if not set or outdated
+                    players.forEach(p => {
+                        // Remove Icon photos that use Sofifa sources
+                        const isIcon = p.cardTheme === 'icons' || (p.id && p.id.endsWith('-icons')) || p.league === 'Icons';
+                        if (isIcon && p.photo && p.photo.includes('sofifa')) {
+                            p.photo = '';
+                            needsSave = true;
+                        }
+
+                        // Migration guard for edited Gakpo cards
+                        const nameLower = (p.name || p.cardName || '').toLowerCase();
+                        if (nameLower.includes('gakpo') && (p.id === 'vandijk-4' || p.id === 'vvd-4' || (p.photo && (p.photo.includes('9cxf2q1757087742.png') || p.photo.includes('203376'))))) {
+                            p.id = 'gakpo-11';
+                            p.photo = 'https://r2.thesportsdb.com/images/media/player/cutout/lwkl5n1757088091.png';
+                            p.position = 'LW';
+                            p.rating = 83;
+                            p.club = 'Liverpool';
+                            p.clubBadge = '🔴';
+                            needsSave = true;
+                        }
+
+                        if (p.cardTheme === 'worldcup26') {
+                            let targetPhoto = "";
+                            const nameKey = (p.cardName || p.name || '').toLowerCase().trim();
+                            if (nameKey.includes("messi")) {
+                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg";
+                            } else if (nameKey.includes("ronaldo")) {
+                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/8/8b/Cristiano_Ronaldo_WC2022_-_01_%28cropped%29.jpg";
+                            } else if (nameKey.includes("yamal")) {
+                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lamine_Yamal_in_2025_%28cropped%29.jpg";
+                            } else if (nameKey.includes("cubars")) {
+                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pau_Cubars%C3%AD_%28cropped%29.jpg";
+                            }
+
+                            if (targetPhoto && p.photo !== targetPhoto) {
+                                p.photo = targetPhoto;
+                                needsSave = true;
+                            }
+
+                            // Force clear WC26 photos for Kane, Haaland, Wirtz, Rice, Saka, Pickford, Neuer, Ochoa, Olise in localStorage
+                            const wc26TargetIds = [
+                                'kane-wc26',
+                                'haaland-wc26',
+                                'wirtz-wc26',
+                                'rice-wc26',
+                                'saka-wc26',
+                                'pickford-wc26',
+                                'neuer-wc26',
+                                'ochoa-wc26',
+                                'olise-wc26'
+                            ];
+                            if (wc26TargetIds.includes(p.id) && p.photo !== "") {
+                                p.photo = "";
+                                needsSave = true;
+                            }
+
+                            if (p.cardName && p.cardName.includes('(WC26)')) {
+                                p.cardName = p.cardName.replace(/\s*\(WC26\)/gi, '').trim();
+                                needsSave = true;
+                            }
+
+                            // Fix league and club for WC26 cards (except Harry Kane)
+                            if (p.id !== 'kane-wc26') {
+                                if (p.league !== 'WC26' || p.club !== p.nationality) {
+                                    p.league = 'WC26';
+                                    p.club = p.nationality;
+                                    needsSave = true;
+                                }
+                            }
+                            return; // skip SoFIFA/Sortitoutsi standard photo assignment
+                        }
+
+                    });
+
+                    // Remove old replaced Spain WC26 player IDs to avoid duplicates in local storage
+                    const oldSpainIdsToClean = [
+                        'lenormand-wc26', 'vivian-wc26', 'jnavas-wc26', 'remiro-wc26',
+                        'morata-wc26', 'joselu-wc26', 'carvajal-wc26'
+                    ];
+                    const originalCount = players.length;
+                    players = players.filter(p => !oldSpainIdsToClean.includes(p.id));
+                    if (players.length !== originalCount) {
+                        needsSave = true;
+                    }
+
+                    // Merge any missing DEFAULT_PLAYERS automatically and update changed photos
+                    DEFAULT_PLAYERS.forEach(dp => {
+                        const existing = players.find(p => p.id === dp.id);
+                        if (!existing) {
+                            players.push(dp);
+                            needsSave = true;
+                        } else if (dp.photo && existing.photo !== dp.photo) {
+                            // Overwrite only if old photo was empty or a SoFIFA photo
+                            if (!existing.photo || existing.photo.includes('sofifa.net')) {
+                                existing.photo = dp.photo;
+                                needsSave = true;
+                            }
+                        }
+                    });
+
+                    // Move De Bruyne to Napoli if he is still registered at Man City
+                    const kdb = players.find(p => p.id === "kdb-17");
+                    if (kdb && kdb.club === "Man City") {
+                        kdb.club = "Napoli";
+                        kdb.league = "Serie A";
+                        kdb.clubBadge = "🔵";
+                        needsSave = true;
+                    }
+
+                    // Update Greenwood's nationality/flag to Jamaica
+                    const greenwood = players.find(p => p.id === "greenwood-10");
+                    if (greenwood && (greenwood.nationality !== "Jamaica" || greenwood.flag !== "🇯🇲")) {
+                        greenwood.nationality = "Jamaica";
+                        greenwood.flag = "🇯🇲";
+                        needsSave = true;
+                    }
+
+                    // Update Dimarco's position: LWB, altPositions: LB
+                    const dimarco = players.find(p => p.id === "dimarco-32");
+                    if (dimarco && (dimarco.position !== "LWB" || !dimarco.altPositions.includes("LB"))) {
+                        dimarco.position = "LWB";
+                        dimarco.altPositions = ["LB"];
+                        needsSave = true;
+                    }
+
+                    // Auto-sync updated photos from DEFAULT_PLAYERS to local storage
+                    DEFAULT_PLAYERS.forEach(dp => {
+                        const p = players.find(x => x.id === dp.id);
+                        if (p && dp.photo && dp.photo !== "" && p.photo !== dp.photo) {
+                            if (dp.id.endsWith('-icons') || dp.cardTheme === 'icons' || !p.photo || p.photo === "" || p.photo.includes("sofifa.net")) {
+                                p.photo = dp.photo;
+                                needsSave = true;
+                            }
+                        }
+                    });
+
+                    if (needsSave) {
+                        saveDatabase();
+                    }
+                } catch(e) {
+                    console.error("Lỗi parse dữ liệu cầu thủ, phục hồi mặc định", e);
+                    players = [...DEFAULT_PLAYERS];
+                }
+            } else {
+                players = [...DEFAULT_PLAYERS];
+                localStorage.setItem('pitchdeck_players', JSON.stringify(players));
+            }
+
+            if (savedSquad) {
+                try {
+                    squad = JSON.parse(savedSquad);
+                } catch(e) {
+                    squad = {};
+                }
+            }
+            saveDatabase();
+        }
+
+        function saveDatabase() {
+            // Auto-migration step to fill missing league/clubBadge fields on legacy cards
+            let updated = false;
+            players.forEach(p => {
+                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends') {
+                    for (const [leagueName, data] of Object.entries(LEAGUES_DATA)) {
+                        if (data.clubs.includes(p.club)) {
+                            p.league = leagueName;
+                            updated = true;
+                            break;
+                        }
+                    }
+                    if (!p.league) {
+                        p.league = "Premier League";
+                        updated = true;
+                    }
+                }
+                if (!p.clubBadge && CLUB_BADGES[p.club]) {
+                    p.clubBadge = CLUB_BADGES[p.club];
+                    updated = true;
+                }
+            });
+
+            localStorage.setItem('pitchdeck_players', JSON.stringify(players));
+            localStorage.setItem('pitchdeck_squad', JSON.stringify(squad));
+            populateFilters();
+        }
+
+        // Dynamically populate search options based on database contents
+        function populateFilters() {
+            const currentLeague = document.getElementById('filter-league').value;
+
+            // Helper to select league
+            function selectCustomLeague(val) {
+                selectCustomValue('filter-league', 'league-trigger-val', 'league-dropdown-menu', val, val || 'All');
+                onLeagueChange();
+            }
+
+            // Build league custom dropdown grouped by Confederation (Custom Dropdown with hover submenu)
+            const leagueDropdownMenu = document.getElementById('league-dropdown-menu');
+            if (leagueDropdownMenu) {
+                leagueDropdownMenu.innerHTML = '';
+
+                // 1. Add "All" option
+                const allOpt = document.createElement('div');
+                allOpt.className = 'custom-dropdown-item';
+                allOpt.textContent = 'All';
+                allOpt.onclick = (e) => {
+                    e.stopPropagation();
+                    selectCustomLeague('');
+                };
+                leagueDropdownMenu.appendChild(allOpt);
+
+                // 2. Group leagues by Confederation
+                const leagueGrouped = {
+                    "UEFA": [],
+                    "CONMEBOL": [],
+                    "CONCACAF": [],
+                    "AFC": [],
+                    "CAF": [],
+                    "OFC": [],
+                    "Khác": []
+                };
+
+                Object.keys(LEAGUES_DATA).forEach(l => {
+                    if (l === 'WC26') return; // WC26 is placed directly at the bottom
+                    const conf = getLeagueConfederation(l);
+                    if (leagueGrouped[conf]) {
+                        leagueGrouped[conf].push(l);
+                    } else {
+                        leagueGrouped["Khác"].push(l);
+                    }
+                });
+
+                // 3. Render Confederation folders with nested submenus
+                const confOrder = ["UEFA", "CONMEBOL", "CONCACAF", "AFC", "CAF", "OFC", "Khác"];
+                confOrder.forEach(conf => {
+                    const list = leagueGrouped[conf];
+                    if (list && list.length > 0) {
+                        const confItem = document.createElement('div');
+                        confItem.className = 'custom-dropdown-item has-submenu';
+                        confItem.innerHTML = `${conf} <span style="margin-left:auto; font-size:0.75rem; color:var(--text-muted);">›</span>`;
+                        
+                        const submenu = document.createElement('div');
+                        submenu.className = 'custom-dropdown-submenu';
+                        
+                        list.sort().forEach(l => {
+                            const subItem = document.createElement('div');
+                            subItem.className = 'submenu-item';
+                            subItem.textContent = l;
+                            subItem.onclick = (e) => {
+                                e.stopPropagation();
+                                selectCustomLeague(l);
+                            };
+                            submenu.appendChild(subItem);
+                        });
+                        
+                        confItem.appendChild(submenu);
+                        leagueDropdownMenu.appendChild(confItem);
+                    }
+                });
+
+                // 4. Add WC26 option directly below the Confederations list
+                if (LEAGUES_DATA['WC26']) {
+                    const wcOpt = document.createElement('div');
+                    wcOpt.className = 'custom-dropdown-item';
+                    wcOpt.textContent = 'WC26';
+                    wcOpt.onclick = (e) => {
+                        e.stopPropagation();
+                        selectCustomLeague('WC26');
+                    };
+                    leagueDropdownMenu.appendChild(wcOpt);
+                }
+            }
+
+            // Restore current selection label
+            if (currentLeague) {
+                document.getElementById('league-trigger-val').textContent = currentLeague;
+            }
+
+            // Nationality from player data grouped by Confederation (Custom Dropdown)
+            const currentNation = document.getElementById('filter-nation').value;
+            const nations = Array.from(new Set(players.map(p => p.nationality))).filter(Boolean).sort();
+            
+            const grouped = {
+                "UEFA": [],
+                "CONMEBOL": [],
+                "CONCACAF": [],
+                "AFC": [],
+                "CAF": [],
+                "OFC": [],
+                "Khác": []
+            };
+            
+            nations.forEach(n => {
+                const conf = getConfederation(n);
+                if (grouped[conf]) {
+                    grouped[conf].push(n);
+                } else {
+                    grouped["Khác"].push(n);
+                }
+            });
+
+            const dropdownMenu = document.getElementById('nation-dropdown-menu');
+            if (dropdownMenu) {
+                dropdownMenu.innerHTML = '';
+
+                // Add "All" option
+                const allOpt = document.createElement('div');
+                allOpt.className = 'custom-dropdown-item';
+                allOpt.textContent = 'All';
+                allOpt.onclick = (e) => {
+                    e.stopPropagation();
+                    selectCustomNation('');
+                };
+                dropdownMenu.appendChild(allOpt);
+                
+                const confOrder = ["UEFA", "CONMEBOL", "CONCACAF", "AFC", "CAF", "OFC", "Khác"];
+                confOrder.forEach(conf => {
+                    const list = grouped[conf];
+                    if (list && list.length > 0) {
+                        const confItem = document.createElement('div');
+                        confItem.className = 'custom-dropdown-item has-submenu';
+                        confItem.innerHTML = `${conf} <span style="margin-left:auto; font-size:0.75rem; color:var(--text-muted);">›</span>`;
+                        
+                        const submenu = document.createElement('div');
+                        submenu.className = 'custom-dropdown-submenu';
+                        
+                        list.forEach(n => {
+                            const subItem = document.createElement('div');
+                            subItem.className = 'submenu-item';
+                            subItem.textContent = n;
+                            subItem.onclick = (e) => {
+                                e.stopPropagation();
+                                selectCustomNation(n);
+                            };
+                            submenu.appendChild(subItem);
+                        });
+                        
+                        confItem.appendChild(submenu);
+                        dropdownMenu.appendChild(confItem);
+                    }
+                });
+            }
+
+            if (nations.includes(currentNation)) {
+                document.getElementById('filter-nation').value = currentNation;
+                document.getElementById('nation-trigger-val').textContent = currentNation;
+            } else {
+                document.getElementById('filter-nation').value = '';
+                document.getElementById('nation-trigger-val').textContent = 'All';
+            }
+
+            // Populate form drawer custom dropdowns too
+            populateFormDropdowns();
+
+            updateClubFilterOptions();
+            updateChipActiveStates();
+            initCustomDropdowns(); // re-wire after DOM changes
+        }
+
+        // Populate club options: prefer LEAGUES_DATA clubs when league selected, else from player data
+        function updateClubFilterOptions() {
+            const leagueFilter = document.getElementById('filter-league').value;
+            const currentClubVal = document.getElementById('filter-club').value;
+            const chipClub = document.getElementById('chip-club');
+
+            let clubs = [];
+            if (leagueFilter && LEAGUES_DATA[leagueFilter]) {
+                clubs = [...LEAGUES_DATA[leagueFilter].clubs].sort();
+            } else {
+                clubs = Array.from(new Set(players.map(p => p.club))).filter(Boolean).sort();
+            }
+
+            // Disable club chip when no league is selected
+            if (chipClub) {
+                chipClub.style.opacity = leagueFilter ? '1' : '0.35';
+                chipClub.style.pointerEvents = leagueFilter ? '' : 'none';
+            }
+
+            const clubItems = [{ value: '', label: 'All' }];
+            clubs.forEach(c => clubItems.push({ value: c, label: c }));
+            buildSimpleDropdown('club-dropdown-menu', clubItems, (val, lbl) => {
+                selectCustomValue('filter-club', 'club-trigger-val', 'club-dropdown-menu', val, lbl || 'All');
+                updateChipActiveStates();
+                applyFilters();
+            });
+
+            // Restore or clear club selection
+            if (!clubs.includes(currentClubVal)) {
+                document.getElementById('filter-club').value = '';
+                document.getElementById('club-trigger-val').textContent = 'All';
+            }
+        }
+
+        // Highlight chip labels when a filter is active
+        function updateChipActiveStates() {
+            const chips = {
+                'chip-league': 'filter-league',
+                'chip-club': 'filter-club',
+                'chip-nation': 'filter-nation',
+                'chip-position': 'filter-position',
+                'chip-theme': 'filter-theme',
+                'chip-sort': 'sort-by'
+            };
+            for (const [chipId, hiddenId] of Object.entries(chips)) {
+                const chip = document.getElementById(chipId);
+                const hidden = document.getElementById(hiddenId);
+                if (!chip || !hidden) continue;
+                const isActive = hiddenId === 'sort-by'
+                    ? hidden.value !== 'rating-desc'
+                    : hidden.value !== '';
+                chip.classList.toggle('active', isActive);
+            }
+        }
+
+        // Reset all filters
+        function resetFilters() {
+            document.getElementById('search-input').value = '';
+            // Reset all hidden inputs and trigger labels
+            const resets = [
+                { hidden: 'filter-league',   trigger: 'league-trigger-val',   label: 'All' },
+                { hidden: 'filter-club',      trigger: 'club-trigger-val',     label: 'All' },
+                { hidden: 'filter-nation',    trigger: 'nation-trigger-val',   label: 'All' },
+                { hidden: 'filter-position',  trigger: 'position-trigger-val', label: 'All' },
+                { hidden: 'filter-theme',     trigger: 'theme-trigger-val',    label: 'All' },
+                { hidden: 'sort-by',          trigger: 'sort-trigger-val',     label: 'OVR ↓', value: 'rating-desc' }
+            ];
+            resets.forEach(r => {
+                const h = document.getElementById(r.hidden);
+                const t = document.getElementById(r.trigger);
+                if (h) h.value = r.value !== undefined ? r.value : '';
+                if (t) t.textContent = r.label;
+            });
+            updateClubFilterOptions();
+            updateChipActiveStates();
+            applyFilters();
+        }
+
+        // Triggered when user selects a league in Search panel
+        function onLeagueChange() {
+            const leagueFilter = document.getElementById('filter-league').value;
+            if (!leagueFilter) {
+                document.getElementById('filter-club').value = '';
+                document.getElementById('club-trigger-val').textContent = 'All';
+            }
+            updateClubFilterOptions();
+            updateChipActiveStates();
+            applyFilters();
+        }
+
+        // --- 5. TABS & VIEW CONTROL ---
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            if (tabName === 'library') {
+                document.querySelector('[onclick="switchTab(\'library\')"]').classList.add('active');
+                document.getElementById('library-tab').classList.add('active');
+                applyFilters();
+            } else if (tabName === 'squad') {
+                document.querySelector('[onclick="switchTab(\'squad\')"]').classList.add('active');
+                document.getElementById('squad-tab').classList.add('active');
+                buildPitch();
+                updateSquadStats();
+            }
+        }
+
+        // Extract short names or handle special name cases (Haaland, De Bruyne, D. Doué, G. Doué, etc.)
+        function getShortName(fullName) {
+            const nameLower = fullName.toLowerCase().trim();
+            if (nameLower.includes("de bruyne")) return "De Bruyne";
+            if (nameLower.includes("van dijk")) return "Van Dijk";
+            if (nameLower.includes("c. ronaldo") || nameLower.includes("cristiano ronaldo")) return "Ronaldo";
+            if (nameLower.includes("d. doué") || nameLower.includes("d. doue")) return "D. Doué";
+            if (nameLower.includes("g. doué") || nameLower.includes("g. doue")) return "G. Doué";
+            if (nameLower.includes("désiré doué") || nameLower.includes("desire doue")) return "D. Doué";
+            if (nameLower.includes("guela doué") || nameLower.includes("guela doue")) return "G. Doué";
+
+            const parts = fullName.trim().split(/\s+/);
+            if (parts.length <= 1) return fullName;
+            return parts[parts.length - 1]; // Default return last word (last name)
+        }
+
+        // --- 6. RENDER CASUAL CARDS ---
+        function getCardThemeClass(p) {
+            if (p && p.cardTheme === 'worldcup26') return 'card-wc26';
+            if (p && p.cardTheme === 'icons') return 'card-icons';
+            if (p && p.cardTheme === 'mm') return 'card-mm';
+            if (p && p.cardTheme === 'toty') return 'card-toty';
+            if (p && p.cardTheme === 'ucl') return 'card-ucl';
+            if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
+            const rating = (p && p.rating) || p || 0;
+            if (rating >= 90) return 'card-icon';
+            if (rating >= 80) return 'card-gold';
+            if (rating >= 70) return 'card-silver';
+            return 'card-bronze';
+        }
+
+        function getCardThemeIcon(p) {
+            if (p.cardTheme === 'worldcup26') return '🏆';
+            if (p.cardTheme === 'icons') return '★';
+            if (p.cardTheme === 'mm') return '✦';
+            if (p.cardTheme === 'toty') return '❄';
+            if (p.cardTheme === 'ucl') return '✦';
+            if (p.cardTheme === 'vnlegends') return '🇻🇳';
+            
+            const themeClass = getCardThemeClass(p);
+            if (themeClass === 'card-icon') return '💎';
+            if (themeClass === 'card-gold') return '★';
+            if (themeClass === 'card-silver') return '☆';
+            return '•';
+        }
+
+        function createPlayerCardHTML(p) {
+            const themeClass = getCardThemeClass(p);
+            const displayName = p.cardName || getShortName(p.name);
+            const isIcons = p.cardTheme === 'icons';
+            const isMM = p.cardTheme === 'mm';
+            const isTOTY = p.cardTheme === 'toty';
+            const isUCL = p.cardTheme === 'ucl';
+            const isVNLegends = p.cardTheme === 'vnlegends';
+
+            let photoHTML;
+            if (p.photo) {
+                photoHTML = `<img src="${p.photo}" alt="${p.name}">`;
+            } else {
+                photoHTML = `<svg class="panini-photo-silhouette" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>`;
+            }
+
+            const flagHTML = getFlagImgHTML(p.nationality, p.flag);
+
+            const footerHTML = isIcons
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">★ ICONS ★</div>`
+                : isMM
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">✦ MEMOIR ✦</div>`
+                : isTOTY
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">❄ TOTY 26 ❄</div>`
+                : isUCL
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">✦ UCL HERO ✦</div>`
+                : isVNLegends
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">★ VIETNAM LEGENDS ★</div>`
+                : `<div class="panini-name">${displayName}</div>
+                   <div class="panini-club">${p.club || ''}</div>`;
+
+            return `
+                <div class="player-card-wrapper" onclick="openEditDrawer('${p.id}')">
+                    <div class="player-card ${themeClass}" id="card-${p.id}">
+                        <div class="card-actions">
+                            <button class="card-action-btn" onclick="event.stopPropagation(); openEditDrawer('${p.id}')" title="Sửa">
+                                <i data-lucide="edit-3" style="width:11px;height:11px;"></i>
+                            </button>
+                            <button class="card-action-btn btn-delete" onclick="event.stopPropagation(); deletePlayer('${p.id}')" title="Xóa">
+                                <i data-lucide="trash" style="width:11px;height:11px;"></i>
+                            </button>
+                        </div>
+
+                        <div class="panini-band">
+                            <div class="panini-ovr">${p.rating}</div>
+                            <div class="panini-pos">${p.position}</div>
+                        </div>
+
+                        <div class="panini-photo">
+                            ${photoHTML}
+                            <div class="panini-card-flag" title="${p.nationality}">${flagHTML}</div>
+                        </div>
+
+                        <div class="panini-footer">${footerHTML}</div>
+
+                        <div class="card-theme-triangle">
+                            <span class="card-theme-triangle-icon">${getCardThemeIcon(p)}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Apply 3D Tilt Effect to rendered card elements
+        function initCardTiltEffects() {
+            document.querySelectorAll('.player-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const xc = rect.width / 2;
+                    const yc = rect.height / 2;
+                    const angleX = (yc - y) / 6;
+                    const angleY = (x - xc) / 6;
+                    card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.03)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                });
+            });
+        }
+
+        // --- 7. SEARCH, FILTER, SORT ---
+        function removeDiacritics(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D");
+        }
+
+        function applyFilters() {
+            const queryRaw = document.getElementById('search-input').value.toLowerCase().trim();
+            const queryNormalized = removeDiacritics(queryRaw);
+            const leagueFilter = document.getElementById('filter-league').value;
+            const clubFilter = document.getElementById('filter-club').value;
+            const nationFilter = document.getElementById('filter-nation').value;
+            const posFilter = document.getElementById('filter-position').value;
+            const sortBy = document.getElementById('sort-by').value;
+
+            let filtered = [...players];
+
+            // Filter by search query (name)
+            if (queryNormalized) {
+                filtered = filtered.filter(p => {
+                    const fullNameClean = removeDiacritics((p.name || '').toLowerCase());
+                    const cardNameClean = removeDiacritics((p.cardName || '').toLowerCase());
+                    return fullNameClean.includes(queryNormalized) || cardNameClean.includes(queryNormalized);
+                });
+            }
+
+            // Filter by league selection
+            if (leagueFilter) {
+                filtered = filtered.filter(p => p.league === leagueFilter);
+            }
+
+            // Filter by club selection
+            if (clubFilter) {
+                filtered = filtered.filter(p => p.club === clubFilter);
+            }
+
+            // Filter by nationality selection
+            if (nationFilter) {
+                filtered = filtered.filter(p => p.nationality === nationFilter);
+            }
+
+            // Filter by card theme/season
+            const themeFilter = document.getElementById('filter-theme').value;
+            if (themeFilter) {
+                filtered = filtered.filter(p => (p.cardTheme || 'standard') === themeFilter);
+            }
+
+            // Filter by position categories (check main position or any alt position)
+            if (posFilter) {
+                filtered = filtered.filter(p => {
+                    const allPos = [p.position, ...(p.altPositions || [])];
+                    if (posFilter === 'GK') {
+                        return allPos.includes('GK');
+                    } else if (posFilter === 'FW') {
+                        const targetPositions = ['ST', 'CF', 'LW', 'RW'];
+                        return allPos.some(pos => targetPositions.includes(pos));
+                    } else if (posFilter === 'MF') {
+                        const targetPositions = ['CAM', 'CM', 'CDM', 'LM', 'RM'];
+                        return allPos.some(pos => targetPositions.includes(pos));
+                    } else if (posFilter === 'DF') {
+                        const targetPositions = ['CB', 'LB', 'RB', 'LWB', 'RWB'];
+                        return allPos.some(pos => targetPositions.includes(pos));
+                    }
+                    return false;
+                });
+            }
+
+            // Sort logic
+            filtered.sort((a, b) => {
+                if (sortBy === 'rating-desc') return b.rating - a.rating;
+                if (sortBy === 'rating-asc') return a.rating - b.rating;
+                if (sortBy === 'name-asc') return a.name.localeCompare(b.name);
+                if (sortBy === 'pos-gk-fw') {
+                    return (getPositionRank(a.position) - getPositionRank(b.position)) || (b.rating - a.rating);
+                }
+                if (sortBy === 'pos-fw-gk') {
+                    return (getPositionRank(b.position) - getPositionRank(a.position)) || (b.rating - a.rating);
+                }
+                return 0;
+            });
+
+            // Render output
+            const grid = document.getElementById('player-grid');
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <i data-lucide="info"></i>
+                        <h3>Không tìm thấy cầu thủ nào</h3>
+                        <p>Hãy thử thay đổi điều kiện tìm kiếm hoặc bộ lọc.</p>
+                    </div>
+                `;
+            } else {
+                grid.innerHTML = filtered.map(p => createPlayerCardHTML(p)).join('');
+            }
+
+            updateChipActiveStates();
+            lucide.createIcons();
+            initCardTiltEffects();
+        }
+
+        // --- 8. SAVE/ADD/EDIT DRAWER LOGIC ---
+        function populateFormDropdowns() {
+            const formLeagueMenu = document.getElementById('form-league-dropdown-menu');
+            if (formLeagueMenu) {
+                formLeagueMenu.innerHTML = '';
+                
+                // Add none option
+                const noneOpt = document.createElement('div');
+                noneOpt.className = 'custom-dropdown-item';
+                noneOpt.textContent = '-- Chọn Giải đấu --';
+                noneOpt.onclick = (e) => {
+                    e.stopPropagation();
+                    selectCustomValue('player-league', 'form-league-trigger-val', 'form-league-dropdown-menu', '', '-- Chọn Giải đấu --');
+                    onFormLeagueChange();
+                };
+                formLeagueMenu.appendChild(noneOpt);
+
+                // Group leagues by Confederation
+                const leagueGrouped = {
+                    "UEFA": [],
+                    "CONMEBOL": [],
+                    "CONCACAF": [],
+                    "AFC": [],
+                    "CAF": [],
+                    "OFC": [],
+                    "Khác": []
+                };
+
+                Object.keys(LEAGUES_DATA).forEach(l => {
+                    if (l === 'WC26') return;
+                    const conf = getLeagueConfederation(l);
+                    if (leagueGrouped[conf]) {
+                        leagueGrouped[conf].push(l);
+                    } else {
+                        leagueGrouped["Khác"].push(l);
+                    }
+                });
+
+                const confOrder = ["UEFA", "CONMEBOL", "CONCACAF", "AFC", "CAF", "OFC", "Khác"];
+                confOrder.forEach(conf => {
+                    const list = leagueGrouped[conf];
+                    if (list && list.length > 0) {
+                        const confItem = document.createElement('div');
+                        confItem.className = 'custom-dropdown-item has-submenu';
+                        confItem.innerHTML = `${conf} <span style="margin-left:auto; font-size:0.75rem; color:var(--text-muted);">›</span>`;
+                        
+                        const submenu = document.createElement('div');
+                        submenu.className = 'custom-dropdown-submenu';
+                        
+                        list.sort().forEach(l => {
+                            const subItem = document.createElement('div');
+                            subItem.className = 'submenu-item';
+                            subItem.textContent = l;
+                            subItem.onclick = (e) => {
+                                e.stopPropagation();
+                                selectCustomValue('player-league', 'form-league-trigger-val', 'form-league-dropdown-menu', l, l);
+                                onFormLeagueChange();
+                            };
+                            submenu.appendChild(subItem);
+                        });
+                        
+                        confItem.appendChild(submenu);
+                        formLeagueMenu.appendChild(confItem);
+                    }
+                });
+
+                if (LEAGUES_DATA['WC26']) {
+                    const wcOpt = document.createElement('div');
+                    wcOpt.className = 'custom-dropdown-item';
+                    wcOpt.textContent = 'WC26';
+                    wcOpt.onclick = (e) => {
+                        e.stopPropagation();
+                        selectCustomValue('player-league', 'form-league-trigger-val', 'form-league-dropdown-menu', 'WC26', 'WC26');
+                        onFormLeagueChange();
+                    };
+                    formLeagueMenu.appendChild(wcOpt);
+                }
+            }
+
+            const formNationMenu = document.getElementById('form-nation-dropdown-menu');
+            if (formNationMenu) {
+                formNationMenu.innerHTML = '';
+                
+                // Add none option
+                const noneOpt = document.createElement('div');
+                noneOpt.className = 'custom-dropdown-item';
+                noneOpt.textContent = '-- Chọn Quốc gia --';
+                noneOpt.onclick = (e) => {
+                    e.stopPropagation();
+                    document.getElementById('player-nation').value = '';
+                    document.getElementById('player-flag').value = '';
+                    document.getElementById('form-nation-trigger-val').textContent = '-- Chọn Quốc gia --';
+                    formNationMenu.classList.remove('show');
+                };
+                formNationMenu.appendChild(noneOpt);
+
+                // Build unique capitalised nations list
+                const nationsMap = {};
+                players.forEach(p => {
+                    if (p.nationality) {
+                        nationsMap[p.nationality.toLowerCase()] = p.nationality;
+                    }
+                });
+                Object.keys(COUNTRY_FLAGS).forEach(k => {
+                    if (!nationsMap[k]) {
+                        const cap = k.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                        nationsMap[k] = cap;
+                    }
+                });
+                const nationsList = Object.values(nationsMap).sort();
+
+                const grouped = {
+                    "UEFA": [],
+                    "CONMEBOL": [],
+                    "CONCACAF": [],
+                    "AFC": [],
+                    "CAF": [],
+                    "OFC": [],
+                    "Khác": []
+                };
+                
+                nationsList.forEach(n => {
+                    const conf = getConfederation(n);
+                    if (grouped[conf]) {
+                        grouped[conf].push(n);
+                    } else {
+                        grouped["Khác"].push(n);
+                    }
+                });
+
+                const confOrder = ["UEFA", "CONMEBOL", "CONCACAF", "AFC", "CAF", "OFC", "Khác"];
+                confOrder.forEach(conf => {
+                    const list = grouped[conf];
+                    if (list && list.length > 0) {
+                        const confItem = document.createElement('div');
+                        confItem.className = 'custom-dropdown-item has-submenu';
+                        confItem.innerHTML = `${conf} <span style="margin-left:auto; font-size:0.75rem; color:var(--text-muted);">›</span>`;
+                        
+                        const submenu = document.createElement('div');
+                        submenu.className = 'custom-dropdown-submenu';
+                        
+                        list.forEach(n => {
+                            const subItem = document.createElement('div');
+                            subItem.className = 'submenu-item';
+                            const emoji = COUNTRY_FLAGS[n.toLowerCase()] || '';
+                            subItem.textContent = `${emoji} ${n}`;
+                            subItem.onclick = (e) => {
+                                e.stopPropagation();
+                                document.getElementById('player-nation').value = n;
+                                document.getElementById('player-flag').value = emoji;
+                                document.getElementById('form-nation-trigger-val').innerHTML = `${emoji} ${n}`;
+                                formNationMenu.classList.remove('show');
+                            };
+                            submenu.appendChild(subItem);
+                        });
+                        
+                        confItem.appendChild(submenu);
+                        formNationMenu.appendChild(confItem);
+                    }
+                });
+            }
+        }
+
+        function onFormLeagueChange() {
+            const leagueVal = document.getElementById('player-league').value;
+            const clubSelect = document.getElementById('player-club');
+            
+            clubSelect.innerHTML = '<option value="">-- Chọn Câu lạc bộ --</option>';
+            if (!leagueVal) {
+                clubSelect.disabled = true;
+                return;
+            }
+
+            clubSelect.disabled = false;
+            const clubs = [...LEAGUES_DATA[leagueVal].clubs].sort((a, b) => a.localeCompare(b));
+            clubs.forEach(club => {
+                const opt = document.createElement('option');
+                opt.value = club;
+                opt.textContent = club;
+                clubSelect.appendChild(opt);
+            });
+        }
+
+        // Auto-fill nation flag helper
+        function autoFillFlag() {
+            const nationVal = document.getElementById('player-nation').value.trim().toLowerCase();
+            const flagInput = document.getElementById('player-flag');
+            if (COUNTRY_FLAGS[nationVal]) {
+                flagInput.value = COUNTRY_FLAGS[nationVal];
+            }
+        }
+
+        function searchPlayerPhoto() {
+            const name = document.getElementById('player-name').value.trim();
+            if (!name) {
+                showToast("Vui lòng điền tên đầy đủ cầu thủ trước!");
+                return;
+            }
+            const query = `${name} face cutout transparent png`;
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=isch`, '_blank');
+        }
+
+        function openAddDrawer() {
+            document.getElementById('drawer-title').textContent = "Tạo Thẻ Cầu Thủ Mới";
+            document.getElementById('player-id').value = "";
+            document.getElementById('player-form').reset();
+            document.getElementById('form-nation-trigger-val').textContent = "-- Chọn Quốc gia --";
+            document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
+            document.getElementById('player-card-name').value = "";
+            document.getElementById('player-theme').value = "standard";
+            document.getElementById('player-position').value = "ST";
+            document.getElementById('player-club').disabled = true;
+            document.getElementById('player-club').innerHTML = '<option value="">-- Chọn Câu lạc bộ --</option>';
+            // Clear alt positions
+            document.querySelectorAll('#alt-positions-grid .pos-cb-label').forEach(lbl => {
+                lbl.classList.remove('checked');
+                lbl.querySelector('input').checked = false;
+            });
+            document.getElementById('drawer-overlay').classList.add('active');
+        }
+
+        function openEditDrawer(id) {
+            const p = players.find(x => x.id === id);
+            if (!p) return;
+
+            document.getElementById('drawer-title').textContent = "Sửa Thẻ Cầu Thủ";
+            document.getElementById('player-id').value = p.id;
+            document.getElementById('player-name').value = p.name;
+            document.getElementById('player-card-name').value = p.cardName || '';
+            document.getElementById('player-nation').value = p.nationality;
+            document.getElementById('player-flag').value = p.flag;
+            document.getElementById('player-position').value = p.position;
+            document.getElementById('player-rating').value = p.rating;
+            document.getElementById('player-photo').value = p.photo || '';
+            document.getElementById('player-league').value = p.league || '';
+            onFormLeagueChange();
+            
+            // Restore nation trigger
+            const nationVal = p.nationality || '';
+            const flagVal = p.flag || '';
+            if (nationVal) {
+                document.getElementById('form-nation-trigger-val').innerHTML = `${flagVal} ${nationVal}`;
+            } else {
+                document.getElementById('form-nation-trigger-val').textContent = "-- Chọn Quốc gia --";
+            }
+
+            // Restore league trigger
+            const leagueVal = p.league || '';
+            if (leagueVal) {
+                document.getElementById('form-league-trigger-val').textContent = leagueVal;
+            } else {
+                document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
+            }
+            document.getElementById('player-club').value = p.club;
+            document.getElementById('player-theme').value = p.cardTheme || 'standard';
+
+            // Restore alt positions
+            const altPos = p.altPositions || [];
+            document.querySelectorAll('#alt-positions-grid .pos-cb-label').forEach(lbl => {
+                const val = lbl.querySelector('input').value;
+                const checked = altPos.includes(val);
+                lbl.classList.toggle('checked', checked);
+                lbl.querySelector('input').checked = checked;
+            });
+
+            document.getElementById('drawer-overlay').classList.add('active');
+        }
+
+        function closeDrawer() {
+            document.getElementById('drawer-overlay').classList.remove('active');
+        }
+
+        function closeDrawerOnOverlay(e) {
+            if (e.target.id === 'drawer-overlay') {
+                closeDrawer();
+            }
+        }
+
+        function togglePosChip(lbl) {
+            const cb = lbl.querySelector('input');
+            cb.checked = !cb.checked;
+            lbl.classList.toggle('checked', cb.checked);
+        }
+
+        function savePlayer(e) {
+            e.preventDefault();
+            const id = document.getElementById('player-id').value;
+            const name = document.getElementById('player-name').value;
+            const cardName = document.getElementById('player-card-name').value.trim();
+            const nationality = document.getElementById('player-nation').value;
+            const flag = document.getElementById('player-flag').value;
+            const league = document.getElementById('player-league').value;
+            const club = document.getElementById('player-club').value;
+            const position = document.getElementById('player-position').value;
+            const rating = parseInt(document.getElementById('player-rating').value);
+            const photo = document.getElementById('player-photo').value;
+            const cardTheme = document.getElementById('player-theme').value;
+            const clubBadge = club ? (CLUB_BADGES[club] || '⚽') : (cardTheme === 'icons' ? '⭐' : '');
+
+            const altPositions = Array.from(
+                document.querySelectorAll('#alt-positions-grid input:checked')
+            ).map(cb => cb.value);
+
+            const playerData = {
+                id: id || 'player-' + Date.now(),
+                name, cardName, nationality, flag, league, club, clubBadge, position, altPositions, rating, photo, cardTheme
+            };
+
+            if (id) {
+                const idx = players.findIndex(x => x.id === id);
+                if (idx !== -1) players[idx] = playerData;
+                showToast(`Đã cập nhật ${cardName || getShortName(name)}`);
+            } else {
+                players.push(playerData);
+                showToast(`Đã thêm ${cardName || getShortName(name)} thành công`);
+            }
+            saveDatabase();
+            closeDrawer();
+            applyFilters();
+        }
+
+        function deletePlayer(id) {
+            const p = players.find(x => x.id === id);
+            if (!p) return;
+
+            if (confirm(`Bạn có chắc chắn muốn xóa vĩnh viễn thẻ cầu thủ ${p.name}?`)) {
+                players = players.filter(x => x.id !== id);
+                
+                for (let key in squad) {
+                    if (squad[key] === id) {
+                        delete squad[key];
+                    }
+                }
+
+                saveDatabase();
+                applyFilters();
+                showToast(`Đã xóa cầu thủ ${p.cardName || getShortName(p.name)}`);
+            }
+        }
+
+        // --- 9. IMPORT & EXPORT JSON ---
+        function exportData() {
+            const dataStr = JSON.stringify(players, null, 2);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ballersdeck_football_database_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast("Đã xuất tệp dữ liệu JSON thành công!");
+        }
+
+        function triggerImport() {
+            document.getElementById('import-file-input').click();
+        }
+
+        function importData(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const imported = JSON.parse(evt.target.result);
+                    if (Array.isArray(imported)) {
+                        const isValid = imported.every(p => p.id && p.name && p.rating);
+                        if (isValid) {
+                            // Merge imported players with existing database by ID
+                            imported.forEach(imp => {
+                                const idx = players.findIndex(p => p.id === imp.id);
+                                if (idx !== -1) {
+                                    players[idx] = imp;
+                                } else {
+                                    players.push(imp);
+                                }
+                            });
+                            saveDatabase();
+                            applyFilters();
+                            showToast(`Nhập dữ liệu thành công! Đã gộp thêm ${imported.length} cầu thủ.`);
+                        } else {
+                            alert("Định dạng file JSON không đúng cấu trúc cầu thủ!");
+                        }
+                    } else {
+                        alert("File JSON phải chứa một mảng danh sách cầu thủ!");
+                    }
+                } catch(err) {
+                    alert("Lỗi khi đọc file JSON: " + err.message);
+                }
+            };
+            reader.readAsText(file);
+            e.target.value = '';
+        }
+
+        // --- 10. SQUAD BUILDER PITCH LOGIC ---
+        function buildPitch() {
+            const pitch = document.getElementById('football-pitch');
+            const formationVal = document.getElementById('formation-select').value;
+            const slotsData = FORMATIONS[formationVal];
+
+            const oldSlots = pitch.querySelectorAll('.pitch-slot');
+            oldSlots.forEach(s => s.remove());
+
+            for (let slotPos in slotsData) {
+                const coord = slotsData[slotPos];
+                const slotDiv = document.createElement('div');
+                slotDiv.className = 'pitch-slot';
+                slotDiv.style.left = coord.left;
+                slotDiv.style.bottom = coord.bottom;
+                
+                const playerId = squad[slotPos];
+                const player = players.find(x => x.id === playerId);
+
+                if (player) {
+                    const themeClass = getCardThemeClass(player);
+                    const displayName = player.cardName || getShortName(player.name);
+                    const isIcons = player.cardTheme === 'icons';
+                    const isMM = player.cardTheme === 'mm';
+                    const isTOTY = player.cardTheme === 'toty';
+                    const isUCL = player.cardTheme === 'ucl';
+                    const isVNLegends = player.cardTheme === 'vnlegends';
+
+                    let photoHTML;
+                    if (player.photo) {
+                        photoHTML = `<img src="${player.photo}" alt="${player.name}">`;
+                    } else {
+                        photoHTML = `<svg class="panini-photo-silhouette" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>`;
+                    }
+
+                    const flagHTML = getFlagImgHTML(player.nationality, player.flag);
+
+                    const footerHTML = isIcons
+                        ? `<div class="panini-name">${displayName}</div>
+                           <div class="panini-era">★ ICONS ★</div>`
+                        : isMM
+                        ? `<div class="panini-name">${displayName}</div>
+                           <div class="panini-era">✦ MEMOIR ✦</div>`
+                        : isTOTY
+                        ? `<div class="panini-name">${displayName}</div>
+                           <div class="panini-era">❄ TOTY 26 ❄</div>`
+                        : isUCL
+                        ? `<div class="panini-name">${displayName}</div>
+                           <div class="panini-era">✦ UCL HERO ✦</div>`
+                        : isVNLegends
+                        ? `<div class="panini-name">${displayName}</div>
+                           <div class="panini-era">★ VIETNAM LEGENDS ★</div>`
+                        : `<div class="panini-name">${displayName}</div>
+                           <div class="panini-club">${player.club || ''}</div>`;
+
+                    slotDiv.innerHTML = `
+                        <div class="pitch-player-card-container" onclick="openSquadSelector('${slotPos}')">
+                            <button class="mini-remove-btn" onclick="event.stopPropagation(); removePlayerFromSlot('${slotPos}')">×</button>
+                            <div class="player-card ${themeClass}">
+                                <div class="panini-band">
+                                    <div class="panini-ovr">${player.rating}</div>
+                                    <div class="panini-pos">${player.position}</div>
+                                </div>
+                                <div class="panini-photo">
+                                    ${photoHTML}
+                                    <div class="panini-card-flag" title="${player.nationality}">${flagHTML}</div>
+                                </div>
+                                <div class="panini-footer">${footerHTML}</div>
+                                <div class="card-theme-triangle">
+                                    <span class="card-theme-triangle-icon">${getCardThemeIcon(player)}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    slotDiv.innerHTML = `
+                        <div class="slot-empty-placeholder" onclick="openSquadSelector('${slotPos}')">
+                            <i data-lucide="plus"></i>
+                            <span>${getDisplayPos(slotPos)}</span>
+                        </div>
+                    `;
+                }
+
+                pitch.appendChild(slotDiv);
+            }
+            lucide.createIcons();
+        }
+
+        function changeFormation() {
+            buildPitch();
+            updateSquadStats();
+            saveDatabase();
+        }
+
+        // Clear pitch
+        function clearSquad() {
+            if (confirm("Bạn có chắc chắn muốn xóa hết cầu thủ ra khỏi đội hình chiến thuật?")) {
+                squad = {};
+                saveDatabase();
+                buildPitch();
+                updateSquadStats();
+                showToast("Đã làm trống sân bóng.");
+            }
+        }
+
+        function removePlayerFromSlot(slotPos) {
+            delete squad[slotPos];
+            saveDatabase();
+            buildPitch();
+            updateSquadStats();
+        }
+
+        // --- SQUAD SELECTOR MODAL ---
+        function openSquadSelector(slotPos) {
+            activeSlotSelection = slotPos;
+            const modal = document.getElementById('squad-selector-modal');
+            const title = document.getElementById('modal-title');
+            title.textContent = `Chọn Cầu Thủ Vào Vị Trí [${getDisplayPos(slotPos)}]`;
+
+            document.getElementById('modal-search-input').value = '';
+
+            renderModalPlayers();
+            modal.classList.add('active');
+        }
+
+        // Close squad selector modal
+        function closeModal() {
+            document.getElementById('squad-selector-modal').classList.remove('active');
+            activeSlotSelection = null;
+        }
+
+        function closeModalOnOverlay(e) {
+            if (e.target.id === 'squad-selector-modal') {
+                closeModal();
+            }
+        }
+
+        function renderModalPlayers() {
+            const query = document.getElementById('modal-search-input').value.toLowerCase().trim();
+            const listContainer = document.getElementById('modal-player-list');
+            const selectedIds = Object.values(squad);
+
+            let available = players.filter(p => {
+                if (selectedIds.includes(p.id) && squad[activeSlotSelection] !== p.id) {
+                    return false;
+                }
+                
+                // Position compatibility check (main or alt-pos)
+                if (!isCompatiblePosition(activeSlotSelection, p.position, p.altPositions)) {
+                    return false;
+                }
+                
+                if (query) {
+                    return p.name.toLowerCase().includes(query) ||
+                           p.club.toLowerCase().includes(query) ||
+                           p.position.toLowerCase().includes(query);
+                }
+                return true;
+            });
+
+            available.sort((a,b) => b.rating - a.rating);
+
+            if (available.length === 0) {
+                listContainer.innerHTML = `<p style="text-align:center; padding:2rem; color:var(--text-muted);">Không có cầu thủ nào khớp vị trí [${getDisplayPos(activeSlotSelection)}].</p>`;
+                return;
+            }
+
+            listContainer.innerHTML = available.map(p => {
+                const isCurrent = squad[activeSlotSelection] === p.id;
+                const activeStyle = isCurrent ? 'style="border-color: var(--accent); background: rgba(16, 185, 129, 0.1);"' : '';
+                const rowFlagHTML = getFlagImgHTML(p.nationality, p.flag);
+                return `
+                    <div class="player-select-row" ${activeStyle} onclick="selectPlayerForSlot('${p.id}')">
+                        <div class="player-select-info">
+                            <div class="select-row-ovr">${p.rating}</div>
+                            <div>
+                                <div class="select-row-name">
+                                    ${p.name} ${p.cardName ? `<span class="select-row-card-name" style="font-size:0.75rem; color:var(--text-muted); font-weight:normal; margin-left:0.4rem;">(${p.cardName})</span>` : ''}
+                                    <span class="select-row-pos">${p.position}</span>
+                                </div>
+                                <div class="select-row-details" style="display:flex; align-items:center; gap:0.4rem; margin-top:0.25rem;">
+                                    ${rowFlagHTML} <span>${p.nationality} • ${p.clubBadge} ${p.club}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            ${isCurrent ? '<i data-lucide="check-circle-2" style="color:var(--accent);"></i>' : '<i data-lucide="chevron-right" style="color:var(--text-muted)"></i>'}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            lucide.createIcons();
+        }
+
+        function filterModalPlayers() {
+            renderModalPlayers();
+        }
+
+        function selectPlayerForSlot(playerId) {
+            if (!activeSlotSelection) return;
+
+            squad[activeSlotSelection] = playerId;
+            saveDatabase();
+            closeModal();
+            buildPitch();
+            updateSquadStats();
+            
+            const p = players.find(x => x.id === playerId);
+            if (p) showToast(`Đã đưa ${getShortName(p.name)} vào vị trí ${getDisplayPos(activeSlotSelection)}`);
+        }
+
+        function selectRandomPlayerForActiveSlot() {
+            if (!activeSlotSelection) return;
+
+            const selectedIds = Object.values(squad);
+            
+            // Limit to players matching the position (primary or alt), having a photo, and not already in other slots
+            let available = players.filter(p => {
+                if (selectedIds.includes(p.id) && squad[activeSlotSelection] !== p.id) {
+                    return false;
+                }
+                return !!p.photo && isCompatiblePosition(activeSlotSelection, p.position, p.altPositions);
+            });
+
+            if (available.length === 0) {
+                showToast(`Không có cầu thủ nào phù hợp cho vị trí ${getDisplayPos(activeSlotSelection)}.`);
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * available.length);
+            const randomPlayer = available[randomIndex];
+            
+            selectPlayerForSlot(randomPlayer.id);
+        }
+
+        // --- SQUAD RATING & CHEMISTRY CALCULATOR ---
+        function updateSquadStats() {
+            const formationVal = document.getElementById('formation-select').value;
+            const slots = Object.keys(FORMATIONS[formationVal]);
+            
+            let totalRating = 0;
+            let count = 0;
+            let activePlayersOnPitch = [];
+
+            slots.forEach(slot => {
+                const pid = squad[slot];
+                const player = players.find(x => x.id === pid);
+                if (player) {
+                    totalRating += player.rating;
+                    count++;
+                    activePlayersOnPitch.push({ player, slot });
+                }
+            });
+
+            const teamOvr = count > 0 ? Math.round(totalRating / count) : 0;
+            document.getElementById('team-rating').textContent = teamOvr.toString().padStart(2, '0');
+
+            let totalChem = 0;
+
+            activePlayersOnPitch.forEach(item => {
+                let pChem = 0;
+                const p = item.player;
+                const slot = item.slot;
+
+                let posMatch = false;
+                if (slot.includes("GK") && p.position === "GK") posMatch = true;
+                else if ((slot.includes("ST") || slot.includes("LW") || slot.includes("RW")) && ["ST", "CF", "LW", "RW"].includes(p.position)) posMatch = true;
+                else if ((slot.includes("CM") || slot.includes("DM") || slot.includes("CAM")) && ["CM", "CDM", "CAM"].includes(p.position)) posMatch = true;
+                else if ((slot.includes("LM") || slot.includes("RM")) && ["LM", "RM", "LW", "RW"].includes(p.position)) posMatch = true;
+                else if ((slot.includes("CB") || slot.includes("DF")) && p.position === "CB") posMatch = true;
+                else if ((slot.includes("LB") || slot.includes("RB")) && ["LB", "RB", "CB"].includes(p.position)) posMatch = true;
+
+                if (posMatch) pChem += 1;
+
+                const sameClubCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.club === p.club).length;
+                if (sameClubCount >= 2) pChem += 1;
+                else if (sameClubCount >= 1 && pChem < 2) pChem += 1;
+
+                const sameNationCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.nationality === p.nationality).length;
+                if (sameNationCount >= 2) pChem += 1;
+                else if (sameNationCount >= 1 && pChem < 3) pChem += 1;
+
+                totalChem += Math.min(3, pChem);
+            });
+
+            const maxPossibleChem = count * 3;
+            const chemEl = document.getElementById('team-chemistry');
+            chemEl.textContent = `${totalChem}/${maxPossibleChem}`;
+            
+            if (count === 11) {
+                if (totalChem >= 28) {
+                    chemEl.style.color = 'var(--accent)';
+                } else if (totalChem >= 15) {
+                    chemEl.style.color = '#e5a93b';
+                } else {
+                    chemEl.style.color = '#ef4444';
+                }
+            } else {
+                chemEl.style.color = 'var(--text-muted)';
+            }
+        }
+
+        // --- 11. TOAST NOTIFICATION UTILS ---
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <i data-lucide="info" style="color: var(--accent); width:18px; height:18px;"></i>
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+            lucide.createIcons();
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
