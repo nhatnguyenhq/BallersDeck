@@ -1983,7 +1983,45 @@
         }
 
         .modal-search {
-            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: stretch;
+            margin-bottom: 1.5rem;
+        }
+        .modal-search .search-main {
+            position: relative;
+            flex: 1;
+            display: flex;
+        }
+        .modal-search .search-main input {
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            font-size: 0.95rem;
+            border-radius: 10px;
+        }
+        .modal-search .search-main .search-icon {
+            left: 0.85rem;
+            width: 16px;
+            height: 16px;
+        }
+        .modal-search .btn-random {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .modal-search .btn-random:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         .player-selector-list {
@@ -2449,12 +2487,12 @@
                 <h3 id="modal-title">Chọn Cầu thủ cho vị trí</h3>
                 <button class="close-btn" onclick="closeModal()">×</button>
             </div>
-            <div class="modal-search" style="display: flex; gap: 0.5rem; align-items: center;">
-                <div class="search-box" style="flex: 1;">
-                    <i data-lucide="search"></i>
+            <div class="modal-search">
+                <div class="search-main">
+                    <i data-lucide="search" class="search-icon"></i>
                     <input type="text" id="modal-search-input" placeholder="Tìm tên cầu thủ..." oninput="filterModalPlayers()">
                 </div>
-                <button type="button" class="btn btn-secondary" onclick="selectRandomPlayerForActiveSlot()" style="padding: 0 1rem; height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px;">
+                <button type="button" class="btn btn-secondary btn-random" onclick="selectRandomPlayerForActiveSlot()">
                     <i data-lucide="dices" style="width: 16px; height: 16px;"></i>
                     <span>Random</span>
                 </button>
@@ -3763,7 +3801,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const clubSelect = document.getElementById('player-club');
             
             clubSelect.innerHTML = '<option value="">-- Chọn Câu lạc bộ --</option>';
-            if (!leagueVal) {
+            if (!leagueVal || !LEAGUES_DATA[leagueVal]) {
                 clubSelect.disabled = true;
                 return;
             }
