@@ -2422,8 +2422,9 @@ const DEFAULT_PLAYERS = [
         "club": "France",
         "clubBadge": "🇫🇷",
         "position": "RB",
+        "altPositions": [],
         "rating": 87,
-        "photo": "",
+        "photo": "https://assets-cms.thescore.com/uploads/image/file/635351/w640xh480_GettyImages-2159258107.jpg?ts=1719866534",
         "cardTheme": "worldcup26"
     },
     {
@@ -3317,8 +3318,10 @@ const DEFAULT_PLAYERS = [
         "club": "Man City",
         "clubBadge": "🔵",
         "position": "LB",
-        "rating": 87,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mmowa11769183247.png"
+        "altPositions": [],
+        "rating": 86,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mmowa11769183247.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rodri-16",
@@ -4434,7 +4437,7 @@ const DEFAULT_PLAYERS = [
             "CAM",
             "CDM"
         ],
-        "rating": 86,
+        "rating": 88,
         "photo": "https://media-cdn-v2.laodong.vn/storage/newsportal/2022/6/22/1059238/Pedri-Barca.jpg",
         "cardTheme": "standard"
     },
@@ -4502,8 +4505,10 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "LW",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w94spe1726510018.png"
+        "altPositions": [],
+        "rating": 88,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w94spe1726510018.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lewandowski-9",
@@ -4595,8 +4600,10 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CB",
-        "rating": 87,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ftp1ci1733653186.png"
+        "altPositions": [],
+        "rating": 86,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ftp1ci1733653186.png",
+        "cardTheme": "standard"
     },
     {
         "id": "alaba-4",
@@ -4608,8 +4615,10 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CB",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zxblp31733653341.png"
+        "altPositions": [],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zxblp31733653341.png",
+        "cardTheme": "standard"
     },
     {
         "id": "tchouameni-14",
@@ -4780,8 +4789,10 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "RW",
-        "rating": 86,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uzoghw1733653286.png"
+        "altPositions": [],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uzoghw1733653286.png",
+        "cardTheme": "standard"
     },
     {
         "id": "endrick-16",
@@ -4806,8 +4817,10 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "GK",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/21rp2q1769331784.png"
+        "altPositions": [],
+        "rating": 86,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/21rp2q1769331784.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kepa-arsenal",
@@ -4908,8 +4921,10 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "RB",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/78nyo71769331924.png"
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/78nyo71769331924.png",
+        "cardTheme": "standard"
     },
     {
         "id": "timber-12",
@@ -5212,11 +5227,12 @@ const DEFAULT_PLAYERS = [
         "club": "Inter Milan",
         "clubBadge": "⚫🔵",
         "position": "CDM",
-        "rating": 86,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hw8uxm1759408821.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hw8uxm1759408821.png",
+        "cardTheme": "standard"
     },
     {
         "id": "barella-23",
@@ -5277,21 +5293,6 @@ const DEFAULT_PLAYERS = [
             "LW",
             "CF"
         ]
-    },
-    {
-        "id": "ochoa-wc26",
-        "name": "Guillermo Ochoa",
-        "cardName": "Ochoa",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "GK",
-        "altPositions": [],
-        "rating": 80,
-        "photo": "https://vcdn1-thethao.vnecdn.net/2026/03/14/ochoa-PNG-1773425057-6354-1773425132.png?w=680&h=0&q=100&dpr=1&fit=crop&s=97ip85p--GUZEA6MlSGtpw",
-        "cardTheme": "worldcup26"
     },
     {
         "id": "neuer-wc26",
@@ -6582,12 +6583,12 @@ const DEFAULT_PLAYERS = [
         "club": "Paris Saint-Germain",
         "clubBadge": "🔴🔵",
         "position": "RW",
-        "rating": 86,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pstgy21766335175.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 88,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pstgy21766335175.png",
+        "cardTheme": "standard"
     },
     {
         "id": "marquinhos-5",
@@ -6614,12 +6615,12 @@ const DEFAULT_PLAYERS = [
         "club": "Paris Saint-Germain",
         "clubBadge": "🔴🔵",
         "position": "RB",
-        "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oqu69c1766335243.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oqu69c1766335243.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vitinha-17",
@@ -7590,11 +7591,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
+        "clubBadge": "🔵⚪",
         "position": "ST",
-        "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/75ssc91750756166.png"
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/75ssc91750756166.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sms-alhilal",
@@ -7604,14 +7606,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
+        "clubBadge": "🔵⚪",
         "position": "CM",
-        "rating": 85,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v1k9g21750272688.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v1k9g21750272688.png",
+        "cardTheme": "standard"
     },
     {
         "id": "neves-alhilal",
@@ -7638,11 +7640,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
+        "clubBadge": "🔵⚪",
         "position": "CB",
-        "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nirqe51750672288.png"
+        "altPositions": [],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nirqe51750672288.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bono-alhilal",
@@ -11191,18 +11194,18 @@ const DEFAULT_PLAYERS = [
         "cardName": "Xavi Simons",
         "nationality": "Netherlands",
         "flag": "🇳🇱",
-        "league": "Bundesliga",
-        "club": "RB Leipzig",
-        "clubBadge": "🔴🔵",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "clubBadge": "⚪",
         "position": "CAM",
-        "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uc5tjn1757016055.png",
         "altPositions": [
-            "RW",
             "LW",
-            "LM"
-        ]
+            "LM",
+            "RM"
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uc5tjn1757016055.png",
+        "cardTheme": "standard"
     },
     {
         "id": "openda-leipzig",
@@ -11214,9 +11217,10 @@ const DEFAULT_PLAYERS = [
         "club": "RB Leipzig",
         "clubBadge": "🔴🔵",
         "position": "ST",
-        "rating": 85,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1chuok1759225712.png"
+        "altPositions": [],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1chuok1759225712.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sesko-leipzig",
@@ -12986,12 +12990,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
-        "rating": 84,
+        "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/koetaj1724749969.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "pepe-11-s26",
@@ -13988,11 +13992,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "GK",
-        "rating": 87,
+        "altPositions": [],
+        "rating": 86,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sw5ukh1758892671.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "schick-leverkusen-s26",
@@ -15015,34 +15020,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "worldcup26"
     },
     {
-        "id": "sgimenez-wc26",
-        "name": "Santiago Giménez",
-        "cardName": "S. Gimenez",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "ST",
-        "rating": 80,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "salvarez-wc26",
-        "name": "Edson Álvarez",
-        "cardName": "Álvarez",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "CDM",
-        "rating": 81,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
         "id": "fayzullaev-wc26",
         "name": "Abbosbek Fayzullaev",
         "cardName": "Fayzullaev",
@@ -15415,7 +15392,7 @@ const DEFAULT_PLAYERS = [
         "position": "GK",
         "altPositions": [],
         "rating": 75,
-        "photo": "",
+        "photo": "https://i.guim.co.uk/img/media/3b91cff301851a0ab884860b70ba75e48988437c/301_390_2544_4082/master/2544.jpg?width=700&quality=85&auto=format&fit=max&s=9b9ac6061fb979ef81e836b0fa90abc6",
         "cardTheme": "worldcup26"
     },
     {
@@ -17107,7 +17084,7 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "altPositions": [],
         "rating": 89,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOIJ0S9hLNFggK0z1QQiBtrJ8dv7Qi0ic3vZTVlcAkLe2JnmjFShIEC7KRXwusK7RduIda0Y9o304WtRS4myFlOuvPQ1bdD5nmYqQ8UO8&s=10",
         "cardTheme": "mm"
     },
     {
@@ -18819,7 +18796,7 @@ const DEFAULT_PLAYERS = [
             "RB"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://e1.365dm.com/12/09/800x600/Phil-Neville-Everton-Player-Profile_2823746.jpg?20120905222208",
         "cardTheme": "mm"
     },
     {
@@ -19848,7 +19825,7 @@ const DEFAULT_PLAYERS = [
             "ST"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/WikiLando_%28cropped%29.jpg/960px-WikiLando_%28cropped%29.jpg",
         "cardTheme": "mm"
     },
     {
@@ -19955,11 +19932,11 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "",
         "position": "ST",
         "altPositions": [
-            "LM",
-            "CF"
+            "CF",
+            "LM"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Lukas_Podolski_2023_%28cropped%29.jpg/250px-Lukas_Podolski_2023_%28cropped%29.jpg",
         "cardTheme": "mm"
     },
     {
@@ -19994,7 +19971,7 @@ const DEFAULT_PLAYERS = [
             "CDM"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/24/1084370/7226CED4-4173-4ACB-B.jpeg",
         "cardTheme": "mm"
     },
     {
@@ -20287,54 +20264,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "icons"
     },
     {
-        "id": "modiba-wc26",
-        "name": "Aubrey Modiba",
-        "cardName": "Modiba",
-        "nationality": "South Africa",
-        "flag": "🇿🇦",
-        "league": "WC26",
-        "club": "South Africa",
-        "clubBadge": "🇿🇦",
-        "position": "LB",
-        "altPositions": [
-            "LM"
-        ],
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "mudau-wc26",
-        "name": "Khuliso Mudau",
-        "cardName": "Mudau",
-        "nationality": "South Africa",
-        "flag": "🇿🇦",
-        "league": "WC26",
-        "club": "South Africa",
-        "clubBadge": "🇿🇦",
-        "position": "RB",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "mokoena-wc26",
-        "name": "Teboho Mokoena",
-        "cardName": "Mokoena",
-        "nationality": "South Africa",
-        "flag": "🇿🇦",
-        "league": "WC26",
-        "club": "South Africa",
-        "clubBadge": "🇿🇦",
-        "position": "CDM",
-        "altPositions": [
-            "CM"
-        ],
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
         "id": "lfoster-wc26",
         "name": "Lyle Foster",
         "cardName": "L. Foster",
@@ -20352,68 +20281,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "worldcup26"
     },
     {
-        "id": "zwane-wc26",
-        "name": "Themba Zwane",
-        "cardName": "Zwane",
-        "nationality": "South Africa",
-        "flag": "🇿🇦",
-        "league": "WC26",
-        "club": "South Africa",
-        "clubBadge": "🇿🇦",
-        "position": "CAM",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "appollis-wc26",
-        "name": "Oswin Appollis",
-        "cardName": "Appollis",
-        "nationality": "South Africa",
-        "flag": "🇿🇦",
-        "league": "WC26",
-        "club": "South Africa",
-        "clubBadge": "🇿🇦",
-        "position": "LW",
-        "altPositions": [
-            "RW"
-        ],
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "montes-wc26",
-        "name": "César Montes",
-        "cardName": "Montes",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "CB",
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "gallardo-wc26",
-        "name": "Jesús Gallardo",
-        "cardName": "Gallardo",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "LB",
-        "altPositions": [
-            "LM"
-        ],
-        "rating": 76,
-        "photo": "https://s.hs-data.com/gfx/person/l/372639.jpg?fallback=male",
-        "cardTheme": "worldcup26"
-    },
-    {
         "id": "jvasquez-wc26",
         "name": "Johan Vásquez",
         "cardName": "J. Vásquez",
@@ -20423,57 +20290,6 @@ const DEFAULT_PLAYERS = [
         "club": "Mexico",
         "clubBadge": "🇲🇽",
         "position": "CB",
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "romo-wc26",
-        "name": "Luis Romo",
-        "cardName": "Romo",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "CDM",
-        "altPositions": [
-            "CM"
-        ],
-        "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "pineda-wc26",
-        "name": "Orbelín Pineda",
-        "cardName": "Pineda",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "CAM",
-        "altPositions": [
-            "LM"
-        ],
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "alvarado-wc26",
-        "name": "Roberto Alvarado",
-        "cardName": "Alvarado",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "RW",
-        "altPositions": [
-            "CAM"
-        ],
         "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
@@ -20491,23 +20307,6 @@ const DEFAULT_PLAYERS = [
         "altPositions": [],
         "rating": 84,
         "photo": "https://pbs.twimg.com/media/G51x6ihWgAE2sTL.jpg",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "vega-wc26",
-        "name": "Alexis Vega",
-        "cardName": "Vega",
-        "nationality": "Mexico",
-        "flag": "🇲🇽",
-        "league": "WC26",
-        "club": "Mexico",
-        "clubBadge": "🇲🇽",
-        "position": "LW",
-        "altPositions": [
-            "RW"
-        ],
-        "rating": 77,
-        "photo": "",
         "cardTheme": "worldcup26"
     },
     {
@@ -20913,14 +20712,15 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
+            "CM",
             "LM",
-            "RM",
-            "CM"
+            "RM"
         ],
         "rating": 91,
-        "photo": "",
+        "photo": "https://cdn.24h.com.vn/upload/4-2024/images/2024-10-09/1728425835-nguyen-hong-son-sea-5731-widthheight.webp",
         "cardTheme": "vnlegends"
     },
     {
@@ -20949,12 +20749,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://golfnews.vn/upload-new/Thang%204/unnamed%20(8).jpg",
         "cardTheme": "vnlegends"
     },
     {
@@ -20965,14 +20766,15 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "RWB",
         "altPositions": [
-            "RB",
+            "RW",
             "RM",
-            "RW"
+            "RB"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://ss-images.saostar.vn/wp700/2025/4/3/pc/1743671115796/0i3okp3xe41-0ph4rb1bgn2-3gf39v70283.jpeg",
         "cardTheme": "vnlegends"
     },
     {
@@ -21064,7 +20866,7 @@ const DEFAULT_PLAYERS = [
             "CAM"
         ],
         "rating": 84,
-        "photo": "",
+        "photo": "https://www.thesun.co.uk/wp-content/uploads/2019/04/NINTCHDBPICT000482645188-e1556634731964.jpg?strip=all&w=960",
         "cardTheme": "mm"
     },
     {
@@ -21190,16 +20992,16 @@ const DEFAULT_PLAYERS = [
         "nationality": "Portugal",
         "flag": "🇵🇹",
         "league": "",
-        "club": "Real Madrid",
+        "club": "",
+        "clubBadge": "",
         "position": "LB",
         "altPositions": [
-            "LWB",
-            "LM"
+            "LM",
+            "LWB"
         ],
         "rating": 85,
-        "photo": "",
-        "cardTheme": "mm",
-        "clubBadge": "⚪"
+        "photo": "https://thethaovanhoa.mediacdn.vn/372676912336973824/2025/1/17/fabio-coentrao-real-madrid-vs-barcelona2785991-1737100377403873568165.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "schurrle-mm",
@@ -26852,12 +26654,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://cdn-img.thethao247.vn/upload/thunga/2021/01/30/vu-nhu-thanh-chinh-thuc-dan-dat-quan-bau-hien1611951037.jpg",
         "cardTheme": "vnlegends"
     },
     {
@@ -26868,12 +26671,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://vcdn1-thethao.vnecdn.net/2014/06/02/tam-lang-5223-1401696923.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=lkEituINhjX6az_qbNmS9w",
         "cardTheme": "vnlegends"
     },
     {
@@ -26884,11 +26688,729 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
-        "photo": "",
+        "photo": "https://cdn-img.thethao247.vn/origin_640x0/upload/hungtm/2020/11/26/huyen-thoai-bong-da-viet-nam-pham-van-rang-155323-1.png",
         "cardTheme": "vnlegends"
+    },
+    {
+        "id": "rangel-wc26",
+        "name": "Raúl Rangel",
+        "cardName": "Rangel",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "GK",
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "acevedo-wc26",
+        "name": "Carlos Acevedo",
+        "cardName": "Acevedo",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "GK",
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "reyes-wc26",
+        "name": "Israel Reyes",
+        "cardName": "Reyes",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CB",
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RB"
+        ]
+    },
+    {
+        "id": "chavez-m-wc26",
+        "name": "Mateo Chávez",
+        "cardName": "M. Chávez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "LB",
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "chavez-l-wc26",
+        "name": "Luis Chávez",
+        "cardName": "L. Chávez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CM",
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "fidalgo-wc26",
+        "name": "Álvaro Fidalgo",
+        "cardName": "Fidalgo",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CM",
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CAM"
+        ]
+    },
+    {
+        "id": "lira-wc26",
+        "name": "Erik Lira",
+        "cardName": "Lira",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CDM",
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "mora-wc26",
+        "name": "Gilberto Mora",
+        "cardName": "Mora",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CAM",
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "gutierrez-wc26",
+        "name": "Brian Gutiérrez",
+        "cardName": "Gutiérrez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CM",
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "vargas-wc26",
+        "name": "Obed Vargas",
+        "cardName": "Vargas",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CM",
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "huerta-wc26",
+        "name": "César Huerta",
+        "cardName": "Huerta",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "LW",
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RW"
+        ]
+    },
+    {
+        "id": "quinones-wc26",
+        "name": "Julián Quiñones",
+        "cardName": "Quiñones",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "LW",
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "ST"
+        ]
+    },
+    {
+        "id": "martinez-g-wc26",
+        "name": "Guillermo Martínez",
+        "cardName": "Martínez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "ST",
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "gonzalez-a-wc26",
+        "name": "Armando González",
+        "cardName": "González",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "ST",
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "goss-wc26",
+        "name": "Ricardo Goss",
+        "cardName": "Goss",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "GK",
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "chaine-wc26",
+        "name": "Sipho Chaine",
+        "cardName": "Chaine",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "GK",
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "sibisi-wc26",
+        "name": "Nkosinathi Sibisi",
+        "cardName": "Sibisi",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CB",
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "ndamane-wc26",
+        "name": "Khulumani Ndamane",
+        "cardName": "Ndamane",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CB",
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "makhanya-wc26",
+        "name": "Olwethu Makhanya",
+        "cardName": "Makhanya",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CB",
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "cross-wc26",
+        "name": "Bradley Cross",
+        "cardName": "Cross",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "LB",
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "matuludi-wc26",
+        "name": "Thabang Matuludi",
+        "cardName": "Matuludi",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "RB",
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "kabini-wc26",
+        "name": "Samukele Kabini",
+        "cardName": "Kabini",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "LB",
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "mbokazi-wc26",
+        "name": "Mbekezeli Mbokazi",
+        "cardName": "Mbokazi",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CB",
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "sithole-wc26",
+        "name": "Sphephelo Sithole",
+        "cardName": "Sithole",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CM",
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "mbatha-wc26",
+        "name": "Thalente Mbatha",
+        "cardName": "Mbatha",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CM",
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "mofokeng-wc26",
+        "name": "Relebohile Mofokeng",
+        "cardName": "Mofokeng",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "LW",
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CAM",
+            "RW"
+        ]
+    },
+    {
+        "id": "maseko-wc26",
+        "name": "Thapelo Maseko",
+        "cardName": "Maseko",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "LW",
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RW"
+        ]
+    },
+    {
+        "id": "rayners-wc26",
+        "name": "Iqraam Rayners",
+        "cardName": "Rayners",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "ST",
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "makgopa-wc26",
+        "name": "Evidence Makgopa",
+        "cardName": "Makgopa",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "ST",
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "moremi-wc26",
+        "name": "Tshepang Moremi",
+        "cardName": "Moremi",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "RW",
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "sebelebele-wc26",
+        "name": "Kamogelo Sebelebele",
+        "cardName": "Sebelebele",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "RW",
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "ochoa-wc26",
+        "name": "Guillermo Ochoa",
+        "cardName": "Ochoa",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "GK",
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "alvarez-wc26",
+        "name": "Edson Álvarez",
+        "cardName": "É. Álvarez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CDM",
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CB"
+        ]
+    },
+    {
+        "id": "montes-wc26",
+        "name": "César Montes",
+        "cardName": "Montes",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CB",
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "gallardo-wc26",
+        "name": "Jesús Gallardo",
+        "cardName": "Gallardo",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "LB",
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "LM"
+        ]
+    },
+    {
+        "id": "sanchez-wc26",
+        "name": "Jorge Sánchez",
+        "cardName": "J. Sánchez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "RB",
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RWB"
+        ]
+    },
+    {
+        "id": "romo-wc26",
+        "name": "Luis Romo",
+        "cardName": "Romo",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CDM",
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CM",
+            "CB"
+        ]
+    },
+    {
+        "id": "pineda-wc26",
+        "name": "Orbelín Pineda",
+        "cardName": "Pineda",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "CAM",
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "LM",
+            "CM"
+        ]
+    },
+    {
+        "id": "gimenez-wc26",
+        "name": "Santiago Giménez",
+        "cardName": "S. Giménez",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "ST",
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "alvarado-wc26",
+        "name": "Roberto Alvarado",
+        "cardName": "Alvarado",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "RW",
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CAM",
+            "LW"
+        ]
+    },
+    {
+        "id": "vega-wc26",
+        "name": "Alexis Vega",
+        "cardName": "Vega",
+        "nationality": "Mexico",
+        "flag": "🇲🇽",
+        "league": "WC26",
+        "club": "Mexico",
+        "clubBadge": "🇲🇽",
+        "position": "LW",
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RW",
+            "ST"
+        ]
+    },
+    {
+        "id": "mudau-wc26",
+        "name": "Khuliso Mudau",
+        "cardName": "Mudau",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "RB",
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RWB"
+        ]
+    },
+    {
+        "id": "modiba-wc26",
+        "name": "Aubrey Modiba",
+        "cardName": "Modiba",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "LB",
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "LM",
+            "LW"
+        ]
+    },
+    {
+        "id": "mokoena-wc26",
+        "name": "Teboho Mokoena",
+        "cardName": "Mokoena",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CM",
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "zwane-wc26",
+        "name": "Themba Zwane",
+        "cardName": "Zwane",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "CAM",
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "LW",
+            "RW"
+        ]
+    },
+    {
+        "id": "appollis-wc26",
+        "name": "Oswin Appollis",
+        "cardName": "Appollis",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "WC26",
+        "club": "South Africa",
+        "clubBadge": "🇿🇦",
+        "position": "LW",
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26",
+        "altPositions": [
+            "RW"
+        ]
     }
 ];
 
@@ -27255,6 +27777,328 @@ const FORMATIONS = {
         "CF": {
             "left": "50%",
             "bottom": "60%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "77%"
+        }
+    },
+    "4-3-2-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LB": {
+            "left": "15%",
+            "bottom": "24%"
+        },
+        "LCB": {
+            "left": "35%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "65%",
+            "bottom": "22%"
+        },
+        "RB": {
+            "left": "85%",
+            "bottom": "24%"
+        },
+        "LCM": {
+            "left": "25%",
+            "bottom": "45%"
+        },
+        "CM": {
+            "left": "50%",
+            "bottom": "42%"
+        },
+        "RCM": {
+            "left": "75%",
+            "bottom": "45%"
+        },
+        "CAM1": {
+            "left": "35%",
+            "bottom": "63%"
+        },
+        "CAM2": {
+            "left": "65%",
+            "bottom": "63%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "78%"
+        }
+    },
+    "3-4-3": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LCB": {
+            "left": "24%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "76%",
+            "bottom": "24%"
+        },
+        "LM": {
+            "left": "15%",
+            "bottom": "48%"
+        },
+        "LCM": {
+            "left": "36%",
+            "bottom": "45%"
+        },
+        "RCM": {
+            "left": "64%",
+            "bottom": "45%"
+        },
+        "RM": {
+            "left": "85%",
+            "bottom": "48%"
+        },
+        "LW": {
+            "left": "20%",
+            "bottom": "73%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "77%"
+        },
+        "RW": {
+            "left": "80%",
+            "bottom": "73%"
+        }
+    },
+    "3-4-3 Holding": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LCB": {
+            "left": "24%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "76%",
+            "bottom": "24%"
+        },
+        "LM": {
+            "left": "15%",
+            "bottom": "48%"
+        },
+        "LDM": {
+            "left": "36%",
+            "bottom": "40%"
+        },
+        "RDM": {
+            "left": "64%",
+            "bottom": "40%"
+        },
+        "RM": {
+            "left": "85%",
+            "bottom": "48%"
+        },
+        "LW": {
+            "left": "20%",
+            "bottom": "73%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "77%"
+        },
+        "RW": {
+            "left": "80%",
+            "bottom": "73%"
+        }
+    },
+    "4-4-2 Narrow": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LB": {
+            "left": "15%",
+            "bottom": "24%"
+        },
+        "LCB": {
+            "left": "35%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "65%",
+            "bottom": "22%"
+        },
+        "RB": {
+            "left": "85%",
+            "bottom": "24%"
+        },
+        "CDM": {
+            "left": "50%",
+            "bottom": "36%"
+        },
+        "LCM": {
+            "left": "25%",
+            "bottom": "48%"
+        },
+        "RCM": {
+            "left": "75%",
+            "bottom": "48%"
+        },
+        "CAM": {
+            "left": "50%",
+            "bottom": "60%"
+        },
+        "LST": {
+            "left": "35%",
+            "bottom": "77%"
+        },
+        "RST": {
+            "left": "65%",
+            "bottom": "77%"
+        }
+    },
+    "4-1-3-2": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LB": {
+            "left": "15%",
+            "bottom": "24%"
+        },
+        "LCB": {
+            "left": "35%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "65%",
+            "bottom": "22%"
+        },
+        "RB": {
+            "left": "85%",
+            "bottom": "24%"
+        },
+        "CDM": {
+            "left": "50%",
+            "bottom": "36%"
+        },
+        "LM": {
+            "left": "18%",
+            "bottom": "52%"
+        },
+        "CM": {
+            "left": "50%",
+            "bottom": "50%"
+        },
+        "RM": {
+            "left": "82%",
+            "bottom": "52%"
+        },
+        "LST": {
+            "left": "35%",
+            "bottom": "76%"
+        },
+        "RST": {
+            "left": "65%",
+            "bottom": "76%"
+        }
+    },
+    "5-3-2": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LWB": {
+            "left": "12%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "30%",
+            "bottom": "22%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "70%",
+            "bottom": "22%"
+        },
+        "RWB": {
+            "left": "88%",
+            "bottom": "28%"
+        },
+        "LCM": {
+            "left": "28%",
+            "bottom": "48%"
+        },
+        "CM": {
+            "left": "50%",
+            "bottom": "45%"
+        },
+        "RCM": {
+            "left": "72%",
+            "bottom": "48%"
+        },
+        "LST": {
+            "left": "35%",
+            "bottom": "76%"
+        },
+        "RST": {
+            "left": "65%",
+            "bottom": "76%"
+        }
+    },
+    "5-4-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "7%"
+        },
+        "LWB": {
+            "left": "12%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "30%",
+            "bottom": "22%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "22%"
+        },
+        "RCB": {
+            "left": "70%",
+            "bottom": "22%"
+        },
+        "RWB": {
+            "left": "88%",
+            "bottom": "28%"
+        },
+        "LM": {
+            "left": "15%",
+            "bottom": "48%"
+        },
+        "LCM": {
+            "left": "38%",
+            "bottom": "45%"
+        },
+        "RCM": {
+            "left": "62%",
+            "bottom": "45%"
+        },
+        "RM": {
+            "left": "85%",
+            "bottom": "48%"
         },
         "ST": {
             "left": "50%",

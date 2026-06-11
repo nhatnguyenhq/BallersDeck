@@ -33,7 +33,7 @@
             
             --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
             --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             
             /* Card Theme Colors */
             --color-icon-bg: linear-gradient(135deg, #1e1e1e 0%, #111 50%, #000 100%);
@@ -165,7 +165,7 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -429,7 +429,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.15s ease;
+            transition: background-color 0.15s ease, color 0.15s ease;
             cursor: pointer;
         }
         
@@ -474,7 +474,7 @@
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-muted);
-            transition: all 0.12s ease;
+            transition: background-color 0.12s ease, color 0.12s ease;
             cursor: pointer;
         }
         
@@ -706,7 +706,6 @@
         }
 
         .player-card:hover {
-            transform: translateY(-4px) scale(1.02);
             box-shadow: 0 14px 35px rgba(0,0,0,0.6);
         }
 
@@ -1591,12 +1590,12 @@
             width: 100%;
             border: 4px solid rgba(255, 255, 255, 0.15);
             border-radius: 24px;
-            aspect-ratio: 1 / 1.35;
-            max-width: 680px;
+            aspect-ratio: 1.6 / 1;
+            max-width: 950px;
             margin: 0 auto;
             position: relative;
             box-shadow: var(--shadow-lg);
-            overflow: visible; /* Allows cards to pop out slightly at the bottom boundary */
+            overflow: visible; /* Allows cards to pop out slightly */
         }
 
         .pitch-bg-wrapper {
@@ -1605,31 +1604,32 @@
             border-radius: 20px;
             overflow: hidden;
             background: #143819;
-            /* Premium realistic vertical grass stripes + dramatic stadium lighting vignette */
+            /* Premium realistic horizontal grass stripes + dramatic stadium lighting vignette starting from left goal */
             background-image: 
-                radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.5) 100%),
-                repeating-linear-gradient(90deg, #1b4b23 0px, #1b4b23 45px, #143819 45px, #143819 90px);
-            background-size: 100% 100%, 90px 100%;
+                radial-gradient(circle at 0% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%),
+                repeating-linear-gradient(0deg, #1b4b23 0px, #1b4b23 45px, #143819 45px, #143819 90px);
+            background-size: 100% 100%, 100% 90px;
             pointer-events: none;
             z-index: 1;
             box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
         }
 
-        /* Pitch markings for Vertical Half Pitch */
+        /* Pitch markings for Horizontal Half Pitch */
         .pitch-halfway-line {
             position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 2px;
+            top: 0; bottom: 0; right: 0;
+            width: 2px;
+            height: 100%;
             background: rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
             pointer-events: none;
         }
 
         .pitch-center-arc {
             position: absolute;
-            top: -10%; left: 50%;
-            transform: translate(-50%, 0);
-            width: 35%;
-            height: 20%;
+            top: 50%; right: 0;
+            transform: translate(50%, -50%);
+            width: 20%;
+            height: 40%;
             border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             pointer-events: none;
@@ -1637,35 +1637,35 @@
 
         .pitch-penalty-box {
             position: absolute;
-            bottom: 0; left: 50%;
-            transform: translateX(-50%);
-            width: 62%;
-            height: 24%;
+            top: 50%; left: 0;
+            transform: translateY(-50%);
+            width: 24%;
+            height: 62%;
             border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
-            border-bottom: none;
+            border-left: none;
             pointer-events: none;
         }
 
         .pitch-goal-area {
             position: absolute;
-            bottom: 0; left: 50%;
-            transform: translateX(-50%);
-            width: 28%;
-            height: 8%;
+            top: 50%; left: 0;
+            transform: translateY(-50%);
+            width: 8%;
+            height: 28%;
             border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
-            border-bottom: none;
+            border-left: none;
             pointer-events: none;
         }
 
         .pitch-penalty-arc {
             position: absolute;
-            bottom: 24%; left: 50%;
-            transform: translate(-50%, 50%);
-            width: 22%;
-            height: 10%;
+            top: 50%; left: 24%;
+            transform: translate(-50%, -50%);
+            width: 10%;
+            height: 22%;
             border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
-            border-bottom: none;
-            border-radius: 50% 50% 0 0;
+            border-left: none;
+            border-radius: 0 50% 50% 0;
             pointer-events: none;
         }
 
@@ -1716,40 +1716,44 @@
 
         /* Redesigned Pitch Slot Cards & Placeholders */
         .slot-empty-placeholder {
-            width: 80px;
-            height: 120px;
-            border-radius: 8px;
-            border: 2px dashed rgba(255, 255, 255, 0.25);
-            background: rgba(8, 11, 14, 0.6);
+            width: 84px;
+            height: 126px;
+            border-radius: 12px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(4px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
-            color: rgba(255, 255, 255, 0.5);
-            gap: 0.25rem;
-            box-shadow: var(--shadow-sm);
+            color: rgba(255, 255, 255, 0.4);
+            gap: 0.35rem;
+            box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.02), 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         .slot-empty-placeholder:hover {
             border-color: var(--accent);
-            background: rgba(16, 185, 129, 0.15);
+            background: rgba(16, 185, 129, 0.1);
             color: var(--accent);
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 0 15px var(--accent-glow);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
         }
         .slot-empty-placeholder i {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.5;
         }
         .slot-empty-placeholder span {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .pitch-player-card-container {
-            width: 80px;
-            height: 120px;
+            width: 84px;
+            height: 126px;
             position: relative;
             cursor: pointer;
             transition: var(--transition);
@@ -1764,7 +1768,7 @@
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translate(-50%, 0) scale(0.57);
+            transform: translate(-50%, 0) scale(0.6);
             transform-origin: top center;
             pointer-events: none;
             box-shadow: 0 4px 12px rgba(0,0,0,0.5);
@@ -1788,7 +1792,7 @@
             cursor: pointer;
             z-index: 15;
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            transition: all 0.2s;
+            transition: background-color 0.2s ease, transform 0.2s ease;
         }
         .mini-remove-btn:hover {
             background: #dc2626;
@@ -1847,10 +1851,12 @@
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(5px);
             z-index: 100;
-            display: none;
+            display: flex;
             justify-content: flex-end;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .drawer {
@@ -1867,8 +1873,9 @@
         }
 
         .drawer-overlay.active {
-            display: flex;
             opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
 
         .drawer-overlay.active .drawer {
@@ -1945,16 +1952,19 @@
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(5px);
             z-index: 110;
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .modal-overlay.active {
-            display: flex;
             opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
 
         .modal {
@@ -2338,12 +2348,19 @@
                             <select id="formation-select" onchange="changeFormation()">
                                 <option value="4-3-3">4 - 3 - 3</option>
                                 <option value="4-3-3 Holding">4 - 3 - 3 Holding</option>
+                                <option value="4-3-2-1">4 - 3 - 2 - 1</option>
                                 <option value="4-4-2">4 - 4 - 2</option>
                                 <option value="4-4-2 Diamond">4 - 4 - 2 Diamond</option>
+                                <option value="4-4-2 Narrow">4 - 4 - 2 Narrow</option>
                                 <option value="4-2-3-1">4 - 2 - 3 - 1</option>
+                                <option value="4-1-3-2">4 - 1 - 3 - 2</option>
+                                <option value="3-4-3">3 - 4 - 3</option>
+                                <option value="3-4-3 Holding">3 - 4 - 3 Holding</option>
                                 <option value="3-5-2">3 - 5 - 2</option>
                                 <option value="3-4-2-1">3 - 4 - 2 - 1</option>
                                 <option value="3-5-1-1">3 - 5 - 1 - 1</option>
+                                <option value="5-3-2">5 - 3 - 2</option>
+                                <option value="5-4-1">5 - 4 - 1</option>
                             </select>
                         </div>
                     </div>
@@ -2548,6 +2565,18 @@
             if (slotPos === 'CF1' || slotPos === 'CF2') {
                 return 'CF';
             }
+            if (slotPos === 'LCB' || slotPos === 'RCB' || slotPos === 'CB') {
+                return 'CB';
+            }
+            if (slotPos === 'LCM' || slotPos === 'RCM' || slotPos === 'CM') {
+                return 'CM';
+            }
+            if (slotPos === 'LDM' || slotPos === 'RDM' || slotPos === 'CDM') {
+                return 'CDM';
+            }
+            if (slotPos === 'CAM1' || slotPos === 'CAM2') {
+                return 'CAM';
+            }
             return slotPos;
         }
 
@@ -2557,6 +2586,8 @@
                 "GK": ["GK"],
                 "LB": ["LB", "LWB"],
                 "RB": ["RB", "RWB"],
+                "LWB": ["LWB", "LB"],
+                "RWB": ["RWB", "RB"],
                 "CB": ["CB"],
                 "LCB": ["CB"],
                 "RCB": ["CB"],
@@ -2569,6 +2600,8 @@
                 "LM": ["LM", "LW"],
                 "RM": ["RM", "RW"],
                 "CAM": ["CAM"],
+                "CAM1": ["CAM", "CF"],
+                "CAM2": ["CAM", "CF"],
                 "LW": ["LW", "LM"],
                 "RW": ["RW", "RM"],
                 "ST": ["ST", "CF"],
@@ -3009,13 +3042,20 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
                     });
 
-                    // Remove old replaced Spain WC26 player IDs to avoid duplicates in local storage
-                    const oldSpainIdsToClean = [
+                    // Remove old replaced WC26 player IDs to avoid duplicates or outdated ratings/positions in local storage
+                    const oldIdsToClean = [
                         'lenormand-wc26', 'vivian-wc26', 'jnavas-wc26', 'remiro-wc26',
-                        'morata-wc26', 'joselu-wc26', 'carvajal-wc26'
+                        'morata-wc26', 'joselu-wc26', 'carvajal-wc26',
+                        // Mexico old WC26 IDs to refresh
+                        'ochoa-wc26', 'gimenez-wc26', 'alvarez-wc26', 'montes-wc26', 
+                        'gallardo-wc26', 'vasquez-wc26', 'romo-wc26', 'pineda-wc26', 
+                        'alvarado-wc26', 'jimenez-r-wc26', 'vega-wc26',
+                        // South Africa old WC26 IDs to refresh
+                        'williams-wc26', 'modiba-wc26', 'mudau-wc26', 'mokoena-wc26', 
+                        'foster-wc26', 'zwane-wc26', 'appollis-wc26'
                     ];
                     const originalCount = players.length;
-                    players = players.filter(p => !oldSpainIdsToClean.includes(p.id));
+                    players = players.filter(p => !oldIdsToClean.includes(p.id));
                     if (players.length !== originalCount) {
                         needsSave = true;
                     }
@@ -3518,6 +3558,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         // Apply 3D Tilt Effect to rendered card elements
         function initCardTiltEffects() {
             document.querySelectorAll('.player-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transition = 'none';
+                });
                 card.addEventListener('mousemove', e => {
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
@@ -3529,6 +3572,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.03)`;
                 });
                 card.addEventListener('mouseleave', () => {
+                    card.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease';
                     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
                 });
             });
@@ -3616,7 +3660,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             // Render output
             const grid = document.getElementById('player-grid');
-            if (filtered.length === 0) {
+            displayedPlayers = filtered;
+            renderLimit = BATCH_SIZE;
+
+            if (displayedPlayers.length === 0) {
                 grid.innerHTML = `
                     <div class="no-results">
                         <i data-lucide="info"></i>
@@ -3625,13 +3672,47 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     </div>
                 `;
             } else {
-                grid.innerHTML = filtered.map(p => createPlayerCardHTML(p)).join('');
+                const initialBatch = displayedPlayers.slice(0, BATCH_SIZE);
+                grid.innerHTML = initialBatch.map(p => createPlayerCardHTML(p)).join('');
             }
 
             updateChipActiveStates();
             lucide.createIcons();
             initCardTiltEffects();
         }
+
+        // Global variables for batch loading in library tab
+        let displayedPlayers = [];
+        let renderLimit = 60;
+        const BATCH_SIZE = 60;
+
+        function renderNextBatch() {
+            if (renderLimit >= displayedPlayers.length) return;
+            const grid = document.getElementById('player-grid');
+            const nextBatch = displayedPlayers.slice(renderLimit, renderLimit + BATCH_SIZE);
+            if (nextBatch.length === 0) return;
+
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = nextBatch.map(p => createPlayerCardHTML(p)).join('');
+            
+            while (tempDiv.firstChild) {
+                grid.appendChild(tempDiv.firstChild);
+            }
+            
+            renderLimit += BATCH_SIZE;
+            lucide.createIcons();
+            initCardTiltEffects();
+        }
+
+        // Listen for scroll events to trigger infinite scroll
+        window.addEventListener('scroll', () => {
+            const libraryTab = document.getElementById('library-tab');
+            if (libraryTab && libraryTab.classList.contains('active')) {
+                if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                    renderNextBatch();
+                }
+            }
+        });
 
         // --- 8. SAVE/ADD/EDIT DRAWER LOGIC ---
         function populateFormDropdowns() {
@@ -3945,13 +4026,32 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const idx = players.findIndex(x => x.id === id);
                 if (idx !== -1) players[idx] = playerData;
                 showToast(`Đã cập nhật ${cardName || getShortName(name)}`);
+
+                // Update card directly in the DOM if it exists to avoid scroll jumping
+                const cardEl = document.getElementById(`card-${playerData.id}`);
+                if (cardEl) {
+                    const wrapper = cardEl.parentElement;
+                    if (wrapper) {
+                        wrapper.outerHTML = createPlayerCardHTML(playerData);
+                        lucide.createIcons();
+                        initCardTiltEffects();
+                    }
+                } else {
+                    applyFilters();
+                }
+
+                // If player is on the squad pitch, rebuild pitch
+                if (Object.values(squad).includes(playerData.id)) {
+                    buildPitch();
+                    updateSquadStats();
+                }
             } else {
                 players.push(playerData);
                 showToast(`Đã thêm ${cardName || getShortName(name)} thành công`);
+                applyFilters();
             }
             saveDatabase();
             closeDrawer();
-            applyFilters();
         }
 
         function deletePlayer(id) {
@@ -3968,7 +4068,20 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 }
 
                 saveDatabase();
-                applyFilters();
+
+                // Remove card directly from the DOM if it exists
+                const cardEl = document.getElementById(`card-${id}`);
+                if (cardEl) {
+                    const wrapper = cardEl.parentElement;
+                    if (wrapper) {
+                        wrapper.remove();
+                    }
+                } else {
+                    applyFilters();
+                }
+
+                buildPitch();
+                updateSquadStats();
                 showToast(`Đã xóa cầu thủ ${p.cardName || getShortName(p.name)}`);
             }
         }
@@ -4041,8 +4154,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const coord = slotsData[slotPos];
                 const slotDiv = document.createElement('div');
                 slotDiv.className = 'pitch-slot';
-                slotDiv.style.left = coord.left;
-                slotDiv.style.bottom = coord.bottom;
+                // Transform vertical half-pitch coordinates to horizontal layout
+                slotDiv.style.left = coord.bottom;
+                slotDiv.style.top = coord.left;
                 
                 const playerId = squad[slotPos];
                 const player = players.find(x => x.id === playerId);
@@ -4195,7 +4309,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 return;
             }
 
-            listContainer.innerHTML = available.map(p => {
+            const displayedAvailable = available.slice(0, 100);
+
+            listContainer.innerHTML = displayedAvailable.map(p => {
                 const isCurrent = squad[activeSlotSelection] === p.id;
                 const activeStyle = isCurrent ? 'style="border-color: var(--accent); background: rgba(16, 185, 129, 0.1);"' : '';
                 const rowFlagHTML = getFlagImgHTML(p.nationality, p.flag);
