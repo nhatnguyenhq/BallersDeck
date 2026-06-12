@@ -3401,12 +3401,35 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         'alvarado-wc26', 'jimenez-r-wc26', 'vega-wc26',
                         // South Africa old WC26 IDs to refresh
                         'williams-wc26', 'modiba-wc26', 'mudau-wc26', 'mokoena-wc26', 
-                        'foster-wc26', 'zwane-wc26', 'appollis-wc26'
+                        'foster-wc26', 'zwane-wc26', 'appollis-wc26',
+                        // Switzerland old WC26 IDs to refresh
+                        'zakaria-wc26', 'gxhaka-wc26-wc', 'sommer-wc26', 'akanji-wc26',
+                        // Saudi Arabia old WC26 IDs to refresh
+                        'abdulhamid-wc26', 'aldawsari-wc26',
+                        // New Zealand old WC26 IDs to refresh
+                        'wood-wc26-wc', 'cacace-wc26', 'stamenic-wc26', 'garbett-wc26',
+                        'bindon-wc26', 'paulsen-wc26', 'just-wc26', 'waine-wc26', 'bell-wc26',
+                        // Australia old WC26 IDs to refresh
+                        'irankunda-wc26', 'goodwin-wc26', 'irvine-wc26', 'souttar-wc26',
+                        'ryan-wc26', 'beach-wc26', 'izzo-wc26', 'behich-wc26',
+                        'bos-wc26', 'burgess-wc26', 'circati-wc26', 'degenek-wc26',
+                        'geria-wc26', 'herrington-wc26', 'italiano-wc26', 'trewin-wc26',
+                        'devlin-wc26', 'hrustic-wc26', 'metcalfe-wc26', 'okon-wc26',
+                        'oneill-wc26', 'leckie-wc26', 'mabil-wc26', 'toure-wc26',
+                        'velupillay-wc26', 'volpato-wc26'
                     ];
                     const originalCount = players.length;
                     players = players.filter(p => !oldIdsToClean.includes(p.id));
                     if (players.length !== originalCount) {
                         needsSave = true;
+                    }
+
+                    // Clean up removed Sommer and Goodwin cards from pitch if they were in user's active squad
+                    for (let slot in squad) {
+                        if (squad[slot] === 'sommer-wc26' || squad[slot] === 'goodwin-wc26') {
+                            squad[slot] = null;
+                            needsSave = true;
+                        }
                     }
 
                     // Merge any missing DEFAULT_PLAYERS automatically and update changed photos
