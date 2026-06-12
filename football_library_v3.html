@@ -1918,10 +1918,10 @@
 
         .mini-remove-btn {
             position: absolute;
-            top: -6px;
-            right: -6px;
-            width: 20px;
-            height: 20px;
+            top: -4px;
+            right: -4px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: #ef4444;
             color: #fff;
@@ -1929,7 +1929,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
+            font-size: 0.65rem;
             font-weight: bold;
             cursor: pointer;
             z-index: 15;
@@ -3147,7 +3147,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         'ferdinand-icons', 'v-nistelrooy-icons', 'v-der-sar-icons', 'seedorf-icons', 'koeman-icons',
                         'raul-icons', 'x-alonso-icons', 'figo-icons', 'p-schmeichel-icons', 'etoo-icons',
                         'stoichkov-icons', 'hagi-icons', 'e-davids-mm', 'r-costa-mm', 'okocha-mm',
-                        'hitzlsperger-mm', 'klavan-mm', 'rudnevs-mm', 'hleb-mm'
+                        'hitzlsperger-mm', 'klavan-mm', 'rudnevs-mm', 'hleb-mm',
+                        'tani-wc26', 'machida-wc26', 'morita-wc26', 'minamino-wc26', 'furuhashi-wc26'
                     ];
                     const beforeCleanLen = players.length;
                     players = players.filter(p => !duplicateIdsToRemove.includes(p.id));
@@ -3546,7 +3547,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 };
 
                 Object.keys(LEAGUES_DATA).forEach(l => {
-                    if (l === 'WC26') return; // WC26 is placed directly at the bottom
                     const conf = getLeagueConfederation(l);
                     if (leagueGrouped[conf]) {
                         leagueGrouped[conf].push(l);
@@ -3582,18 +3582,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         leagueDropdownMenu.appendChild(confItem);
                     }
                 });
-
-                // 4. Add WC26 option directly below the Confederations list
-                if (LEAGUES_DATA['WC26']) {
-                    const wcOpt = document.createElement('div');
-                    wcOpt.className = 'custom-dropdown-item';
-                    wcOpt.textContent = 'WC26';
-                    wcOpt.onclick = (e) => {
-                        e.stopPropagation();
-                        selectCustomLeague('WC26');
-                    };
-                    leagueDropdownMenu.appendChild(wcOpt);
-                }
             }
 
             // Restore current selection label
@@ -4094,7 +4082,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 };
 
                 Object.keys(LEAGUES_DATA).forEach(l => {
-                    if (l === 'WC26') return;
                     const conf = getLeagueConfederation(l);
                     if (leagueGrouped[conf]) {
                         leagueGrouped[conf].push(l);
@@ -4130,18 +4117,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         formLeagueMenu.appendChild(confItem);
                     }
                 });
-
-                if (LEAGUES_DATA['WC26']) {
-                    const wcOpt = document.createElement('div');
-                    wcOpt.className = 'custom-dropdown-item';
-                    wcOpt.textContent = 'WC26';
-                    wcOpt.onclick = (e) => {
-                        e.stopPropagation();
-                        selectCustomValue('player-league', 'form-league-trigger-val', 'form-league-dropdown-menu', 'WC26', 'WC26');
-                        onFormLeagueChange();
-                    };
-                    formLeagueMenu.appendChild(wcOpt);
-                }
             }
 
             const formNationMenu = document.getElementById('form-nation-dropdown-menu');
