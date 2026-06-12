@@ -408,8 +408,8 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.7);
             z-index: 1000;
             display: none;
-            min-width: 200px;
-            padding: 0.5rem 0;
+            min-width: 220px;
+            padding: 0.35rem 0;
             animation: fadeInDropdown 0.15s ease-out;
         }
         
@@ -423,13 +423,16 @@
         }
         
         .custom-dropdown-item {
-            padding: 0.6rem 1rem;
+            margin: 0.15rem 0.35rem;
+            padding: 0.55rem 0.75rem;
             font-size: 0.88rem;
             font-weight: 600;
-            color: var(--text-muted);
+            color: #d1d5db;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            border-radius: 6px;
             transition: background-color 0.15s ease, color 0.15s ease;
             cursor: pointer;
         }
@@ -457,7 +460,7 @@
             min-width: 180px;
             max-height: 300px;
             overflow-y: auto;
-            padding: 0.5rem 0;
+            padding: 0.35rem 0;
             animation: fadeInSubmenu 0.15s ease-out;
         }
         
@@ -471,18 +474,21 @@
         }
         
         .submenu-item {
-            padding: 0.55rem 1.2rem;
+            margin: 0.15rem 0.35rem;
+            padding: 0.5rem 0.75rem;
             font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-muted);
+            font-weight: 600;
+            color: #d1d5db;
+            border-radius: 6px;
             transition: background-color 0.12s ease, color 0.12s ease;
             cursor: pointer;
+            display: flex;
+            align-items: center;
         }
         
         .submenu-item:hover {
-            background: var(--accent);
-            color: var(--text-dark);
-            font-weight: 600;
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--accent);
         }
         
         /* Custom scrollbar for submenu */
@@ -1362,7 +1368,117 @@
         .slot-player-mini.card-vnlegends .mini-ovr { color: #fca5a5 !important; text-shadow: 0 0 4px rgba(239,68,68,0.5) !important; }
         .slot-player-mini.card-vnlegends .mini-name { color: #fca5a5 !important; }
 
-
+        /* ===== GLOBAL CHAMPIONS (GC) THEME — Brazil Lime/Green & Gold ===== */
+        .card-gc {
+            background:
+                radial-gradient(ellipse at 50% 15%, rgba(118,255,3,0.25) 0%, transparent 60%),
+                linear-gradient(160deg, #003c15 0%, #008f39 40%, #00220a 100%) !important;
+            border: 2px solid #00e676 !important;
+            box-shadow:
+                0 0 0 1px rgba(0,230,118,0.2),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 1px 0 rgba(185,255,0,0.1) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #00e676 50%);
+            --triangle-color: #ccff90;
+        }
+        .card-gc::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E"),
+                repeating-linear-gradient(
+                    -30deg,
+                    transparent,
+                    transparent 14px,
+                    rgba(0,230,118,0.02) 14px,
+                    rgba(0,230,118,0.02) 15px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-gc::after {
+            content: '★ 👑 ★';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5rem;
+            color: rgba(204,255,144,0.65);
+            letter-spacing: 5px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-gc .panini-band {
+            background: linear-gradient(135deg, #00220a 0%, #00a859 50%, #00220a 100%) !important;
+            border-bottom: 1px solid rgba(0,230,118,0.4) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-gc .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffd700'%3E%3Cpath d='M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5v-2z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.95;
+            z-index: 1;
+        }
+        .card-gc .panini-ovr {
+            color: #ccff90 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 10px rgba(0,230,118,0.55), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-gc .panini-pos {
+            color: rgba(185,255,0,0.9) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 10px rgba(0,230,118,0.55), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-gc .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 80%, rgba(0,230,118,0.08) 0%, transparent 65%),
+                linear-gradient(180deg, rgba(0,60,21,0.15) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-gc .panini-photo-silhouette {
+            fill: rgba(0,230,118,0.18) !important;
+        }
+        .card-gc .panini-footer {
+            background: linear-gradient(180deg, rgba(0,60,21,0.6) 0%, rgba(0,30,10,0.96) 100%) !important;
+            border-top: 1px solid rgba(0,230,118,0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-gc .panini-name {
+            color: #ccff90 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(0,230,118,0.35) !important;
+        }
+        .card-gc .panini-club {
+            font-size: 0.52rem !important;
+            font-weight: 700 !important;
+            color: rgba(204,255,144,0.8) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            text-align: center;
+        }
+        .slot-player-mini.card-gc {
+            background: linear-gradient(135deg, #003c15 0%, #008f39 100%) !important;
+            border: 2px solid #00e676 !important;
+            box-shadow: 0 0 10px rgba(0,230,118,0.35) !important;
+        }
+        .slot-player-mini.card-gc .mini-ovr { color: #ccff90 !important; text-shadow: 0 0 4px rgba(0,230,118,0.5) !important; }
+        .slot-player-mini.card-gc .mini-name { color: #ccff90 !important; }
         .panini-ovr {
             font-size: 1.3rem;
             font-weight: 900;
@@ -2638,6 +2754,7 @@
                         <option value="mm">📷 Memoir</option>
                         <option value="toty">❄️ TOTY</option>
                         <option value="vnlegends">🇻🇳 VN Legends</option>
+                        <option value="gc">👑 Global Champions</option>
                     </select>
                 </div>
 
@@ -2916,16 +3033,18 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             // --- Theme / Season ---
             const themeItems = [
-                { value: '', label: 'All' },
-                { value: 'standard', label: '⚽ Mùa 26' },
-                { value: 'worldcup26', label: '🏆 WC26' },
-                { value: 'icons', label: '⭐ Icons' },
-                { value: 'mm', label: '📷 Memoir' },
-                { value: 'toty', label: '❄️ TOTY' },
+                { value: '', label: 'All', icon: '' },
+                { value: 'standard', label: 'Mùa 26', icon: '⚽' },
+                { value: 'worldcup26', label: 'WC26', icon: '🏆' },
+                { value: 'icons', label: 'Icons', icon: '⭐' },
+                { value: 'mm', label: 'Memoir', icon: '📷' },
+                { value: 'toty', label: 'TOTY', icon: '❄️' },
+                { value: 'gc', label: 'Global Champions', icon: '👑' },
                 {
-                value: 'vnlegends',
-                label: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px; margin-top: -2px;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>VN Legends`
-            }
+                    value: 'vnlegends',
+                    label: 'VN Legends',
+                    icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: block;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
+                }
             ];
             buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
                 selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
@@ -2953,13 +3072,34 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const menu = document.getElementById(menuId);
             if (!menu) return;
             menu.innerHTML = '';
+            
+            // Check if any item has an icon (to align text columns)
+            const hasIcons = items.some(item => item.icon !== undefined);
+            
             items.forEach(item => {
                 const el = document.createElement('div');
                 el.className = 'custom-dropdown-item';
-                el.innerHTML = `<span style="display: flex; align-items: center; gap: 4px; width: 100%;">${item.label}</span>`;
+                
+                if (hasIcons) {
+                    const isSvg = item.icon && item.icon.trim().startsWith('<svg');
+                    const iconHTML = isSvg 
+                        ? item.icon 
+                        : `<span style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.1rem;">${item.icon || ''}</span>`;
+                    
+                    el.innerHTML = `
+                        <div style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; flex-shrink: 0;">
+                            ${iconHTML}
+                        </div>
+                        <span style="flex-grow: 1;">${item.label}</span>
+                    `;
+                } else {
+                    el.innerHTML = `<span style="flex-grow: 1;">${item.label}</span>`;
+                }
+                
                 el.onclick = (e) => {
                     e.stopPropagation();
-                    onSelect(item.value, item.label);
+                    const fullLabel = item.icon ? `${item.icon} ${item.label}`.trim() : item.label;
+                    onSelect(item.value, fullLabel);
                 };
                 menu.appendChild(el);
             });
@@ -3673,6 +3813,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p && p.cardTheme === 'toty') return 'card-toty';
             if (p && p.cardTheme === 'ucl') return 'card-ucl';
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
+            if (p && p.cardTheme === 'gc') return 'card-gc';
             const rating = (p && p.rating) || p || 0;
             if (rating >= 90) return 'card-icon';
             if (rating >= 80) return 'card-gold';
@@ -3687,6 +3828,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p.cardTheme === 'toty') return '❄';
             if (p.cardTheme === 'ucl') return '✦';
             if (p.cardTheme === 'vnlegends') return '🇻🇳';
+            if (p.cardTheme === 'gc') return '👑';
             
             const themeClass = getCardThemeClass(p);
             if (themeClass === 'card-icon') return '💎';
@@ -3703,6 +3845,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const isTOTY = p.cardTheme === 'toty';
             const isUCL = p.cardTheme === 'ucl';
             const isVNLegends = p.cardTheme === 'vnlegends';
+            const isGC = p.cardTheme === 'gc';
 
             let photoHTML;
             if (p.photo) {
@@ -4485,6 +4628,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     const isTOTY = player.cardTheme === 'toty';
                     const isUCL = player.cardTheme === 'ucl';
                     const isVNLegends = player.cardTheme === 'vnlegends';
+                    const isGC = player.cardTheme === 'gc';
 
                     let photoHTML;
                     if (player.photo) {
