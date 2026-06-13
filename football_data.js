@@ -16321,7 +16321,7 @@ const DEFAULT_PLAYERS = [
             "CAM"
         ],
         "rating": 88,
-        "photo": "https://static.wikia.nocookie.net/tottenham-hotspur/images/c/ca/Ossie_Ardiles.jpg/revision/latest?cb=20200405204251",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Osvaldo_Ardiles%2C_Selecci%C3%B3n_Argentina_1978.jpg/960px-Osvaldo_Ardiles%2C_Selecci%C3%B3n_Argentina_1978.jpg",
         "cardTheme": "mm"
     },
     {
@@ -18198,7 +18198,7 @@ const DEFAULT_PLAYERS = [
             "CM"
         ],
         "rating": 93,
-        "photo": "https://static.wikia.nocookie.net/universecwsports/images/6/6c/Beckham.jpg/revision/latest?cb=20210825090031&path-prefix=es",
+        "photo": "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/11/david-beckham.jpg?resize=980:*",
         "cardTheme": "icons"
     },
     {
@@ -19162,7 +19162,7 @@ const DEFAULT_PLAYERS = [
             "RB"
         ],
         "rating": 90,
-        "photo": "https://static.wikia.nocookie.net/tottenham-hotspur/images/7/7d/Steve_Perryman.jpg/revision/latest?cb=20200409100139",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Steve_Perryman_%281981%29.jpg",
         "cardTheme": "icons"
     },
     {
@@ -27763,7 +27763,7 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "altPositions": [],
         "rating": 86,
-        "photo": "",
+        "photo": "https://danviet.ex-cdn.com/files/f1/296231569849192448/2022/12/20/messi-kho-so-vi-bao-thu-lautaro-martinez-tai-world-cup-20221-725x0-1671549255674-1671549256140714863240.jpg",
         "cardTheme": "gc"
     },
     {
@@ -36307,6 +36307,1175 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "gc"
     },
     {
+        "id": "lloris-gc",
+        "name": "Hugo Lloris",
+        "cardName": "Lloris",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "mandanda-gc",
+        "name": "Steve Mandanda",
+        "cardName": "Mandanda",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "GK",
+        "rating": 82,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "pavard-gc",
+        "name": "Benjamin Pavard",
+        "cardName": "Pavard",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "altPositions": [
+            "CB"
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "kimpembe-gc",
+        "name": "Presnel Kimpembe",
+        "cardName": "Kimpembe",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 84,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "varane-gc",
+        "name": "Raphaël Varane",
+        "cardName": "Varane",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 90,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "sidibe-gc",
+        "name": "Djibril Sidibé",
+        "cardName": "Sidibé",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 80,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "lhernandez-gc",
+        "name": "Lucas Hernandez",
+        "cardName": "Hernandez",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "LB",
+        "rating": 86,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CB"
+        ]
+    },
+    {
+        "id": "bmendy-gc",
+        "name": "Benjamin Mendy",
+        "cardName": "B. Mendy",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "LB",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "pogba-gc",
+        "name": "Paul Pogba",
+        "cardName": "Pogba",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 90,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "lemar-gc",
+        "name": "Thomas Lemar",
+        "cardName": "Lemar",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "LM",
+        "rating": 83,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "tolisso-gc",
+        "name": "Corentin Tolisso",
+        "cardName": "Tolisso",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 84,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "matuidi-gc",
+        "name": "Blaise Matuidi",
+        "cardName": "Matuidi",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "LM",
+        "rating": 86,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CM"
+        ]
+    },
+    {
+        "id": "nzonzi-gc",
+        "name": "Steven Nzonzi",
+        "cardName": "Nzonzi",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CDM",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "griezmann-gc",
+        "name": "Antoine Griezmann",
+        "cardName": "Griezmann",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 91,
+        "photo": "https://assets.goal.com/images/v3/blt5464c396b81d86ca/GOAL%20-%20Blank%20WEB%20-%20Facebook%20-%202024-05-31T105246.926.png?auto=webp&format=pjpg&width=3840&quality=60",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "giroud-gc",
+        "name": "Olivier Giroud",
+        "cardName": "Giroud",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 86,
+        "photo": "https://img.20mn.fr/bOE4IkcYRf-cwcZT03LiuA/1444x920_attaquant-equipe-france-olivier-giroud-30-mai-2016-nantes",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "fekir-gc",
+        "name": "Nabil Fekir",
+        "cardName": "Fekir",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 84,
+        "cardTheme": "gc",
+        "altPositions": [
+            "ST"
+        ]
+    },
+    {
+        "id": "thauvin-gc",
+        "name": "Florian Thauvin",
+        "cardName": "Thauvin",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Global Champions",
+        "club": "France 18",
+        "clubBadge": "⚽",
+        "position": "RW",
+        "rating": 82,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "lahm-gc",
+        "name": "Philipp Lahm",
+        "cardName": "Lahm",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 91,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "jboateng-gc",
+        "name": "Jérôme Boateng",
+        "cardName": "Boateng",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 88,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "hummels-gc",
+        "name": "Mats Hummels",
+        "cardName": "Hummels",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 90,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "hoewedes-gc",
+        "name": "Benedikt Höwedes",
+        "cardName": "Höwedes",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "LB",
+        "rating": 85,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CB"
+        ]
+    },
+    {
+        "id": "mertesacker-gc",
+        "name": "Per Mertesacker",
+        "cardName": "Mertesacker",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 84,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "mustafi-gc",
+        "name": "Shkodran Mustafi",
+        "cardName": "Mustafi",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 81,
+        "photo": "https://pbs.twimg.com/media/D_YCB-7XsAEl7y5.jpg",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "schweinsteiger-gc",
+        "name": "Bastian Schweinsteiger",
+        "cardName": "Schweinsteiger",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CDM",
+        "rating": 91,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CM"
+        ]
+    },
+    {
+        "id": "khedira-gc",
+        "name": "Sami Khedira",
+        "cardName": "Khedira",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 86,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "kroos-gc",
+        "name": "Toni Kroos",
+        "cardName": "Kroos",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 91,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "oezil-gc",
+        "name": "Mesut Özil",
+        "cardName": "Özil",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 89,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "goetze-gc",
+        "name": "Mario Götze",
+        "cardName": "Götze",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 87,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CF"
+        ]
+    },
+    {
+        "id": "draxler-gc",
+        "name": "Julian Draxler",
+        "cardName": "Draxler",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "LM",
+        "rating": 82,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "klose-gc",
+        "name": "Miroslav Klose",
+        "cardName": "Klose",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 87,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "podolski-gc",
+        "name": "Lukas Podolski",
+        "cardName": "Podolski",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 83,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LM",
+            "LW"
+        ]
+    },
+    {
+        "id": "sramos-gc",
+        "name": "Sergio Ramos",
+        "cardName": "Ramos",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 91,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CB"
+        ]
+    },
+    {
+        "id": "capdevila-gc",
+        "name": "Joan Capdevila",
+        "cardName": "Capdevila",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "LB",
+        "rating": 85,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "arbeloa-gc",
+        "name": "Álvaro Arbeloa",
+        "cardName": "Arbeloa",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 82,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LB"
+        ]
+    },
+    {
+        "id": "marchena-gc",
+        "name": "Carlos Marchena",
+        "cardName": "Marchena",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 83,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "xabialonso-gc",
+        "name": "Xabi Alonso",
+        "cardName": "Alonso",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 90,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "javimartinez-gc",
+        "name": "Javi Martínez",
+        "cardName": "J. Martínez",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "CDM",
+        "rating": 83,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CB"
+        ]
+    },
+    {
+        "id": "fabregas-gc",
+        "name": "Cesc Fàbregas",
+        "cardName": "Fàbregas",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 89,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CM"
+        ]
+    },
+    {
+        "id": "davidvilla-gc",
+        "name": "David Villa",
+        "cardName": "Villa",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 91,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "torres-gc",
+        "name": "Fernando Torres",
+        "cardName": "Torres",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 88,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "pedro-gc",
+        "name": "Pedro Rodríguez",
+        "cardName": "Pedro",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "RW",
+        "rating": 85,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "navas-gc",
+        "name": "Jesús Navas",
+        "cardName": "Navas",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "RM",
+        "rating": 83,
+        "cardTheme": "gc",
+        "altPositions": [
+            "RW"
+        ]
+    },
+    {
+        "id": "mata-gc",
+        "name": "Juan Mata",
+        "cardName": "Mata",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 84,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LM",
+            "LW"
+        ]
+    },
+    {
+        "id": "dsilva-gc",
+        "name": "David Silva",
+        "cardName": "Silva",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 87,
+        "cardTheme": "gc",
+        "altPositions": [
+            "RW",
+            "LW"
+        ]
+    },
+    {
+        "id": "llorente-gc",
+        "name": "Fernando Llorente",
+        "cardName": "Llorente",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 83,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "buffon-gc",
+        "name": "Gianluigi Buffon",
+        "cardName": "Buffon",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "GK",
+        "rating": 93,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "zaccardo-gc",
+        "name": "Cristian Zaccardo",
+        "cardName": "Zaccardo",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 80,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "nesta-gc",
+        "name": "Alessandro Nesta",
+        "cardName": "Nesta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 92,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "barzagli-gc",
+        "name": "Andrea Barzagli",
+        "cardName": "Barzagli",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 84,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "zambrotta-gc",
+        "name": "Gianluca Zambrotta",
+        "cardName": "Zambrotta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 89,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LB"
+        ]
+    },
+    {
+        "id": "materazzi-gc",
+        "name": "Marco Materazzi",
+        "cardName": "Materazzi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CB",
+        "rating": 86,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "oddo-gc",
+        "name": "Massimo Oddo",
+        "cardName": "Oddo",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "RB",
+        "rating": 81,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "derossi-gc",
+        "name": "Daniele De Rossi",
+        "cardName": "De Rossi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CDM",
+        "rating": 88,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CM"
+        ]
+    },
+    {
+        "id": "gattuso-gc",
+        "name": "Gennaro Gattuso",
+        "cardName": "Gattuso",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CDM",
+        "rating": 89,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "pirlo-gc",
+        "name": "Andrea Pirlo",
+        "cardName": "Pirlo",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 93,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "camoranesi-gc",
+        "name": "Mauro Camoranesi",
+        "cardName": "Camoranesi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "RM",
+        "rating": 86,
+        "cardTheme": "gc",
+        "altPositions": [
+            "RW"
+        ]
+    },
+    {
+        "id": "barone-gc",
+        "name": "Simone Barone",
+        "cardName": "Barone",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 79,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "perrotta-gc",
+        "name": "Simone Perrotta",
+        "cardName": "Perrotta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "rating": 84,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LM"
+        ]
+    },
+    {
+        "id": "delpiero-gc",
+        "name": "Alessandro Del Piero",
+        "cardName": "Del Piero",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CF",
+        "rating": 91,
+        "cardTheme": "gc",
+        "altPositions": [
+            "LW",
+            "CAM"
+        ]
+    },
+    {
+        "id": "totti-gc",
+        "name": "Francesco Totti",
+        "cardName": "Totti",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "rating": 92,
+        "cardTheme": "gc",
+        "altPositions": [
+            "CF"
+        ]
+    },
+    {
+        "id": "gilardino-gc",
+        "name": "Alberto Gilardino",
+        "cardName": "Gilardino",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 84,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "iaquinta-gc",
+        "name": "Vincenzo Iaquinta",
+        "cardName": "Iaquinta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 83,
+        "cardTheme": "gc",
+        "altPositions": [
+            "RW"
+        ]
+    },
+    {
+        "id": "inzaghi-gc",
+        "name": "Filippo Inzaghi",
+        "cardName": "Inzaghi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 86,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "toni-gc",
+        "name": "Luca Toni",
+        "cardName": "Toni",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 06",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "rating": 88,
+        "cardTheme": "gc"
+    },
+    {
+        "id": "mackay-icons",
+        "name": "Dave Mackay",
+        "cardName": "Mackay",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "rating": 91,
+        "cardTheme": "icons",
+        "photo": "",
+        "altPositions": [
+            "CDM",
+            "CM"
+        ]
+    },
+    {
+        "id": "redmayne-mm",
+        "name": "Andrew Redmayne",
+        "cardName": "Redmayne",
+        "nationality": "Australia",
+        "flag": "🇦🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 83,
+        "cardTheme": "mm",
+        "photo": ""
+    },
+    {
+        "id": "timcahill-mm",
+        "name": "Tim Cahill",
+        "cardName": "Cahill",
+        "nationality": "Australia",
+        "flag": "🇦🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 86,
+        "cardTheme": "mm",
+        "photo": "",
+        "altPositions": [
+            "CAM",
+            "CF"
+        ]
+    },
+    {
+        "id": "garycahill-mm",
+        "name": "Gary Cahill",
+        "cardName": "Cahill",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "rating": 86,
+        "cardTheme": "mm",
+        "photo": ""
+    },
+    {
+        "id": "viduka-88-mm",
+        "name": "Mark Viduka",
+        "cardName": "Viduka",
+        "nationality": "Australia",
+        "flag": "🇦🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 88,
+        "cardTheme": "mm",
+        "photo": ""
+    },
+    {
+        "id": "kewell-mm",
+        "name": "Harry Kewell",
+        "cardName": "Kewell",
+        "nationality": "Australia",
+        "flag": "🇦🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LW",
+        "rating": 86,
+        "cardTheme": "mm",
+        "photo": "",
+        "altPositions": [
+            "LM",
+            "CF",
+            "ST"
+        ]
+    },
+    {
+        "id": "drinkwater-mm",
+        "name": "Danny Drinkwater",
+        "cardName": "Drinkwater",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "rating": 85,
+        "cardTheme": "mm",
+        "photo": "",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "hesselink-mm",
+        "name": "Jan Vennegoor of Hesselink",
+        "cardName": "Vennegoor",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 81,
+        "cardTheme": "mm",
+        "photo": ""
+    },
+    {
+        "id": "oshea-mm",
+        "name": "John O'Shea",
+        "cardName": "O'Shea",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "rating": 82,
+        "cardTheme": "mm",
+        "photo": "",
+        "altPositions": [
+            "RB",
+            "LB",
+            "CDM"
+        ]
+    },
+    {
+        "id": "irwin-mm",
+        "name": "Denis Irwin",
+        "cardName": "Irwin",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "rating": 89,
+        "cardTheme": "mm",
+        "photo": "",
+        "altPositions": [
+            "RB"
+        ]
+    },
+    {
+        "id": "richardson-mm",
+        "name": "Kieran Richardson",
+        "cardName": "Richardson",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "rating": 78,
+        "cardTheme": "mm",
+        "photo": "",
+        "altPositions": [
+            "LB",
+            "CM"
+        ]
+    },
+    {
+        "id": "bendtner-mm",
+        "name": "Nicklas Bendtner",
+        "cardName": "Bendtner",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 83,
+        "cardTheme": "mm",
+        "photo": ""
+    },
+    {
+        "id": "viduka-86-mm",
+        "name": "Mark Viduka",
+        "cardName": "Viduka",
+        "nationality": "Australia",
+        "flag": "🇦🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 86,
+        "cardTheme": "mm",
+        "photo": ""
+    },
+    {
         "id": "ochoa-wc26",
         "name": "Guillermo Ochoa",
         "cardName": "Ochoa",
@@ -36816,7 +37985,7 @@ const DEFAULT_PLAYERS = [
             "CAM"
         ],
         "rating": 93,
-        "photo": "https://static.wikia.nocookie.net/chelseafc/images/4/4f/FLampard.jpg/revision/latest/thumbnail/width/360/height/360?cb=20130924230740",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7lfV58pPVPgVsT4O8LIL0vdNzKQjk2JlW0Ez2ut1I-XJbQrxnmK0DBME&s=10",
         "cardTheme": "icons"
     },
     {
@@ -38492,952 +39661,164 @@ const DEFAULT_PLAYERS = [
         ]
     },
     {
-        "id": "lloris-gc",
-        "name": "Hugo Lloris",
-        "cardName": "Lloris",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
+        "id": "lawrence-mm",
+        "name": "Tommy Lawrence",
+        "cardName": "Lawrence",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
         "position": "GK",
-        "rating": 90,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "mandanda-gc",
-        "name": "Steve Mandanda",
-        "cardName": "Mandanda",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "GK",
-        "rating": 82,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "pavard-gc",
-        "name": "Benjamin Pavard",
-        "cardName": "Pavard",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 85,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CB"
-        ]
-    },
-    {
-        "id": "kimpembe-gc",
-        "name": "Presnel Kimpembe",
-        "cardName": "Kimpembe",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "CB",
         "rating": 84,
-        "cardTheme": "gc"
+        "photo": "",
+        "cardTheme": "mm"
     },
     {
-        "id": "varane-gc",
-        "name": "Raphaël Varane",
-        "cardName": "Varane",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 90,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "sidibe-gc",
-        "name": "Djibril Sidibé",
-        "cardName": "Sidibé",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 80,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "lhernandez-gc",
-        "name": "Lucas Hernandez",
-        "cardName": "Hernandez",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "LB",
-        "rating": 86,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CB"
-        ]
-    },
-    {
-        "id": "bmendy-gc",
-        "name": "Benjamin Mendy",
-        "cardName": "B. Mendy",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "LB",
-        "rating": 80,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "pogba-gc",
-        "name": "Paul Pogba",
-        "cardName": "Pogba",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
+        "id": "defour-mm",
+        "name": "Steven Defour",
+        "cardName": "Defour",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
         "position": "CM",
-        "rating": 90,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "lemar-gc",
-        "name": "Thomas Lemar",
-        "cardName": "Lemar",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "LM",
-        "rating": 83,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LW"
-        ]
-    },
-    {
-        "id": "tolisso-gc",
-        "name": "Corentin Tolisso",
-        "cardName": "Tolisso",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 84,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "matuidi-gc",
-        "name": "Blaise Matuidi",
-        "cardName": "Matuidi",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "LM",
-        "rating": 86,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CM"
-        ]
-    },
-    {
-        "id": "nzonzi-gc",
-        "name": "Steven Nzonzi",
-        "cardName": "Nzonzi",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "CDM",
-        "rating": 83,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "griezmann-gc",
-        "name": "Antoine Griezmann",
-        "cardName": "Griezmann",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "ST",
-            "CF"
-        ]
-    },
-    {
-        "id": "giroud-gc",
-        "name": "Olivier Giroud",
-        "cardName": "Giroud",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 86,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "fekir-gc",
-        "name": "Nabil Fekir",
-        "cardName": "Fekir",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 84,
-        "cardTheme": "gc",
-        "altPositions": [
-            "ST"
-        ]
-    },
-    {
-        "id": "thauvin-gc",
-        "name": "Florian Thauvin",
-        "cardName": "Thauvin",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Global Champions",
-        "club": "France 18",
-        "clubBadge": "⚽",
-        "position": "RW",
         "rating": 82,
-        "cardTheme": "gc"
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": ["CDM"]
     },
     {
-        "id": "lahm-gc",
-        "name": "Philipp Lahm",
-        "cardName": "Lahm",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "jboateng-gc",
-        "name": "Jérôme Boateng",
-        "cardName": "Boateng",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 88,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "hummels-gc",
-        "name": "Mats Hummels",
-        "cardName": "Hummels",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 90,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "hoewedes-gc",
-        "name": "Benedikt Höwedes",
-        "cardName": "Höwedes",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "LB",
-        "rating": 85,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CB"
-        ]
-    },
-    {
-        "id": "mertesacker-gc",
-        "name": "Per Mertesacker",
-        "cardName": "Mertesacker",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 84,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "mustafi-gc",
-        "name": "Shkodran Mustafi",
-        "cardName": "Mustafi",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 81,
-        "cardTheme": "gc",
-        "altPositions": [
-            "RB"
-        ]
-    },
-    {
-        "id": "schweinsteiger-gc",
-        "name": "Bastian Schweinsteiger",
-        "cardName": "Schweinsteiger",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CDM",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CM"
-        ]
-    },
-    {
-        "id": "khedira-gc",
-        "name": "Sami Khedira",
-        "cardName": "Khedira",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 86,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "kroos-gc",
-        "name": "Toni Kroos",
-        "cardName": "Kroos",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "oezil-gc",
-        "name": "Mesut Özil",
-        "cardName": "Özil",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 89,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LW"
-        ]
-    },
-    {
-        "id": "goetze-gc",
-        "name": "Mario Götze",
-        "cardName": "Götze",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 87,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CF"
-        ]
-    },
-    {
-        "id": "draxler-gc",
-        "name": "Julian Draxler",
-        "cardName": "Draxler",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "LM",
-        "rating": 82,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LW"
-        ]
-    },
-    {
-        "id": "klose-gc",
-        "name": "Miroslav Klose",
-        "cardName": "Klose",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 87,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "podolski-gc",
-        "name": "Lukas Podolski",
-        "cardName": "Podolski",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Global Champions",
-        "club": "Germany 14",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 83,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LM",
-            "LW"
-        ]
-    },
-    {
-        "id": "sramos-gc",
-        "name": "Sergio Ramos",
-        "cardName": "Ramos",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CB"
-        ]
-    },
-    {
-        "id": "capdevila-gc",
-        "name": "Joan Capdevila",
-        "cardName": "Capdevila",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "LB",
-        "rating": 85,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "arbeloa-gc",
-        "name": "Álvaro Arbeloa",
-        "cardName": "Arbeloa",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 82,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LB"
-        ]
-    },
-    {
-        "id": "marchena-gc",
-        "name": "Carlos Marchena",
-        "cardName": "Marchena",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 83,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "xabialonso-gc",
-        "name": "Xabi Alonso",
-        "cardName": "Alonso",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 90,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "javimartinez-gc",
-        "name": "Javi Martínez",
-        "cardName": "J. Martínez",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "CDM",
-        "rating": 83,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CB"
-        ]
-    },
-    {
-        "id": "fabregas-gc",
-        "name": "Cesc Fàbregas",
-        "cardName": "Fàbregas",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 89,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CM"
-        ]
-    },
-    {
-        "id": "davidvilla-gc",
-        "name": "David Villa",
-        "cardName": "Villa",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LW"
-        ]
-    },
-    {
-        "id": "torres-gc",
-        "name": "Fernando Torres",
-        "cardName": "Torres",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
+        "id": "cha-bum-kun-mm",
+        "name": "Cha Bum-kun",
+        "cardName": "Cha Bum-kun",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
         "position": "ST",
         "rating": 88,
-        "cardTheme": "gc"
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": ["CF"]
     },
     {
-        "id": "pedro-gc",
-        "name": "Pedro Rodríguez",
-        "cardName": "Pedro",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "RW",
-        "rating": 85,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LW"
-        ]
+        "id": "nakata-mm",
+        "name": "Hidetoshi Nakata",
+        "cardName": "Nakata",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": ["CM"]
     },
     {
-        "id": "navas-gc",
-        "name": "Jesús Navas",
-        "cardName": "Navas",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "RM",
+        "id": "shankly-mm",
+        "name": "Bill Shankly",
+        "cardName": "Shankly",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
         "rating": 83,
-        "cardTheme": "gc",
-        "altPositions": [
-            "RW"
-        ]
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": ["LM", "RM"]
     },
     {
-        "id": "mata-gc",
-        "name": "Juan Mata",
-        "cardName": "Mata",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 84,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LM",
-            "LW"
-        ]
-    },
-    {
-        "id": "dsilva-gc",
-        "name": "David Silva",
-        "cardName": "Silva",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 87,
-        "cardTheme": "gc",
-        "altPositions": [
-            "RW",
-            "LW"
-        ]
-    },
-    {
-        "id": "llorente-gc",
-        "name": "Fernando Llorente",
-        "cardName": "Llorente",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Global Champions",
-        "club": "Spain 10",
-        "clubBadge": "⚽",
+        "id": "disanto-mm",
+        "name": "Franco Di Santo",
+        "cardName": "Di Santo",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
         "position": "ST",
-        "rating": 83,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "buffon-gc",
-        "name": "Gianluigi Buffon",
-        "cardName": "Buffon",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "GK",
-        "rating": 93,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "zaccardo-gc",
-        "name": "Cristian Zaccardo",
-        "cardName": "Zaccardo",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "RB",
         "rating": 80,
-        "cardTheme": "gc"
+        "photo": "",
+        "cardTheme": "mm"
     },
     {
-        "id": "nesta-gc",
-        "name": "Alessandro Nesta",
-        "cardName": "Nesta",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
+        "id": "pizarro-mm",
+        "name": "Claudio Pizarro",
+        "cardName": "Pizarro",
+        "nationality": "Peru",
+        "flag": "🇵🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "vanbuyten-mm",
+        "name": "Daniel Van Buyten",
+        "cardName": "Van Buyten",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
         "position": "CB",
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pedersen-mm",
+        "name": "Morten Gamst Pedersen",
+        "cardName": "Pedersen",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": ["LW"]
+    },
+    {
+        "id": "clemence-icons",
+        "name": "Ray Clemence",
+        "cardName": "Clemence",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "dalglish-icons",
+        "name": "Kenny Dalglish",
+        "cardName": "Dalglish",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
         "rating": 92,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "barzagli-gc",
-        "name": "Andrea Barzagli",
-        "cardName": "Barzagli",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 84,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "zambrotta-gc",
-        "name": "Gianluca Zambrotta",
-        "cardName": "Zambrotta",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 89,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LB"
-        ]
-    },
-    {
-        "id": "materazzi-gc",
-        "name": "Marco Materazzi",
-        "cardName": "Materazzi",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CB",
-        "rating": 86,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "oddo-gc",
-        "name": "Massimo Oddo",
-        "cardName": "Oddo",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "RB",
-        "rating": 81,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "derossi-gc",
-        "name": "Daniele De Rossi",
-        "cardName": "De Rossi",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CDM",
-        "rating": 88,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CM"
-        ]
-    },
-    {
-        "id": "gattuso-gc",
-        "name": "Gennaro Gattuso",
-        "cardName": "Gattuso",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CDM",
-        "rating": 89,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "pirlo-gc",
-        "name": "Andrea Pirlo",
-        "cardName": "Pirlo",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 93,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CDM"
-        ]
-    },
-    {
-        "id": "camoranesi-gc",
-        "name": "Mauro Camoranesi",
-        "cardName": "Camoranesi",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "RM",
-        "rating": 86,
-        "cardTheme": "gc",
-        "altPositions": [
-            "RW"
-        ]
-    },
-    {
-        "id": "barone-gc",
-        "name": "Simone Barone",
-        "cardName": "Barone",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 79,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "perrotta-gc",
-        "name": "Simone Perrotta",
-        "cardName": "Perrotta",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CM",
-        "rating": 84,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LM"
-        ]
-    },
-    {
-        "id": "delpiero-gc",
-        "name": "Alessandro Del Piero",
-        "cardName": "Del Piero",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CF",
-        "rating": 91,
-        "cardTheme": "gc",
-        "altPositions": [
-            "LW",
-            "CAM"
-        ]
-    },
-    {
-        "id": "totti-gc",
-        "name": "Francesco Totti",
-        "cardName": "Totti",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "CAM",
-        "rating": 92,
-        "cardTheme": "gc",
-        "altPositions": [
-            "CF"
-        ]
-    },
-    {
-        "id": "gilardino-gc",
-        "name": "Alberto Gilardino",
-        "cardName": "Gilardino",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 84,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "iaquinta-gc",
-        "name": "Vincenzo Iaquinta",
-        "cardName": "Iaquinta",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 83,
-        "cardTheme": "gc",
-        "altPositions": [
-            "RW"
-        ]
-    },
-    {
-        "id": "inzaghi-gc",
-        "name": "Filippo Inzaghi",
-        "cardName": "Inzaghi",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 86,
-        "cardTheme": "gc"
-    },
-    {
-        "id": "toni-gc",
-        "name": "Luca Toni",
-        "cardName": "Toni",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "Global Champions",
-        "club": "Italy 06",
-        "clubBadge": "⚽",
-        "position": "ST",
-        "rating": 88,
-        "cardTheme": "gc"
+        "photo": "",
+        "cardTheme": "icons",
+        "altPositions": ["CF"]
     }
 ];
 

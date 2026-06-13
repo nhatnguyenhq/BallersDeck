@@ -3596,9 +3596,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
                     // Migrate photos for existing players in local storage if not set or outdated
                     players.forEach(p => {
-                        // Remove Icon photos that use Sofifa sources
-                        const isIcon = p.cardTheme === 'icons' || (p.id && p.id.endsWith('-icons')) || p.league === 'Icons';
-                        if (isIcon && p.photo && p.photo.includes('sofifa')) {
+                        // Remove photos that use Sofifa sources
+                        if (p.photo && p.photo.includes('sofifa')) {
                             p.photo = '';
                             needsSave = true;
                         }
