@@ -471,6 +471,7 @@ const LEAGUES_DATA = {
     },
     "Championship": {
         "clubs": [
+            "Birmingham",
             "Blackburn Rovers",
             "Bristol City",
             "Burnley",
@@ -1053,6 +1054,7 @@ const CLUB_BADGES = {
     "St. Louis City SC": "💗",
     "Toronto FC": "🔴",
     "Vancouver Whitecaps": "🌊",
+    "Birmingham": "🔵⚪",
     "Blackburn Rovers": "🔵⚪",
     "Bristol City": "🔴",
     "Burnley": "🍇",
@@ -5350,7 +5352,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -5365,7 +5367,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 91,
@@ -5380,7 +5382,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5397,7 +5399,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 96,
@@ -5412,7 +5414,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "",
         "altPositions": [],
         "rating": 98,
@@ -5427,7 +5429,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 98,
@@ -5442,7 +5444,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CF",
         "altPositions": [],
         "rating": 97,
@@ -5457,7 +5459,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 96,
@@ -5472,7 +5474,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 97,
@@ -5487,7 +5489,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -5504,7 +5506,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -5521,7 +5523,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -5538,7 +5540,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 94,
@@ -5553,7 +5555,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "RW",
         "altPositions": [],
         "rating": 97,
@@ -5568,7 +5570,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 90,
@@ -5583,7 +5585,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 94,
@@ -5598,7 +5600,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5632,7 +5634,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -5663,7 +5665,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 94,
@@ -5695,7 +5697,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -5712,7 +5714,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 94,
@@ -5727,7 +5729,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -5756,7 +5758,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "ST"
@@ -5773,7 +5775,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5790,7 +5792,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -8031,7 +8033,7 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "⚪🟡",
         "position": "CB",
         "altPositions": [],
-        "rating": 78,
+        "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/axi6z01757076178.png",
         "cardTheme": "standard"
     },
@@ -8045,9 +8047,10 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/n4l5791757076028.png"
+        "altPositions": [],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/n4l5791757076028.png",
+        "cardTheme": "standard"
     },
     {
         "id": "firpo-leeds",
@@ -8076,13 +8079,13 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "CDM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uelvti1757076111.png",
         "altPositions": [
-            "CB",
-            "CM"
-        ]
+            "CM",
+            "CB"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uelvti1757076111.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gruev-leeds",
@@ -8094,12 +8097,12 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "CDM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4lgoyp1756019678.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4lgoyp1756019678.png",
+        "cardTheme": "standard"
     },
     {
         "id": "james-leeds",
@@ -8152,7 +8155,7 @@ const DEFAULT_PLAYERS = [
             "LM",
             "RM"
         ],
-        "rating": 77,
+        "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tt8t951757075870.png",
         "cardTheme": "standard"
     },
@@ -8181,12 +8184,12 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "ST",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vdzmtm1757077446.png",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vdzmtm1757077446.png",
+        "cardTheme": "standard"
     },
     {
         "id": "solomon-leeds",
@@ -8533,16 +8536,17 @@ const DEFAULT_PLAYERS = [
     {
         "id": "robinson-fulham",
         "name": "Antonee Robinson",
-        "cardName": "Robinson",
+        "cardName": "A. Robinson",
         "nationality": "United States",
         "flag": "🇺🇸",
         "league": "Premier League",
         "club": "Fulham",
         "clubBadge": "⚪⚫",
         "position": "LB",
+        "altPositions": [],
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q5wlej1757070520.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q5wlej1757070520.png",
+        "cardTheme": "standard"
     },
     {
         "id": "tete-fulham",
@@ -8802,23 +8806,6 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "LWB"
         ]
-    },
-    {
-        "id": "endo-wc26",
-        "name": "Wataru Endo",
-        "cardName": "Endo",
-        "nationality": "Japan",
-        "flag": "🇯🇵",
-        "league": "WC26",
-        "club": "Japan",
-        "clubBadge": "🇯🇵",
-        "position": "CDM",
-        "altPositions": [
-            "CM"
-        ],
-        "rating": 81,
-        "photo": "https://platform.liverpooloffside.sbnation.com/wp-content/uploads/sites/99/2026/06/gettyimages-2279044229.jpg?quality=90&strip=all&crop=0.0068889501240008%2C0%2C99.986222099752%2C100&w=2400",
-        "cardTheme": "worldcup26"
     },
     {
         "id": "tanaka-wc26",
@@ -12563,7 +12550,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -12581,7 +12568,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -12598,7 +12585,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "CF",
@@ -12616,7 +12603,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -12633,7 +12620,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -12651,7 +12638,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -12668,7 +12655,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -12685,7 +12672,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -12700,7 +12687,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -12717,7 +12704,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -12911,14 +12898,14 @@ const DEFAULT_PLAYERS = [
         "cardName": "Brobbey",
         "nationality": "Netherlands",
         "flag": "🇳🇱",
-        "league": "Eredivisie",
-        "club": "Ajax",
+        "league": "Premier League",
+        "club": "Sunderland",
+        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
-        "rating": 78,
+        "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q3qz441762198721.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "samu-9-s26",
@@ -13326,20 +13313,6 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/i58a2q1726603016.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
-    },
-    {
-        "id": "brobbey-ajax-s26",
-        "name": "Brian Brobbey",
-        "cardName": "Brobbey",
-        "nationality": "Netherlands",
-        "flag": "🇳🇱",
-        "league": "Eredivisie",
-        "club": "Ajax",
-        "position": "ST",
-        "rating": 78,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q3qz441762198721.png",
         "cardTheme": "standard",
         "clubBadge": "⚪🔴⚪"
     },
@@ -14055,14 +14028,14 @@ const DEFAULT_PLAYERS = [
         "cardName": "Xhaka",
         "nationality": "Switzerland",
         "flag": "🇨🇭",
-        "league": "Bundesliga",
-        "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
+        "league": "Premier League",
+        "club": "Sunderland",
+        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
-        "rating": 82,
+        "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2xa5dp1756903726.png",
         "cardTheme": "standard"
     },
@@ -14558,7 +14531,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "LW"
         ],
-        "rating": 72,
+        "rating": 75,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x53hzm1757073049.png",
         "cardTheme": "standard"
     },
@@ -14573,9 +14546,10 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
+            "CM",
             "LM"
         ],
-        "rating": 71,
+        "rating": 74,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b1rpog1757073112.png",
         "cardTheme": "standard"
     },
@@ -14592,7 +14566,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "RM"
         ],
-        "rating": 74,
+        "rating": 76,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jpnv1k1761931431.png",
         "cardTheme": "standard"
     },
@@ -14609,7 +14583,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CAM"
         ],
-        "rating": 70,
+        "rating": 73,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e1v5xd1757073210.png",
         "cardTheme": "standard"
     },
@@ -14636,15 +14610,14 @@ const DEFAULT_PLAYERS = [
         "cardName": "J. Bellingham",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Premier League",
-        "club": "Sunderland",
-        "clubBadge": "🔴⚪",
+        "league": "Bundesliga",
+        "club": "Borussia Dortmund",
+        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [
-            "CAM",
-            "ST"
+            "CAM"
         ],
-        "rating": 73,
+        "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f9hado1756325855.png",
         "cardTheme": "standard"
     },
@@ -14655,8 +14628,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
-        "club": "Sunderland",
-        "clubBadge": "🔴⚪",
+        "club": "Ipswich",
+        "clubBadge": "🚜",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -14671,11 +14644,12 @@ const DEFAULT_PLAYERS = [
         "cardName": "Cirkin",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Premier League",
-        "club": "Sunderland",
-        "clubBadge": "🔴⚪",
+        "league": "Championship",
+        "club": "Birmingham",
+        "clubBadge": "🔵⚪",
         "position": "LB",
-        "rating": 72,
+        "altPositions": [],
+        "rating": 74,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lzs97i1757072638.png",
         "cardTheme": "standard"
     },
@@ -14692,7 +14666,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "LB"
         ],
-        "rating": 73,
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/r4ssft1757072777.png",
         "cardTheme": "standard"
     },
@@ -14706,7 +14680,8 @@ const DEFAULT_PLAYERS = [
         "club": "Sunderland",
         "clubBadge": "🔴⚪",
         "position": "CB",
-        "rating": 73,
+        "altPositions": [],
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/542r9u1757072659.png",
         "cardTheme": "standard"
     },
@@ -14724,7 +14699,7 @@ const DEFAULT_PLAYERS = [
             "CDM",
             "RB"
         ],
-        "rating": 72,
+        "rating": 75,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -16062,7 +16037,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -16094,7 +16069,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -16112,7 +16087,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -16146,7 +16121,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -16163,7 +16138,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -16810,7 +16785,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -16845,7 +16820,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -18069,6 +18044,91 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "mm"
     },
     {
+        "id": "olic-mm",
+        "name": "Ivica Olić",
+        "cardName": "Olić",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "LW"
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "enke-mm",
+        "name": "Robert Enke",
+        "cardName": "Enke",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "lichtsteiner-mm",
+        "name": "Stephan Lichtsteiner",
+        "cardName": "Lichtsteiner",
+        "nationality": "Switzerland",
+        "flag": "🇨🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "blaszczykowski-mm",
+        "name": "Jakub Błaszczykowski",
+        "cardName": "Błaszczykowski",
+        "nationality": "Poland",
+        "flag": "🇵🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "RW"
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "piszczek-mm",
+        "name": "Łukasz Piszczek",
+        "cardName": "Piszczek",
+        "nationality": "Poland",
+        "flag": "🇵🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "CB",
+            "RWB"
+        ],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
         "id": "marquez-mm",
         "name": "Rafael Márquez",
         "cardName": "R. Márquez",
@@ -18111,7 +18171,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -18140,7 +18200,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -18155,7 +18215,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -18172,7 +18232,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -18191,7 +18251,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -18209,7 +18269,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -18227,7 +18287,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -18256,7 +18316,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -18291,7 +18351,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -18308,7 +18368,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 90,
@@ -18323,7 +18383,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -18338,7 +18398,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -18356,7 +18416,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -18840,7 +18900,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -19106,7 +19166,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -19140,7 +19200,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 91,
@@ -19155,7 +19215,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM",
@@ -19173,7 +19233,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -19188,7 +19248,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 92,
@@ -19203,7 +19263,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -19591,7 +19651,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 93,
@@ -19606,7 +19666,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 92,
@@ -19620,8 +19680,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
-        "club": "Stoke City",
-        "clubBadge": "🔴⚪",
+        "club": "",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -19635,8 +19695,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "Ireland",
         "flag": "🇮🇪",
         "league": "",
-        "club": "Stoke City",
-        "clubBadge": "🔴⚪",
+        "club": "",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -19705,7 +19765,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
-        "club": "Aston Villa",
+        "club": "",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -19714,7 +19774,7 @@ const DEFAULT_PLAYERS = [
         "rating": 83,
         "photo": "",
         "cardTheme": "mm",
-        "clubBadge": "🦁"
+        "clubBadge": ""
     },
     {
         "id": "gdossantos-mm",
@@ -19723,7 +19783,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Mexico",
         "flag": "🇲🇽",
         "league": "",
-        "club": "Villarreal",
+        "club": "",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -19732,7 +19792,7 @@ const DEFAULT_PLAYERS = [
         "rating": 84,
         "photo": "",
         "cardTheme": "mm",
-        "clubBadge": "🟡"
+        "clubBadge": ""
     },
     {
         "id": "barzagli-mm",
@@ -19773,12 +19833,13 @@ const DEFAULT_PLAYERS = [
         "nationality": "Turkey",
         "flag": "🇹🇷",
         "league": "",
-        "club": "Fenerbahçe",
+        "club": "",
+        "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 84,
-        "photo": "",
-        "cardTheme": "mm",
-        "clubBadge": "🟡🔵"
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLi5fweVGEvkKXd3yBb2h3Doku38afXE-8TO85CTWuX9-O3XAJoIhMxM9j&s=10",
+        "cardTheme": "mm"
     },
     {
         "id": "zagorakis-mm",
@@ -19822,8 +19883,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "",
-        "club": "Chelsea",
-        "clubBadge": "🔵",
+        "club": "",
+        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "ST",
@@ -24635,7 +24696,8 @@ const DEFAULT_PLAYERS = [
         "club": "Netherlands",
         "clubBadge": "🇳🇱",
         "position": "ST",
-        "rating": 79,
+        "altPositions": [],
+        "rating": 82,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -25676,7 +25738,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -25693,7 +25755,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -25711,7 +25773,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CDM",
@@ -25729,7 +25791,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -25746,7 +25808,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -25763,7 +25825,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -25775,19 +25837,19 @@ const DEFAULT_PLAYERS = [
     {
         "id": "thuram-icons",
         "name": "Lilian Thuram",
-        "cardName": "Thuram",
+        "cardName": "L. Thuram",
         "nationality": "France",
         "flag": "🇫🇷",
         "league": "",
-        "club": "Icons",
-        "clubBadge": "👑",
+        "club": "",
+        "clubBadge": "",
         "position": "CB",
-        "rating": 91,
-        "photo": "",
-        "cardTheme": "icons",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 91,
+        "photo": "https://static.bongda24h.vn/medias/standard/2017/1/3/l2.jpg",
+        "cardTheme": "icons"
     },
     {
         "id": "van-nistelrooy-icons",
@@ -25796,8 +25858,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "Netherlands",
         "flag": "🇳🇱",
         "league": "",
-        "club": "Icons",
-        "clubBadge": "👑",
+        "club": "",
+        "clubBadge": "",
         "position": "ST",
         "rating": 90,
         "photo": "",
@@ -25811,7 +25873,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -25826,7 +25888,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -25843,7 +25905,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "⭐",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 94,
@@ -25857,8 +25919,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "Netherlands",
         "flag": "🇳🇱",
         "league": "",
-        "club": "Memoir",
-        "clubBadge": "📷",
+        "club": "",
+        "clubBadge": "",
         "position": "CDM",
         "rating": 90,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7h2h1v1662473766.png",
@@ -25874,8 +25936,8 @@ const DEFAULT_PLAYERS = [
         "nationality": "Portugal",
         "flag": "🇵🇹",
         "league": "",
-        "club": "Memoir",
-        "clubBadge": "📷",
+        "club": "",
+        "clubBadge": "",
         "position": "CAM",
         "rating": 89,
         "photo": "",
@@ -33816,8 +33878,8 @@ const DEFAULT_PLAYERS = [
     },
     {
         "id": "milesrobinsonsoccer-wc26",
-        "name": "Miles Robinson (soccer)",
-        "cardName": "(soccer)",
+        "name": "Miles Robinson",
+        "cardName": "M. Robinson",
         "nationality": "United States",
         "flag": "🇺🇸",
         "league": "WC26",
@@ -36601,7 +36663,9 @@ const DEFAULT_PLAYERS = [
         "club": "Germany 14",
         "clubBadge": "⚽",
         "position": "CB",
-        "rating": 90,
+        "altPositions": [],
+        "rating": 88,
+        "photo": "",
         "cardTheme": "gc"
     },
     {
@@ -36786,11 +36850,12 @@ const DEFAULT_PLAYERS = [
         "club": "Spain 10",
         "clubBadge": "⚽",
         "position": "RB",
-        "rating": 91,
-        "cardTheme": "gc",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "gc"
     },
     {
         "id": "capdevila-gc",
@@ -36895,11 +36960,12 @@ const DEFAULT_PLAYERS = [
         "club": "Spain 10",
         "clubBadge": "⚽",
         "position": "ST",
-        "rating": 91,
-        "cardTheme": "gc",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "gc"
     },
     {
         "id": "torres-gc",
@@ -37029,7 +37095,9 @@ const DEFAULT_PLAYERS = [
         "club": "Italy 06",
         "clubBadge": "⚽",
         "position": "CB",
+        "altPositions": [],
         "rating": 92,
+        "photo": "https://pbs.twimg.com/media/Fvm1CDIXgAMT_97.jpg",
         "cardTheme": "gc"
     },
     {
@@ -37204,11 +37272,12 @@ const DEFAULT_PLAYERS = [
         "club": "Italy 06",
         "clubBadge": "⚽",
         "position": "CAM",
-        "rating": 92,
-        "cardTheme": "gc",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "gc"
     },
     {
         "id": "gilardino-gc",
@@ -37300,48 +37369,35 @@ const DEFAULT_PLAYERS = [
     {
         "id": "timcahill-mm",
         "name": "Tim Cahill",
-        "cardName": "Cahill",
+        "cardName": "T. Cahill",
         "nationality": "Australia",
         "flag": "🇦🇺",
         "league": "",
         "club": "",
         "clubBadge": "",
         "position": "ST",
-        "rating": 86,
-        "cardTheme": "mm",
-        "photo": "",
         "altPositions": [
-            "CAM",
-            "CF"
-        ]
+            "CF",
+            "CAM"
+        ],
+        "rating": 86,
+        "photo": "https://content.api.news/v3/images/bin/87a5cf15073575b6736ef9332bacf11a",
+        "cardTheme": "mm"
     },
     {
         "id": "garycahill-mm",
         "name": "Gary Cahill",
-        "cardName": "Cahill",
+        "cardName": "G. Cahill",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CB",
-        "rating": 86,
-        "cardTheme": "mm",
-        "photo": ""
-    },
-    {
-        "id": "viduka-88-mm",
-        "name": "Mark Viduka",
-        "cardName": "Viduka",
-        "nationality": "Australia",
-        "flag": "🇦🇺",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "ST",
-        "rating": 88,
-        "cardTheme": "mm",
-        "photo": ""
+        "altPositions": [],
+        "rating": 85,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Gary_Cahill_27-09-2014_1.jpg/250px-Gary_Cahill_27-09-2014_1.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "kewell-mm",
@@ -37353,14 +37409,14 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LW",
-        "rating": 86,
-        "cardTheme": "mm",
-        "photo": "",
         "altPositions": [
-            "LM",
+            "ST",
             "CF",
-            "ST"
-        ]
+            "LM"
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "mm"
     },
     {
         "id": "drinkwater-mm",
@@ -37462,6 +37518,927 @@ const DEFAULT_PLAYERS = [
         "photo": ""
     },
     {
+        "id": "lawrence-mm",
+        "name": "Tommy Lawrence",
+        "cardName": "Lawrence",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "defour-mm",
+        "name": "Steven Defour",
+        "cardName": "Defour",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "CDM"
+        ]
+    },
+    {
+        "id": "cha-bum-kun-mm",
+        "name": "Cha Bum-kun",
+        "cardName": "Cha Bum-kun",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "CF"
+        ]
+    },
+    {
+        "id": "nakata-mm",
+        "name": "Hidetoshi Nakata",
+        "cardName": "Nakata",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "CM"
+        ]
+    },
+    {
+        "id": "shankly-mm",
+        "name": "Bill Shankly",
+        "cardName": "Shankly",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "LM",
+            "RM"
+        ]
+    },
+    {
+        "id": "disanto-mm",
+        "name": "Franco Di Santo",
+        "cardName": "Di Santo",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pizarro-mm",
+        "name": "Claudio Pizarro",
+        "cardName": "Pizarro",
+        "nationality": "Peru",
+        "flag": "🇵🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "https://cdn-img.staticzz.com/img/planteis/new/22/54/1592254_claudio_pizarro_20240627201413.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "vanbuyten-mm",
+        "name": "Daniel Van Buyten",
+        "cardName": "Van Buyten",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pedersen-mm",
+        "name": "Morten Gamst Pedersen",
+        "cardName": "Pedersen",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "clemence-icons",
+        "name": "Ray Clemence",
+        "cardName": "Clemence",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "dalglish-icons",
+        "name": "Kenny Dalglish",
+        "cardName": "Dalglish",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 92,
+        "photo": "https://m.media-amazon.com/images/M/MV5BYWM1NTgyMWUtZmVkYS00OTE2LWFmZjctMTA3ZjRiZmFjYWU1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "jtaese-mm",
+        "name": "Jong Tae-se",
+        "cardName": "Jong Tae-se",
+        "nationality": "North Korea",
+        "flag": "🇰🇵",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "krul-mm",
+        "name": "Tim Krul",
+        "cardName": "Krul",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "parkjisung-mm",
+        "name": "Park Ji-sung",
+        "cardName": "Park",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "RM",
+            "CM"
+        ]
+    },
+    {
+        "id": "lennon-mm",
+        "name": "Aaron Lennon",
+        "cardName": "Lennon",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "LM"
+        ]
+    },
+    {
+        "id": "ulloa-mm",
+        "name": "Leonardo Ulloa",
+        "cardName": "Ulloa",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "wesmorgan-mm",
+        "name": "Wes Morgan",
+        "cardName": "Morgan",
+        "nationality": "Jamaica",
+        "flag": "🇯🇲",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "lferdinand-mm",
+        "name": "Les Ferdinand",
+        "cardName": "Ferdinand",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "aimar-mm",
+        "name": "Pablo Aimar",
+        "cardName": "Aimar",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "CF"
+        ]
+    },
+    {
+        "id": "riquelme-mm",
+        "name": "Juan Román Riquelme",
+        "cardName": "Riquelme",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "scaloni-mm",
+        "name": "Lionel Scaloni",
+        "cardName": "Scaloni",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "RM"
+        ]
+    },
+    {
+        "id": "pauleta-mm",
+        "name": "Pedro Pauleta",
+        "cardName": "Pauleta",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "makaay-mm",
+        "name": "Roy Makaay",
+        "cardName": "Makaay",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "carvalho-mm",
+        "name": "Ricardo Carvalho",
+        "cardName": "Carvalho",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "quaresma-mm",
+        "name": "Ricardo Quaresma",
+        "cardName": "Quaresma",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RW",
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "LW"
+        ]
+    },
+    {
+        "id": "c-alberto-mm",
+        "name": "Carlos Alberto",
+        "cardName": "Carlos Alberto",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "CB"
+        ]
+    },
+    {
+        "id": "vitorbaia-mm",
+        "name": "Vítor Baía",
+        "cardName": "Baía",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "madjer-mm",
+        "name": "Rabah Madjer",
+        "cardName": "Madjer",
+        "nationality": "Algeria",
+        "flag": "🇩🇿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 87,
+        "photo": "https://www.iffhs.com/images/legend/15/avatar.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gervinho-mm",
+        "name": "Gervinho",
+        "cardName": "Gervinho",
+        "nationality": "Ivory Coast",
+        "flag": "🇨🇮",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LW",
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm",
+        "altPositions": [
+            "RW",
+            "LM"
+        ]
+    },
+    {
+        "id": "lopetegui-mm",
+        "name": "Julen Lopetegui",
+        "cardName": "Lopetegui",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kempes-icons",
+        "name": "Mario Kempes",
+        "cardName": "Kempes",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "icons",
+        "altPositions": [
+            "CF"
+        ]
+    },
+    {
+        "id": "mendieta-icons",
+        "name": "Gaizka Mendieta",
+        "cardName": "Mendieta",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 91,
+        "photo": "https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/545_mendieta.jpg",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "endo-wc26",
+        "name": "Wataru Endo",
+        "cardName": "Endo",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "WC26",
+        "club": "Japan",
+        "clubBadge": "🇯🇵",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 81,
+        "photo": "https://platform.liverpooloffside.sbnation.com/wp-content/uploads/sites/99/2026/06/gettyimages-2279044229.jpg?quality=90&strip=all&crop=0.0068889501240008%2C0%2C99.986222099752%2C100&w=2400",
+        "cardTheme": "worldcup26"
+    },
+    {
+        "id": "brobbey-ajax-s26",
+        "name": "Brian Brobbey",
+        "cardName": "Brobbey",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "Eredivisie",
+        "club": "Ajax",
+        "position": "ST",
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q3qz441762198721.png",
+        "cardTheme": "standard",
+        "clubBadge": "⚪🔴⚪"
+    },
+    {
+        "id": "jimenez-bournemouth-s26",
+        "name": "Alex Jimenez",
+        "cardName": "A. Jimenez",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Premier League",
+        "club": "Bournemouth",
+        "clubBadge": "🍒",
+        "position": "RB",
+        "altPositions": [
+            "LB",
+            "LWB",
+            "RWB"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/es940n1757018254.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "hjulmand-sporting-s26",
+        "name": "Morten Hjulmand",
+        "cardName": "Hjulmand",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5tz51l1762290678.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "goncalves-sporting-s26",
+        "name": "Pedro Gonçalves",
+        "cardName": "P. Gonçalves",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CAM",
+        "altPositions": [
+            "LW",
+            "RW",
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uik0vy1762290994.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "trincao-sporting-s26",
+        "name": "Francisco Trincão",
+        "cardName": "Trincão",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "RW",
+        "altPositions": [
+            "RM",
+            "LW"
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7xcl5d1762290739.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "inacio-sporting-s26",
+        "name": "Gonçalo Inácio",
+        "cardName": "G. Inácio",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m00erp1762291029.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "diomande-sporting-s26",
+        "name": "Ousmane Diomande",
+        "cardName": "Diomande",
+        "nationality": "Ivory Coast",
+        "flag": "🇨🇮",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5y2hc11762291059.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "ruisilva-sporting-s26",
+        "name": "Rui Silva",
+        "cardName": "Rui Silva",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/30bu6h1762291097.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "debast-sporting-s26",
+        "name": "Zeno Debast",
+        "cardName": "Debast",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xlp81e1716408284.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "morita-sporting-s26",
+        "name": "Hidemasa Morita",
+        "cardName": "Morita",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/79kep21668618622.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "braganca-sporting-s26",
+        "name": "Daniel Bragança",
+        "cardName": "Bragança",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/skv69a1724522410.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "nsantos-sporting-s26",
+        "name": "Nuno Santos",
+        "cardName": "N. Santos",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "LWB",
+        "altPositions": [
+            "LB",
+            "LM",
+            "LW"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "catamo-sporting-s26",
+        "name": "Geny Catamo",
+        "cardName": "Geny",
+        "nationality": "Mozambique",
+        "flag": "🇲🇿",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "RWB",
+        "altPositions": [
+            "RM",
+            "RW",
+            "LWB"
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4wdjtl1762290471.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "quenda-sporting-s26",
+        "name": "Geovany Quenda",
+        "cardName": "Quenda",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "RWB",
+        "altPositions": [
+            "RM",
+            "RW"
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/05lcli1762290334.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "equaresma-sporting-s26",
+        "name": "Eduardo Quaresma",
+        "cardName": "E. Quaresma",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cj5ovd1680034400.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "fresneda-sporting-s26",
+        "name": "Iván Fresneda",
+        "cardName": "Fresneda",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "RB",
+        "altPositions": [
+            "RWB",
+            "LB"
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3gi2zl1762290765.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "ioannidis-sporting-s26",
+        "name": "Fotis Ioannidis",
+        "cardName": "Ioannidis",
+        "nationality": "Greece",
+        "flag": "🇬🇷",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x1wub91762290869.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "asmith-mm-leeds",
+        "name": "Alan Smith",
+        "cardName": "Smith",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CM",
+            "RM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "iharte-mm-leeds",
+        "name": "Ian Harte",
+        "cardName": "Harte",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LWB"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mcallister-mm-leeds",
+        "name": "Gary McAllister",
+        "cardName": "McAllister",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "LM",
+            "RM"
+        ],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kphillips-mm-sunderland",
+        "name": "Kevin Phillips",
+        "cardName": "Phillips",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "nquinn-mm-sunderland",
+        "name": "Niall Quinn",
+        "cardName": "Quinn",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "defoe-mm-sunderland",
+        "name": "Jermain Defoe",
+        "cardName": "Defoe",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "tsorensen-mm-sunderland",
+        "name": "Thomas Sørensen",
+        "cardName": "Sørensen",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
         "id": "viduka-86-mm",
         "name": "Mark Viduka",
         "cardName": "Viduka",
@@ -37471,9 +38448,160 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 86,
-        "cardTheme": "mm",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gyokeres-sporting-s26",
+        "name": "Viktor Gyökeres",
+        "cardName": "Gyökeres",
+        "nationality": "Sweden",
+        "flag": "🇸🇪",
+        "league": "Liga Portugal",
+        "club": "Sporting CP",
+        "clubBadge": "🦁",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ubnx241769330610.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "yeboah-mm-leeds",
+        "name": "Tony Yeboah",
+        "cardName": "Yeboah",
+        "nationality": "Ghana",
+        "flag": "🇬🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "radebe-mm-leeds",
+        "name": "Lucas Radebe",
+        "cardName": "Radebe",
+        "nationality": "South Africa",
+        "flag": "🇿🇦",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gkelly-mm-leeds",
+        "name": "Gary Kelly",
+        "cardName": "Kelly",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "hurley-mm-sunderland",
+        "name": "Charlie Hurley",
+        "cardName": "Hurley",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "bkerr-mm-sunderland",
+        "name": "Bobby Kerr",
+        "cardName": "Kerr",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kball-mm-sunderland",
+        "name": "Kevin Ball",
+        "cardName": "Ball",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CB",
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "jarca-mm-sunderland",
+        "name": "Julio Arca",
+        "cardName": "Arca",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LM",
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "growell-mm-sunderland",
+        "name": "Gary Rowell",
+        "cardName": "Rowell",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "RM",
+            "LM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
     },
     {
         "id": "ochoa-wc26",
@@ -39534,14 +40662,15 @@ const DEFAULT_PLAYERS = [
     {
         "id": "arobinson-wc26",
         "name": "Antonee Robinson",
-        "cardName": "Robinson",
+        "cardName": "A. Robinson",
         "nationality": "United States",
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
         "clubBadge": "🇺🇸",
         "position": "LB",
-        "rating": 78,
+        "altPositions": [],
+        "rating": 85,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39659,166 +40788,6 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "LM"
         ]
-    },
-    {
-        "id": "lawrence-mm",
-        "name": "Tommy Lawrence",
-        "cardName": "Lawrence",
-        "nationality": "Scotland",
-        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "GK",
-        "rating": 84,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "defour-mm",
-        "name": "Steven Defour",
-        "cardName": "Defour",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CM",
-        "rating": 82,
-        "photo": "",
-        "cardTheme": "mm",
-        "altPositions": ["CDM"]
-    },
-    {
-        "id": "cha-bum-kun-mm",
-        "name": "Cha Bum-kun",
-        "cardName": "Cha Bum-kun",
-        "nationality": "South Korea",
-        "flag": "🇰🇷",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "ST",
-        "rating": 88,
-        "photo": "",
-        "cardTheme": "mm",
-        "altPositions": ["CF"]
-    },
-    {
-        "id": "nakata-mm",
-        "name": "Hidetoshi Nakata",
-        "cardName": "Nakata",
-        "nationality": "Japan",
-        "flag": "🇯🇵",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CAM",
-        "rating": 88,
-        "photo": "",
-        "cardTheme": "mm",
-        "altPositions": ["CM"]
-    },
-    {
-        "id": "shankly-mm",
-        "name": "Bill Shankly",
-        "cardName": "Shankly",
-        "nationality": "Scotland",
-        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CM",
-        "rating": 83,
-        "photo": "",
-        "cardTheme": "mm",
-        "altPositions": ["LM", "RM"]
-    },
-    {
-        "id": "disanto-mm",
-        "name": "Franco Di Santo",
-        "cardName": "Di Santo",
-        "nationality": "Argentina",
-        "flag": "🇦🇷",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "ST",
-        "rating": 80,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "pizarro-mm",
-        "name": "Claudio Pizarro",
-        "cardName": "Pizarro",
-        "nationality": "Peru",
-        "flag": "🇵🇪",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "ST",
-        "rating": 85,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "vanbuyten-mm",
-        "name": "Daniel Van Buyten",
-        "cardName": "Van Buyten",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CB",
-        "rating": 84,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "pedersen-mm",
-        "name": "Morten Gamst Pedersen",
-        "cardName": "Pedersen",
-        "nationality": "Norway",
-        "flag": "🇳🇴",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "LM",
-        "rating": 85,
-        "photo": "",
-        "cardTheme": "mm",
-        "altPositions": ["LW"]
-    },
-    {
-        "id": "clemence-icons",
-        "name": "Ray Clemence",
-        "cardName": "Clemence",
-        "nationality": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "GK",
-        "rating": 90,
-        "photo": "",
-        "cardTheme": "icons"
-    },
-    {
-        "id": "dalglish-icons",
-        "name": "Kenny Dalglish",
-        "cardName": "Dalglish",
-        "nationality": "Scotland",
-        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "ST",
-        "rating": 92,
-        "photo": "",
-        "cardTheme": "icons",
-        "altPositions": ["CF"]
     }
 ];
 
@@ -39826,27 +40795,27 @@ const FORMATIONS = {
     "4-3-3": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LB": {
-            "left": "13%",
-            "bottom": "25%"
+            "left": "10%",
+            "bottom": "28%"
         },
         "LCB": {
-            "left": "36%",
-            "bottom": "19%"
+            "left": "34%",
+            "bottom": "24%"
         },
         "RCB": {
-            "left": "64%",
-            "bottom": "19%"
+            "left": "66%",
+            "bottom": "24%"
         },
         "RB": {
-            "left": "87%",
-            "bottom": "25%"
+            "left": "90%",
+            "bottom": "28%"
         },
         "LCM": {
             "left": "25%",
-            "bottom": "48%"
+            "bottom": "50%"
         },
         "CM": {
             "left": "50%",
@@ -39854,663 +40823,801 @@ const FORMATIONS = {
         },
         "RCM": {
             "left": "75%",
-            "bottom": "48%"
+            "bottom": "50%"
         },
         "LW": {
-            "left": "20%",
-            "bottom": "73%"
+            "left": "15%",
+            "bottom": "72%"
         },
         "ST": {
             "left": "50%",
-            "bottom": "77%"
+            "bottom": "80%"
         },
         "RW": {
-            "left": "80%",
-            "bottom": "73%"
+            "left": "85%",
+            "bottom": "72%"
         }
     },
     "4-3-3 Holding": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LB": {
-            "left": "13%",
-            "bottom": "25%"
+            "left": "10%",
+            "bottom": "28%"
         },
         "LCB": {
-            "left": "36%",
-            "bottom": "19%"
+            "left": "34%",
+            "bottom": "24%"
         },
         "RCB": {
-            "left": "64%",
-            "bottom": "19%"
+            "left": "66%",
+            "bottom": "24%"
         },
         "RB": {
-            "left": "87%",
-            "bottom": "25%"
+            "left": "90%",
+            "bottom": "28%"
         },
         "CDM": {
             "left": "50%",
-            "bottom": "38%"
+            "bottom": "40%"
         },
         "LCM": {
-            "left": "28%",
-            "bottom": "53%"
+            "left": "25%",
+            "bottom": "55%"
         },
         "RCM": {
-            "left": "72%",
-            "bottom": "53%"
+            "left": "75%",
+            "bottom": "55%"
         },
         "LW": {
-            "left": "20%",
-            "bottom": "73%"
+            "left": "15%",
+            "bottom": "72%"
         },
         "ST": {
             "left": "50%",
-            "bottom": "77%"
+            "bottom": "80%"
         },
         "RW": {
-            "left": "80%",
-            "bottom": "73%"
-        }
-    },
-    "4-4-2": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LB": {
-            "left": "13%",
-            "bottom": "25%"
-        },
-        "LCB": {
-            "left": "36%",
-            "bottom": "19%"
-        },
-        "RCB": {
-            "left": "64%",
-            "bottom": "19%"
-        },
-        "RB": {
-            "left": "87%",
-            "bottom": "25%"
-        },
-        "LM": {
-            "left": "15%",
-            "bottom": "48%"
-        },
-        "LCM": {
-            "left": "38%",
-            "bottom": "45%"
-        },
-        "RCM": {
-            "left": "62%",
-            "bottom": "45%"
-        },
-        "RM": {
             "left": "85%",
-            "bottom": "48%"
-        },
-        "LST": {
-            "left": "35%",
-            "bottom": "75%"
-        },
-        "RST": {
-            "left": "65%",
-            "bottom": "75%"
-        }
-    },
-    "4-4-2 Diamond": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LB": {
-            "left": "13%",
-            "bottom": "25%"
-        },
-        "LCB": {
-            "left": "36%",
-            "bottom": "19%"
-        },
-        "RCB": {
-            "left": "64%",
-            "bottom": "19%"
-        },
-        "RB": {
-            "left": "87%",
-            "bottom": "25%"
-        },
-        "CDM": {
-            "left": "50%",
-            "bottom": "36%"
-        },
-        "LM": {
-            "left": "20%",
-            "bottom": "48%"
-        },
-        "RM": {
-            "left": "80%",
-            "bottom": "48%"
-        },
-        "CAM": {
-            "left": "50%",
-            "bottom": "60%"
-        },
-        "ST1": {
-            "left": "35%",
-            "bottom": "77%"
-        },
-        "ST2": {
-            "left": "65%",
-            "bottom": "77%"
-        }
-    },
-    "4-2-3-1": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LB": {
-            "left": "13%",
-            "bottom": "25%"
-        },
-        "LCB": {
-            "left": "36%",
-            "bottom": "19%"
-        },
-        "RCB": {
-            "left": "64%",
-            "bottom": "19%"
-        },
-        "RB": {
-            "left": "87%",
-            "bottom": "25%"
-        },
-        "LDM": {
-            "left": "35%",
-            "bottom": "38%"
-        },
-        "RDM": {
-            "left": "65%",
-            "bottom": "38%"
-        },
-        "LM": {
-            "left": "15%",
-            "bottom": "56%"
-        },
-        "CAM": {
-            "left": "50%",
-            "bottom": "59%"
-        },
-        "RM": {
-            "left": "85%",
-            "bottom": "56%"
-        },
-        "ST": {
-            "left": "50%",
-            "bottom": "77%"
-        }
-    },
-    "3-5-2": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LCB": {
-            "left": "24%",
-            "bottom": "25%"
-        },
-        "CB": {
-            "left": "50%",
-            "bottom": "25%"
-        },
-        "RCB": {
-            "left": "76%",
-            "bottom": "25%"
-        },
-        "LDM": {
-            "left": "35%",
-            "bottom": "39%"
-        },
-        "RDM": {
-            "left": "65%",
-            "bottom": "39%"
-        },
-        "LM": {
-            "left": "15%",
-            "bottom": "54%"
-        },
-        "CAM": {
-            "left": "50%",
-            "bottom": "58%"
-        },
-        "RM": {
-            "left": "85%",
-            "bottom": "54%"
-        },
-        "LST": {
-            "left": "35%",
-            "bottom": "77%"
-        },
-        "RST": {
-            "left": "65%",
-            "bottom": "77%"
-        }
-    },
-    "3-4-2-1": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LCB": {
-            "left": "24%",
-            "bottom": "25%"
-        },
-        "CB": {
-            "left": "50%",
-            "bottom": "25%"
-        },
-        "RCB": {
-            "left": "76%",
-            "bottom": "25%"
-        },
-        "LM": {
-            "left": "15%",
-            "bottom": "44%"
-        },
-        "LCM": {
-            "left": "38%",
-            "bottom": "42%"
-        },
-        "RCM": {
-            "left": "62%",
-            "bottom": "42%"
-        },
-        "RM": {
-            "left": "85%",
-            "bottom": "44%"
-        },
-        "CF1": {
-            "left": "33%",
-            "bottom": "63%"
-        },
-        "CF2": {
-            "left": "67%",
-            "bottom": "63%"
-        },
-        "ST": {
-            "left": "50%",
-            "bottom": "77%"
-        }
-    },
-    "3-5-1-1": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LCB": {
-            "left": "24%",
-            "bottom": "25%"
-        },
-        "CB": {
-            "left": "50%",
-            "bottom": "25%"
-        },
-        "RCB": {
-            "left": "76%",
-            "bottom": "25%"
-        },
-        "LM": {
-            "left": "15%",
-            "bottom": "44%"
-        },
-        "LCM": {
-            "left": "33%",
-            "bottom": "44%"
-        },
-        "CDM": {
-            "left": "50%",
-            "bottom": "36%"
-        },
-        "RCM": {
-            "left": "67%",
-            "bottom": "44%"
-        },
-        "RM": {
-            "left": "85%",
-            "bottom": "44%"
-        },
-        "CF": {
-            "left": "50%",
-            "bottom": "60%"
-        },
-        "ST": {
-            "left": "50%",
-            "bottom": "77%"
+            "bottom": "72%"
         }
     },
     "4-3-2-1": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LB": {
-            "left": "13%",
-            "bottom": "25%"
+            "left": "10%",
+            "bottom": "28%"
         },
         "LCB": {
-            "left": "36%",
-            "bottom": "19%"
+            "left": "34%",
+            "bottom": "24%"
         },
         "RCB": {
-            "left": "64%",
-            "bottom": "19%"
+            "left": "66%",
+            "bottom": "24%"
         },
         "RB": {
-            "left": "87%",
-            "bottom": "25%"
+            "left": "90%",
+            "bottom": "28%"
         },
         "LCM": {
             "left": "25%",
-            "bottom": "45%"
+            "bottom": "48%"
         },
         "CM": {
             "left": "50%",
-            "bottom": "42%"
+            "bottom": "45%"
         },
         "RCM": {
             "left": "75%",
-            "bottom": "45%"
+            "bottom": "48%"
         },
         "CAM1": {
-            "left": "35%",
-            "bottom": "63%"
+            "left": "30%",
+            "bottom": "64%"
         },
         "CAM2": {
-            "left": "65%",
-            "bottom": "63%"
+            "left": "70%",
+            "bottom": "64%"
         },
         "ST": {
             "left": "50%",
+            "bottom": "80%"
+        }
+    },
+    "4-4-2": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "LM": {
+            "left": "12%",
+            "bottom": "50%"
+        },
+        "LCM": {
+            "left": "38%",
+            "bottom": "46%"
+        },
+        "RCM": {
+            "left": "62%",
+            "bottom": "46%"
+        },
+        "RM": {
+            "left": "88%",
+            "bottom": "50%"
+        },
+        "LST": {
+            "left": "33%",
+            "bottom": "78%"
+        },
+        "RST": {
+            "left": "67%",
             "bottom": "78%"
         }
     },
-    "3-4-3": {
+    "4-4-2 Diamond": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
         },
         "LCB": {
-            "left": "24%",
+            "left": "34%",
             "bottom": "24%"
-        },
-        "CB": {
-            "left": "50%",
-            "bottom": "22%"
         },
         "RCB": {
-            "left": "76%",
+            "left": "66%",
             "bottom": "24%"
         },
-        "LM": {
-            "left": "13%",
-            "bottom": "48%"
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
         },
-        "LCM": {
-            "left": "36%",
-            "bottom": "41%"
-        },
-        "RCM": {
-            "left": "64%",
-            "bottom": "41%"
-        },
-        "RM": {
-            "left": "87%",
-            "bottom": "48%"
-        },
-        "LW": {
-            "left": "20%",
-            "bottom": "73%"
-        },
-        "ST": {
+        "CDM": {
             "left": "50%",
-            "bottom": "77%"
-        },
-        "RW": {
-            "left": "80%",
-            "bottom": "73%"
-        }
-    },
-    "3-4-3 Holding": {
-        "GK": {
-            "left": "50%",
-            "bottom": "7%"
-        },
-        "LCB": {
-            "left": "24%",
-            "bottom": "24%"
-        },
-        "CB": {
-            "left": "50%",
-            "bottom": "22%"
-        },
-        "RCB": {
-            "left": "76%",
-            "bottom": "24%"
-        },
-        "LM": {
-            "left": "13%",
-            "bottom": "48%"
-        },
-        "LDM": {
-            "left": "36%",
             "bottom": "38%"
         },
-        "RDM": {
-            "left": "64%",
-            "bottom": "38%"
+        "LM": {
+            "left": "15%",
+            "bottom": "52%"
         },
         "RM": {
-            "left": "87%",
-            "bottom": "48%"
+            "left": "85%",
+            "bottom": "52%"
         },
-        "LW": {
-            "left": "20%",
-            "bottom": "73%"
-        },
-        "ST": {
+        "CAM": {
             "left": "50%",
-            "bottom": "77%"
+            "bottom": "64%"
         },
-        "RW": {
-            "left": "80%",
-            "bottom": "73%"
+        "ST1": {
+            "left": "33%",
+            "bottom": "80%"
+        },
+        "ST2": {
+            "left": "67%",
+            "bottom": "80%"
         }
     },
     "4-4-2 Narrow": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LB": {
-            "left": "13%",
-            "bottom": "25%"
+            "left": "10%",
+            "bottom": "28%"
         },
         "LCB": {
-            "left": "36%",
-            "bottom": "19%"
+            "left": "34%",
+            "bottom": "24%"
         },
         "RCB": {
-            "left": "64%",
-            "bottom": "19%"
+            "left": "66%",
+            "bottom": "24%"
         },
         "RB": {
-            "left": "87%",
-            "bottom": "25%"
+            "left": "90%",
+            "bottom": "28%"
         },
-        "CDM": {
-            "left": "50%",
-            "bottom": "36%"
+        "LDM": {
+            "left": "35%",
+            "bottom": "42%"
+        },
+        "RDM": {
+            "left": "65%",
+            "bottom": "42%"
         },
         "LCM": {
-            "left": "25%",
-            "bottom": "48%"
+            "left": "30%",
+            "bottom": "56%"
         },
         "RCM": {
-            "left": "75%",
-            "bottom": "48%"
+            "left": "70%",
+            "bottom": "56%"
+        },
+        "LST": {
+            "left": "33%",
+            "bottom": "78%"
+        },
+        "RST": {
+            "left": "67%",
+            "bottom": "78%"
+        }
+    },
+    "4-2-3-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "LDM": {
+            "left": "33%",
+            "bottom": "42%"
+        },
+        "RDM": {
+            "left": "67%",
+            "bottom": "42%"
+        },
+        "LM": {
+            "left": "12%",
+            "bottom": "60%"
         },
         "CAM": {
             "left": "50%",
+            "bottom": "62%"
+        },
+        "RM": {
+            "left": "88%",
             "bottom": "60%"
         },
-        "LST": {
-            "left": "35%",
-            "bottom": "77%"
-        },
-        "RST": {
-            "left": "65%",
-            "bottom": "77%"
+        "ST": {
+            "left": "50%",
+            "bottom": "80%"
         }
     },
     "4-1-3-2": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LB": {
-            "left": "13%",
-            "bottom": "25%"
+            "left": "10%",
+            "bottom": "28%"
         },
         "LCB": {
-            "left": "36%",
-            "bottom": "19%"
+            "left": "34%",
+            "bottom": "24%"
         },
         "RCB": {
-            "left": "64%",
-            "bottom": "19%"
+            "left": "66%",
+            "bottom": "24%"
         },
         "RB": {
-            "left": "87%",
-            "bottom": "25%"
+            "left": "90%",
+            "bottom": "28%"
         },
         "CDM": {
             "left": "50%",
-            "bottom": "36%"
+            "bottom": "38%"
         },
         "LM": {
-            "left": "18%",
-            "bottom": "52%"
+            "left": "15%",
+            "bottom": "54%"
         },
         "CM": {
             "left": "50%",
-            "bottom": "50%"
+            "bottom": "56%"
         },
         "RM": {
-            "left": "82%",
-            "bottom": "52%"
+            "left": "85%",
+            "bottom": "54%"
         },
         "LST": {
-            "left": "35%",
-            "bottom": "76%"
+            "left": "33%",
+            "bottom": "80%"
         },
         "RST": {
-            "left": "65%",
-            "bottom": "76%"
+            "left": "67%",
+            "bottom": "80%"
+        }
+    },
+    "3-4-3": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LCB": {
+            "left": "20%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "80%",
+            "bottom": "24%"
+        },
+        "LM": {
+            "left": "10%",
+            "bottom": "48%"
+        },
+        "LCM": {
+            "left": "33%",
+            "bottom": "46%"
+        },
+        "RCM": {
+            "left": "67%",
+            "bottom": "46%"
+        },
+        "RM": {
+            "left": "90%",
+            "bottom": "48%"
+        },
+        "LW": {
+            "left": "15%",
+            "bottom": "72%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "80%"
+        },
+        "RW": {
+            "left": "85%",
+            "bottom": "72%"
+        }
+    },
+    "3-4-3 Holding": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LCB": {
+            "left": "20%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "80%",
+            "bottom": "24%"
+        },
+        "LDM": {
+            "left": "33%",
+            "bottom": "42%"
+        },
+        "RDM": {
+            "left": "67%",
+            "bottom": "42%"
+        },
+        "LM": {
+            "left": "10%",
+            "bottom": "58%"
+        },
+        "RM": {
+            "left": "90%",
+            "bottom": "58%"
+        },
+        "LW": {
+            "left": "15%",
+            "bottom": "72%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "80%"
+        },
+        "RW": {
+            "left": "85%",
+            "bottom": "72%"
+        }
+    },
+    "3-5-2": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LCB": {
+            "left": "20%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "80%",
+            "bottom": "24%"
+        },
+        "LDM": {
+            "left": "33%",
+            "bottom": "42%"
+        },
+        "RDM": {
+            "left": "67%",
+            "bottom": "42%"
+        },
+        "LM": {
+            "left": "10%",
+            "bottom": "56%"
+        },
+        "CAM": {
+            "left": "50%",
+            "bottom": "62%"
+        },
+        "RM": {
+            "left": "90%",
+            "bottom": "56%"
+        },
+        "LST": {
+            "left": "33%",
+            "bottom": "80%"
+        },
+        "RST": {
+            "left": "67%",
+            "bottom": "80%"
+        }
+    },
+    "3-4-2-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LCB": {
+            "left": "20%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "80%",
+            "bottom": "24%"
+        },
+        "LM": {
+            "left": "10%",
+            "bottom": "48%"
+        },
+        "LCM": {
+            "left": "33%",
+            "bottom": "46%"
+        },
+        "RCM": {
+            "left": "67%",
+            "bottom": "46%"
+        },
+        "RM": {
+            "left": "90%",
+            "bottom": "48%"
+        },
+        "CF1": {
+            "left": "30%",
+            "bottom": "66%"
+        },
+        "CF2": {
+            "left": "70%",
+            "bottom": "66%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "82%"
+        }
+    },
+    "3-5-1-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LCB": {
+            "left": "20%",
+            "bottom": "24%"
+        },
+        "CB": {
+            "left": "50%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "80%",
+            "bottom": "24%"
+        },
+        "LM": {
+            "left": "10%",
+            "bottom": "50%"
+        },
+        "LCM": {
+            "left": "32%",
+            "bottom": "46%"
+        },
+        "CDM": {
+            "left": "50%",
+            "bottom": "38%"
+        },
+        "RCM": {
+            "left": "68%",
+            "bottom": "46%"
+        },
+        "RM": {
+            "left": "90%",
+            "bottom": "50%"
+        },
+        "CF": {
+            "left": "50%",
+            "bottom": "64%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "82%"
         }
     },
     "5-3-2": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LWB": {
-            "left": "12%",
-            "bottom": "28%"
+            "left": "10%",
+            "bottom": "30%"
         },
         "LCB": {
             "left": "30%",
-            "bottom": "22%"
+            "bottom": "24%"
         },
         "CB": {
             "left": "50%",
-            "bottom": "22%"
+            "bottom": "24%"
         },
         "RCB": {
             "left": "70%",
-            "bottom": "22%"
+            "bottom": "24%"
         },
         "RWB": {
-            "left": "88%",
-            "bottom": "28%"
+            "left": "90%",
+            "bottom": "30%"
         },
         "LCM": {
-            "left": "28%",
-            "bottom": "48%"
+            "left": "25%",
+            "bottom": "50%"
         },
         "CM": {
             "left": "50%",
-            "bottom": "45%"
+            "bottom": "46%"
         },
         "RCM": {
-            "left": "72%",
-            "bottom": "48%"
+            "left": "75%",
+            "bottom": "50%"
         },
         "LST": {
-            "left": "35%",
-            "bottom": "76%"
+            "left": "33%",
+            "bottom": "78%"
         },
         "RST": {
-            "left": "65%",
-            "bottom": "76%"
+            "left": "67%",
+            "bottom": "78%"
         }
     },
     "5-4-1": {
         "GK": {
             "left": "50%",
-            "bottom": "7%"
+            "bottom": "5%"
         },
         "LWB": {
-            "left": "12%",
-            "bottom": "28%"
+            "left": "10%",
+            "bottom": "30%"
         },
         "LCB": {
             "left": "30%",
-            "bottom": "22%"
+            "bottom": "24%"
         },
         "CB": {
             "left": "50%",
-            "bottom": "22%"
+            "bottom": "24%"
         },
         "RCB": {
             "left": "70%",
-            "bottom": "22%"
+            "bottom": "24%"
         },
         "RWB": {
-            "left": "88%",
-            "bottom": "28%"
+            "left": "90%",
+            "bottom": "30%"
         },
         "LM": {
-            "left": "15%",
-            "bottom": "48%"
+            "left": "12%",
+            "bottom": "52%"
         },
         "LCM": {
-            "left": "38%",
-            "bottom": "45%"
+            "left": "36%",
+            "bottom": "48%"
         },
         "RCM": {
-            "left": "62%",
-            "bottom": "45%"
+            "left": "64%",
+            "bottom": "48%"
         },
         "RM": {
-            "left": "85%",
-            "bottom": "48%"
+            "left": "88%",
+            "bottom": "52%"
         },
         "ST": {
             "left": "50%",
-            "bottom": "77%"
+            "bottom": "80%"
+        }
+    },
+    "4-4-1-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "LM": {
+            "left": "12%",
+            "bottom": "50%"
+        },
+        "LCM": {
+            "left": "38%",
+            "bottom": "46%"
+        },
+        "RCM": {
+            "left": "62%",
+            "bottom": "46%"
+        },
+        "RM": {
+            "left": "88%",
+            "bottom": "50%"
+        },
+        "CF": {
+            "left": "50%",
+            "bottom": "66%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "82%"
+        }
+    },
+    "4-1-4-1": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "CDM": {
+            "left": "50%",
+            "bottom": "40%"
+        },
+        "LM": {
+            "left": "12%",
+            "bottom": "58%"
+        },
+        "LCM": {
+            "left": "35%",
+            "bottom": "55%"
+        },
+        "RCM": {
+            "left": "65%",
+            "bottom": "55%"
+        },
+        "RM": {
+            "left": "88%",
+            "bottom": "58%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "80%"
+        }
+    },
+    "4-3-3 Double Pivot": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "LCDM": {
+            "left": "35%",
+            "bottom": "44%"
+        },
+        "RCDM": {
+            "left": "65%",
+            "bottom": "44%"
+        },
+        "CAM": {
+            "left": "50%",
+            "bottom": "60%"
+        },
+        "LW": {
+            "left": "15%",
+            "bottom": "74%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "82%"
+        },
+        "RW": {
+            "left": "85%",
+            "bottom": "74%"
         }
     }
 };

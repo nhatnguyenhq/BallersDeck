@@ -514,6 +514,29 @@
             margin: 0 0.25rem;
         }
 
+        .filter-count-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            border-radius: 8px;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: none;
+            align-items: center;
+            gap: 0.3rem;
+            margin-left: auto;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .filter-count-box span {
+            color: #ffd700;
+            font-weight: 700;
+        }
+        .filter-count-box + .filter-reset-btn {
+            margin-left: 0.5rem;
+        }
+
         .filter-reset-btn {
             background: transparent;
             border: 1px solid var(--border-color);
@@ -2866,6 +2889,10 @@
                         <div class="custom-dropdown-menu" id="sort-dropdown-menu"></div>
                     </div>
 
+                    <div id="filter-count-box" class="filter-count-box">
+                        Tìm thấy: <span id="filter-count-num">0</span> cầu thủ
+                    </div>
+
                     <button class="filter-reset-btn" onclick="resetFilters()" title="Xóa bộ lọc">
                         <i data-lucide="x" style="width:12px;height:12px;"></i> Xóa lọc
                     </button>
@@ -2917,12 +2944,15 @@
                             <select id="formation-select" onchange="changeFormation()">
                                 <option value="4-3-3">4 - 3 - 3</option>
                                 <option value="4-3-3 Holding">4 - 3 - 3 Holding</option>
+                                <option value="4-3-3 Double Pivot">4 - 3 - 3 Double Pivot</option>
                                 <option value="4-3-2-1">4 - 3 - 2 - 1</option>
                                 <option value="4-4-2">4 - 4 - 2</option>
                                 <option value="4-4-2 Diamond">4 - 4 - 2 Diamond</option>
                                 <option value="4-4-2 Narrow">4 - 4 - 2 Narrow</option>
+                                <option value="4-4-1-1">4 - 4 - 1 - 1</option>
                                 <option value="4-2-3-1">4 - 2 - 3 - 1</option>
                                 <option value="4-1-3-2">4 - 1 - 3 - 2</option>
+                                <option value="4-1-4-1">4 - 1 - 4 - 1</option>
                                 <option value="3-4-3">3 - 4 - 3</option>
                                 <option value="3-4-3 Holding">3 - 4 - 3 Holding</option>
                                 <option value="3-5-2">3 - 5 - 2</option>
@@ -3144,7 +3174,7 @@
             if (slotPos === 'LCM' || slotPos === 'RCM' || slotPos === 'CM') {
                 return 'CM';
             }
-            if (slotPos === 'LDM' || slotPos === 'RDM' || slotPos === 'CDM') {
+            if (slotPos === 'LDM' || slotPos === 'RDM' || slotPos === 'CDM' || slotPos === 'LCDM' || slotPos === 'RCDM') {
                 return 'CDM';
             }
             if (slotPos === 'CAM1' || slotPos === 'CAM2') {
@@ -3482,11 +3512,15 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         needsSave = true;
                     }
 
-                    // Clear Premier League league for icons and memoirs in local storage
+                    // Clear league, club, and clubBadge for icons and memoirs in local storage
                     players.forEach(p => {
-                        if ((p.cardTheme === 'icons' || p.cardTheme === 'mm') && p.league === 'Premier League') {
-                            p.league = '';
-                            needsSave = true;
+                        if (p.cardTheme === 'icons' || p.cardTheme === 'mm') {
+                            if (p.league !== '' || p.club !== '' || p.clubBadge !== '') {
+                                p.league = '';
+                                p.club = '';
+                                p.clubBadge = '';
+                                needsSave = true;
+                            }
                         }
                     });
 
@@ -3497,14 +3531,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         hwangLocal.flag = "🇰🇷";
                         needsSave = true;
                     }
-
-                    // Clear league property for all icons and memoirs in local storage
-                    players.forEach(p => {
-                        if ((p.cardTheme === 'icons' || p.cardTheme === 'mm') && p.league !== '') {
-                            p.league = '';
-                            needsSave = true;
-                        }
-                    });
 
                     // Update Le Thuy Hai cardName to Thuy Hai
                     const lethuyhai = players.find(p => p.id === "lethuyhai-vnlegend");
@@ -4348,6 +4374,26 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             } else {
                 const initialBatch = displayedPlayers.slice(0, BATCH_SIZE);
                 grid.innerHTML = initialBatch.map(p => createPlayerCardHTML(p)).join('');
+            }
+
+            // Update filter count box next to "Xóa lọc"
+            const countBox = document.getElementById('filter-count-box');
+            const countNum = document.getElementById('filter-count-num');
+            if (countBox && countNum) {
+                const queryRaw = document.getElementById('search-input').value.toLowerCase().trim();
+                const leagueFilter = document.getElementById('filter-league').value;
+                const clubFilter = document.getElementById('filter-club').value;
+                const nationFilter = document.getElementById('filter-nation').value;
+                const posFilter = document.getElementById('filter-position').value;
+                const themeFilter = document.getElementById('filter-theme').value;
+                const isFilterActive = queryRaw || leagueFilter || clubFilter || nationFilter || posFilter || themeFilter;
+
+                if (isFilterActive) {
+                    countNum.textContent = filtered.length;
+                    countBox.style.display = 'flex';
+                } else {
+                    countBox.style.display = 'none';
+                }
             }
 
             updateChipActiveStates();
