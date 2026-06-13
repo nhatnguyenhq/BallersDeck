@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BallersDeck - Football Card Library</title>
+    <title>BallersDeck v3.1 - Football Card Library</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,7 @@
             
             --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
             --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-            --transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: opacity 0.15s ease, transform 0.15s ease;
             
             /* Card Theme Colors */
             --color-icon-bg: linear-gradient(135deg, #1e1e1e 0%, #111 50%, #000 100%);
@@ -158,7 +158,7 @@
         /* --- Main Layout Sections --- */
         .tab-content {
             display: none;
-            animation: fadeIn 0.4s ease;
+            animation: fadeIn 0.18s ease;
         }
 
         .tab-content.active {
@@ -166,8 +166,8 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* --- CONTROL PANEL (Modern 2-row design) --- */
@@ -704,7 +704,8 @@
             border-radius: 8px;
             position: relative;
             box-shadow: 0 4px 16px rgba(0,0,0,0.55);
-            transition: transform 0.15s ease, box-shadow 0.2s ease;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            will-change: transform;
             overflow: hidden;
             border: 2px solid rgba(255,255,255,0.8);
             background: #1a2030;
@@ -1702,88 +1703,207 @@
             align-items: start;
         }
 
-        /* Football Pitch Styling (Vertical Half Pitch) */
-        .pitch-container {
-            width: 100%;
-            border: 4px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
-            aspect-ratio: 1.6 / 1;
-            max-width: 950px;
-            margin: 0 auto;
-            position: relative;
-            box-shadow: var(--shadow-lg);
-            overflow: visible; /* Allows cards to pop out slightly */
-        }
+
 
         .pitch-bg-wrapper {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             border-radius: 20px;
             overflow: hidden;
-            background: #143819;
-            /* Premium realistic horizontal grass stripes + dramatic stadium lighting vignette starting from left goal */
-            background-image: 
-                radial-gradient(circle at 0% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%),
-                repeating-linear-gradient(0deg, #1b4b23 0px, #1b4b23 45px, #143819 45px, #143819 90px);
-            background-size: 100% 100%, 100% 90px;
+            background: #1a4d22;
+            /* Multi-tone grass mowing stripes: 3 alternating shades, horizontal (left→right) */
+            background-image:
+                /* Stadium floodlight: bright cone from upper-left, fades to dark edges */
+                radial-gradient(ellipse at 15% 50%, rgba(255,255,220,0.13) 0%, rgba(0,0,0,0) 60%),
+                /* Subtle ambient from center right (viewer side) */
+                radial-gradient(ellipse at 95% 50%, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 50%),
+                /* Dark vignette on all edges */
+                radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%),
+                /* Mowing stripes: 3 alternating greens, running horizontally */
+                repeating-linear-gradient(
+                    90deg,
+                    #1e5a27 0px,  #1e5a27 60px,
+                    #1a4d22 60px, #1a4d22 120px,
+                    #1e5a27 120px,#1e5a27 180px,
+                    #1a4d22 180px,#1a4d22 240px
+                );
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
             pointer-events: none;
             z-index: 1;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
         }
 
-        /* Pitch markings for Horizontal Half Pitch */
+        /* Pitch outer border & glow */
+        .pitch-container {
+            width: 100%;
+            border: 3px solid rgba(255, 255, 255, 0.22);
+            border-radius: 24px;
+            aspect-ratio: 1.6 / 1;
+            max-width: 980px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.06),
+                0 8px 40px rgba(0,0,0,0.7),
+                0 0 60px rgba(30,90,40,0.25);
+            overflow: visible;
+        }
+
+        /* Pitch line markings — FIFA proportions for horizontal half-pitch */
+        .pitch-line {
+            position: absolute;
+            pointer-events: none;
+            background: rgba(255,255,255,0.55);
+            box-shadow: 0 0 4px rgba(255,255,255,0.25);
+        }
+
+        /* Halfway (right edge) vertical line */
         .pitch-halfway-line {
             position: absolute;
             top: 0; bottom: 0; right: 0;
             width: 2px;
             height: 100%;
-            background: rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 4px rgba(255,255,255,0.25);
             pointer-events: none;
         }
 
+        /* Center circle on right edge (half visible) */
         .pitch-center-arc {
             position: absolute;
             top: 50%; right: 0;
             transform: translate(50%, -50%);
-            width: 20%;
-            height: 40%;
-            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            width: 18%;
+            height: 36%;
+            border: 2px solid rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 4px rgba(255,255,255,0.25);
             border-radius: 50%;
             pointer-events: none;
         }
 
+        /* Center spot */
+        .pitch-center-spot {
+            position: absolute;
+            top: 50%; right: 0;
+            transform: translate(0, -50%);
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.7);
+            box-shadow: 0 0 4px rgba(255,255,255,0.4);
+            pointer-events: none;
+        }
+
+        /* Penalty box — left side */
         .pitch-penalty-box {
             position: absolute;
             top: 50%; left: 0;
             transform: translateY(-50%);
-            width: 24%;
-            height: 62%;
-            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            width: 23%;
+            height: 60%;
+            border: 2px solid rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 4px rgba(255,255,255,0.25);
             border-left: none;
             pointer-events: none;
         }
 
+        /* Goal area (6-yard box) — left side */
         .pitch-goal-area {
             position: absolute;
             top: 50%; left: 0;
             transform: translateY(-50%);
-            width: 8%;
-            height: 28%;
-            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            width: 7%;
+            height: 26%;
+            border: 2px solid rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 4px rgba(255,255,255,0.25);
             border-left: none;
             pointer-events: none;
         }
 
+        /* Penalty arc */
         .pitch-penalty-arc {
             position: absolute;
-            top: 50%; left: 24%;
-            transform: translate(-50%, -50%);
-            width: 10%;
-            height: 22%;
-            border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+            top: 50%; left: 23%;
+            transform: translateY(-50%);
+            width: 3.5%;
+            height: 18%;
+            border: 2px solid rgba(255, 255, 255, 0.55);
             border-left: none;
-            border-radius: 0 50% 50% 0;
+            border-top: none;
+            border-bottom: none;
+            border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.25));
             pointer-events: none;
+        }
+
+        /* Penalty spot */
+        .pitch-penalty-spot {
+            position: absolute;
+            top: 50%; left: 19%;
+            transform: translate(-50%, -50%);
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.7);
+            box-shadow: 0 0 4px rgba(255,255,255,0.4);
+            pointer-events: none;
+        }
+
+        /* Goal posts — left side (outside pitch, inset slightly) */
+        .pitch-goal {
+            position: absolute;
+            top: 50%; left: -1.4%;
+            transform: translateY(-50%);
+            width: 2%;
+            height: 14%;
+            border: 3px solid rgba(255,255,255,0.9);
+            border-right: none;
+            background: rgba(255,255,255,0.04);
+            box-shadow: -2px 0 8px rgba(0,0,0,0.5), inset 0 0 6px rgba(255,255,255,0.08);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Corner arc — top-left */
+        .pitch-corner-tl, .pitch-corner-bl {
+            position: absolute;
+            left: -1px;
+            width: 2.5%;
+            height: 5%;
+            border: 2px solid rgba(255,255,255,0.45);
+            pointer-events: none;
+        }
+        .pitch-corner-tl {
+            top: -1px;
+            border-top: none;
+            border-left: none;
+            border-radius: 0 0 100% 0;
+        }
+        .pitch-corner-bl {
+            bottom: -1px;
+            border-bottom: none;
+            border-left: none;
+            border-radius: 0 100% 0 0;
+        }
+        /* Right-side corner arcs — only visible on mobile vertical layout */
+        .pitch-corner-tr, .pitch-corner-br {
+            position: absolute;
+            right: -1px;
+            width: 2.5%;
+            height: 5%;
+            border: 2px solid rgba(255,255,255,0.45);
+            pointer-events: none;
+            display: none; /* hidden on desktop */
+        }
+        .pitch-corner-tr {
+            top: -1px;
+            border-top: none;
+            border-right: none;
+            border-radius: 0 0 0 100%;
+        }
+        .pitch-corner-br {
+            bottom: -1px;
+            border-bottom: none;
+            border-right: none;
+            border-radius: 100% 0 0 0;
         }
 
         /* Pitch Player Slot */
@@ -1816,6 +1936,28 @@
         .pitch-slot.drag-invalid .pitch-player-card-container {
             box-shadow: 0 0 15px #ef4444 !important;
             border-radius: 12px;
+        }
+
+        /* Player name label below card — hidden on desktop, shown on mobile */
+        .pitch-slot-label {
+            display: none;
+            margin-top: 3px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            text-align: center;
+            max-width: 72px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.45);
+            padding: 1px 5px;
+            border-radius: 4px;
+            backdrop-filter: blur(2px);
+            pointer-events: none;
         }
 
         .slot-circle {
@@ -1856,26 +1998,26 @@
         .slot-empty-placeholder {
             width: 84px;
             height: 126px;
-            border-radius: 12px;
-            border: 2px dashed rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 2px dashed rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(6px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: var(--transition);
-            color: rgba(255, 255, 255, 0.4);
-            gap: 0.35rem;
-            box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.02), 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+            color: rgba(255, 255, 255, 0.35);
+            gap: 0.3rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.4);
         }
         .slot-empty-placeholder:hover {
-            border-color: var(--accent);
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--accent);
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+            border-color: rgba(16, 185, 129, 0.8);
+            background: rgba(16, 185, 129, 0.12);
+            color: #10b981;
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 0 18px rgba(16, 185, 129, 0.35), 0 6px 20px rgba(0,0,0,0.4);
         }
         .slot-empty-placeholder i {
             width: 20px;
@@ -1894,10 +2036,10 @@
             height: 126px;
             position: relative;
             cursor: pointer;
-            transition: var(--transition);
+            transition: transform 0.15s ease;
         }
         .pitch-player-card-container:hover {
-            transform: translateY(-5px) scale(1.05);
+            transform: translateY(-6px) scale(1.07);
             z-index: 10;
         }
         .pitch-player-card-container .player-card {
@@ -1909,7 +2051,7 @@
             transform: translate(-50%, 0) scale(0.6);
             transform-origin: top center;
             pointer-events: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.65), 0 2px 6px rgba(0,0,0,0.4);
         }
 
         #football-pitch.is-exporting .mini-remove-btn {
@@ -2386,9 +2528,130 @@
                 width: calc(100vw - 2rem) !important;
                 max-width: 280px;
             }
+
+            /* Pitch: switch to vertical on mobile */
+            .pitch-container {
+                aspect-ratio: 9 / 16 !important;
+                max-width: 400px !important;
+                overflow: hidden !important; /* clip edge cards cleanly */
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* Rotate pitch markings 90deg for vertical layout */
+            .pitch-bg-wrapper {
+                background-image:
+                    radial-gradient(ellipse at 50% 10%, rgba(255,255,220,0.13) 0%, rgba(0,0,0,0) 60%),
+                    radial-gradient(ellipse at 50% 95%, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 50%),
+                    radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%),
+                    repeating-linear-gradient(
+                        0deg,
+                        #1e5a27 0px,  #1e5a27 60px,
+                        #1a4d22 60px, #1a4d22 120px,
+                        #1e5a27 120px,#1e5a27 180px,
+                        #1a4d22 180px,#1a4d22 240px
+                    ) !important;
+            }
+
+            /* Vertical pitch: halfway line is horizontal (top border of bottom half) */
+            .pitch-halfway-line {
+                top: 50% !important; bottom: auto !important; left: 0 !important; right: 0 !important;
+                width: 100% !important; height: 2px !important;
+            }
+            /* Center arc: centered on halfway line (horizontal) */
+            .pitch-center-arc {
+                top: 50% !important; left: 50% !important; right: auto !important;
+                transform: translate(-50%, -50%) !important;
+                width: 36% !important; height: 18% !important;
+            }
+            .pitch-center-spot {
+                top: 50% !important; left: 50% !important; right: auto !important;
+                transform: translate(-50%, -50%) !important;
+            }
+            /* Penalty box: bottom of pitch (GK side) */
+            .pitch-penalty-box {
+                bottom: 0 !important; top: auto !important; left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 60% !important; height: 23% !important;
+                border: 2px solid rgba(255,255,255,0.55) !important;
+                border-bottom: none !important;
+                border-top: 2px solid rgba(255,255,255,0.55) !important;
+            }
+            .pitch-goal-area {
+                bottom: 0 !important; top: auto !important; left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 26% !important; height: 7% !important;
+                border: 2px solid rgba(255,255,255,0.55) !important;
+                border-bottom: none !important;
+                border-top: 2px solid rgba(255,255,255,0.55) !important;
+            }
+            .pitch-penalty-arc {
+                bottom: 23% !important; top: auto !important; left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 18% !important; height: 3.5% !important;
+                border: 2px solid rgba(255,255,255,0.55) !important;
+                border-bottom: none !important; border-left: none !important; border-right: none !important;
+                border-top: 2px solid rgba(255,255,255,0.55) !important;
+                border-radius: 50% 50% 0 0 / 100% 100% 0 0 !important;
+                filter: drop-shadow(0 0 2px rgba(255,255,255,0.25)) !important;
+            }
+            .pitch-penalty-spot {
+                bottom: 19% !important; top: auto !important; left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+            /* Goal: bottom edge */
+            .pitch-goal {
+                bottom: -1.4% !important; top: auto !important; left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 14% !important; height: 2% !important;
+                border: 3px solid rgba(255,255,255,0.9) !important;
+                border-bottom: none !important; border-top: 3px solid rgba(255,255,255,0.9) !important;
+                border-left: 3px solid rgba(255,255,255,0.9) !important; border-right: 3px solid rgba(255,255,255,0.9) !important;
+            }
+            /* Corner arcs: rotate for vertical */
+            .pitch-corner-tl { top: -1px !important; left: -1px !important; right: auto !important; bottom: auto !important; width: 5% !important; height: 2.5% !important; border-radius: 0 0 100% 0 !important; border-top: none !important; border-left: none !important; border-bottom: 2px solid rgba(255,255,255,0.45) !important; border-right: 2px solid rgba(255,255,255,0.45) !important; }
+            .pitch-corner-bl { bottom: -1px !important; left: -1px !important; right: auto !important; top: auto !important; width: 5% !important; height: 2.5% !important; border-radius: 0 100% 0 0 !important; border-bottom: none !important; border-left: none !important; border-top: 2px solid rgba(255,255,255,0.45) !important; border-right: 2px solid rgba(255,255,255,0.45) !important; }
+            /* Show right-side corners on vertical pitch */
+            .pitch-corner-tr { display: block !important; top: -1px !important; right: -1px !important; left: auto !important; bottom: auto !important; width: 5% !important; height: 2.5% !important; border-radius: 0 0 0 100% !important; border-top: none !important; border-right: none !important; border-bottom: 2px solid rgba(255,255,255,0.45) !important; border-left: 2px solid rgba(255,255,255,0.45) !important; }
+            .pitch-corner-br { display: block !important; bottom: -1px !important; right: -1px !important; left: auto !important; top: auto !important; width: 5% !important; height: 2.5% !important; border-radius: 100% 0 0 0 !important; border-bottom: none !important; border-right: none !important; border-top: 2px solid rgba(255,255,255,0.45) !important; border-left: 2px solid rgba(255,255,255,0.45) !important; }
+
+            /* === MOBILE VERTICAL PITCH: CARD SIZES (FC Mobile style) === */
+            .slot-empty-placeholder,
+            .pitch-player-card-container {
+                width: 64px !important;
+                height: 96px !important;
+                border-radius: 9px;
+            }
+            .pitch-player-card-container .player-card {
+                transform: translate(-50%, 0) scale(0.457) !important; /* 64/140 */
+            }
+            .slot-empty-placeholder span { font-size: 0.6rem; font-weight: 800; }
+            .slot-empty-placeholder i { width: 16px; height: 16px; }
+
+            /* Name label below card — shown only on mobile vertical */
+            .pitch-slot-label {
+                display: block !important;
+            }
+
+            /* Bigger tap area for remove btn */
+            .mini-remove-btn {
+                width: 20px !important;
+                height: 20px !important;
+                font-size: 0.8rem !important;
+                top: -5px !important;
+                right: -5px !important;
+            }
+
+            /* Pitch slot: shift translate so card+label center at the coordinate */
+            .pitch-slot {
+                transform: translate(-50%, -40%) !important;
+            }
         }
 
-        @media (max-width: 480px) {
+        /* @media (max-width: 480px) portrait card overrides are DISABLED on mobile vertical
+           to prevent shrinking the already-optimized 64px cards.
+           Only apply small cards in landscape mode (handled by landscape block below) */
+        @media (max-width: 480px) and (orientation: landscape) {
             .slot-empty-placeholder,
             .pitch-player-card-container {
                 width: 44px;
@@ -2414,6 +2677,8 @@
                 top: -3px;
                 right: -3px;
             }
+        }
+        @media (max-width: 480px) {
             .squad-stats-panel {
                 padding: 1rem;
                 gap: 1rem;
@@ -2616,12 +2881,20 @@
             <div class="squad-builder-container">
                 <!-- Pitch Area -->
                 <div class="pitch-container" id="football-pitch">
-                    <div class="pitch-bg-wrapper">
+                <div class="pitch-bg-wrapper">
+                        <div class="pitch-goal"></div>
                         <div class="pitch-halfway-line"></div>
                         <div class="pitch-center-arc"></div>
+                        <div class="pitch-center-spot"></div>
                         <div class="pitch-penalty-box"></div>
                         <div class="pitch-goal-area"></div>
                         <div class="pitch-penalty-arc"></div>
+                        <div class="pitch-penalty-spot"></div>
+                        <div class="pitch-corner-tl"></div>
+                        <div class="pitch-corner-bl"></div>
+                        <!-- Extra corners shown only in vertical/mobile layout -->
+                        <div class="pitch-corner-tr"></div>
+                        <div class="pitch-corner-br"></div>
                     </div>
                     <!-- Dynamically generated slots will go here -->
                 </div>
@@ -3007,12 +3280,16 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         window.addEventListener('DOMContentLoaded', () => {
             loadDatabase();
+            // Render the visible library cards first for fast first paint
             applyFilters();
-            buildPitch();
-            updateSquadStats();
-            populateFormDropdowns();
-            initCustomDropdowns();
-            buildStaticDropdowns();
+            // Defer less-critical work to after first paint
+            requestAnimationFrame(() => {
+                buildPitch();
+                updateSquadStats();
+                buildStaticDropdowns();
+                populateFormDropdowns();
+                initCustomDropdowns();
+            });
         });
 
         // Build the static dropdowns (position, theme, sort) that don't change with data
@@ -3401,12 +3678,52 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         'alvarado-wc26', 'jimenez-r-wc26', 'vega-wc26',
                         // South Africa old WC26 IDs to refresh
                         'williams-wc26', 'modiba-wc26', 'mudau-wc26', 'mokoena-wc26', 
-                        'foster-wc26', 'zwane-wc26', 'appollis-wc26'
+                        'foster-wc26', 'zwane-wc26', 'appollis-wc26',
+                        // Switzerland old WC26 IDs to refresh
+                        'zakaria-wc26', 'gxhaka-wc26-wc', 'sommer-wc26', 'akanji-wc26',
+                        // Saudi Arabia old WC26 IDs to refresh
+                        'abdulhamid-wc26', 'aldawsari-wc26',
+                        // New Zealand old WC26 IDs to refresh
+                        'wood-wc26-wc', 'cacace-wc26', 'stamenic-wc26', 'garbett-wc26',
+                        'bindon-wc26', 'paulsen-wc26', 'just-wc26', 'waine-wc26', 'bell-wc26',
+                        // Australia old WC26 IDs to refresh
+                        'irankunda-wc26', 'goodwin-wc26', 'irvine-wc26', 'souttar-wc26',
+                        'ryan-wc26', 'beach-wc26', 'izzo-wc26', 'behich-wc26',
+                        'bos-wc26', 'burgess-wc26', 'circati-wc26', 'degenek-wc26',
+                        'geria-wc26', 'herrington-wc26', 'italiano-wc26', 'trewin-wc26',
+                        'devlin-wc26', 'hrustic-wc26', 'metcalfe-wc26', 'okon-wc26',
+                        'oneill-wc26', 'leckie-wc26', 'mabil-wc26', 'toure-wc26',
+                        'velupillay-wc26', 'volpato-wc26',
+                        // 15 Teams under-populated WC26 old IDs to refresh
+                        'ugarte-wc26', 'dnunez-wc26', 'araujo-wc26', 'valverde-wc26',
+                        'adams-wc26', 'arobinson-wc26', 'mckennie-wc26-wc', 'pulisic-wc26-wc',
+                        'guler-wc26', 'kadioglu-wc26-wc', 'calhanoglu-wc26', 'skhiri-wc26',
+                        'smane-wc26-wc', 'emendy-wc26-wc', 'njackson-wc26', 'koulibaly-wc26-wc',
+                        'almiron-wc26', 'murillo-pan-wc26', 'hussein-wc26', 'pierrot-wc26',
+                        'krejci-wc26', 'coufal-wc26', 'schick-wc26-wc', 'soucek-wc26',
+                        'lbacuna-wc26', 'jbacuna-wc26', 'munoz-wc26', 'lerma-wc26',
+                        'duran-wc26', 'james-wc26', 'ldiaz-wc26', 'kolasinac-wc26',
+                        'dedic-wc26', 'demirovic-wc26', 'dzeko-wc26', 'bennacer-wc26',
+                        'aitnouri-wc26', 'gouiri-wc26', 'aouar-wc26', 'benrahma-wc26',
+                        'mahrez-wc26', 'enciso-wc26', 'alderete-wc26', 'ggomez-wc26',
+                        'sosa-wc26', 'sanabria-wc26', 'dgomez-wc26', 'villasanti-wc26',
+                        'jalonso-wc26', 'coronel-wc26', 'kovar-wc26', 'zima-wc26',
+                        'holes-wc26', 'jurasek-wc26', 'darida-wc26', 'sulc-wc26',
+                        'provod-wc26', 'sadilek-wc26', 'hlozek-wc26', 'vargas-wc26'
                     ];
                     const originalCount = players.length;
                     players = players.filter(p => !oldIdsToClean.includes(p.id));
                     if (players.length !== originalCount) {
                         needsSave = true;
+                    }
+
+                    // Clean up removed Sommer, Goodwin, Durán, Bennacer, Benrahma, Villasanti, and Coronel cards from pitch if they were in user's active squad
+                    const deletedIds = ['sommer-wc26', 'goodwin-wc26', 'duran-wc26', 'bennacer-wc26', 'benrahma-wc26', 'villasanti-wc26', 'coronel-wc26'];
+                    for (let slot in squad) {
+                        if (deletedIds.includes(squad[slot])) {
+                            squad[slot] = null;
+                            needsSave = true;
+                        }
                     }
 
                     // Merge any missing DEFAULT_PLAYERS automatically and update changed photos
@@ -3441,9 +3758,21 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         needsSave = true;
                     }
 
+                    // Update Bosnia nationality/club name to short form
+                    players.forEach(p => {
+                        if (p.nationality === "Bosnia and Herzegovina") {
+                            p.nationality = "Bosnia";
+                            needsSave = true;
+                        }
+                        if (p.club === "Bosnia and Herzegovina") {
+                            p.club = "Bosnia";
+                            needsSave = true;
+                        }
+                    });
+
                     // Update Dimarco's position: LWB, altPositions: LB
                     const dimarco = players.find(p => p.id === "dimarco-32");
-                    if (dimarco && (dimarco.position !== "LWB" || !dimarco.altPositions.includes("LB"))) {
+                    if (dimarco && (dimarco.position !== "LWB" || !(dimarco.altPositions || []).includes("LB"))) {
                         dimarco.position = "LWB";
                         dimarco.altPositions = ["LB"];
                         needsSave = true;
@@ -3667,7 +3996,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             updateClubFilterOptions();
             updateChipActiveStates();
-            initCustomDropdowns(); // re-wire after DOM changes
+            // Re-wire dropdowns deferred — no need to block filter repaint
+            requestAnimationFrame(() => initCustomDropdowns());
         }
 
         // Populate club options: prefer LEAGUES_DATA clubs when league selected, else from player data
@@ -3895,26 +4225,32 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         }
 
         // Apply 3D Tilt Effect to rendered card elements
+        // Single delegated tilt handler — no per-card listeners, runs once per grid render
+        let _tiltGridAttached = false;
         function initCardTiltEffects() {
-            document.querySelectorAll('.player-card').forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.transition = 'none';
-                });
-                card.addEventListener('mousemove', e => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    const xc = rect.width / 2;
-                    const yc = rect.height / 2;
-                    const angleX = (yc - y) / 6;
-                    const angleY = (x - xc) / 6;
-                    card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.03)`;
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease';
-                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-                });
+            if (_tiltGridAttached) return;
+            const grid = document.getElementById('player-grid');
+            if (!grid) return;
+            _tiltGridAttached = true;
+
+            grid.addEventListener('mousemove', e => {
+                const card = e.target.closest('.player-card');
+                if (!card) return;
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const angleX = (rect.height / 2 - y) / 7;
+                const angleY = (x - rect.width / 2) / 7;
+                card.style.transition = 'none';
+                card.style.transform = `perspective(900px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.03)`;
             });
+
+            grid.addEventListener('mouseleave', e => {
+                const card = e.target.closest('.player-card');
+                if (!card) return;
+                card.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)';
+                card.style.transform = '';
+            }, true);
         }
 
         // --- 7. SEARCH, FILTER, SORT ---
@@ -4016,8 +4352,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }
 
             updateChipActiveStates();
-            lucide.createIcons();
-            initCardTiltEffects();
+            // Run lucide scan and tilt init after paint to avoid blocking render
+            requestAnimationFrame(() => {
+                lucide.createIcons();
+                initCardTiltEffects();
+            });
         }
 
         // Global variables for batch loading in library tab
@@ -4039,8 +4378,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }
             
             renderLimit += BATCH_SIZE;
-            lucide.createIcons();
-            initCardTiltEffects();
+            requestAnimationFrame(() => lucide.createIcons());
         }
 
         // Listen for scroll events to trigger infinite scroll
@@ -4576,9 +4914,18 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const coord = slotsData[slotPos];
                 const slotDiv = document.createElement('div');
                 slotDiv.className = 'pitch-slot';
-                // Transform vertical half-pitch coordinates to horizontal layout
-                slotDiv.style.left = coord.bottom;
-                slotDiv.style.top = coord.left;
+                // On mobile portrait, use vertical pitch layout (GK at bottom, FW at top)
+                // FORMATIONS data: coord.left = horizontal %, coord.bottom = vertical % from bottom
+                const isMobilePortrait = window.matchMedia('(max-width: 768px) and (orientation: portrait)').matches;
+                if (isMobilePortrait) {
+                    // Vertical pitch: left stays horizontal, top = 100% - bottom (flip so GK bottom)
+                    slotDiv.style.left = coord.left;
+                    slotDiv.style.top = (100 - parseFloat(coord.bottom)) + '%';
+                } else {
+                    // Horizontal pitch (default desktop): swap axes
+                    slotDiv.style.left = coord.bottom;
+                    slotDiv.style.top = coord.left;
+                }
                 
                 // Drag and drop event listeners setup
                 slotDiv.setAttribute('data-slot', slotPos);
@@ -4650,6 +4997,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 </div>
                             </div>
                         </div>
+                        <div class="pitch-slot-label">${displayName}</div>
                     `;
                 } else {
                     slotDiv.innerHTML = `
@@ -4657,6 +5005,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             <i data-lucide="plus"></i>
                             <span>${getDisplayPos(slotPos)}</span>
                         </div>
+                        <div class="pitch-slot-label" style="color:rgba(255,255,255,0.55);">${getDisplayPos(slotPos)}</div>
                     `;
                 }
 
@@ -5002,6 +5351,65 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 }, 300);
             }, 3000);
         }
+
+        // --- 12. ORIENTATION CHANGE: Rebuild pitch on rotate ---
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                buildPitch();
+            }, 200); // Short delay so screen dims are updated
+        });
+        window.addEventListener('resize', (() => {
+            let resizeTimer;
+            return () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => buildPitch(), 250);
+            };
+        })());
+
+        // --- 13. MOBILE DROPDOWN OVERFLOW FIX ---
+        // Reposition dropdown menus to avoid viewport overflow on small screens
+        function repositionDropdownMenu(menu) {
+            if (window.innerWidth > 768) return; // Only needed on mobile
+            // Reset to default so we can measure
+            menu.style.left = '';
+            menu.style.right = '';
+            menu.style.top = '';
+            menu.style.position = 'fixed';
+
+            const trigger = menu.closest('.filter-chip, .form-group');
+            if (!trigger) return;
+            const rect = trigger.getBoundingClientRect();
+            const menuW = Math.min(280, window.innerWidth - 16);
+
+            let left = rect.left;
+            if (left + menuW > window.innerWidth - 8) {
+                left = window.innerWidth - menuW - 8;
+            }
+            if (left < 8) left = 8;
+
+            menu.style.left = left + 'px';
+            menu.style.top = (rect.bottom + 6) + 'px';
+            menu.style.width = menuW + 'px';
+            menu.style.maxWidth = menuW + 'px';
+        }
+
+        // Patch initCustomDropdowns to also reposition on show
+        const _origInitCustomDropdowns = initCustomDropdowns;
+        function initCustomDropdownsMobile() {
+            // Run original
+            document.querySelectorAll('.filter-chip.custom-dropdown, .form-group.custom-dropdown').forEach(chip => {
+                if (chip.dataset.mobileRepositionBound) return;
+                chip.dataset.mobileRepositionBound = 'true';
+                chip.addEventListener('click', (e) => {
+                    const menu = chip.querySelector('.custom-dropdown-menu');
+                    if (menu && menu.classList.contains('show')) {
+                        repositionDropdownMenu(menu);
+                    }
+                }, true);
+            });
+        }
+        // Re-run after initial load
+        setTimeout(initCustomDropdownsMobile, 500);
     </script>
 </body>
 </html>
