@@ -3027,6 +3027,8 @@
                 "CDM": ["CDM"],
                 "LDM": ["CDM"],
                 "RDM": ["CDM"],
+                "LCDM": ["CDM"],
+                "RCDM": ["CDM"],
                 "CM": ["CM"],
                 "LCM": ["CM"],
                 "RCM": ["CM"],
@@ -3448,6 +3450,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             p.rating = 86;
                             needsSave = true;
                         }
+                        // Phan Văn Tài Em rating 85
+                        if (p.id === 'taiem-vnlegend' && p.rating !== 85) {
+                            p.rating = 85;
+                            needsSave = true;
+                        }
                     });
 
                     // Migrate photos for existing players in local storage if not set or outdated
@@ -3863,7 +3870,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             let clubs = [];
             if (leagueFilter && LEAGUES_DATA[leagueFilter]) {
-                clubs = [...LEAGUES_DATA[leagueFilter].clubs].sort();
+                if (leagueFilter === 'Global Champions') {
+                    clubs = [...LEAGUES_DATA[leagueFilter].clubs];
+                } else {
+                    clubs = [...LEAGUES_DATA[leagueFilter].clubs].sort();
+                }
             } else {
                 clubs = Array.from(new Set(players.map(p => p.club))).filter(Boolean).sort();
             }
@@ -4427,7 +4438,12 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }
 
             clubSelect.disabled = false;
-            const clubs = [...LEAGUES_DATA[leagueVal].clubs].sort((a, b) => a.localeCompare(b));
+            let clubs = [];
+            if (leagueVal === 'Global Champions') {
+                clubs = [...LEAGUES_DATA[leagueVal].clubs];
+            } else {
+                clubs = [...LEAGUES_DATA[leagueVal].clubs].sort((a, b) => a.localeCompare(b));
+            }
             clubs.forEach(club => {
                 const opt = document.createElement('option');
                 opt.value = club;
