@@ -1176,28 +1176,31 @@
         .slot-player-mini.card-toty .mini-name { color: #00d4ff !important; }
 
 
-        /* ===== UCL HERO THEME — Champions League Purple/Navy ===== */
+        /* ===== UCL HERO THEME — Champions League Lighter Blue/Navy ===== */
         .card-ucl {
             background:
-                radial-gradient(ellipse at 50% 0%, rgba(135, 60, 230, 0.22) 0%, transparent 65%),
-                linear-gradient(160deg, #0a0414 0%, #160828 40%, #0a0414 100%) !important;
-            border: 2px solid #7c3aed !important;
+                radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.28) 0%, transparent 70%),
+                radial-gradient(ellipse at 50% 100%, rgba(0, 86, 179, 0.2) 0%, transparent 70%),
+                linear-gradient(160deg, #010614 0%, #06193f 50%, #010614 100%) !important;
+            border: 2px solid #00d4ff !important;
             box-shadow:
-                0 0 0 1px rgba(124, 58, 237, 0.2),
+                0 0 0 1px rgba(0, 212, 255, 0.25),
                 0 6px 28px rgba(0,0,0,0.7),
-                inset 0 1px 0 rgba(167, 139, 250, 0.12) !important;
+                0 0 15px rgba(0, 212, 255, 0.45) !important;
         }
         .card-ucl::before {
             content: '';
             position: absolute;
             inset: 0;
             background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='%2300d4ff' opacity='0.08'%3E%3Cpolygon points='162.7,76.2 163.1,94.1 180.0,100.0 163.1,105.9 162.7,123.8 151.9,109.5 134.8,114.7 145.0,100.0 134.8,85.3 151.9,90.5'/%3E%3Cpolygon points='161.2,127.5 148.8,140.5 156.6,156.6 140.5,148.8 127.5,161.2 130.0,143.4 114.2,135.0 131.8,131.8 135.0,114.2 143.4,130.0'/%3E%3Cpolygon points='123.8,162.7 105.9,163.1 100.0,180.0 94.1,163.1 76.2,162.7 90.5,151.9 85.3,134.8 100.0,145.0 114.7,134.8 109.5,151.9'/%3E%3Cpolygon points='72.5,161.2 59.5,148.8 43.4,156.6 51.2,140.5 38.8,127.5 56.6,130.0 65.0,114.2 68.2,131.8 85.8,135.0 70.0,143.4'/%3E%3Cpolygon points='37.3,123.8 36.9,105.9 20.0,100.0 36.9,94.1 37.3,76.2 48.1,90.5 65.2,85.3 55.0,100.0 65.2,114.7 48.1,109.5'/%3E%3Cpolygon points='38.8,72.5 51.2,59.5 43.4,43.4 59.5,51.2 72.5,38.8 70.0,56.6 85.8,65.0 68.2,68.2 65.0,85.8 56.6,70.0'/%3E%3Cpolygon points='76.2,37.3 94.1,36.9 100.0,20.0 105.9,36.9 123.8,37.3 109.5,48.1 114.7,65.2 100.0,55.0 85.3,65.2 90.5,48.1'/%3E%3Cpolygon points='127.5,38.8 140.5,51.2 156.6,43.4 148.8,59.5 161.2,72.5 143.4,70.0 135.0,85.8 131.8,68.2 114.2,65.0 130.0,56.6'/%3E%3C/g%3E%3C/svg%3E")
+                no-repeat center center / 130px 130px,
                 repeating-linear-gradient(
                     -60deg,
                     transparent,
                     transparent 12px,
-                    rgba(124, 58, 237, 0.03) 12px,
-                    rgba(124, 58, 237, 0.03) 13px
+                    rgba(0, 212, 255, 0.04) 12px,
+                    rgba(0, 212, 255, 0.04) 13px
                 );
             pointer-events: none;
             z-index: 0;
@@ -1209,14 +1212,14 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.5rem;
-            color: rgba(167, 139, 250, 0.4);
+            color: rgba(0, 212, 255, 0.55);
             letter-spacing: 4px;
             pointer-events: none;
             z-index: 3;
         }
         .card-ucl .panini-band {
-            background: linear-gradient(135deg, #160828 0%, #2a0f50 50%, #160828 100%) !important;
-            border-bottom: 1px solid rgba(124, 58, 237, 0.55) !important;
+            background: linear-gradient(135deg, #051435 0%, #0c2b70 50%, #051435 100%) !important;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.55) !important;
             position: relative;
             z-index: 2;
         }
@@ -1225,62 +1228,62 @@
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 28px; height: 28px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%237c3aed' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%230a0414' stroke='%237c3aed' stroke-width='1'/%3E%3Cpath d='M24 8 l3 9h9l-7.5 5.5 2.9 9L24 27l-7.4 4.5 2.9-9L12 17h9z' fill='%23a78bfa'/%3E%3C/svg%3E");
+            width: 26px; height: 26px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='%2300d4ff'%3E%3Cpolygon points='162.7,76.2 163.1,94.1 180.0,100.0 163.1,105.9 162.7,123.8 151.9,109.5 134.8,114.7 145.0,100.0 134.8,85.3 151.9,90.5'/%3E%3Cpolygon points='161.2,127.5 148.8,140.5 156.6,156.6 140.5,148.8 127.5,161.2 130.0,143.4 114.2,135.0 131.8,131.8 135.0,114.2 143.4,130.0'/%3E%3Cpolygon points='123.8,162.7 105.9,163.1 100.0,180.0 94.1,163.1 76.2,162.7 90.5,151.9 85.3,134.8 100.0,145.0 114.7,134.8 109.5,151.9'/%3E%3Cpolygon points='72.5,161.2 59.5,148.8 43.4,156.6 51.2,140.5 38.8,127.5 56.6,130.0 65.0,114.2 68.2,131.8 85.8,135.0 70.0,143.4'/%3E%3Cpolygon points='37.3,123.8 36.9,105.9 20.0,100.0 36.9,94.1 37.3,76.2 48.1,90.5 65.2,85.3 55.0,100.0 65.2,114.7 48.1,109.5'/%3E%3Cpolygon points='38.8,72.5 51.2,59.5 43.4,43.4 59.5,51.2 72.5,38.8 70.0,56.6 85.8,65.0 68.2,68.2 65.0,85.8 56.6,70.0'/%3E%3Cpolygon points='76.2,37.3 94.1,36.9 100.0,20.0 105.9,36.9 123.8,37.3 109.5,48.1 114.7,65.2 100.0,55.0 85.3,65.2 90.5,48.1'/%3E%3Cpolygon points='127.5,38.8 140.5,51.2 156.6,43.4 148.8,59.5 161.2,72.5 143.4,70.0 135.0,85.8 131.8,68.2 114.2,65.0 130.0,56.6'/%3E%3C/g%3E%3C/svg%3E");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: 0.92;
+            opacity: 0.95;
             z-index: 1;
         }
         .card-ucl .panini-ovr {
-            color: #a78bfa !important;
+            color: #00d4ff !important;
             font-size: 1.3rem !important;
-            text-shadow: 0 0 12px rgba(167, 139, 250, 0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
+            text-shadow: 0 0 12px rgba(0, 212, 255, 0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
             z-index: 2;
         }
         .card-ucl .panini-pos {
-            color: rgba(167, 139, 250, 0.95) !important;
-            text-shadow: 0 0 12px rgba(167, 139, 250, 0.7) !important;
+            color: rgba(0, 212, 255, 0.95) !important;
+            text-shadow: 0 0 12px rgba(0, 212, 255, 0.7) !important;
             z-index: 2;
         }
         .card-ucl .panini-photo {
-            background: radial-gradient(ellipse at 50% 80%, rgba(124, 58, 237, 0.08) 0%, transparent 65%) !important;
+            background: radial-gradient(ellipse at 50% 80%, rgba(0, 212, 255, 0.12) 0%, transparent 65%) !important;
             z-index: 2;
             position: relative;
         }
         .card-ucl .panini-footer {
-            background: linear-gradient(180deg, rgba(22, 8, 40, 0.6) 0%, rgba(10, 4, 20, 0.95) 100%) !important;
-            border-top: 1px solid rgba(124, 58, 237, 0.3) !important;
+            background: linear-gradient(180deg, rgba(5, 20, 53, 0.6) 0%, rgba(1, 6, 20, 0.95) 100%) !important;
+            border-top: 1px solid rgba(0, 212, 255, 0.35) !important;
             z-index: 2;
             position: relative;
             padding: 0.25rem 0.4rem 0.3rem;
         }
         .card-ucl .panini-name {
-            color: #a78bfa !important;
+            color: #00d4ff !important;
             font-size: 0.68rem !important;
             font-weight: 900 !important;
             letter-spacing: 1px !important;
-            text-shadow: 0 0 6px rgba(167, 139, 250, 0.5) !important;
+            text-shadow: 0 0 6px rgba(0, 212, 255, 0.5) !important;
         }
         .card-ucl .panini-era {
             font-size: 0.46rem;
             font-weight: 700;
-            color: rgba(124, 58, 237, 0.6);
+            color: rgba(0, 212, 255, 0.7);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             text-align: center;
             line-height: 1.1;
         }
-        .card-ucl .panini-photo-silhouette { fill: rgba(124, 58, 237, 0.15) !important; }
-        .card-ucl { --triangle-bg: linear-gradient(135deg, transparent 50%, #7c3aed 50%); --triangle-color: #a78bfa; }
+        .card-ucl .panini-photo-silhouette { fill: rgba(0, 212, 255, 0.15) !important; }
+        .card-ucl { --triangle-bg: linear-gradient(135deg, transparent 50%, #00d4ff 50%); --triangle-color: #010614; }
         .slot-player-mini.card-ucl {
-            background: linear-gradient(135deg, #0a0414 0%, #160828 100%) !important;
-            border: 2px solid #7c3aed !important;
-            box-shadow: 0 0 10px rgba(124, 58, 237, 0.35) !important;
+            background: linear-gradient(135deg, #010614 0%, #051435 100%) !important;
+            border: 2px solid #00d4ff !important;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.35) !important;
         }
-        .slot-player-mini.card-ucl .mini-ovr { color: #a78bfa !important; text-shadow: 0 0 4px rgba(167,139,250,0.5) !important; }
-        .slot-player-mini.card-ucl .mini-name { color: #a78bfa !important; }
+        .slot-player-mini.card-ucl .mini-ovr { color: #00d4ff !important; text-shadow: 0 0 4px rgba(0,212,255,0.5) !important; }
+        .slot-player-mini.card-ucl .mini-name { color: #00d4ff !important; }
 
         /* ===== VN LEGENDS (Vietnam Legends) THEME — Crimson & Gold ===== */
         .card-vnlegends {
@@ -3056,6 +3059,7 @@
                         <option value="icons">⭐ Icons (Huyền thoại)</option>
                         <option value="mm">📷 Memoir</option>
                         <option value="toty">❄️ TOTY</option>
+                        <option value="ucl">🏆 UCL Hero</option>
                         <option value="vnlegends">🇻🇳 VN Legends</option>
                         <option value="gc">👑 Global Champions</option>
                     </select>
@@ -3138,7 +3142,7 @@
                 'Eredivisie', 'Liga Portugal', 'Süper Lig', 'Championship',
                 'Scottish Premiership', 'Danish Superliga', 'Russian Premier League'
             ];
-            const conmebolLeagues = ['Brasileirao Serie A', 'Liga Profesional de Fútbol'];
+            const conmebolLeagues = ['Brasileirao Serie A', 'Liga Profesional de Fútbol', 'Others'];
             const concacafLeagues = ['MLS'];
             const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League'];
             
@@ -3197,6 +3201,8 @@
                 "CDM": ["CDM"],
                 "LDM": ["CDM"],
                 "RDM": ["CDM"],
+                "LCDM": ["CDM"],
+                "RCDM": ["CDM"],
                 "CM": ["CM"],
                 "LCM": ["CM"],
                 "RCM": ["CM"],
@@ -3345,7 +3351,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 { value: 'worldcup26', label: 'WC26', icon: '🏆' },
                 { value: 'icons', label: 'Icons', icon: '⭐' },
                 { value: 'mm', label: 'Memoir', icon: '📷' },
-                { value: 'toty', label: 'TOTY', icon: '❄️' },
+                {
+                    value: 'ucl',
+                    label: 'UCL Hero',
+                    icon: `<svg viewBox="0 0 200 200" style="width: 14px; height: 14px; display: block;"><g fill="#00d4ff"><polygon points="162.7,76.2 163.1,94.1 180.0,100.0 163.1,105.9 162.7,123.8 151.9,109.5 134.8,114.7 145.0,100.0 134.8,85.3 151.9,90.5"/><polygon points="161.2,127.5 148.8,140.5 156.6,156.6 140.5,148.8 127.5,161.2 130.0,143.4 114.2,135.0 131.8,131.8 135.0,114.2 143.4,130.0"/><polygon points="123.8,162.7 105.9,163.1 100.0,180.0 94.1,163.1 76.2,162.7 90.5,151.9 85.3,134.8 100.0,145.0 114.7,134.8 109.5,151.9"/><polygon points="72.5,161.2 59.5,148.8 43.4,156.6 51.2,140.5 38.8,127.5 56.6,130.0 65.0,114.2 68.2,131.8 85.8,135.0 70.0,143.4"/><polygon points="37.3,123.8 36.9,105.9 20.0,100.0 36.9,94.1 37.3,76.2 48.1,90.5 65.2,85.3 55.0,100.0 65.2,114.7 48.1,109.5"/><polygon points="38.8,72.5 51.2,59.5 43.4,43.4 59.5,51.2 72.5,38.8 70.0,56.6 85.8,65.0 68.2,68.2 65.0,85.8 56.6,70.0"/><polygon points="76.2,37.3 94.1,36.9 100.0,20.0 105.9,36.9 123.8,37.3 109.5,48.1 114.7,65.2 100.0,55.0 85.3,65.2 90.5,48.1"/><polygon points="127.5,38.8 140.5,51.2 156.6,43.4 148.8,59.5 161.2,72.5 143.4,70.0 135.0,85.8 131.8,68.2 114.2,65.0 130.0,56.6"/></g></svg>`
+                },
                 { value: 'gc', label: 'Global Champions', icon: '👑' },
                 {
                     value: 'vnlegends',
@@ -3616,6 +3626,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         // Dominik Szoboszlai rating 86
                         if (p.id === 'szoboszlai-8' && p.rating !== 86) {
                             p.rating = 86;
+                            needsSave = true;
+                        }
+                        // Phan Văn Tài Em rating 85
+                        if (p.id === 'taiem-vnlegend' && p.rating !== 85) {
+                            p.rating = 85;
                             needsSave = true;
                         }
                     });
@@ -4033,7 +4048,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             let clubs = [];
             if (leagueFilter && LEAGUES_DATA[leagueFilter]) {
-                clubs = [...LEAGUES_DATA[leagueFilter].clubs].sort();
+                if (leagueFilter === 'Global Champions') {
+                    clubs = [...LEAGUES_DATA[leagueFilter].clubs];
+                } else {
+                    clubs = [...LEAGUES_DATA[leagueFilter].clubs].sort();
+                }
             } else {
                 clubs = Array.from(new Set(players.map(p => p.club))).filter(Boolean).sort();
             }
@@ -4597,7 +4616,12 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }
 
             clubSelect.disabled = false;
-            const clubs = [...LEAGUES_DATA[leagueVal].clubs].sort((a, b) => a.localeCompare(b));
+            let clubs = [];
+            if (leagueVal === 'Global Champions') {
+                clubs = [...LEAGUES_DATA[leagueVal].clubs];
+            } else {
+                clubs = [...LEAGUES_DATA[leagueVal].clubs].sort((a, b) => a.localeCompare(b));
+            }
             clubs.forEach(club => {
                 const opt = document.createElement('option');
                 opt.value = club;
