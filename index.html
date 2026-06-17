@@ -843,13 +843,13 @@
         /* ===== ICONS THEME — Legends / Hall of Fame ===== */
         .card-icons {
             background:
-                radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.18) 0%, transparent 60%),
-                linear-gradient(160deg, #0d0d0d 0%, #1a1505 40%, #0a0a0a 100%) !important;
-            border: 2px solid #b8960c !important;
+                radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.45) 0%, transparent 65%),
+                linear-gradient(160deg, #ffe58f 0%, #d4af37 50%, #aa841c 100%) !important;
+            border: 2px solid #ffe17d !important;
             box-shadow:
-                0 0 0 1px rgba(212,175,55,0.15),
-                0 6px 28px rgba(0,0,0,0.7),
-                inset 0 1px 0 rgba(255,215,0,0.12) !important;
+                0 0 0 1px rgba(255, 225, 125, 0.35),
+                0 6px 28px rgba(0, 0, 0, 0.65),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
         }
         /* Inner shimmer layer */
         .card-icons::before {
@@ -861,8 +861,8 @@
                     -45deg,
                     transparent,
                     transparent 6px,
-                    rgba(212,175,55,0.025) 6px,
-                    rgba(212,175,55,0.025) 7px
+                    rgba(255, 255, 255, 0.04) 6px,
+                    rgba(255, 255, 255, 0.04) 7px
                 );
             pointer-events: none;
             z-index: 0;
@@ -875,14 +875,14 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.55rem;
-            color: rgba(212,175,55,0.4);
+            color: rgba(44, 26, 4, 0.4);
             letter-spacing: 4px;
             pointer-events: none;
             z-index: 3;
         }
         .card-icons .panini-band {
-            background: linear-gradient(135deg, #1a1200 0%, #2e2000 50%, #1a1200 100%) !important;
-            border-bottom: 1px solid rgba(212,175,55,0.5) !important;
+            background: linear-gradient(135deg, #d4af37 0%, #ffe58f 50%, #d4af37 100%) !important;
+            border-bottom: 1px solid rgba(170, 132, 28, 0.6) !important;
             position: relative;
             z-index: 2;
         }
@@ -900,15 +900,15 @@
             z-index: 1;
         }
         .card-icons .panini-ovr {
-            color: #d4af37 !important;
+            color: #2c1a04 !important;
             font-size: 1.3rem !important;
-            text-shadow: 0 0 12px rgba(212,175,55,0.6), 0 2px 4px rgba(0,0,0,0.8) !important;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
             z-index: 2;
         }
         .card-icons .panini-pos {
-            color: rgba(212,175,55,0.9) !important;
+            color: rgba(44, 26, 4, 0.9) !important;
             font-size: 1.15rem !important;
-            text-shadow: 0 0 12px rgba(212,175,55,0.6), 0 2px 4px rgba(0,0,0,0.8) !important;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
             z-index: 2;
         }
         .card-icons .panini-photo {
@@ -917,23 +917,23 @@
             position: relative;
         }
         .card-icons .panini-footer {
-            background: linear-gradient(180deg, rgba(26,18,0,0.6) 0%, rgba(10,8,0,0.95) 100%) !important;
-            border-top: 1px solid rgba(212,175,55,0.3) !important;
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.8) 0%, rgba(170, 132, 28, 0.95) 100%) !important;
+            border-top: 1px solid rgba(170, 132, 28, 0.4) !important;
             z-index: 2;
             position: relative;
             padding: 0.25rem 0.4rem 0.3rem;
         }
         .card-icons .panini-name {
-            color: #d4af37 !important;
+            color: #2c1a04 !important;
             font-size: 0.68rem !important;
             font-weight: 900 !important;
             letter-spacing: 1px !important;
-            text-shadow: 0 0 6px rgba(212,175,55,0.4) !important;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) !important;
         }
         .card-icons .panini-era {
             font-size: 0.46rem;
             font-weight: 700;
-            color: rgba(212,175,55,0.5);
+            color: rgba(44, 26, 4, 0.75);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             text-align: center;
@@ -941,7 +941,7 @@
         }
         /* Silhouette tinted gold for Icons cards */
         .card-icons .panini-photo-silhouette {
-            fill: rgba(212,175,55,0.15) !important;
+            fill: rgba(44, 26, 4, 0.12) !important;
         }
 
 
@@ -1570,8 +1570,8 @@
             --triangle-color: #020c1b;
         }
         .card-icons {
-            --triangle-bg: linear-gradient(135deg, transparent 50%, #e5c158 50%);
-            --triangle-color: #1a1a1a;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #2c1a04 50%);
+            --triangle-color: #ffd700;
         }
         .card-mm {
             --triangle-bg: linear-gradient(135deg, transparent 50%, #d4a054 50%);
