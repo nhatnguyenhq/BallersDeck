@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -202,7 +202,7 @@
             border-radius: 12px;
             padding: 0.85rem 1rem 0.85rem 3rem;
             color: #fff;
-            font-family: inherit;
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
             font-weight: 500;
             outline: none;
@@ -395,7 +395,10 @@
             font-weight: 600;
             color: #fff;
             padding-right: 0.8rem;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
         }
 
         .custom-dropdown-menu {
@@ -411,6 +414,24 @@
             min-width: 220px;
             padding: 0.35rem 0;
             animation: fadeInDropdown 0.15s ease-out;
+        }
+
+        #club-dropdown-menu {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        #club-dropdown-menu::-webkit-scrollbar {
+            width: 6px;
+        }
+        #club-dropdown-menu::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #club-dropdown-menu::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        #club-dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
         }
         
         .custom-dropdown-menu.show {
@@ -1295,6 +1316,13 @@
                 0 0 0 1px rgba(220,38,38,0.2),
                 0 6px 28px rgba(0,0,0,0.75),
                 inset 0 1px 0 rgba(239,68,68,0.1) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #b91c1c 50%) !important;
+            --triangle-color: #ffd700 !important;
+        }
+        .card-vnlegends .card-theme-triangle-icon {
+            font-size: 0.65rem;
+            text-shadow: 0 0 4px #ffd700, 0 1px 2px rgba(0, 0, 0, 0.6);
+            font-weight: 900;
         }
         .card-vnlegends::before {
             content: '';
@@ -1448,7 +1476,7 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 28px; height: 28px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffd700'%3E%3Cpath d='M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5v-2z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z' fill='%23003c15' stroke='%23ffd700' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M15 29 L18 19 L21.5 24 L24 17 L26.5 24 L30 19 L33 29 Z' fill='%23ffd700'/%3E%3Cpath d='M15 30 h18 v2 a1 1 0 0 1 -1 1 h-16 a1 1 0 0 1 -1 -1 z' fill='%23ffd700'/%3E%3Ccircle cx='18' cy='19' r='1.2' fill='%2300e676'/%3E%3Ccircle cx='24' cy='17' r='1.5' fill='%23ffffff'/%3E%3Ccircle cx='30' cy='19' r='1.2' fill='%2300e676'/%3E%3Crect x='17' y='31' width='14' height='1' fill='%23003c15'/%3E%3C/svg%3E");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -2204,6 +2232,7 @@
         .drawer-header h2 {
             font-size: 1.4rem;
             font-weight: 800;
+            font-family: 'Inter', sans-serif;
         }
 
         .close-btn {
@@ -2212,6 +2241,32 @@
             color: var(--text-muted);
             cursor: pointer;
             font-size: 1.5rem;
+        }
+
+        .drawer-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .duplicate-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: var(--transition);
+            display: none;
+        }
+        .duplicate-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         .form-group {
@@ -2985,7 +3040,12 @@
         <div class="drawer" id="player-drawer">
             <div class="drawer-header">
                 <h2 id="drawer-title">Tạo Thẻ Cầu Thủ Mới</h2>
-                <button class="close-btn" onclick="closeDrawer()">×</button>
+                <div class="drawer-header-actions">
+                    <button class="duplicate-btn" id="duplicate-btn" onclick="duplicatePlayer()" title="Nhân bản thẻ này">
+                        <i data-lucide="copy" style="width:13px;height:13px;"></i> Nhân bản
+                    </button>
+                    <button class="close-btn" onclick="closeDrawer()">×</button>
+                </div>
             </div>
             
             <form id="player-form" onsubmit="savePlayer(event)">
@@ -3139,10 +3199,11 @@
         function getLeagueConfederation(leagueName) {
             const uefaLeagues = [
                 'Premier League', 'La Liga', 'Serie A', 'Bundesliga', 'Ligue 1',
-                'Eredivisie', 'Liga Portugal', 'Süper Lig', 'Championship',
-                'Scottish Premiership', 'Danish Superliga', 'Russian Premier League'
+                'Eredivisie', 'Liga Portugal', 'Süper Lig', 'EFL Championship',
+                'Scottish Premiership', 'Danish Superliga', 'Russian PL',
+                'EFL League One', 'Austrian Bundesliga', 'Belgian Pro League', 'Others (UEFA)'
             ];
-            const conmebolLeagues = ['Brasileirao Serie A', 'Liga Profesional de Fútbol', 'Others'];
+            const conmebolLeagues = ['Brasileirao Serie A', 'Liga Profesional de Fútbol', 'Others (CONMEBOL)'];
             const concacafLeagues = ['MLS'];
             const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League'];
             
@@ -3152,6 +3213,24 @@
             if (afcLeagues.includes(leagueName)) return 'AFC';
             
             return 'Khác';
+        }
+
+        function sortLeagues(list, conf) {
+            if (conf === 'UEFA') {
+                const priority = ['Premier League', 'La Liga', 'Bundesliga', 'Serie A', 'Ligue 1'];
+                const hasOthers = list.includes('Others (UEFA)');
+                const others = list.filter(l => !priority.includes(l) && l !== 'Others (UEFA)').sort();
+                const sorted = [];
+                priority.forEach(p => {
+                    if (list.includes(p)) sorted.push(p);
+                });
+                sorted.push(...others);
+                if (hasOthers) {
+                    sorted.push('Others (UEFA)');
+                }
+                return sorted;
+            }
+            return [...list].sort();
         }
 
         const POSITION_ORDER = {
@@ -3354,13 +3433,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 {
                     value: 'ucl',
                     label: 'UCL Hero',
-                    icon: `<svg viewBox="0 0 200 200" style="width: 14px; height: 14px; display: block;"><g fill="#00d4ff"><polygon points="162.7,76.2 163.1,94.1 180.0,100.0 163.1,105.9 162.7,123.8 151.9,109.5 134.8,114.7 145.0,100.0 134.8,85.3 151.9,90.5"/><polygon points="161.2,127.5 148.8,140.5 156.6,156.6 140.5,148.8 127.5,161.2 130.0,143.4 114.2,135.0 131.8,131.8 135.0,114.2 143.4,130.0"/><polygon points="123.8,162.7 105.9,163.1 100.0,180.0 94.1,163.1 76.2,162.7 90.5,151.9 85.3,134.8 100.0,145.0 114.7,134.8 109.5,151.9"/><polygon points="72.5,161.2 59.5,148.8 43.4,156.6 51.2,140.5 38.8,127.5 56.6,130.0 65.0,114.2 68.2,131.8 85.8,135.0 70.0,143.4"/><polygon points="37.3,123.8 36.9,105.9 20.0,100.0 36.9,94.1 37.3,76.2 48.1,90.5 65.2,85.3 55.0,100.0 65.2,114.7 48.1,109.5"/><polygon points="38.8,72.5 51.2,59.5 43.4,43.4 59.5,51.2 72.5,38.8 70.0,56.6 85.8,65.0 68.2,68.2 65.0,85.8 56.6,70.0"/><polygon points="76.2,37.3 94.1,36.9 100.0,20.0 105.9,36.9 123.8,37.3 109.5,48.1 114.7,65.2 100.0,55.0 85.3,65.2 90.5,48.1"/><polygon points="127.5,38.8 140.5,51.2 156.6,43.4 148.8,59.5 161.2,72.5 143.4,70.0 135.0,85.8 131.8,68.2 114.2,65.0 130.0,56.6"/></g></svg>`
+                    icon: `<svg viewBox="0 0 200 200" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><g fill="#00d4ff"><polygon points="162.7,76.2 163.1,94.1 180.0,100.0 163.1,105.9 162.7,123.8 151.9,109.5 134.8,114.7 145.0,100.0 134.8,85.3 151.9,90.5"/><polygon points="161.2,127.5 148.8,140.5 156.6,156.6 140.5,148.8 127.5,161.2 130.0,143.4 114.2,135.0 131.8,131.8 135.0,114.2 143.4,130.0"/><polygon points="123.8,162.7 105.9,163.1 100.0,180.0 94.1,163.1 76.2,162.7 90.5,151.9 85.3,134.8 100.0,145.0 114.7,134.8 109.5,151.9"/><polygon points="72.5,161.2 59.5,148.8 43.4,156.6 51.2,140.5 38.8,127.5 56.6,130.0 65.0,114.2 68.2,131.8 85.8,135.0 70.0,143.4"/><polygon points="37.3,123.8 36.9,105.9 20.0,100.0 36.9,94.1 37.3,76.2 48.1,90.5 65.2,85.3 55.0,100.0 65.2,114.7 48.1,109.5"/><polygon points="38.8,72.5 51.2,59.5 43.4,43.4 59.5,51.2 72.5,38.8 70.0,56.6 85.8,65.0 68.2,68.2 65.0,85.8 56.6,70.0"/><polygon points="76.2,37.3 94.1,36.9 100.0,20.0 105.9,36.9 123.8,37.3 109.5,48.1 114.7,65.2 100.0,55.0 85.3,65.2 90.5,48.1"/><polygon points="127.5,38.8 140.5,51.2 156.6,43.4 148.8,59.5 161.2,72.5 143.4,70.0 135.0,85.8 131.8,68.2 114.2,65.0 130.0,56.6"/></g></svg>`
                 },
                 { value: 'gc', label: 'Global Champions', icon: '👑' },
                 {
                     value: 'vnlegends',
                     label: 'VN Legends',
-                    icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: block;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
+                    icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
                 }
             ];
             buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
@@ -3632,6 +3711,38 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         if (p.id === 'taiem-vnlegend' && p.rating !== 85) {
                             p.rating = 85;
                             needsSave = true;
+                        }
+
+                        // Migrate Congo DR to DR Congo
+                        if (p.club === 'Congo DR') {
+                            p.club = 'DR Congo';
+                            needsSave = true;
+                        }
+                        if (p.nationality === 'Congo DR') {
+                            p.nationality = 'DR Congo';
+                            needsSave = true;
+                        }
+
+                        // Migrate league names
+                        if (p.league === 'Championship') {
+                            p.league = 'EFL Championship';
+                            needsSave = true;
+                        }
+                        if (p.league === 'Russian Premier League') {
+                            p.league = 'Russian PL';
+                            needsSave = true;
+                        }
+                        if (p.league === 'Others') {
+                            p.league = 'Others (CONMEBOL)';
+                            needsSave = true;
+                        }
+
+                        // Migrate Leicester, Oxford Utd, Sheffield Wednesday to EFL League One
+                        if (['Leicester City', 'Leicester', 'Oxford United', 'Oxford Utd', 'Sheffield Wednesday'].includes(p.club)) {
+                            if (p.league !== 'EFL League One') {
+                                p.league = 'EFL League One';
+                                needsSave = true;
+                            }
                         }
                     });
 
@@ -3936,7 +4047,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         const submenu = document.createElement('div');
                         submenu.className = 'custom-dropdown-submenu';
                         
-                        list.sort().forEach(l => {
+                        sortLeagues(list, conf).forEach(l => {
                             const subItem = document.createElement('div');
                             subItem.className = 'submenu-item';
                             subItem.textContent = l;
@@ -4189,7 +4300,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p.cardTheme === 'mm') return '✦';
             if (p.cardTheme === 'toty') return '❄';
             if (p.cardTheme === 'ucl') return '✦';
-            if (p.cardTheme === 'vnlegends') return '🇻🇳';
+            if (p.cardTheme === 'vnlegends') return '★';
             if (p.cardTheme === 'gc') return '👑';
             
             const themeClass = getCardThemeClass(p);
@@ -4503,7 +4614,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         const submenu = document.createElement('div');
                         submenu.className = 'custom-dropdown-submenu';
                         
-                        list.sort().forEach(l => {
+                        sortLeagues(list, conf).forEach(l => {
                             const subItem = document.createElement('div');
                             subItem.className = 'submenu-item';
                             subItem.textContent = l;
@@ -4665,6 +4776,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 lbl.classList.remove('checked');
                 lbl.querySelector('input').checked = false;
             });
+            document.getElementById('duplicate-btn').style.display = 'none';
             document.getElementById('drawer-overlay').classList.add('active');
         }
 
@@ -4712,17 +4824,32 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 lbl.querySelector('input').checked = checked;
             });
 
+            document.getElementById('duplicate-btn').style.display = 'flex';
             document.getElementById('drawer-overlay').classList.add('active');
         }
 
         function closeDrawer() {
             document.getElementById('drawer-overlay').classList.remove('active');
+            document.getElementById('duplicate-btn').style.display = 'none';
         }
 
         function closeDrawerOnOverlay(e) {
             if (e.target.id === 'drawer-overlay') {
                 closeDrawer();
             }
+        }
+
+        function duplicatePlayer() {
+            const id = document.getElementById('player-id').value;
+            if (!id) return;
+            const original = players.find(x => x.id === id);
+            if (!original) return;
+            const copy = Object.assign({}, original, { id: 'player-' + Date.now() });
+            players.push(copy);
+            saveDatabase();
+            applyFilters();
+            closeDrawer();
+            showToast(`Đã nhân bản thẻ ${copy.cardName || getShortName(copy.name)}`);
         }
 
         function togglePosChip(lbl) {
