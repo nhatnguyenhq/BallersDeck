@@ -12,7 +12,7 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image-more/2.8.0/dom-to-image-more.min.js"></script>
     <script src="football_data.js"></script>
 
     <style>
@@ -716,7 +716,52 @@
         }
         @media (max-width: 480px) {
             .player-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 0.25rem !important;
+            }
+            /* Scale down inner text for small cards in player grid */
+            .player-grid .panini-ovr {
+                font-size: 0.9rem !important;
+            }
+            .player-grid .panini-pos {
+                font-size: 0.75rem !important;
+            }
+            .player-grid .panini-band {
+                padding: 0.15rem 0.25rem 0.1rem !important;
+            }
+            .player-grid .panini-name {
+                font-size: 0.52rem !important;
+                letter-spacing: 0.2px !important;
+            }
+            .player-grid .panini-club,
+            .player-grid .panini-era {
+                font-size: 0.42rem !important;
+                letter-spacing: 0.1px !important;
+            }
+            .player-grid .panini-card-flag img {
+                width: 14px !important;
+                height: 9px !important;
+                border-width: 1px !important;
+            }
+            .player-grid .panini-card-flag span {
+                font-size: 0.75rem !important;
+            }
+            .player-grid .card-theme-triangle-icon {
+                font-size: 0.5rem !important;
+            }
+            .player-grid .panini-footer {
+                padding: 0.15rem 0.2rem 0.2rem !important;
+                gap: 0px !important;
+            }
+            .player-grid .card-actions {
+                top: 0.2rem !important;
+                right: 0.2rem !important;
+                gap: 0.15rem !important;
+            }
+            .player-grid .card-btn {
+                width: 16px !important;
+                height: 16px !important;
+                font-size: 0.65rem !important;
             }
         }
 
@@ -2145,36 +2190,227 @@
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
-        .squad-stat-box {
-            background: var(--bg-darker);
-            border: 1px solid var(--border-color);
-            padding: 1rem;
-            border-radius: 12px;
+        /* --- Team OVR block --- */
+        .team-ovr-block {
+            background: linear-gradient(135deg, rgba(0,230,118,0.08) 0%, rgba(0,230,118,0.02) 100%);
+            border: 1px solid rgba(0,230,118,0.25);
+            border-radius: 16px;
+            padding: 1.1rem 1rem 0.9rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-
-        .squad-stat-lbl {
-            font-size: 0.85rem;
+        .team-ovr-block::before {
+            content: '';
+            position: absolute;
+            top: -40px; left: 50%; transform: translateX(-50%);
+            width: 120px; height: 80px;
+            background: radial-gradient(circle, rgba(0,230,118,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .team-ovr-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            color: var(--accent);
             text-transform: uppercase;
-            font-weight: 700;
-            color: var(--text-muted);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
+            opacity: 0.8;
         }
-
-        .squad-stat-val {
-            font-size: 2.5rem;
+        .team-ovr-value {
+            font-size: 3.5rem;
             font-weight: 900;
             color: var(--accent);
-            text-shadow: 0 0 10px var(--accent-glow);
+            text-shadow: 0 0 20px rgba(0,230,118,0.5), 0 0 40px rgba(0,230,118,0.2);
+            line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -2px;
         }
 
-        .squad-stat-val.chem {
-            color: var(--text-muted);
-            text-shadow: none;
+        /* --- DEF / MID / ATK row --- */
+        .squad-zone-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.6rem;
         }
+        .zone-stat-box {
+            border-radius: 12px;
+            padding: 0.65rem 0.5rem;
+            text-align: center;
+            border: 1px solid;
+        }
+        .zone-stat-box.def {
+            background: rgba(59,130,246,0.1);
+            border-color: rgba(59,130,246,0.3);
+        }
+        .zone-stat-box.mid {
+            background: rgba(234,179,8,0.1);
+            border-color: rgba(234,179,8,0.3);
+        }
+        .zone-stat-box.atk {
+            background: rgba(239,68,68,0.1);
+            border-color: rgba(239,68,68,0.3);
+        }
+        .zone-stat-lbl {
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.15rem;
+        }
+        .zone-stat-box.def .zone-stat-lbl { color: #60a5fa; }
+        .zone-stat-box.mid .zone-stat-lbl { color: #fde047; }
+        .zone-stat-box.atk .zone-stat-lbl { color: #f87171; }
+        .zone-stat-val {
+            font-size: 1.6rem;
+            font-weight: 900;
+            line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .zone-stat-box.def .zone-stat-val { color: #93c5fd; text-shadow: 0 0 8px rgba(59,130,246,0.4); }
+        .zone-stat-box.mid .zone-stat-val { color: #fde047; text-shadow: 0 0 8px rgba(234,179,8,0.4); }
+        .zone-stat-box.atk .zone-stat-val { color: #fca5a5; text-shadow: 0 0 8px rgba(239,68,68,0.4); }
+
+        /* --- Chemistry bar --- */
+        .chem-block {
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+        }
+        .chem-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .chem-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .chem-score {
+            font-size: 0.9rem;
+            font-weight: 900;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s;
+        }
+        .chem-bar-track {
+            height: 6px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+        .chem-bar-fill {
+            height: 100%;
+            border-radius: 99px;
+            background: var(--text-muted);
+            transition: width 0.5s cubic-bezier(0.4,0,0.2,1), background 0.5s;
+            width: 0%;
+        }
+
+        /* --- Formation custom dropdown --- */
+        .formation-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .formation-trigger {
+            width: 100%;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            user-select: none;
+        }
+        .formation-trigger:hover {
+            border-color: var(--accent);
+            background: rgba(0,230,118,0.04);
+        }
+        .formation-trigger.open {
+            border-color: var(--accent);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .formation-trigger-left {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .formation-icon {
+            width: 28px; height: 28px;
+            background: rgba(0,230,118,0.12);
+            border: 1px solid rgba(0,230,118,0.25);
+            border-radius: 7px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem;
+        }
+        .formation-trigger-name {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        .formation-trigger-arrow {
+            color: var(--text-muted);
+            transition: transform 0.25s;
+            font-size: 0.75rem;
+        }
+        .formation-trigger.open .formation-trigger-arrow {
+            transform: rotate(180deg);
+        }
+        .formation-dropdown-menu {
+            display: none;
+            position: relative;
+            background: var(--bg-darker);
+            border: 1px solid var(--accent);
+            border-top: none;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            overflow: hidden;
+            z-index: 50;
+        }
+        .formation-dropdown-menu.show { display: block; }
+        .formation-option {
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: background 0.15s;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .formation-option:hover { background: rgba(0,230,118,0.08); color: var(--accent); }
+        .formation-option.active {
+            color: var(--accent);
+            background: rgba(0,230,118,0.06);
+        }
+        .formation-option-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--border-color);
+            flex-shrink: 0;
+        }
+        .formation-option.active .formation-option-dot { background: var(--accent); }
 
         .squad-controls {
             display: flex;
@@ -2712,6 +2948,7 @@
             /* Name label below card — shown only on mobile vertical */
             .pitch-slot-label {
                 display: block !important;
+                font-size: 0.65rem !important;
             }
 
             /* Bigger tap area for remove btn */
@@ -2726,6 +2963,65 @@
             /* Pitch slot: shift translate so card+label center at the coordinate */
             .pitch-slot {
                 transform: translate(-50%, -40%) !important;
+            }
+        }
+
+        /* Sub-responsive for smaller mobile screens (Squad Builder card downsizing in portrait) */
+        @media (max-width: 480px) {
+            .slot-empty-placeholder,
+            .pitch-player-card-container {
+                width: 54px !important;
+                height: 81px !important;
+                border-radius: 7px !important;
+            }
+            .pitch-player-card-container .player-card {
+                transform: translate(-50%, 0) scale(0.385) !important; /* 54/140 = 0.385 */
+            }
+            .slot-empty-placeholder span {
+                font-size: 0.5rem !important;
+            }
+            .slot-empty-placeholder i {
+                width: 14px !important;
+                height: 14px !important;
+            }
+            .pitch-slot-label {
+                font-size: 0.58rem !important;
+            }
+            .mini-remove-btn {
+                width: 17px !important;
+                height: 17px !important;
+                font-size: 0.72rem !important;
+                top: -4px !important;
+                right: -4px !important;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .slot-empty-placeholder,
+            .pitch-player-card-container {
+                width: 46px !important;
+                height: 69px !important;
+                border-radius: 6px !important;
+            }
+            .pitch-player-card-container .player-card {
+                transform: translate(-50%, 0) scale(0.328) !important; /* 46/140 = 0.328 */
+            }
+            .slot-empty-placeholder span {
+                font-size: 0.44rem !important;
+            }
+            .slot-empty-placeholder i {
+                width: 12px !important;
+                height: 12px !important;
+            }
+            .pitch-slot-label {
+                font-size: 0.52rem !important;
+            }
+            .mini-remove-btn {
+                width: 15px !important;
+                height: 15px !important;
+                font-size: 0.65rem !important;
+                top: -3px !important;
+                right: -3px !important;
             }
         }
 
@@ -2986,43 +3282,74 @@
 
                 <!-- Squad Stats and Actions Sidebar -->
                 <div class="squad-stats-panel">
-                    <div class="squad-stat-box">
-                        <div class="squad-stat-lbl">Chỉ số Đội hình</div>
-                        <div class="squad-stat-val" id="team-rating">00</div>
-                    </div>
-                    
-                    <div class="squad-stat-box">
-                        <div class="squad-stat-lbl">Độ ăn ý (Chemistry)</div>
-                        <div class="squad-stat-val chem" id="team-chemistry">0/33</div>
+                    <!-- Team OVR -->
+                    <div class="team-ovr-block">
+                        <div class="team-ovr-label">Team OVR</div>
+                        <div class="team-ovr-value" id="team-rating">00</div>
                     </div>
 
-                    <div class="form-group" style="margin-bottom:0;">
-                        <label for="formation-select">Sơ đồ chiến thuật</label>
-                        <div class="select-wrapper">
-                            <select id="formation-select" onchange="changeFormation()">
-                                <option value="4-3-3">4 - 3 - 3</option>
-                                <option value="4-3-3 Holding">4 - 3 - 3 Holding</option>
-                                <option value="4-3-3 Double Pivot">4 - 3 - 3 Double Pivot</option>
-                                <option value="4-3-2-1">4 - 3 - 2 - 1</option>
-                                <option value="4-4-2">4 - 4 - 2</option>
-                                <option value="4-4-2 Diamond">4 - 4 - 2 Diamond</option>
-                                <option value="4-4-2 Narrow">4 - 4 - 2 Narrow</option>
-                                <option value="4-4-1-1">4 - 4 - 1 - 1</option>
-                                <option value="4-2-3-1">4 - 2 - 3 - 1</option>
-                                <option value="4-1-3-2">4 - 1 - 3 - 2</option>
-                                <option value="4-1-4-1">4 - 1 - 4 - 1</option>
-                                <option value="3-4-3">3 - 4 - 3</option>
-                                <option value="3-4-3 Holding">3 - 4 - 3 Holding</option>
-                                <option value="3-5-2">3 - 5 - 2</option>
-                                <option value="3-4-2-1">3 - 4 - 2 - 1</option>
-                                <option value="3-5-1-1">3 - 5 - 1 - 1</option>
-                                <option value="5-3-2">5 - 3 - 2</option>
-                                <option value="5-4-1">5 - 4 - 1</option>
-                            </select>
+                    <!-- DEF / MID / ATK -->
+                    <div class="squad-zone-stats">
+                        <div class="zone-stat-box def">
+                            <div class="zone-stat-lbl">DEF</div>
+                            <div class="zone-stat-val" id="zone-def">--</div>
+                        </div>
+                        <div class="zone-stat-box mid">
+                            <div class="zone-stat-lbl">MID</div>
+                            <div class="zone-stat-val" id="zone-mid">--</div>
+                        </div>
+                        <div class="zone-stat-box atk">
+                            <div class="zone-stat-lbl">ATK</div>
+                            <div class="zone-stat-val" id="zone-atk">--</div>
                         </div>
                     </div>
 
-                    <div class="squad-controls" style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%; margin-top: 1.25rem;">
+                    <!-- Chemistry bar -->
+                    <div class="chem-block">
+                        <div class="chem-header">
+                            <span class="chem-label">⚗ Chemistry</span>
+                            <span class="chem-score" id="team-chemistry">0/33</span>
+                        </div>
+                        <div class="chem-bar-track">
+                            <div class="chem-bar-fill" id="chem-bar-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Formation custom dropdown -->
+                    <div>
+                        <span class="formation-label">⚽ Sơ đồ chiến thuật</span>
+                        <div class="formation-trigger" id="formation-trigger" onclick="toggleFormationDropdown()">
+                            <div class="formation-trigger-left">
+                                <div class="formation-icon">🗂</div>
+                                <span class="formation-trigger-name" id="formation-trigger-name">4-3-3</span>
+                            </div>
+                            <span class="formation-trigger-arrow">▼</span>
+                        </div>
+                        <div class="formation-dropdown-menu" id="formation-dropdown-menu"></div>
+                        <!-- Hidden select to maintain compatibility -->
+                        <select id="formation-select" onchange="changeFormation()" style="display:none;">
+                            <option value="4-3-3">4-3-3</option>
+                            <option value="4-3-3 Holding">4-3-3 Holding</option>
+                            <option value="4-3-3 Double Pivot">4-3-3 Double Pivot</option>
+                            <option value="4-3-2-1">4-3-2-1</option>
+                            <option value="4-4-2">4-4-2</option>
+                            <option value="4-4-2 Diamond">4-4-2 Diamond</option>
+                            <option value="4-4-2 Narrow">4-4-2 Narrow</option>
+                            <option value="4-4-1-1">4-4-1-1</option>
+                            <option value="4-2-3-1">4-2-3-1</option>
+                            <option value="4-1-3-2">4-1-3-2</option>
+                            <option value="4-1-4-1">4-1-4-1</option>
+                            <option value="3-4-3">3-4-3</option>
+                            <option value="3-4-3 Holding">3-4-3 Holding</option>
+                            <option value="3-5-2">3-5-2</option>
+                            <option value="3-4-2-1">3-4-2-1</option>
+                            <option value="3-5-1-1">3-5-1-1</option>
+                            <option value="5-3-2">5-3-2</option>
+                            <option value="5-4-1">5-4-1</option>
+                        </select>
+                    </div>
+
+                    <div class="squad-controls" style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
                         <button class="btn" onclick="exportSquadImage()" style="width: 100%; justify-content: center; gap: 8px;">
                             <i data-lucide="download"></i> Xuất ảnh đội hình
                         </button>
@@ -3201,11 +3528,12 @@
                 'Premier League', 'La Liga', 'Serie A', 'Bundesliga', 'Ligue 1',
                 'Eredivisie', 'Liga Portugal', 'Süper Lig', 'EFL Championship',
                 'Scottish Premiership', 'Danish Superliga', 'Russian PL',
-                'EFL League One', 'Austrian Bundesliga', 'Belgian Pro League', 'Others (UEFA)'
+                'EFL League One', 'Austrian Bundesliga', 'Belgian Pro League', 'Others (UEFA)',
+                'Serie B', '2. Bundesliga', 'Ligue 2', 'La Liga 2'
             ];
             const conmebolLeagues = ['Brasileirao Serie A', 'Liga Profesional de Fútbol', 'Others (CONMEBOL)'];
             const concacafLeagues = ['MLS'];
-            const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League'];
+            const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League', 'Qatar Stars League', 'UAE Pro League'];
             
             if (uefaLeagues.includes(leagueName)) return 'UEFA';
             if (conmebolLeagues.includes(leagueName)) return 'CONMEBOL';
@@ -3368,8 +3696,6 @@ const COUNTRY_FLAGS = ${JSON.stringify(COUNTRY_FLAGS, null, 4)};
 
 const COUNTRY_CODES = ${JSON.stringify(COUNTRY_CODES, null, 4)};
 
-const CLUB_BADGES = ${JSON.stringify(CLUB_BADGES, null, 4)};
-
 const SOFIFA_IDS = ${JSON.stringify(SOFIFA_IDS, null, 4)};
 
 const DEFAULT_PLAYERS = ${JSON.stringify(players, null, 4)};
@@ -3404,6 +3730,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 buildStaticDropdowns();
                 populateFormDropdowns();
                 initCustomDropdowns();
+                buildFormationDropdown();
             });
         });
 
@@ -3535,6 +3862,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
                     // Remove newly added duplicate Icons and Memoirs from local storage to force clean DB load
                     const duplicateIdsToRemove = [
+                        'bkerr-mm-sunderland', 'growell-mm-sunderland',
                         'g-muller-icons', 'l-matthaus-icons', 'p-lahm-icons', 'rummenigge-icons', 'm-sammer-icons',
                         'garrincha-icons', 'carlos-alberto-icons', 'cafu-icons', 'r-carlos-icons', 'buffon-icons',
                         'pirlo-icons', 'cannavaro-icons', 'p-rossi-icons', 'gattuso-icons', 'inzaghi-icons',
@@ -3597,17 +3925,15 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     const mbeumoLocal = players.find(p => p.id === "mbeumo-brentford");
                     if (mbeumoLocal && mbeumoLocal.club !== "Man United") {
                         mbeumoLocal.club = "Man United";
-                        mbeumoLocal.clubBadge = "";
                         needsSave = true;
                     }
 
-                    // Clear league, club, and clubBadge for icons and memoirs in local storage
+                    // Clear league and club for icons and memoirs in local storage
                     players.forEach(p => {
                         if (p.cardTheme === 'icons' || p.cardTheme === 'mm') {
-                            if (p.league !== '' || p.club !== '' || p.clubBadge !== '') {
+                            if (p.league !== '' || p.club !== '') {
                                 p.league = '';
                                 p.club = '';
-                                p.clubBadge = '';
                                 needsSave = true;
                             }
                         }
@@ -3673,14 +3999,12 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         if (p.id === 'arnold-66' && (p.club !== 'Real Madrid' || p.league !== 'La Liga')) {
                             p.club = 'Real Madrid';
                             p.league = 'La Liga';
-                            p.clubBadge = '⚪';
                             needsSave = true;
                         }
                         // L. Diaz to Bayern Munich
                         if (p.id === 'diaz-7' && (p.club !== 'Bayern Munich' || p.league !== 'Bundesliga')) {
                             p.club = 'Bayern Munich';
                             p.league = 'Bundesliga';
-                            p.clubBadge = '🔴';
                             needsSave = true;
                         }
                         // Kerkez to Liverpool
@@ -3691,15 +4015,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             if (p.club !== 'Liverpool' || p.league !== 'Premier League') {
                                 p.club = 'Liverpool';
                                 p.league = 'Premier League';
-                                p.clubBadge = '🔴';
                                 needsSave = true;
                             }
                         }
                         // Maldini should be Icons only, not EPL
-                        if (p.id === 'maldini-icons' && (p.league !== '' || p.club !== '' || p.clubBadge !== '')) {
+                        if (p.id === 'maldini-icons' && (p.league !== '' || p.club !== '')) {
                             p.league = '';
                             p.club = '';
-                            p.clubBadge = '';
                             needsSave = true;
                         }
                         // Dominik Szoboszlai rating 86
@@ -3762,7 +4084,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             p.position = 'LW';
                             p.rating = 83;
                             p.club = 'Liverpool';
-                            p.clubBadge = '🔴';
                             needsSave = true;
                         }
 
@@ -3897,7 +4218,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     if (kdb && kdb.club === "Man City") {
                         kdb.club = "Napoli";
                         kdb.league = "Serie A";
-                        kdb.clubBadge = "🔵";
                         needsSave = true;
                     }
 
@@ -3940,6 +4260,15 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         }
                     });
 
+                    // Auto-sync updated flags from DEFAULT_PLAYERS to local storage
+                    DEFAULT_PLAYERS.forEach(dp => {
+                        const p = players.find(x => x.id === dp.id);
+                        if (p && dp.flag && p.flag !== "" && p.flag !== dp.flag) {
+                            p.flag = dp.flag;
+                            needsSave = true;
+                        }
+                    });
+
                     if (needsSave) {
                         saveDatabase();
                     }
@@ -3963,7 +4292,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         }
 
         function saveDatabase() {
-            // Auto-migration step to fill missing league/clubBadge fields on legacy cards
+            // Auto-migration step to fill missing league fields on legacy cards
             let updated = false;
             players.forEach(p => {
                 if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends') {
@@ -3978,10 +4307,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         p.league = "Premier League";
                         updated = true;
                     }
-                }
-                if (!p.clubBadge && CLUB_BADGES[p.club]) {
-                    p.clubBadge = CLUB_BADGES[p.club];
-                    updated = true;
                 }
             });
 
@@ -4871,7 +5196,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const rating = parseInt(document.getElementById('player-rating').value);
             const photo = document.getElementById('player-photo').value;
             const cardTheme = document.getElementById('player-theme').value;
-            const clubBadge = club ? (CLUB_BADGES[club] || '⚽') : (cardTheme === 'icons' ? '⭐' : '');
 
             const altPositions = Array.from(
                 document.querySelectorAll('#alt-positions-grid input:checked')
@@ -4879,7 +5203,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             const playerData = {
                 id: id || 'player-' + Date.now(),
-                name, cardName, nationality, flag, league, club, clubBadge, position, altPositions, rating, photo, cardTheme
+                name, cardName, nationality, flag, league, club, position, altPositions, rating, photo, cardTheme
             };
 
             if (id) {
@@ -5216,8 +5540,41 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             saveDatabase();
         }
 
+        // Helper: convert external image URL to base64 data URL (to bypass CORS on canvas)
+        async function imgUrlToBase64(url) {
+            try {
+                const res = await fetch(url, { mode: 'cors', cache: 'force-cache' });
+                if (!res.ok) return null;
+                const blob = await res.blob();
+                return await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onloadend = () => resolve(reader.result);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(blob);
+                });
+            } catch {
+                return null;
+            }
+        }
+
+        // Helper: pre-load all <img> inside element to base64, returns array of {el, original}
+        async function prepareImagesForExport(container) {
+            const imgs = Array.from(container.querySelectorAll('img'));
+            const restoreList = [];
+            await Promise.all(imgs.map(async (img) => {
+                const src = img.getAttribute('src');
+                if (!src || src.startsWith('data:')) return; // already base64, skip
+                const b64 = await imgUrlToBase64(src);
+                if (b64) {
+                    restoreList.push({ el: img, original: src });
+                    img.src = b64;
+                }
+            }));
+            return restoreList;
+        }
+
         // Export Squad as Image
-        function exportSquadImage() {
+        async function exportSquadImage() {
             const pitch = document.getElementById('football-pitch');
             if (!pitch) return;
             
@@ -5230,33 +5587,28 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             // Add exporting class to hide UI elements (like remove buttons)
             pitch.classList.add('is-exporting');
 
-            // Temporarily replace the pitch's complex background-image gradients with a single flat color
-            // to prevent rendering glitches in html2canvas (e.g. black screen or missing stripes)
-            const bgWrapper = pitch.querySelector('.pitch-bg-wrapper');
-            let originalBg = "";
-            let originalBgImage = "";
-            if (bgWrapper) {
-                originalBg = bgWrapper.style.background;
-                originalBgImage = bgWrapper.style.backgroundImage;
-                bgWrapper.style.background = '#143819';
-                bgWrapper.style.backgroundImage = 'none';
-            }
+            const width = pitch.offsetWidth;
+            const height = pitch.offsetHeight;
+
+            // Pre-convert all external images to base64 to avoid CORS tainted canvas
+            const restoreList = await prepareImagesForExport(pitch);
 
             // Wait a tiny bit for DOM changes to settle
             setTimeout(() => {
-                html2canvas(pitch, {
-                    scale: 2, // High resolution export
-                    useCORS: true,
-                    allowTaint: false, // Prevents security errors for tainted canvas
-                    backgroundColor: '#143819', // Match pitch green
-                    logging: false
-                }).then(canvas => {
-                    // Restore original classes and backgrounds
+                domtoimage.toPng(pitch, {
+                    width: width * 2,
+                    height: height * 2,
+                    style: {
+                        transform: 'scale(2)',
+                        transformOrigin: 'top left',
+                        width: width + 'px',
+                        height: height + 'px'
+                    },
+                    bgcolor: '#143819'
+                }).then(dataUrl => {
+                    // Restore original img src
+                    restoreList.forEach(({ el, original }) => { el.src = original; });
                     pitch.classList.remove('is-exporting');
-                    if (bgWrapper) {
-                        bgWrapper.style.background = originalBg;
-                        bgWrapper.style.backgroundImage = originalBgImage;
-                    }
                     btn.innerHTML = originalHTML;
                     btn.disabled = false;
                     
@@ -5266,21 +5618,18 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     // Trigger image download
                     const link = document.createElement('a');
                     link.download = `squad_${formationName}.png`;
-                    link.href = canvas.toDataURL('image/png');
+                    link.href = dataUrl;
                     link.click();
                     showToast("Đã xuất ảnh đội hình thành công!");
                 }).catch(err => {
                     console.error('Error generating image:', err);
+                    restoreList.forEach(({ el, original }) => { el.src = original; });
                     pitch.classList.remove('is-exporting');
-                    if (bgWrapper) {
-                        bgWrapper.style.background = originalBg;
-                        bgWrapper.style.backgroundImage = originalBgImage;
-                    }
                     btn.innerHTML = originalHTML;
                     btn.disabled = false;
                     showToast("Có lỗi xảy ra khi tạo ảnh đội hình!");
                 });
-            }, 100);
+            }, 150);
         }
 
         // Clear pitch
@@ -5372,7 +5721,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                     <span class="select-row-pos">${p.position}</span>
                                 </div>
                                 <div class="select-row-details" style="display:flex; align-items:center; gap:0.4rem; margin-top:0.25rem;">
-                                    ${rowFlagHTML} <span>${p.nationality} • ${p.clubBadge} ${p.club}</span>
+                                    ${rowFlagHTML} <span>${p.nationality} • ${p.club}</span>
                                 </div>
                             </div>
                         </div>
@@ -5465,6 +5814,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             let count = 0;
             let activePlayersOnPitch = [];
 
+            // Zone accumulators
+            let defTotal = 0, defCount = 0;
+            let midTotal = 0, midCount = 0;
+            let atkTotal = 0, atkCount = 0;
+
             slots.forEach(slot => {
                 const pid = squad[slot];
                 const player = players.find(x => x.id === pid);
@@ -5472,14 +5826,31 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     totalRating += player.rating;
                     count++;
                     activePlayersOnPitch.push({ player, slot });
+
+                    // Classify by slot position key
+                    const s = slot.toUpperCase();
+                    if (s.includes('GK') || s.includes('CB') || s.includes('LB') || s.includes('RB') || s.includes('LWB') || s.includes('RWB') || s.includes('DF')) {
+                        defTotal += player.rating; defCount++;
+                    } else if (s.includes('ST') || s.includes('LW') || s.includes('RW') || s.includes('CF') || s.includes('SS')) {
+                        atkTotal += player.rating; atkCount++;
+                    } else {
+                        // CM, CAM, CDM, DM, LM, RM → MID
+                        midTotal += player.rating; midCount++;
+                    }
                 }
             });
 
+            // Team OVR
             const teamOvr = count > 0 ? Math.round(totalRating / count) : 0;
             document.getElementById('team-rating').textContent = teamOvr.toString().padStart(2, '0');
 
-            let totalChem = 0;
+            // Zone OVR
+            document.getElementById('zone-def').textContent = defCount > 0 ? Math.round(defTotal / defCount) : '--';
+            document.getElementById('zone-mid').textContent = midCount > 0 ? Math.round(midTotal / midCount) : '--';
+            document.getElementById('zone-atk').textContent = atkCount > 0 ? Math.round(atkTotal / atkCount) : '--';
 
+            // Chemistry
+            let totalChem = 0;
             activePlayersOnPitch.forEach(item => {
                 let pChem = 0;
                 const p = item.player;
@@ -5508,20 +5879,93 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
             const maxPossibleChem = count * 3;
             const chemEl = document.getElementById('team-chemistry');
+            const chemBar = document.getElementById('chem-bar-fill');
             chemEl.textContent = `${totalChem}/${maxPossibleChem}`;
-            
+
+            const chemPct = maxPossibleChem > 0 ? (totalChem / maxPossibleChem) * 100 : 0;
+            if (chemBar) chemBar.style.width = chemPct + '%';
+
+            let chemColor = 'var(--text-muted)';
+            let barColor = 'rgba(255,255,255,0.2)';
             if (count === 11) {
                 if (totalChem >= 28) {
-                    chemEl.style.color = 'var(--accent)';
+                    chemColor = 'var(--accent)';
+                    barColor = 'var(--accent)';
                 } else if (totalChem >= 15) {
-                    chemEl.style.color = '#e5a93b';
+                    chemColor = '#e5a93b';
+                    barColor = '#e5a93b';
                 } else {
-                    chemEl.style.color = '#ef4444';
+                    chemColor = '#ef4444';
+                    barColor = '#ef4444';
                 }
-            } else {
-                chemEl.style.color = 'var(--text-muted)';
             }
+            chemEl.style.color = chemColor;
+            if (chemBar) chemBar.style.background = barColor;
         }
+
+        // --- Formation custom dropdown ---
+        function buildFormationDropdown() {
+            const menu = document.getElementById('formation-dropdown-menu');
+            if (!menu) return;
+            const formations = Object.keys(FORMATIONS);
+            menu.innerHTML = '';
+            formations.forEach(f => {
+                const opt = document.createElement('div');
+                opt.className = 'formation-option';
+                opt.dataset.value = f;
+                const dot = document.createElement('div');
+                dot.className = 'formation-option-dot';
+                const label = document.createElement('span');
+                label.textContent = f;
+                opt.appendChild(dot);
+                opt.appendChild(label);
+                opt.onclick = (e) => {
+                    e.stopPropagation();
+                    selectFormation(f);
+                };
+                menu.appendChild(opt);
+            });
+            updateFormationDropdownActive();
+        }
+
+        function updateFormationDropdownActive() {
+            const current = document.getElementById('formation-select').value;
+            const triggerName = document.getElementById('formation-trigger-name');
+            if (triggerName) triggerName.textContent = current;
+            document.querySelectorAll('.formation-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.value === current);
+            });
+        }
+
+        function toggleFormationDropdown() {
+            const trigger = document.getElementById('formation-trigger');
+            const menu = document.getElementById('formation-dropdown-menu');
+            if (!trigger || !menu) return;
+            const isOpen = menu.classList.contains('show');
+            menu.classList.toggle('show', !isOpen);
+            trigger.classList.toggle('open', !isOpen);
+        }
+
+        function selectFormation(value) {
+            const sel = document.getElementById('formation-select');
+            if (sel) { sel.value = value; }
+            const trigger = document.getElementById('formation-trigger');
+            const menu = document.getElementById('formation-dropdown-menu');
+            if (trigger) trigger.classList.remove('open');
+            if (menu) menu.classList.remove('show');
+            updateFormationDropdownActive();
+            changeFormation();
+        }
+
+        // Close formation dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            const trigger = document.getElementById('formation-trigger');
+            const menu = document.getElementById('formation-dropdown-menu');
+            if (trigger && menu && !trigger.contains(e.target) && !menu.contains(e.target)) {
+                trigger.classList.remove('open');
+                menu.classList.remove('show');
+            }
+        });
 
         // --- 11. TOAST NOTIFICATION UTILS ---
         function showToast(message) {
