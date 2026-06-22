@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image-more/2.8.0/dom-to-image-more.min.js"></script>
     <script src="football_data.js"></script>
+    <script src="simulation_engine.js"></script>
 
     <style>
         :root {
@@ -2315,7 +2316,7 @@
             width: 0%;
         }
 
-        /* --- Formation custom dropdown --- */
+        /* --- Formation custom dropdown (2-level) --- */
         .formation-label {
             font-size: 0.7rem;
             font-weight: 800;
@@ -2337,6 +2338,7 @@
             cursor: pointer;
             transition: border-color 0.2s, background 0.2s;
             user-select: none;
+            position: relative;
         }
         .formation-trigger:hover {
             border-color: var(--accent);
@@ -2344,8 +2346,6 @@
         }
         .formation-trigger.open {
             border-color: var(--accent);
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
         }
         .formation-trigger-left {
             display: flex;
@@ -2375,34 +2375,104 @@
         .formation-trigger.open .formation-trigger-arrow {
             transform: rotate(180deg);
         }
+
+        /* --- Primary dropdown panel --- */
         .formation-dropdown-menu {
             display: none;
-            position: relative;
-            background: var(--bg-darker);
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            width: 100%;
+            background: var(--bg-card);
             border: 1px solid var(--accent);
-            border-top: none;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
+            border-radius: 12px;
+            z-index: 200;
             overflow: hidden;
-            z-index: 50;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
         }
         .formation-dropdown-menu.show { display: block; }
+
+        /* --- Category row (Back 3 / Back 4 / Back 5) --- */
+        .formation-category {
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .formation-category:last-child { border-bottom: none; }
+
+        /* Category header line */
+        .formation-category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.65rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: background 0.15s, color 0.15s;
+            user-select: none;
+        }
+        .formation-category-header:hover {
+            background: rgba(0,230,118,0.07);
+            color: var(--accent);
+        }
+        .formation-category.submenu-open .formation-category-header {
+            background: rgba(0,230,118,0.1);
+            color: var(--accent);
+        }
+        .formation-category-left {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .formation-category-badge {
+            width: 28px; height: 20px;
+            background: rgba(0,230,118,0.12);
+            border: 1px solid rgba(0,230,118,0.22);
+            border-radius: 5px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .formation-category-arrow {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            transition: transform 0.25s;
+        }
+        .formation-category.submenu-open .formation-category-arrow {
+            transform: rotate(90deg);
+        }
+
+        /* --- Submenu accordion (inline, below category) --- */
+        .formation-submenu {
+            display: none;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid rgba(0,230,118,0.12);
+        }
+        .formation-category.submenu-open .formation-submenu {
+            display: block;
+        }
         .formation-option {
-            padding: 0.6rem 1rem;
+            padding: 0.5rem 1rem 0.5rem 2.1rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
             color: var(--text-main);
-            transition: background 0.15s;
+            transition: background 0.12s, color 0.12s;
             font-family: 'Montserrat', sans-serif;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
         }
-        .formation-option:hover { background: rgba(0,230,118,0.08); color: var(--accent); }
+        .formation-option:last-child { border-bottom: none; }
+        .formation-option:hover { background: rgba(0,230,118,0.09); color: var(--accent); }
         .formation-option.active {
             color: var(--accent);
-            background: rgba(0,230,118,0.06);
+            background: rgba(0,230,118,0.07);
         }
         .formation-option-dot {
             width: 6px; height: 6px;
@@ -3131,6 +3201,349 @@
             animation: spin 1s linear infinite;
             display: inline-block;
         }
+
+        /* --- UCL Simulation Styling --- */
+        .simulation-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 992px) {
+            .simulation-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .sim-panel {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .sim-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .sim-header-row h2 {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            font-size: 1.25rem;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .ucl-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        .ucl-table th, .ucl-table td {
+            padding: 0.5rem 0.4rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .ucl-table th {
+            color: rgba(255,255,255,0.5);
+            font-weight: 500;
+        }
+        .ucl-table tr.user-row {
+            background: rgba(16, 185, 129, 0.15);
+            font-weight: 600;
+            color: #10b981;
+        }
+        .ucl-table tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        .ucl-table tr.user-row:hover {
+            background: rgba(16, 185, 129, 0.2);
+        }
+        .ucl-table .rank-num {
+            width: 28px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .ucl-table .team-name-cell {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .ucl-table .stat-num {
+            text-align: center;
+            width: 32px;
+        }
+        .ucl-table .stat-pts {
+            text-align: center;
+            width: 40px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .ucl-table tr.user-row .stat-pts {
+            color: #10b981;
+        }
+        .sim-btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .sim-matches-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 0.25rem;
+        }
+        .sim-match-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 8px;
+            padding: 0.6rem 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+        .sim-match-item.has-played {
+            background: rgba(255,255,255,0.01);
+        }
+        .sim-match-team {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sim-match-team.home {
+            justify-content: flex-end;
+            text-align: right;
+        }
+        .sim-match-team.away {
+            justify-content: flex-start;
+            text-align: left;
+        }
+        .sim-match-score {
+            width: 70px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            background: rgba(255,255,255,0.08);
+            border-radius: 4px;
+            padding: 0.2rem 0;
+            margin: 0 0.5rem;
+            color: #fff;
+        }
+        .sim-match-score.unplayed {
+            color: rgba(255,255,255,0.3);
+            font-weight: 400;
+        }
+        .badge-pos {
+            font-size: 0.7rem;
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .badge-home {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .badge-away {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .sim-setup-box {
+            max-width: 500px;
+            margin: 4rem auto;
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+        }
+        .sim-setup-title {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #fff;
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .sim-setup-stats {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+        .sim-setup-stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .sim-setup-stat-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+        }
+        .sim-setup-stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .bracket-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 0.25rem;
+        }
+        .bracket-match {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .sim-match-item.user-match,
+        .bracket-match.user-match {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%) !important;
+            border: 1px solid rgba(16, 185, 129, 0.4) !important;
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+        }
+        .bracket-match-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+        .bracket-match-row.winner {
+            font-weight: 700;
+            color: #10b981;
+        }
+        .bracket-match-row.winner .score-cell {
+            color: #10b981;
+        }
+        .score-cell {
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.06);
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        /* --- UCL Theme Overrides --- */
+        #simulation-tab {
+            background: radial-gradient(circle at 50% -20%, #0e214d 0%, #060e22 70%, #020610 100%) !important;
+            border: 1px solid rgba(245, 200, 66, 0.15) !important;
+            border-radius: 16px;
+            padding: 1.5rem !important;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        #simulation-tab::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                radial-gradient(rgba(245, 200, 66, 0.02) 1px, transparent 0),
+                radial-gradient(rgba(255, 255, 255, 0.015) 1.5px, transparent 0);
+            background-size: 32px 32px, 64px 64px;
+            background-position: 0 0, 16px 16px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #simulation-tab .sim-panel,
+        #simulation-tab .sim-setup-box {
+            background: rgba(4, 11, 27, 0.85) !important;
+            border: 1px solid rgba(245, 200, 66, 0.25) !important;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            position: relative;
+            z-index: 1;
+        }
+
+        #simulation-tab .ucl-table tr.user-row {
+            background: rgba(245, 200, 66, 0.12) !important;
+            color: #f5c842 !important;
+            border-left: 3px solid #f5c842;
+        }
+
+        #simulation-tab .ucl-table tr.user-row .stat-pts {
+            color: #f5c842 !important;
+        }
+
+        #simulation-tab .sim-match-item.user-match,
+        #simulation-tab .bracket-match.user-match {
+            background: linear-gradient(135deg, rgba(245, 200, 66, 0.15) 0%, rgba(14, 33, 77, 0.2) 100%) !important;
+            border: 1px solid rgba(245, 200, 66, 0.5) !important;
+            box-shadow: 0 0 15px rgba(245, 200, 66, 0.25) !important;
+        }
+
+        #simulation-tab .bracket-match-row.winner {
+            color: #f5c842 !important;
+        }
+
+        #simulation-tab .bracket-match-row.winner .score-cell {
+            color: #f5c842 !important;
+            background: rgba(245, 200, 66, 0.15) !important;
+        }
+
+        #simulation-tab .score-cell {
+            border: 1px solid rgba(245, 200, 66, 0.2);
+            background: rgba(4, 11, 27, 0.6);
+        }
+
+        #simulation-tab .btn {
+            background: linear-gradient(135deg, #0e214d 0%, #1e3d82 100%) !important;
+            border: 1px solid rgba(245, 200, 66, 0.4) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            transition: all 0.25s ease;
+        }
+
+        #simulation-tab .btn:hover {
+            background: linear-gradient(135deg, #1e3d82 0%, #f5c842 100%) !important;
+            box-shadow: 0 0 15px rgba(245, 200, 66, 0.35);
+            border-color: #f5c842 !important;
+        }
+
+        #simulation-tab .btn-secondary {
+            background: rgba(4, 11, 27, 0.6) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        #simulation-tab .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(245, 200, 66, 0.4) !important;
+            color: #fff !important;
+        }
     </style>
 </head>
 <body>
@@ -3157,6 +3570,9 @@
                     </button>
                     <button class="tab-btn" onclick="switchTab('squad')">
                         <i data-lucide="footprints"></i> Squad Builder
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('simulation')">
+                        <i data-lucide="trophy"></i> UCL Simulation
                     </button>
                 </div>
             </div>
@@ -3315,8 +3731,8 @@
                         </div>
                     </div>
 
-                    <!-- Formation custom dropdown -->
-                    <div>
+                    <!-- Formation custom dropdown (2-level) -->
+                    <div style="position: relative;">
                         <span class="formation-label">⚽ Sơ đồ chiến thuật</span>
                         <div class="formation-trigger" id="formation-trigger" onclick="toggleFormationDropdown()">
                             <div class="formation-trigger-left">
@@ -3331,6 +3747,7 @@
                             <option value="4-3-3">4-3-3</option>
                             <option value="4-3-3 Holding">4-3-3 Holding</option>
                             <option value="4-3-3 Double Pivot">4-3-3 Double Pivot</option>
+                            <option value="4-3-3 Attack">4-3-3 Attack</option>
                             <option value="4-3-2-1">4-3-2-1</option>
                             <option value="4-4-2">4-4-2</option>
                             <option value="4-4-2 Diamond">4-4-2 Diamond</option>
@@ -3338,6 +3755,7 @@
                             <option value="4-4-1-1">4-4-1-1</option>
                             <option value="4-2-3-1">4-2-3-1</option>
                             <option value="4-1-3-2">4-1-3-2</option>
+                            <option value="4-1-3-2 Narrow">4-1-3-2 Narrow</option>
                             <option value="4-1-4-1">4-1-4-1</option>
                             <option value="3-4-3">3-4-3</option>
                             <option value="3-4-3 Holding">3-4-3 Holding</option>
@@ -3350,6 +3768,9 @@
                     </div>
 
                     <div class="squad-controls" style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
+                        <button class="btn" onclick="randomizeSquad()" style="width: 100%; justify-content: center; gap: 8px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; border: none;">
+                            <i data-lucide="shuffle"></i> Random toàn bộ đội hình
+                        </button>
                         <button class="btn" onclick="exportSquadImage()" style="width: 100%; justify-content: center; gap: 8px;">
                             <i data-lucide="download"></i> Xuất ảnh đội hình
                         </button>
@@ -3358,6 +3779,13 @@
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB: UCL SIMULATION ================= -->
+        <div id="simulation-tab" class="tab-content" style="padding: 1rem 0;">
+            <div id="sim-app-container">
+                <!-- Dynamically populated via JS -->
             </div>
         </div>
     </div>
@@ -3588,7 +4016,7 @@
             if (slotPos === 'LDM' || slotPos === 'RDM' || slotPos === 'CDM' || slotPos === 'LCDM' || slotPos === 'RCDM') {
                 return 'CDM';
             }
-            if (slotPos === 'CAM1' || slotPos === 'CAM2') {
+            if (slotPos === 'CAM1' || slotPos === 'CAM2' || slotPos === 'LCAM' || slotPos === 'RCAM') {
                 return 'CAM';
             }
             return slotPos;
@@ -3618,6 +4046,8 @@
                 "CAM": ["CAM"],
                 "CAM1": ["CAM", "CF"],
                 "CAM2": ["CAM", "CF"],
+                "LCAM": ["CAM", "CF"],
+                "RCAM": ["CAM", "CF"],
                 "LW": ["LW", "LM"],
                 "RW": ["RW", "RM"],
                 "ST": ["ST", "CF"],
@@ -4584,6 +5014,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 document.getElementById('squad-tab').classList.add('active');
                 buildPitch();
                 updateSquadStats();
+            } else if (tabName === 'simulation') {
+                document.querySelector('[onclick="switchTab(\'simulation\')"]').classList.add('active');
+                document.getElementById('simulation-tab').classList.add('active');
+                initSimulationUI();
             }
         }
 
@@ -5632,6 +6066,34 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }, 150);
         }
 
+        function randomizeSquad() {
+            if (players.length === 0) {
+                showToast("Không có cầu thủ nào trong thư viện để tạo đội hình!");
+                return;
+            }
+            const formationVal = document.getElementById('formation-select').value;
+            const slotsData = FORMATIONS[formationVal];
+            
+            squad = {};
+            // Xáo trộn danh sách cầu thủ để chọn ngẫu nhiên không trùng lặp
+            const shuffled = [...players].sort(() => Math.random() - 0.5);
+            let idx = 0;
+            for (let slotPos in slotsData) {
+                if (idx < shuffled.length) {
+                    squad[slotPos] = shuffled[idx].id;
+                    idx++;
+                } else {
+                    // Nếu số lượng cầu thủ ít hơn số vị trí, cho phép trùng lặp
+                    const randPlayer = players[Math.floor(Math.random() * players.length)];
+                    squad[slotPos] = randPlayer.id;
+                }
+            }
+            saveDatabase();
+            buildPitch();
+            updateSquadStats();
+            showToast("Đã random ngẫu nhiên toàn bộ đội hình!");
+        }
+
         // Clear pitch
         function clearSquad() {
             if (confirm("Bạn có chắc chắn muốn xóa hết cầu thủ ra khỏi đội hình chiến thuật?")) {
@@ -5903,28 +6365,71 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (chemBar) chemBar.style.background = barColor;
         }
 
-        // --- Formation custom dropdown ---
+        // --- Formation custom dropdown (2-level: Back 3 / Back 4 / Back 5) ---
+        const FORMATION_GROUPS = {
+            'Back 4': { badge: '4', prefix: '4' },
+            'Back 3': { badge: '3', prefix: '3' },
+            'Back 5': { badge: '5', prefix: '5' },
+        };
+
         function buildFormationDropdown() {
             const menu = document.getElementById('formation-dropdown-menu');
             if (!menu) return;
-            const formations = Object.keys(FORMATIONS);
+            const allFormations = Object.keys(FORMATIONS);
             menu.innerHTML = '';
-            formations.forEach(f => {
-                const opt = document.createElement('div');
-                opt.className = 'formation-option';
-                opt.dataset.value = f;
-                const dot = document.createElement('div');
-                dot.className = 'formation-option-dot';
-                const label = document.createElement('span');
-                label.textContent = f;
-                opt.appendChild(dot);
-                opt.appendChild(label);
-                opt.onclick = (e) => {
+
+            Object.entries(FORMATION_GROUPS).forEach(([groupName, groupMeta]) => {
+                const groupFormations = allFormations.filter(f => f.startsWith(groupMeta.prefix));
+                if (groupFormations.length === 0) return;
+
+                // Category wrapper
+                const cat = document.createElement('div');
+                cat.className = 'formation-category';
+
+                // Clickable header
+                const header = document.createElement('div');
+                header.className = 'formation-category-header';
+                header.innerHTML = `
+                    <div class="formation-category-left">
+                        <div class="formation-category-badge">${groupMeta.badge}</div>
+                        <span>${groupName}</span>
+                    </div>
+                    <span class="formation-category-arrow">▶</span>
+                `;
+                header.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    selectFormation(f);
-                };
-                menu.appendChild(opt);
+                    const isOpen = cat.classList.contains('submenu-open');
+                    // Close all siblings
+                    menu.querySelectorAll('.formation-category').forEach(c => c.classList.remove('submenu-open'));
+                    if (!isOpen) cat.classList.add('submenu-open');
+                });
+                cat.appendChild(header);
+
+                // Submenu (inline accordion)
+                const sub = document.createElement('div');
+                sub.className = 'formation-submenu';
+
+                groupFormations.forEach(f => {
+                    const opt = document.createElement('div');
+                    opt.className = 'formation-option';
+                    opt.dataset.value = f;
+                    const dot = document.createElement('div');
+                    dot.className = 'formation-option-dot';
+                    const label = document.createElement('span');
+                    label.textContent = f;
+                    opt.appendChild(dot);
+                    opt.appendChild(label);
+                    opt.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        selectFormation(f);
+                    });
+                    sub.appendChild(opt);
+                });
+
+                cat.appendChild(sub);
+                menu.appendChild(cat);
             });
+
             updateFormationDropdownActive();
         }
 
@@ -5932,8 +6437,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const current = document.getElementById('formation-select').value;
             const triggerName = document.getElementById('formation-trigger-name');
             if (triggerName) triggerName.textContent = current;
-            document.querySelectorAll('.formation-option').forEach(opt => {
+            document.querySelectorAll('#formation-dropdown-menu .formation-option').forEach(opt => {
                 opt.classList.toggle('active', opt.dataset.value === current);
+            });
+            // Auto-open parent category of the active formation
+            document.querySelectorAll('#formation-dropdown-menu .formation-category').forEach(cat => {
+                const hasActive = !!cat.querySelector('.formation-option.active');
+                if (hasActive) cat.classList.add('submenu-open');
             });
         }
 
@@ -6032,9 +6542,776 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             menu.style.width = menuW + 'px';
             menu.style.maxWidth = menuW + 'px';
         }
+        // --- UCL SIMULATION UI LOGIC ---
+        window.currentUCLSim = null;
 
-        // Patch initCustomDropdowns to also reposition on show
-        const _origInitCustomDropdowns = initCustomDropdowns;
+        const FLAG_MAP = {
+            "ENG": "gb-eng",
+            "ESP": "es",
+            "GER": "de",
+            "ITA": "it",
+            "FRA": "fr",
+            "POR": "pt",
+            "NED": "nl",
+            "SCO": "gb-sct",
+            "BEL": "be",
+            "TUR": "tr",
+            "AUT": "at",
+            "CZE": "cz",
+            "CRO": "hr",
+            "SRB": "rs",
+            "DEN": "dk",
+            "GRE": "gr",
+            "SUI": "ch",
+            "HUN": "hu",
+            "UKR": "ua",
+            "POL": "pl",
+            "CYP": "cy",
+            "BLR": "by",
+            "SWE": "se",
+            "NOR": "no",
+            "BUL": "bg",
+            "RUS": "ru",
+            "USR": "star"
+        };
+
+        function getSimFlagImgHTML(countryCode) {
+            const flagFile = FLAG_MAP[countryCode];
+            if (!flagFile) {
+                return `<span style="font-size: 1.1rem; vertical-align: middle;">🏳️</span>`;
+            }
+            if (flagFile === "star") {
+                return `<i data-lucide="star" style="width: 14px; height: 14px; fill: #ffd700; color: #ffd700; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>`;
+            }
+            return `<img src="https://flagcdn.com/w40/${flagFile}.png" class="sim-flag-img" alt="${countryCode}" style="width: 18px; height: 12px; object-fit: cover; border-radius: 1px; box-shadow: 0 1px 2px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15); display: inline-block; vertical-align: middle; margin-right: 4px;">`;
+        }
+
+        function getSquadStatsForSim() {
+            const formationVal = document.getElementById('formation-select').value;
+            if (!FORMATIONS[formationVal]) {
+                return { atk: 60, def: 60, mid: 60, count: 0 };
+            }
+            const slots = Object.keys(FORMATIONS[formationVal]);
+            
+            let totalRating = 0;
+            let count = 0;
+            let defTotal = 0, defCount = 0;
+            let midTotal = 0, midCount = 0;
+            let atkTotal = 0, atkCount = 0;
+
+            slots.forEach(slot => {
+                const pid = squad[slot];
+                const player = players.find(x => x.id === pid);
+                if (player) {
+                    totalRating += player.rating;
+                    count++;
+                    const s = slot.toUpperCase();
+                    if (s.includes('GK') || s.includes('CB') || s.includes('LB') || s.includes('RB') || s.includes('LWB') || s.includes('RWB') || s.includes('DF')) {
+                        defTotal += player.rating; defCount++;
+                    } else if (s.includes('ST') || s.includes('LW') || s.includes('RW') || s.includes('CF') || s.includes('SS')) {
+                        atkTotal += player.rating; atkCount++;
+                    } else {
+                        midTotal += player.rating; midCount++;
+                    }
+                }
+            });
+
+            return {
+                atk: atkCount > 0 ? Math.round(atkTotal / atkCount) : 60,
+                def: defCount > 0 ? Math.round(defTotal / defCount) : 60,
+                mid: midCount > 0 ? Math.round(midTotal / midCount) : 60,
+                count: count
+            };
+        }
+
+        function initSimulationUI() {
+            const container = document.getElementById('sim-app-container');
+            if (!container) return;
+
+            if (!window.currentUCLSim) {
+                // RENDER SETUP SCREEN
+                const stats = getSquadStatsForSim();
+                let warningHTML = '';
+                if (stats.count < 11) {
+                    warningHTML = `
+                        <div style="background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #fca5a5; padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; text-align: left; display: flex; gap: 8px; align-items: start; margin-top: 0.5rem;">
+                            <i data-lucide="alert-triangle" style="flex-shrink:0; width:18px; height:18px; margin-top:2px;"></i>
+                            <span>Đội hình của bạn hiện tại mới có <strong>${stats.count}/11</strong> cầu thủ. Rating sẽ bị giảm (default: 60) cho các vị trí thiếu. Bạn nên điền đầy đủ 11 cầu thủ ở tab <strong>Squad Builder</strong> trước!</span>
+                        </div>
+                    `;
+                }
+
+                container.innerHTML = `
+                    <div class="sim-setup-box">
+                        <div style="font-size: 3rem; animation: pulse 2s infinite;">🏆</div>
+                        <div class="sim-setup-title">UEFA CHAMPIONS LEAGUE</div>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                            Bắt đầu hành trình chinh phục đỉnh cao châu Âu với thể thức 36 đội hoàn toàn mới. Bốc thăm bảng đấu Swiss Stage và so tài với các đại gia hàng đầu!
+                        </p>
+                        
+                        <div class="sim-setup-stats">
+                            <div class="sim-setup-stat-item">
+                                <div class="sim-setup-stat-label">TẤN CÔNG (ATK)</div>
+                                <div class="sim-setup-stat-value" style="color: #f43f5e;">${stats.atk}</div>
+                            </div>
+                            <div class="sim-setup-stat-item" style="border-left: 1px solid rgba(255,255,255,0.08); border-right: 1px solid rgba(255,255,255,0.08);">
+                                <div class="sim-setup-stat-label">TUYẾN GIỮA (MID)</div>
+                                <div class="sim-setup-stat-value" style="color: #3b82f6;">${stats.mid}</div>
+                            </div>
+                            <div class="sim-setup-stat-item">
+                                <div class="sim-setup-stat-label">PHÒNG THỦ (DEF)</div>
+                                <div class="sim-setup-stat-value" style="color: #10b981;">${stats.def}</div>
+                            </div>
+                        </div>
+
+                        ${warningHTML}
+
+                        <div class="form-group" style="text-align: left; width: 100%; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                            <label for="sim-team-name" style="font-weight: 500; font-size: 0.9rem;">Tên đội bóng của bạn:</label>
+                            <input type="text" id="sim-team-name" value="My Squad" placeholder="Ví dụ: Pedro FC" style="width: 100%; font-size: 1rem;">
+                        </div>
+
+                        <button class="btn" onclick="startNewSimulation()" style="width: 100%; justify-content: center; padding: 0.85rem; font-size: 1.05rem; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: #fff; border: none;">
+                            <i data-lucide="shuffle"></i> BỐC THĂM VÀ BẮT ĐẦU GIẢI
+                        </button>
+                    </div>
+                `;
+                lucide.createIcons();
+            } else {
+                renderSimulationDashboard();
+            }
+        }
+
+        function startNewSimulation() {
+            const teamNameInput = document.getElementById('sim-team-name');
+            const teamName = teamNameInput ? teamNameInput.value.trim() || "My Squad" : "My Squad";
+            const stats = getSquadStatsForSim();
+
+            window.currentUCLSim = new UCLSimulation(teamName, stats.atk, stats.def, stats.mid);
+            window.currentUCLSim.drawTeams();
+            showToast("Bốc thăm thành công! Khởi tạo lịch thi đấu Swiss Stage 8 vòng đấu.");
+            renderSimulationDashboard();
+        }
+
+        function renderSimulationDashboard() {
+            const container = document.getElementById('sim-app-container');
+            if (!container || !window.currentUCLSim) return;
+
+            const sim = window.currentUCLSim;
+
+            if (sim.stage === "swiss") {
+                renderSwissStage(sim, container);
+            } else if (sim.stage === "playoff") {
+                renderKnockoutStage(sim, container, "Vòng Play-off Knockout (Đội 9-24)");
+            } else if (sim.stage === "r16") {
+                renderKnockoutStage(sim, container, "Vòng 1/8 (Round of 16)");
+            } else if (sim.stage === "qf") {
+                renderKnockoutStage(sim, container, "Vòng Tứ kết (Quarter-finals)");
+            } else if (sim.stage === "sf") {
+                renderKnockoutStage(sim, container, "Vòng Bán kết (Semi-finals)");
+            } else if (sim.stage === "final") {
+                renderKnockoutStage(sim, container, "Trận Chung kết (Final - Sân trung lập)");
+            } else if (sim.stage === "ended") {
+                renderEndedStage(sim, container);
+            }
+            lucide.createIcons();
+        }
+
+        function renderSwissStage(sim, container) {
+            // Hiển thị giao diện 2 cột: Bảng xếp hạng bên trái, Lịch thi đấu vòng hiện tại bên phải
+            let tableRows = sim.swissTable.map((t, idx) => {
+                const rank = idx + 1;
+                const isUser = t.isUser;
+                const flagHTML = getSimFlagImgHTML(t.country);
+                
+                // Color zones
+                let rankClass = '';
+                if (rank <= 8) rankClass = 'style="color: #f5c842; font-weight: 700;"'; // Top 8: Vào thẳng (UCL Gold)
+                else if (rank <= 24) rankClass = 'style="color: #3b82f6;"'; // 9-24: Playoff (Blue)
+                else rankClass = 'style="color: #ef4444; opacity: 0.6;"'; // 25-36: Bị loại (Red/Muted)
+
+                return `
+                    <tr class="${isUser ? 'user-row' : ''}">
+                        <td class="rank-num" ${isUser ? '' : rankClass}>${rank}</td>
+                        <td>
+                            <div class="team-name-cell" title="ATK: ${t.atk} | MID: ${t.mid} | DEF: ${t.def}">
+                                <span>${flagHTML}</span>
+                                <strong>${t.name}</strong>
+                            </div>
+                        </td>
+                        <td class="stat-num">${t.played}</td>
+                        <td class="stat-num" style="color: rgba(255,255,255,0.6);">${t.w}</td>
+                        <td class="stat-num" style="color: rgba(255,255,255,0.6);">${t.d}</td>
+                        <td class="stat-num" style="color: rgba(255,255,255,0.6);">${t.l}</td>
+                        <td class="stat-num" style="font-weight: 500;">${t.gd > 0 ? '+' + t.gd : t.gd}</td>
+                        <td class="stat-pts">${t.pts}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            const isRoundActive = sim.currentRound < 8;
+            let roundControlsHTML = '';
+            if (isRoundActive) {
+                if (sim.roundPhase === "results") {
+                    const nextText = (sim.currentRound === 7) ? "TIẾN VÀO VÒNG LOẠI TRỰC TIẾP" : `TIẾN VÀO VÒNG ${sim.currentRound + 2}`;
+                    const nextClick = (sim.currentRound === 7) ? "nextSwissRound()" : "nextSwissRound()";
+                    roundControlsHTML = `
+                        <div class="sim-btn-group">
+                            <button class="btn" onclick="${nextClick}">
+                                <i data-lucide="chevron-right"></i> ${nextText}
+                            </button>
+                        </div>
+                    `;
+                } else {
+                    roundControlsHTML = `
+                        <div class="sim-btn-group">
+                            <button class="btn" onclick="simNextRound()">
+                                <i data-lucide="play"></i> Mô phỏng Vòng ${sim.currentRound + 1}
+                            </button>
+                            <button class="btn btn-secondary" onclick="simAllSwiss()">
+                                <i data-lucide="fast-forward"></i> Mô phỏng toàn bộ Swiss
+                            </button>
+                        </div>
+                    `;
+                }
+            } else {
+                roundControlsHTML = `
+                    <button class="btn" onclick="goToKnockouts()">
+                        <i data-lucide="chevron-right"></i> TIẾN VÀO VÒNG LOẠI TRỰC TIẾP
+                    </button>
+                `;
+            }
+
+            // Danh sách trận đấu vòng hiện tại (hoặc vòng vừa qua nếu đã kết thúc 8 vòng)
+            const displayRoundIdx = Math.min(sim.currentRound, 7);
+            const roundMatches = sim.swissMatches[displayRoundIdx];
+            
+            let matchesHTML = roundMatches.map(m => {
+                const played = m.goalsHome !== undefined && m.goalsHome !== null;
+                const scoreHome = played ? m.goalsHome : '-';
+                const scoreAway = played ? m.goalsAway : '-';
+                const flagHomeHTML = getSimFlagImgHTML(m.home.country);
+                const flagAwayHTML = getSimFlagImgHTML(m.away.country);
+                const isUserMatch = m.home.isUser || m.away.isUser;
+
+                return `
+                    <div class="sim-match-item ${played ? 'has-played' : ''} ${isUserMatch ? 'user-match' : ''}">
+                        <div class="sim-match-team home" style="${m.home.isUser ? 'color:#f5c842;font-weight:700;' : ''}">
+                            <span>${m.home.name}</span>
+                            <span>${flagHomeHTML}</span>
+                        </div>
+                        <div class="sim-match-score ${played ? '' : 'unplayed'}">
+                            ${scoreHome} : ${scoreAway}
+                        </div>
+                        <div class="sim-match-team away" style="${m.away.isUser ? 'color:#f5c842;font-weight:700;' : ''}">
+                            <span>${flagAwayHTML}</span>
+                            <span>${m.away.name}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = `
+                <div class="sim-header-row" style="border: none; margin-bottom: 0;">
+                    <div>
+                        <h1 style="font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 1.5rem; font-weight: 800; color: #fff; margin:0;">
+                            SWISS STAGE — VÒNG ${sim.currentRound}/8
+                        </h1>
+                        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem; margin: 3px 0 0 0;">
+                            * Top 8: Vào thẳng vòng 1/8. Rank 9-24: Đá Play-off. Rank 25-36: Bị loại.
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="resetSimulation()" style="padding: 0.4rem 0.75rem; font-size: 0.8rem; background: rgba(239,68,68,0.15); border-color:#ef4444; color:#fff;">
+                        <i data-lucide="rotate-ccw" style="width:13px;height:13px;"></i> Reset Giải Đấu
+                    </button>
+                </div>
+
+                <div class="simulation-container">
+                    <!-- Column 1: Swiss Table -->
+                    <div class="sim-panel">
+                        <div class="sim-header-row">
+                            <h2><i data-lucide="list-ordered"></i> Bảng Xếp Hạng</h2>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table class="ucl-table">
+                                <thead>
+                                    <tr>
+                                        <th class="rank-num">#</th>
+                                        <th>Đội bóng</th>
+                                        <th class="stat-num">Trận</th>
+                                        <th class="stat-num">T</th>
+                                        <th class="stat-num">H</th>
+                                        <th class="stat-num">B</th>
+                                        <th class="stat-num">HS</th>
+                                        <th class="stat-pts">Điểm</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${tableRows}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Matches & Controls -->
+                    <div class="sim-panel">
+                        <div class="sim-header-row">
+                            <h2><i data-lucide="calendar"></i> Lịch thi đấu vòng ${displayRoundIdx + 1}</h2>
+                        </div>
+                        <div class="sim-matches-list">
+                            ${matchesHTML}
+                        </div>
+                        <div style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem;">
+                            ${roundControlsHTML}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderKnockoutStage(sim, container, stageTitle) {
+            let matches = [];
+            if (sim.stage === "playoff") matches = sim.playoffMatches;
+            else if (sim.stage === "r16") matches = sim.r16Matches;
+            else if (sim.stage === "qf") matches = sim.qfMatches;
+            else if (sim.stage === "sf") matches = sim.sfMatches;
+            else if (sim.stage === "final") matches = [sim.finalMatch];
+
+            // Setup action button (lượt đi/về/cả cặp)
+            let actionBtnHTML = '';
+            if (sim.stage === "playoff") {
+                if (sim.roundPhase === "results") {
+                    actionBtnHTML = `<button class="btn" onclick="nextPlayoffToR16()" style="width:100%"><i data-lucide="chevron-right"></i> Tiến vào Vòng 1/8</button>`;
+                } else {
+                    const leg1Played = matches[0] && matches[0].goalsHome1 !== null;
+                    if (!leg1Played) {
+                        actionBtnHTML = `<button class="btn" onclick="simPlayoffLeg1()" style="width:100%"><i data-lucide="play"></i> Đá lượt đi (Play-off)</button>`;
+                    } else {
+                        actionBtnHTML = `<button class="btn" onclick="simPlayoffLeg2()" style="width:100%"><i data-lucide="play"></i> Đá lượt về (Play-off)</button>`;
+                    }
+                }
+            } else if (sim.stage === "r16") {
+                if (sim.roundPhase === "results") {
+                    actionBtnHTML = `<button class="btn" onclick="nextR16ToQF()" style="width:100%"><i data-lucide="chevron-right"></i> Tiến vào Tứ kết</button>`;
+                } else {
+                    const leg1Played = matches[0] && matches[0].goalsHome1 !== null;
+                    if (!leg1Played) {
+                        actionBtnHTML = `<button class="btn" onclick="simR16Leg1()" style="width:100%"><i data-lucide="play"></i> Đá lượt đi (Vòng 1/8)</button>`;
+                    } else {
+                        actionBtnHTML = `<button class="btn" onclick="simR16Leg2()" style="width:100%"><i data-lucide="play"></i> Đá lượt về (Vòng 1/8)</button>`;
+                    }
+                }
+            } else if (sim.stage === "qf") {
+                if (sim.roundPhase === "results") {
+                    actionBtnHTML = `<button class="btn" onclick="nextQFToSF()" style="width:100%"><i data-lucide="chevron-right"></i> Tiến vào Bán kết</button>`;
+                } else {
+                    const leg1Played = matches[0] && matches[0].goalsHome1 !== null;
+                    if (!leg1Played) {
+                        actionBtnHTML = `<button class="btn" onclick="simQFLeg1()" style="width:100%"><i data-lucide="play"></i> Đá lượt đi (Tứ kết)</button>`;
+                    } else {
+                        actionBtnHTML = `<button class="btn" onclick="simQFLeg2()" style="width:100%"><i data-lucide="play"></i> Đá lượt về (Tứ kết)</button>`;
+                    }
+                }
+            } else if (sim.stage === "sf") {
+                if (sim.roundPhase === "results") {
+                    actionBtnHTML = `<button class="btn" onclick="nextSFToFinal()" style="width:100%"><i data-lucide="chevron-right"></i> Tiến vào Chung kết</button>`;
+                } else {
+                    const leg1Played = matches[0] && matches[0].goalsHome1 !== null;
+                    if (!leg1Played) {
+                        actionBtnHTML = `<button class="btn" onclick="simSFLeg1()" style="width:100%"><i data-lucide="play"></i> Đá lượt đi (Bán kết)</button>`;
+                    } else {
+                        actionBtnHTML = `<button class="btn" onclick="simSFLeg2()" style="width:100%"><i data-lucide="play"></i> Đá lượt về (Bán kết)</button>`;
+                    }
+                }
+            } else if (sim.stage === "final") {
+                actionBtnHTML = `<button class="btn" onclick="simFinal()" style="width:100%"><i data-lucide="trophy"></i> Mô phỏng Chung kết</button>`;
+            }
+
+            // Nếu là Chung kết, render giao diện đặc biệt
+            if (sim.stage === "final") {
+                const m = sim.finalMatch;
+                const scoreHTML = (m.goalsA !== null) ? `${m.goalsA} - ${m.goalsB}` : 'vs';
+                let penaltyText = '';
+                if (m.penaltyWinner) {
+                    penaltyText = `<div style="font-size:0.85rem; color:#f59e0b; margin-top:5px;">Penalties: ${m.penaltyA} - ${m.penaltyB}</div>`;
+                }
+
+                container.innerHTML = `
+                <div class="sim-header-row">
+                    <h1 style="font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 1.5rem; font-weight: 800; color: #fff; margin:0;">
+                        ${stageTitle}
+                    </h1>
+                </div>
+                <div class="sim-panel" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.5rem 0;">
+                        <div style="font-size: 3.5rem;">🏆</div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; text-align: center; padding: 0 1.5rem;">
+                            <div style="flex: 1; font-weight: 700; font-size: 1.1rem; ${m.teamA.isUser ? 'color:#f5c842;' : ''}">
+                                <div>${getSimFlagImgHTML(m.teamA.country)}</div>
+                                <div style="margin-top: 5px;">${m.teamA.name}</div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                                <span class="score-cell">${scoreHTML}</span>
+                                ${penaltyText}
+                            </div>
+                            <div style="flex: 1; font-weight: 700; font-size: 1.1rem; ${m.teamB.isUser ? 'color:#f5c842;' : ''}">
+                                <div>${getSimFlagImgHTML(m.teamB.country)}</div>
+                                <div style="margin-top: 5px;">${m.teamB.name}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 1.5rem;">
+                        ${actionBtnHTML}
+                    </div>
+                </div>
+                `;
+                return;
+            }
+
+            // Hiển thị các cặp đấu Playoff, R16, QF, SF
+            let bracketHTML = matches.map((m, idx) => {
+                const leg1Played = m.goalsHome1 !== null;
+                const leg2Played = m.goalsHome2 !== null;
+
+                const scoreLeg1 = leg1Played ? `${m.goalsHome1} - ${m.goalsAway1}` : 'vs';
+                const scoreLeg2 = leg2Played ? `${m.goalsHome2} - ${m.goalsAway2}` : 'vs';
+
+                let aggScore = '-';
+                if (leg2Played) {
+                    const totalHomeLeg = m.goalsHome1 + m.goalsAway2; // unseeded/homeLeg1 total
+                    const totalAwayLeg = m.goalsAway1 + m.goalsHome2; // seeded/awayLeg1 total
+                    aggScore = `${totalHomeLeg} - ${totalAwayLeg}`;
+                }
+
+                const flagHomeHTML = getSimFlagImgHTML(m.homeLeg1.country);
+                const flagAwayHTML = getSimFlagImgHTML(m.awayLeg1.country);
+
+                const isWinnerHome = m.winner && m.winner.name === m.homeLeg1.name;
+                const isWinnerAway = m.winner && m.winner.name === m.awayLeg1.name;
+
+                let penText = '';
+                if (m.penaltyWinner) {
+                    penText = `<span style="font-size:0.7rem; color:#f59e0b;">(Pen: ${m.winner.name})</span>`;
+                }
+
+                const isUserMatch = m.homeLeg1.isUser || m.awayLeg1.isUser;
+
+                return `
+                    <div class="bracket-match ${isUserMatch ? 'user-match' : ''}">
+                        <div class="bracket-match-row ${isWinnerHome ? 'winner' : ''}">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; ${m.homeLeg1.isUser ? 'color:#f5c842;' : ''}">
+                                <span>${flagHomeHTML}</span>
+                                <strong>${m.homeLeg1.name}</strong>
+                                ${isWinnerHome ? penText : ''}
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <span class="score-cell" title="Lượt đi">${leg1Played ? m.goalsHome1 : '-'}</span>
+                                <span class="score-cell" title="Lượt về" style="background: rgba(255,255,255,0.03); opacity: 0.7;">${leg2Played ? m.goalsAway2 : '-'}</span>
+                            </div>
+                        </div>
+                        <div class="bracket-match-row ${isWinnerAway ? 'winner' : ''}">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; ${m.awayLeg1.isUser ? 'color:#f5c842;' : ''}">
+                                <span>${flagAwayHTML}</span>
+                                <strong>${m.awayLeg1.name}</strong>
+                                ${isWinnerAway ? penText : ''}
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <span class="score-cell" title="Lượt đi">${leg1Played ? m.goalsAway1 : '-'}</span>
+                                <span class="score-cell" title="Lượt về" style="background: rgba(255,255,255,0.03); opacity: 0.7;">${leg2Played ? m.goalsHome2 : '-'}</span>
+                            </div>
+                        </div>
+                        ${leg2Played ? `
+                            <div style="font-size:0.75rem; text-align:right; border-top: 1px solid rgba(255,255,255,0.04); padding-top:0.3rem; margin-top:0.2rem; color:rgba(255,255,255,0.4)">
+                                Tổng tỷ số: <strong style="color:#fff">${aggScore}</strong>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            // Layout 2 cột cho các vòng đấu trước chung kết
+            container.innerHTML = `
+                <div class="sim-header-row" style="border: none;">
+                    <h1 style="font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 1.5rem; font-weight: 800; color: #fff; margin:0;">
+                        ${stageTitle}
+                    </h1>
+                    <button class="btn btn-secondary" onclick="resetSimulation()" style="padding: 0.4rem 0.75rem; font-size: 0.8rem; background: rgba(239,68,68,0.15); border-color:#ef4444; color:#fff;">
+                        <i data-lucide="rotate-ccw" style="width:13px;height:13px;"></i> Reset Giải Đấu
+                    </button>
+                </div>
+
+                <div class="simulation-container" style="grid-template-columns: 1.5fr 1fr;">
+                    <!-- Column 1: Cặp đấu -->
+                    <div class="sim-panel">
+                        <div class="sim-header-row">
+                            <h2><i data-lucide="git-branch"></i> Cặp Đấu Loại Trực Tiếp</h2>
+                            <span style="font-size:0.8rem; color:rgba(255,255,255,0.4)">* Cột 2 là tỷ số lượt về</span>
+                        </div>
+                        <div class="bracket-container">
+                            ${bracketHTML}
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Controls -->
+                    <div class="sim-panel" style="position: sticky; top: 1rem; height: fit-content; gap: 1.5rem;">
+                        <div class="sim-header-row">
+                            <h2><i data-lucide="sliders"></i> Điều khiển mô phỏng</h2>
+                        </div>
+                        
+                        <p style="font-size:0.85rem; color: rgba(255,255,255,0.6); line-height:1.5; margin:0;">
+                            Vòng knockout diễn ra theo thể thức lượt đi lượt về đầy kịch tính. Bấm nút bên dưới để tiến hành mô phỏng từng lượt trận đấu!
+                        </p>
+
+                        <div>
+                            ${actionBtnHTML}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEndedStage(sim, container) {
+            const m = sim.finalMatch;
+            const flagChampHTML = getSimFlagImgHTML(m.winner.country);
+
+            // Xác định câu chúc mừng phù hợp
+            let congratsText = "";
+            if (m.penaltyWinner) {
+                congratsText = "Chúc mừng nhà vô địch mới của UEFA Champions League! Một trận chung kết nghẹt thở kéo dài đến loạt sút luân lưu cân não, nơi bản lĩnh kiên cường đã lên tiếng đúng lúc.";
+            } else if (Math.abs(m.goalsA - m.goalsB) >= 2) {
+                congratsText = "Chúc mừng nhà vô địch mới của UEFA Champions League! Màn trình diễn đỉnh cao và chiến thắng đầy thuyết phục khẳng định sức mạnh vượt trội của nhà vua mới.";
+            } else {
+                congratsText = "Chúc mừng nhà vô địch mới của UEFA Champions League! Trận chung kết kịch tính đến những giây cuối cùng khép lại hành trình giải đấu đầy cảm xúc.";
+            }
+
+            // Tính toán thành tích của đội người chơi (My Squad)
+            let userSquadHTML = "";
+            const userEntry = sim.swissTable.find(t => t.isUser);
+            if (userEntry) {
+                const userRank = sim.swissTable.findIndex(t => t.isUser) + 1;
+                const statsText = `${userEntry.w} thắng, ${userEntry.d} hòa, ${userEntry.l} thua (ghi ${userEntry.gf} bàn, thủng lưới ${userEntry.ga} bàn, hiệu số ${userEntry.gd >= 0 ? '+' : ''}${userEntry.gd})`;
+                
+                let achievementText = "";
+                if (m.teamA.isUser || m.teamB.isUser) {
+                    if (m.winner.isUser) {
+                        achievementText = `🏆 <strong>${userEntry.name} (My Squad)</strong> đã xuất sắc đánh bại mọi đối thủ và <strong>VÔ ĐỊCH</strong> UEFA Champions League! Một mùa giải lịch sử!`;
+                    } else {
+                        achievementText = `🥈 <strong>${userEntry.name} (My Squad)</strong> đã nỗ lực phi thường nhưng tiếc nuối về nhì ở trận <strong>Chung kết</strong> (Á quân).`;
+                    }
+                } else if (sim.sfMatches && sim.sfMatches.some(match => match.homeLeg1.isUser || match.awayLeg1.isUser)) {
+                    achievementText = `⚽ <strong>${userEntry.name} (My Squad)</strong> đã thi đấu quả cảm và dừng bước tại vòng <strong>Bán kết</strong> (Top 4).`;
+                } else if (sim.qfMatches && sim.qfMatches.some(match => match.homeLeg1.isUser || match.awayLeg1.isUser)) {
+                    achievementText = `⚽ <strong>${userEntry.name} (My Squad)</strong> đã tiến vào vòng đấu của 8 đội mạnh nhất và dừng bước ở <strong>Tứ kết</strong>.`;
+                } else if (sim.r16Matches && sim.r16Matches.some(match => match.homeLeg1.isUser || match.awayLeg1.isUser)) {
+                    achievementText = `⚽ <strong>${userEntry.name} (My Squad)</strong> dừng bước ở vòng đấu loại trực tiếp <strong>1/8 (Round of 16)</strong>.`;
+                } else if (sim.playoffMatches && sim.playoffMatches.some(match => match.homeLeg1.isUser || match.awayLeg1.isUser)) {
+                    achievementText = `⚽ <strong>${userEntry.name} (My Squad)</strong> dừng bước ở vòng <strong>Play-off tranh vé vào vòng 1/8</strong> (sau khi xếp thứ ${userRank} ở vòng bảng).`;
+                } else {
+                    achievementText = `❌ <strong>${userEntry.name} (My Squad)</strong> bị loại ngay từ <strong>Vòng bảng (Swiss Stage)</strong> với vị trí thứ ${userRank}/36.`;
+                }
+
+                userSquadHTML = `
+                    <div style="background: rgba(245, 200, 66, 0.04); border: 1px solid rgba(245, 200, 66, 0.15); border-radius: 12px; padding: 1.25rem; margin-top: 0.75rem; text-align: left;">
+                        <div style="font-size: 0.8rem; color: rgba(245, 200, 66, 0.6); text-transform: uppercase; margin-bottom: 0.4rem; font-weight: 700; letter-spacing: 0.05em;">Hành trình của bạn</div>
+                        <div style="font-size: 0.95rem; color: #fff; line-height: 1.5; margin-bottom: 0.5rem;">
+                            ${achievementText}
+                        </div>
+                        <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Thành tích vòng bảng:</span>
+                            <span style="font-weight: 600; color: rgba(255, 255, 255, 0.85);">${statsText} (Hạng ${userRank})</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            container.innerHTML = `
+                <div class="sim-setup-box" style="max-width: 600px; border-color: rgba(245, 200, 66, 0.3); background: radial-gradient(circle at 50% 0%, rgba(245, 200, 66, 0.1) 0%, var(--bg-card) 70%);">
+                    <div style="font-size: 4rem; animation: bounce 1s infinite alternate;">🏆</div>
+                    <div style="color: #f5c842; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">
+                        UEFA Champions League Champion
+                    </div>
+                    <div class="sim-setup-title" style="font-size: 2.25rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: linear-gradient(135deg, #f5c842 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        ${flagChampHTML} <span style="-webkit-text-fill-color: initial; background: linear-gradient(135deg, #f5c842 0%, #3b82f6 100%); -webkit-background-clip: text; color: transparent; font-weight: 800;">${m.winner.name}</span> ${flagChampHTML}
+                    </div>
+                    
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin: 0.75rem 0 0.5rem 0;">
+                        ${congratsText}
+                    </p>
+
+                    ${userSquadHTML}
+
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.25rem; margin-top: 0.75rem;">
+                        <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 0.5rem;">Kết quả chung kết</div>
+                        <div style="font-size: 1.25rem; font-weight: 700; display:flex; justify-content:center; gap: 1rem; align-items:center;">
+                            <span ${m.teamA.isUser ? 'style="color:#f5c842;"' : ''}>${m.teamA.name}</span>
+                            <span class="score-cell" style="font-size:1.15rem">${m.goalsA} - ${m.goalsB}</span>
+                            <span ${m.teamB.isUser ? 'style="color:#f5c842;"' : ''}>${m.teamB.name}</span>
+                        </div>
+                        ${m.penaltyWinner ? `<div style="font-size:0.8rem; color:#f59e0b; font-weight:600; margin-top: 0.5rem;">(Luân lưu: ${m.winner.name} thắng)</div>` : ''}
+                    </div>
+
+                    <button class="btn" onclick="resetSimulation()" style="width: 100%; justify-content: center; padding: 0.85rem; font-size: 1.05rem; border: none; margin-top: 1.25rem;">
+                        <i data-lucide="rotate-ccw"></i> BẮT ĐẦU GIẢI ĐẤU MỚI
+                    </button>
+                </div>
+            `;
+        }
+
+        // TRIGGER FUNCTIONS
+        window.simNextRound = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.runNextSwissRound();
+            showToast(`Đã mô phỏng xong Vòng Swiss thứ ${window.currentUCLSim.currentRound + 1}!`);
+            renderSimulationDashboard();
+        };
+
+        window.simAllSwiss = function() {
+            if (!window.currentUCLSim) return;
+            const sim = window.currentUCLSim;
+            while (sim.currentRound < 8) {
+                if (sim.roundPhase === "setup") {
+                    sim.runNextSwissRound();
+                }
+                if (sim.roundPhase === "results") {
+                    sim.advanceSwissRound();
+                }
+            }
+            showToast("Đã mô phỏng xong toàn bộ 8 Vòng Swiss!");
+            renderSimulationDashboard();
+        };
+
+        window.nextSwissRound = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.advanceSwissRound();
+            renderSimulationDashboard();
+        };
+
+        window.goToKnockouts = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.stage = "playoff";
+            window.currentUCLSim.generatePlayoffMatchups();
+            showToast("Đã bốc cặp Vòng Play-off Knockout!");
+            renderSimulationDashboard();
+        };
+
+        window.simPlayoffLeg1 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulatePlayoffLeg1();
+            showToast("Đã mô phỏng xong Play-off Lượt đi!");
+            renderSimulationDashboard();
+        };
+
+        window.simPlayoffLeg2 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulatePlayoffLeg2();
+            showToast("Đã mô phỏng xong Play-off Lượt về!");
+            renderSimulationDashboard();
+        };
+
+        window.nextPlayoffToR16 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.advancePlayoffToR16();
+            showToast("Đã bốc cặp Vòng 1/8!");
+            renderSimulationDashboard();
+        };
+
+        window.simR16Leg1 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulateR16Leg1();
+            showToast("Đã mô phỏng xong Vòng 1/8 Lượt đi!");
+            renderSimulationDashboard();
+        };
+
+        window.simR16Leg2 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulateR16Leg2();
+            showToast("Đã mô phỏng xong Vòng 1/8 Lượt về!");
+            renderSimulationDashboard();
+        };
+
+        window.nextR16ToQF = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.advanceR16ToQF();
+            showToast("Đã bốc cặp Vòng Tứ kết!");
+            renderSimulationDashboard();
+        };
+
+        window.simQFLeg1 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulateQFLeg1();
+            showToast("Đã mô phỏng xong Tứ kết Lượt đi!");
+            renderSimulationDashboard();
+        };
+
+        window.simQFLeg2 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulateQFLeg2();
+            showToast("Đã mô phỏng xong Tứ kết Lượt về!");
+            renderSimulationDashboard();
+        };
+
+        window.nextQFToSF = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.advanceQFToSF();
+            showToast("Đã bốc cặp Vòng Bán kết!");
+            renderSimulationDashboard();
+        };
+
+        window.simSFLeg1 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulateSFLeg1();
+            showToast("Đã mô phỏng xong Bán kết Lượt đi!");
+            renderSimulationDashboard();
+        };
+
+        window.simSFLeg2 = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.simulateSFLeg2();
+            showToast("Đã mô phỏng xong Bán kết Lượt về!");
+            renderSimulationDashboard();
+        };
+
+        window.nextSFToFinal = function() {
+            if (!window.currentUCLSim) return;
+            window.currentUCLSim.advanceSFToFinal();
+            showToast("Đã xác định 2 đội vào Chung kết!");
+            renderSimulationDashboard();
+        };
+
+        window.simFinal = function() {
+            if (!window.currentUCLSim) return;
+            const sim = window.currentUCLSim;
+            if (sim.finalMatch.goalsA === null) {
+                sim.simulateFinal();
+                showToast(`Trận Chung kết đã kết thúc! Nhà vô địch là: ${sim.finalMatch.winner.name}`);
+            } else {
+                sim.stage = "ended";
+            }
+            renderSimulationDashboard();
+        };
+
+        window.resetSimulation = function() {
+            if (confirm("Bạn có chắc muốn hủy bỏ giải đấu hiện tại và bắt đầu lại?")) {
+                window.currentUCLSim = null;
+                initSimulationUI();
+            }
+        };
+
+        // Custom bounce & pulse animations for UCL tab
+        const simAnimStyle = document.createElement('style');
+        simAnimStyle.textContent = `
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
+            @keyframes bounce {
+                from { transform: translateY(0); }
+                to { transform: translateY(-10px); }
+            }
+        `;
+        document.head.appendChild(simAnimStyle);
+
         function initCustomDropdownsMobile() {
             // Run original
             document.querySelectorAll('.filter-chip.custom-dropdown, .form-group.custom-dropdown').forEach(chip => {

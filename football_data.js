@@ -165,7 +165,7 @@ const LEAGUES_DATA = {
             "Union Berlin",
             "Werder Bremen",
             "Augsburg",
-            "Borussia Monchengladbach",
+            "M'gladbach",
             "Heidenheim",
             "Bochum",
             "St. Pauli",
@@ -18347,10 +18347,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "France",
         "flag": "🇫🇷",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
+        "club": "M'gladbach",
         "position": "ST",
-        "rating": 77,
+        "altPositions": [],
+        "rating": 78,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -18361,7 +18361,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
+        "club": "M'gladbach",
         "clubBadge": "🟢⚪",
         "position": "ST",
         "rating": 79,
@@ -18375,7 +18375,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "France",
         "flag": "🇫🇷",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
+        "club": "M'gladbach",
         "clubBadge": "🟢⚪",
         "position": "RW",
         "rating": 78,
@@ -18389,10 +18389,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
+        "club": "M'gladbach",
         "position": "CDM",
-        "rating": 77,
+        "altPositions": [],
+        "rating": 79,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -18403,11 +18403,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "Japan",
         "flag": "🇯🇵",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
+        "club": "M'gladbach",
         "position": "CB",
         "altPositions": [],
-        "rating": 80,
+        "rating": 81,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -18418,10 +18417,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "Switzerland",
         "flag": "🇨🇭",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
+        "club": "M'gladbach",
         "position": "CB",
-        "rating": 77,
+        "altPositions": [],
+        "rating": 79,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -18432,7 +18431,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Switzerland",
         "flag": "🇨🇭",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
+        "club": "M'gladbach",
         "clubBadge": "🟢⚪",
         "position": "GK",
         "rating": 78,
@@ -18446,10 +18445,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "United States",
         "flag": "🇺🇸",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
+        "club": "M'gladbach",
         "position": "RB",
-        "rating": 75,
+        "altPositions": [],
+        "rating": 78,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -18460,10 +18459,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
+        "club": "M'gladbach",
         "position": "LB",
-        "rating": 76,
+        "altPositions": [],
+        "rating": 79,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -18474,7 +18473,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
+        "club": "M'gladbach",
         "clubBadge": "🟢⚪",
         "position": "CM",
         "rating": 76,
@@ -18488,10 +18487,108 @@ const DEFAULT_PLAYERS = [
         "nationality": "Austria",
         "flag": "🇦🇹",
         "league": "Bundesliga",
-        "club": "Borussia Monchengladbach",
+        "club": "M'gladbach",
         "clubBadge": "🟢⚪",
         "position": "CAM",
         "rating": 78,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "hack-s26",
+        "name": "Robin Hack",
+        "cardName": "Hack",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "LM",
+        "altPositions": ["LW", "CAM"],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "neuhaus-s26",
+        "name": "Florian Neuhaus",
+        "cardName": "Neuhaus",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "CM",
+        "altPositions": ["CAM"],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "nicolas-s26",
+        "name": "Moritz Nicolas",
+        "cardName": "Nicolas",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "friedrich-s26",
+        "name": "Marvin Friedrich",
+        "cardName": "Friedrich",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "sander-s26",
+        "name": "Philipp Sander",
+        "cardName": "Sander",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "CM",
+        "altPositions": ["CDM"],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "ngoumou-s26",
+        "name": "Nathan Ngoumou",
+        "cardName": "Ngoumou",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "RM",
+        "altPositions": ["LM", "RW"],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "cvancara-s26",
+        "name": "Tomas Čvančara",
+        "cardName": "Čvančara",
+        "nationality": "Czechia",
+        "flag": "🇨🇿",
+        "league": "Bundesliga",
+        "club": "M'gladbach",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 74,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -44104,14 +44201,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "ST",
             "RM"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://i.pinimg.com/474x/07/d0/6f/07d06f5c500bd4798a553a15ffc43458.jpg",
         "cardTheme": "gc"
     },
     {
@@ -50969,15 +51065,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RM",
-        "rating": 93,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "ST",
             "LM"
-        ]
+        ],
+        "rating": 93,
+        "photo": "https://img.fcbayern.com/image/upload/f_auto/q_auto/t_cms-6x9-seo/v1601358189/cms/public/images/fcbayern-com/homepage/club/historie/hall-of-fame/hoeness_ima_120674.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "gmuller-ucl",
@@ -59855,6 +59950,23 @@ const DEFAULT_PLAYERS = [
         "rating": 79,
         "photo": "",
         "cardTheme": "worldcup26"
+    },
+    {
+        "id": "player-1782122637578",
+        "name": "Uli Hoeneß",
+        "cardName": "Hoeneß",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "ST",
+            "LM"
+        ],
+        "rating": 92,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Uli_hoeness.jpg",
+        "cardTheme": "icons"
     }
 ];
 
@@ -59949,6 +60061,98 @@ const FORMATIONS = {
         "RW": {
             "left": "85%",
             "bottom": "72%"
+        }
+    },
+    "4-3-3 Double Pivot": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "LCDM": {
+            "left": "35%",
+            "bottom": "44%"
+        },
+        "RCDM": {
+            "left": "65%",
+            "bottom": "44%"
+        },
+        "CAM": {
+            "left": "50%",
+            "bottom": "60%"
+        },
+        "LW": {
+            "left": "15%",
+            "bottom": "74%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "82%"
+        },
+        "RW": {
+            "left": "85%",
+            "bottom": "74%"
+        }
+    },
+    "4-3-3 Attack": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "CDM": {
+            "left": "50%",
+            "bottom": "40%"
+        },
+        "LCAM": {
+            "left": "25%",
+            "bottom": "58%"
+        },
+        "RCAM": {
+            "left": "75%",
+            "bottom": "58%"
+        },
+        "LW": {
+            "left": "15%",
+            "bottom": "74%"
+        },
+        "ST": {
+            "left": "50%",
+            "bottom": "82%"
+        },
+        "RW": {
+            "left": "85%",
+            "bottom": "74%"
         }
     },
     "4-3-2-1": {
@@ -60217,6 +60421,52 @@ const FORMATIONS = {
         "RM": {
             "left": "85%",
             "bottom": "54%"
+        },
+        "LST": {
+            "left": "33%",
+            "bottom": "80%"
+        },
+        "RST": {
+            "left": "67%",
+            "bottom": "80%"
+        }
+    },
+    "4-1-3-2 Narrow": {
+        "GK": {
+            "left": "50%",
+            "bottom": "5%"
+        },
+        "LB": {
+            "left": "10%",
+            "bottom": "28%"
+        },
+        "LCB": {
+            "left": "34%",
+            "bottom": "24%"
+        },
+        "RCB": {
+            "left": "66%",
+            "bottom": "24%"
+        },
+        "RB": {
+            "left": "90%",
+            "bottom": "28%"
+        },
+        "CDM": {
+            "left": "50%",
+            "bottom": "38%"
+        },
+        "LCAM": {
+            "left": "25%",
+            "bottom": "56%"
+        },
+        "CAM": {
+            "left": "50%",
+            "bottom": "58%"
+        },
+        "RCAM": {
+            "left": "75%",
+            "bottom": "56%"
         },
         "LST": {
             "left": "33%",
@@ -60639,52 +60889,6 @@ const FORMATIONS = {
         "ST": {
             "left": "50%",
             "bottom": "80%"
-        }
-    },
-    "4-3-3 Double Pivot": {
-        "GK": {
-            "left": "50%",
-            "bottom": "5%"
-        },
-        "LB": {
-            "left": "10%",
-            "bottom": "28%"
-        },
-        "LCB": {
-            "left": "34%",
-            "bottom": "24%"
-        },
-        "RCB": {
-            "left": "66%",
-            "bottom": "24%"
-        },
-        "RB": {
-            "left": "90%",
-            "bottom": "28%"
-        },
-        "LCDM": {
-            "left": "35%",
-            "bottom": "44%"
-        },
-        "RCDM": {
-            "left": "65%",
-            "bottom": "44%"
-        },
-        "CAM": {
-            "left": "50%",
-            "bottom": "60%"
-        },
-        "LW": {
-            "left": "15%",
-            "bottom": "74%"
-        },
-        "ST": {
-            "left": "50%",
-            "bottom": "82%"
-        },
-        "RW": {
-            "left": "85%",
-            "bottom": "74%"
         }
     }
 };
