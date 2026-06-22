@@ -717,7 +717,7 @@
         }
         @media (max-width: 480px) {
             .player-grid {
-                grid-template-columns: repeat(4, 1fr) !important;
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
                 gap: 0.25rem !important;
             }
             /* Scale down inner text for small cards in player grid */
@@ -4094,7 +4094,10 @@
                     document.querySelectorAll('.custom-dropdown-menu.show').forEach(m => {
                         if (m !== menu) m.classList.remove('show');
                     });
-                    menu.classList.toggle('show');
+                    const isShowing = menu.classList.toggle('show');
+                    if (isShowing && typeof repositionDropdownMenu === 'function') {
+                        repositionDropdownMenu(menu);
+                    }
                     e.stopPropagation();
                 });
             });

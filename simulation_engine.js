@@ -953,6 +953,15 @@
             } else {
                 m.winner = Math.random() < 0.5 ? m.teamA : m.teamB;
                 m.penaltyWinner = m.winner.name;
+                const winScore = 5;
+                const loseScore = Math.random() < 0.5 ? 4 : 3;
+                if (m.winner === m.teamA) {
+                    m.penaltyA = winScore;
+                    m.penaltyB = loseScore;
+                } else {
+                    m.penaltyA = loseScore;
+                    m.penaltyB = winScore;
+                }
             }
             this.stage = "ended";
         }
