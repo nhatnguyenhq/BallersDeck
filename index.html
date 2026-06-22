@@ -6066,6 +6066,45 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }, 150);
         }
 
+        function getRandomPlayerForSlot(slotPos, selectedIds) {
+            // Lọc ra các cầu thủ có ảnh, tương thích vị trí và chưa được chọn trong đội hình
+            let available = players.filter(p => {
+                if (selectedIds.includes(p.id)) return false;
+                return !!p.photo && isCompatiblePosition(slotPos, p.position, p.altPositions);
+            });
+
+            if (available.length === 0) return null;
+
+            // Tính trọng số (khớp vị trí chính được 1.5, vị trí phụ được 1.0)
+            const weights = available.map(p => {
+                const mapping = {
+                    "GK": ["GK"], "LB": ["LB", "LWB"], "RB": ["RB", "RWB"],
+                    "LWB": ["LWB", "LB"], "RWB": ["RWB", "RB"], "CB": ["CB"],
+                    "LCB": ["CB"], "RCB": ["CB"], "CDM": ["CDM"],
+                    "LDM": ["CDM"], "RDM": ["CDM"], "LCDM": ["CDM"], "RCDM": ["CDM"],
+                    "CM": ["CM"], "LCM": ["CM"], "RCM": ["CM"], "LM": ["LM", "LW"],
+                    "RM": ["RM", "RW"], "CAM": ["CAM"], "CAM1": ["CAM", "CF"],
+                    "CAM2": ["CAM", "CF"], "LCAM": ["CAM", "CF"], "RCAM": ["CAM", "CF"],
+                    "LW": ["LW", "LM"], "RW": ["RW", "RM"],
+                    "ST": ["ST", "CF"], "LST": ["ST", "CF"], "RST": ["ST", "CF"],
+                    "ST1": ["ST", "CF"], "ST2": ["ST", "CF"], "CF1": ["CF", "ST"],
+                    "CF2": ["CF", "ST"]
+                };
+                const targets = mapping[slotPos] || [slotPos];
+                const isPrimaryMatch = targets[0] === p.position;
+                return isPrimaryMatch ? 1.5 : 1.0;
+            });
+
+            const totalWeight = weights.reduce((sum, w) => sum + w, 0);
+            let randomValue = Math.random() * totalWeight;
+            
+            for (let i = 0; i < available.length; i++) {
+                randomValue -= weights[i];
+                if (randomValue <= 0) return available[i];
+            }
+            return available[0];
+        }
+
         function randomizeSquad() {
             if (players.length === 0) {
                 showToast("Không có cầu thủ nào trong thư viện để tạo đội hình!");
@@ -6074,24 +6113,40 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const formationVal = document.getElementById('formation-select').value;
             const slotsData = FORMATIONS[formationVal];
             
-            squad = {};
-            // Xáo trộn danh sách cầu thủ để chọn ngẫu nhiên không trùng lặp
-            const shuffled = [...players].sort(() => Math.random() - 0.5);
-            let idx = 0;
-            for (let slotPos in slotsData) {
-                if (idx < shuffled.length) {
-                    squad[slotPos] = shuffled[idx].id;
-                    idx++;
+            let tempSquad = {};
+            let selectedIds = [];
+            
+            // GK luôn bốc trước để đảm bảo vị trí đặc biệt này không bị thiếu cầu thủ
+            const slotKeys = Object.keys(slotsData);
+            slotKeys.sort((a, b) => {
+                const isAGK = a.startsWith("GK");
+                const isBGK = b.startsWith("GK");
+                if (isAGK && !isBGK) return -1;
+                if (!isAGK && isBGK) return 1;
+                return 0;
+            });
+
+            let skippedSlots = [];
+            for (let slotPos of slotKeys) {
+                const player = getRandomPlayerForSlot(slotPos, selectedIds);
+                if (player) {
+                    tempSquad[slotPos] = player.id;
+                    selectedIds.push(player.id);
                 } else {
-                    // Nếu số lượng cầu thủ ít hơn số vị trí, cho phép trùng lặp
-                    const randPlayer = players[Math.floor(Math.random() * players.length)];
-                    squad[slotPos] = randPlayer.id;
+                    skippedSlots.push(getDisplayPos(slotPos));
                 }
             }
+
+            squad = tempSquad;
             saveDatabase();
             buildPitch();
             updateSquadStats();
-            showToast("Đã random ngẫu nhiên toàn bộ đội hình!");
+            
+            if (skippedSlots.length > 0) {
+                showToast(`Đã random đội hình! Không tìm thấy đủ cầu thủ có ảnh & đúng vị trí cho: ${skippedSlots.join(', ')}.`);
+            } else {
+                showToast("Đã random ngẫu nhiên toàn bộ đội hình theo đúng vị trí và có ảnh!");
+            }
         }
 
         // Clear pitch
