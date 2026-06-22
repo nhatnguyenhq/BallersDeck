@@ -10914,14 +10914,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇿",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "LB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5wryzn1757072739.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5wryzn1757072739.png",
+        "cardTheme": "standard"
     },
     {
         "id": "musso-atletico",
@@ -48450,12 +48449,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
-        "rating": 94,
+        "rating": 97,
         "photo": "https://pbs.twimg.com/media/EZGq6yQWsAADiYo.jpg",
         "cardTheme": "ucl"
     },
@@ -49427,14 +49425,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
-        "rating": 93,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 93,
+        "photo": "https://pbs.twimg.com/media/DdOyGb6XUAASyUp.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "raul-ucl",
@@ -49977,14 +49974,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CAM",
-        "rating": 93,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 93,
+        "photo": "https://i.pinimg.com/736x/e9/5d/f4/e95df4259e1320c1436cbcc4cdf8d185.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "scirea-ucl",
@@ -51164,17 +51160,16 @@ const DEFAULT_PLAYERS = [
     {
         "id": "schmeichel-ucl",
         "name": "Peter Schmeichel",
-        "cardName": "Schmeichel",
+        "cardName": "P. Schmeichel",
         "nationality": "Denmark",
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "GK",
+        "altPositions": [],
         "rating": 93,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "best-ucl",
@@ -57917,6 +57912,20 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "standard"
     },
     {
+        "id": "player-1782144536356",
+        "name": "Gordon Banks",
+        "cardName": "Banks",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 90,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq2UkMoLgkARqcDelH7TbnVzAKnBWKij8FmL6JsC97xrRG2OY6E0kI5gasd1EnaA7sKy5ehBdF_V11VBvu3pSQqNa_7MPru4ZQxmN81Q&s=10",
+        "cardTheme": "icons"
+    },
+    {
         "id": "ochoa-wc26",
         "name": "Guillermo Ochoa",
         "cardName": "Ochoa",
@@ -59977,18 +59986,299 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "worldcup26"
     },
     {
-        "id": "player-1782144536356",
-        "name": "Gordon Banks",
-        "cardName": "Banks",
+        "id": "clough-mm",
+        "name": "Brian Clough",
+        "cardName": "Clough",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dixon-mm",
+        "name": "Lee Dixon",
+        "cardName": "Dixon",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "vanpersie-mm",
+        "name": "Robin van Persie",
+        "cardName": "Van Persie",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "bent-mm",
+        "name": "Darren Bent",
+        "cardName": "Bent",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "doyle-mm",
+        "name": "Kevin Doyle",
+        "cardName": "Doyle",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "figueroa-mm",
+        "name": "Maynor Figueroa",
+        "cardName": "Figueroa",
+        "nationality": "Honduras",
+        "flag": "🇭🇳",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "fontaine-mm",
+        "name": "Just Fontaine",
+        "cardName": "Fontaine",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "zigic-mm",
+        "name": "Nikola Žigić",
+        "cardName": "Žigić",
+        "nationality": "Serbia",
+        "flag": "🇷🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "davies-mm",
+        "name": "Kevin Davies",
+        "cardName": "K. Davies",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "adam-mm",
+        "name": "Charlie Adam",
+        "cardName": "Adam",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "whitehead-mm",
+        "name": "Dean Whitehead",
+        "cardName": "Whitehead",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dunne-mm",
+        "name": "Richard Dunne",
+        "cardName": "Dunne",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "upson-mm",
+        "name": "Matthew Upson",
+        "cardName": "Upson",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dorrans-mm",
+        "name": "Graham Dorrans",
+        "cardName": "Dorrans",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "jagielka-mm",
+        "name": "Phil Jagielka",
+        "cardName": "Jagielka",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "hangeland-mm",
+        "name": "Brede Hangeland",
+        "cardName": "Hangeland",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "foster-mm",
+        "name": "Ben Foster",
+        "cardName": "Foster",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
-        "rating": 90,
-        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq2UkMoLgkARqcDelH7TbnVzAKnBWKij8FmL6JsC97xrRG2OY6E0kI5gasd1EnaA7sKy5ehBdF_V11VBvu3pSQqNa_7MPru4ZQxmN81Q&s=10",
-        "cardTheme": "icons"
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "green-mm",
+        "name": "Robert Green",
+        "cardName": "Green",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dong-mm",
+        "name": "Dong Fangzhuo",
+        "cardName": "Dong",
+        "nationality": "China",
+        "flag": "🇨🇳",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "mm"
     }
 ];
 
