@@ -3122,6 +3122,10 @@
             }
         }
         @media (max-width: 480px) {
+            .sim-setup-box {
+                margin: 1.5rem auto !important;
+                padding: 1.25rem 1rem !important;
+            }
             .squad-stats-panel {
                 padding: 1rem;
                 gap: 1rem;
@@ -3231,8 +3235,12 @@
             gap: 1.5rem;
             margin-top: 1rem;
         }
+        .simulation-container.knockout-layout {
+            grid-template-columns: 1.5fr 1fr;
+        }
         @media (max-width: 992px) {
-            .simulation-container { grid-template-columns: 1fr; }
+            .simulation-container,
+            .simulation-container.knockout-layout { grid-template-columns: 1fr; }
         }
         /* UCL Stage Progress Tracker */
         .ucl-stage-tracker {
@@ -3523,6 +3531,14 @@
         .badge-pos { font-size: 0.65rem; padding: 0.1rem 0.3rem; border-radius: 4px; font-weight: 700; text-transform: uppercase; }
         .badge-home { background: rgba(59,130,246,0.15); color: #3b82f6; border: 1px solid rgba(59,130,246,0.3); }
         .badge-away { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+
+        .match-details-panel {
+            animation: ucl-fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes ucl-fade-in {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
         /* --- UCL Theme Overrides for #simulation-tab --- */
         #simulation-tab {
@@ -4134,6 +4150,14 @@
         // --- 3. GLOBAL STATE ---
         let players = [];
         let squad = {}; // formation slot -> player ID mapping
+        Object.defineProperty(window, 'players', {
+            get: function() { return players; },
+            set: function(val) { players = val; }
+        });
+        Object.defineProperty(window, 'squad', {
+            get: function() { return squad; },
+            set: function(val) { squad = val; }
+        });
         let activeSlotSelection = null; // Current slot being edited in squad builder
 
         // Initialize Lucide Icons
@@ -6741,11 +6765,26 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         function randomizeSimTeamName() {
             const names = [
-                "Pedro FC", "Pedro City", "Pedro United", "Pedro Athletic", "Pedro Real",
-                "Saigon Warriors", "Mekong United", "Dragon Legend", "Red River FC",
-                "Indochina Athletic", "Lotus City FC", "Vietnam Phoenix", "Thang Long FC",
-                "Golden Stars", "Son Doong FC", "Ha Long Bay FC", "Saigon Heat FC",
-                "Cuu Long FC", "Phong Van FC", "Hoang Anh FC", "Phu Quoc Pearl", "An Nam United"
+                "Northwood Rovers", "Highland United", "Eastfield City", "Westbridge FC", "Southport Athletic",
+                "Kingsley Wanderers", "Oakwood Town", "Silverstone FC", "Redwood Rovers", "Queens Park City",
+                "Ironforge United", "Stormcliff Athletic", "Riverdale FC", "Bluecrest Wanderers", "Crescent City FC",
+                "Pinegrove Rovers", "Eagle Peak United", "Harbor Town FC", "Falcon Ridge Athletic", "Vanguard City",
+                "Crownwell FC", "Rosewood Rovers", "Summit United", "Avalon City", "Grandview Athletic",
+                "Steelcity Wanderers", "Beacon Hill FC", "Evergreen Rovers", "Cobblestone United", "Nova City FC",
+                "Real San Marcos", "Deportivo Valiente", "Atlético Mirador", "UD Bella Vista", "Sporting Castelo",
+                "Celta Dorado", "CF Montes Blancos", "RC Victoria", "SD Marítimo", "Rayo Costero",
+                "Club Costa Brava", "Real Estrella", "Atlético León", "CD San Fernando", "Levante Norte",
+                "Málaga Sur", "Real Almirante", "Deportivo Viento", "Getafe Oeste", "Olimpico Sol",
+                "AC Lombardia", "Inter Piemonte", "AS Campano", "US Toscana", "FC Sicilia",
+                "SS Veneto", "Bologna Centrale", "Genoa Marittima", "Torino Alpino", "Parma Ducale",
+                "Udinese Orientale", "Sassuolo Nord", "Verona Antica", "Cagliari Nuraghe", "Empoli Valdarno",
+                "Lecce Salento", "Palermo Sol", "Venezia Lagunare", "Napoli Golfo", "Roma Imperiale",
+                "Paris Royal", "Olympique Sud", "AS Riviera", "Lille Nord", "Stade Bretagne",
+                "Olympique Rhône", "RC Picardie", "Montpellier Méditerranée", "FC Loire", "Strasbourg Est",
+                "Toulouse Garonne", "OGC Côte d'Azur", "Stade Champagne", "Clermont Auvergne", "Brest Océan",
+                "Lorient Atlantique", "Metz Lorraine", "Bordeaux Vigne", "Saint-Étienne Forez", "Auxerre Bourgogne",
+                "Valhalla FC", "Nordic Warriors", "Odin's Ravens", "Thor's Hammer", "Fjords Athletic",
+                "Midgard United", "Asgard Rovers", "Ragnarok City", "Vikingur Nord", "Shieldmaiden FC"
             ];
             const input = document.getElementById('sim-team-name');
             if (input) {
@@ -6883,17 +6922,69 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const isUserMatch = m.home.isUser || m.away.isUser;
                 const homeWon = played && m.goalsHome > m.goalsAway;
                 const awayWon = played && m.goalsAway > m.goalsHome;
+
+                let detailsHTML = '';
+                if (played) {
+                    const sH = m.scorersHome || [];
+                    const sA = m.scorersAway || [];
+                    detailsHTML = `
+                        <div class="match-details-panel" style="display: none; width: 100%; text-align: left; padding: 0.55rem; background: rgba(0,0,0,0.25); border-radius: 6px; margin-top: 0.5rem; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.06);">
+                            <!-- Scorers -->
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.55rem; color: rgba(255,255,255,0.85); line-height: 1.4;">
+                                <div style="text-align: left; flex: 1; padding-right: 0.35rem;">
+                                    ${sH.map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                </div>
+                                <div style="text-align: right; flex: 1; padding-left: 0.35rem;">
+                                    ${sA.map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                </div>
+                            </div>
+                            <!-- Stats Comparison -->
+                            <div style="display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.45rem;">
+                                <!-- Possession -->
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-bottom: 2px;">
+                                        <span>${m.possessionHome}%</span>
+                                        <span style="text-transform:uppercase; letter-spacing:0.05em;">Kiểm soát bóng</span>
+                                        <span>${m.possessionAway}%</span>
+                                    </div>
+                                    <div style="display: flex; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden;">
+                                        <div style="width: ${m.possessionHome}%; background: #3b82f6;"></div>
+                                        <div style="width: ${m.possessionAway}%; background: #f43f5e;"></div>
+                                    </div>
+                                </div>
+                                <!-- Shots -->
+                                <div style="display: flex; justify-content: space-between; font-size: 0.76rem; color: rgba(255,255,255,0.85);">
+                                    <span>${m.shotsHome}</span>
+                                    <span style="color: rgba(255,255,255,0.5); font-size: 0.72rem;">Sút khung thành</span>
+                                    <span>${m.shotsAway}</span>
+                                </div>
+                                <!-- xG -->
+                                <div style="display: flex; justify-content: space-between; font-size: 0.76rem; color: rgba(255,255,255,0.85);">
+                                    <span>${m.xgHome ? m.xgHome.toFixed(2) : '0.00'}</span>
+                                    <span style="color: rgba(255,255,255,0.5); font-size: 0.72rem;">Bàn thắng kỳ vọng (xG)</span>
+                                    <span>${m.xgAway ? m.xgAway.toFixed(2) : '0.00'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
                 return `
-                    <div class="sim-match-item ${played ? 'has-played' : ''} ${isUserMatch ? 'user-match' : ''}">
-                        <div class="sim-match-team home" style="${m.home.isUser ? 'color:#c9a227;font-weight:700;' : ''} ${played && !homeWon ? 'opacity:0.45;' : ''}">
-                            <span style="font-weight:${homeWon ? '700' : '400'}">${m.home.name}</span>
-                            <span>${flagHomeHTML}</span>
+                    <div class="sim-match-item ${played ? 'has-played' : ''} ${isUserMatch ? 'user-match' : ''}" 
+                         style="${played ? 'cursor:pointer; flex-direction:column; align-items:stretch;' : ''}"
+                         ${played ? 'onclick="toggleMatchDetails(this, event)"' : ''}>
+                        <div style="display:flex; width:100%; align-items:center; justify-content:space-between;">
+                            <div class="sim-match-team home" style="${m.home.isUser ? 'color:#c9a227;font-weight:700;' : ''} ${played && !homeWon ? 'opacity:0.45;' : ''}">
+                                <span style="font-weight:${homeWon ? '700' : '400'}">${m.home.name}</span>
+                                <span>${flagHomeHTML}</span>
+                            </div>
+                            <div class="sim-match-score ${played ? '' : 'unplayed'}">${scoreHome} : ${scoreAway}</div>
+                            <div class="sim-match-team away" style="${m.away.isUser ? 'color:#c9a227;font-weight:700;' : ''} ${played && !awayWon ? 'opacity:0.45;' : ''}">
+                                <span>${flagAwayHTML}</span>
+                                <span style="font-weight:${awayWon ? '700' : '400'}">${m.away.name}</span>
+                            </div>
                         </div>
-                        <div class="sim-match-score ${played ? '' : 'unplayed'}">${scoreHome} : ${scoreAway}</div>
-                        <div class="sim-match-team away" style="${m.away.isUser ? 'color:#c9a227;font-weight:700;' : ''} ${played && !awayWon ? 'opacity:0.45;' : ''}">
-                            <span>${flagAwayHTML}</span>
-                            <span style="font-weight:${awayWon ? '700' : '400'}">${m.away.name}</span>
-                        </div>
+                        ${detailsHTML}
                     </div>
                 `;
             }).join('');
@@ -7051,6 +7142,50 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     penaltyText = `<div style="font-size:0.85rem; color:#f59e0b; margin-top:5px;">Penalties: ${m.penaltyA} - ${m.penaltyB}</div>`;
                 }
 
+                let finalDetailsHTML = '';
+                if (m.goalsA !== null) {
+                    finalDetailsHTML = `
+                        <div class="match-details-panel" style="width: 100%; text-align: left; padding: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 8px; margin-top: 1rem; font-size: 0.85rem; border: 1px solid rgba(201,162,39,0.25);">
+                            <!-- Scorers -->
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; color: rgba(255,255,255,0.9); line-height: 1.5; font-size: 0.82rem;">
+                                <div style="text-align: left; flex: 1; padding-right: 0.5rem;">
+                                    ${(m.scorersA || []).map(s => `<div>${s.name} (${s.minute}')</div>`).join('')}
+                                </div>
+                                <div style="text-align: right; flex: 1; padding-left: 0.5rem;">
+                                    ${(m.scorersB || []).map(s => `<div>${s.name} (${s.minute}')</div>`).join('')}
+                                </div>
+                            </div>
+                            <!-- Stats Comparison -->
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid rgba(201,162,39,0.15); padding-top: 0.6rem;">
+                                <!-- Possession -->
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-bottom: 3px;">
+                                        <span>${m.possessionA}%</span>
+                                        <span style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Kiểm soát bóng</span>
+                                        <span>${m.possessionB}%</span>
+                                    </div>
+                                    <div style="display: flex; height: 5px; background: rgba(255,255,255,0.1); border-radius: 2.5px; overflow: hidden;">
+                                        <div style="width: ${m.possessionA}%; background: #3b82f6;"></div>
+                                        <div style="width: ${m.possessionB}%; background: #f43f5e;"></div>
+                                    </div>
+                                </div>
+                                <!-- Shots -->
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff;">
+                                    <span>${m.shotsA}</span>
+                                    <span style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Sút khung thành</span>
+                                    <span>${m.shotsB}</span>
+                                </div>
+                                <!-- xG -->
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff;">
+                                    <span>${m.xgA ? m.xgA.toFixed(2) : '0.00'}</span>
+                                    <span style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Bàn thắng kỳ vọng (xG)</span>
+                                    <span>${m.xgB ? m.xgB.toFixed(2) : '0.00'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
                 container.innerHTML = `
                 <div class="ucl-banner">
                     <div class="ucl-banner-logo">
@@ -7087,6 +7222,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             ${m.teamB.isUser ? '<div style="font-size:0.65rem;color:rgba(201,162,0.7);font-weight:700;margin-top:0.25rem;">● YOU</div>' : ''}
                         </div>
                     </div>
+                    ${finalDetailsHTML}
                     <div style="margin-top:1.25rem;border-top:1px solid rgba(201,162,39,0.15);padding-top:1rem;">
                         ${actionBtnHTML}
                     </div>
@@ -7123,8 +7259,77 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
                 const isUserMatch = m.homeLeg1.isUser || m.awayLeg1.isUser;
 
+                let legDetailsHTML = '';
+                if (leg1Played || leg2Played) {
+                    legDetailsHTML = `
+                        <div class="match-details-panel" style="display: none; width: 100%; text-align: left; padding: 0.55rem; background: rgba(0,0,0,0.25); border-radius: 6px; margin-top: 0.5rem; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.06);">
+                            ${leg1Played ? `
+                                <div style="font-weight: 700; color: rgba(201,162,39,0.95); margin-bottom: 0.25rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em;">Lượt đi (Sân ${m.homeLeg1.name}):</div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: rgba(255,255,255,0.85); line-height: 1.4;">
+                                    <div style="text-align: left; flex: 1; padding-right: 0.35rem;">
+                                        ${(m.scorersHome1 || []).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                    </div>
+                                    <div style="text-align: right; flex: 1; padding-left: 0.35rem;">
+                                        ${(m.scorersAway1 || []).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 0.35rem; ${leg2Played ? 'margin-bottom: 0.75rem; border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 0.5rem;' : ''}">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-bottom: 2px;">
+                                            <span>${m.possessionHome1}%</span>
+                                            <span>Kiểm soát</span>
+                                            <span>${m.possessionAway1}%</span>
+                                        </div>
+                                        <div style="display: flex; height: 3px; background: rgba(255,255,255,0.08); border-radius: 1.5px; overflow: hidden;">
+                                            <div style="width: ${m.possessionHome1}%; background: #3b82f6;"></div>
+                                            <div style="width: ${m.possessionAway1}%; background: #f43f5e;"></div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 2px;">
+                                        <span>Sút: ${m.shotsHome1}</span>
+                                        <span>xG: ${m.xgHome1 ? m.xgHome1.toFixed(2) : '0.00'} - ${m.xgAway1 ? m.xgAway1.toFixed(2) : '0.00'}</span>
+                                        <span>Sút: ${m.shotsAway1}</span>
+                                    </div>
+                                </div>
+                            ` : ''}
+
+                            ${leg2Played ? `
+                                <div style="font-weight: 700; color: rgba(201,162,39,0.95); margin-bottom: 0.25rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em;">Lượt về (Sân ${m.awayLeg1.name}):</div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: rgba(255,255,255,0.85); line-height: 1.4;">
+                                    <div style="text-align: left; flex: 1; padding-right: 0.35rem;">
+                                        ${(m.scorersHome2 || []).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                    </div>
+                                    <div style="text-align: right; flex: 1; padding-left: 0.35rem;">
+                                        ${(m.scorersAway2 || []).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-bottom: 2px;">
+                                            <span>${m.possessionHome2}%</span>
+                                            <span>Kiểm soát</span>
+                                            <span>${m.possessionAway2}%</span>
+                                        </div>
+                                        <div style="display: flex; height: 3px; background: rgba(255,255,255,0.08); border-radius: 1.5px; overflow: hidden;">
+                                            <div style="width: ${m.possessionHome2}%; background: #3b82f6;"></div>
+                                            <div style="width: ${m.possessionAway2}%; background: #f43f5e;"></div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 2px;">
+                                        <span>Sút: ${m.shotsHome2}</span>
+                                        <span>xG: ${m.xgHome2 ? m.xgHome2.toFixed(2) : '0.00'} - ${m.xgAway2 ? m.xgAway2.toFixed(2) : '0.00'}</span>
+                                        <span>Sút: ${m.shotsAway2}</span>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }
+
                 return `
-                    <div class="bracket-match ${isUserMatch ? 'user-match' : ''}">
+                    <div class="bracket-match ${isUserMatch ? 'user-match' : ''}" 
+                         style="${(leg1Played || leg2Played) ? 'cursor:pointer; display:flex; flex-direction:column; align-items:stretch;' : ''}"
+                         ${(leg1Played || leg2Played) ? 'onclick="toggleMatchDetails(this, event)"' : ''}>
                         <div class="bracket-match-row ${isWinnerHome ? 'winner' : ''}">
                             <div style="display: flex; align-items: center; gap: 0.5rem; ${m.homeLeg1.isUser ? 'color:#f5c842;' : ''}">
                                 <span>${flagHomeHTML}</span>
@@ -7152,6 +7357,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 Tổng tỷ số: <strong style="color:#fff">${aggScore}</strong>
                             </div>
                         ` : ''}
+                        ${legDetailsHTML}
                     </div>
                 `;
             }).join('');
@@ -7174,7 +7380,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         <i data-lucide="rotate-ccw" style="width:12px;height:12px;"></i> Reset
                     </button>
                 </div>
-                <div class="simulation-container" style="grid-template-columns:1.5fr 1fr;">
+                <div class="simulation-container knockout-layout">
                     <!-- Column 1: Cặp đấu -->
                     <div class="sim-panel">
                         <div class="sim-header-row">
@@ -7393,6 +7599,36 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 `;
             }
 
+            const topScorers = sim.getTopScorers().slice(0, 10);
+            let topScorersHTML = "";
+            if (topScorers.length > 0) {
+                const rows = topScorers.map((s, idx) => {
+                    return `
+                        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.8rem;">
+                            <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
+                                <span style="font-weight: 700; color: #c9a227; min-width: 20px;">${idx + 1}.</span>
+                                <strong style="color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${s.name}</strong>
+                                <span style="font-size: 0.72rem; color: rgba(255,255,255,0.4);">(${s.club})</span>
+                            </div>
+                            <div style="font-weight: 800; color: #e8c547; font-size: 0.9rem;">
+                                ${s.goals} ⚽
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                topScorersHTML = `
+                    <div style="margin-top: 1rem; border-top: 1px solid rgba(201,162,39,0.15); padding-top: 0.8rem; text-align: left;">
+                        <div style="font-size: 0.72rem; color: rgba(201,162,39,0.7); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 4px;">
+                            <i data-lucide="award" style="width: 12px; height: 12px;"></i> Vua Phá Lưới (Top 10):
+                        </div>
+                        <div style="max-height: 200px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.45rem; padding-right: 0.25rem;">
+                            ${rows}
+                        </div>
+                    </div>
+                `;
+            }
+
             container.innerHTML = `
                 <div class="sim-setup-box" style="max-width:640px;border-color:rgba(201,162,39,0.4);background:radial-gradient(circle at 50% -10%,rgba(201,162,39,0.15) 0%,rgba(4,11,27,0.95) 65%);">
                     <div style="font-size:4.5rem;animation:ucl-trophy-bounce 1.5s ease-in-out infinite;line-height:1;">🏆</div>
@@ -7415,6 +7651,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     </div>
 
                     ${userSquadHTML}
+                    ${topScorersHTML}
 
                     <button class="btn" onclick="resetSimulation()" style="width:100%;justify-content:center;padding:0.9rem;font-size:0.95rem;background:linear-gradient(135deg,#c9a227 0%,#e8c547 50%,#c9a227 100%)!important;color:#07112a!important;border:none!important;font-weight:900;letter-spacing:0.1em;background-size:200%;animation:ucl-shimmer 2.5s linear infinite;">
                         <i data-lucide="rotate-ccw"></i> BẮT ĐẦU GIẢI ĐẤU MỚI
@@ -7564,6 +7801,15 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (confirm("Bạn có chắc muốn hủy bỏ giải đấu hiện tại và bắt đầu lại?")) {
                 window.currentUCLSim = null;
                 initSimulationUI();
+            }
+        };
+
+        window.toggleMatchDetails = function(el, event) {
+            if (event.target.closest('button') || event.target.closest('a') || event.target.closest('.btn')) return;
+            const panel = el.querySelector('.match-details-panel');
+            if (panel) {
+                const isHidden = panel.style.display === 'none';
+                panel.style.display = isHidden ? 'block' : 'none';
             }
         };
 

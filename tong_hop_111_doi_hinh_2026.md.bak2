@@ -1,0 +1,1230 @@
+# Tổng Hợp Đội Hình 111 Câu Lạc Bộ (Cập nhật 2026)
+
+Đây là tệp tin đã **gộp chung dữ liệu** của 51 đội bóng (tra cứu qua Wikipedia) và 60 đội bóng (tra cứu từ Transfermarkt) lại thành một danh sách duy nhất gồm tổng cộng **111 Câu Lạc Bộ**.
+
+Dữ liệu vẫn tuân thủ các nguyên tắc bạn đã yêu cầu:
+- Tên cầu thủ được thu gọn (Last name / Tên thường gọi).
+- Đã loại bỏ hoàn toàn các Thủ môn (GK) và cầu thủ đội trẻ chưa được lên đội một.
+- Cầu thủ được phân loại chỉ số cao/thấp dựa theo tần suất ra sân, đóng góp bàn thắng (với FW), và tầm quan trọng/giá trị chuyển nhượng thực tế (với MF và DF) trong nội bộ từng đội.
+- Danh sách được sắp xếp theo bảng chữ cái A-Z.
+
+---
+
+## AC Milan
+
+* **FW chỉ số cao:** Leão, Nkunku, Pulisic
+* **FW chỉ số thấp:** Giménez, Füllkrug, Saelemaekers
+* **MF chỉ số cao:** Fofana, Rabiot, Modrić
+* **MF chỉ số thấp:** Ricci, Loftus-Cheek, Jashari
+* **DF chỉ số cao:** Tomori, Pavlović, Estupiñán, De Winter
+* **DF chỉ số thấp:** Gabbia, Terracciano, Bartesaghi, Athekame
+
+---
+
+## AEK Athens
+
+* **FW chỉ số cao:** Koïta, Marin, Eliasson
+* **FW chỉ số thấp:** Kosidis, Kutesa
+* **MF chỉ số cao:** Mantalos, Pineda, Jønsson, Gaćinović
+* **MF chỉ số thấp:** Jović, J. Mário, Ljubičić, Pereyra
+* **DF chỉ số cao:** Vida, Moukoudi, Callens, Pilios
+* **DF chỉ số thấp:** Rota, Varga, Penrice, Relvas
+
+---
+
+## AIK Solna
+
+* **FW chỉ số cao:** Celina, Ali, Gono
+* **FW chỉ số thấp:** Beširović, Flataker
+* **MF chỉ số cao:** Ellingsen, Mujanic, Hove
+* **MF chỉ số thấp:** Helm, Redkin, Filling
+* **DF chỉ số cao:** Papagiannopoulos, Edh, Nissen, Thychosen
+* **DF chỉ số thấp:** Cissé, Csongvai, Andersson
+
+---
+
+## APOEL Nicosia
+
+* **FW chỉ số cao:** Marquinhos, Maioli
+* **FW chỉ số thấp:** Diamantakos, Baldé
+* **MF chỉ số cao:** Meyer, Satsias, Tomás
+* **MF chỉ số thấp:** Dálcio, D. Rosa
+* **DF chỉ số cao:** Stafylidis, Vitor Meer, Bah
+* **DF chỉ số thấp:** Nanu, Brorsson, Laifis
+
+---
+
+## AZ Alkmaar
+
+* **FW chỉ số cao:** Parrott, Sadiq, Patati
+* **FW chỉ số thấp:** Hornkamp, Smit
+* **MF chỉ số cao:** Koopmeiners, Clasie, Mijnans
+* **MF chỉ số thấp:** Kasius, Šín
+* **DF chỉ số cao:** Maikuma, Goes, Dekker
+* **DF chỉ số thấp:** Penetra, De Wit
+
+---
+
+## Ajax
+
+* **FW chỉ số cao:** Dolberg, Godts, Weghorst
+* **FW chỉ số thấp:** Ibrahimović, Edvardsen
+* **MF chỉ số cao:** Gloukh, Klaassen, Berghuis
+* **MF chỉ số thấp:** Fitz-Jim, Bounida, Steur
+* **DF chỉ số cao:** Gaaei, Itakura, Wijndal, Regeer, Baas
+* **DF chỉ số thấp:** Mokio, Tomiyasu, Šutalo, Zinchenko
+
+---
+
+## Anderlecht
+
+* **FW chỉ số cao:** Amuzu, Vázquez, Dreyer
+* **FW chỉ số thấp:** Gotō, Diouf, Ferrari
+* **MF chỉ số cao:** Verschaeren, Leoni, Rits
+* **MF chỉ số thấp:** Stroeykens, Matsuzawa
+* **DF chỉ số cao:** Zanka, Vertonghen, Sardella
+* **DF chỉ số thấp:** Augustinsson, Janssens
+
+---
+
+## Apollon Limassol
+
+* **FW chỉ số cao:** Rodrigues, Andreou, Duodu, Thomas
+* **FW chỉ số thấp:** Marques, Sagal, Dorregaray
+* **MF chỉ số cao:** Brown, Assunção, Athanasiou
+* **MF chỉ số thấp:** Špoljarić, Weissbeck, Coll
+* **DF chỉ số cao:** Malekkides, Shikkis, Celebi
+* **DF chỉ số thấp:** Vulner, Adoni
+
+---
+
+## Arsenal
+
+* **FW chỉ số cao:** Saka, Havertz, Martinelli, Trossard
+* **FW chỉ số thấp:** Jesus, Gyökeres, Madueke
+* **MF chỉ số cao:** Ødegaard, Rice, Eze, Merino
+* **MF chỉ số thấp:** Zubimendi, Nørgaard, Lewis-Skelly
+* **DF chỉ số cao:** Saliba, Gabriel, White, Timber
+* **DF chỉ số thấp:** Calafiori, Mosquera, Hincapié
+
+---
+
+## Aston Villa
+
+* **FW chỉ số cao:** Watkins, Bailey, Rogers, Buendía
+* **FW chỉ số thấp:** Sancho, Abraham, Elliott
+* **MF chỉ số cao:** McGinn, Tielemans, Onana
+* **MF chỉ số thấp:** Kamara, Barkley, Douglas Luiz
+* **DF chỉ số cao:** Konsa, Torres, Cash, Digne
+* **DF chỉ số thấp:** Maatsen, Mings, Lindelöf
+
+---
+
+## Atalanta
+
+* **FW chỉ số cao:** Lookman, Retegui, De Ketelaere
+* **FW chỉ số thấp:** Scamacca, Zaniolo
+* **MF chỉ số cao:** Ederson, Pasalić, De Roon
+* **MF chỉ số thấp:** Brescianini, Samardžić
+* **DF chỉ số cao:** Hien, Scalvini, Kolašinac, Bellanova
+* **DF chỉ số thấp:** Ruggeri, Djimsiti, Tolói
+
+---
+
+## Athletic Club
+
+* **FW chỉ số cao:** I. Williams, N. Williams, Guruzeta
+* **FW chỉ số thấp:** Berenguer, Djaló
+* **MF chỉ số cao:** Sancet, Vesga
+* **MF chỉ số thấp:** Galarreta, Prados
+* **DF chỉ số cao:** Vivian, Paredes, Yeray
+* **DF chỉ số thấp:** Gorosabel, Yuri
+
+---
+
+## Atlético Madrid
+
+* **FW chỉ số cao:** Griezmann, Alvarez, Sørloth
+* **FW chỉ số thấp:** Lookman, Almada, Simeone
+* **MF chỉ số cao:** Koke, De Paul, Llorente
+* **MF chỉ số thấp:** Barrios, Lemar, N. González
+* **DF chỉ số cao:** Giménez, Le Normand, Molina
+* **DF chỉ số thấp:** Hancko, Lenglet, Ruggeri
+
+---
+
+## BATE Borisov
+
+* **FW chỉ số cao:** Shulyanskyi, Yade
+* **FW chỉ số thấp:** Castillo, Anufriev
+* **MF chỉ số cao:** Jota, Myshnyov, Touati
+* **MF chỉ số thấp:** Smyrnyi, Zhukov
+* **DF chỉ số cao:** Buletsa, Drozd, Bol
+* **DF chỉ số thấp:** Butko, Martynov
+
+---
+
+## Barcelona
+
+* **FW chỉ số cao:** Yamal, Raphinha, Lewandowski
+* **FW chỉ số thấp:** Olmo, Ferran, Rashford
+* **MF chỉ số cao:** Pedri, Gavi, De Jong
+* **MF chỉ số thấp:** Fermín, Casadó
+* **DF chỉ số cao:** Koundé, Araújo, Cubarsí
+* **DF chỉ số thấp:** Balde, Cancelo, Christensen
+
+---
+
+## Basel
+
+* **FW chỉ số cao:** Shaqiri, Barry, Traoré
+* **FW chỉ số thấp:** Fink, Ajeti
+* **MF chỉ số cao:** Avdullahu, Schmid
+* **MF chỉ số thấp:** Leroy
+* **DF chỉ số cao:** Vouilloz, Barisic
+* **DF chỉ số thấp:** Comas, Dräger
+
+---
+
+## Bayer Leverkusen
+
+* **FW chỉ số cao:** Wirtz, Schick, Terrier
+* **FW chỉ số thấp:** Ben Seghir, Tella
+* **MF chỉ số cao:** Andrich, Hofmann, Tillman
+* **MF chỉ số thấp:** Palacios, García
+* **DF chỉ số cao:** Tapsoba, Grimaldo, Badé
+* **DF chỉ số thấp:** Arthur, Mensah
+
+---
+
+## Bayern Munich
+
+* **FW chỉ số cao:** Kane, Musiala, Díaz
+* **FW chỉ số thấp:** Olise, Gnabry, Jackson
+* **MF chỉ số cao:** Kimmich, Goretzka
+* **MF chỉ số thấp:** Pavlović, Laimer
+* **DF chỉ số cao:** Upamecano, Kim, Davies
+* **DF chỉ số thấp:** Tah, Stanišić, Ito
+
+---
+
+## Benfica
+
+* **FW chỉ số cao:** Pavlidis, Lukébakio, Ivanović
+* **FW chỉ số thấp:** Schjelderup, Bruma, Rafa
+* **MF chỉ số cao:** Sudakov, Barreiro, Aursnes
+* **MF chỉ số thấp:** Ríos, Barrenechea
+* **DF chỉ số cao:** Silva, Dedić, Bah
+* **DF chỉ số thấp:** T. Araújo, Dahl
+
+---
+
+## Besiktas
+
+* **FW chỉ số cao:** Muçi, Jota Silva, Kılıçsoy
+* **FW chỉ số thấp:** Oh Hyeon-gyu, Touré
+* **MF chỉ số cao:** Rashica, Kökçü, Asllani, Ndidi
+* **MF chỉ số thấp:** Al-Musrati, Černý, J. Mário
+* **DF chỉ số cao:** Uduokhai, Sanuç, Murillo
+* **DF chỉ số thấp:** Topçu, Djaló, Yılmaz
+
+---
+
+## Bodø/Glimt
+
+* **FW chỉ số cao:** Høgh, Hauge, Blomberg
+* **FW chỉ số thấp:** Bassi, Helmersen
+* **MF chỉ số cao:** Berg, Evjen, Fet
+* **MF chỉ số thấp:** Saltnes, Auklend
+* **DF chỉ số cao:** Bjørkan, Bjørtuft, Nielsen
+* **DF chỉ số thấp:** Gundersen, Aleesami
+
+---
+
+## Bologna
+
+* **FW chỉ số cao:** Orsolini, Castro, Bernardeschi
+* **FW chỉ số thấp:** Odgaard, Dallinga, Cambiaghi
+* **MF chỉ số cao:** Pobega, Freuler, Ferguson
+* **MF chỉ số thấp:** Sohm, Pessina, Domínguez
+* **DF chỉ số cao:** Helland, Heggem, Casale
+* **DF chỉ số thấp:** Lykogiannis, Lucumí, Zortea
+
+---
+
+## Borussia Dortmund
+
+* **FW chỉ số cao:** Guirassy, Beier, Adeyemi
+* **FW chỉ số thấp:** Silva, Mané
+* **MF chỉ số cao:** Brandt, Sabitzer, Nmecha
+* **MF chỉ số thấp:** Bellingham, Chukwuemeka
+* **DF chỉ số cao:** Schlotterbeck, Anton, Couto
+* **DF chỉ số thấp:** Bensebaini, Ryerson, Süle
+
+---
+
+## Borussia M'gladbach
+
+* **FW chỉ số cao:** Honorat, Kleindienst, Hack
+* **FW chỉ số thấp:** Machino, Ngoumou
+* **MF chỉ số cao:** Stöger, Reyna, Neuhaus
+* **MF chỉ số thấp:** Reitz, Engelhardt
+* **DF chỉ số cao:** Diks, Elvedi, Scally
+* **DF chỉ số thấp:** Friedrich, Takai
+
+---
+
+## Bournemouth
+
+* **FW chỉ số cao:** Kluivert, Evanilson, Semenyo, Sinisterra
+* **FW chỉ số thấp:** Adli, Ünal, Rayan
+* **MF chỉ số cao:** Christie, Scott, Cook
+* **MF chỉ số thấp:** Adams, Tavernier, Brooks
+* **DF chỉ số cao:** Senesi, Truffert, Jiménez
+* **DF chỉ số thấp:** Soler, Diakité, Aarons
+
+---
+
+## Braga
+
+* **FW chỉ số cao:** Bruma, El Ouazzani, R. Horta
+* **FW chỉ số thấp:** Fernandes, Garbari
+* **MF chỉ số cao:** Moutinho, Zalazar, Carvalho
+* **MF chỉ số thấp:** Horta, Gorby
+* **DF chỉ số cao:** Niakaté, Bambu, Arrey-Mbi
+* **DF chỉ số thấp:** Gómez, Ribeiro
+
+---
+
+## Brest
+
+* **FW chỉ số cao:** Del Castillo, Ajorque, Mounié
+* **FW chỉ số thấp:** Le Douaron, Brahimi
+* **MF chỉ số cao:** Camara, Lees-Melou, Magnetti
+* **MF chỉ số thấp:** Martin, Doumbia
+* **DF chỉ số cao:** Chardonnet, Brassier, Lala
+* **DF chỉ số thấp:** Locko, Zogbé
+
+---
+
+## Brighton
+
+* **FW chỉ số cao:** Rutter, Welbeck, Tzimas
+* **FW chỉ số thấp:** Kostoulas, Minteh
+* **MF chỉ số cao:** Mitoma, Baleba, O'Riley, Gruda
+* **MF chỉ số thấp:** Gómez, Hinshelwood, Ayari, Milner
+* **DF chỉ số cao:** Dunk, van Hecke, De Cuyper, Kadıoğlu, Boscagli
+* **DF chỉ số thấp:** Wieffer, Igor Julio, Webster, Costinha, Cashin
+
+---
+
+## Brondby
+
+* **FW chỉ số cao:** Omoijuanfo, Suzuki, Kvistgaarden
+* **FW chỉ số thấp:** Schwartau, Vallys
+* **MF chỉ số cao:** Wass, Radosevic
+* **MF chỉ số thấp:** Nartey, Greve
+* **DF chỉ số cao:** Rasmussen, Tshiembe, Lauritsen
+* **DF chỉ số thấp:** Divkovic, Klaiber
+
+---
+
+## CFR Cluj
+
+* **FW chỉ số cao:** Bîrligea, Michael, Deac
+* **FW chỉ số thấp:** Korenica, Postolachi
+* **MF chỉ số cao:** Tachtsidis, Muhar, Keita
+* **MF chỉ số thấp:** Fică, Artean
+* **DF chỉ số cao:** Camora, Boben, Kresic
+* **DF chỉ số thấp:** Mogoș, Ajeti
+
+---
+
+## Celtic
+
+* **FW chỉ số cao:** Furuhashi, Maeda, Kühn
+* **FW chỉ số thấp:** Idah, Yang
+* **MF chỉ số cao:** McGregor, Hatate, Engels
+* **MF chỉ số thấp:** Bernardo, Forrest
+* **DF chỉ số cao:** Carter-Vickers, Scales, Johnston
+* **DF chỉ số thấp:** Taylor, Trusty, Ralston
+
+---
+
+## Chelsea
+
+* **FW chỉ số cao:** Palmer, João Pedro, Garnacho, Neto, Mudryk
+* **FW chỉ số thấp:** Gittens, Guiu, Estêvão, Delap
+* **MF chỉ số cao:** Fernández, Caicedo, Lavia
+* **MF chỉ số thấp:** Santos, Essugo
+* **DF chỉ số cao:** James, Colwill, Fofana, Cucurella, Hato
+* **DF chỉ số thấp:** Gusto, Badiashile, Adarabioyo, Chalobah, Sarr
+
+---
+
+## Club Brugge
+
+* **FW chỉ số cao:** Skov Olsen, Thiago, Nilsson
+* **FW chỉ số thấp:** Jutglà, Talbi
+* **MF chỉ số cao:** Vanaken, Onyedika
+* **MF chỉ số thấp:** Vetlesen, Nielsen
+* **DF chỉ số cao:** Mechele, Ordoñez, De Cuyper
+* **DF chỉ số thấp:** Seys, Sabbe
+
+---
+
+## Como
+
+* **FW chỉ số cao:** Belotti, Cutrone, Strefezza
+* **FW chỉ số thấp:** Cunha, Cerri
+* **MF chỉ số cao:** Paz, Perrone, Sergi Roberto
+* **MF chỉ số thấp:** Engelhardt, Kone
+* **DF chỉ số cao:** Varane, Kempf, Moreno
+* **DF chỉ số thấp:** Dossena, Iovine
+
+---
+
+## Crvena zvezda
+
+* **FW chỉ số cao:** Olayinka, Katai, Duarte
+* **FW chỉ số thấp:** Ndiaye, Krunic
+* **MF chỉ số cao:** Ivanic, Hwang, Elšnik
+* **MF chỉ số thấp:** Ilic, Kanga
+* **DF chỉ số cao:** Dragović, Spajić, Seol
+* **DF chỉ số thấp:** Rodić, Mimović
+
+---
+
+## Derry City
+
+* **FW chỉ số cao:** Mullen, Hoban
+* **FW chỉ số thấp:** Duffy, Diallo
+* **MF chỉ số cao:** McEleney, O'Reilly
+* **MF chỉ số thấp:** Patching, Doherty
+* **DF chỉ số cao:** Boyce, McJannet, Coll
+* **DF chỉ số thấp:** Dummigan, Kelly
+
+---
+
+## Dinamo Zagreb
+
+* **FW chỉ số cao:** Petković, Baturina, Hoxha
+* **FW chỉ số thấp:** Kulenović, Stojković
+* **MF chỉ số cao:** Mišić, Sučić
+* **MF chỉ số thấp:** Ademi, Kacavenda
+* **DF chỉ số cao:** Theophile-Catherine, Bernauer, Mmaee
+* **DF chỉ số thấp:** Pierre-Gabriel, Ristovski
+
+---
+
+## Dynamo Kyiv
+
+* **FW chỉ số cao:** Vanat, Yarmolenko
+* **FW chỉ số thấp:** Voloshyn, Kabaev
+* **MF chỉ số cao:** Shaparenko, Brazhko
+* **MF chỉ số thấp:** Buyalskyi, Pikhalyonok
+* **DF chỉ số cao:** Popov, Mykhavko, Tymchyk
+* **DF chỉ số thấp:** Dubinchak, Karavayev
+
+---
+
+## Eintracht Frankfurt
+
+* **FW chỉ số cao:** Marmoush, Ekitike, Matanovic
+* **FW chỉ số thấp:** Chaïbi, Knauff
+* **MF chỉ số cao:** Skhiri, Götze
+* **MF chỉ số thấp:** Larsson, Dina Ebimbe
+* **DF chỉ số cao:** Koch, Pacho, Tuta
+* **DF chỉ số thấp:** Theate, Kristensen
+
+---
+
+## Elfsborg
+
+* **FW chỉ số cao:** Baidoo, Frick
+* **FW chỉ số thấp:** Abdullai, Jebara
+* **MF chỉ số cao:** Ouma, Zeneli, B. Zeneli
+* **MF chỉ số thấp:** Holmén, Baldursson
+* **DF chỉ số cao:** Holmén, Henriksson, Hult
+* **DF chỉ số thấp:** Yegbe, Bukhari
+
+---
+
+## FC Copenhagen
+
+* **FW chỉ số cao:** Cornelius, Achouri, Elyounoussi
+* **FW chỉ số thấp:** Larsson, Robert
+* **MF chỉ số cao:** Falk, Lerager
+* **MF chỉ số thấp:** Clem, Claesson
+* **DF chỉ số cao:** Vavro, Diks, Meling
+* **DF chỉ số thấp:** Gabriel, Lund
+
+---
+
+## FC Zurich
+
+* **FW chỉ số cao:** Perea, Krasniqi, Oko-Flex
+* **FW chỉ số thấp:** Afriyie, Marchesano
+* **MF chỉ số cao:** Mathew, Conde
+* **MF chỉ số thấp:** Chouiar, Boranijašević
+* **DF chỉ số cao:** Kamberi, Gómez, Katic
+* **DF chỉ số thấp:** Wallner, Hodza
+
+---
+
+## Fenerbahçe
+
+* **FW chỉ số cao:** Džeko, En-Nesyri, Saint-Maximin
+* **FW chỉ số thấp:** Tadić, Kahveci, Szymański
+* **MF chỉ số cao:** Fred, Amrabat
+* **MF chỉ số thấp:** Yüksek, Müftüoğlu
+* **DF chỉ số cao:** Söyüncü, Djiku, Müldür
+* **DF chỉ số thấp:** Oosterwolde, Osayi-Samuel
+
+---
+
+## Ferencváros
+
+* **FW chỉ số cao:** Varga, Traoré, Saldanha
+* **FW chỉ số thấp:** Pesic, Zachariassen
+* **MF chỉ số cao:** Abu Fani, Maïga
+* **MF chỉ số thấp:** Rommens, Ben Romdhane
+* **DF chỉ số cao:** Cissé, Gustavo, Ramírez
+* **DF chỉ số thấp:** Botka, Makreckis
+
+---
+
+## Feyenoord
+
+* **FW chỉ số cao:** Giménez, Paixão, Stengs
+* **FW chỉ số thấp:** Ivanušec, Osman, Carranza
+* **MF chỉ số cao:** Timber, Hwang
+* **MF chỉ số thấp:** Zerrouki, Milambo
+* **DF chỉ số cao:** Hancko, Beelen, Geertruida
+* **DF chỉ số thấp:** Smál, Bueno
+
+---
+
+## Fiorentina
+
+* **FW chỉ số cao:** Kean, Gudmundsson, Sottil
+* **FW chỉ số thấp:** Kouamé, Beltrán
+* **MF chỉ số cao:** Bove, Cataldi, Mandragora
+* **MF chỉ số thấp:** Adli, Richardson
+* **DF chỉ số cao:** Quarta, Ranieri, Dodô
+* **DF chỉ số thấp:** Gosens, Pongračić
+
+---
+
+## Freiburg
+
+* **FW chỉ số cao:** Doan, Grifo, Gregoritsch
+* **FW chỉ số thấp:** Dinkçi, Höler
+* **MF chỉ số cao:** Eggestein, Höfler
+* **MF chỉ số thấp:** Röhl, Osterhage
+* **DF chỉ số cao:** Ginter, Lienhart, Günter
+* **DF chỉ số thấp:** Kübler, Sildillia
+
+---
+
+## Galatasaray
+
+* **FW chỉ số cao:** Sané, Osimhen, Icardi, Mertens
+* **FW chỉ số thấp:** Barış Alper, Batshuayi, Akgün
+* **MF chỉ số cao:** Torreira, Gabriel Sara
+* **MF chỉ số thấp:** Demirbay, Kutlu
+* **DF chỉ số cao:** Bardakcı, Nelsson, Sánchez
+* **DF chỉ số thấp:** Jakobs, Ayhan
+
+---
+
+## Genk
+
+* **FW chỉ số cao:** Tolu, Sor, Steuckers
+* **FW chỉ số thấp:** Karetsas, Zeqiri
+* **MF chỉ số cao:** Heynen, Hrošovský
+* **MF chỉ số thấp:** El Khannouss, Banga
+* **DF chỉ số cao:** Cuesta, Smets, Kayembe
+* **DF chỉ số thấp:** Fadera, El Ouahdi
+
+---
+
+## Hajduk Split
+
+* **FW chỉ số cao:** Livaja, Sahiti, Kalinić
+* **FW chỉ số thấp:** Dajaku, Bamba
+* **MF chỉ số cao:** Rakitić, Krovinović
+* **MF chỉ số thấp:** Pukštas, Sigur
+* **DF chỉ số cao:** Šarlija, Uremović, Melnjak
+* **DF chỉ số thấp:** Diallo, Elez
+
+---
+
+## Hamburg SV
+
+* **FW chỉ số cao:** Glatzel, Königsdörffer, Dompé
+* **FW chỉ số thấp:** Jatta, Németh
+* **MF chỉ số cao:** Reis, Poreba, Elfadli
+* **MF chỉ số thấp:** Carvalho, Richter
+* **DF chỉ số cao:** Schonlau, Hadžikadunić, Muheim
+* **DF chỉ số thấp:** Van der Brempt, Hefti
+
+---
+
+## Hearts
+
+* **FW chỉ số cao:** Shankland, Vargas, Oda
+* **FW chỉ số thấp:** Boyce, Dhanda
+* **MF chỉ số cao:** Baningime, Spittal, Devlin
+* **MF chỉ số thấp:** Boateng, Grant
+* **DF chỉ số cao:** Kingsley, Halkett, Kent
+* **DF chỉ số thấp:** Rowles, Penrice, Oyegoke
+
+---
+
+## Hoffenheim
+
+* **FW chỉ số cao:** Kramarić, Bülter, Hložek
+* **FW chỉ số thấp:** Berisha, Tabaković
+* **MF chỉ số cao:** Stach, Grillitsch, Prömel
+* **MF chỉ số thấp:** Geiger, Tohumcu
+* **DF chỉ số cao:** Kadeřábek, Akpoguma, Nsoki
+* **DF chỉ số thấp:** Drechsler, Jurásek, Gendrey
+
+---
+
+## Inter Milan
+
+* **FW chỉ số cao:** Martínez, Thuram, Taremi
+* **FW chỉ số thấp:** Arnautović, Correa
+* **MF chỉ số cao:** Barella, Çalhanoğlu, Mkhitaryan
+* **MF chỉ số thấp:** Frattesi, Zieliński, Asllani
+* **DF chỉ số cao:** Bastoni, Pavard, Dimarco, Acerbi
+* **DF chỉ số thấp:** Dumfries, Darmian, Bisseck, De Vrij
+
+---
+
+## Istanbul Basaksehir
+
+* **FW chỉ số cao:** Piątek, Figueiredo, Gürler
+* **FW chỉ số thấp:** Keny, Pelkas
+* **MF chỉ số cao:** Özcan, İlkhan, Ergün
+* **MF chỉ số thấp:** Kemen, Türüç
+* **DF chỉ số cao:** Duarte, Opoku, Lima
+* **DF chỉ số thấp:** Ba, Şahiner
+
+---
+
+## Juventus
+
+* **FW chỉ số cao:** Vlahović, Yıldız, Conceição
+* **FW chỉ số thấp:** Milik, Weah, González
+* **MF chỉ số cao:** Koopmeiners, Luiz, Thuram
+* **MF chỉ số thấp:** Locatelli, McKennie, Fagioli
+* **DF chỉ số cao:** Bremer, Cambiaso, Kalulu, Gatti
+* **DF chỉ số thấp:** Danilo, Cabal, Savona
+
+---
+
+## LASK
+
+* **FW chỉ số cao:** Ljubičić, Usor, Mustapha
+* **FW chỉ số thấp:** Pintor, Kone
+* **MF chỉ số cao:** Zulj, Horvath, Beriša
+* **MF chỉ số thấp:** Bogarde, Jovičić
+* **DF chỉ số cao:** Andrade, Ziereis, Stojković
+* **DF chỉ số thấp:** Bello, Talovierov
+
+---
+
+## Lazio
+
+* **FW chỉ số cao:** Castellanos, Zaccagni, Dia
+* **FW chỉ số thấp:** Noslin, Isaksen, Pedro
+* **MF chỉ số cao:** Guendouzi, Rovella, Vecino
+* **MF chỉ số thấp:** Dele-Bashiru, Castrovilli
+* **DF chỉ số cao:** Romagnoli, Gila, Tavares, Lazzari
+* **DF chỉ số thấp:** Patric, Pellegrini, Marušić
+
+---
+
+## Lech Poznań
+
+* **FW chỉ số cao:** Ishak, Szymczak, Hotić
+* **FW chỉ số thấp:** Fiabema, Gholizadeh
+* **MF chỉ số cao:** Murawski, Sousa, Kozubal
+* **MF chỉ số thấp:** Ba Loua, Jagiełło
+* **DF chỉ số cao:** Milić, Salamon, Pereira
+* **DF chỉ số thấp:** Douglas, Gurgul
+
+---
+
+## Legia Warsaw
+
+* **FW chỉ số cao:** Pekhart, Gual, Kramer
+* **FW chỉ số thấp:** Morishita, Alfarela
+* **MF chỉ số cao:** Josué, Kapustka, Luquinhas
+* **MF chỉ số thấp:** Celhaka, Elitim
+* **DF chỉ số cao:** Augustyniak, Pankov, Ziółkowski
+* **DF chỉ số thấp:** Wszołek, Vinagre
+
+---
+
+## Lens
+
+* **FW chỉ số cao:** Sotoca, Nzola, Saïd
+* **FW chỉ số thấp:** Satriano, Ojediran
+* **MF chỉ số cao:** Thomasson, Diouf, Frankowski
+* **MF chỉ số thấp:** Machado, Fulgini, Mendy
+* **DF chỉ số cao:** Danso, Medina, Gradit
+* **DF chỉ số thấp:** Khusanov, Chávez, Aguilar
+
+---
+
+## Lille
+
+* **FW chỉ số cao:** David, Zhegrova, Bayo
+* **FW chỉ số thấp:** Sahraoui, Cabella, Fernández-Pardo
+* **MF chỉ số cao:** Gomes, André, Mukau
+* **MF chỉ số thấp:** Bouaddi, E. Mbappé
+* **DF chỉ số cao:** Diakité, Gudmundsson, Meunier
+* **DF chỉ số thấp:** Mandi, Ismaily, Touré
+
+---
+
+## Liverpool
+
+* **FW chỉ số cao:** Salah, Díaz, Jota
+* **FW chỉ số thấp:** Gakpo, Núñez, Chiesa
+* **MF chỉ số cao:** Mac Allister, Gravenberch, Szoboszlai
+* **MF chỉ số thấp:** Jones, Elliott, Endo
+* **DF chỉ số cao:** Van Dijk, Alexander-Arnold, Konaté, Robertson
+* **DF chỉ số thấp:** Bradley, Quansah, Tsimikas
+
+---
+
+## Ludogorets
+
+* **FW chỉ số cao:** Cruz, Duah, Rick
+* **FW chỉ số thấp:** Delev, Tissera
+* **MF chỉ số cao:** Piotrowski, Nedelev, Naressi
+* **MF chỉ số thấp:** Yordanov, Duarte
+* **DF chỉ số cao:** Verdon, Almeida, Witry
+* **DF chỉ số thấp:** Nedyalkov, Son
+
+---
+
+## Lyon
+
+* **FW chỉ số cao:** Lacazette, Mikautadze, Orban
+* **FW chỉ số thấp:** Fofana, Benrahma, Nuamah
+* **MF chỉ số cao:** Matić, Tolisso, Caqueret
+* **MF chỉ số thấp:** Cherki, Tessmann
+* **DF chỉ số cao:** Ćaleta-Car, Niakhaté, Mata
+* **DF chỉ số thấp:** Tagliafico, Maitland-Niles, Abner
+
+---
+
+## Malmö FF
+
+* **FW chỉ số cao:** Kiese Thelin, Botheim, Ali
+* **FW chỉ số thấp:** Bolin, Rieks
+* **MF chỉ số cao:** Pena, Berg, Jørgensen
+* **MF chỉ số thấp:** Rosengren, Johnsen
+* **DF chỉ số cao:** Jansson, Zätterström, Stryger Larsen
+* **DF chỉ số thấp:** Busanello, Moisander
+
+---
+
+## Manchester City
+
+* **FW chỉ số cao:** Haaland, Foden, Doku
+* **FW chỉ số thấp:** Grealish, Savinho, Bobb
+* **MF chỉ số cao:** Rodri, De Bruyne, Silva, Gündoğan
+* **MF chỉ số thấp:** Kovačić, Nunes, McAtee
+* **DF chỉ số cao:** Dias, Gvardiol, Akanji, Stones
+* **DF chỉ số thấp:** Walker, Aké, Lewis
+
+---
+
+## Manchester United
+
+* **FW chỉ số cao:** Rashford, Garnacho, Højlund
+* **FW chỉ số thấp:** Zirkzee, Diallo, Antony
+* **MF chỉ số cao:** Fernandes, Mainoo, Casemiro
+* **MF chỉ số thấp:** Ugarte, Mount, Eriksen
+* **DF chỉ số cao:** Martínez, De Ligt, Dalot, Mazraoui
+* **DF chỉ số thấp:** Maguire, Shaw, Yoro, Evans
+
+---
+
+## Maribor
+
+* **FW chỉ số cao:** Jakupović, Barišić, Beugre
+* **FW chỉ số thấp:** Bourlès, Kolar
+* **MF chỉ số cao:** Iličić, Repas, Božić
+* **MF chỉ số thấp:** Vrhovec, Dizdarević
+* **DF chỉ số cao:** Širvys, Vidmar, Karić
+* **DF chỉ số thấp:** Barišić, Milec
+
+---
+
+## Marseille
+
+* **FW chỉ số cao:** Greenwood, Wahi, Rowe
+* **FW chỉ số thấp:** Henrique, Moumbagna
+* **MF chỉ số cao:** Rabiot, Højbjerg, Harit
+* **MF chỉ số thấp:** Kondogbia, Koné, Carboni
+* **DF chỉ số cao:** Balerdi, Murillo, Cornelius
+* **DF chỉ số thấp:** Merlin, Brassier, Meïté
+
+---
+
+## Midtjylland
+
+* **FW chỉ số cao:** Franculino, Buksza, Osorio
+* **FW chỉ số thấp:** Chilufya, Gogza
+* **MF chỉ số cao:** Simsir, Martínez, Castillo
+* **MF chỉ số thấp:** Sørensen, Byskov
+* **DF chỉ số cao:** Diao, Bech, Gomes
+* **DF chỉ số thấp:** Lee, Bak
+
+---
+
+## Monaco
+
+* **FW chỉ số cao:** Embolo, Balogun, Ilenikhena
+* **FW chỉ số thấp:** Minamino, Akliouche
+* **MF chỉ số cao:** Zakaria, Golovin, Camara
+* **MF chỉ số thấp:** Ben Seghir, Matazo
+* **DF chỉ số cao:** Salisu, Kehrer, Vanderson
+* **DF chỉ số thấp:** Singo, Caio Henrique, Mawissa
+
+---
+
+## Napoli
+
+* **FW chỉ số cao:** Kvaratskhelia, Lukaku, Neres
+* **FW chỉ số thấp:** Politano, Simeone, Raspadori
+* **MF chỉ số cao:** Lobotka, Anguissa, McTominay
+* **MF chỉ số thấp:** Gilmour, Folorunsho
+* **DF chỉ số cao:** Di Lorenzo, Rrahmani, Buongiorno
+* **DF chỉ số thấp:** Olivera, Spinazzola, Mazzocchi
+
+---
+
+## Newcastle United
+
+* **FW chỉ số cao:** Isak, Gordon, Barnes
+* **FW chỉ số thấp:** Wilson, Murphy, Almirón
+* **MF chỉ số cao:** Guimarães, Joelinton, Tonali
+* **MF chỉ số thấp:** Longstaff, Willock
+* **DF chỉ số cao:** Schär, Botman, Burn, Livramento
+* **DF chỉ số thấp:** Trippier, Hall, Kelly
+
+---
+
+## Nice
+
+* **FW chỉ số cao:** Moukoko, Guessand, Boga
+* **FW chỉ số thấp:** Cho, Diop, Laborde
+* **MF chỉ số cao:** Ndombele, Rosario, Boudaoui
+* **MF chỉ số thấp:** Sanson, Ndayishimiye
+* **DF chỉ số cao:** Dante, Bombito, Clauss
+* **DF chỉ số thấp:** Bard, Abdelmonem, Mendy
+
+---
+
+## Nordsjaelland
+
+* **FW chỉ số cao:** Ingvartsen, Nygren, Osman
+* **FW chỉ số thấp:** Harder, Hansen
+* **MF chỉ số cao:** Svensson, Dorgeles, Tverskov
+* **MF chỉ số thấp:** Brink, Certgh
+* **DF chỉ số cao:** Hey, Nagalo, Villadsen
+* **DF chỉ số thấp:** Frese, Marx
+
+---
+
+## Olympiakos
+
+* **FW chỉ số cao:** El Kaabi, Velde, Martins
+* **FW chỉ số thấp:** Masouras, Yaremchuk
+* **MF chỉ số cao:** Hezze, Chiquinho, Stamenic
+* **MF chỉ số thấp:** García, Oliveira
+* **DF chỉ số cao:** Carmo, Retsos, Ortega
+* **DF chỉ số thấp:** Rodinei, Pirola, Costinha
+
+---
+
+## PAOK
+
+* **FW chỉ số cao:** Tissoudali, Despodov, Zivkovic
+* **FW chỉ số thấp:** Chalov, Brandon
+* **MF chỉ số cao:** Konstantelias, Camara, Schwab
+* **MF chỉ số thấp:** Ozdoev, Bakayoko
+* **DF chỉ số cao:** Kedziora, Baba, Colley
+* **DF chỉ số thấp:** Otto, Michailidis
+
+---
+
+## PSG
+
+* **FW chỉ số cao:** Dembélé, Barcola, Ramos
+* **FW chỉ số thấp:** Kolo Muani, Asensio, Doué
+* **MF chỉ số cao:** Vitinha, Neves, Zaïre-Emery
+* **MF chỉ số thấp:** Ruiz, Lee, Mayulu
+* **DF chỉ số cao:** Marquinhos, Pacho, Hakimi
+* **DF chỉ số thấp:** Mendes, Beraldo, Skriniar
+
+---
+
+## PSV Eindhoven
+
+* **FW chỉ số cao:** De Jong, Bakayoko, Lang
+* **FW chỉ số thấp:** Lozano, Pepi, Driouech
+* **MF chỉ số cao:** Schouten, Veerman, Tillman
+* **MF chỉ số thấp:** Saibari, Til
+* **DF chỉ số cao:** Boscagli, Flamingo, Dest
+* **DF chỉ số thấp:** Teze, Karsdorp, Obispo
+
+---
+
+## Panathinaikos
+
+* **FW chỉ số cao:** Ioannidis, Tetê, Pellistri
+* **FW chỉ số thấp:** Šporar, Jeremejeff
+* **MF chỉ số cao:** Bakaseta, Araão, Maksimović
+* **MF chỉ số thấp:** Čerin, Djuricic
+* **DF chỉ số cao:** Jedvaj, Ingason, Mladenović
+* **DF chỉ số thấp:** Vagiannidis, Schenkeveld
+
+---
+
+## Partizan
+
+* **FW chỉ số cao:** Saldanha, Kalulu, Goh
+* **FW chỉ số thấp:** Zubairu, Jovanović
+* **MF chỉ số cao:** Zahid, Natcho, Arriaga
+* **MF chỉ số thấp:** Kovač, Stjepanović
+* **DF chỉ số cao:** Marković, Mujakić, Antić
+* **DF chỉ số thấp:** Đurđević, Filipović
+
+---
+
+## Porto
+
+* **FW chỉ số cao:** Omorodion, Galeno, Pepê
+* **FW chỉ số thấp:** Namaso, Gül, Borges
+* **MF chỉ số cao:** Varela, Nico, Eustáquio
+* **MF chỉ số thấp:** Vieira, Grujić, Mora
+* **DF chỉ số cao:** Pérez, Djaló, Moura
+* **DF chỉ số thấp:** Martim, Zé Pedro, Wendell
+
+---
+
+## RB Leipzig
+
+* **FW chỉ số cao:** Openda, Šeško
+* **FW chỉ số thấp:** Poulsen, Silva
+* **MF chỉ số cao:** Simons, Nusa, Haidara, Kampl
+* **MF chỉ số thấp:** Seiwald, Elmas, Baumgartner
+* **DF chỉ số cao:** Lukeba, Orban, Raum
+* **DF chỉ số thấp:** Henrichs, Geertruida, Bitshiabu
+
+---
+
+## Rangers
+
+* **FW chỉ số cao:** Dessers, Cerny, Danilo
+* **FW chỉ số thấp:** Igamane, Matondo, Cortés
+* **MF chỉ số cao:** Diomande, Barron, Hagi
+* **MF chỉ số thấp:** Lawrence, Raskin, Dowell
+* **DF chỉ số cao:** Tavernier, Souttar, Pröpper
+* **DF chỉ số thấp:** Jefte, Sterling, Kasanwirjo
+
+---
+
+## Real Betis
+
+* **FW chỉ số cao:** Vitor Roque, Ezzalzouli, Ávila
+* **FW chỉ số thấp:** Bakambu, Juanmi, Assane
+* **MF chỉ số cao:** Lo Celso, Fornals, Carvalho
+* **MF chỉ số thấp:** Roca, Cardoso, Altimira
+* **DF chỉ số cao:** Llorente, Natan, Bellerín
+* **DF chỉ số thấp:** Perraud, Sabaly, Bartra
+
+---
+
+## Real Madrid
+
+* **FW chỉ số cao:** Mbappé, Vinícius, Rodrygo
+* **FW chỉ số thấp:** Endrick, Brahim
+* **MF chỉ số cao:** Bellingham, Valverde, Tchouaméni, Camavinga
+* **MF chỉ số thấp:** Modrić, Güler, Ceballos
+* **DF chỉ số cao:** Rüdiger, Militão, Carvajal, Mendy
+* **DF chỉ số thấp:** García, Vallejo, Alaba
+
+---
+
+## Real Sociedad
+
+* **FW chỉ số cao:** Oyarzabal, Kubo, Becker
+* **FW chỉ số thấp:** Óskarsson, Sadiq, Barrenetxea
+* **MF chỉ số cao:** Zubimendi, Méndez, Sučić
+* **MF chỉ số thấp:** Turrientes, Gómez
+* **DF chỉ số cao:** Zubeldia, Aguerd, Aramburu
+* **DF chỉ số thấp:** Javi López, Traoré, Elustondo
+
+---
+
+## Rennes
+
+* **FW chỉ số cao:** Kalimuendo, Gouiri, Gómez
+* **FW chỉ số thấp:** Gronbaek, Meister
+* **MF chỉ số cao:** Blas, Santamaria, Kamara
+* **MF chỉ số thấp:** Matusiwa, James
+* **DF chỉ số cao:** Seidu, Østigård, Hateboer
+* **DF chỉ số thấp:** Truffert, Wooh, Faye
+
+---
+
+## Roma
+
+* **FW chỉ số cao:** Dovbyk, Dybala, Soulé
+* **FW chỉ số thấp:** El Shaarawy, Shomurodov
+* **MF chỉ số cao:** Pellegrini, Koné, Cristante
+* **MF chỉ số thấp:** Pisilli, Paredes, Le Fée
+* **DF chỉ số cao:** Ndicka, Mancini, Hermoso, Angeliño
+* **DF chỉ số thấp:** Çelik, Hummels, Abdulhamid
+
+---
+
+## Rosenborg
+
+* **FW chỉ số cao:** Sæter, Nypan, Holte
+* **FW chỉ số thấp:** Broholm, Reitan-Sunde
+* **MF chỉ số cao:** Selnaes, Nemcik
+* **MF chỉ số thấp:** Väänänen, Zecevic
+* **DF chỉ số cao:** Yttergård Jenssen, Ceide, Pereira
+* **DF chỉ số thấp:** Cornic, Volden
+
+---
+
+## Salzburg
+
+* **FW chỉ số cao:** Konaté, Gloukh, Dorgeles
+* **FW chỉ số thấp:** Daghim, Ratkov, Baidoo
+* **MF chỉ số cao:** Kjærgaard, Bidstrup, Gourna-Douath
+* **MF chỉ số thấp:** Capaldo, Bajcetic, Diambou
+* **DF chỉ số cao:** Piatkowski, Blank, Dedić
+* **DF chỉ số thấp:** Terzić, Mellberg
+
+---
+
+## Sevilla
+
+* **FW chỉ số cao:** Romero, Lukebakio, Ejuke
+* **FW chỉ số thấp:** Iheanacho, Peque, Suso
+* **MF chỉ số cao:** Saúl, Lokonga, Sow
+* **MF chỉ số thấp:** Agoumé, Gudelj
+* **DF chỉ số cao:** Badé, Nianzou, Carmona
+* **DF chỉ số thấp:** Pedrosa, Navas, Marcao
+
+---
+
+## Shakhtar Donetsk
+
+* **FW chỉ số cao:** Sikan, Traoré, Kevin
+* **FW chỉ số thấp:** Zubkov, Eguinaldo, Pedrinho
+* **MF chỉ số cao:** Sudakov, Kryskiv, Bondarenko
+* **MF chỉ số thấp:** Stepanenko, Marlon
+* **DF chỉ số cao:** Matviyenko, Bondar, Konoplia
+* **DF chỉ số thấp:** Pedro Henrique, Azarovi
+
+---
+
+## Shamrock Rovers
+
+* **FW chỉ số cao:** Kenny, Greene, Burke
+* **FW chỉ số thấp:** Gaffney, McNulty
+* **MF chỉ số cao:** Watts, Towell, Nugent
+* **MF chỉ số thấp:** O'Neill, Byrne
+* **DF chỉ số cao:** Cleary, Honohan, Pico
+* **DF chỉ số thấp:** Clarke, Kavanagh
+
+---
+
+## Slavia Prague
+
+* **FW chỉ số cao:** Chorý, Chytil, Provod
+* **FW chỉ số thấp:** Schranz, Jurečka
+* **MF chỉ số cao:** Zafeiris, Oscar, Prebsl
+* **MF chỉ số thấp:** Douděra, Sevcik
+* **DF chỉ số cao:** Holeš, Zima, Diouf
+* **DF chỉ số thấp:** Bořil, Ogbuehi
+
+---
+
+## Sligo Rovers
+
+* **FW chỉ số cao:** Mata, Pearce
+* **FW chỉ số thấp:** Radosavljevic, Waweru
+* **MF chỉ số cao:** Chapman, Morahan
+* **MF chỉ số thấp:** Malley, Barlow
+* **DF chỉ số cao:** Pijnaker, Wiggett, Hutchinson
+* **DF chỉ số thấp:** Wilson, Fitzgerald
+
+---
+
+## Sparta Prague
+
+* **FW chỉ số cao:** Olatunji, Haraslín, Tuci
+* **FW chỉ số thấp:** Birmančević, Krasniqi
+* **MF chỉ số cao:** Laci, Kairinen, Panák
+* **MF chỉ số thấp:** Sadílek, Pavelka
+* **DF chỉ số cao:** Vitík, Sørensen, Rynes
+* **DF chỉ số thấp:** Preciado, Zelený
+
+---
+
+## Sporting CP
+
+* **FW chỉ số cao:** Gyökeres, Trincão, Edwards
+* **FW chỉ số thấp:** Harder, Conrad Harder
+* **MF chỉ số cao:** Hjulmand, Morita, Bragança
+* **MF chỉ số thấp:** Quenda, Gonçalves
+* **DF chỉ số cao:** Inácio, Diomande, Debast
+* **DF chỉ số thấp:** Araújo, Matheus Reis, Esgaio
+
+---
+
+## Strasbourg
+
+* **FW chỉ số cao:** Emegha, Nanasi, Bakwa
+* **FW chỉ số thấp:** Mara, Sebas
+* **MF chỉ số cao:** Andrey Santos, Diarra
+* **MF chỉ số thấp:** Doukouré, Lemaréchal
+* **DF chỉ số cao:** Sow, Sylla, Sarr
+* **DF chỉ số thấp:** Doué, Senaya
+
+---
+
+## Sturm Graz
+
+* **FW chỉ số cao:** Biereth, Jatta, Camara
+* **FW chỉ số thấp:** Sarkaria, Grgić
+* **MF chỉ số cao:** Kiteishvili, Horvat, Bøving
+* **MF chỉ số thấp:** Chukwuani, Gorenc-Stanković
+* **DF chỉ số cao:** Lavalee, Aiwu, Gazibegović
+* **DF chỉ số thấp:** Johnston, Geyrhofer
+
+---
+
+## Stuttgart
+
+* **FW chỉ số cao:** Undav, Demirović, Touré
+* **FW chỉ số thấp:** Leweling, Diehl
+* **MF chỉ số cao:** Millot, Stiller, Karazor
+* **MF chỉ số thấp:** Führich, Rieder
+* **DF chỉ số cao:** Chabot, Rouault, Mittelstädt
+* **DF chỉ số thấp:** Vagnoman, Chase, Stergiou
+
+---
+
+## Tottenham Hotspur
+
+* **FW chỉ số cao:** Son, Solanke, Johnson
+* **FW chỉ số thấp:** Richarlison, Werner, Odobert
+* **MF chỉ số cao:** Maddison, Kulusevski, Sarr
+* **MF chỉ số thấp:** Bentancur, Bissouma, Bergvall
+* **DF chỉ số cao:** Romero, Van de Ven, Porro, Udogie
+* **DF chỉ số thấp:** Drăgușin, Spence, Davies
+
+---
+
+## Union Berlin
+
+* **FW chỉ số cao:** Hollerbach, Jordan, Vertessen
+* **FW chỉ số thấp:** Volland, Prtajin
+* **MF chỉ số cao:** Kemlein, Schäfer, Khedira
+* **MF chỉ số thấp:** Jeong, Tousart, Habib
+* **DF chỉ số cao:** Doekhi, Leite, Vogt
+* **DF chỉ số thấp:** Trimmel, Rothe, Querfeld
+
+---
+
+## Union Saint-Gilloise
+
+* **FW chỉ số cao:** Ivanović, Rodriguez, Kabangu
+* **FW chỉ số thấp:** Fuseini, Eckert
+* **MF chỉ số cao:** Sadiki, Vanhoutte, Ait El Hadj
+* **MF chỉ số thấp:** Rasmussen, Lapoussin
+* **DF chỉ số cao:** Machida, Mac Allister, Burgess
+* **DF chỉ số thấp:** Castro-Montes, Teklab
+
+---
+
+## Viktoria Plzen
+
+* **FW chỉ số cao:** Šulc, Adu, Vydra
+* **FW chỉ số thấp:** Vašulín, Mika
+* **MF chỉ số cao:** Kalvach, Cerv, Kopic
+* **MF chỉ số thấp:** Jirka, Panos
+* **DF chỉ số cao:** Hranáč, Dweh, Jemelka
+* **DF chỉ số thấp:** Havel, Cadu
+
+---
+
+## Villarreal
+
+* **FW chỉ số cao:** Pérez, Barry, Pépé
+* **FW chỉ số thấp:** Baena, Danjuma, Gerard
+* **MF chỉ số cao:** Parejo, Comesaña, Gueye
+* **MF chỉ số thấp:** Terrats, Suárez
+* **DF chỉ số cao:** Bailly, Costa, Albiol
+* **DF chỉ số thấp:** Cardona, Femenía, Foyth
+
+---
+
+## Wisla Krakow
+
+* **FW chỉ số cao:** Rodado, Gogół, Alfaro
+* **FW chỉ số thấp:** Zwoliński, Krzyzanowski
+* **MF chỉ số cao:** Duda, Uryga, Kutwa
+* **MF chỉ số thấp:** Carbo, Baena
+* **DF chỉ số cao:** Szot, Jaroch, Łasicki
+* **DF chỉ số thấp:** Biedrzycki, Kiš
+
+---
+
+## Wolfsberger AC
+
+* **FW chỉ số cao:** Bamba, Röcher, Karamoko
+* **FW chỉ số thấp:** Omić, Gattermayer
+* **MF chỉ số cao:** Altunashvili, Piesinger, Jasić
+* **MF chỉ số thấp:** Wernitznig, Tijani
+* **DF chỉ số cao:** Baumgartner, Oroz, Scherzer
+* **DF chỉ số thấp:** Diabate, Kennedy
+
+---
+
+## Young Boys
+
+* **FW chỉ số cao:** Ganvoula, Itten, Monteiro
+* **FW chỉ số thấp:** Elia, Colley
+* **MF chỉ số cao:** Ugrinić, Niasse, Lauper
+* **MF chỉ số thấp:** Lakomy, Imeri
+* **DF chỉ số cao:** Camara, Benito, Hadjam
+* **DF chỉ số thấp:** Athekame, Husic
+
+---
+
+## Zenit St. Petersburg
+
+* **FW chỉ số cao:** Cassierra, Luciano, Artur
+* **FW chỉ số thấp:** Pedro, Sergeev, Mantuan
+* **MF chỉ số cao:** Wendel, Claudio, Barrios
+* **MF chỉ số thấp:** Mostovoy, Glushankov
+* **DF chỉ số cao:** Nino, Eraković, Douglas Santos
+* **DF chỉ số thấp:** Karavaev, Alip
