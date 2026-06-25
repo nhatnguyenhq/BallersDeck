@@ -7,7 +7,7 @@
         "ENG": [
             { name: "Manchester City", prob: 1.0, atk: 91, def: 88, mid: 92 },
             { name: "Liverpool", prob: 0.96, atk: 90, def: 87, mid: 88 },
-            { name: "Arsenal", prob: 0.96, atk: 88, def: 87, mid: 86 },
+            { name: "Arsenal", prob: 0.96, atk: 88, def: 89, mid: 86 },
             { name: "Chelsea", prob: 0.80, atk: 85, def: 83, mid: 84 },
             { name: "Manchester United", prob: 0.70, atk: 82, def: 80, mid: 80 },
             { name: "Tottenham Hotspur", prob: 0.65, atk: 84, def: 79, mid: 81 },
@@ -29,7 +29,7 @@
         ],
         // GERMANY
         "GER": [
-            { name: "Bayern Munich", prob: 1.0, atk: 92, def: 88, mid: 90 },
+            { name: "Bayern Munich", prob: 1.0, atk: 94, def: 88, mid: 89 },
             { name: "Borussia Dortmund", prob: 1.0, atk: 85, def: 82, mid: 83 },
             { name: "Bayer Leverkusen", prob: 0.85, atk: 87, def: 86, mid: 87 },
             { name: "RB Leipzig", prob: 0.75, atk: 83, def: 82, mid: 82 },
@@ -526,7 +526,7 @@
             { name: "Quansah", pos: "DF", rating: 15 },
         ],
                 "bayernmunich": [
-            { name: "Kane", pos: "FW", rating: 275 },
+            { name: "Kane", pos: "FW", rating: 325 },
             { name: "Musiala", pos: "FW", rating: 114 },
             { name: "Díaz", pos: "FW", rating: 154 },
             { name: "Olise", pos: "FW", rating: 150 },
@@ -1776,7 +1776,7 @@
             { name: "Bartra", pos: "DF", rating: 25 },
         ],
                 "realmadrid": [
-            { name: "Mbappé", pos: "FW", rating: 205 },
+            { name: "Mbappé", pos: "FW", rating: 255 },
             { name: "Vinícius", pos: "FW", rating: 200 },
             { name: "Rodrygo", pos: "FW", rating: 103 },
             { name: "Bellingham", pos: "MF", rating: 123 },
