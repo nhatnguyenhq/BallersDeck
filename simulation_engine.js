@@ -37,7 +37,6 @@
             { name: "Stuttgart", prob: 0.55, atk: 80, def: 79, mid: 78 },
             { name: "Freiburg", prob: 0.08, atk: 74, def: 75, mid: 72 },
             { name: "Borussia M'gladbach", prob: 0.30, atk: 76, def: 75, mid: 74 },
-            { name: "Hoffenheim", prob: 0.02, atk: 71, def: 70, mid: 70 },
             { name: "Hamburg SV", prob: 0.02, atk: 70, def: 69, mid: 69 },
             { name: "Union Berlin", prob: 0.01, atk: 69, def: 70, mid: 68 }
         ],
@@ -51,8 +50,7 @@
             { name: "Como", prob: 0.35, atk: 78, def: 76, mid: 76 },
             { name: "Roma", prob: 0.55, atk: 81, def: 79, mid: 79 },
             { name: "Lazio", prob: 0.36, atk: 80, def: 79, mid: 78 },
-            { name: "Bologna", prob: 0.25, atk: 77, def: 76, mid: 75 },
-            { name: "Fiorentina", prob: 0.20, atk: 78, def: 77, mid: 76 }
+            { name: "Bologna", prob: 0.25, atk: 77, def: 76, mid: 75 }
         ],
         // FRANCE
         "FRA": [
@@ -64,8 +62,7 @@
             { name: "Monaco", prob: 0.65, atk: 82, def: 80, mid: 80 },
             { name: "Nice", prob: 0.30, atk: 76, def: 75, mid: 73 },
             { name: "Strasbourg", prob: 0.15, atk: 73, def: 72, mid: 71 },
-            { name: "Rennes", prob: 0.08, atk: 72, def: 71, mid: 70 },
-            { name: "Brest", prob: 0.01, atk: 74, def: 73, mid: 72 }
+            { name: "Rennes", prob: 0.08, atk: 72, def: 71, mid: 70 }
         ],
         // PORTUGAL
         "POR": [
@@ -149,7 +146,8 @@
         ],
         "CYP": [
             { name: "APOEL Nicosia", prob: 0.05, atk: 63, def: 63, mid: 61 },
-            { name: "Apollon Limassol", prob: 0.03, atk: 62, def: 62, mid: 60 }
+            { name: "Apollon Limassol", prob: 0.03, atk: 62, def: 62, mid: 60 },
+            { name: "Pafos", prob: 0.02, atk: 64, def: 63, mid: 62 }
         ],
         "BLR": [
             { name: "BATE Borisov", prob: 0.05, atk: 63, def: 62, mid: 61 }
@@ -173,16 +171,20 @@
             { name: "Maribor", prob: 0.01, atk: 63, def: 63, mid: 62 }
         ],
         "IRL": [
-            { name: "Shamrock Rovers", prob: 0.01, atk: 60, def: 60, mid: 59 },
-            { name: "Sligo Rovers", prob: 0.01, atk: 59, def: 59, mid: 58 },
-            { name: "Derry City", prob: 0.01, atk: 59, def: 59, mid: 58 }
+            { name: "Shamrock Rovers", prob: 0.01, atk: 60, def: 60, mid: 59 }
         ],
         "ROU": [
             { name: "CFR Cluj", prob: 0.06, atk: 68, def: 68, mid: 67 }
+        ],
+        "KAZ": [
+            { name: "Astana", prob: 0.03, atk: 67, def: 67, mid: 65 },
+            { name: "Kairat Almaty", prob: 0.02, atk: 65, def: 65, mid: 64 }
+        ],
+        "AZE": [
+            { name: "Qarabag", prob: 0.04, atk: 72, def: 71, mid: 70 }
         ]
     };
 
-    // Helper: phân phối Poisson cho tỉ số bóng đá
     function poissonRandom(lambda) {
         let L = Math.exp(-lambda);
         let k = 0;
@@ -194,10 +196,90 @@
         return k - 1;
     }
 
+    function generateNormalTimeMinute() {
+        const isFirstHalf = Math.random() < 0.5;
+        if (isFirstHalf) {
+            if (Math.random() < 0.06) {
+                const r = Math.random();
+                if (r < 0.40) return 45.01;
+                if (r < 0.70) return 45.02;
+                if (r < 0.88) return 45.03;
+                if (r < 0.97) return 45.04;
+                return 45.05;
+            } else {
+                return Math.floor(Math.random() * 45) + 1;
+            }
+        } else {
+            if (Math.random() < 0.10) {
+                const r = Math.random() * 100;
+                if (r < 30) return 90.01;
+                if (r < 54) return 90.02;
+                if (r < 72) return 90.03;
+                if (r < 84) return 90.04;
+                if (r < 92) return 90.05;
+                if (r < 96) return 90.06;
+                if (r < 98) return 90.07;
+                if (r < 99.5) return 90.08;
+                return 90.09;
+            } else {
+                return Math.floor(Math.random() * 45) + 46;
+            }
+        }
+    }
+
+    function generateExtraTimeMinute() {
+        const isFirstHalfExtra = Math.random() < 0.5;
+        if (isFirstHalfExtra) {
+            if (Math.random() < 0.04) {
+                return Math.random() < 0.6 ? 105.01 : 105.02;
+            } else {
+                return Math.floor(Math.random() * 15) + 91;
+            }
+        } else {
+            if (Math.random() < 0.05) {
+                return Math.random() < 0.6 ? 120.01 : 120.02;
+            } else {
+                return Math.floor(Math.random() * 15) + 106;
+            }
+        }
+    }
+
+    window.formatSimMinute = function(min) {
+        if (typeof min === 'number') {
+            const main = Math.floor(min);
+            const dec = Math.round((min - main) * 100);
+            if (dec > 0) {
+                return `${main}+${dec}`;
+            }
+            return `${main}`;
+        }
+        return min;
+    };
+
+    window.groupScorers = function(scorers) {
+        if (!scorers || scorers.length === 0) return [];
+        const grouped = [];
+        const map = {};
+        scorers.forEach(s => {
+            const formattedMin = window.formatSimMinute(s.minute) + "'";
+            if (!map[s.name]) {
+                map[s.name] = {
+                    name: s.name,
+                    minutes: [formattedMin],
+                    firstMinute: s.minute
+                };
+                grouped.push(map[s.name]);
+            } else {
+                map[s.name].minutes.push(formattedMin);
+            }
+        });
+        return grouped;
+    };
+
     // --- OVERRIDE ROSTERS (from tong_hop_111_doi_hinh_2026.md) ---
     // Source of truth for ALL AI team scorers. Do NOT edit manually.
     const OVERRIDE_ROSTERS = {
-                "acmilan": [
+        "acmilan": [
             { name: "Leão", pos: "FW", rating: 184 },
             { name: "Nkunku", pos: "FW", rating: 164 },
             { name: "Pulisic", pos: "FW", rating: 124 },
@@ -210,7 +292,6 @@
             { name: "S. Giménez", pos: "FW", rating: 95 },
             { name: "Füllkrug", pos: "FW", rating: 85 },
             { name: "Saelemaekers", pos: "FW", rating: 65 },
-            { name: "Tomori", pos: "DF", rating: 31 },
             { name: "S. Pavlović", pos: "DF", rating: 21 },
             { name: "Estupiñán", pos: "DF", rating: 21 },
             { name: "De Winter", pos: "DF", rating: 21 },
@@ -220,151 +301,120 @@
             { name: "Athekame", pos: "DF", rating: 5 },
         ],
         "aekathens": [
-            { name: "Koïta", pos: "FW", rating: 150 },
-            { name: "Marin", pos: "FW", rating: 150 },
-            { name: "Eliasson", pos: "FW", rating: 150 },
-            { name: "Kosidis", pos: "FW", rating: 65 },
-            { name: "Kutesa", pos: "FW", rating: 65 },
-            { name: "Mantalos", pos: "MF", rating: 88 },
-            { name: "Pineda", pos: "MF", rating: 88 },
-            { name: "Jønsson", pos: "MF", rating: 88 },
+            { name: "Koïta", pos: "FW", rating: 134 },
+            { name: "Jović", pos: "FW", rating: 134 },
+            { name: "Varga", pos: "FW", rating: 134 },
+            { name: "Eliasson", pos: "MF", rating: 88 },
+            { name: "Marin", pos: "MF", rating: 88 },
             { name: "Gaćinović", pos: "MF", rating: 88 },
-            { name: "Jović", pos: "MF", rating: 40 },
-            { name: "J. Mário", pos: "MF", rating: 40 },
-            { name: "Ljubičić", pos: "MF", rating: 40 },
-            { name: "Pereyra", pos: "MF", rating: 40 },
-            { name: "Vida", pos: "DF", rating: 40 },
-            { name: "Moukoudi", pos: "DF", rating: 40 },
-            { name: "Callens", pos: "DF", rating: 40 },
-            { name: "Pilios", pos: "DF", rating: 40 },
-            { name: "Rota", pos: "DF", rating: 10 },
-            { name: "Varga", pos: "DF", rating: 10 },
-            { name: "Penrice", pos: "DF", rating: 10 },
-            { name: "Relvas", pos: "DF", rating: 10 },
+            { name: "Pineda", pos: "MF", rating: 30 },
+            { name: "Mantalos", pos: "MF", rating: 30 },
+            { name: "Grujić", pos: "MF", rating: 30 },
+            { name: "Zini", pos: "FW", rating: 50 },
+            { name: "Moukoudi", pos: "DF", rating: 30 },
+            { name: "Pilios", pos: "DF", rating: 30 },
+            { name: "Rota", pos: "DF", rating: 30 },
+            { name: "Georgiev", pos: "DF", rating: 5 },
+            { name: "Vida", pos: "DF", rating: 5 },
         ],
         "aiksolna": [
-            { name: "Celina", pos: "FW", rating: 150 },
-            { name: "Ali", pos: "FW", rating: 150 },
-            { name: "Gono", pos: "FW", rating: 150 },
-            { name: "Beširović", pos: "FW", rating: 65 },
-            { name: "Flataker", pos: "FW", rating: 65 },
+            { name: "Andersson", pos: "FW", rating: 134 },
+            { name: "Gustafsson", pos: "FW", rating: 134 },
+            { name: "Filling", pos: "FW", rating: 134 },
             { name: "Ellingsen", pos: "MF", rating: 88 },
-            { name: "Mujanic", pos: "MF", rating: 88 },
             { name: "Hove", pos: "MF", rating: 88 },
-            { name: "Helm", pos: "MF", rating: 40 },
-            { name: "Redkin", pos: "MF", rating: 40 },
-            { name: "Filling", pos: "MF", rating: 40 },
-            { name: "Papagiannopoulos", pos: "DF", rating: 40 },
-            { name: "Edh", pos: "DF", rating: 40 },
-            { name: "Nissen", pos: "DF", rating: 40 },
-            { name: "Thychosen", pos: "DF", rating: 40 },
-            { name: "Cissé", pos: "DF", rating: 10 },
-            { name: "Csongvai", pos: "DF", rating: 10 },
-            { name: "Andersson", pos: "DF", rating: 10 },
-        ],
-        "apoelnicosia": [
-            { name: "Marquinhos", pos: "FW", rating: 150 },
-            { name: "Maioli", pos: "FW", rating: 150 },
-            { name: "Diamantakos", pos: "FW", rating: 65 },
-            { name: "Baldé", pos: "FW", rating: 65 },
-            { name: "Meyer", pos: "MF", rating: 88 },
-            { name: "Satsias", pos: "MF", rating: 88 },
-            { name: "Tomás", pos: "MF", rating: 88 },
-            { name: "Dálcio", pos: "MF", rating: 40 },
-            { name: "D. Rosa", pos: "MF", rating: 40 },
-            { name: "Stafylidis", pos: "DF", rating: 40 },
-            { name: "Vitor Meer", pos: "DF", rating: 40 },
-            { name: "Bah", pos: "DF", rating: 40 },
-            { name: "Nanu", pos: "DF", rating: 10 },
-            { name: "Brorsson", pos: "DF", rating: 10 },
-            { name: "Laifis", pos: "DF", rating: 10 },
-        ],
-        "azalkmaar": [
-            { name: "Parrott", pos: "FW", rating: 150 },
-            { name: "Sadiq", pos: "FW", rating: 150 },
-            { name: "Hornkamp", pos: "FW", rating: 65 },
-            { name: "Smit", pos: "FW", rating: 65 },
-            { name: "Patati", pos: "FW", rating: 65 },
-            { name: "Koopmeiners", pos: "MF", rating: 88 },
-            { name: "Clasie", pos: "MF", rating: 88 },
-            { name: "Mijnans", pos: "MF", rating: 88 },
-            { name: "Kasius", pos: "MF", rating: 40 },
-            { name: "Šín", pos: "MF", rating: 40 },
-            { name: "Maikuma", pos: "DF", rating: 40 },
-            { name: "Goes", pos: "DF", rating: 40 },
-            { name: "Dekker", pos: "DF", rating: 40 },
-            { name: "Penetra", pos: "DF", rating: 10 },
-            { name: "De Wit", pos: "DF", rating: 10 },
+            { name: "Mujanić", pos: "MF", rating: 88 },
+            { name: "Ali", pos: "MF", rating: 30 },
+            { name: "Beširović", pos: "MF", rating: 30 },
+            { name: "Wilson", pos: "MF", rating: 30 },
+            { name: "Atola", pos: "FW", rating: 50 },
+            { name: "Flataker", pos: "FW", rating: 50 },
+            { name: "Nissen", pos: "DF", rating: 30 },
+            { name: "Bergquist", pos: "DF", rating: 30 },
+            { name: "Edh", pos: "DF", rating: 30 },
+            { name: "Papagiannopoulos", pos: "DF", rating: 5 },
+            { name: "Pavey", pos: "DF", rating: 5 },
         ],
         "ajax": [
-            { name: "Dolberg", pos: "FW", rating: 150 },
-            { name: "Godts", pos: "FW", rating: 150 },
-            { name: "Weghorst", pos: "FW", rating: 150 },
-            { name: "Ibrahimović", pos: "FW", rating: 65 },
-            { name: "Edvardsen", pos: "FW", rating: 65 },
+            { name: "Dolberg", pos: "FW", rating: 134 },
+            { name: "Konadu", pos: "FW", rating: 134 },
+            { name: "Godts", pos: "FW", rating: 134 },
             { name: "Gloukh", pos: "MF", rating: 88 },
+            { name: "Regeer", pos: "MF", rating: 88 },
             { name: "Klaassen", pos: "MF", rating: 88 },
-            { name: "Berghuis", pos: "MF", rating: 88 },
-            { name: "Fitz-Jim", pos: "MF", rating: 40 },
-            { name: "Bounida", pos: "MF", rating: 40 },
-            { name: "Steur", pos: "MF", rating: 40 },
-            { name: "Gaaei", pos: "DF", rating: 40 },
-            { name: "Itakura", pos: "DF", rating: 40 },
-            { name: "Wijndal", pos: "DF", rating: 40 },
-            { name: "Regeer", pos: "DF", rating: 40 },
-            { name: "Baas", pos: "DF", rating: 40 },
-            { name: "Mokio", pos: "DF", rating: 10 },
-            { name: "Tomiyasu", pos: "DF", rating: 10 },
-            { name: "Šutalo", pos: "DF", rating: 10 },
-            { name: "Zinchenko", pos: "DF", rating: 10 },
+            { name: "Mokio", pos: "MF", rating: 30 },
+            { name: "Fitz-Jim", pos: "MF", rating: 30 },
+            { name: "Steur", pos: "MF", rating: 30 },
+            { name: "Carrizo", pos: "FW", rating: 50 },
+            { name: "Edvardsen", pos: "FW", rating: 50 },
+            { name: "Bounida", pos: "FW", rating: 50 },
+            { name: "Rosa", pos: "DF", rating: 30 },
+            { name: "Gaaei", pos: "DF", rating: 30 },
+            { name: "Itakura", pos: "DF", rating: 30 },
+            { name: "Wijndal", pos: "DF", rating: 5 },
+            { name: "Baas", pos: "DF", rating: 5 },
         ],
         "anderlecht": [
-            { name: "Amuzu", pos: "FW", rating: 150 },
-            { name: "Vázquez", pos: "FW", rating: 150 },
-            { name: "Dreyer", pos: "FW", rating: 150 },
-            { name: "Gotō", pos: "FW", rating: 65 },
-            { name: "Diouf", pos: "FW", rating: 65 },
-            { name: "Ferrari", pos: "FW", rating: 65 },
-            { name: "Verschaeren", pos: "MF", rating: 88 },
-            { name: "Leoni", pos: "MF", rating: 88 },
-            { name: "Rits", pos: "MF", rating: 88 },
-            { name: "Stroeykens", pos: "MF", rating: 40 },
-            { name: "Matsuzawa", pos: "MF", rating: 40 },
-            { name: "Zanka", pos: "DF", rating: 40 },
-            { name: "Vertonghen", pos: "DF", rating: 40 },
-            { name: "Sardella", pos: "DF", rating: 40 },
-            { name: "Augustinsson", pos: "DF", rating: 10 },
-            { name: "Janssens", pos: "DF", rating: 10 },
+            { name: "Sikan", pos: "FW", rating: 134 },
+            { name: "Cvetković", pos: "FW", rating: 134 },
+            { name: "Huerta", pos: "FW", rating: 134 },
+            { name: "Saliba", pos: "MF", rating: 88 },
+            { name: "Llansana", pos: "MF", rating: 88 },
+            { name: "Stroeykens", pos: "MF", rating: 88 },
+            { name: "De Cat", pos: "MF", rating: 30 },
+            { name: "Tajaouart", pos: "MF", rating: 30 },
+            { name: "Dao", pos: "FW", rating: 50 },
+            { name: "C. da Costa", pos: "FW", rating: 50 },
+            { name: "Degreef", pos: "FW", rating: 50 },
+            { name: "Camara", pos: "DF", rating: 30 },
+            { name: "Keita", pos: "DF", rating: 30 },
+            { name: "Hey", pos: "DF", rating: 30 },
+            { name: "Angély", pos: "DF", rating: 5 },
+            { name: "Augustinsson", pos: "DF", rating: 5 },
+        ],
+        "apoelnicosia": [
+            { name: "Dražić", pos: "FW", rating: 134 },
+            { name: "Maioli", pos: "FW", rating: 134 },
+            { name: "Diamantakos", pos: "FW", rating: 134 },
+            { name: "Meyer", pos: "MF", rating: 88 },
+            { name: "Tomás", pos: "MF", rating: 88 },
+            { name: "Dálcio", pos: "MF", rating: 88 },
+            { name: "Poursaitidis", pos: "MF", rating: 30 },
+            { name: "Kattirtzis", pos: "MF", rating: 30 },
+            { name: "Karanatsios", pos: "MF", rating: 30 },
+            { name: "Ataíde", pos: "FW", rating: 50 },
+            { name: "Sotiriou", pos: "FW", rating: 50 },
+            { name: "Koutsakos", pos: "FW", rating: 50 },
+            { name: "Stafylidis", pos: "DF", rating: 30 },
+            { name: "Degenek", pos: "DF", rating: 30 },
+            { name: "Meer", pos: "DF", rating: 30 },
+            { name: "Nanu", pos: "DF", rating: 5 },
+            { name: "Brorsson", pos: "DF", rating: 5 },
         ],
         "apollonlimassol": [
-            { name: "Rodrigues", pos: "FW", rating: 150 },
-            { name: "Andreou", pos: "FW", rating: 150 },
-            { name: "Duodu", pos: "FW", rating: 150 },
-            { name: "Thomas", pos: "FW", rating: 150 },
-            { name: "Marques", pos: "FW", rating: 65 },
-            { name: "Sagal", pos: "FW", rating: 65 },
-            { name: "Dorregaray", pos: "FW", rating: 65 },
+            { name: "G. Rodrigues", pos: "FW", rating: 134 },
+            { name: "Andreou", pos: "FW", rating: 134 },
+            { name: "Duodu", pos: "FW", rating: 134 },
+            { name: "Špoljarić", pos: "MF", rating: 88 },
             { name: "Brown", pos: "MF", rating: 88 },
             { name: "Assunção", pos: "MF", rating: 88 },
-            { name: "Athanasiou", pos: "MF", rating: 88 },
-            { name: "Špoljarić", pos: "MF", rating: 40 },
-            { name: "Weissbeck", pos: "MF", rating: 40 },
-            { name: "Coll", pos: "MF", rating: 40 },
-            { name: "Malekkides", pos: "DF", rating: 40 },
-            { name: "Shikkis", pos: "DF", rating: 40 },
-            { name: "Celebi", pos: "DF", rating: 40 },
-            { name: "Vulner", pos: "DF", rating: 10 },
-            { name: "Adoni", pos: "DF", rating: 10 },
+            { name: "Athanasiou", pos: "MF", rating: 30 },
+            { name: "Weissbeck", pos: "MF", rating: 30 },
+            { name: "Konomis", pos: "MF", rating: 30 },
+            { name: "Thomas", pos: "FW", rating: 50 },
+            { name: "Escriche", pos: "FW", rating: 50 },
+            { name: "Youssef", pos: "FW", rating: 50 },
+            { name: "Malekkides", pos: "DF", rating: 30 },
+            { name: "Shikkis", pos: "DF", rating: 30 },
+            { name: "Balogiannis", pos: "DF", rating: 30 },
+            { name: "Kvída", pos: "DF", rating: 5 },
+            { name: "Gaspar", pos: "DF", rating: 5 },
         ],
         "arsenal": [
             { name: "Saka", pos: "FW", rating: 150 },
             { name: "Havertz", pos: "FW", rating: 145 },
             { name: "Martinelli", pos: "FW", rating: 100 },
             { name: "Trossard", pos: "FW", rating: 107 },
-            { name: "Jesus", pos: "FW", rating: 65 },
-            { name: "Gyökeres", pos: "FW", rating: 145 },
-            { name: "Madueke", pos: "FW", rating: 65 },
-            { name: "Dowman", pos: "FW", rating: 43 },
             { name: "Ødegaard", pos: "MF", rating: 103 },
             { name: "Rice", pos: "MF", rating: 140 },
             { name: "Eze", pos: "MF", rating: 103 },
@@ -372,6 +422,10 @@
             { name: "Zubimendi", pos: "MF", rating: 75 },
             { name: "Nørgaard", pos: "MF", rating: 23 },
             { name: "Lewis-Skelly", pos: "MF", rating: 36 },
+            { name: "Jesus", pos: "FW", rating: 65 },
+            { name: "Gyökeres", pos: "FW", rating: 145 },
+            { name: "Madueke", pos: "FW", rating: 65 },
+            { name: "Dowman", pos: "FW", rating: 43 },
             { name: "Saliba", pos: "DF", rating: 69 },
             { name: "Gabriel", pos: "DF", rating: 98 },
             { name: "White", pos: "DF", rating: 23 },
@@ -380,7 +434,24 @@
             { name: "Mosquera", pos: "DF", rating: 15 },
             { name: "Hincapié", pos: "DF", rating: 25 },
         ],
-                "astonvilla": [
+        "astana": [
+            { name: "Zhaksylykov", pos: "FW", rating: 134 },
+            { name: "Ahanonu", pos: "FW", rating: 134 },
+            { name: "Basmanov", pos: "FW", rating: 134 },
+            { name: "Tomasov", pos: "MF", rating: 88 },
+            { name: "Karaman", pos: "MF", rating: 88 },
+            { name: "Bašić", pos: "MF", rating: 88 },
+            { name: "Islamkhan", pos: "MF", rating: 30 },
+            { name: "Merkel", pos: "MF", rating: 30 },
+            { name: "Abrayev", pos: "MF", rating: 30 },
+            { name: "Karimov", pos: "FW", rating: 50 },
+            { name: "Bartolec", pos: "DF", rating: 30 },
+            { name: "Kalaica", pos: "DF", rating: 30 },
+            { name: "Anuarov", pos: "DF", rating: 30 },
+            { name: "Kažukolovas", pos: "DF", rating: 5 },
+            { name: "Kasym", pos: "DF", rating: 5 },
+        ],
+        "astonvilla": [
             { name: "Watkins", pos: "FW", rating: 164 },
             { name: "Bailey", pos: "FW", rating: 64 },
             { name: "Rogers", pos: "FW", rating: 144 },
@@ -401,7 +472,7 @@
             { name: "Mings", pos: "DF", rating: 25 },
             { name: "Lindelöf", pos: "DF", rating: 15 },
         ],
-                "atalanta": [
+        "atalanta": [
             { name: "Sulemana", pos: "FW", rating: 84 },
             { name: "De Ketelaere", pos: "FW", rating: 124 },
             { name: "Raspadori", pos: "FW", rating: 105 },
@@ -410,10 +481,8 @@
             { name: "de Roon", pos: "MF", rating: 103 },
             { name: "Samardžić", pos: "MF", rating: 95 },
             { name: "Musah", pos: "MF", rating: 75 },
-            { name: "Éderson", pos: "MF", rating: 44 },
             { name: "Scamacca", pos: "FW", rating: 85 },
             { name: "Zalewski", pos: "FW", rating: 45 },
-            { name: "Krstovic", pos: "FW", rating: 33 },
             { name: "Hien", pos: "DF", rating: 31 },
             { name: "Scalvini", pos: "DF", rating: 41 },
             { name: "Kolašinac", pos: "DF", rating: 11 },
@@ -421,59 +490,58 @@
             { name: "Zappacosta", pos: "DF", rating: 15 },
             { name: "Djimsiti", pos: "DF", rating: 25 },
             { name: "Kossounou", pos: "DF", rating: 15 },
-            { name: "Bakker", pos: "DF", rating: 4 },
         ],
         "athleticclub": [
             { name: "I. Williams", pos: "FW", rating: 134 },
             { name: "N. Williams", pos: "FW", rating: 134 },
             { name: "Guruzeta", pos: "FW", rating: 134 },
-            { name: "Berenguer", pos: "FW", rating: 65 },
-            { name: "Djaló", pos: "FW", rating: 65 },
             { name: "Sancet", pos: "MF", rating: 103 },
             { name: "Vesga", pos: "MF", rating: 103 },
             { name: "Galarreta", pos: "MF", rating: 75 },
             { name: "Prados", pos: "MF", rating: 75 },
+            { name: "Berenguer", pos: "FW", rating: 65 },
+            { name: "Djaló", pos: "FW", rating: 65 },
             { name: "Vivian", pos: "DF", rating: 61 },
             { name: "Paredes", pos: "DF", rating: 61 },
             { name: "Yeray", pos: "DF", rating: 61 },
             { name: "Gorosabel", pos: "DF", rating: 25 },
             { name: "Yuri", pos: "DF", rating: 25 },
         ],
-                "atleticomadrid": [
+        "atleticomadrid": [
             { name: "Alvarez", pos: "FW", rating: 175 },
-            { name: "Sørloth", pos: "FW", rating: 114 },
-            { name: "Lookman", pos: "FW", rating: 105 },
-            { name: "Almada", pos: "FW", rating: 65 },
-            { name: "G. Simeone", pos: "FW", rating: 75 },
             { name: "Koke", pos: "MF", rating: 23 },
             { name: "Llorente", pos: "MF", rating: 63 },
             { name: "Barrios", pos: "MF", rating: 55 },
             { name: "Lemar", pos: "MF", rating: 75 },
             { name: "N. González", pos: "MF", rating: 55 },
-            { name: "Giménez", pos: "DF", rating: 41 },
-            { name: "Le Normand", pos: "DF", rating: 41 },
+            { name: "Lookman", pos: "FW", rating: 105 },
+            { name: "Almada", pos: "FW", rating: 65 },
+            { name: "G Simeone", pos: "FW", rating: 75 },
             { name: "Molina", pos: "DF", rating: 61 },
             { name: "Hancko", pos: "DF", rating: 25 },
             { name: "Lenglet", pos: "DF", rating: 25 },
             { name: "Ruggeri", pos: "DF", rating: 25 },
         ],
-        "bateborisov": [
-            { name: "Shulyanskyi", pos: "FW", rating: 150 },
-            { name: "Yade", pos: "FW", rating: 150 },
-            { name: "Castillo", pos: "FW", rating: 65 },
-            { name: "Anufriev", pos: "FW", rating: 65 },
-            { name: "Jota", pos: "MF", rating: 88 },
-            { name: "Myshnyov", pos: "MF", rating: 88 },
-            { name: "Touati", pos: "MF", rating: 88 },
-            { name: "Smyrnyi", pos: "MF", rating: 40 },
-            { name: "Zhukov", pos: "MF", rating: 40 },
-            { name: "Buletsa", pos: "DF", rating: 40 },
-            { name: "Drozd", pos: "DF", rating: 40 },
-            { name: "Bol", pos: "DF", rating: 40 },
-            { name: "Butko", pos: "DF", rating: 10 },
-            { name: "Martynov", pos: "DF", rating: 10 },
+        "azalkmaar": [
+            { name: "Parrott", pos: "FW", rating: 160 },
+            { name: "Sadiq", pos: "FW", rating: 134 },
+            { name: "Patati", pos: "FW", rating: 134 },
+            { name: "Koopmeiners", pos: "MF", rating: 88 },
+            { name: "Clasie", pos: "MF", rating: 88 },
+            { name: "Mijnans", pos: "MF", rating: 88 },
+            { name: "Boogaard", pos: "MF", rating: 30 },
+            { name: "Smit", pos: "MF", rating: 30 },
+            { name: "Šín", pos: "MF", rating: 30 },
+            { name: "Jensen", pos: "FW", rating: 50 },
+            { name: "Hornkamp", pos: "FW", rating: 50 },
+            { name: "Oufkir", pos: "FW", rating: 50 },
+            { name: "Maikuma", pos: "DF", rating: 30 },
+            { name: "Goes", pos: "DF", rating: 30 },
+            { name: "Dekker", pos: "DF", rating: 30 },
+            { name: "Penetra", pos: "DF", rating: 5 },
+            { name: "Natali", pos: "DF", rating: 5 },
         ],
-                "barcelona": [
+        "barcelona": [
             { name: "Yamal", pos: "FW", rating: 199 },
             { name: "Raphinha", pos: "FW", rating: 160 },
             { name: "Lewandowski", pos: "FW", rating: 160 },
@@ -493,31 +561,52 @@
             { name: "Christensen", pos: "DF", rating: 5 },
         ],
         "basel": [
-            { name: "Shaqiri", pos: "FW", rating: 150 },
-            { name: "Barry", pos: "FW", rating: 150 },
-            { name: "Traoré", pos: "FW", rating: 150 },
-            { name: "Fink", pos: "FW", rating: 65 },
-            { name: "Ajeti", pos: "FW", rating: 65 },
-            { name: "Avdullahu", pos: "MF", rating: 88 },
-            { name: "Schmid", pos: "MF", rating: 88 },
-            { name: "Leroy", pos: "MF", rating: 40 },
-            { name: "Vouilloz", pos: "DF", rating: 40 },
-            { name: "Barisic", pos: "DF", rating: 40 },
-            { name: "Comas", pos: "DF", rating: 10 },
-            { name: "Dräger", pos: "DF", rating: 10 },
+            { name: "Traoré", pos: "FW", rating: 134 },
+            { name: "Šotiček", pos: "FW", rating: 134 },
+            { name: "Broschinski", pos: "FW", rating: 134 },
+            { name: "Shaqiri", pos: "MF", rating: 88 },
+            { name: "Metinho", pos: "MF", rating: 88 },
+            { name: "Koindredi", pos: "MF", rating: 88 },
+            { name: "Bačanin", pos: "MF", rating: 30 },
+            { name: "Leroy", pos: "MF", rating: 30 },
+            { name: "Kacuri", pos: "MF", rating: 30 },
+            { name: "Duranville", pos: "FW", rating: 50 },
+            { name: "Salah", pos: "FW", rating: 50 },
+            { name: "Ajeti", pos: "FW", rating: 50 },
+            { name: "Vouilloz", pos: "DF", rating: 30 },
+            { name: "Omeragić", pos: "DF", rating: 30 },
+            { name: "Tsunemoto", pos: "DF", rating: 30 },
+            { name: "Daniliuc", pos: "DF", rating: 5 },
+            { name: "van Breemen", pos: "DF", rating: 5 },
         ],
-                "bayerleverkusen": [
+        "bateborisov": [
+            { name: "Apanasevich", pos: "FW", rating: 134 },
+            { name: "Mirskiy", pos: "FW", rating: 134 },
+            { name: "Grivenev", pos: "FW", rating: 134 },
+            { name: "Angban", pos: "MF", rating: 88 },
+            { name: "Rusakov", pos: "MF", rating: 88 },
+            { name: "Telesh", pos: "MF", rating: 88 },
+            { name: "Protasenya", pos: "MF", rating: 30 },
+            { name: "Kavalyow", pos: "MF", rating: 30 },
+            { name: "Yatskevich", pos: "FW", rating: 50 },
+            { name: "Charles", pos: "FW", rating: 50 },
+            { name: "Yarmolich", pos: "FW", rating: 50 },
+            { name: "Intsoen", pos: "DF", rating: 30 },
+            { name: "Sakuta", pos: "DF", rating: 30 },
+            { name: "Musakhanyan", pos: "DF", rating: 30 },
+            { name: "Rashchenya", pos: "DF", rating: 5 },
+            { name: "Neskoromnyi", pos: "DF", rating: 5 },
+        ],
+        "bayerleverkusen": [
             { name: "Schick", pos: "FW", rating: 154 },
             { name: "Terrier", pos: "FW", rating: 124 },
-            { name: "Ben Seghir", pos: "FW", rating: 65 },
-            { name: "Tella", pos: "FW", rating: 75 },
-            { name: "Moreira", pos: "FW", rating: 10 },
             { name: "Vázquez", pos: "MF", rating: 43 },
             { name: "Hofmann", pos: "MF", rating: 73 },
             { name: "Tillman", pos: "MF", rating: 103 },
-            { name: "Maza", pos: "MF", rating: 100 },
             { name: "Palacios", pos: "MF", rating: 55 },
             { name: "A. García", pos: "MF", rating: 45 },
+            { name: "Ben Seghir", pos: "FW", rating: 65 },
+            { name: "Tella", pos: "FW", rating: 75 },
             { name: "Tapsoba", pos: "DF", rating: 11 },
             { name: "Grimaldo", pos: "DF", rating: 71 },
             { name: "Badé", pos: "DF", rating: 21 },
@@ -525,139 +614,134 @@
             { name: "Tape", pos: "DF", rating: 1 },
             { name: "Quansah", pos: "DF", rating: 15 },
         ],
-                "bayernmunich": [
-            { name: "Kane", pos: "FW", rating: 325 },
+        "bayernmunich": [
+            { name: "Kane", pos: "FW", rating: 275 },
             { name: "Musiala", pos: "FW", rating: 114 },
             { name: "Díaz", pos: "FW", rating: 154 },
             { name: "Olise", pos: "FW", rating: 150 },
-            { name: "Gnabry", pos: "FW", rating: 45 },
-            { name: "Jackson", pos: "FW", rating: 65 },
-            { name: "Karl", pos: "FW", rating: 65 },
             { name: "Kimmich", pos: "MF", rating: 69 },
             { name: "Goretzka", pos: "MF", rating: 43 },
             { name: "A. Pavlović", pos: "MF", rating: 45 },
             { name: "Laimer", pos: "MF", rating: 45 },
+            { name: "Gnabry", pos: "FW", rating: 45 },
+            { name: "Jackson", pos: "FW", rating: 65 },
             { name: "Upamecano", pos: "DF", rating: 36 },
             { name: "Min-jae", pos: "DF", rating: 21 },
             { name: "Davies", pos: "DF", rating: 41 },
-            { name: "Guerreiro", pos: "DF", rating: 20 },
             { name: "Tah", pos: "DF", rating: 25 },
             { name: "Stanišić", pos: "DF", rating: 15 },
             { name: "H. Ito", pos: "DF", rating: 5 },
         ],
         "benfica": [
-            { name: "Pavlidis", pos: "FW", rating: 150 },
-            { name: "Lukébakio", pos: "FW", rating: 150 },
-            { name: "Ivanović", pos: "FW", rating: 150 },
-            { name: "Schjelderup", pos: "FW", rating: 65 },
-            { name: "Bruma", pos: "FW", rating: 65 },
-            { name: "Rafa", pos: "FW", rating: 65 },
+            { name: "Pavlidis", pos: "FW", rating: 134 },
+            { name: "Ivanović", pos: "FW", rating: 134 },
+            { name: "Bruma", pos: "FW", rating: 134 },
             { name: "Sudakov", pos: "MF", rating: 88 },
-            { name: "Barreiro", pos: "MF", rating: 88 },
             { name: "Aursnes", pos: "MF", rating: 88 },
-            { name: "Ríos", pos: "MF", rating: 40 },
-            { name: "Barrenechea", pos: "MF", rating: 40 },
-            { name: "Silva", pos: "DF", rating: 40 },
-            { name: "Dedić", pos: "DF", rating: 40 },
-            { name: "Bah", pos: "DF", rating: 40 },
-            { name: "T. Araújo", pos: "DF", rating: 10 },
-            { name: "Dahl", pos: "DF", rating: 10 },
+            { name: "Barrenechea", pos: "MF", rating: 88 },
+            { name: "M. Silva", pos: "MF", rating: 30 },
+            { name: "Barreiro", pos: "MF", rating: 30 },
+            { name: "Ríos", pos: "MF", rating: 30 },
+            { name: "Lukébakio", pos: "FW", rating: 50 },
+            { name: "Schjelderup", pos: "FW", rating: 50 },
+            { name: "Prestianni", pos: "FW", rating: 50 },
+            { name: "A. Silva", pos: "DF", rating: 30 },
+            { name: "Bah", pos: "DF", rating: 30 },
+            { name: "Dedić", pos: "DF", rating: 30 },
+            { name: "Dahl", pos: "DF", rating: 5 },
+            { name: "T. Araújo", pos: "DF", rating: 5 },
         ],
         "besiktas": [
-            { name: "Muçi", pos: "FW", rating: 150 },
-            { name: "Jota Silva", pos: "FW", rating: 150 },
-            { name: "Kılıçsoy", pos: "FW", rating: 150 },
-            { name: "Oh Hyeon-gyu", pos: "FW", rating: 65 },
-            { name: "Touré", pos: "FW", rating: 65 },
-            { name: "Rashica", pos: "MF", rating: 88 },
-            { name: "Kökçü", pos: "MF", rating: 88 },
-            { name: "Asllani", pos: "MF", rating: 50 },
+            { name: "J. Silva", pos: "FW", rating: 134 },
+            { name: "Rashica", pos: "FW", rating: 134 },
+            { name: "Hyeon-gyu", pos: "FW", rating: 134 },
             { name: "Ndidi", pos: "MF", rating: 88 },
-            { name: "Al-Musrati", pos: "MF", rating: 40 },
-            { name: "Černý", pos: "MF", rating: 40 },
-            { name: "J. Mário", pos: "MF", rating: 40 },
-            { name: "Uduokhai", pos: "DF", rating: 40 },
-            { name: "Sanuç", pos: "DF", rating: 40 },
-            { name: "Murillo", pos: "DF", rating: 40 },
-            { name: "Topçu", pos: "DF", rating: 10 },
-            { name: "Djaló", pos: "DF", rating: 10 },
-            { name: "Yılmaz", pos: "DF", rating: 10 },
+            { name: "Asllani", pos: "MF", rating: 50 },
+            { name: "Uçan", pos: "MF", rating: 88 },
+            { name: "Kökçü", pos: "MF", rating: 30 },
+            { name: "Olaitan", pos: "MF", rating: 30 },
+            { name: "Yılmaz", pos: "MF", rating: 30 },
+            { name: "Ünder", pos: "FW", rating: 50 },
+            { name: "Touré", pos: "FW", rating: 50 },
+            { name: "Hekimoğlu", pos: "FW", rating: 50 },
+            { name: "Agbadou", pos: "DF", rating: 30 },
+            { name: "Uduokhai", pos: "DF", rating: 30 },
+            { name: "Bulut", pos: "DF", rating: 30 },
+            { name: "Sazdağı", pos: "DF", rating: 5 },
+            { name: "Yılmaz", pos: "DF", rating: 5 },
         ],
         "bodoglimt": [
-            { name: "Høgh", pos: "FW", rating: 150 },
+            { name: "Høgh", pos: "FW", rating: 134 },
             { name: "Hauge", pos: "FW", rating: 118 },
-            { name: "Blomberg", pos: "FW", rating: 150 },
-            { name: "Bassi", pos: "FW", rating: 65 },
-            { name: "Helmersen", pos: "FW", rating: 65 },
+            { name: "Brynhildsen", pos: "FW", rating: 134 },
             { name: "Berg", pos: "MF", rating: 88 },
-            { name: "Evjen", pos: "MF", rating: 88 },
+            { name: "Auklend", pos: "MF", rating: 88 },
+            { name: "Saltnes", pos: "MF", rating: 88 },
+            { name: "Kitolano", pos: "MF", rating: 30 },
             { name: "Fet", pos: "MF", rating: 145 },
-            { name: "Saltnes", pos: "MF", rating: 40 },
-            { name: "Auklend", pos: "MF", rating: 40 },
-            { name: "Bjørkan", pos: "DF", rating: 40 },
-            { name: "Bjørtuft", pos: "DF", rating: 40 },
-            { name: "Nielsen", pos: "DF", rating: 40 },
-            { name: "Gundersen", pos: "DF", rating: 10 },
-            { name: "Aleesami", pos: "DF", rating: 10 },
+            { name: "Klynge", pos: "MF", rating: 30 },
+            { name: "Bassi", pos: "FW", rating: 50 },
+            { name: "Hansen", pos: "FW", rating: 50 },
+            { name: "Mikkelsen", pos: "FW", rating: 50 },
+            { name: "Bjørkan", pos: "DF", rating: 30 },
+            { name: "Sjøvold", pos: "DF", rating: 30 },
+            { name: "Nielsen", pos: "DF", rating: 30 },
+            { name: "Bjørtuft", pos: "DF", rating: 5 },
+            { name: "Aleesami", pos: "DF", rating: 5 },
         ],
         "bologna": [
             { name: "Orsolini", pos: "FW", rating: 134 },
             { name: "Castro", pos: "FW", rating: 134 },
-            { name: "Bernardeschi", pos: "FW", rating: 134 },
-            { name: "Odgaard", pos: "FW", rating: 65 },
-            { name: "Dallinga", pos: "FW", rating: 65 },
-            { name: "Cambiaghi", pos: "FW", rating: 65 },
-            { name: "Pobega", pos: "MF", rating: 103 },
-            { name: "Freuler", pos: "MF", rating: 103 },
-            { name: "Ferguson", pos: "MF", rating: 103 },
-            { name: "Sohm", pos: "MF", rating: 75 },
-            { name: "Pessina", pos: "MF", rating: 75 },
-            { name: "Domínguez", pos: "MF", rating: 75 },
-            { name: "Helland", pos: "DF", rating: 61 },
-            { name: "Heggem", pos: "DF", rating: 61 },
-            { name: "Casale", pos: "DF", rating: 61 },
-            { name: "Lykogiannis", pos: "DF", rating: 25 },
-            { name: "Lucumí", pos: "DF", rating: 25 },
-            { name: "Zortea", pos: "DF", rating: 25 },
+            { name: "Rowe", pos: "FW", rating: 134 },
+            { name: "Pobega", pos: "MF", rating: 88 },
+            { name: "Moro", pos: "MF", rating: 88 },
+            { name: "Bernardeschi", pos: "MF", rating: 88 },
+            { name: "Ferguson", pos: "MF", rating: 30 },
+            { name: "Odgaard", pos: "MF", rating: 30 },
+            { name: "Dallinga", pos: "FW", rating: 50 },
+            { name: "Cambiaghi", pos: "FW", rating: 50 },
+            { name: "Domínguez", pos: "FW", rating: 50 },
+            { name: "Helland", pos: "DF", rating: 30 },
+            { name: "Heggem", pos: "DF", rating: 30 },
+            { name: "Casale", pos: "DF", rating: 30 },
+            { name: "Zortea", pos: "DF", rating: 5 },
+            { name: "Lucumí", pos: "DF", rating: 5 },
         ],
-                "borussiadortmund": [
+        "borussiadortmund": [
             { name: "Guirassy", pos: "FW", rating: 164 },
             { name: "Beier", pos: "FW", rating: 104 },
             { name: "Adeyemi", pos: "FW", rating: 139 },
-            { name: "F. Silva", pos: "FW", rating: 55 },
             { name: "Brandt", pos: "MF", rating: 93 },
             { name: "Inacio", pos: "MF", rating: 33 },
             { name: "Nmecha", pos: "MF", rating: 83 },
             { name: "Jobe", pos: "MF", rating: 85 },
             { name: "Chukwuemeka", pos: "MF", rating: 75 },
-            { name: "Svensson", pos: "MF", rating: 35 },
+            { name: "F. Silva", pos: "FW", rating: 55 },
             { name: "Schlotterbeck", pos: "DF", rating: 39 },
             { name: "Anton", pos: "DF", rating: 31 },
             { name: "Couto", pos: "DF", rating: 30 },
             { name: "Bensebaini", pos: "DF", rating: 15 },
             { name: "Ryerson", pos: "DF", rating: 25 },
             { name: "Süle", pos: "DF", rating: 15 },
-            { name: "Can", pos: "DF", rating: 10 },
-            { name: "Reggiani", pos: "DF", rating: 5 },
         ],
         "borussiamgladbach": [
-            { name: "Honorat", pos: "FW", rating: 134 },
             { name: "Kleindienst", pos: "FW", rating: 134 },
-            { name: "Hack", pos: "FW", rating: 134 },
-            { name: "Machino", pos: "FW", rating: 65 },
-            { name: "Ngoumou", pos: "FW", rating: 65 },
-            { name: "Stöger", pos: "MF", rating: 103 },
-            { name: "Reyna", pos: "MF", rating: 103 },
-            { name: "Neuhaus", pos: "MF", rating: 103 },
-            { name: "Reitz", pos: "MF", rating: 75 },
-            { name: "Engelhardt", pos: "MF", rating: 75 },
-            { name: "Diks", pos: "DF", rating: 61 },
-            { name: "Elvedi", pos: "DF", rating: 61 },
-            { name: "Scally", pos: "DF", rating: 61 },
-            { name: "Friedrich", pos: "DF", rating: 25 },
-            { name: "Takai", pos: "DF", rating: 25 },
+            { name: "Machino", pos: "FW", rating: 134 },
+            { name: "Urbich", pos: "FW", rating: 134 },
+            { name: "Stöger", pos: "MF", rating: 88 },
+            { name: "Leopold", pos: "MF", rating: 88 },
+            { name: "Honorat", pos: "MF", rating: 88 },
+            { name: "Neuhaus", pos: "MF", rating: 30 },
+            { name: "Reyna", pos: "MF", rating: 30 },
+            { name: "Sander", pos: "MF", rating: 30 },
+            { name: "Lidberg", pos: "FW", rating: 50 },
+            { name: "Diks", pos: "DF", rating: 30 },
+            { name: "Chiarodia", pos: "DF", rating: 30 },
+            { name: "Herold", pos: "DF", rating: 30 },
+            { name: "Konoplya", pos: "DF", rating: 5 },
+            { name: "Ullrich", pos: "DF", rating: 5 },
         ],
-                "bournemouth": [
+        "bournemouth": [
             { name: "Kluivert", pos: "FW", rating: 164 },
             { name: "Evanilson", pos: "FW", rating: 164 },
             { name: "Kroupi", pos: "FW", rating: 134 },
@@ -677,40 +761,25 @@
             { name: "Hill", pos: "DF", rating: 25 },
         ],
         "braga": [
-            { name: "Bruma", pos: "FW", rating: 150 },
-            { name: "El Ouazzani", pos: "FW", rating: 150 },
-            { name: "R. Horta", pos: "FW", rating: 150 },
-            { name: "Fernandes", pos: "FW", rating: 175 },
-            { name: "Garbari", pos: "FW", rating: 65 },
-            { name: "Moutinho", pos: "MF", rating: 88 },
-            { name: "Zalazar", pos: "MF", rating: 88 },
-            { name: "Carvalho", pos: "MF", rating: 88 },
-            { name: "Horta", pos: "MF", rating: 40 },
-            { name: "Gorby", pos: "MF", rating: 40 },
-            { name: "Niakaté", pos: "DF", rating: 40 },
-            { name: "Bambu", pos: "DF", rating: 40 },
-            { name: "Arrey-Mbi", pos: "DF", rating: 40 },
-            { name: "Gómez", pos: "DF", rating: 10 },
-            { name: "Ribeiro", pos: "DF", rating: 10 },
+            { name: "Horta", pos: "FW", rating: 134 },
+            { name: "Ouazzani", pos: "FW", rating: 134 },
+            { name: "Merheg", pos: "FW", rating: 134 },
+            { name: "Moscardo", pos: "MF", rating: 88 },
+            { name: "Dorgeles", pos: "MF", rating: 88 },
+            { name: "V. Carvalho", pos: "MF", rating: 88 },
+            { name: "Moutinho", pos: "MF", rating: 30 },
+            { name: "Huseinbašić", pos: "MF", rating: 30 },
+            { name: "Gorby", pos: "MF", rating: 30 },
+            { name: "Víctor", pos: "FW", rating: 50 },
+            { name: "Navarro", pos: "FW", rating: 50 },
+            { name: "Vidigal", pos: "FW", rating: 50 },
+            { name: "V. Gómez", pos: "DF", rating: 30 },
+            { name: "Niakaté", pos: "DF", rating: 30 },
+            { name: "Lelo", pos: "DF", rating: 30 },
+            { name: "Lagerbielke", pos: "DF", rating: 5 },
+            { name: "P. Oliveira", pos: "DF", rating: 5 },
         ],
-        "brest": [
-            { name: "Del Castillo", pos: "FW", rating: 134 },
-            { name: "Ajorque", pos: "FW", rating: 134 },
-            { name: "Mounié", pos: "FW", rating: 134 },
-            { name: "Le Douaron", pos: "FW", rating: 65 },
-            { name: "Brahimi", pos: "FW", rating: 65 },
-            { name: "Camara", pos: "MF", rating: 103 },
-            { name: "Lees-Melou", pos: "MF", rating: 103 },
-            { name: "Magnetti", pos: "MF", rating: 103 },
-            { name: "Martin", pos: "MF", rating: 75 },
-            { name: "Doumbia", pos: "MF", rating: 75 },
-            { name: "Chardonnet", pos: "DF", rating: 61 },
-            { name: "Brassier", pos: "DF", rating: 61 },
-            { name: "Lala", pos: "DF", rating: 61 },
-            { name: "Locko", pos: "DF", rating: 25 },
-            { name: "Zogbé", pos: "DF", rating: 25 },
-        ],
-                "brighton": [
+        "brighton": [
             { name: "Rutter", pos: "FW", rating: 114 },
             { name: "Welbeck", pos: "FW", rating: 154 },
             { name: "Tzimas", pos: "FW", rating: 44 },
@@ -733,57 +802,63 @@
             { name: "Webster", pos: "DF", rating: 5 },
         ],
         "brondby": [
-            { name: "Omoijuanfo", pos: "FW", rating: 150 },
-            { name: "Suzuki", pos: "FW", rating: 150 },
-            { name: "Kvistgaarden", pos: "FW", rating: 150 },
-            { name: "Schwartau", pos: "FW", rating: 65 },
-            { name: "Vallys", pos: "FW", rating: 65 },
+            { name: "Vallys", pos: "FW", rating: 134 },
+            { name: "Mortensen", pos: "FW", rating: 134 },
+            { name: "Bundgaard", pos: "FW", rating: 134 },
             { name: "Wass", pos: "MF", rating: 88 },
-            { name: "Radosevic", pos: "MF", rating: 88 },
-            { name: "Nartey", pos: "MF", rating: 40 },
-            { name: "Greve", pos: "MF", rating: 40 },
-            { name: "Rasmussen", pos: "DF", rating: 40 },
-            { name: "Tshiembe", pos: "DF", rating: 40 },
-            { name: "Lauritsen", pos: "DF", rating: 40 },
-            { name: "Divkovic", pos: "DF", rating: 10 },
-            { name: "Klaiber", pos: "DF", rating: 10 },
-        ],
-        "cfrcluj": [
-            { name: "Bîrligea", pos: "FW", rating: 150 },
-            { name: "Michael", pos: "FW", rating: 150 },
-            { name: "Deac", pos: "FW", rating: 150 },
-            { name: "Korenica", pos: "FW", rating: 65 },
-            { name: "Postolachi", pos: "FW", rating: 65 },
-            { name: "Tachtsidis", pos: "MF", rating: 88 },
-            { name: "Muhar", pos: "MF", rating: 88 },
-            { name: "Keita", pos: "MF", rating: 88 },
-            { name: "Fică", pos: "MF", rating: 40 },
-            { name: "Artean", pos: "MF", rating: 40 },
-            { name: "Camora", pos: "DF", rating: 40 },
-            { name: "Boben", pos: "DF", rating: 40 },
-            { name: "Kresic", pos: "DF", rating: 40 },
-            { name: "Mogoș", pos: "DF", rating: 10 },
-            { name: "Ajeti", pos: "DF", rating: 10 },
+            { name: "Tahirović", pos: "MF", rating: 88 },
+            { name: "Frøkjær-Jensen", pos: "MF", rating: 88 },
+            { name: "Poulsen", pos: "MF", rating: 30 },
+            { name: "Jensen", pos: "MF", rating: 30 },
+            { name: "Slisz", pos: "MF", rating: 30 },
+            { name: "Dennis", pos: "FW", rating: 50 },
+            { name: "Fukuda", pos: "FW", rating: 50 },
+            { name: "Younis", pos: "FW", rating: 50 },
+            { name: "Alves", pos: "DF", rating: 30 },
+            { name: "Vanlerberghe", pos: "DF", rating: 30 },
+            { name: "Villadsen", pos: "DF", rating: 30 },
+            { name: "Binks", pos: "DF", rating: 5 },
+            { name: "Lauritsen", pos: "DF", rating: 5 },
         ],
         "celtic": [
-            { name: "Furuhashi", pos: "FW", rating: 150 },
-            { name: "Maeda", pos: "FW", rating: 150 },
-            { name: "Kühn", pos: "FW", rating: 150 },
-            { name: "Idah", pos: "FW", rating: 65 },
-            { name: "Yang", pos: "FW", rating: 65 },
-            { name: "McGregor", pos: "MF", rating: 88 },
-            { name: "Hatate", pos: "MF", rating: 88 },
-            { name: "Engels", pos: "MF", rating: 88 },
-            { name: "Bernardo", pos: "MF", rating: 40 },
-            { name: "Forrest", pos: "MF", rating: 40 },
-            { name: "Carter-Vickers", pos: "DF", rating: 40 },
-            { name: "Scales", pos: "DF", rating: 40 },
-            { name: "Johnston", pos: "DF", rating: 40 },
-            { name: "Taylor", pos: "DF", rating: 10 },
-            { name: "Trusty", pos: "DF", rating: 10 },
-            { name: "Ralston", pos: "DF", rating: 10 },
+            { name: "Kenny", pos: "FW", rating: 134 },
+            { name: "Maeda", pos: "FW", rating: 160 },
+            { name: "Osmand", pos: "FW", rating: 134 },
+            { name: "Nygren", pos: "MF", rating: 88 },
+            { name: "McCowan", pos: "MF", rating: 88 },
+            { name: "Oxlade-Chamberlain", pos: "MF", rating: 88 },
+            { name: "Engels", pos: "MF", rating: 30 },
+            { name: "Bernardo", pos: "MF", rating: 30 },
+            { name: "Hatate", pos: "MF", rating: 30 },
+            { name: "Jota", pos: "FW", rating: 50 },
+            { name: "Balikwisha", pos: "FW", rating: 50 },
+            { name: "Hyun-jun", pos: "FW", rating: 50 },
+            { name: "Johnston", pos: "DF", rating: 30 },
+            { name: "Scales", pos: "DF", rating: 30 },
+            { name: "Trusty", pos: "DF", rating: 30 },
+            { name: "Carter-Vickers", pos: "DF", rating: 5 },
+            { name: "Montgomery", pos: "DF", rating: 5 },
         ],
-                "chelsea": [
+        "cfrcluj": [
+            { name: "Korenica", pos: "FW", rating: 134 },
+            { name: "Cordea", pos: "FW", rating: 134 },
+            { name: "Samaké", pos: "FW", rating: 134 },
+            { name: "Radu", pos: "MF", rating: 88 },
+            { name: "Păun", pos: "MF", rating: 88 },
+            { name: "Fică", pos: "MF", rating: 88 },
+            { name: "Perianu", pos: "MF", rating: 30 },
+            { name: "Gligor", pos: "MF", rating: 30 },
+            { name: "Sade", pos: "MF", rating: 30 },
+            { name: "Mensah", pos: "FW", rating: 50 },
+            { name: "Biliboc", pos: "FW", rating: 50 },
+            { name: "Crișan", pos: "FW", rating: 50 },
+            { name: "Huja", pos: "DF", rating: 30 },
+            { name: "Abeid", pos: "DF", rating: 30 },
+            { name: "Mašić", pos: "DF", rating: 30 },
+            { name: "Rocha", pos: "DF", rating: 5 },
+            { name: "Țîrlea", pos: "DF", rating: 5 },
+        ],
+        "chelsea": [
             { name: "Palmer", pos: "FW", rating: 177 },
             { name: "João Pedro", pos: "FW", rating: 203 },
             { name: "Neto", pos: "FW", rating: 134 },
@@ -809,22 +884,25 @@
             { name: "M. Sarr", pos: "DF", rating: 5 },
         ],
         "clubbrugge": [
-            { name: "Skov Olsen", pos: "FW", rating: 150 },
-            { name: "Thiago", pos: "FW", rating: 150 },
-            { name: "Nilsson", pos: "FW", rating: 150 },
-            { name: "Jutglà", pos: "FW", rating: 65 },
-            { name: "Talbi", pos: "FW", rating: 65 },
-            { name: "Vanaken", pos: "MF", rating: 88 },
-            { name: "Onyedika", pos: "MF", rating: 88 },
-            { name: "Vetlesen", pos: "MF", rating: 40 },
-            { name: "Nielsen", pos: "MF", rating: 40 },
-            { name: "Mechele", pos: "DF", rating: 40 },
-            { name: "Ordoñez", pos: "DF", rating: 40 },
-            { name: "De Cuyper", pos: "DF", rating: 40 },
-            { name: "Seys", pos: "DF", rating: 10 },
-            { name: "Sabbe", pos: "DF", rating: 10 },
+            { name: "Nilsson", pos: "FW", rating: 134 },
+            { name: "Tresoldi", pos: "FW", rating: 134 },
+            { name: "Tzolis", pos: "FW", rating: 134 },
+            { name: "L. Reis", pos: "MF", rating: 88 },
+            { name: "Vetlesen", pos: "MF", rating: 88 },
+            { name: "Sandra", pos: "MF", rating: 88 },
+            { name: "Onyedika", pos: "MF", rating: 30 },
+            { name: "Vanaken", pos: "MF", rating: 30 },
+            { name: "Audoor", pos: "MF", rating: 30 },
+            { name: "Forbs", pos: "FW", rating: 50 },
+            { name: "Vermant", pos: "FW", rating: 50 },
+            { name: "Diakhon", pos: "FW", rating: 50 },
+            { name: "Ordóñez", pos: "DF", rating: 30 },
+            { name: "Meijer", pos: "DF", rating: 30 },
+            { name: "Osuji", pos: "DF", rating: 30 },
+            { name: "Siquet", pos: "DF", rating: 5 },
+            { name: "Mechele", pos: "DF", rating: 5 },
         ],
-                "como": [
+        "como": [
             { name: "Douvikas", pos: "FW", rating: 200 },
             { name: "Baturina", pos: "FW", rating: 144 },
             { name: "Morata", pos: "FW", rating: 134 },
@@ -835,194 +913,183 @@
             { name: "Jesús", pos: "MF", rating: 75 },
             { name: "Addai", pos: "FW", rating: 45 },
             { name: "Diao", pos: "FW", rating: 65 },
-            { name: "Caqueret", pos: "FW", rating: 6 },
-            { name: "Kühn", pos: "FW", rating: 15 },
             { name: "Ramon", pos: "DF", rating: 51 },
             { name: "Kempf", pos: "DF", rating: 69 },
             { name: "Moreno", pos: "DF", rating: 51 },
             { name: "Moreno", pos: "DF", rating: 35 },
             { name: "Smolcic", pos: "DF", rating: 1 },
-            { name: "Van Der Brempt", pos: "DF", rating: 1 },
-        ],
-        "crvenazvedza": [
-            { name: "Olayinka", pos: "FW", rating: 150 },
-            { name: "Katai", pos: "FW", rating: 150 },
-            { name: "Duarte", pos: "FW", rating: 150 },
-            { name: "Ndiaye", pos: "FW", rating: 65 },
-            { name: "Krunic", pos: "FW", rating: 65 },
-            { name: "Arnautović", pos: "FW", rating: 65 },
-            { name: "Ivanic", pos: "MF", rating: 88 },
-            { name: "Hwang", pos: "MF", rating: 88 },
-            { name: "Elšnik", pos: "MF", rating: 88 },
-            { name: "Ilic", pos: "MF", rating: 40 },
-            { name: "Kanga", pos: "MF", rating: 40 },
-            { name: "Dragović", pos: "DF", rating: 40 },
-            { name: "Spajić", pos: "DF", rating: 40 },
-            { name: "Seol", pos: "DF", rating: 40 },
-            { name: "Rodić", pos: "DF", rating: 10 },
-            { name: "Mimović", pos: "DF", rating: 10 },
-        ],
-        "derrycity": [
-            { name: "Mullen", pos: "FW", rating: 150 },
-            { name: "Hoban", pos: "FW", rating: 150 },
-            { name: "Duffy", pos: "FW", rating: 65 },
-            { name: "Diallo", pos: "FW", rating: 65 },
-            { name: "McEleney", pos: "MF", rating: 88 },
-            { name: "O'Reilly", pos: "MF", rating: 118 },
-            { name: "Patching", pos: "MF", rating: 40 },
-            { name: "Doherty", pos: "MF", rating: 40 },
-            { name: "Boyce", pos: "DF", rating: 40 },
-            { name: "McJannet", pos: "DF", rating: 40 },
-            { name: "Coll", pos: "DF", rating: 40 },
-            { name: "Dummigan", pos: "DF", rating: 10 },
-            { name: "Kelly", pos: "DF", rating: 10 },
         ],
         "dinamozagreb": [
-            { name: "Petković", pos: "FW", rating: 150 },
-            { name: "Baturina", pos: "FW", rating: 150 },
-            { name: "Hoxha", pos: "FW", rating: 150 },
-            { name: "Kulenović", pos: "FW", rating: 65 },
-            { name: "Stojković", pos: "FW", rating: 65 },
+            { name: "Hoxha", pos: "FW", rating: 134 },
+            { name: "Beljo", pos: "FW", rating: 134 },
+            { name: "Lisica", pos: "FW", rating: 134 },
             { name: "Mišić", pos: "MF", rating: 88 },
-            { name: "Sučić", pos: "MF", rating: 88 },
-            { name: "Ademi", pos: "MF", rating: 40 },
-            { name: "Kacavenda", pos: "MF", rating: 40 },
-            { name: "Theophile-Catherine", pos: "DF", rating: 40 },
-            { name: "Bernauer", pos: "DF", rating: 40 },
-            { name: "Mmaee", pos: "DF", rating: 40 },
-            { name: "Pierre-Gabriel", pos: "DF", rating: 10 },
-            { name: "Ristovski", pos: "DF", rating: 10 },
+            { name: "Bennacer", pos: "MF", rating: 88 },
+            { name: "Stojković", pos: "MF", rating: 88 },
+            { name: "Zajc", pos: "MF", rating: 30 },
+            { name: "Vidović", pos: "MF", rating: 30 },
+            { name: "Soldo", pos: "MF", rating: 30 },
+            { name: "Varela", pos: "FW", rating: 50 },
+            { name: "Topić", pos: "FW", rating: 50 },
+            { name: "Córdoba", pos: "FW", rating: 50 },
+            { name: "Goda", pos: "DF", rating: 30 },
+            { name: "Tabinas", pos: "DF", rating: 30 },
+            { name: "Galešić", pos: "DF", rating: 30 },
+            { name: "Torrente", pos: "DF", rating: 5 },
+            { name: "Pierre-Gabriel", pos: "DF", rating: 5 },
         ],
         "dynamokyiv": [
-            { name: "Vanat", pos: "FW", rating: 150 },
-            { name: "Yarmolenko", pos: "FW", rating: 150 },
-            { name: "Voloshyn", pos: "FW", rating: 65 },
-            { name: "Kabaev", pos: "FW", rating: 65 },
-            { name: "Shaparenko", pos: "MF", rating: 88 },
+            { name: "Ponomarenko", pos: "FW", rating: 160 },
+            { name: "Ogundana", pos: "FW", rating: 134 },
+            { name: "Guerrero", pos: "FW", rating: 134 },
+            { name: "Yarmolenko", pos: "MF", rating: 88 },
             { name: "Brazhko", pos: "MF", rating: 88 },
-            { name: "Buyalskyi", pos: "MF", rating: 40 },
-            { name: "Pikhalyonok", pos: "MF", rating: 40 },
-            { name: "Popov", pos: "DF", rating: 40 },
-            { name: "Mykhavko", pos: "DF", rating: 40 },
-            { name: "Tymchyk", pos: "DF", rating: 40 },
-            { name: "Dubinchak", pos: "DF", rating: 10 },
-            { name: "Karavayev", pos: "DF", rating: 10 },
+            { name: "Pikhalyonok", pos: "MF", rating: 88 },
+            { name: "Voloshyn", pos: "MF", rating: 30 },
+            { name: "Shaparenko", pos: "MF", rating: 30 },
+            { name: "Kabayev", pos: "MF", rating: 30 },
+            { name: "Redushko", pos: "FW", rating: 50 },
+            { name: "Blănuță", pos: "FW", rating: 50 },
+            { name: "Á. Torres", pos: "FW", rating: 50 },
+            { name: "Vivcharenko", pos: "DF", rating: 30 },
+            { name: "Popov", pos: "DF", rating: 30 },
+            { name: "Korobov", pos: "DF", rating: 30 },
+            { name: "Tymchyk", pos: "DF", rating: 5 },
+            { name: "Mykhavko", pos: "DF", rating: 5 },
         ],
         "eintrachtfrankfurt": [
-            { name: "Matanovic", pos: "FW", rating: 134 },
-            { name: "Chaïbi", pos: "FW", rating: 65 },
-            { name: "Knauff", pos: "FW", rating: 65 },
-            { name: "Skhiri", pos: "MF", rating: 103 },
-            { name: "Götze", pos: "MF", rating: 103 },
-            { name: "Larsson", pos: "MF", rating: 75 },
-            { name: "Dina Ebimbe", pos: "MF", rating: 75 },
-            { name: "Koch", pos: "DF", rating: 61 },
-            { name: "Pacho", pos: "DF", rating: 61 },
-            { name: "Tuta", pos: "DF", rating: 61 },
-            { name: "Theate", pos: "DF", rating: 25 },
-            { name: "Kristensen", pos: "DF", rating: 25 },
+            { name: "Batshuayi", pos: "FW", rating: 134 },
+            { name: "Knauff", pos: "FW", rating: 134 },
+            { name: "Burkardt", pos: "FW", rating: 134 },
+            { name: "Højlund", pos: "MF", rating: 88 },
+            { name: "Chaïbi", pos: "MF", rating: 88 },
+            { name: "Skhiri", pos: "MF", rating: 88 },
+            { name: "Larsson", pos: "MF", rating: 30 },
+            { name: "Dahoud", pos: "MF", rating: 30 },
+            { name: "Götze", pos: "MF", rating: 30 },
+            { name: "Ebnoutalib", pos: "FW", rating: 50 },
+            { name: "Bahoya", pos: "FW", rating: 50 },
+            { name: "Dōan", pos: "FW", rating: 50 },
+            { name: "Collins", pos: "DF", rating: 30 },
+            { name: "Baum", pos: "DF", rating: 30 },
+            { name: "Theate", pos: "DF", rating: 30 },
+            { name: "Koch", pos: "DF", rating: 5 },
+            { name: "Amenda", pos: "DF", rating: 5 },
         ],
         "elfsborg": [
-            { name: "Baidoo", pos: "FW", rating: 150 },
-            { name: "Frick", pos: "FW", rating: 150 },
-            { name: "Abdullai", pos: "FW", rating: 65 },
-            { name: "Jebara", pos: "FW", rating: 65 },
-            { name: "Ouma", pos: "MF", rating: 88 },
+            { name: "Krasniqi", pos: "FW", rating: 134 },
+            { name: "Ihler", pos: "FW", rating: 134 },
+            { name: "Silverholt", pos: "FW", rating: 134 },
             { name: "Zeneli", pos: "MF", rating: 88 },
-            { name: "B. Zeneli", pos: "MF", rating: 88 },
-            { name: "Holmén", pos: "MF", rating: 40 },
-            { name: "Baldursson", pos: "MF", rating: 40 },
-            { name: "Holmén", pos: "DF", rating: 40 },
-            { name: "Henriksson", pos: "DF", rating: 40 },
-            { name: "Hult", pos: "DF", rating: 40 },
-            { name: "Yegbe", pos: "DF", rating: 10 },
-            { name: "Bukhari", pos: "DF", rating: 10 },
+            { name: "Olsson", pos: "MF", rating: 88 },
+            { name: "Hedlund", pos: "MF", rating: 88 },
+            { name: "Hellemaa", pos: "MF", rating: 30 },
+            { name: "Magnússon", pos: "MF", rating: 30 },
+            { name: "Beck", pos: "MF", rating: 30 },
+            { name: "Frick", pos: "FW", rating: 50 },
+            { name: "Östman", pos: "FW", rating: 50 },
+            { name: "Isherwood", pos: "DF", rating: 30 },
+            { name: "Wikström", pos: "DF", rating: 30 },
+            { name: "Holmén", pos: "DF", rating: 30 },
+            { name: "Hult", pos: "DF", rating: 5 },
+            { name: "Aronsson", pos: "DF", rating: 5 },
         ],
         "fccopenhagen": [
-            { name: "Cornelius", pos: "FW", rating: 150 },
-            { name: "Achouri", pos: "FW", rating: 150 },
-            { name: "Elyounoussi", pos: "FW", rating: 150 },
-            { name: "Larsson", pos: "FW", rating: 65 },
-            { name: "Robert", pos: "FW", rating: 65 },
-            { name: "Falk", pos: "MF", rating: 88 },
-            { name: "Lerager", pos: "MF", rating: 88 },
-            { name: "Clem", pos: "MF", rating: 40 },
-            { name: "Claesson", pos: "MF", rating: 40 },
-            { name: "Vavro", pos: "DF", rating: 40 },
-            { name: "Diks", pos: "DF", rating: 40 },
-            { name: "Meling", pos: "DF", rating: 40 },
-            { name: "Gabriel", pos: "DF", rating: 150 },
-            { name: "Lund", pos: "DF", rating: 10 },
+            { name: "Elyounoussi", pos: "FW", rating: 134 },
+            { name: "Cornelius", pos: "FW", rating: 134 },
+            { name: "Achouri", pos: "FW", rating: 160 },
+            { name: "Mattsson", pos: "MF", rating: 88 },
+            { name: "Madsen", pos: "MF", rating: 88 },
+            { name: "Delaney", pos: "MF", rating: 88 },
+            { name: "Moalem", pos: "MF", rating: 30 },
+            { name: "Højer", pos: "MF", rating: 30 },
+            { name: "Clem", pos: "MF", rating: 30 },
+            { name: "Moukoko", pos: "FW", rating: 50 },
+            { name: "Larsson", pos: "FW", rating: 50 },
+            { name: "R. Silva", pos: "FW", rating: 50 },
+            { name: "Suzuki", pos: "DF", rating: 30 },
+            { name: "Beijmo", pos: "DF", rating: 30 },
+            { name: "G. Pereira", pos: "DF", rating: 98 },
+            { name: "Hatzidiakos", pos: "DF", rating: 5 },
+            { name: "Huescas", pos: "DF", rating: 5 },
         ],
         "fczurich": [
-            { name: "Perea", pos: "FW", rating: 150 },
-            { name: "Krasniqi", pos: "FW", rating: 150 },
-            { name: "Oko-Flex", pos: "FW", rating: 150 },
-            { name: "Afriyie", pos: "FW", rating: 65 },
-            { name: "Marchesano", pos: "FW", rating: 65 },
-            { name: "Mathew", pos: "MF", rating: 88 },
-            { name: "Conde", pos: "MF", rating: 88 },
-            { name: "Chouiar", pos: "MF", rating: 40 },
-            { name: "Boranijašević", pos: "MF", rating: 40 },
-            { name: "Kamberi", pos: "DF", rating: 40 },
-            { name: "Gómez", pos: "DF", rating: 40 },
-            { name: "Katic", pos: "DF", rating: 40 },
-            { name: "Wallner", pos: "DF", rating: 10 },
-            { name: "Hodza", pos: "DF", rating: 10 },
+            { name: "Perea", pos: "FW", rating: 134 },
+            { name: "Cavaleiro", pos: "FW", rating: 134 },
+            { name: "Phaëton", pos: "FW", rating: 134 },
+            { name: "Krasniqi", pos: "MF", rating: 88 },
+            { name: "Palacio", pos: "MF", rating: 88 },
+            { name: "Comenencia", pos: "MF", rating: 88 },
+            { name: "Tsawa", pos: "MF", rating: 30 },
+            { name: "Di Giusto", pos: "MF", rating: 30 },
+            { name: "Bangoura", pos: "MF", rating: 30 },
+            { name: "Emmanuel", pos: "FW", rating: 50 },
+            { name: "Kény", pos: "FW", rating: 50 },
+            { name: "Reverson", pos: "FW", rating: 50 },
+            { name: "Kamberi", pos: "DF", rating: 30 },
+            { name: "Segura", pos: "DF", rating: 30 },
+            { name: "Kablan", pos: "DF", rating: 30 },
+            { name: "Sauter", pos: "DF", rating: 5 },
+            { name: "Hodža", pos: "DF", rating: 5 },
         ],
         "fenerbahce": [
-            { name: "Džeko", pos: "FW", rating: 150 },
-            { name: "Saint-Maximin", pos: "FW", rating: 150 },
-            { name: "Muriqi", pos: "FW", rating: 150 },
-            { name: "Aktürkoğlu", pos: "FW", rating: 150 },
-            { name: "Kahveci", pos: "FW", rating: 65 },
-            { name: "Szymański", pos: "FW", rating: 65 },
+            { name: "Aktürkoğlu", pos: "FW", rating: 134 },
+            { name: "Muriqi", pos: "FW", rating: 134 },
+            { name: "Musaba", pos: "FW", rating: 134 },
             { name: "Fred", pos: "MF", rating: 88 },
-            { name: "Amrabat", pos: "MF", rating: 88 },
-            { name: "Asensio", pos: "MF", rating: 88 },
-            { name: "Yüksek", pos: "MF", rating: 40 },
-            { name: "Müftüoğlu", pos: "MF", rating: 40 },
-            { name: "Söyüncü", pos: "DF", rating: 40 },
-            { name: "Djiku", pos: "DF", rating: 40 },
-            { name: "Müldür", pos: "DF", rating: 40 },
-            { name: "Oosterwolde", pos: "DF", rating: 10 },
-            { name: "Osayi-Samuel", pos: "DF", rating: 10 },
-            { name: "Skriniar", pos: "DF", rating: 10 },
+            { name: "Yüksek", pos: "MF", rating: 88 },
+            { name: "Guendouzi", pos: "MF", rating: 88 },
+            { name: "Yandaş", pos: "MF", rating: 30 },
+            { name: "Álvarez", pos: "MF", rating: 30 },
+            { name: "Kanté", pos: "MF", rating: 30 },
+            { name: "Cherif", pos: "FW", rating: 50 },
+            { name: "Aydın", pos: "FW", rating: 50 },
+            { name: "Talisca", pos: "FW", rating: 50 },
+            { name: "Brown", pos: "DF", rating: 30 },
+            { name: "Söyüncü", pos: "DF", rating: 30 },
+            { name: "Demir", pos: "DF", rating: 30 },
+            { name: "Müldür", pos: "DF", rating: 5 },
+            { name: "Mercan", pos: "DF", rating: 5 },
         ],
         "ferencvaros": [
-            { name: "Varga", pos: "FW", rating: 150 },
-            { name: "Traoré", pos: "FW", rating: 150 },
-            { name: "Saldanha", pos: "FW", rating: 150 },
-            { name: "Pesic", pos: "FW", rating: 65 },
-            { name: "Zachariassen", pos: "FW", rating: 65 },
-            { name: "Abu Fani", pos: "MF", rating: 88 },
-            { name: "Maïga", pos: "MF", rating: 88 },
-            { name: "Rommens", pos: "MF", rating: 40 },
-            { name: "Ben Romdhane", pos: "MF", rating: 40 },
-            { name: "Cissé", pos: "DF", rating: 40 },
-            { name: "Gustavo", pos: "DF", rating: 40 },
-            { name: "Ramírez", pos: "DF", rating: 40 },
-            { name: "Botka", pos: "DF", rating: 10 },
-            { name: "Makreckis", pos: "DF", rating: 10 },
+            { name: "Acolatse", pos: "FW", rating: 134 },
+            { name: "Levi", pos: "FW", rating: 134 },
+            { name: "Yusuf", pos: "FW", rating: 134 },
+            { name: "Cadu", pos: "MF", rating: 88 },
+            { name: "Rommens", pos: "MF", rating: 88 },
+            { name: "Keïta", pos: "MF", rating: 88 },
+            { name: "Zachariassen", pos: "MF", rating: 30 },
+            { name: "Corbu", pos: "MF", rating: 30 },
+            { name: "Ötvös", pos: "MF", rating: 30 },
+            { name: "Kovačević", pos: "FW", rating: 50 },
+            { name: "Gruber", pos: "FW", rating: 50 },
+            { name: "Bassey", pos: "FW", rating: 50 },
+            { name: "M. Gómez", pos: "DF", rating: 30 },
+            { name: "Osváth", pos: "DF", rating: 30 },
+            { name: "Botka", pos: "DF", rating: 30 },
+            { name: "Szalai", pos: "DF", rating: 5 },
+            { name: "Makreckis", pos: "DF", rating: 5 },
         ],
         "feyenoord": [
-            { name: "Paixão", pos: "FW", rating: 150 },
-            { name: "Stengs", pos: "FW", rating: 150 },
-            { name: "Ueda", pos: "FW", rating: 150 },
-            { name: "Ivanušec", pos: "FW", rating: 65 },
-            { name: "Osman", pos: "FW", rating: 65 },
-            { name: "Carranza", pos: "FW", rating: 65 },
-            { name: "Q. Timber", pos: "MF", rating: 88 },
+            { name: "Ueda", pos: "FW", rating: 160 },
+            { name: "Borges", pos: "FW", rating: 134 },
+            { name: "Sauer", pos: "FW", rating: 134 },
             { name: "In-beom", pos: "MF", rating: 88 },
-            { name: "Zerrouki", pos: "MF", rating: 40 },
-            { name: "Milambo", pos: "MF", rating: 40 },
-            { name: "Hancko", pos: "DF", rating: 40 },
-            { name: "Beelen", pos: "DF", rating: 40 },
-            { name: "Geertruida", pos: "DF", rating: 40 },
-            { name: "Smál", pos: "DF", rating: 10 },
-            { name: "Bueno", pos: "DF", rating: 10 },
+            { name: "Moder", pos: "MF", rating: 88 },
+            { name: "Valente", pos: "MF", rating: 88 },
+            { name: "Steijn", pos: "MF", rating: 30 },
+            { name: "Kraaijeveld", pos: "MF", rating: 30 },
+            { name: "Zand", pos: "MF", rating: 30 },
+            { name: "Tengstedt", pos: "FW", rating: 50 },
+            { name: "Moussa", pos: "FW", rating: 50 },
+            { name: "Diarra", pos: "FW", rating: 50 },
+            { name: "Nieuwkoop", pos: "DF", rating: 30 },
+            { name: "Beelen", pos: "DF", rating: 30 },
+            { name: "Watanabe", pos: "DF", rating: 30 },
+            { name: "Smal", pos: "DF", rating: 5 },
+            { name: "Juste", pos: "DF", rating: 5 },
         ],
-                "fiorentina": [
+        "fiorentina": [
             { name: "Kean", pos: "FW", rating: 164 },
             { name: "Gudmundsson", pos: "FW", rating: 104 },
             { name: "Harrison", pos: "FW", rating: 94 },
@@ -1032,125 +1099,133 @@
             { name: "Ndour", pos: "MF", rating: 75 },
             { name: "Fagioli", pos: "MF", rating: 45 },
             { name: "Piccoli", pos: "FW", rating: 25 },
-            { name: "Comuzzo", pos: "DF", rating: 4 },
             { name: "Ranieri", pos: "DF", rating: 31 },
             { name: "Dodô", pos: "DF", rating: 11 },
-            { name: "Lamptey", pos: "DF", rating: 11 },
             { name: "Gosens", pos: "DF", rating: 45 },
             { name: "Pongračić", pos: "DF", rating: 5 },
         ],
         "freiburg": [
-            { name: "Doan", pos: "FW", rating: 134 },
-            { name: "Grifo", pos: "FW", rating: 134 },
-            { name: "Gregoritsch", pos: "FW", rating: 134 },
-            { name: "Dinkçi", pos: "FW", rating: 65 },
-            { name: "Höler", pos: "FW", rating: 65 },
-            { name: "Eggestein", pos: "MF", rating: 103 },
-            { name: "Höfler", pos: "MF", rating: 103 },
-            { name: "Röhl", pos: "MF", rating: 75 },
-            { name: "Osterhage", pos: "MF", rating: 75 },
-            { name: "Ginter", pos: "DF", rating: 61 },
-            { name: "Lienhart", pos: "DF", rating: 61 },
-            { name: "Günter", pos: "DF", rating: 61 },
-            { name: "Kübler", pos: "DF", rating: 25 },
-            { name: "Sildillia", pos: "DF", rating: 25 },
+            { name: "Scherhant", pos: "FW", rating: 134 },
+            { name: "Höler", pos: "FW", rating: 134 },
+            { name: "Irié", pos: "FW", rating: 134 },
+            { name: "Suzuki", pos: "MF", rating: 88 },
+            { name: "Osterhage", pos: "MF", rating: 88 },
+            { name: "Eggestein", pos: "MF", rating: 88 },
+            { name: "Kyereh", pos: "MF", rating: 30 },
+            { name: "Beste", pos: "MF", rating: 30 },
+            { name: "Höfler", pos: "MF", rating: 30 },
+            { name: "Philipp", pos: "FW", rating: 50 },
+            { name: "Matanović", pos: "FW", rating: 50 },
+            { name: "Amegnaglo", pos: "FW", rating: 50 },
+            { name: "Lienhart", pos: "DF", rating: 30 },
+            { name: "Jung", pos: "DF", rating: 30 },
+            { name: "Kübler", pos: "DF", rating: 30 },
+            { name: "Ginter", pos: "DF", rating: 5 },
+            { name: "Treu", pos: "DF", rating: 5 },
         ],
         "galatasaray": [
-            { name: "Sané", pos: "FW", rating: 150 },
             { name: "Osimhen", pos: "FW", rating: 145 },
-            { name: "Icardi", pos: "FW", rating: 150 },
-            { name: "Barış Alper", pos: "FW", rating: 65 },
-            { name: "Batshuayi", pos: "FW", rating: 65 },
-            { name: "Akgün", pos: "FW", rating: 65 },
-            { name: "Torreira", pos: "MF", rating: 88 },
-            { name: "Gabriel Sara", pos: "MF", rating: 88 },
+            { name: "Icardi", pos: "FW", rating: 134 },
+            { name: "Noa Lang", pos: "FW", rating: 134 },
+            { name: "Sara", pos: "MF", rating: 88 },
             { name: "Gündoğan", pos: "MF", rating: 88 },
-            { name: "Demirbay", pos: "MF", rating: 40 },
-            { name: "Kutlu", pos: "MF", rating: 40 },
-            { name: "Bardakcı", pos: "DF", rating: 40 },
-            { name: "Nelsson", pos: "DF", rating: 40 },
-            { name: "Sánchez", pos: "DF", rating: 40 },
-            { name: "Jakobs", pos: "DF", rating: 10 },
-            { name: "Ayhan", pos: "DF", rating: 10 },
+            { name: "Torreira", pos: "MF", rating: 88 },
+            { name: "Güner", pos: "MF", rating: 30 },
+            { name: "Gürpüz", pos: "MF", rating: 30 },
+            { name: "Yüzgeç", pos: "MF", rating: 30 },
+            { name: "Akgün", pos: "FW", rating: 50 },
+            { name: "Kutucu", pos: "FW", rating: 50 },
+            { name: "Asprilla", pos: "FW", rating: 50 },
+            { name: "Baltacı", pos: "DF", rating: 30 },
+            { name: "Jakobs", pos: "DF", rating: 30 },
+            { name: "D. Sánchez", pos: "DF", rating: 30 },
+            { name: "Sallai", pos: "DF", rating: 5 },
+            { name: "Elmalı", pos: "DF", rating: 5 },
         ],
         "genk": [
-            { name: "Tolu", pos: "FW", rating: 150 },
-            { name: "Sor", pos: "FW", rating: 150 },
-            { name: "Steuckers", pos: "FW", rating: 150 },
-            { name: "Karetsas", pos: "FW", rating: 65 },
-            { name: "Zeqiri", pos: "FW", rating: 65 },
+            { name: "Steuckers", pos: "FW", rating: 134 },
+            { name: "Sor", pos: "FW", rating: 134 },
+            { name: "Itō", pos: "FW", rating: 134 },
+            { name: "Bangoura", pos: "MF", rating: 88 },
+            { name: "Sattlberger", pos: "MF", rating: 88 },
             { name: "Heynen", pos: "MF", rating: 88 },
-            { name: "Hrošovský", pos: "MF", rating: 88 },
-            { name: "El Khannouss", pos: "MF", rating: 40 },
-            { name: "Banga", pos: "MF", rating: 40 },
-            { name: "Cuesta", pos: "DF", rating: 40 },
-            { name: "Smets", pos: "DF", rating: 40 },
-            { name: "Kayembe", pos: "DF", rating: 40 },
-            { name: "Fadera", pos: "DF", rating: 10 },
-            { name: "El Ouahdi", pos: "DF", rating: 10 },
+            { name: "Karetsas", pos: "MF", rating: 30 },
+            { name: "Nkuba", pos: "MF", rating: 30 },
+            { name: "Heymans", pos: "MF", rating: 30 },
+            { name: "Bibout", pos: "FW", rating: 50 },
+            { name: "Mirisola", pos: "FW", rating: 50 },
+            { name: "Yokoyama", pos: "FW", rating: 50 },
+            { name: "Palacios", pos: "DF", rating: 30 },
+            { name: "Sadick", pos: "DF", rating: 30 },
+            { name: "Smets", pos: "DF", rating: 30 },
+            { name: "Kayembe", pos: "DF", rating: 5 },
+            { name: "Medina", pos: "DF", rating: 5 },
         ],
         "hajduksplit": [
-            { name: "Livaja", pos: "FW", rating: 150 },
-            { name: "Sahiti", pos: "FW", rating: 150 },
-            { name: "Kalinić", pos: "FW", rating: 150 },
-            { name: "Dajaku", pos: "FW", rating: 65 },
-            { name: "Bamba", pos: "FW", rating: 65 },
-            { name: "Rakitić", pos: "MF", rating: 88 },
+            { name: "Livaja", pos: "FW", rating: 134 },
+            { name: "Šego", pos: "FW", rating: 134 },
+            { name: "Sanyang", pos: "FW", rating: 134 },
+            { name: "Pukštas", pos: "MF", rating: 88 },
             { name: "Krovinović", pos: "MF", rating: 88 },
-            { name: "Pukštas", pos: "MF", rating: 40 },
-            { name: "Sigur", pos: "MF", rating: 40 },
-            { name: "Šarlija", pos: "DF", rating: 40 },
-            { name: "Uremović", pos: "DF", rating: 40 },
-            { name: "Melnjak", pos: "DF", rating: 40 },
-            { name: "Diallo", pos: "DF", rating: 10 },
-            { name: "Elez", pos: "DF", rating: 10 },
+            { name: "Pajaziti", pos: "MF", rating: 88 },
+            { name: "Guillamón", pos: "MF", rating: 30 },
+            { name: "Sigur", pos: "MF", rating: 30 },
+            { name: "Brruti", pos: "MF", rating: 30 },
+            { name: "Skelin", pos: "DF", rating: 30 },
+            { name: "Hodak", pos: "DF", rating: 30 },
+            { name: "Van Hoorenbeeck", pos: "DF", rating: 30 },
+            { name: "Raçi", pos: "DF", rating: 5 },
+            { name: "Marešić", pos: "DF", rating: 5 },
         ],
         "hamburgsv": [
-            { name: "Glatzel", pos: "FW", rating: 134 },
-            { name: "Königsdörffer", pos: "FW", rating: 134 },
+            { name: "Jatta", pos: "FW", rating: 134 },
             { name: "Dompé", pos: "FW", rating: 134 },
-            { name: "Jatta", pos: "FW", rating: 65 },
-            { name: "Németh", pos: "FW", rating: 65 },
-            { name: "Reis", pos: "MF", rating: 103 },
-            { name: "Poreba", pos: "MF", rating: 103 },
-            { name: "Elfadli", pos: "MF", rating: 103 },
-            { name: "Carvalho", pos: "MF", rating: 75 },
-            { name: "Richter", pos: "MF", rating: 75 },
-            { name: "Schonlau", pos: "DF", rating: 61 },
-            { name: "Hadžikadunić", pos: "DF", rating: 61 },
-            { name: "Muheim", pos: "DF", rating: 61 },
-            { name: "Van der Brempt", pos: "DF", rating: 25 },
-            { name: "Hefti", pos: "DF", rating: 25 },
+            { name: "Philippe", pos: "FW", rating: 134 },
+            { name: "Remberg", pos: "MF", rating: 88 },
+            { name: "Capaldo", pos: "MF", rating: 88 },
+            { name: "Lokonga", pos: "MF", rating: 88 },
+            { name: "Elfadli", pos: "MF", rating: 30 },
+            { name: "Vieira", pos: "MF", rating: 30 },
+            { name: "Grønbæk", pos: "MF", rating: 30 },
+            { name: "Poulsen", pos: "FW", rating: 50 },
+            { name: "Downs", pos: "FW", rating: 50 },
+            { name: "Otele", pos: "FW", rating: 50 },
+            { name: "Mikelbrencis", pos: "DF", rating: 30 },
+            { name: "Katterbach", pos: "DF", rating: 30 },
+            { name: "Gocholeishvili", pos: "DF", rating: 30 },
+            { name: "Omari", pos: "DF", rating: 5 },
+            { name: "Torunarigha", pos: "DF", rating: 5 },
         ],
         "hearts": [
-            { name: "Shankland", pos: "FW", rating: 150 },
-            { name: "Vargas", pos: "FW", rating: 150 },
-            { name: "Oda", pos: "FW", rating: 150 },
-            { name: "Boyce", pos: "FW", rating: 65 },
-            { name: "Dhanda", pos: "FW", rating: 65 },
-            { name: "Baningime", pos: "MF", rating: 88 },
-            { name: "Spittal", pos: "MF", rating: 88 },
+            { name: "Kabangu", pos: "FW", rating: 134 },
+            { name: "Braga", pos: "FW", rating: 134 },
+            { name: "Kaboré", pos: "FW", rating: 134 },
             { name: "Devlin", pos: "MF", rating: 88 },
-            { name: "Boateng", pos: "MF", rating: 40 },
-            { name: "Grant", pos: "MF", rating: 40 },
-            { name: "Kingsley", pos: "DF", rating: 40 },
-            { name: "Halkett", pos: "DF", rating: 40 },
-            { name: "Kent", pos: "DF", rating: 40 },
-            { name: "Rowles", pos: "DF", rating: 10 },
-            { name: "Penrice", pos: "DF", rating: 10 },
-            { name: "Oyegoke", pos: "DF", rating: 10 },
+            { name: "Spittal", pos: "MF", rating: 88 },
+            { name: "Dhanda", pos: "MF", rating: 88 },
+            { name: "Magnússon", pos: "MF", rating: 30 },
+            { name: "Pollock", pos: "MF", rating: 30 },
+            { name: "Kartum", pos: "MF", rating: 30 },
+            { name: "Wilson", pos: "FW", rating: 50 },
+            { name: "Mato", pos: "FW", rating: 50 },
+            { name: "Kyziridis", pos: "FW", rating: 50 },
+            { name: "Kingsley", pos: "DF", rating: 30 },
+            { name: "Halkett", pos: "DF", rating: 30 },
+            { name: "McCart", pos: "DF", rating: 30 },
+            { name: "Borchgrevink", pos: "DF", rating: 5 },
+            { name: "Milne", pos: "DF", rating: 5 },
         ],
         "hoffenheim": [
             { name: "Kramarić", pos: "FW", rating: 134 },
             { name: "Bülter", pos: "FW", rating: 134 },
             { name: "Hložek", pos: "FW", rating: 134 },
-            { name: "Berisha", pos: "FW", rating: 65 },
-            { name: "Tabaković", pos: "FW", rating: 65 },
             { name: "Stach", pos: "MF", rating: 103 },
             { name: "Grillitsch", pos: "MF", rating: 103 },
             { name: "Prömel", pos: "MF", rating: 103 },
             { name: "Geiger", pos: "MF", rating: 75 },
             { name: "Tohumcu", pos: "MF", rating: 75 },
+            { name: "Berisha", pos: "FW", rating: 65 },
+            { name: "Tabaković", pos: "FW", rating: 65 },
             { name: "Kadeřábek", pos: "DF", rating: 61 },
             { name: "Akpoguma", pos: "DF", rating: 61 },
             { name: "Nsoki", pos: "DF", rating: 61 },
@@ -1158,17 +1233,15 @@
             { name: "Jurásek", pos: "DF", rating: 25 },
             { name: "Gendrey", pos: "DF", rating: 25 },
         ],
-                "intermilan": [
+        "intermilan": [
             { name: "Lautaro", pos: "FW", rating: 184 },
             { name: "Thuram", pos: "FW", rating: 174 },
-            { name: "Pio Esposito", pos: "FW", rating: 8 },
             { name: "Barella", pos: "MF", rating: 83 },
             { name: "Çalhanoğlu", pos: "MF", rating: 83 },
             { name: "Mkhitaryan", pos: "MF", rating: 63 },
             { name: "Frattesi", pos: "MF", rating: 35 },
             { name: "Zieliński", pos: "MF", rating: 75 },
             { name: "Sucic", pos: "MF", rating: 30 },
-            { name: "Topalovic", pos: "MF", rating: 3 },
             { name: "Bastoni", pos: "DF", rating: 31 },
             { name: "Dimarco", pos: "DF", rating: 21 },
             { name: "Acerbi", pos: "DF", rating: 21 },
@@ -1177,27 +1250,27 @@
             { name: "De Vrij", pos: "DF", rating: 5 },
         ],
         "istanbulbasaksehir": [
-            { name: "Piątek", pos: "FW", rating: 150 },
-            { name: "Figueiredo", pos: "FW", rating: 150 },
-            { name: "Gürler", pos: "FW", rating: 150 },
-            { name: "Keny", pos: "FW", rating: 65 },
-            { name: "Pelkas", pos: "FW", rating: 65 },
-            { name: "Özcan", pos: "MF", rating: 88 },
-            { name: "İlkhan", pos: "MF", rating: 88 },
+            { name: "Selke", pos: "FW", rating: 134 },
+            { name: "N. da Costa", pos: "FW", rating: 134 },
+            { name: "Shomurodov", pos: "FW", rating: 134 },
+            { name: "Kemen", pos: "MF", rating: 88 },
+            { name: "Özdemir", pos: "MF", rating: 88 },
             { name: "Ergün", pos: "MF", rating: 88 },
-            { name: "Kemen", pos: "MF", rating: 40 },
-            { name: "Türüç", pos: "MF", rating: 40 },
-            { name: "Duarte", pos: "DF", rating: 40 },
-            { name: "Opoku", pos: "DF", rating: 40 },
-            { name: "Lima", pos: "DF", rating: 40 },
-            { name: "Ba", pos: "DF", rating: 10 },
-            { name: "Şahiner", pos: "DF", rating: 10 },
+            { name: "Sarı", pos: "MF", rating: 30 },
+            { name: "Fayzullaev", pos: "MF", rating: 30 },
+            { name: "Crespo", pos: "MF", rating: 30 },
+            { name: "Brnić", pos: "FW", rating: 50 },
+            { name: "Yıldırım", pos: "FW", rating: 50 },
+            { name: "Duarte", pos: "DF", rating: 30 },
+            { name: "Opoku", pos: "DF", rating: 30 },
+            { name: "Bulut", pos: "DF", rating: 30 },
+            { name: "Güreler", pos: "DF", rating: 5 },
+            { name: "Opéri", pos: "DF", rating: 5 },
         ],
-                "juventus": [
+        "juventus": [
             { name: "Vlahović", pos: "FW", rating: 134 },
             { name: "Yıldız", pos: "FW", rating: 134 },
             { name: "Conceição", pos: "FW", rating: 104 },
-            { name: "Openda", pos: "FW", rating: 66 },
             { name: "Koopmeiners", pos: "MF", rating: 53 },
             { name: "Miretti", pos: "MF", rating: 43 },
             { name: "Thuram-Ulien", pos: "MF", rating: 83 },
@@ -1213,33 +1286,52 @@
             { name: "Kostic", pos: "DF", rating: 45 },
             { name: "Kelly", pos: "DF", rating: 10 },
         ],
-        "lask": [
-            { name: "Ljubičić", pos: "FW", rating: 150 },
-            { name: "Usor", pos: "FW", rating: 150 },
-            { name: "Mustapha", pos: "FW", rating: 150 },
-            { name: "Pintor", pos: "FW", rating: 65 },
-            { name: "Kone", pos: "FW", rating: 65 },
-            { name: "Zulj", pos: "MF", rating: 88 },
-            { name: "Horvath", pos: "MF", rating: 88 },
-            { name: "Beriša", pos: "MF", rating: 88 },
-            { name: "Bogarde", pos: "MF", rating: 40 },
-            { name: "Jovičić", pos: "MF", rating: 40 },
-            { name: "Andrade", pos: "DF", rating: 40 },
-            { name: "Ziereis", pos: "DF", rating: 40 },
-            { name: "Stojković", pos: "DF", rating: 40 },
-            { name: "Bello", pos: "DF", rating: 10 },
-            { name: "Talovierov", pos: "DF", rating: 10 },
+        "kairatalmaty": [
+            { name: "Gual", pos: "FW", rating: 134 },
+            { name: "Jorginho", pos: "FW", rating: 134 },
+            { name: "Edmilson", pos: "FW", rating: 134 },
+            { name: "Kasabulat", pos: "MF", rating: 88 },
+            { name: "Sadybekov", pos: "MF", rating: 88 },
+            { name: "Baybek", pos: "MF", rating: 88 },
+            { name: "Oksanen", pos: "MF", rating: 30 },
+            { name: "Tuyakbayev", pos: "MF", rating: 30 },
+            { name: "Glazer", pos: "MF", rating: 30 },
+            { name: "Satpayev", pos: "FW", rating: 50 },
+            { name: "Zeballos", pos: "FW", rating: 50 },
+            { name: "Birkurmanov", pos: "FW", rating: 50 },
+            { name: "Mata", pos: "DF", rating: 30 },
+            { name: "Kurgin", pos: "DF", rating: 30 },
+            { name: "Martynovich", pos: "DF", rating: 30 },
+            { name: "Tapalov", pos: "DF", rating: 5 },
+            { name: "Bazarbaev", pos: "DF", rating: 5 },
         ],
-                "lazio": [
+        "lask": [
+            { name: "Usor", pos: "FW", rating: 134 },
+            { name: "Lang", pos: "FW", rating: 134 },
+            { name: "Adeniran", pos: "FW", rating: 134 },
+            { name: "Horvath", pos: "MF", rating: 88 },
+            { name: "Coulibaly", pos: "MF", rating: 88 },
+            { name: "Smakaj", pos: "MF", rating: 88 },
+            { name: "Bogarde", pos: "MF", rating: 30 },
+            { name: "Daněk", pos: "MF", rating: 30 },
+            { name: "Sanogo", pos: "MF", rating: 30 },
+            { name: "Kalajdžić", pos: "FW", rating: 50 },
+            { name: "Entrup", pos: "FW", rating: 50 },
+            { name: "Harakaté", pos: "FW", rating: 50 },
+            { name: "Bello", pos: "DF", rating: 30 },
+            { name: "Mbuyamba", pos: "DF", rating: 30 },
+            { name: "Andrade", pos: "DF", rating: 30 },
+            { name: "Jørgensen", pos: "DF", rating: 5 },
+            { name: "Flecker", pos: "DF", rating: 5 },
+        ],
+        "lazio": [
             { name: "Zaccagni", pos: "FW", rating: 134 },
             { name: "Dia", pos: "FW", rating: 94 },
-            { name: "Cancellieri", pos: "FW", rating: 88 },
             { name: "Guendouzi", pos: "MF", rating: 103 },
             { name: "Rovella", pos: "MF", rating: 73 },
             { name: "D. Maldini", pos: "MF", rating: 10 },
             { name: "Dele-Bashiru", pos: "MF", rating: 55 },
             { name: "Cataldi", pos: "MF", rating: 75 },
-            { name: "K. Taylor", pos: "MF", rating: 44 },
             { name: "Noslin", pos: "FW", rating: 105 },
             { name: "Isaksen", pos: "FW", rating: 65 },
             { name: "Pedro", pos: "FW", rating: 150 },
@@ -1252,73 +1344,76 @@
             { name: "Marušić", pos: "DF", rating: 5 },
         ],
         "lechpoznan": [
-            { name: "Ishak", pos: "FW", rating: 150 },
-            { name: "Szymczak", pos: "FW", rating: 150 },
-            { name: "Hotić", pos: "FW", rating: 150 },
-            { name: "Fiabema", pos: "FW", rating: 65 },
-            { name: "Gholizadeh", pos: "FW", rating: 65 },
-            { name: "Murawski", pos: "MF", rating: 88 },
-            { name: "Sousa", pos: "MF", rating: 88 },
+            { name: "Ishak", pos: "FW", rating: 134 },
+            { name: "Agnero", pos: "FW", rating: 134 },
+            { name: "Gholizadeh", pos: "FW", rating: 134 },
             { name: "Kozubal", pos: "MF", rating: 88 },
-            { name: "Ba Loua", pos: "MF", rating: 40 },
-            { name: "Jagiełło", pos: "MF", rating: 40 },
-            { name: "Milić", pos: "DF", rating: 40 },
-            { name: "Salamon", pos: "DF", rating: 40 },
-            { name: "Pereira", pos: "DF", rating: 40 },
-            { name: "Douglas", pos: "DF", rating: 10 },
-            { name: "Gurgul", pos: "DF", rating: 10 },
+            { name: "Bengtsson", pos: "MF", rating: 88 },
+            { name: "Murawski", pos: "MF", rating: 88 },
+            { name: "Þórðarson", pos: "MF", rating: 30 },
+            { name: "Jagiełło", pos: "MF", rating: 30 },
+            { name: "Gmur", pos: "MF", rating: 30 },
+            { name: "Wålemark", pos: "FW", rating: 50 },
+            { name: "Håkans", pos: "FW", rating: 50 },
+            { name: "Sayyadmanesh", pos: "FW", rating: 50 },
+            { name: "J. Pereira", pos: "DF", rating: 30 },
+            { name: "Douglas", pos: "DF", rating: 30 },
+            { name: "Moutinho", pos: "DF", rating: 30 },
+            { name: "Gurgul", pos: "DF", rating: 5 },
+            { name: "Milić", pos: "DF", rating: 5 },
         ],
         "legiawarsaw": [
-            { name: "Pekhart", pos: "FW", rating: 150 },
-            { name: "Gual", pos: "FW", rating: 150 },
-            { name: "Kramer", pos: "FW", rating: 150 },
-            { name: "Morishita", pos: "FW", rating: 65 },
-            { name: "Alfarela", pos: "FW", rating: 65 },
-            { name: "Josué", pos: "MF", rating: 88 },
+            { name: "Adamski", pos: "FW", rating: 134 },
+            { name: "Čolak", pos: "FW", rating: 134 },
+            { name: "Nsame", pos: "FW", rating: 134 },
+            { name: "C. Gonçalves", pos: "MF", rating: 88 },
             { name: "Kapustka", pos: "MF", rating: 88 },
-            { name: "Luquinhas", pos: "MF", rating: 88 },
-            { name: "Celhaka", pos: "MF", rating: 40 },
-            { name: "Elitim", pos: "MF", rating: 40 },
-            { name: "Augustyniak", pos: "DF", rating: 40 },
-            { name: "Pankov", pos: "DF", rating: 40 },
-            { name: "Ziółkowski", pos: "DF", rating: 40 },
-            { name: "Wszołek", pos: "DF", rating: 10 },
-            { name: "Vinagre", pos: "DF", rating: 10 },
+            { name: "Chodyna", pos: "MF", rating: 88 },
+            { name: "Arreiol", pos: "MF", rating: 30 },
+            { name: "Wszołek", pos: "MF", rating: 30 },
+            { name: "Augustyniak", pos: "MF", rating: 30 },
+            { name: "Żewłakow", pos: "FW", rating: 50 },
+            { name: "Rajović", pos: "FW", rating: 50 },
+            { name: "Kováčik", pos: "FW", rating: 50 },
+            { name: "Pankov", pos: "DF", rating: 30 },
+            { name: "Reca", pos: "DF", rating: 30 },
+            { name: "Vinagre", pos: "DF", rating: 30 },
+            { name: "Stojanović", pos: "DF", rating: 5 },
+            { name: "Jędrzejczyk", pos: "DF", rating: 5 },
         ],
         "lens": [
-            { name: "Sotoca", pos: "FW", rating: 134 },
-            { name: "Nzola", pos: "FW", rating: 134 },
-            { name: "Saïd", pos: "FW", rating: 134 },
-            { name: "Satriano", pos: "FW", rating: 65 },
-            { name: "Ojediran", pos: "FW", rating: 65 },
-            { name: "Thomasson", pos: "MF", rating: 103 },
-            { name: "Diouf", pos: "MF", rating: 103 },
-            { name: "Frankowski", pos: "MF", rating: 103 },
-            { name: "Machado", pos: "MF", rating: 75 },
-            { name: "Fulgini", pos: "MF", rating: 75 },
-            { name: "Mendy", pos: "MF", rating: 75 },
-            { name: "Medina", pos: "DF", rating: 61 },
-            { name: "Gradit", pos: "DF", rating: 61 },
-            { name: "Khusanov", pos: "DF", rating: 25 },
-            { name: "Chávez", pos: "DF", rating: 25 },
-            { name: "Aguilar", pos: "DF", rating: 25 },
+            { name: "Sotoca", pos: "FW", rating: 64 },
+            { name: "Thauvin", pos: "FW", rating: 154 },
+            { name: "W. Saïd", pos: "FW", rating: 164 },
+            { name: "Abdulhamid", pos: "MF", rating: 23 },
+            { name: "M. Sangare", pos: "MF", rating: 3 },
+            { name: "Bulatovic", pos: "MF", rating: 3 },
+            { name: "Cuisance", pos: "MF", rating: 5 },
+            { name: "Erawan", pos: "MF", rating: 1 },
+            { name: "Haidara", pos: "MF", rating: 15 },
+            { name: "Saint-Maximin", pos: "FW", rating: 55 },
+            { name: "Edouard", pos: "FW", rating: 65 },
+            { name: "Udol", pos: "DF", rating: 1 },
+            { name: "Masuaku", pos: "DF", rating: 1 },
+            { name: "Antonio", pos: "DF", rating: 5 },
+            { name: "M. Sarr", pos: "DF", rating: 1 },
         ],
         "lille": [
-            { name: "David", pos: "FW", rating: 134 },
+            { name: "Fernandez-Pardo", pos: "FW", rating: 134 },
             { name: "Zhegrova", pos: "FW", rating: 134 },
-            { name: "Bayo", pos: "FW", rating: 134 },
-            { name: "Sahraoui", pos: "FW", rating: 65 },
-            { name: "Cabella", pos: "FW", rating: 65 },
-            { name: "Fernández-Pardo", pos: "FW", rating: 65 },
-            { name: "Gomes", pos: "MF", rating: 103 },
-            { name: "André", pos: "MF", rating: 103 },
-            { name: "Mukau", pos: "MF", rating: 103 },
-            { name: "Bouaddi", pos: "MF", rating: 75 },
-            { name: "E. Mbappé", pos: "MF", rating: 75 },
-            { name: "Diakité", pos: "DF", rating: 61 },
-            { name: "Gudmundsson", pos: "DF", rating: 61 },
+            { name: "Correia", pos: "FW", rating: 64 },
+            { name: "Bentaleb", pos: "MF", rating: 33 },
+            { name: "Haraldsson", pos: "MF", rating: 133 },
+            { name: "Mukau", pos: "MF", rating: 13 },
+            { name: "Bouaddi", pos: "MF", rating: 25 },
+            { name: "E. Mbappé", pos: "MF", rating: 5 },
+            { name: "André", pos: "MF", rating: 30 },
+            { name: "Giroud", pos: "FW", rating: 100 },
+            { name: "Igamane", pos: "FW", rating: 69 },
+            { name: "Perraud", pos: "DF", rating: 41 },
+            { name: "Ngoy", pos: "DF", rating: 11 },
             { name: "Meunier", pos: "DF", rating: 61 },
-            { name: "Mandi", pos: "DF", rating: 25 },
+            { name: "Mandi", pos: "DF", rating: 15 },
             { name: "Ismaily", pos: "DF", rating: 25 },
             { name: "Touré", pos: "DF", rating: 25 },
         ],
@@ -1327,13 +1422,13 @@
             { name: "Isak", pos: "FW", rating: 134 },
             { name: "Ekitike", pos: "FW", rating: 122 },
             { name: "Gakpo", pos: "FW", rating: 108 },
-            { name: "Chiesa", pos: "FW", rating: 65 },
-            { name: "Ngumoha", pos: "FW", rating: 35 },
             { name: "Mac Allister", pos: "MF", rating: 80 },
             { name: "Gravenberch", pos: "MF", rating: 77 },
             { name: "Szoboszlai", pos: "MF", rating: 123 },
             { name: "Wirtz", pos: "MF", rating: 118 },
             { name: "Jones", pos: "MF", rating: 75 },
+            { name: "Chiesa", pos: "FW", rating: 65 },
+            { name: "Ngumoha", pos: "FW", rating: 35 },
             { name: "Van Dijk", pos: "DF", rating: 99 },
             { name: "Bradley", pos: "DF", rating: 10 },
             { name: "Frimpong", pos: "DF", rating: 25 },
@@ -1341,66 +1436,70 @@
             { name: "V. Munoz", pos: "DF", rating: 2 },
         ],
         "ludogorets": [
-            { name: "Cruz", pos: "FW", rating: 150 },
-            { name: "Duah", pos: "FW", rating: 150 },
-            { name: "Rick", pos: "FW", rating: 150 },
-            { name: "Delev", pos: "FW", rating: 65 },
-            { name: "Tissera", pos: "FW", rating: 65 },
-            { name: "Piotrowski", pos: "MF", rating: 88 },
-            { name: "Nedelev", pos: "MF", rating: 88 },
-            { name: "Naressi", pos: "MF", rating: 88 },
-            { name: "Yordanov", pos: "MF", rating: 40 },
-            { name: "Duarte", pos: "MF", rating: 40 },
-            { name: "Verdon", pos: "DF", rating: 40 },
-            { name: "Almeida", pos: "DF", rating: 40 },
-            { name: "Witry", pos: "DF", rating: 40 },
-            { name: "Nedyalkov", pos: "DF", rating: 10 },
-            { name: "Son", pos: "DF", rating: 10 },
+            { name: "Duah", pos: "FW", rating: 134 },
+            { name: "Salido", pos: "FW", rating: 134 },
+            { name: "Vidal", pos: "FW", rating: 134 },
+            { name: "Camara", pos: "MF", rating: 88 },
+            { name: "Chochev", pos: "MF", rating: 88 },
+            { name: "Stanić", pos: "MF", rating: 88 },
+            { name: "Duarte", pos: "MF", rating: 30 },
+            { name: "Kaloč", pos: "MF", rating: 30 },
+            { name: "Yordanov", pos: "MF", rating: 30 },
+            { name: "Cruz", pos: "FW", rating: 50 },
+            { name: "E. Rodríguez", pos: "FW", rating: 50 },
+            { name: "Bile", pos: "FW", rating: 50 },
+            { name: "Andersson", pos: "DF", rating: 30 },
+            { name: "Nedyalkov", pos: "DF", rating: 30 },
+            { name: "Terziev", pos: "DF", rating: 30 },
+            { name: "Kurtulus", pos: "DF", rating: 5 },
+            { name: "Son", pos: "DF", rating: 5 },
         ],
         "lyon": [
-            { name: "Lacazette", pos: "FW", rating: 134 },
+            { name: "Moreira", pos: "FW", rating: 54 },
             { name: "Mikautadze", pos: "FW", rating: 134 },
-            { name: "Orban", pos: "FW", rating: 134 },
+            { name: "Yaremchuk", pos: "FW", rating: 59 },
             { name: "Endrick", pos: "FW", rating: 175 },
-            { name: "Fofana", pos: "FW", rating: 65 },
-            { name: "Benrahma", pos: "FW", rating: 65 },
-            { name: "Nuamah", pos: "FW", rating: 65 },
-            { name: "Matić", pos: "MF", rating: 103 },
-            { name: "Tolisso", pos: "MF", rating: 103 },
-            { name: "Caqueret", pos: "MF", rating: 103 },
-            { name: "Tessmann", pos: "MF", rating: 75 },
-            { name: "Ćaleta-Car", pos: "DF", rating: 61 },
-            { name: "Niakhaté", pos: "DF", rating: 61 },
-            { name: "Mata", pos: "DF", rating: 61 },
-            { name: "Tagliafico", pos: "DF", rating: 25 },
-            { name: "Maitland-Niles", pos: "DF", rating: 25 },
-            { name: "Abner", pos: "DF", rating: 25 },
+            { name: "Sulc", pos: "MF", rating: 143 },
+            { name: "Tolisso", pos: "MF", rating: 123 },
+            { name: "Abner", pos: "MF", rating: 43 },
+            { name: "Nartey", pos: "MF", rating: 20 },
+            { name: "Karabec", pos: "MF", rating: 19 },
+            { name: "Mangala", pos: "MF", rating: 1 },
+            { name: "Nuamah", pos: "MF", rating: 10 },
+            { name: "Tessmann", pos: "MF", rating: 18 },
+            { name: "Fofana", pos: "FW", rating: 55 },
+            { name: "Ghezzal", pos: "FW", rating: 3 },
+            { name: "R. Kluivert", pos: "DF", rating: 21 },
+            { name: "Kango", pos: "DF", rating: 1 },
+            { name: "Mata", pos: "DF", rating: 9 },
+            { name: "Tagliafico", pos: "DF", rating: 5 },
+            { name: "Maitland-Niles", pos: "DF", rating: 15 },
+            { name: "Hateboer", pos: "DF", rating: 2 },
         ],
         "malmoff": [
-            { name: "Kiese Thelin", pos: "FW", rating: 150 },
-            { name: "Botheim", pos: "FW", rating: 150 },
-            { name: "Ali", pos: "FW", rating: 150 },
-            { name: "Bolin", pos: "FW", rating: 65 },
-            { name: "Rieks", pos: "FW", rating: 65 },
-            { name: "Pena", pos: "MF", rating: 88 },
-            { name: "Berg", pos: "MF", rating: 88 },
-            { name: "Jørgensen", pos: "MF", rating: 88 },
-            { name: "Rosengren", pos: "MF", rating: 40 },
-            { name: "Johnsen", pos: "MF", rating: 40 },
-            { name: "Jansson", pos: "DF", rating: 40 },
-            { name: "Zätterström", pos: "DF", rating: 40 },
-            { name: "Stryger Larsen", pos: "DF", rating: 40 },
-            { name: "Busanello", pos: "DF", rating: 10 },
-            { name: "Moisander", pos: "DF", rating: 10 },
+            { name: "Botheim", pos: "FW", rating: 134 },
+            { name: "D. García", pos: "FW", rating: 134 },
+            { name: "Ekong", pos: "FW", rating: 134 },
+            { name: "Sjöstrand", pos: "MF", rating: 88 },
+            { name: "Lundbergh", pos: "MF", rating: 88 },
+            { name: "Karabelyov", pos: "MF", rating: 88 },
+            { name: "Rosengren", pos: "MF", rating: 30 },
+            { name: "Christiansen", pos: "MF", rating: 30 },
+            { name: "Vecchia", pos: "MF", rating: 30 },
+            { name: "Hakšabanović", pos: "FW", rating: 50 },
+            { name: "D. García", pos: "FW", rating: 50 },
+            { name: "Guðjohnsen", pos: "FW", rating: 50 },
+            { name: "Karlsson", pos: "DF", rating: 30 },
+            { name: "Kurtulus", pos: "DF", rating: 30 },
+            { name: "Đurić", pos: "DF", rating: 30 },
+            { name: "Stryger", pos: "DF", rating: 5 },
+            { name: "Jansson", pos: "DF", rating: 5 },
         ],
         "manchestercity": [
             { name: "Haaland", pos: "FW", rating: 222 },
             { name: "Doku", pos: "FW", rating: 134 },
             { name: "Semenyo", pos: "FW", rating: 120 },
             { name: "Cherki", pos: "FW", rating: 140 },
-            { name: "Savinho", pos: "FW", rating: 35 },
-            { name: "Bobb", pos: "FW", rating: 23 },
-            { name: "Marmoush", pos: "FW", rating: 60 },
             { name: "Rodri", pos: "MF", rating: 90 },
             { name: "Reijnders", pos: "MF", rating: 78 },
             { name: "Nunes", pos: "MF", rating: 103 },
@@ -1408,6 +1507,9 @@
             { name: "McAtee", pos: "MF", rating: 4 },
             { name: "Foden", pos: "MF", rating: 78 },
             { name: "Nico", pos: "MF", rating: 55 },
+            { name: "Savinho", pos: "FW", rating: 35 },
+            { name: "Bobb", pos: "FW", rating: 23 },
+            { name: "Marmoush", pos: "FW", rating: 60 },
             { name: "Dias", pos: "DF", rating: 61 },
             { name: "Gvardiol", pos: "DF", rating: 61 },
             { name: "Akanji", pos: "DF", rating: 23 },
@@ -1417,10 +1519,9 @@
             { name: "Lewis", pos: "DF", rating: 11 },
             { name: "Khusanov", pos: "DF", rating: 22 },
         ],
-                "manchesterunited": [
+        "manchesterunited": [
             { name: "Šeško", pos: "FW", rating: 154 },
             { name: "Mbeumo", pos: "FW", rating: 175 },
-            { name: "Cunha", pos: "FW", rating: 140 },
             { name: "Fernandes", pos: "MF", rating: 195 },
             { name: "Mainoo", pos: "MF", rating: 103 },
             { name: "Casemiro", pos: "MF", rating: 103 },
@@ -1437,79 +1538,84 @@
             { name: "Mazraoui", pos: "DF", rating: 25 },
         ],
         "maribor": [
-            { name: "Jakupović", pos: "FW", rating: 150 },
-            { name: "Barišić", pos: "FW", rating: 150 },
-            { name: "Beugre", pos: "FW", rating: 150 },
-            { name: "Bourlès", pos: "FW", rating: 65 },
-            { name: "Kolar", pos: "FW", rating: 65 },
-            { name: "Iličić", pos: "MF", rating: 88 },
+            { name: "Mlakar", pos: "FW", rating: 134 },
+            { name: "Vizinger", pos: "FW", rating: 134 },
+            { name: "Tetteh", pos: "FW", rating: 134 },
+            { name: "Viher", pos: "MF", rating: 88 },
+            { name: "Cipot", pos: "MF", rating: 88 },
             { name: "Repas", pos: "MF", rating: 88 },
-            { name: "Božić", pos: "MF", rating: 88 },
-            { name: "Vrhovec", pos: "MF", rating: 40 },
-            { name: "Dizdarević", pos: "MF", rating: 40 },
-            { name: "Širvys", pos: "DF", rating: 40 },
-            { name: "Vidmar", pos: "DF", rating: 40 },
-            { name: "Karić", pos: "DF", rating: 40 },
-            { name: "Barišić", pos: "DF", rating: 10 },
-            { name: "Milec", pos: "DF", rating: 10 },
+            { name: "Reghba", pos: "MF", rating: 30 },
+            { name: "Seri", pos: "MF", rating: 30 },
+            { name: "Zambrano", pos: "MF", rating: 30 },
+            { name: "Tadič", pos: "FW", rating: 50 },
+            { name: "Bumbić", pos: "DF", rating: 30 },
+            { name: "M'bondo", pos: "DF", rating: 30 },
+            { name: "Kikec", pos: "DF", rating: 30 },
+            { name: "Slana", pos: "DF", rating: 5 },
+            { name: "Rekik", pos: "DF", rating: 5 },
         ],
         "marseille": [
-            { name: "Greenwood", pos: "FW", rating: 134 },
-            { name: "Wahi", pos: "FW", rating: 134 },
-            { name: "Rowe", pos: "FW", rating: 134 },
-            { name: "Openda", pos: "FW", rating: 134 },
-            { name: "Henrique", pos: "FW", rating: 65 },
-            { name: "Moumbagna", pos: "FW", rating: 65 },
+            { name: "Greenwood", pos: "FW", rating: 174 },
+            { name: "Aubameyang", pos: "FW", rating: 123 },
+            { name: "Paixao", pos: "FW", rating: 77 },
+            { name: "Nwaneri", pos: "FW", rating: 64 },
+            { name: "Gouiri", pos: "MF", rating: 98 },
+            { name: "Højbjerg", pos: "MF", rating: 50 },
             { name: "Rabiot", pos: "MF", rating: 103 },
-            { name: "Højbjerg", pos: "MF", rating: 103 },
-            { name: "Harit", pos: "MF", rating: 103 },
-            { name: "Kondogbia", pos: "MF", rating: 75 },
-            { name: "Koné", pos: "MF", rating: 75 },
-            { name: "Carboni", pos: "MF", rating: 75 },
-            { name: "Balerdi", pos: "DF", rating: 61 },
-            { name: "Murillo", pos: "DF", rating: 61 },
-            { name: "Cornelius", pos: "DF", rating: 61 },
-            { name: "Pavard", pos: "DF", rating: 61 },
-            { name: "Merlin", pos: "DF", rating: 25 },
-            { name: "Brassier", pos: "DF", rating: 25 },
-            { name: "Meïté", pos: "DF", rating: 25 },
+            { name: "Q. Timber", pos: "MF", rating: 43 },
+            { name: "Nnadi", pos: "MF", rating: 1 },
+            { name: "Kondogbia", pos: "MF", rating: 35 },
+            { name: "Vermeeren", pos: "MF", rating: 5 },
+            { name: "Lago", pos: "FW", rating: 6 },
+            { name: "Nadir", pos: "FW", rating: 15 },
+            { name: "Balerdi", pos: "DF", rating: 3 },
+            { name: "Medina", pos: "DF", rating: 3 },
+            { name: "Emerson", pos: "DF", rating: 6 },
+            { name: "T. Weah", pos: "DF", rating: 40 },
+            { name: "Aguerd", pos: "DF", rating: 8 },
+            { name: "Pavard", pos: "DF", rating: 31 },
+            { name: "Egan-Riley", pos: "DF", rating: 1 },
         ],
         "midtjylland": [
-            { name: "Franculino", pos: "FW", rating: 150 },
-            { name: "Buksza", pos: "FW", rating: 150 },
-            { name: "Osorio", pos: "FW", rating: 150 },
-            { name: "Chilufya", pos: "FW", rating: 65 },
-            { name: "Gogza", pos: "FW", rating: 65 },
-            { name: "Simsir", pos: "MF", rating: 88 },
-            { name: "Martínez", pos: "MF", rating: 88 },
-            { name: "Castillo", pos: "MF", rating: 88 },
-            { name: "Sørensen", pos: "MF", rating: 40 },
-            { name: "Byskov", pos: "MF", rating: 40 },
-            { name: "Diao", pos: "DF", rating: 40 },
-            { name: "Bech", pos: "DF", rating: 40 },
-            { name: "Gomes", pos: "DF", rating: 40 },
-            { name: "Lee", pos: "DF", rating: 10 },
-            { name: "Bak", pos: "DF", rating: 10 },
+            { name: "Djú", pos: "FW", rating: 134 },
+            { name: "Brumado", pos: "FW", rating: 134 },
+            { name: "Osorio", pos: "FW", rating: 134 },
+            { name: "Billing", pos: "MF", rating: 88 },
+            { name: "Bravo", pos: "MF", rating: 88 },
+            { name: "Byskov", pos: "MF", rating: 88 },
+            { name: "Djabi", pos: "MF", rating: 30 },
+            { name: "Castillo", pos: "MF", rating: 30 },
+            { name: "Gue-sung", pos: "FW", rating: 50 },
+            { name: "Chilufya", pos: "FW", rating: 50 },
+            { name: "Uhre", pos: "FW", rating: 50 },
+            { name: "Han-beom", pos: "DF", rating: 30 },
+            { name: "Diao", pos: "DF", rating: 30 },
+            { name: "Erlić", pos: "DF", rating: 30 },
+            { name: "Gabriel", pos: "DF", rating: 5 },
+            { name: "Sørensen", pos: "DF", rating: 5 },
         ],
         "monaco": [
-            { name: "Embolo", pos: "FW", rating: 134 },
-            { name: "Balogun", pos: "FW", rating: 134 },
-            { name: "Ilenikhena", pos: "FW", rating: 134 },
-            { name: "Minamino", pos: "FW", rating: 65 },
-            { name: "Akliouche", pos: "FW", rating: 65 },
-            { name: "Zakaria", pos: "MF", rating: 103 },
-            { name: "Golovin", pos: "MF", rating: 103 },
+            { name: "Fati", pos: "FW", rating: 160 },
+            { name: "Balogun", pos: "FW", rating: 184 },
+            { name: "Adingra", pos: "FW", rating: 64 },
+            { name: "Zakaria", pos: "MF", rating: 43 },
+            { name: "Golovin", pos: "MF", rating: 63 },
             { name: "Camara", pos: "MF", rating: 103 },
-            { name: "Ben Seghir", pos: "MF", rating: 75 },
-            { name: "Matazo", pos: "MF", rating: 75 },
-            { name: "Salisu", pos: "DF", rating: 61 },
-            { name: "Kehrer", pos: "DF", rating: 61 },
-            { name: "Vanderson", pos: "DF", rating: 61 },
-            { name: "Singo", pos: "DF", rating: 25 },
-            { name: "Caio Henrique", pos: "DF", rating: 25 },
-            { name: "Mawissa", pos: "DF", rating: 25 },
+            { name: "Pogba", pos: "MF", rating: 36 },
+            { name: "Teze", pos: "MF", rating: 15 },
+            { name: "Camara", pos: "MF", rating: 55 },
+            { name: "Minamino", pos: "FW", rating: 65 },
+            { name: "Akliouche", pos: "FW", rating: 88 },
+            { name: "Caio Henrique", pos: "FW", rating: 44 },
+            { name: "Brunner", pos: "FW", rating: 1 },
+            { name: "Mawissa", pos: "DF", rating: 1 },
+            { name: "Faes", pos: "DF", rating: 3 },
+            { name: "Kehrer", pos: "DF", rating: 6 },
+            { name: "Dier", pos: "DF", rating: 12 },
+            { name: "Salisu", pos: "DF", rating: 5 },
+            { name: "Nibombe", pos: "DF", rating: 3 },
         ],
-                "napoli": [
+        "napoli": [
             { name: "Lukaku", pos: "FW", rating: 170 },
             { name: "Neres", pos: "FW", rating: 64 },
             { name: "Højlund", pos: "FW", rating: 154 },
@@ -1517,9 +1623,7 @@
             { name: "Anguissa", pos: "MF", rating: 43 },
             { name: "McTominay", pos: "MF", rating: 103 },
             { name: "De Bruyne", pos: "MF", rating: 83 },
-            { name: "Elmas", pos: "MF", rating: 76 },
             { name: "Gilmour", pos: "MF", rating: 75 },
-            { name: "M. Gutiérrez", pos: "MF", rating: 20 },
             { name: "Politano", pos: "FW", rating: 75 },
             { name: "Santos", pos: "FW", rating: 55 },
             { name: "Di Lorenzo", pos: "DF", rating: 11 },
@@ -1529,19 +1633,17 @@
             { name: "Spinazzola", pos: "DF", rating: 25 },
             { name: "Mazzocchi", pos: "DF", rating: 5 },
         ],
-                "newcastleunited": [
+        "newcastleunited": [
             { name: "Barnes", pos: "FW", rating: 154 },
             { name: "Woltemade", pos: "FW", rating: 144 },
             { name: "Osula", pos: "FW", rating: 134 },
-            { name: "C. Wilson", pos: "FW", rating: 65 },
-            { name: "Murphy", pos: "FW", rating: 65 },
-            { name: "Wissa", pos: "FW", rating: 77 },
             { name: "Guimarães", pos: "MF", rating: 103 },
             { name: "Joelinton", pos: "MF", rating: 63 },
             { name: "Tonali", pos: "MF", rating: 83 },
             { name: "Ramsey", pos: "MF", rating: 45 },
             { name: "Willock", pos: "MF", rating: 45 },
-            { name: "Miley", pos: "MF", rating: 10 },
+            { name: "C. Wilson", pos: "FW", rating: 65 },
+            { name: "Murphy", pos: "FW", rating: 65 },
             { name: "Schär", pos: "DF", rating: 11 },
             { name: "Botman", pos: "DF", rating: 21 },
             { name: "Burn", pos: "DF", rating: 31 },
@@ -1550,183 +1652,228 @@
             { name: "Thiaw", pos: "DF", rating: 25 },
         ],
         "nice": [
-            { name: "Moukoko", pos: "FW", rating: 134 },
-            { name: "Guessand", pos: "FW", rating: 134 },
-            { name: "Boga", pos: "FW", rating: 134 },
-            { name: "Cho", pos: "FW", rating: 65 },
-            { name: "Diop", pos: "FW", rating: 65 },
-            { name: "Laborde", pos: "FW", rating: 65 },
-            { name: "Ndombele", pos: "MF", rating: 103 },
-            { name: "Rosario", pos: "MF", rating: 103 },
-            { name: "Boudaoui", pos: "MF", rating: 103 },
+            { name: "Abdi", pos: "MF", rating: 54 },
+            { name: "Vanhoutte", pos: "MF", rating: 10 },
+            { name: "Sanson", pos: "MF", rating: 10 },
+            { name: "Clauss", pos: "MF", rating: 25 },
             { name: "Sanson", pos: "MF", rating: 75 },
-            { name: "Ndayishimiye", pos: "MF", rating: 75 },
-            { name: "Dante", pos: "DF", rating: 61 },
-            { name: "Bombito", pos: "DF", rating: 61 },
-            { name: "Clauss", pos: "DF", rating: 61 },
-            { name: "Bard", pos: "DF", rating: 25 },
-            { name: "Abdelmonem", pos: "DF", rating: 25 },
-            { name: "Mendy", pos: "DF", rating: 25 },
+            { name: "Ndayishimiye", pos: "MF", rating: 15 },
+            { name: "Cho", pos: "FW", rating: 55 },
+            { name: "Diop", pos: "FW", rating: 125 },
+            { name: "Carlos", pos: "FW", rating: 15 },
+            { name: "Dante", pos: "DF", rating: 7 },
+            { name: "Oppong", pos: "DF", rating: 11 },
+            { name: "Bard", pos: "DF", rating: 5 },
+            { name: "Bah", pos: "DF", rating: 5 },
+            { name: "A. Mendy", pos: "DF", rating: 15 },
         ],
         "nordsjaelland": [
-            { name: "Ingvartsen", pos: "FW", rating: 150 },
-            { name: "Nygren", pos: "FW", rating: 150 },
-            { name: "Osman", pos: "FW", rating: 150 },
-            { name: "Harder", pos: "FW", rating: 65 },
-            { name: "Hansen", pos: "FW", rating: 65 },
-            { name: "Svensson", pos: "MF", rating: 88 },
-            { name: "Dorgeles", pos: "MF", rating: 88 },
-            { name: "Tverskov", pos: "MF", rating: 88 },
-            { name: "Brink", pos: "MF", rating: 40 },
-            { name: "Certgh", pos: "MF", rating: 40 },
-            { name: "Hey", pos: "DF", rating: 40 },
-            { name: "Nagalo", pos: "DF", rating: 40 },
-            { name: "Villadsen", pos: "DF", rating: 40 },
-            { name: "Frese", pos: "DF", rating: 10 },
-            { name: "Marx", pos: "DF", rating: 10 },
+            { name: "Solbakken", pos: "FW", rating: 134 },
+            { name: "Lind", pos: "FW", rating: 134 },
+            { name: "Adel", pos: "FW", rating: 134 },
+            { name: "Brink", pos: "MF", rating: 88 },
+            { name: "Røjkjær", pos: "MF", rating: 88 },
+            { name: "Amoako", pos: "MF", rating: 88 },
+            { name: "Janssen", pos: "MF", rating: 30 },
+            { name: "Mohammed", pos: "MF", rating: 30 },
+            { name: "Sanoussi", pos: "MF", rating: 30 },
+            { name: "Nene", pos: "FW", rating: 50 },
+            { name: "Alio", pos: "FW", rating: 50 },
+            { name: "Jóhannesson", pos: "FW", rating: 50 },
+            { name: "Ankersen", pos: "DF", rating: 30 },
+            { name: "Salquist", pos: "DF", rating: 30 },
+            { name: "Acquah", pos: "DF", rating: 30 },
+            { name: "Norheim", pos: "DF", rating: 5 },
+            { name: "Lähteenmäki", pos: "DF", rating: 5 },
         ],
         "olympiakos": [
-            { name: "El Kaabi", pos: "FW", rating: 150 },
-            { name: "Velde", pos: "FW", rating: 150 },
-            { name: "Martins", pos: "FW", rating: 150 },
-            { name: "Taremi", pos: "FW", rating: 150 },
-            { name: "Masouras", pos: "FW", rating: 65 },
-            { name: "Yaremchuk", pos: "FW", rating: 65 },
-            { name: "Hezze", pos: "MF", rating: 88 },
+            { name: "Kaabi", pos: "FW", rating: 134 },
+            { name: "Taremi", pos: "FW", rating: 134 },
+            { name: "Clayton", pos: "FW", rating: 134 },
+            { name: "G. Martins", pos: "MF", rating: 88 },
             { name: "Chiquinho", pos: "MF", rating: 88 },
-            { name: "Stamenic", pos: "MF", rating: 88 },
-            { name: "García", pos: "MF", rating: 40 },
-            { name: "Oliveira", pos: "MF", rating: 40 },
-            { name: "Carmo", pos: "DF", rating: 40 },
-            { name: "Retsos", pos: "DF", rating: 40 },
-            { name: "Ortega", pos: "DF", rating: 40 },
-            { name: "Rodinei", pos: "DF", rating: 10 },
-            { name: "Pirola", pos: "DF", rating: 10 },
-            { name: "Costinha", pos: "DF", rating: 10 },
+            { name: "Hezze", pos: "MF", rating: 88 },
+            { name: "Fortounis", pos: "MF", rating: 30 },
+            { name: "Nascimento", pos: "MF", rating: 30 },
+            { name: "D. García", pos: "MF", rating: 30 },
+            { name: "Ortega", pos: "DF", rating: 30 },
+            { name: "Pirola", pos: "DF", rating: 30 },
+            { name: "Vezo", pos: "DF", rating: 30 },
+            { name: "Rodinei", pos: "DF", rating: 5 },
+            { name: "Retsos", pos: "DF", rating: 5 },
+        ],
+        "pafos": [
+            { name: "Bassouamina", pos: "FW", rating: 134 },
+            { name: "Jajá", pos: "FW", rating: 134 },
+            { name: "Lelê", pos: "FW", rating: 134 },
+            { name: "Quina", pos: "MF", rating: 88 },
+            { name: "Sema", pos: "MF", rating: 88 },
+            { name: "Šunjić", pos: "MF", rating: 88 },
+            { name: "Dragomir", pos: "MF", rating: 30 },
+            { name: "Mammadov", pos: "MF", rating: 30 },
+            { name: "Brito", pos: "MF", rating: 30 },
+            { name: "A. Silva", pos: "FW", rating: 50 },
+            { name: "Luiz", pos: "DF", rating: 30 },
+            { name: "Goldar", pos: "DF", rating: 30 },
+            { name: "Felipe", pos: "DF", rating: 30 },
+            { name: "Ioannou", pos: "DF", rating: 5 },
+            { name: "Guessand", pos: "DF", rating: 5 },
+        ],
+        "panathinaikos": [
+            { name: "Dessers", pos: "FW", rating: 134 },
+            { name: "Tetteh", pos: "FW", rating: 134 },
+            { name: "Pantelidis", pos: "FW", rating: 134 },
+            { name: "Pellistri", pos: "MF", rating: 88 },
+            { name: "Camara", pos: "MF", rating: 88 },
+            { name: "Čerin", pos: "MF", rating: 88 },
+            { name: "Chirivella", pos: "MF", rating: 30 },
+            { name: "Siopis", pos: "MF", rating: 30 },
+            { name: "Zaroury", pos: "MF", rating: 30 },
+            { name: "Calabria", pos: "DF", rating: 30 },
+            { name: "Katris", pos: "DF", rating: 30 },
+            { name: "Touba", pos: "DF", rating: 30 },
+            { name: "Palmer-Brown", pos: "DF", rating: 5 },
+            { name: "Ingason", pos: "DF", rating: 5 },
         ],
         "paok": [
-            { name: "Tissoudali", pos: "FW", rating: 150 },
-            { name: "Despodov", pos: "FW", rating: 150 },
-            { name: "Zivkovic", pos: "FW", rating: 150 },
-            { name: "Chalov", pos: "FW", rating: 65 },
-            { name: "Brandon", pos: "FW", rating: 65 },
+            { name: "Chalov", pos: "FW", rating: 134 },
+            { name: "Jeremejeff", pos: "FW", rating: 134 },
+            { name: "Mythou", pos: "FW", rating: 134 },
+            { name: "Despodov", pos: "MF", rating: 88 },
             { name: "Konstantelias", pos: "MF", rating: 88 },
             { name: "Camara", pos: "MF", rating: 88 },
-            { name: "Schwab", pos: "MF", rating: 88 },
-            { name: "Ozdoev", pos: "MF", rating: 40 },
-            { name: "Bakayoko", pos: "MF", rating: 40 },
-            { name: "Kedziora", pos: "DF", rating: 40 },
-            { name: "Baba", pos: "DF", rating: 40 },
-            { name: "Colley", pos: "DF", rating: 40 },
-            { name: "Otto", pos: "DF", rating: 10 },
-            { name: "Michailidis", pos: "DF", rating: 10 },
+            { name: "Pelkas", pos: "MF", rating: 30 },
+            { name: "Zafeiris", pos: "MF", rating: 30 },
+            { name: "Meïté", pos: "MF", rating: 30 },
+            { name: "Kenny", pos: "DF", rating: 30 },
+            { name: "Michailidis", pos: "DF", rating: 30 },
+            { name: "Apetenok", pos: "DF", rating: 30 },
+            { name: "Rahman", pos: "DF", rating: 5 },
+            { name: "Thymianis", pos: "DF", rating: 5 },
         ],
-                "psg": [
+        "partizan": [
+            { name: "Kojzek", pos: "FW", rating: 134 },
+            { name: "Seck", pos: "FW", rating: 134 },
+            { name: "Lekić", pos: "FW", rating: 134 },
+            { name: "Vukotić", pos: "MF", rating: 88 },
+            { name: "Zdjelar", pos: "MF", rating: 88 },
+            { name: "Živković", pos: "MF", rating: 88 },
+            { name: "Trifunović", pos: "MF", rating: 30 },
+            { name: "Ugrešić", pos: "MF", rating: 30 },
+            { name: "Ninić", pos: "MF", rating: 30 },
+            { name: "Martinović", pos: "FW", rating: 50 },
+            { name: "Polter", pos: "FW", rating: 50 },
+            { name: "Kostić", pos: "FW", rating: 50 },
+            { name: "Stojković", pos: "DF", rating: 30 },
+            { name: "Jurčević", pos: "DF", rating: 30 },
+            { name: "Milovanović", pos: "DF", rating: 30 },
+            { name: "Dragojević", pos: "DF", rating: 5 },
+            { name: "Mohammed", pos: "DF", rating: 5 },
+        ],
+        "porto": [
+            { name: "L. de Jong", pos: "FW", rating: 134 },
+            { name: "Pepê", pos: "FW", rating: 134 },
+            { name: "Aghehowa", pos: "FW", rating: 134 },
+            { name: "W. Gomes", pos: "MF", rating: 88 },
+            { name: "Froholdt", pos: "MF", rating: 88 },
+            { name: "Veiga", pos: "MF", rating: 88 },
+            { name: "Rosario", pos: "MF", rating: 30 },
+            { name: "Varela", pos: "MF", rating: 30 },
+            { name: "Fofana", pos: "MF", rating: 30 },
+            { name: "Sainz", pos: "FW", rating: 50 },
+            { name: "A. Silva", pos: "FW", rating: 50 },
+            { name: "Gül", pos: "FW", rating: 50 },
+            { name: "Kiwior", pos: "DF", rating: 30 },
+            { name: "Bednarek", pos: "DF", rating: 30 },
+            { name: "Sanusi", pos: "DF", rating: 30 },
+            { name: "N. Pérez", pos: "DF", rating: 5 },
+            { name: "A. Costa", pos: "DF", rating: 5 },
+        ],
+        "psg": [
             { name: "Dembélé", pos: "FW", rating: 206 },
             { name: "Barcola", pos: "FW", rating: 64 },
             { name: "Doué", pos: "FW", rating: 140 },
             { name: "Kvaratskhelia", pos: "FW", rating: 180 },
-            { name: "Kolo Muani", pos: "FW", rating: 25 },
-            { name: "G. Ramos", pos: "FW", rating: 60 },
             { name: "Vitinha", pos: "MF", rating: 100 },
             { name: "Neves", pos: "MF", rating: 118 },
             { name: "F. Ruiz", pos: "MF", rating: 99 },
             { name: "Kang-in", pos: "MF", rating: 75 },
             { name: "Mayulu", pos: "MF", rating: 30 },
             { name: "Zaïre-Emery", pos: "MF", rating: 20 },
-            { name: "Dro", pos: "MF", rating: 10 },
+            { name: "Kolo Muani", pos: "FW", rating: 25 },
+            { name: "G. Ramos", pos: "FW", rating: 60 },
             { name: "Marquinhos", pos: "DF", rating: 34 },
             { name: "Pacho", pos: "DF", rating: 34 },
             { name: "Hakimi", pos: "DF", rating: 60 },
             { name: "Mendes", pos: "DF", rating: 55 },
             { name: "Beraldo", pos: "DF", rating: 25 },
             { name: "Zabarnyi", pos: "DF", rating: 5 },
-            { name: "L. Hernández", pos: "DF", rating: 1 },
         ],
         "psveindhoven": [
-            { name: "De Jong", pos: "FW", rating: 150 },
-            { name: "Bakayoko", pos: "FW", rating: 150 },
-            { name: "Lang", pos: "FW", rating: 150 },
-            { name: "Lozano", pos: "FW", rating: 65 },
-            { name: "Pepi", pos: "FW", rating: 65 },
-            { name: "Driouech", pos: "FW", rating: 65 },
-            { name: "Schouten", pos: "MF", rating: 88 },
+            { name: "Boadu", pos: "FW", rating: 134 },
+            { name: "van Bommel", pos: "FW", rating: 134 },
+            { name: "Pepi", pos: "FW", rating: 134 },
             { name: "Veerman", pos: "MF", rating: 88 },
-            { name: "Tillman", pos: "MF", rating: 88 },
-            { name: "Saibari", pos: "MF", rating: 40 },
-            { name: "Til", pos: "MF", rating: 40 },
-            { name: "Boscagli", pos: "DF", rating: 40 },
-            { name: "Flamingo", pos: "DF", rating: 40 },
-            { name: "Dest", pos: "DF", rating: 40 },
-            { name: "Teze", pos: "DF", rating: 10 },
-            { name: "Karsdorp", pos: "DF", rating: 10 },
-            { name: "Obispo", pos: "DF", rating: 10 },
+            { name: "Schouten", pos: "MF", rating: 88 },
+            { name: "Perišić", pos: "MF", rating: 88 },
+            { name: "Wanner", pos: "MF", rating: 30 },
+            { name: "Til", pos: "MF", rating: 30 },
+            { name: "Fernandez", pos: "MF", rating: 30 },
+            { name: "Driouech", pos: "FW", rating: 50 },
+            { name: "Pléa", pos: "FW", rating: 50 },
+            { name: "Bajraktarević", pos: "FW", rating: 50 },
+            { name: "Salah-Eddine", pos: "DF", rating: 30 },
+            { name: "Gasiorowski", pos: "DF", rating: 30 },
+            { name: "Obispo", pos: "DF", rating: 30 },
+            { name: "Flamingo", pos: "DF", rating: 5 },
+            { name: "Dest", pos: "DF", rating: 5 },
         ],
-        "panathinaikos": [
-            { name: "Ioannidis", pos: "FW", rating: 150 },
-            { name: "Tetê", pos: "FW", rating: 150 },
-            { name: "Pellistri", pos: "FW", rating: 150 },
-            { name: "Šporar", pos: "FW", rating: 65 },
-            { name: "Jeremejeff", pos: "FW", rating: 65 },
-            { name: "Bakaseta", pos: "MF", rating: 88 },
-            { name: "Araão", pos: "MF", rating: 88 },
-            { name: "Maksimović", pos: "MF", rating: 88 },
-            { name: "Čerin", pos: "MF", rating: 40 },
-            { name: "Djuricic", pos: "MF", rating: 40 },
-            { name: "Jedvaj", pos: "DF", rating: 40 },
-            { name: "Ingason", pos: "DF", rating: 40 },
-            { name: "Mladenović", pos: "DF", rating: 40 },
-            { name: "Vagiannidis", pos: "DF", rating: 10 },
-            { name: "Schenkeveld", pos: "DF", rating: 10 },
+        "qarabag": [
+            { name: "Sawo", pos: "FW", rating: 134 },
+            { name: "Durán", pos: "FW", rating: 134 },
+            { name: "Qurbanlı", pos: "FW", rating: 134 },
+            { name: "Mouaddib", pos: "MF", rating: 88 },
+            { name: "Janković", pos: "MF", rating: 88 },
+            { name: "Montiel", pos: "MF", rating: 88 },
+            { name: "Zoubir", pos: "MF", rating: 30 },
+            { name: "Borges", pos: "MF", rating: 30 },
+            { name: "Kashchuk", pos: "MF", rating: 30 },
+            { name: "Cephas", pos: "FW", rating: 50 },
+            { name: "Langa", pos: "DF", rating: 30 },
+            { name: "M. Silva", pos: "DF", rating: 30 },
+            { name: "Mustafazade", pos: "DF", rating: 30 },
+            { name: "Bolt", pos: "DF", rating: 5 },
+            { name: "Gnali", pos: "DF", rating: 5 },
         ],
-        "partizan": [
-            { name: "Saldanha", pos: "FW", rating: 150 },
-            { name: "Kalulu", pos: "FW", rating: 150 },
-            { name: "Goh", pos: "FW", rating: 150 },
-            { name: "Zubairu", pos: "FW", rating: 65 },
-            { name: "Jovanović", pos: "FW", rating: 65 },
-            { name: "Zahid", pos: "MF", rating: 88 },
-            { name: "Natcho", pos: "MF", rating: 88 },
-            { name: "Arriaga", pos: "MF", rating: 88 },
-            { name: "Kovač", pos: "MF", rating: 40 },
-            { name: "Stjepanović", pos: "MF", rating: 40 },
-            { name: "Marković", pos: "DF", rating: 40 },
-            { name: "Mujakić", pos: "DF", rating: 40 },
-            { name: "Antić", pos: "DF", rating: 40 },
-            { name: "Đurđević", pos: "DF", rating: 10 },
-            { name: "Filipović", pos: "DF", rating: 10 },
-        ],
-        "porto": [
-            { name: "Omorodion", pos: "FW", rating: 150 },
-            { name: "Galeno", pos: "FW", rating: 150 },
-            { name: "Pepê", pos: "FW", rating: 150 },
-            { name: "L. de Jong", pos: "FW", rating: 150 },
-            { name: "Namaso", pos: "FW", rating: 65 },
-            { name: "Gül", pos: "FW", rating: 65 },
-            { name: "Borges", pos: "FW", rating: 65 },
-            { name: "Varela", pos: "MF", rating: 88 },
-            { name: "Nico", pos: "MF", rating: 88 },
-            { name: "Eustáquio", pos: "MF", rating: 88 },
-            { name: "Vieira", pos: "MF", rating: 40 },
-            { name: "Grujić", pos: "MF", rating: 40 },
-            { name: "Mora", pos: "MF", rating: 40 },
-            { name: "Pérez", pos: "DF", rating: 40 },
-            { name: "Djaló", pos: "DF", rating: 40 },
-            { name: "Moura", pos: "DF", rating: 40 },
-            { name: "Martim", pos: "DF", rating: 10 },
-            { name: "Zé Pedro", pos: "DF", rating: 10 },
-            { name: "Wendell", pos: "DF", rating: 10 },
+        "rangers": [
+            { name: "Shankland", pos: "FW", rating: 134 },
+            { name: "Danilo", pos: "FW", rating: 134 },
+            { name: "Chermiti", pos: "FW", rating: 134 },
+            { name: "Chukwuani", pos: "MF", rating: 88 },
+            { name: "Barron", pos: "MF", rating: 88 },
+            { name: "Diomande", pos: "MF", rating: 88 },
+            { name: "Aasgaard", pos: "MF", rating: 30 },
+            { name: "Bajrami", pos: "MF", rating: 30 },
+            { name: "Cifuentes", pos: "MF", rating: 30 },
+            { name: "Antman", pos: "FW", rating: 50 },
+            { name: "Naderi", pos: "FW", rating: 50 },
+            { name: "Gassama", pos: "FW", rating: 50 },
+            { name: "Rommens", pos: "DF", rating: 30 },
+            { name: "McCrorie", pos: "DF", rating: 30 },
+            { name: "Souttar", pos: "DF", rating: 30 },
+            { name: "Nsiala", pos: "DF", rating: 5 },
+            { name: "Sterling", pos: "DF", rating: 5 },
         ],
         "rbleipzig": [
             { name: "Y. Diomande", pos: "FW", rating: 150 },
-            { name: "Poulsen", pos: "FW", rating: 65 },
-            { name: "Silva", pos: "FW", rating: 65 },
             { name: "Nusa", pos: "MF", rating: 103 },
             { name: "Haidara", pos: "MF", rating: 103 },
             { name: "Kampl", pos: "MF", rating: 103 },
             { name: "Seiwald", pos: "MF", rating: 75 },
             { name: "Elmas", pos: "MF", rating: 75 },
             { name: "Baumgartner", pos: "MF", rating: 75 },
+            { name: "Poulsen", pos: "FW", rating: 65 },
+            { name: "Silva", pos: "FW", rating: 65 },
             { name: "Lukeba", pos: "DF", rating: 61 },
             { name: "Orban", pos: "DF", rating: 61 },
             { name: "Raum", pos: "DF", rating: 61 },
@@ -1734,49 +1881,27 @@
             { name: "Geertruida", pos: "DF", rating: 25 },
             { name: "Bitshiabu", pos: "DF", rating: 25 },
         ],
-        "rangers": [
-            { name: "Dessers", pos: "FW", rating: 150 },
-            { name: "Cerny", pos: "FW", rating: 150 },
-            { name: "Danilo", pos: "FW", rating: 150 },
-            { name: "Igamane", pos: "FW", rating: 65 },
-            { name: "Matondo", pos: "FW", rating: 65 },
-            { name: "Cortés", pos: "FW", rating: 65 },
-            { name: "Diomande", pos: "MF", rating: 88 },
-            { name: "Barron", pos: "MF", rating: 88 },
-            { name: "Hagi", pos: "MF", rating: 88 },
-            { name: "Lawrence", pos: "MF", rating: 40 },
-            { name: "Raskin", pos: "MF", rating: 40 },
-            { name: "Dowell", pos: "MF", rating: 40 },
-            { name: "Tavernier", pos: "DF", rating: 40 },
-            { name: "Souttar", pos: "DF", rating: 40 },
-            { name: "Pröpper", pos: "DF", rating: 40 },
-            { name: "Jefte", pos: "DF", rating: 10 },
-            { name: "Sterling", pos: "DF", rating: 10 },
-            { name: "Kasanwirjo", pos: "DF", rating: 10 },
-        ],
         "realbetis": [
-            { name: "Vitor Roque", pos: "FW", rating: 134 },
-            { name: "Ezzalzouli", pos: "FW", rating: 134 },
+            { name: "Antony", pos: "FW", rating: 134 },
             { name: "Ávila", pos: "FW", rating: 134 },
-            { name: "Bakambu", pos: "FW", rating: 65 },
-            { name: "Juanmi", pos: "FW", rating: 65 },
-            { name: "Assane", pos: "FW", rating: 65 },
-            { name: "Antony", pos: "FW", rating: 65 },
-            { name: "Lo Celso", pos: "MF", rating: 103 },
-            { name: "Fornals", pos: "MF", rating: 103 },
-            { name: "Carvalho", pos: "MF", rating: 103 },
-            { name: "Roca", pos: "MF", rating: 75 },
-            { name: "Cardoso", pos: "MF", rating: 75 },
-            { name: "Altimira", pos: "MF", rating: 75 },
-            { name: "Llorente", pos: "DF", rating: 61 },
-            { name: "Natan", pos: "DF", rating: 61 },
-            { name: "Bellerín", pos: "DF", rating: 61 },
-            { name: "Perraud", pos: "DF", rating: 25 },
-            { name: "Sabaly", pos: "DF", rating: 25 },
-            { name: "Bartra", pos: "DF", rating: 25 },
+            { name: "Ezzalzouli", pos: "FW", rating: 134 },
+            { name: "Altimira", pos: "MF", rating: 88 },
+            { name: "Fornals", pos: "MF", rating: 88 },
+            { name: "Amrabat", pos: "MF", rating: 88 },
+            { name: "Fidalgo", pos: "MF", rating: 30 },
+            { name: "Deossa", pos: "MF", rating: 30 },
+            { name: "Celso", pos: "MF", rating: 30 },
+            { name: "Riquelme", pos: "FW", rating: 50 },
+            { name: "C. Hernández", pos: "FW", rating: 50 },
+            { name: "Ruibal", pos: "FW", rating: 50 },
+            { name: "Bellerín", pos: "DF", rating: 30 },
+            { name: "Llorente", pos: "DF", rating: 30 },
+            { name: "Natan", pos: "DF", rating: 30 },
+            { name: "Bartra", pos: "DF", rating: 5 },
+            { name: "V. Gómez", pos: "DF", rating: 5 },
         ],
-                "realmadrid": [
-            { name: "Mbappé", pos: "FW", rating: 255 },
+        "realmadrid": [
+            { name: "Mbappé", pos: "FW", rating: 205 },
             { name: "Vinícius", pos: "FW", rating: 200 },
             { name: "Rodrygo", pos: "FW", rating: 103 },
             { name: "Bellingham", pos: "MF", rating: 123 },
@@ -1799,18 +1924,18 @@
             { name: "Alaba", pos: "DF", rating: 1 },
             { name: "Huijsen", pos: "DF", rating: 39 },
         ],
-                "realsociedad": [
+        "realsociedad": [
             { name: "Oyarzabal", pos: "FW", rating: 174 },
             { name: "Kubo", pos: "FW", rating: 164 },
             { name: "Zakharyan", pos: "FW", rating: 34 },
-            { name: "Óskarsson", pos: "FW", rating: 55 },
-            { name: "Guedes", pos: "FW", rating: 65 },
-            { name: "Barrenetxea", pos: "FW", rating: 65 },
             { name: "Soler", pos: "MF", rating: 103 },
             { name: "B. Méndez", pos: "MF", rating: 53 },
             { name: "Sučić", pos: "MF", rating: 43 },
             { name: "Turrientes", pos: "MF", rating: 45 },
             { name: "Y. Herrera", pos: "MF", rating: 25 },
+            { name: "Óskarsson", pos: "FW", rating: 55 },
+            { name: "Guedes", pos: "FW", rating: 65 },
+            { name: "Barrenetxea", pos: "FW", rating: 65 },
             { name: "Caleta-Car", pos: "DF", rating: 6 },
             { name: "Zubeldia", pos: "DF", rating: 11 },
             { name: "Aramburu", pos: "DF", rating: 61 },
@@ -1819,28 +1944,27 @@
             { name: "Elustondo", pos: "DF", rating: 5 },
         ],
         "rennes": [
-            { name: "Kalimuendo", pos: "FW", rating: 134 },
-            { name: "Gouiri", pos: "FW", rating: 134 },
-            { name: "Gómez", pos: "FW", rating: 134 },
-            { name: "Gronbaek", pos: "FW", rating: 65 },
-            { name: "Meister", pos: "FW", rating: 65 },
-            { name: "Blas", pos: "MF", rating: 103 },
+            { name: "Lepaul", pos: "FW", rating: 214 },
+            { name: "Blas", pos: "FW", rating: 54 },
+            { name: "Tamari", pos: "FW", rating: 64 },
+            { name: "Frankowski", pos: "MF", rating: 35 },
             { name: "Santamaria", pos: "MF", rating: 103 },
-            { name: "Kamara", pos: "MF", rating: 103 },
-            { name: "Matusiwa", pos: "MF", rating: 75 },
-            { name: "James", pos: "MF", rating: 75 },
-            { name: "Seidu", pos: "DF", rating: 61 },
-            { name: "Østigård", pos: "DF", rating: 61 },
-            { name: "Hateboer", pos: "DF", rating: 61 },
-            { name: "Truffert", pos: "DF", rating: 25 },
-            { name: "Wooh", pos: "DF", rating: 25 },
-            { name: "Faye", pos: "DF", rating: 25 },
+            { name: "Camara", pos: "MF", rating: 33 },
+            { name: "Szymanski", pos: "MF", rating: 10 },
+            { name: "Rongier", pos: "MF", rating: 20 },
+            { name: "Embolo", pos: "FW", rating: 100 },
+            { name: "Nordin", pos: "FW", rating: 35 },
+            { name: "Thomasson", pos: "DF", rating: 5 },
+            { name: "Merlin", pos: "DF", rating: 18 },
+            { name: "Ait Boudlal", pos: "DF", rating: 21 },
+            { name: "Rouault", pos: "DF", rating: 10 },
+            { name: "Nagida", pos: "DF", rating: 2 },
+            { name: "Seidu", pos: "DF", rating: 1 },
         ],
-                "roma": [
+        "roma": [
             { name: "Dovbyk", pos: "FW", rating: 134 },
             { name: "Dybala", pos: "FW", rating: 84 },
             { name: "Soulé", pos: "FW", rating: 134 },
-            { name: "Malen", pos: "FW", rating: 200 },
             { name: "Pellegrini", pos: "MF", rating: 83 },
             { name: "Koné", pos: "MF", rating: 33 },
             { name: "Cristante", pos: "MF", rating: 60 },
@@ -1848,7 +1972,6 @@
             { name: "Bah", pos: "MF", rating: 15 },
             { name: "El Shaarawy", pos: "FW", rating: 65 },
             { name: "Ferguson", pos: "FW", rating: 45 },
-            { name: "Zaragoza", pos: "FW", rating: 20 },
             { name: "Ndicka", pos: "DF", rating: 41 },
             { name: "Mancini", pos: "DF", rating: 41 },
             { name: "Hermoso", pos: "DF", rating: 41 },
@@ -1859,52 +1982,55 @@
             { name: "Tsimikas", pos: "DF", rating: 15 },
         ],
         "rosenborg": [
-            { name: "Sæter", pos: "FW", rating: 150 },
-            { name: "Nypan", pos: "FW", rating: 150 },
-            { name: "Holte", pos: "FW", rating: 150 },
-            { name: "Broholm", pos: "FW", rating: 65 },
-            { name: "Reitan-Sunde", pos: "FW", rating: 65 },
-            { name: "Selnaes", pos: "MF", rating: 88 },
-            { name: "Nemcik", pos: "MF", rating: 88 },
-            { name: "Väänänen", pos: "MF", rating: 40 },
-            { name: "Zecevic", pos: "MF", rating: 40 },
-            { name: "Yttergård Jenssen", pos: "DF", rating: 40 },
-            { name: "Ceide", pos: "DF", rating: 40 },
-            { name: "Pereira", pos: "DF", rating: 40 },
-            { name: "Cornic", pos: "DF", rating: 10 },
-            { name: "Volden", pos: "DF", rating: 10 },
+            { name: "Islamović", pos: "FW", rating: 134 },
+            { name: "Sahsah", pos: "FW", rating: 134 },
+            { name: "Chiakha", pos: "FW", rating: 134 },
+            { name: "Väänänen", pos: "MF", rating: 88 },
+            { name: "Nordli", pos: "MF", rating: 88 },
+            { name: "Fossum", pos: "MF", rating: 88 },
+            { name: "Selnæs", pos: "MF", rating: 30 },
+            { name: "Bomholt", pos: "MF", rating: 30 },
+            { name: "Borgersen", pos: "MF", rating: 30 },
+            { name: "Thorstensen", pos: "FW", rating: 50 },
+            { name: "Ďuriš", pos: "FW", rating: 50 },
+            { name: "Ceïde", pos: "FW", rating: 50 },
+            { name: "Svensson", pos: "DF", rating: 30 },
+            { name: "Røsten", pos: "DF", rating: 30 },
+            { name: "Dahl", pos: "DF", rating: 30 },
+            { name: "Ceïde", pos: "DF", rating: 5 },
+            { name: "Volden", pos: "DF", rating: 5 },
         ],
         "salzburg": [
-            { name: "Konaté", pos: "FW", rating: 150 },
-            { name: "Gloukh", pos: "FW", rating: 150 },
-            { name: "Dorgeles", pos: "FW", rating: 150 },
-            { name: "Daghim", pos: "FW", rating: 65 },
-            { name: "Ratkov", pos: "FW", rating: 65 },
-            { name: "Baidoo", pos: "FW", rating: 65 },
+            { name: "Konaté", pos: "FW", rating: 134 },
+            { name: "Baidoo", pos: "FW", rating: 134 },
+            { name: "Vertessen", pos: "FW", rating: 134 },
             { name: "Kjærgaard", pos: "MF", rating: 88 },
             { name: "Bidstrup", pos: "MF", rating: 88 },
-            { name: "Gourna-Douath", pos: "MF", rating: 88 },
-            { name: "Capaldo", pos: "MF", rating: 40 },
-            { name: "Bajcetic", pos: "MF", rating: 40 },
-            { name: "Diambou", pos: "MF", rating: 40 },
-            { name: "Piatkowski", pos: "DF", rating: 40 },
-            { name: "Blank", pos: "DF", rating: 40 },
-            { name: "Dedić", pos: "DF", rating: 40 },
-            { name: "Terzić", pos: "DF", rating: 10 },
-            { name: "Mellberg", pos: "DF", rating: 10 },
+            { name: "Diabaté", pos: "MF", rating: 88 },
+            { name: "Kitano", pos: "MF", rating: 30 },
+            { name: "Kawamura", pos: "MF", rating: 30 },
+            { name: "Lukić", pos: "MF", rating: 30 },
+            { name: "Redžić", pos: "FW", rating: 50 },
+            { name: "Aguilar", pos: "FW", rating: 50 },
+            { name: "Bischoff", pos: "FW", rating: 50 },
+            { name: "Schmid", pos: "DF", rating: 30 },
+            { name: "Mellberg", pos: "DF", rating: 30 },
+            { name: "Terzić", pos: "DF", rating: 30 },
+            { name: "Krätzig", pos: "DF", rating: 5 },
+            { name: "Drexler", pos: "DF", rating: 5 },
         ],
         "sevilla": [
             { name: "Romero", pos: "FW", rating: 134 },
             { name: "Lukebakio", pos: "FW", rating: 134 },
             { name: "Ejuke", pos: "FW", rating: 134 },
-            { name: "Iheanacho", pos: "FW", rating: 65 },
-            { name: "Peque", pos: "FW", rating: 65 },
-            { name: "Suso", pos: "FW", rating: 65 },
             { name: "Saúl", pos: "MF", rating: 103 },
             { name: "Lokonga", pos: "MF", rating: 103 },
             { name: "Sow", pos: "MF", rating: 103 },
             { name: "Agoumé", pos: "MF", rating: 75 },
             { name: "Gudelj", pos: "MF", rating: 75 },
+            { name: "Iheanacho", pos: "FW", rating: 65 },
+            { name: "Peque", pos: "FW", rating: 65 },
+            { name: "Suso", pos: "FW", rating: 65 },
             { name: "Badé", pos: "DF", rating: 61 },
             { name: "Nianzou", pos: "DF", rating: 61 },
             { name: "Carmona", pos: "DF", rating: 61 },
@@ -1913,159 +2039,151 @@
             { name: "Marcao", pos: "DF", rating: 25 },
         ],
         "shakhtardonetsk": [
-            { name: "Sikan", pos: "FW", rating: 150 },
-            { name: "Traoré", pos: "FW", rating: 150 },
-            { name: "Kevin", pos: "FW", rating: 150 },
-            { name: "Zubkov", pos: "FW", rating: 65 },
-            { name: "Eguinaldo", pos: "FW", rating: 65 },
-            { name: "Pedrinho", pos: "FW", rating: 65 },
-            { name: "Sudakov", pos: "MF", rating: 88 },
-            { name: "Kryskiv", pos: "MF", rating: 88 },
+            { name: "Traoré", pos: "FW", rating: 134 },
+            { name: "Eguinaldo", pos: "FW", rating: 134 },
+            { name: "Elias", pos: "FW", rating: 134 },
             { name: "Bondarenko", pos: "MF", rating: 88 },
-            { name: "Stepanenko", pos: "MF", rating: 40 },
-            { name: "Marlon", pos: "MF", rating: 40 },
-            { name: "Matviyenko", pos: "DF", rating: 40 },
-            { name: "Bondar", pos: "DF", rating: 40 },
-            { name: "Konoplia", pos: "DF", rating: 40 },
-            { name: "Pedro Henrique", pos: "DF", rating: 10 },
-            { name: "Azarovi", pos: "DF", rating: 10 },
+            { name: "Kryskiv", pos: "MF", rating: 88 },
+            { name: "M. Gomes", pos: "MF", rating: 88 },
+            { name: "Shved", pos: "MF", rating: 30 },
+            { name: "Pedrinho", pos: "MF", rating: 30 },
+            { name: "Newerton", pos: "MF", rating: 30 },
+            { name: "Alisson", pos: "FW", rating: 50 },
+            { name: "Meirelles", pos: "FW", rating: 50 },
+            { name: "Obah", pos: "FW", rating: 50 },
+            { name: "M. Santos", pos: "DF", rating: 30 },
+            { name: "Arroyo", pos: "DF", rating: 30 },
+            { name: "Bondar", pos: "DF", rating: 30 },
+            { name: "Henrique", pos: "DF", rating: 5 },
+            { name: "Azarovi", pos: "DF", rating: 5 },
         ],
         "shamrockrovers": [
-            { name: "Kenny", pos: "FW", rating: 150 },
-            { name: "Greene", pos: "FW", rating: 150 },
-            { name: "Burke", pos: "FW", rating: 150 },
-            { name: "Gaffney", pos: "FW", rating: 65 },
-            { name: "McNulty", pos: "FW", rating: 65 },
+            { name: "Greene", pos: "FW", rating: 134 },
+            { name: "Burke", pos: "FW", rating: 134 },
+            { name: "Mulraney", pos: "FW", rating: 134 },
             { name: "Watts", pos: "MF", rating: 88 },
-            { name: "Towell", pos: "MF", rating: 88 },
-            { name: "Nugent", pos: "MF", rating: 88 },
-            { name: "O'Neill", pos: "MF", rating: 40 },
-            { name: "Byrne", pos: "MF", rating: 40 },
-            { name: "Cleary", pos: "DF", rating: 40 },
-            { name: "Honohan", pos: "DF", rating: 40 },
-            { name: "Pico", pos: "DF", rating: 40 },
-            { name: "Clarke", pos: "DF", rating: 10 },
-            { name: "Kavanagh", pos: "DF", rating: 10 },
+            { name: "Healy", pos: "MF", rating: 88 },
+            { name: "Mandroiu", pos: "MF", rating: 88 },
+            { name: "Asamoah", pos: "MF", rating: 30 },
+            { name: "O'Neill", pos: "MF", rating: 30 },
+            { name: "Brennan", pos: "MF", rating: 30 },
+            { name: "Gaffney", pos: "FW", rating: 50 },
+            { name: "Noonan", pos: "FW", rating: 50 },
+            { name: "McGovern", pos: "FW", rating: 50 },
+            { name: "Stevens", pos: "DF", rating: 30 },
+            { name: "Matthews", pos: "DF", rating: 30 },
+            { name: "P. Lopes", pos: "DF", rating: 30 },
+            { name: "Grace", pos: "DF", rating: 5 },
+            { name: "Cleary", pos: "DF", rating: 5 },
         ],
         "slaviaprague": [
-            { name: "Chorý", pos: "FW", rating: 150 },
-            { name: "Chytil", pos: "FW", rating: 150 },
-            { name: "Provod", pos: "FW", rating: 150 },
-            { name: "Schranz", pos: "FW", rating: 65 },
-            { name: "Jurečka", pos: "FW", rating: 65 },
-            { name: "Zafeiris", pos: "MF", rating: 88 },
-            { name: "Oscar", pos: "MF", rating: 88 },
-            { name: "Prebsl", pos: "MF", rating: 88 },
-            { name: "Douděra", pos: "MF", rating: 40 },
-            { name: "Sevcik", pos: "MF", rating: 40 },
-            { name: "Holeš", pos: "DF", rating: 40 },
-            { name: "Zima", pos: "DF", rating: 40 },
-            { name: "Diouf", pos: "DF", rating: 40 },
-            { name: "Bořil", pos: "DF", rating: 10 },
-            { name: "Ogbuehi", pos: "DF", rating: 10 },
-        ],
-        "sligorovers": [
-            { name: "Mata", pos: "FW", rating: 150 },
-            { name: "Pearce", pos: "FW", rating: 150 },
-            { name: "Radosavljevic", pos: "FW", rating: 65 },
-            { name: "Waweru", pos: "FW", rating: 65 },
-            { name: "Chapman", pos: "MF", rating: 88 },
-            { name: "Morahan", pos: "MF", rating: 88 },
-            { name: "Malley", pos: "MF", rating: 40 },
-            { name: "Barlow", pos: "MF", rating: 40 },
-            { name: "Pijnaker", pos: "DF", rating: 40 },
-            { name: "Wiggett", pos: "DF", rating: 40 },
-            { name: "Hutchinson", pos: "DF", rating: 40 },
-            { name: "Wilson", pos: "DF", rating: 10 },
-            { name: "Fitzgerald", pos: "DF", rating: 10 },
+            { name: "Chytil", pos: "FW", rating: 134 },
+            { name: "Chorý", pos: "FW", rating: 134 },
+            { name: "Schranz", pos: "FW", rating: 134 },
+            { name: "Provod", pos: "MF", rating: 88 },
+            { name: "Dorley", pos: "MF", rating: 88 },
+            { name: "Sadílek", pos: "MF", rating: 88 },
+            { name: "Sanyang", pos: "MF", rating: 30 },
+            { name: "Moses", pos: "MF", rating: 30 },
+            { name: "Suleiman", pos: "MF", rating: 30 },
+            { name: "Camara", pos: "DF", rating: 30 },
+            { name: "Ogbu", pos: "DF", rating: 30 },
+            { name: "Douděra", pos: "DF", rating: 30 },
+            { name: "Chaloupek", pos: "DF", rating: 5 },
+            { name: "Holeš", pos: "DF", rating: 5 },
         ],
         "spartaprague": [
-            { name: "Olatunji", pos: "FW", rating: 150 },
-            { name: "Haraslín", pos: "FW", rating: 150 },
-            { name: "Tuci", pos: "FW", rating: 150 },
-            { name: "Birmančević", pos: "FW", rating: 65 },
-            { name: "Krasniqi", pos: "FW", rating: 65 },
-            { name: "Laci", pos: "MF", rating: 88 },
+            { name: "Tuci", pos: "FW", rating: 134 },
+            { name: "Rrahmani", pos: "FW", rating: 134 },
+            { name: "Kuchta", pos: "FW", rating: 134 },
+            { name: "Haraslín", pos: "MF", rating: 88 },
+            { name: "Vydra", pos: "MF", rating: 88 },
             { name: "Kairinen", pos: "MF", rating: 88 },
-            { name: "Panák", pos: "MF", rating: 88 },
-            { name: "Sadílek", pos: "MF", rating: 40 },
-            { name: "Pavelka", pos: "MF", rating: 40 },
-            { name: "Vitík", pos: "DF", rating: 40 },
-            { name: "Sørensen", pos: "DF", rating: 40 },
-            { name: "Rynes", pos: "DF", rating: 40 },
-            { name: "Preciado", pos: "DF", rating: 10 },
-            { name: "Zelený", pos: "DF", rating: 10 },
+            { name: "Eneme", pos: "MF", rating: 30 },
+            { name: "Mercado", pos: "MF", rating: 30 },
+            { name: "Andersen", pos: "MF", rating: 30 },
+            { name: "Vojta", pos: "FW", rating: 50 },
+            { name: "Milla", pos: "FW", rating: 50 },
+            { name: "Kadeřábek", pos: "DF", rating: 30 },
+            { name: "Martinec", pos: "DF", rating: 30 },
+            { name: "Ryneš", pos: "DF", rating: 30 },
+            { name: "Uchenna", pos: "DF", rating: 5 },
+            { name: "Ševínský", pos: "DF", rating: 5 },
         ],
         "sportingcp": [
-            { name: "Gyökeres", pos: "FW", rating: 150 },
-            { name: "Trincão", pos: "FW", rating: 150 },
-            { name: "Edwards", pos: "FW", rating: 150 },
-            { name: "Harder", pos: "FW", rating: 65 },
-            { name: "Conrad Harder", pos: "FW", rating: 65 },
-            { name: "Hjulmand", pos: "MF", rating: 88 },
-            { name: "Morita", pos: "MF", rating: 88 },
+            { name: "Ioannidis", pos: "FW", rating: 134 },
+            { name: "Trincão", pos: "FW", rating: 134 },
+            { name: "Quenda", pos: "FW", rating: 134 },
+            { name: "P. Gonçalves", pos: "MF", rating: 88 },
             { name: "Bragança", pos: "MF", rating: 88 },
-            { name: "Quenda", pos: "MF", rating: 40 },
-            { name: "Gonçalves", pos: "MF", rating: 40 },
-            { name: "Inácio", pos: "DF", rating: 40 },
-            { name: "Diomande", pos: "DF", rating: 40 },
-            { name: "Debast", pos: "DF", rating: 40 },
-            { name: "Araújo", pos: "DF", rating: 10 },
-            { name: "Matheus Reis", pos: "DF", rating: 10 },
-            { name: "Esgaio", pos: "DF", rating: 10 },
+            { name: "Morita", pos: "MF", rating: 88 },
+            { name: "Hjulmand", pos: "MF", rating: 30 },
+            { name: "Kochorashvili", pos: "MF", rating: 30 },
+            { name: "Simões", pos: "MF", rating: 30 },
+            { name: "Catamo", pos: "FW", rating: 50 },
+            { name: "Faye", pos: "FW", rating: 50 },
+            { name: "M. Araújo", pos: "FW", rating: 50 },
+            { name: "Debast", pos: "DF", rating: 30 },
+            { name: "N. Santos", pos: "DF", rating: 30 },
+            { name: "Vagiannidis", pos: "DF", rating: 30 },
+            { name: "Fresneda", pos: "DF", rating: 5 },
+            { name: "Inácio", pos: "DF", rating: 5 },
         ],
         "strasbourg": [
-            { name: "Emegha", pos: "FW", rating: 134 },
-            { name: "Nanasi", pos: "FW", rating: 134 },
-            { name: "Bakwa", pos: "FW", rating: 134 },
-            { name: "Mara", pos: "FW", rating: 65 },
-            { name: "Sebas", pos: "FW", rating: 65 },
-            { name: "Andrey Santos", pos: "MF", rating: 103 },
-            { name: "Diarra", pos: "MF", rating: 103 },
-            { name: "Doukouré", pos: "MF", rating: 75 },
-            { name: "Lemaréchal", pos: "MF", rating: 75 },
-            { name: "Sow", pos: "DF", rating: 61 },
-            { name: "Sylla", pos: "DF", rating: 61 },
-            { name: "Sarr", pos: "DF", rating: 61 },
-            { name: "Doué", pos: "DF", rating: 150 },
-            { name: "Senaya", pos: "DF", rating: 25 },
+            { name: "Enciso", pos: "FW", rating: 54 },
+            { name: "Godo", pos: "FW", rating: 180 },
+            { name: "D. Moreira", pos: "FW", rating: 78 },
+            { name: "Nanasi", pos: "MF", rating: 109 },
+            { name: "Barco", pos: "MF", rating: 45 },
+            { name: "El Mourabet", pos: "MF", rating: 20 },
+            { name: "Noubissie", pos: "MF", rating: 1 },
+            { name: "Yassine", pos: "FW", rating: 15 },
+            { name: "D. Fofana", pos: "FW", rating: 45 },
+            { name: "Ouattara", pos: "DF", rating: 31 },
+            { name: "Anselmino", pos: "DF", rating: 1 },
+            { name: "Doukoure", pos: "DF", rating: 6 },
+            { name: "G. Doué", pos: "DF", rating: 36 },
+            { name: "Omobamidele", pos: "DF", rating: 15 },
+            { name: "Chilwell", pos: "DF", rating: 10 },
         ],
         "sturmgraz": [
-            { name: "Biereth", pos: "FW", rating: 150 },
-            { name: "Jatta", pos: "FW", rating: 150 },
-            { name: "Camara", pos: "FW", rating: 150 },
-            { name: "Sarkaria", pos: "FW", rating: 65 },
-            { name: "Grgić", pos: "FW", rating: 65 },
+            { name: "Jatta", pos: "FW", rating: 134 },
+            { name: "Kayombo", pos: "FW", rating: 134 },
+            { name: "Beganović", pos: "FW", rating: 134 },
             { name: "Kiteishvili", pos: "MF", rating: 88 },
-            { name: "Horvat", pos: "MF", rating: 88 },
-            { name: "Bøving", pos: "MF", rating: 88 },
-            { name: "Chukwuani", pos: "MF", rating: 40 },
-            { name: "Gorenc-Stanković", pos: "MF", rating: 40 },
-            { name: "Lavalee", pos: "DF", rating: 40 },
-            { name: "Aiwu", pos: "DF", rating: 40 },
-            { name: "Gazibegović", pos: "DF", rating: 40 },
-            { name: "Johnston", pos: "DF", rating: 10 },
-            { name: "Geyrhofer", pos: "DF", rating: 10 },
+            { name: "Stanković", pos: "MF", rating: 88 },
+            { name: "Rózga", pos: "MF", rating: 88 },
+            { name: "Mamageishvili", pos: "MF", rating: 30 },
+            { name: "Hierländer", pos: "MF", rating: 30 },
+            { name: "Hödl", pos: "MF", rating: 30 },
+            { name: "Malone", pos: "FW", rating: 50 },
+            { name: "Grgić", pos: "FW", rating: 50 },
+            { name: "Mitchell", pos: "DF", rating: 30 },
+            { name: "Vallçi", pos: "DF", rating: 30 },
+            { name: "Borković", pos: "DF", rating: 30 },
+            { name: "Malić", pos: "DF", rating: 5 },
+            { name: "Geyrhofer", pos: "DF", rating: 5 },
         ],
         "stuttgart": [
-            { name: "Undav", pos: "FW", rating: 134 },
+            { name: "Tomás", pos: "FW", rating: 134 },
             { name: "Demirović", pos: "FW", rating: 134 },
-            { name: "Touré", pos: "FW", rating: 134 },
-            { name: "Leweling", pos: "FW", rating: 65 },
-            { name: "Diehl", pos: "FW", rating: 65 },
-            { name: "Millot", pos: "MF", rating: 103 },
-            { name: "Stiller", pos: "MF", rating: 103 },
-            { name: "Karazor", pos: "MF", rating: 103 },
-            { name: "Führich", pos: "MF", rating: 75 },
-            { name: "Rieder", pos: "MF", rating: 75 },
-            { name: "Chabot", pos: "DF", rating: 61 },
-            { name: "Rouault", pos: "DF", rating: 61 },
-            { name: "Mittelstädt", pos: "DF", rating: 61 },
-            { name: "Vagnoman", pos: "DF", rating: 25 },
-            { name: "Chase", pos: "DF", rating: 25 },
-            { name: "Stergiou", pos: "DF", rating: 25 },
+            { name: "Diehl", pos: "FW", rating: 134 },
+            { name: "Keitel", pos: "MF", rating: 88 },
+            { name: "Stiller", pos: "MF", rating: 88 },
+            { name: "Führich", pos: "MF", rating: 88 },
+            { name: "Khannouss", pos: "MF", rating: 30 },
+            { name: "Karazor", pos: "MF", rating: 30 },
+            { name: "Darvich", pos: "MF", rating: 30 },
+            { name: "Leweling", pos: "FW", rating: 50 },
+            { name: "Arévalo", pos: "FW", rating: 50 },
+            { name: "Undav", pos: "FW", rating: 50 },
+            { name: "Al-Dakhil", pos: "DF", rating: 30 },
+            { name: "Hendriks", pos: "DF", rating: 30 },
+            { name: "Vagnoman", pos: "DF", rating: 30 },
+            { name: "Mittelstädt", pos: "DF", rating: 5 },
+            { name: "Jaquez", pos: "DF", rating: 5 },
         ],
-                "tottenhamhotspur": [
+        "tottenhamhotspur": [
             { name: "Solanke", pos: "FW", rating: 140 },
             { name: "Richarlison", pos: "FW", rating: 140 },
             { name: "Maddison", pos: "MF", rating: 133 },
@@ -2081,153 +2199,156 @@
             { name: "Porro", pos: "DF", rating: 61 },
             { name: "Udogie", pos: "DF", rating: 32 },
             { name: "Senesi", pos: "DF", rating: 20 },
-            { name: "Van Hecke", pos: "DF", rating: 10 },
             { name: "Spence", pos: "DF", rating: 25 },
             { name: "Davies", pos: "DF", rating: 1 },
             { name: "Danso", pos: "DF", rating: 8 },
             { name: "Robertson", pos: "DF", rating: 25 },
         ],
         "unionberlin": [
-            { name: "Hollerbach", pos: "FW", rating: 134 },
-            { name: "Jordan", pos: "FW", rating: 134 },
-            { name: "Vertessen", pos: "FW", rating: 134 },
-            { name: "Volland", pos: "FW", rating: 65 },
-            { name: "Prtajin", pos: "FW", rating: 65 },
-            { name: "Kemlein", pos: "MF", rating: 103 },
-            { name: "Schäfer", pos: "MF", rating: 103 },
-            { name: "Khedira", pos: "MF", rating: 103 },
-            { name: "Jeong", pos: "MF", rating: 75 },
-            { name: "Tousart", pos: "MF", rating: 75 },
-            { name: "Habib", pos: "MF", rating: 75 },
-            { name: "Doekhi", pos: "DF", rating: 61 },
-            { name: "Leite", pos: "DF", rating: 61 },
-            { name: "Vogt", pos: "DF", rating: 61 },
-            { name: "Trimmel", pos: "DF", rating: 25 },
-            { name: "Rothe", pos: "DF", rating: 25 },
-            { name: "Querfeld", pos: "DF", rating: 25 },
+            { name: "Ljubičić", pos: "FW", rating: 134 },
+            { name: "Burke", pos: "FW", rating: 134 },
+            { name: "Burcu", pos: "FW", rating: 134 },
+            { name: "Kemlein", pos: "MF", rating: 88 },
+            { name: "Khedira", pos: "MF", rating: 88 },
+            { name: "Woo-yeong", pos: "MF", rating: 88 },
+            { name: "Schäfer", pos: "MF", rating: 30 },
+            { name: "Haberer", pos: "MF", rating: 30 },
+            { name: "Skarke", pos: "MF", rating: 30 },
+            { name: "Ansah", pos: "FW", rating: 50 },
+            { name: "Preu", pos: "FW", rating: 50 },
+            { name: "Ilić", pos: "FW", rating: 50 },
+            { name: "Markgraf", pos: "DF", rating: 30 },
+            { name: "Bosch", pos: "DF", rating: 30 },
+            { name: "Friedrich", pos: "DF", rating: 30 },
+            { name: "Querfeld", pos: "DF", rating: 5 },
+            { name: "Rothe", pos: "DF", rating: 5 },
         ],
         "unionsaintgilloise": [
-            { name: "Ivanović", pos: "FW", rating: 150 },
-            { name: "Rodriguez", pos: "FW", rating: 150 },
-            { name: "Kabangu", pos: "FW", rating: 150 },
-            { name: "Fuseini", pos: "FW", rating: 65 },
-            { name: "Eckert", pos: "FW", rating: 65 },
-            { name: "Sadiki", pos: "MF", rating: 88 },
-            { name: "Vanhoutte", pos: "MF", rating: 88 },
-            { name: "Ait El Hadj", pos: "MF", rating: 88 },
-            { name: "Rasmussen", pos: "MF", rating: 40 },
-            { name: "Lapoussin", pos: "MF", rating: 40 },
-            { name: "Machida", pos: "DF", rating: 40 },
-            { name: "Mac Allister", pos: "DF", rating: 40 },
-            { name: "Burgess", pos: "DF", rating: 40 },
-            { name: "Castro-Montes", pos: "DF", rating: 10 },
-            { name: "Teklab", pos: "DF", rating: 10 },
+            { name: "Fuseini", pos: "FW", rating: 134 },
+            { name: "Biondić", pos: "FW", rating: 134 },
+            { name: "Smith", pos: "FW", rating: 134 },
+            { name: "de Perre", pos: "MF", rating: 88 },
+            { name: "Zorgane", pos: "MF", rating: 88 },
+            { name: "Hadj", pos: "MF", rating: 88 },
+            { name: "Pavlić", pos: "MF", rating: 30 },
+            { name: "Schoofs", pos: "MF", rating: 30 },
+            { name: "Zeneli", pos: "MF", rating: 30 },
+            { name: "David", pos: "FW", rating: 50 },
+            { name: "K. Rodríguez", pos: "FW", rating: 50 },
+            { name: "Giger", pos: "FW", rating: 50 },
+            { name: "Barry", pos: "DF", rating: 30 },
+            { name: "Allister", pos: "DF", rating: 80 },
+            { name: "Sykes", pos: "DF", rating: 30 },
+            { name: "Patris", pos: "DF", rating: 5 },
+            { name: "Sylla", pos: "DF", rating: 5 },
         ],
         "viktoriaplzen": [
-            { name: "Šulc", pos: "FW", rating: 150 },
-            { name: "Adu", pos: "FW", rating: 150 },
-            { name: "Vydra", pos: "FW", rating: 150 },
-            { name: "Vašulín", pos: "FW", rating: 65 },
-            { name: "Mika", pos: "FW", rating: 65 },
-            { name: "Kalvach", pos: "MF", rating: 88 },
-            { name: "Cerv", pos: "MF", rating: 88 },
-            { name: "Kopic", pos: "MF", rating: 88 },
-            { name: "Jirka", pos: "MF", rating: 40 },
-            { name: "Panos", pos: "MF", rating: 40 },
-            { name: "Hranáč", pos: "DF", rating: 40 },
-            { name: "Dweh", pos: "DF", rating: 40 },
-            { name: "Jemelka", pos: "DF", rating: 40 },
-            { name: "Havel", pos: "DF", rating: 10 },
-            { name: "Cadu", pos: "DF", rating: 10 },
+            { name: "Adu", pos: "FW", rating: 134 },
+            { name: "Vydra", pos: "FW", rating: 134 },
+            { name: "Toure", pos: "FW", rating: 134 },
+            { name: "Červ", pos: "MF", rating: 88 },
+            { name: "Višinský", pos: "MF", rating: 88 },
+            { name: "Sojka", pos: "MF", rating: 88 },
+            { name: "Hrošovský", pos: "MF", rating: 30 },
+            { name: "Ladra", pos: "MF", rating: 30 },
+            { name: "Souaré", pos: "MF", rating: 30 },
+            { name: "Lawal", pos: "FW", rating: 50 },
+            { name: "Faal", pos: "FW", rating: 50 },
+            { name: "Kabongo", pos: "FW", rating: 50 },
+            { name: "Spáčil", pos: "DF", rating: 30 },
+            { name: "Doski", pos: "DF", rating: 30 },
+            { name: "Kadlec", pos: "DF", rating: 30 },
+            { name: "Jemelka", pos: "DF", rating: 5 },
+            { name: "Paluska", pos: "DF", rating: 5 },
         ],
-                "villarreal": [
+        "villarreal": [
             { name: "A. Pérez", pos: "FW", rating: 104 },
             { name: "Mikautadze", pos: "FW", rating: 134 },
             { name: "Pépé", pos: "FW", rating: 134 },
-            { name: "Baena", pos: "FW", rating: 85 },
-            { name: "Gerard", pos: "FW", rating: 65 },
-            { name: "Oluwaseyi", pos: "FW", rating: 40 },
             { name: "Parejo", pos: "MF", rating: 13 },
             { name: "Comesaña", pos: "MF", rating: 43 },
             { name: "P. Gueye", pos: "MF", rating: 23 },
             { name: "Buchanan", pos: "MF", rating: 15 },
+            { name: "Baena", pos: "FW", rating: 85 },
+            { name: "Gerard", pos: "FW", rating: 65 },
             { name: "Kambwala", pos: "DF", rating: 1 },
             { name: "L. Costa", pos: "DF", rating: 41 },
             { name: "Marin", pos: "DF", rating: 21 },
-            { name: "Veiga", pos: "DF", rating: 21 },
             { name: "Cardona", pos: "DF", rating: 5 },
             { name: "Freeman", pos: "DF", rating: 1 },
             { name: "Foyth", pos: "DF", rating: 25 },
-            { name: "Pedraza", pos: "DF", rating: 1 },
         ],
         "wislakrakow": [
-            { name: "Rodado", pos: "FW", rating: 150 },
-            { name: "Gogół", pos: "FW", rating: 150 },
-            { name: "Alfaro", pos: "FW", rating: 150 },
-            { name: "Zwoliński", pos: "FW", rating: 65 },
-            { name: "Krzyzanowski", pos: "FW", rating: 65 },
+            { name: "Rodado", pos: "FW", rating: 134 },
+            { name: "Duarte", pos: "FW", rating: 134 },
+            { name: "Božić", pos: "FW", rating: 134 },
             { name: "Duda", pos: "MF", rating: 88 },
-            { name: "Uryga", pos: "MF", rating: 88 },
-            { name: "Kutwa", pos: "MF", rating: 88 },
-            { name: "Carbo", pos: "MF", rating: 40 },
-            { name: "Baena", pos: "MF", rating: 40 },
-            { name: "Szot", pos: "DF", rating: 40 },
-            { name: "Jaroch", pos: "DF", rating: 40 },
-            { name: "Łasicki", pos: "DF", rating: 40 },
-            { name: "Biedrzycki", pos: "DF", rating: 10 },
-            { name: "Kiš", pos: "DF", rating: 10 },
+            { name: "Ertlthaler", pos: "MF", rating: 88 },
+            { name: "Carbó", pos: "MF", rating: 88 },
+            { name: "Igbekeme", pos: "MF", rating: 30 },
+            { name: "Talar", pos: "MF", rating: 30 },
+            { name: "Omić", pos: "MF", rating: 30 },
+            { name: "Starzyński", pos: "FW", rating: 50 },
+            { name: "Kuziemka", pos: "FW", rating: 50 },
+            { name: "Baniowski", pos: "FW", rating: 50 },
+            { name: "Lelieveld", pos: "DF", rating: 30 },
+            { name: "Mikulec", pos: "DF", rating: 30 },
+            { name: "Uryga", pos: "DF", rating: 30 },
+            { name: "Maisonneuve", pos: "DF", rating: 5 },
+            { name: "Jaroch", pos: "DF", rating: 5 },
         ],
         "wolfsbergerac": [
-            { name: "Bamba", pos: "FW", rating: 150 },
-            { name: "Röcher", pos: "FW", rating: 150 },
-            { name: "Karamoko", pos: "FW", rating: 150 },
-            { name: "Omić", pos: "FW", rating: 65 },
-            { name: "Gattermayer", pos: "FW", rating: 65 },
-            { name: "Altunashvili", pos: "MF", rating: 88 },
+            { name: "Kojzek", pos: "FW", rating: 134 },
+            { name: "Ogam", pos: "FW", rating: 134 },
+            { name: "Atanga", pos: "FW", rating: 134 },
+            { name: "Hajdini", pos: "MF", rating: 88 },
             { name: "Piesinger", pos: "MF", rating: 88 },
-            { name: "Jasić", pos: "MF", rating: 88 },
-            { name: "Wernitznig", pos: "MF", rating: 40 },
-            { name: "Tijani", pos: "MF", rating: 40 },
-            { name: "Baumgartner", pos: "DF", rating: 40 },
-            { name: "Oroz", pos: "DF", rating: 40 },
-            { name: "Scherzer", pos: "DF", rating: 40 },
-            { name: "Diabate", pos: "DF", rating: 10 },
-            { name: "Kennedy", pos: "DF", rating: 10 },
+            { name: "Avdijaj", pos: "MF", rating: 88 },
+            { name: "Raymond", pos: "MF", rating: 30 },
+            { name: "Zukić", pos: "MF", rating: 30 },
+            { name: "Sulzner", pos: "MF", rating: 30 },
+            { name: "Pink", pos: "FW", rating: 50 },
+            { name: "Vrioni", pos: "FW", rating: 50 },
+            { name: "Matić", pos: "DF", rating: 30 },
+            { name: "Uzondu", pos: "DF", rating: 30 },
+            { name: "Diabaté", pos: "DF", rating: 30 },
+            { name: "Gruber", pos: "DF", rating: 5 },
+            { name: "Dramé", pos: "DF", rating: 5 },
         ],
         "youngboys": [
-            { name: "Ganvoula", pos: "FW", rating: 150 },
-            { name: "Itten", pos: "FW", rating: 150 },
-            { name: "Monteiro", pos: "FW", rating: 150 },
-            { name: "Elia", pos: "FW", rating: 65 },
-            { name: "Colley", pos: "FW", rating: 65 },
-            { name: "Ugrinić", pos: "MF", rating: 88 },
-            { name: "Niasse", pos: "MF", rating: 88 },
-            { name: "Lauper", pos: "MF", rating: 88 },
-            { name: "Lakomy", pos: "MF", rating: 40 },
-            { name: "Imeri", pos: "MF", rating: 40 },
-            { name: "Camara", pos: "DF", rating: 40 },
-            { name: "Benito", pos: "DF", rating: 40 },
-            { name: "Hadjam", pos: "DF", rating: 40 },
-            { name: "Athekame", pos: "DF", rating: 10 },
-            { name: "Husic", pos: "DF", rating: 10 },
+            { name: "Virginius", pos: "FW", rating: 134 },
+            { name: "Fassnacht", pos: "FW", rating: 134 },
+            { name: "Bedia", pos: "FW", rating: 134 },
+            { name: "Monteiro", pos: "MF", rating: 88 },
+            { name: "Colley", pos: "MF", rating: 88 },
+            { name: "E. Fernandes", pos: "MF", rating: 88 },
+            { name: "Sanches", pos: "MF", rating: 30 },
+            { name: "Pech", pos: "MF", rating: 30 },
+            { name: "Lauper", pos: "MF", rating: 30 },
+            { name: "Conte", pos: "FW", rating: 50 },
+            { name: "Essende", pos: "FW", rating: 50 },
+            { name: "Andrews", pos: "DF", rating: 30 },
+            { name: "Hadjam", pos: "DF", rating: 30 },
+            { name: "Zoukrou", pos: "DF", rating: 30 },
+            { name: "Wüthrich", pos: "DF", rating: 5 },
+            { name: "Janko", pos: "DF", rating: 5 },
         ],
         "zenitstpetersburg": [
-            { name: "Cassierra", pos: "FW", rating: 150 },
-            { name: "Luciano", pos: "FW", rating: 150 },
-            { name: "Artur", pos: "FW", rating: 150 },
-            { name: "Pedro", pos: "FW", rating: 150 },
-            { name: "Sergeev", pos: "FW", rating: 65 },
-            { name: "Mantuan", pos: "FW", rating: 65 },
+            { name: "Sobolev", pos: "FW", rating: 134 },
+            { name: "Glushenkov", pos: "FW", rating: 134 },
+            { name: "Henrique", pos: "FW", rating: 134 },
             { name: "Wendel", pos: "MF", rating: 88 },
-            { name: "Claudio", pos: "MF", rating: 88 },
+            { name: "Yerokhin", pos: "MF", rating: 88 },
             { name: "Barrios", pos: "MF", rating: 88 },
-            { name: "Mostovoy", pos: "MF", rating: 40 },
-            { name: "Glushankov", pos: "MF", rating: 40 },
-            { name: "Nino", pos: "DF", rating: 40 },
-            { name: "Eraković", pos: "DF", rating: 40 },
-            { name: "Douglas Santos", pos: "DF", rating: 40 },
-            { name: "Karavaev", pos: "DF", rating: 10 },
-            { name: "Alip", pos: "DF", rating: 10 },
+            { name: "Jhon", pos: "MF", rating: 30 },
+            { name: "Mostovoy", pos: "MF", rating: 30 },
+            { name: "Mikhaylov", pos: "MF", rating: 30 },
+            { name: "Pedro", pos: "FW", rating: 150 },
+            { name: "D. Santos", pos: "DF", rating: 30 },
+            { name: "Gorshkov", pos: "DF", rating: 30 },
+            { name: "Drkušić", pos: "DF", rating: 30 },
+            { name: "Karavayev", pos: "DF", rating: 5 },
+            { name: "Alip", pos: "DF", rating: 5 },
         ],
     };
 
@@ -2247,7 +2368,7 @@
             "NED": "🇳🇱", "SCO": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "BEL": "🇧🇪", "TUR": "🇹🇷", "AUT": "🇦🇹", "CZE": "🇨🇿", 
             "CRO": "🇭🇷", "SRB": "🇷🇸", "DEN": "🇩🇰", "GRE": "🇬🇷", "SUI": "🇨🇭", "HUN": "🇭🇺", 
             "UKR": "🇺🇦", "POL": "🇵🇱", "CYP": "🇨🇾", "BLR": "🇧🇾", "SWE": "🇸🇪", "NOR": "🇳🇴", 
-            "BUL": "🇧🇬", "RUS": "🇷🇺", "SLO": "🇸🇮", "IRL": "🇮🇪", "ROU": "🇷🇴"
+            "BUL": "🇧🇬", "RUS": "🇷🇺", "SLO": "🇸🇮", "IRL": "🇮🇪", "ROU": "🇷🇴", "KAZ": "🇰🇿", "AZE": "🇦🇿"
         };
         const flag = flags[countryCode] || "🇪🇺";
         return [
@@ -2491,7 +2612,7 @@
 
             // STEP 4: Secondary fill from other countries to make it exactly 35 teams
             let secondaryPool = [];
-            let secondaryCountries = ["SRB", "UKR", "GRE", "HUN", "CRO", "BUL", "SWE", "NOR", "RUS", "POL", "CYP", "BLR", "SLO", "IRL", "ROU"];
+            let secondaryCountries = ["SRB", "UKR", "GRE", "HUN", "CRO", "BUL", "SWE", "NOR", "RUS", "POL", "CYP", "BLR", "SLO", "IRL", "ROU", "KAZ", "AZE"];
             // Add any priority countries that didn't get selected in step 3
             priorityCountries.forEach(c => {
                 if (!priorityDrawn.find(d => d.country === c)) {
@@ -2544,7 +2665,7 @@
                     t.atk = 90;
                     t.def = 85;
                     t.mid = 80;
-                    t.name += " ✦";
+                    t.isBoostedAjax = true;
                 }
             });
 
@@ -2730,10 +2851,68 @@
             this.swissMatches = schedule;
         }
 
+        resolvePenaltyShootout(teamA, teamB) {
+            let probA = 0.5;
+            if (teamA.name === "Manchester United") {
+                probA = 0.3;
+            } else if (teamB.name === "Manchester United") {
+                probA = 0.7;
+            }
+            return Math.random() < probA ? teamA : teamB;
+        }
+
         // Mô phỏng 1 trận đấu
-        simulateMatch(teamA, teamB, isHome) {
-            let rA = (teamA.atk * 0.35 + teamA.mid * 0.40 + teamA.def * 0.25);
-            let rB = (teamB.atk * 0.35 + teamB.mid * 0.40 + teamB.def * 0.25);
+        simulateMatch(teamA, teamB, isHome, leg1Score = null) {
+            let atkA = teamA.atk;
+            let defA = teamA.def;
+            let midA = teamA.mid;
+            
+            let atkB = teamB.atk;
+            let defB = teamB.def;
+            let midB = teamB.mid;
+            
+            // Special Ajax logic:
+            if (teamA.isBoostedAjax) {
+                if (teamB.name === "Real Madrid" || teamB.name === "Juventus") {
+                    atkA = 96; midA = 90; defA = 90; // extra boost
+                } else if (teamB.name === "Tottenham") {
+                    atkA = 81; midA = 79; defA = 79; // revert to normal
+                }
+            }
+            if (teamB.isBoostedAjax) {
+                if (teamA.name === "Real Madrid" || teamA.name === "Juventus") {
+                    atkB = 96; midB = 90; defB = 90; // extra boost
+                } else if (teamA.name === "Tottenham") {
+                    atkB = 81; midB = 79; defB = 79; // revert to normal
+                }
+            }
+
+            // Barcelona comeback logic
+            if (leg1Score) {
+                if (teamA.name === "Barcelona") {
+                    let diff = leg1Score.teamAScore - leg1Score.teamBScore;
+                    if (diff >= 3) {
+                        // Won by 3+ in leg 1: susceptible to comeback (nerf slightly)
+                        atkA -= 3; midA -= 3; defA -= 3;
+                    } else if (diff <= -3) {
+                        // Lost by 3+ in leg 1: primed for comeback (boost slightly)
+                        atkA += 3; midA += 3; defA += 3;
+                    }
+                }
+                if (teamB.name === "Barcelona") {
+                    let diff = leg1Score.teamBScore - leg1Score.teamAScore;
+                    if (diff >= 3) {
+                        // Won by 3+ in leg 1: susceptible to comeback (nerf slightly)
+                        atkB -= 3; midB -= 3; defB -= 3;
+                    } else if (diff <= -3) {
+                        // Lost by 3+ in leg 1: primed for comeback (boost slightly)
+                        atkB += 3; midB += 3; defB += 3;
+                    }
+                }
+            }
+
+            let rA = (atkA * 0.35 + midA * 0.40 + defA * 0.25);
+            let rB = (atkB * 0.35 + midB * 0.40 + defB * 0.25);
             
             if (isHome) rA += 2.0; // Lợi thế sân nhà thực tế
             else rB += 2.0;
@@ -2746,8 +2925,31 @@
             let powerB = rB + formB;
             
             // Expected goals (xG) cơ bản là 1.35 khi đồng trình, tăng/giảm theo hiệu số sức mạnh chia cho 12
-            let xgA = 1.35 + (powerA - teamB.def) / 12;
-            let xgB = 1.35 + (powerB - teamA.def) / 12;
+            let xgA = 1.35 + (powerA - defB) / 12;
+            let xgB = 1.35 + (powerB - defA) / 12;
+
+            // Country goal modifiers:
+            // GER + NED easy high goals (nổ tài), ITA easy low goals
+            let goalsMultiplier = 1.0;
+            let hasGER_or_NED = (teamA.country === "GER" || teamA.country === "NED" || teamB.country === "GER" || teamB.country === "NED");
+            let bothGER_or_NED = ((teamA.country === "GER" || teamA.country === "NED") && (teamB.country === "GER" || teamB.country === "NED"));
+            let hasITA = (teamA.country === "ITA" || teamB.country === "ITA");
+            let bothITA = (teamA.country === "ITA" && teamB.country === "ITA");
+            
+            if (bothGER_or_NED) {
+                goalsMultiplier *= 1.45;
+            } else if (hasGER_or_NED) {
+                goalsMultiplier *= 1.20;
+            }
+            
+            if (bothITA) {
+                goalsMultiplier *= 0.60;
+            } else if (hasITA) {
+                goalsMultiplier *= 0.80;
+            }
+            
+            xgA *= goalsMultiplier;
+            xgB *= goalsMultiplier;
             
             // Nén logarit nếu xG vượt quá 2.0 để tránh tỉ số quá đà (hiệu ứng cooling down)
             if (xgA > 2.0) xgA = 2.0 + Math.log(xgA - 1.0);
@@ -2759,10 +2961,101 @@
             
             let goalsA = poissonRandom(xgA);
             let goalsB = poissonRandom(xgB);
+
+            // Giảm tỉ lệ các trận đấu có số bàn thắng lớn
+            let totalGoals = goalsA + goalsB;
+            if (totalGoals === 6) {
+                if (Math.random() < 0.45) {
+                    let factor = 0.67;
+                    let oldA = goalsA, oldB = goalsB;
+                    goalsA = Math.round(goalsA * factor);
+                    goalsB = Math.round(goalsB * factor);
+                    if (oldA > oldB && goalsA <= goalsB) goalsA = goalsB + 1;
+                    else if (oldB > oldA && goalsB <= goalsA) goalsB = goalsA + 1;
+                    else if (oldA === oldB) goalsA = goalsB;
+                }
+            } else if (totalGoals >= 7) {
+                if (Math.random() < 0.92) {
+                    let factor = 0.50;
+                    let oldA = goalsA, oldB = goalsB;
+                    goalsA = Math.round(goalsA * factor);
+                    goalsB = Math.round(goalsB * factor);
+                    if (oldA > oldB && goalsA <= goalsB) goalsA = goalsB + 1;
+                    else if (oldB > oldA && goalsB <= goalsA) goalsB = goalsA + 1;
+                    else if (oldA === oldB) goalsA = goalsB;
+                }
+            }
+
+            // Scoreline adjustments
+            let scoreAdjustRoll = Math.random();
+            if (scoreAdjustRoll < 0.45) { // 45% chance to nudge scoreline
+                let maxG = Math.max(goalsA, goalsB);
+                let minG = Math.min(goalsA, goalsB);
+                let diff = maxG - minG;
+                
+                // 1. Decrease extreme scorelines (e.g. 5-0, 5-1, 6-0...)
+                if (maxG >= 5 && diff >= 4) {
+                    if (goalsA > goalsB) {
+                        goalsA = Math.random() < 0.5 ? 3 : 4;
+                        if (goalsB > 0) goalsB = 1;
+                    } else {
+                        goalsB = Math.random() < 0.5 ? 3 : 4;
+                        if (goalsA > 0) goalsA = 1;
+                    }
+                } else if (maxG >= 5 && diff === 3) {
+                    // e.g. 5-2 -> 3-1 or 4-1
+                    if (goalsA > goalsB) {
+                        goalsA = Math.random() < 0.5 ? 3 : 4;
+                        goalsB = 1;
+                    } else {
+                        goalsB = Math.random() < 0.5 ? 3 : 4;
+                        goalsA = 1;
+                    }
+                }
+                // 2. Nudge common competitive scorelines (1-0, 1-1, 2-1, 3-1)
+                else if (goalsA === 2 && goalsB === 0) {
+                    if (Math.random() < 0.20) goalsA = 1;
+                    else goalsB = 1;
+                } else if (goalsA === 0 && goalsB === 2) {
+                    if (Math.random() < 0.20) goalsB = 1;
+                    else goalsA = 1;
+                } else if (goalsA === 3 && goalsB === 0) {
+                    goalsB = 1;
+                    if (Math.random() < 0.7) goalsA = 2;
+                } else if (goalsA === 0 && goalsB === 3) {
+                    goalsA = 1;
+                    if (Math.random() < 0.7) goalsB = 2;
+                } else if (goalsA === 1 && goalsB === 0) {
+                    let r = Math.random();
+                    if (r < 0.35) { goalsA = 1; goalsB = 1; }
+                    else if (r < 0.70) { goalsA = 2; goalsB = 1; }
+                } else if (goalsA === 0 && goalsB === 1) {
+                    let r = Math.random();
+                    if (r < 0.35) { goalsA = 1; goalsB = 1; }
+                    else if (r < 0.70) { goalsA = 1; goalsB = 2; }
+                } else if (goalsA === 2 && goalsB === 2) {
+                    if (Math.random() < 0.60) { goalsA = 1; goalsB = 1; }
+                } else if (goalsA === 3 && goalsB === 1) {
+                    if (Math.random() < 0.65) { goalsA = 2; goalsB = 1; }
+                } else if (goalsA === 1 && goalsB === 3) {
+                    if (Math.random() < 0.65) { goalsA = 1; goalsB = 2; }
+                } else if (goalsA === 3 && goalsB === 2) {
+                    if (Math.random() < 0.40) { goalsA = 2; goalsB = 1; }
+                } else if (goalsA === 2 && goalsB === 3) {
+                    if (Math.random() < 0.40) { goalsA = 1; goalsB = 2; }
+                } else if (goalsA === 0 && goalsB === 0) {
+                    if (Math.random() < 0.90) {
+                        goalsA = 1; goalsB = 1;
+                    } else {
+                        if (Math.random() < 0.3) {
+                            if (Math.random() < 0.5) goalsA = 1;
+                            else goalsB = 1;
+                        }
+                    }
+                }
+            }
             
             // --- NEW: Possession Simulation ---
-            let midA = teamA.mid + (isHome ? 2.0 : 0.0);
-            let midB = teamB.mid + (!isHome ? 2.0 : 0.0);
             let midDiff = midA - midB;
             let possA = 50 + midDiff * 1.5;
             possA = Math.max(30, Math.min(70, possA)); // Clamped to [30, 70]
@@ -2780,7 +3073,7 @@
             let scorersA = [];
             for (let i = 0; i < goalsA; i++) {
                 let scorer = selectGoalscorer(rosterA, scorersA);
-                let minute = Math.floor(Math.random() * 90) + 1;
+                let minute = generateNormalTimeMinute();
                 scorersA.push({ name: scorer.name, minute });
             }
             scorersA.sort((a, b) => a.minute - b.minute);
@@ -2788,7 +3081,7 @@
             let scorersB = [];
             for (let i = 0; i < goalsB; i++) {
                 let scorer = selectGoalscorer(rosterB, scorersB);
-                let minute = Math.floor(Math.random() * 90) + 1;
+                let minute = generateNormalTimeMinute();
                 scorersB.push({ name: scorer.name, minute });
             }
             scorersB.sort((a, b) => a.minute - b.minute);
@@ -2942,7 +3235,7 @@
         // Simulate Playoff lượt về + tính winner
         simulatePlayoffLeg2() {
             this.playoffMatches.forEach(m => {
-                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true);
+                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true, { teamAScore: m.goalsAway1, teamBScore: m.goalsHome1 });
                 m.goalsHome2 = res.goalsA;
                 m.goalsAway2 = res.goalsB;
                 m.xgHome2 = res.xgA;
@@ -2957,13 +3250,28 @@
                 let aggA = m.goalsAway1 + m.goalsHome2;
                 let aggB = m.goalsHome1 + m.goalsAway2;
 
+                if (aggA === aggB) {
+                    this.simulateExtraTimeForKnockout(m);
+                    aggA = m.goalsAway1 + m.goalsHome2;
+                    aggB = m.goalsHome1 + m.goalsAway2;
+                }
+
                 if (aggA > aggB) {
                     m.winner = m.awayLeg1;
                 } else if (aggA < aggB) {
                     m.winner = m.homeLeg1;
                 } else {
-                    m.winner = Math.random() < 0.5 ? m.awayLeg1 : m.homeLeg1;
+                    m.winner = this.resolvePenaltyShootout(m.awayLeg1, m.homeLeg1);
                     m.penaltyWinner = m.winner.name;
+                    const winScore = 5;
+                    const loseScore = Math.random() < 0.5 ? 4 : 3;
+                    if (m.winner === m.awayLeg1) {
+                        m.penaltyA = winScore;
+                        m.penaltyB = loseScore;
+                    } else {
+                        m.penaltyA = loseScore;
+                        m.penaltyB = winScore;
+                    }
                 }
             });
             this.roundPhase = "results";
@@ -3019,7 +3327,7 @@
         // Simulate R16 lượt về
         simulateR16Leg2() {
             this.r16Matches.forEach(m => {
-                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true);
+                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true, { teamAScore: m.goalsAway1, teamBScore: m.goalsHome1 });
                 m.goalsHome2 = res.goalsA;
                 m.goalsAway2 = res.goalsB;
                 m.xgHome2 = res.xgA;
@@ -3034,13 +3342,28 @@
                 let aggSeeded = m.goalsAway1 + m.goalsHome2;
                 let aggUnseeded = m.goalsHome1 + m.goalsAway2;
 
+                if (aggSeeded === aggUnseeded) {
+                    this.simulateExtraTimeForKnockout(m);
+                    aggSeeded = m.goalsAway1 + m.goalsHome2;
+                    aggUnseeded = m.goalsHome1 + m.goalsAway2;
+                }
+
                 if (aggSeeded > aggUnseeded) {
                     m.winner = m.awayLeg1;
                 } else if (aggSeeded < aggUnseeded) {
                     m.winner = m.homeLeg1;
                 } else {
-                    m.winner = Math.random() < 0.5 ? m.awayLeg1 : m.homeLeg1;
+                    m.winner = this.resolvePenaltyShootout(m.awayLeg1, m.homeLeg1);
                     m.penaltyWinner = m.winner.name;
+                    const winScore = 5;
+                    const loseScore = Math.random() < 0.5 ? 4 : 3;
+                    if (m.winner === m.awayLeg1) {
+                        m.penaltyA = winScore;
+                        m.penaltyB = loseScore;
+                    } else {
+                        m.penaltyA = loseScore;
+                        m.penaltyB = winScore;
+                    }
                 }
             });
             this.roundPhase = "results";
@@ -3091,7 +3414,7 @@
         // Simulate QF lượt về
         simulateQFLeg2() {
             this.qfMatches.forEach(m => {
-                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true);
+                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true, { teamAScore: m.goalsAway1, teamBScore: m.goalsHome1 });
                 m.goalsHome2 = res.goalsA;
                 m.goalsAway2 = res.goalsB;
                 m.xgHome2 = res.xgA;
@@ -3106,13 +3429,28 @@
                 let aggH = m.goalsHome1 + m.goalsAway2;
                 let aggA = m.goalsAway1 + m.goalsHome2;
 
+                if (aggH === aggA) {
+                    this.simulateExtraTimeForKnockout(m);
+                    aggH = m.goalsHome1 + m.goalsAway2;
+                    aggA = m.goalsAway1 + m.goalsHome2;
+                }
+
                 if (aggH > aggA) {
                     m.winner = m.homeLeg1;
                 } else if (aggH < aggA) {
                     m.winner = m.awayLeg1;
                 } else {
-                    m.winner = Math.random() < 0.5 ? m.homeLeg1 : m.awayLeg1;
+                    m.winner = this.resolvePenaltyShootout(m.homeLeg1, m.awayLeg1);
                     m.penaltyWinner = m.winner.name;
+                    const winScore = 5;
+                    const loseScore = Math.random() < 0.5 ? 4 : 3;
+                    if (m.winner === m.homeLeg1) {
+                        m.penaltyA = winScore;
+                        m.penaltyB = loseScore;
+                    } else {
+                        m.penaltyA = loseScore;
+                        m.penaltyB = winScore;
+                    }
                 }
             });
             this.roundPhase = "results";
@@ -3163,7 +3501,7 @@
         // Simulate SF lượt về
         simulateSFLeg2() {
             this.sfMatches.forEach(m => {
-                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true);
+                let res = this.simulateMatch(m.awayLeg1, m.homeLeg1, true, { teamAScore: m.goalsAway1, teamBScore: m.goalsHome1 });
                 m.goalsHome2 = res.goalsA;
                 m.goalsAway2 = res.goalsB;
                 m.xgHome2 = res.xgA;
@@ -3178,13 +3516,28 @@
                 let aggH = m.goalsHome1 + m.goalsAway2;
                 let aggA = m.goalsAway1 + m.goalsHome2;
 
+                if (aggH === aggA) {
+                    this.simulateExtraTimeForKnockout(m);
+                    aggH = m.goalsHome1 + m.goalsAway2;
+                    aggA = m.goalsAway1 + m.goalsHome2;
+                }
+
                 if (aggH > aggA) {
                     m.winner = m.homeLeg1;
                 } else if (aggH < aggA) {
                     m.winner = m.awayLeg1;
                 } else {
-                    m.winner = Math.random() < 0.5 ? m.homeLeg1 : m.awayLeg1;
+                    m.winner = this.resolvePenaltyShootout(m.homeLeg1, m.awayLeg1);
                     m.penaltyWinner = m.winner.name;
+                    const winScore = 5;
+                    const loseScore = Math.random() < 0.5 ? 4 : 3;
+                    if (m.winner === m.homeLeg1) {
+                        m.penaltyA = winScore;
+                        m.penaltyB = loseScore;
+                    } else {
+                        m.penaltyA = loseScore;
+                        m.penaltyB = winScore;
+                    }
                 }
             });
             this.roundPhase = "results";
@@ -3210,6 +3563,39 @@
             };
         }
 
+        simulateExtraTimeForKnockout(m) {
+            let powerHome = m.awayLeg1.atk + 2.5; // awayLeg1 is home in Leg 2
+            let powerAway = m.homeLeg1.atk;       // homeLeg1 is away in Leg 2
+            let xgHomeET = Math.max(0.05, (1.35 + (powerHome - m.homeLeg1.def) / 12) * (30 / 90) * 0.85);
+            let xgAwayET = Math.max(0.05, (1.35 + (powerAway - m.awayLeg1.def) / 12) * (30 / 90) * 0.85);
+            
+            let goalsHomeET = poissonRandom(xgHomeET);
+            let goalsAwayET = poissonRandom(xgAwayET);
+            
+            m.goalsHome2 += goalsHomeET;
+            m.goalsAway2 += goalsAwayET;
+            m.xgHome2 = parseFloat((m.xgHome2 + xgHomeET).toFixed(2));
+            m.xgAway2 = parseFloat((m.xgAway2 + xgAwayET).toFixed(2));
+            m.shotsHome2 += Math.max(goalsHomeET, Math.round(xgHomeET * 5 + Math.random() * 2));
+            m.shotsAway2 += Math.max(goalsAwayET, Math.round(xgAwayET * 5 + Math.random() * 2));
+            
+            let rosterHome = getRosterForTeam(m.awayLeg1.name, m.awayLeg1.isUser, m.awayLeg1.country);
+            let rosterAway = getRosterForTeam(m.homeLeg1.name, m.homeLeg1.isUser, m.homeLeg1.country);
+            
+            for (let i = 0; i < goalsHomeET; i++) {
+                let scorer = selectGoalscorer(rosterHome, m.scorersHome2);
+                let minute = generateExtraTimeMinute();
+                m.scorersHome2.push({ name: scorer.name, minute });
+            }
+            for (let i = 0; i < goalsAwayET; i++) {
+                let scorer = selectGoalscorer(rosterAway, m.scorersAway2);
+                let minute = generateExtraTimeMinute();
+                m.scorersAway2.push({ name: scorer.name, minute });
+            }
+            m.scorersHome2.sort((a, b) => a.minute - b.minute);
+            m.scorersAway2.sort((a, b) => a.minute - b.minute);
+        }
+
         // Simulate Chung kết
         simulateFinal() {
             let m = this.finalMatch;
@@ -3225,12 +3611,46 @@
             m.scorersA = res.scorersA;
             m.scorersB = res.scorersB;
 
+            if (m.goalsA === m.goalsB) {
+                // Simulate extra time
+                let powerA = m.teamA.atk;
+                let powerB = m.teamB.atk;
+                let xgA_ET = Math.max(0.05, (1.35 + (powerA - m.teamB.def) / 12) * (30 / 90) * 0.85);
+                let xgB_ET = Math.max(0.05, (1.35 + (powerB - m.teamA.def) / 12) * (30 / 90) * 0.85);
+                
+                let goalsA_ET = poissonRandom(xgA_ET);
+                let goalsB_ET = poissonRandom(xgB_ET);
+                
+                m.goalsA += goalsA_ET;
+                m.goalsB += goalsB_ET;
+                m.xgA = parseFloat((m.xgA + xgA_ET).toFixed(2));
+                m.xgB = parseFloat((m.xgB + xgB_ET).toFixed(2));
+                m.shotsA += Math.max(goalsA_ET, Math.round(xgA_ET * 5 + Math.random() * 2));
+                m.shotsB += Math.max(goalsB_ET, Math.round(xgB_ET * 5 + Math.random() * 2));
+                
+                let rosterA = getRosterForTeam(m.teamA.name, m.teamA.isUser, m.teamA.country);
+                let rosterB = getRosterForTeam(m.teamB.name, m.teamB.isUser, m.teamB.country);
+                
+                for (let i = 0; i < goalsA_ET; i++) {
+                    let scorer = selectGoalscorer(rosterA, m.scorersA);
+                    let minute = generateExtraTimeMinute();
+                    m.scorersA.push({ name: scorer.name, minute });
+                }
+                for (let i = 0; i < goalsB_ET; i++) {
+                    let scorer = selectGoalscorer(rosterB, m.scorersB);
+                    let minute = generateExtraTimeMinute();
+                    m.scorersB.push({ name: scorer.name, minute });
+                }
+                m.scorersA.sort((a, b) => a.minute - b.minute);
+                m.scorersB.sort((a, b) => a.minute - b.minute);
+            }
+
             if (m.goalsA > m.goalsB) {
                 m.winner = m.teamA;
             } else if (m.goalsA < m.goalsB) {
                 m.winner = m.teamB;
             } else {
-                m.winner = Math.random() < 0.5 ? m.teamA : m.teamB;
+                m.winner = this.resolvePenaltyShootout(m.teamA, m.teamB);
                 m.penaltyWinner = m.winner.name;
                 const winScore = 5;
                 const loseScore = Math.random() < 0.5 ? 4 : 3;

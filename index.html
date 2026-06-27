@@ -3518,6 +3518,12 @@
         .bracket-match-row.winner { font-weight: 700; color: #c9a227; }
         .bracket-match-row.loser { opacity: 0.4; }
         .bracket-match-row.winner .score-cell { color: #c9a227; background: rgba(201,162,39,0.15); }
+        .bracket-match-row .score-cell {
+            display: inline-block;
+            width: 26px;
+            text-align: center;
+            padding: 0.1rem 0;
+        }
         .score-cell {
             font-family: 'Plus Jakarta Sans', monospace;
             font-weight: 700;
@@ -6932,10 +6938,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             <!-- Scorers -->
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.55rem; color: rgba(255,255,255,0.85); line-height: 1.4;">
                                 <div style="text-align: left; flex: 1; padding-right: 0.35rem;">
-                                    ${sH.map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                    ${window.groupScorers(sH).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minutes.join(', ')})</div>`).join('')}
                                 </div>
                                 <div style="text-align: right; flex: 1; padding-left: 0.35rem;">
-                                    ${sA.map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                    ${window.groupScorers(sA).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minutes.join(', ')})</div>`).join('')}
                                 </div>
                             </div>
                             <!-- Stats Comparison -->
@@ -7216,10 +7222,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     ${m.goalsA !== null ? `
                     <div style="display:flex;justify-content:space-between;margin-top:0.85rem;padding:0.6rem 0.85rem;background:rgba(0,0,0,0.25);border-radius:8px;border:1px solid rgba(201,162,39,0.2);font-size:0.82rem;line-height:1.7;">
                         <div style="text-align:left;flex:1;padding-right:0.5rem;">
-                            ${(m.scorersA || []).map(s => `<div style="color:rgba(255,255,255,0.9);">⚽ <strong>${s.name}</strong> <span style="color:rgba(255,255,255,0.4);font-size:0.74rem;">${s.minute}'</span></div>`).join('') || `<div style="color:rgba(255,255,255,0.25);font-style:italic;font-size:0.78rem;">—</div>`}
+                            ${window.groupScorers(m.scorersA || []).map(s => `<div style="color:rgba(255,255,255,0.9);">⚽ <strong>${s.name}</strong> <span style="color:rgba(255,255,255,0.4);font-size:0.74rem;">(${s.minutes.join(', ')})</span></div>`).join('') || `<div style="color:rgba(255,255,255,0.25);font-style:italic;font-size:0.78rem;">—</div>`}
                         </div>
                         <div style="text-align:right;flex:1;padding-left:0.5rem;">
-                            ${(m.scorersB || []).map(s => `<div style="color:rgba(255,255,255,0.9);"><span style="color:rgba(255,255,255,0.4);font-size:0.74rem;">${s.minute}'</span> <strong>${s.name}</strong> ⚽</div>`).join('') || `<div style="color:rgba(255,255,255,0.25);font-style:italic;font-size:0.78rem;">—</div>`}
+                            ${window.groupScorers(m.scorersB || []).map(s => `<div style="color:rgba(255,255,255,0.9);"><span style="color:rgba(255,255,255,0.4);font-size:0.74rem;">(${s.minutes.join(', ')})</span> <strong>${s.name}</strong> ⚽</div>`).join('') || `<div style="color:rgba(255,255,255,0.25);font-style:italic;font-size:0.78rem;">—</div>`}
                         </div>
                     </div>` : ''}
                     ${finalDetailsHTML}
@@ -7267,10 +7273,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 <div style="font-weight: 700; color: rgba(201,162,39,0.95); margin-bottom: 0.25rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em;">Lượt đi (Sân ${m.homeLeg1.name}):</div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: rgba(255,255,255,0.85); line-height: 1.4;">
                                     <div style="text-align: left; flex: 1; padding-right: 0.35rem;">
-                                        ${(m.scorersHome1 || []).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                        ${window.groupScorers(m.scorersHome1 || []).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minutes.join(', ')})</div>`).join('')}
                                     </div>
                                     <div style="text-align: right; flex: 1; padding-left: 0.35rem;">
-                                        ${(m.scorersAway1 || []).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                        ${window.groupScorers(m.scorersAway1 || []).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minutes.join(', ')})</div>`).join('')}
                                     </div>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 0.35rem; ${leg2Played ? 'margin-bottom: 0.75rem; border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 0.5rem;' : ''}">
@@ -7297,28 +7303,28 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 <div style="font-weight: 700; color: rgba(201,162,39,0.95); margin-bottom: 0.25rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em;">Lượt về (Sân ${m.awayLeg1.name}):</div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: rgba(255,255,255,0.85); line-height: 1.4;">
                                     <div style="text-align: left; flex: 1; padding-right: 0.35rem;">
-                                        ${(m.scorersHome2 || []).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                        ${window.groupScorers(m.scorersAway2 || []).map(s => `<div style="display:flex; align-items:center; gap:3px;">${s.name} (${s.minutes.join(', ')})</div>`).join('')}
                                     </div>
                                     <div style="text-align: right; flex: 1; padding-left: 0.35rem;">
-                                        ${(m.scorersAway2 || []).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minute}')</div>`).join('')}
+                                        ${window.groupScorers(m.scorersHome2 || []).map(s => `<div style="display:flex; align-items:center; justify-content:flex-end; gap:3px;">${s.name} (${s.minutes.join(', ')})</div>`).join('')}
                                     </div>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 0.35rem;">
                                     <div>
                                         <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-bottom: 2px;">
-                                            <span>${m.possessionHome2}%</span>
-                                            <span>Kiểm soát</span>
                                             <span>${m.possessionAway2}%</span>
+                                            <span>Kiểm soát</span>
+                                            <span>${m.possessionHome2}%</span>
                                         </div>
                                         <div style="display: flex; height: 3px; background: rgba(255,255,255,0.08); border-radius: 1.5px; overflow: hidden;">
-                                            <div style="width: ${m.possessionHome2}%; background: #3b82f6;"></div>
-                                            <div style="width: ${m.possessionAway2}%; background: #f43f5e;"></div>
+                                            <div style="width: ${m.possessionAway2}%; background: #3b82f6;"></div>
+                                            <div style="width: ${m.possessionHome2}%; background: #f43f5e;"></div>
                                         </div>
                                     </div>
                                     <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 2px;">
-                                        <span>Sút: ${m.shotsHome2}</span>
-                                        <span>xG: ${m.xgHome2 ? m.xgHome2.toFixed(2) : '0.00'} - ${m.xgAway2 ? m.xgAway2.toFixed(2) : '0.00'}</span>
                                         <span>Sút: ${m.shotsAway2}</span>
+                                        <span>xG: ${m.xgAway2 ? m.xgAway2.toFixed(2) : '0.00'} - ${m.xgHome2 ? m.xgHome2.toFixed(2) : '0.00'}</span>
+                                        <span>Sút: ${m.shotsHome2}</span>
                                     </div>
                                 </div>
                             ` : ''}
@@ -7650,10 +7656,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         ${m.penaltyWinner ? `<div style="font-size:0.78rem;color:#f59e0b;font-weight:600;margin-top:0.4rem;">(Luân lưu: ${m.winner.name} thắng ${m.penaltyA}–${m.penaltyB})</div>` : ''}
                         <div style="display:flex;justify-content:space-between;margin-top:0.65rem;padding-top:0.55rem;border-top:1px solid rgba(255,255,255,0.06);font-size:0.8rem;line-height:1.65;text-align:left;">
                             <div style="flex:1;padding-right:0.5rem;">
-                                ${(m.scorersA || []).map(s => `<div style="color:rgba(255,255,255,0.85);">⚽ <strong>${s.name}</strong> <span style="color:rgba(255,255,255,0.35);font-size:0.72rem;">${s.minute}'</span></div>`).join('') || `<div style="color:rgba(255,255,255,0.2);font-style:italic;font-size:0.76rem;">—</div>`}
+                                ${window.groupScorers(m.scorersA || []).map(s => `<div style="color:rgba(255,255,255,0.85);">⚽ <strong>${s.name}</strong> <span style="color:rgba(255,255,255,0.35);font-size:0.72rem;">(${s.minutes.join(', ')})</span></div>`).join('') || `<div style="color:rgba(255,255,255,0.2);font-style:italic;font-size:0.76rem;">—</div>`}
                             </div>
                             <div style="flex:1;padding-left:0.5rem;text-align:right;">
-                                ${(m.scorersB || []).map(s => `<div style="color:rgba(255,255,255,0.85);"><span style="color:rgba(255,255,255,0.35);font-size:0.72rem;">${s.minute}'</span> <strong>${s.name}</strong> ⚽</div>`).join('') || `<div style="color:rgba(255,255,255,0.2);font-style:italic;font-size:0.76rem;">—</div>`}
+                                ${window.groupScorers(m.scorersB || []).map(s => `<div style="color:rgba(255,255,255,0.85);"><span style="color:rgba(255,255,255,0.35);font-size:0.72rem;">(${s.minutes.join(', ')})</span> <strong>${s.name}</strong> ⚽</div>`).join('') || `<div style="color:rgba(255,255,255,0.2);font-style:italic;font-size:0.76rem;">—</div>`}
                             </div>
                         </div>
                     </div>
