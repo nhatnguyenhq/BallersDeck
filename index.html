@@ -4358,9 +4358,47 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         }
 
         // Load data from LocalStorage or seed defaults
+        const DB_VERSION_KEY = 'pitchdeck_db_version_v3';
+        const DB_CURRENT_VERSION = 'v3.2';
+
         function loadDatabase() {
+            const savedVersion = localStorage.getItem(DB_VERSION_KEY);
             const savedPlayers = localStorage.getItem('pitchdeck_players');
             const savedSquad = localStorage.getItem('pitchdeck_squad');
+
+            // Force update standard database if version is outdated or missing
+            if (savedVersion !== DB_CURRENT_VERSION) {
+                let customPlayers = [];
+                if (savedPlayers) {
+                    try {
+                        const parsed = JSON.parse(savedPlayers);
+                        customPlayers = parsed.filter(p => p.id && p.id.startsWith('player-'));
+                    } catch (e) {
+                        console.warn("Failed to parse existing players, resetting entirely", e);
+                    }
+                }
+                players = [...DEFAULT_PLAYERS, ...customPlayers];
+                
+                // Clean up squad players that don't exist anymore
+                if (savedSquad) {
+                    try {
+                        squad = JSON.parse(savedSquad);
+                        for (let slot in squad) {
+                            if (squad[slot] && !players.some(p => p.id === squad[slot])) {
+                                squad[slot] = null;
+                            }
+                        }
+                    } catch (e) {
+                        squad = {};
+                    }
+                } else {
+                    squad = {};
+                }
+                
+                localStorage.setItem(DB_VERSION_KEY, DB_CURRENT_VERSION);
+                saveDatabase();
+                return;
+            }
 
             if (savedPlayers) {
                 try {
@@ -4627,15 +4665,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         if (p.cardTheme === 'worldcup26') {
                             let targetPhoto = "";
                             const nameKey = (p.cardName || p.name || '').toLowerCase().trim();
-                            if (nameKey.includes("messi")) {
-                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg";
-                            } else if (nameKey.includes("ronaldo")) {
-                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/8/8b/Cristiano_Ronaldo_WC2022_-_01_%28cropped%29.jpg";
-                            } else if (nameKey.includes("yamal")) {
-                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lamine_Yamal_in_2025_%28cropped%29.jpg";
-                            } else if (nameKey.includes("cubars")) {
-                                targetPhoto = "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pau_Cubars%C3%AD_%28cropped%29.jpg";
-                            }
+
 
                             if (targetPhoto && p.photo !== targetPhoto) {
                                 p.photo = targetPhoto;
@@ -4739,6 +4769,42 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                             needsSave = true;
                         }
                     }
+
+                    // Remove Yoane Wissa 79 (wissa-brentford) from local storage
+                    const beforeWissaLen = players.length;
+                    players = players.filter(p => p.id !== 'wissa-brentford');
+                    if (players.length !== beforeWissaLen) {
+                        needsSave = true;
+                    }
+                    for (let slot in squad) {
+                        if (squad[slot] === 'wissa-brentford') {
+                            squad[slot] = 'wissa-newcastle'; // Redirect to the 80-rated Wissa
+                            needsSave = true;
+                        }
+                    }
+
+                    // Force sync details for transferred players
+                    const transfersToSync = [
+                        { id: "walker-2", club: "Burnley", league: "EFL Championship" },
+                        { id: "endrick-16", club: "Lyon", league: "Ligue 1" },
+                        { id: "disasi-2", club: "Aston Villa", league: "Premier League" },
+                        { id: "garnacho-17", club: "Chelsea", league: "Premier League" },
+                        { id: "eriksen-14", club: "Wolfsburg", league: "Bundesliga" },
+                        { id: "onana-24", club: "Trabzonspor", league: "Süper Lig" },
+                        { id: "antony-21", club: "Real Betis", league: "La Liga", photo: "" }
+                    ];
+
+                    transfersToSync.forEach(t => {
+                        const p = players.find(x => x.id === t.id);
+                        if (p) {
+                            if (p.club !== t.club || p.league !== t.league || (t.photo !== undefined && p.photo !== t.photo)) {
+                                p.club = t.club;
+                                p.league = t.league;
+                                if (t.photo !== undefined) p.photo = t.photo;
+                                needsSave = true;
+                            }
+                        }
+                    });
 
                     // Merge any missing DEFAULT_PLAYERS automatically and update changed photos
                     DEFAULT_PLAYERS.forEach(dp => {

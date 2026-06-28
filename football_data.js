@@ -17,7 +17,14 @@ const LEAGUES_DATA = {
             "Argentina 78",
             "Germany 74",
             "Brazil 70",
-            "England 66"
+            "England 66",
+            "Brazil 62",
+            "Brazil 58",
+            "Germany 54",
+            "Uruguay 50",
+            "Italy 38",
+            "Italy 34",
+            "Uruguay 30"
         ],
         "badge": "👑"
     },
@@ -955,6 +962,7 @@ const COUNTRY_FLAGS = {
     "northern ireland": "🇬🇧",
     "hungary": "🇭🇺",
     "guinea": "🇬🇳",
+    "guinea-bissau": "🇬🇼",
     "denmark": "🇩🇰",
     "slovenia": "🇸🇮",
     "nigeria": "🇳🇬",
@@ -1088,6 +1096,7 @@ const COUNTRY_CODES = {
     "northern ireland": "gb-nir",
     "hungary": "hu",
     "guinea": "gn",
+    "guinea-bissau": "gw",
     "denmark": "dk",
     "slovenia": "si",
     "nigeria": "ng",
@@ -1385,13 +1394,13 @@ const DEFAULT_PLAYERS = [
         "club": "Al Nassr",
         "clubBadge": "💛💙",
         "position": "LM",
-        "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cify0u1678370417.png",
         "altPositions": [
             "LW",
             "ST"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cify0u1678370417.png",
+        "cardTheme": "standard"
     },
     {
         "id": "laporte-alnassr",
@@ -1404,8 +1413,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💛💙",
         "position": "CB",
         "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q4eqw31762285953.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q4eqw31762285953.png",
+        "cardTheme": "standard"
     },
     {
         "id": "simakan-alnassr",
@@ -1417,12 +1426,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Nassr",
         "clubBadge": "💛💙",
         "position": "CB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0xzawc1679755437.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0xzawc1679755437.png",
+        "cardTheme": "standard"
     },
     {
         "id": "brozovic-alnassr",
@@ -1434,12 +1443,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Nassr",
         "clubBadge": "💛💙",
         "position": "CDM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8omb8c1679049281.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8omb8c1679049281.png",
+        "cardTheme": "standard"
     },
     {
         "id": "otavio-alnassr",
@@ -1451,13 +1460,13 @@ const DEFAULT_PLAYERS = [
         "club": "Al Nassr",
         "clubBadge": "💛💙",
         "position": "CAM",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dkg4cz1679049726.png",
         "altPositions": [
             "RM",
             "LM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dkg4cz1679049726.png",
+        "cardTheme": "standard"
     },
     {
         "id": "talisca-alnassr",
@@ -1502,12 +1511,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Nassr",
         "clubBadge": "💛💙",
         "position": "RW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uryusw1432697607.png",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uryusw1432697607.png",
+        "cardTheme": "standard"
     },
     {
         "id": "alghannam-alnassr",
@@ -1519,12 +1528,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Nassr",
         "clubBadge": "💛💙",
         "position": "RB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "ghareeb-alnassr",
@@ -1584,8 +1593,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💚🤍",
         "position": "ST",
         "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ozy92w1771663597.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ozy92w1771663597.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mahrez-alahli",
@@ -1614,12 +1623,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ahli",
         "clubBadge": "💚🤍",
         "position": "CDM",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wcmpma1771663848.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wcmpma1771663848.png",
+        "cardTheme": "standard"
     },
     {
         "id": "veiga-alahli",
@@ -1647,13 +1656,13 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ahli",
         "clubBadge": "💚🤍",
         "position": "CF",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/scrpln1632777072.png",
         "altPositions": [
             "ST",
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/scrpln1632777072.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ibanez-alahli",
@@ -1666,8 +1675,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💚🤍",
         "position": "CB",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v5oj711771663666.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v5oj711771663666.png",
+        "cardTheme": "standard"
     },
     {
         "id": "demiral-alahli",
@@ -1708,13 +1717,13 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ahli",
         "clubBadge": "💚🤍",
         "position": "ST",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://www.thesportsdb.com/images/media/player/cutout/16sp4v1777237767.png",
         "altPositions": [
             "LW",
             "LM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://www.thesportsdb.com/images/media/player/cutout/16sp4v1777237767.png",
+        "cardTheme": "standard"
     },
     {
         "id": "alexsandro-alahli",
@@ -1727,8 +1736,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💚🤍",
         "position": "LB",
         "rating": 75,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "hurayji-alahli",
@@ -1740,12 +1749,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ahli",
         "clubBadge": "💚🤍",
         "position": "RB",
-        "rating": 69,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "johani-alahli",
@@ -1757,12 +1766,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ahli",
         "clubBadge": "💚🤍",
         "position": "CM",
-        "rating": 68,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 68,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "messi-wc26",
@@ -1772,11 +1781,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "RW",
         "altPositions": [],
         "rating": 93,
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
+        "photo": "https://cdn.24h.com.vn/upload/2-2026/images/2026-06-24/Messi-sinh-nhat-tuoi-39-Ly-ruou-vang-hao-hang-vi-dai-nhat-moi-thoi-dai-10-1782265406-456-width740height493.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -1790,7 +1798,7 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "altPositions": [],
         "rating": 87,
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Cristiano_Ronaldo_WC2022_-_01_%28cropped%29.jpg",
+        "photo": "https://cdnphoto.dantri.com.vn/SxVOzlztAuiRsuXfYmCEXo2Do9g=/thumb_w/1020/2026/06/24/ronaldo1-1782259241387.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -1816,11 +1824,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "RW",
         "altPositions": [],
         "rating": 92,
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lamine_Yamal_in_2025_%28cropped%29.jpg",
+        "photo": "https://www.aljazeera.com/wp-content/uploads/2026/06/2026-06-21T162208Z_1004867851_UP1EM6L1978IE_RTRMADP_3_SOCCER-WORLDCUP-ESP-SAU-1782076768.jpg?resize=770%2C513&quality=80",
         "cardTheme": "worldcup26"
     },
     {
@@ -1831,11 +1838,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pau_Cubars%C3%AD_%28cropped%29.jpg",
+        "photo": "https://preview.redd.it/cubarsi-deserves-more-recognition-v0-rcliz6erco8h1.jpeg?width=640&crop=smart&auto=webp&s=3d2216848a4a54ca079a0e8a3a28647266be7da8",
         "cardTheme": "worldcup26"
     },
     {
@@ -2710,16 +2716,16 @@ const DEFAULT_PLAYERS = [
     },
     {
         "id": "balerdi-wc26",
-        "name": "Leonardo Balerdi",
-        "cardName": "Balerdi",
+        "name": "Marcos Senesi",
+        "cardName": "Senesi",
         "nationality": "Argentina",
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CB",
-        "rating": 81,
-        "photo": "",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "https://scontent.fhan2-4.fna.fbcdn.net/v/t39.99422-6/734685279_1662797524828185_4160138034575427286_n.png?stp=dst-jpg_tt6&cstp=mx1638x2048&ctp=s1638x2048&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHoRFtZ1jt7d-Ps5Z4qlrj07oCwTFLZmUPugLBMUtmZQ4o12GZoXrg7u_WVxRzG1OS4-AracPiHFV0JDgRFNuKe&_nc_ohc=OQUu6_gBoh4Q7kNvwHPwDi3&_nc_oc=Ado9WU0uNlGmpgXIq-p_2zkSRPpOe1lpIU2KAtcdU_i49u5uJaMysKMAfcvYBDsTgb8&_nc_zt=14&_nc_ht=scontent.fhan2-4.fna&_nc_gid=lh2VGzp1u_GJAHyLAMLReA&_nc_ss=7b2a8&oh=00_Af_aM2y9giHIiYg1WYKyqUaF8K1aQwXZ63sfVuBShQEjrg&oe=6A46D14C",
         "cardTheme": "worldcup26"
     },
     {
@@ -2839,10 +2845,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CDM",
-        "altPositions": [],
-        "rating": 81,
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 83,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -2854,10 +2861,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CAM",
-        "altPositions": [],
-        "rating": 81,
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 83,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -2869,9 +2877,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CDM",
-        "rating": 81,
+        "altPositions": [],
+        "rating": 82,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -2974,10 +2982,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CAM",
         "altPositions": [],
-        "rating": 81,
+        "rating": 83,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -3150,11 +3157,10 @@ const DEFAULT_PLAYERS = [
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "Premier League",
-        "club": "Man City",
-        "clubBadge": "🔵",
+        "club": "Nottingham",
         "position": "GK",
         "altPositions": [],
-        "rating": 81,
+        "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a12eve1772031497.png",
         "cardTheme": "standard"
     },
@@ -3164,8 +3170,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Walker",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Premier League",
-        "club": "Man City",
+        "league": "EFL Championship",
+        "club": "Burnley",
         "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [
@@ -3394,8 +3400,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Onana",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "Premier League",
-        "club": "Man United",
+        "league": "Süper Lig",
+        "club": "Trabzonspor",
         "clubBadge": "😈",
         "position": "GK",
         "altPositions": [],
@@ -3551,8 +3557,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Eriksen",
         "nationality": "Denmark",
         "flag": "🇩🇰",
-        "league": "Premier League",
-        "club": "Man United",
+        "league": "Bundesliga",
+        "club": "Wolfsburg",
         "clubBadge": "😈",
         "position": "CM",
         "rating": 80,
@@ -3607,7 +3613,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Argentina",
         "flag": "🇦🇷",
         "league": "Premier League",
-        "club": "Man United",
+        "club": "Chelsea",
         "clubBadge": "😈",
         "position": "LW",
         "altPositions": [],
@@ -3634,12 +3640,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Antony",
         "nationality": "Brazil",
         "flag": "🇧🇷",
-        "league": "Premier League",
-        "club": "Man United",
-        "clubBadge": "😈",
+        "league": "La Liga",
+        "club": "Real Betis",
         "position": "RW",
+        "altPositions": [],
         "rating": 77,
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/olw7ts1653164187.jpg"
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "hojlund-9",
@@ -3981,7 +3988,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "France",
         "flag": "🇫🇷",
         "league": "Premier League",
-        "club": "Chelsea",
+        "club": "Aston Villa",
         "clubBadge": "🔵",
         "position": "CB",
         "rating": 79,
@@ -4288,10 +4295,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ynkck21768321682.png"
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ynkck21768321682.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cubarsi-2",
@@ -4753,8 +4761,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Endrick",
         "nationality": "Brazil",
         "flag": "🇧🇷",
-        "league": "La Liga",
-        "club": "Real Madrid",
+        "league": "Ligue 1",
+        "club": "Lyon",
         "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [],
@@ -4849,11 +4857,11 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "CB",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7dltx01769330396.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7dltx01769330396.png"
     },
     {
         "id": "mosquera-arsenal",
@@ -4863,10 +4871,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CB",
-        "rating": 77,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/heac4r1725565715.png"
+        "altPositions": [],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/heac4r1725565715.png",
+        "cardTheme": "standard"
     },
     {
         "id": "white-4",
@@ -4911,12 +4920,12 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "LB",
-        "rating": 73,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7g2c521769330817.png",
         "altPositions": [
             "CM",
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7g2c521769330817.png"
     },
     {
         "id": "rice-41",
@@ -4945,11 +4954,11 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "CDM",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lj71fn1769331598.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lj71fn1769331598.png"
     },
     {
         "id": "merino-arsenal",
@@ -5010,11 +5019,11 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "LW",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pnwfls1769331152.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pnwfls1769331152.png"
     },
     {
         "id": "trossard-19",
@@ -5026,12 +5035,12 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "LW",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/07fzpg1769331977.png",
         "altPositions": [
             "LM",
             "CF"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/07fzpg1769331977.png"
     },
     {
         "id": "gyokeres-arsenal",
@@ -5058,12 +5067,12 @@ const DEFAULT_PLAYERS = [
         "club": "Arsenal",
         "clubBadge": "🔴",
         "position": "ST",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hem4r91694204364.png",
         "altPositions": [
             "CAM",
             "CF"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hem4r91694204364.png"
     },
     {
         "id": "jesus-9",
@@ -5122,11 +5131,11 @@ const DEFAULT_PLAYERS = [
         "club": "Inter Milan",
         "clubBadge": "⚫🔵",
         "position": "CB",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/d9p3381766153512.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/d9p3381766153512.png"
     },
     {
         "id": "devrij-6",
@@ -5556,12 +5565,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 94,
-        "cardTheme": "icons",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/05rfes1760290387.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 94,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/05rfes1760290387.png",
+        "cardTheme": "icons"
     },
     {
         "id": "blaudrup-icons",
@@ -5591,8 +5600,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "",
         "position": "ST",
         "rating": 91,
-        "cardTheme": "icons",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/7/79/Paulino_alcantara_photo.jpg"
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/7/79/Paulino_alcantara_photo.jpg",
+        "cardTheme": "icons"
     },
     {
         "id": "shearer-icons",
@@ -5619,12 +5628,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "ST",
-        "rating": 93,
-        "cardTheme": "icons",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/o1upix1604491657.jpg",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 93,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/o1upix1604491657.jpg",
+        "cardTheme": "icons"
     },
     {
         "id": "charlton-icons",
@@ -5683,8 +5692,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "",
         "position": "GK",
         "rating": 92,
-        "cardTheme": "icons",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/0eji2v1614027928.jpg"
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/0eji2v1614027928.jpg",
+        "cardTheme": "icons"
     },
     {
         "id": "zola-icons",
@@ -5747,13 +5756,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 83,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0zs9vd1654202391.png",
         "altPositions": [
             "RW",
             "CM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0zs9vd1654202391.png",
+        "cardTheme": "mm"
     },
     {
         "id": "dembele-mm",
@@ -5891,13 +5900,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "RM",
-        "rating": 78,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hfr8qj1613313082.png",
         "altPositions": [
             "LM",
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hfr8qj1613313082.png",
+        "cardTheme": "mm"
     },
     {
         "id": "pilkington-mm",
@@ -5909,13 +5918,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LM",
-        "rating": 75,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/29011732.png",
         "altPositions": [
             "RM",
             "LW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/29011732.png",
+        "cardTheme": "mm"
     },
     {
         "id": "kane-9",
@@ -5928,8 +5937,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴",
         "position": "ST",
         "rating": 90,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j4ouvd1756408895.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j4ouvd1756408895.png",
+        "cardTheme": "standard"
     },
     {
         "id": "musiala-42",
@@ -6029,8 +6038,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴",
         "position": "CB",
         "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m4uh701756408877.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m4uh701756408877.png",
+        "cardTheme": "standard"
     },
     {
         "id": "olise-17",
@@ -6078,8 +6087,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴",
         "position": "GK",
         "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/udq0so1756416089.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/udq0so1756416089.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kobel-1",
@@ -6170,13 +6179,13 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "CDM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/grs3841756326161.png",
         "altPositions": [
             "CB",
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/grs3841756326161.png",
+        "cardTheme": "standard"
     },
     {
         "id": "malen-21",
@@ -6205,13 +6214,13 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "LM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/go6jti1756325880.png",
         "altPositions": [
             "LW",
             "ST"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/go6jti1756325880.png",
+        "cardTheme": "standard"
     },
     {
         "id": "guirassy-9",
@@ -6224,8 +6233,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡⚫",
         "position": "ST",
         "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ljqkhh1756326306.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ljqkhh1756326306.png",
+        "cardTheme": "standard"
     },
     {
         "id": "couto-2",
@@ -6237,12 +6246,12 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "RB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hadu641756326239.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hadu641756326239.png",
+        "cardTheme": "standard"
     },
     {
         "id": "martinez-23",
@@ -6270,8 +6279,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦁",
         "position": "GK",
         "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rk28op1694202127.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rk28op1694202127.png",
+        "cardTheme": "standard"
     },
     {
         "id": "konsa-villa",
@@ -6283,12 +6292,12 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "CB",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rnu4al1756984921.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rnu4al1756984921.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mings-villa",
@@ -6301,8 +6310,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦁",
         "position": "CB",
         "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z2m4km1756987198.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z2m4km1756987198.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pau-villa",
@@ -6315,8 +6324,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦁",
         "position": "CB",
         "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pxsy2h1756987313.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pxsy2h1756987313.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cash-villa",
@@ -6344,8 +6353,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦁",
         "position": "LB",
         "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ywg68z1756984819.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ywg68z1756984819.png",
+        "cardTheme": "standard"
     },
     {
         "id": "maatsen-villa",
@@ -6409,12 +6418,12 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "CM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/keq4991756987159.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/keq4991756987159.png",
+        "cardTheme": "standard"
     },
     {
         "id": "tielemans-villa",
@@ -6462,12 +6471,12 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "CAM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/10qe2t1756984661.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/10qe2t1756984661.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rogers-villa",
@@ -6498,8 +6507,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦁",
         "position": "ST",
         "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w6dir11756987347.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w6dir11756987347.png",
+        "cardTheme": "standard"
     },
     {
         "id": "duran-villa",
@@ -6626,13 +6635,13 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "RW",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4zpjv11766153131.png",
         "altPositions": [
             "LW",
             "ST"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4zpjv11766153131.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rabiot-25",
@@ -6644,12 +6653,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "CM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m2upnx1758893486.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m2upnx1758893486.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hojbjerg-23",
@@ -6661,12 +6670,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "CDM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kdktqx1766152430.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kdktqx1766152430.png",
+        "cardTheme": "standard"
     },
     {
         "id": "guimaraes-39",
@@ -6678,12 +6687,12 @@ const DEFAULT_PLAYERS = [
         "club": "Newcastle",
         "clubBadge": "⚫⚪",
         "position": "CM",
-        "rating": 85,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qr8gk01766824971.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qr8gk01766824971.png",
+        "cardTheme": "standard"
     },
     {
         "id": "isak-14",
@@ -6773,13 +6782,13 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "RB",
-        "rating": 86,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rw1mkk1750271928.png",
         "altPositions": [
             "RWB",
             "CM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rw1mkk1750271928.png",
+        "cardTheme": "standard"
     },
     {
         "id": "macallister-10",
@@ -6808,12 +6817,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "LW",
-        "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/emmcyf1756408968.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/emmcyf1756408968.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gakpo-11",
@@ -6844,8 +6853,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🍒",
         "position": "GK",
         "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/95czbp1756976334.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/95czbp1756976334.png",
+        "cardTheme": "standard"
     },
     {
         "id": "zabarnyi-bournemouth",
@@ -6934,12 +6943,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bournemouth",
         "clubBadge": "🍒",
         "position": "CDM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uf2dcw1757018455.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uf2dcw1757018455.png",
+        "cardTheme": "standard"
     },
     {
         "id": "christie-bournemouth",
@@ -6951,12 +6960,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bournemouth",
         "clubBadge": "🍒",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/r142w81757018147.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/r142w81757018147.png",
+        "cardTheme": "standard"
     },
     {
         "id": "adams-bournemouth",
@@ -7040,8 +7049,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🍒",
         "position": "ST",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wfcb6f1757018832.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wfcb6f1757018832.png",
+        "cardTheme": "standard"
     },
     {
         "id": "evanilson-bournemouth",
@@ -7084,8 +7093,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🐝",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p231065.png"
+        "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p231065.png",
+        "cardTheme": "standard"
     },
     {
         "id": "collins-brentford",
@@ -7195,13 +7204,13 @@ const DEFAULT_PLAYERS = [
         "club": "Brentford",
         "clubBadge": "🐝",
         "position": "CDM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p204580.png",
         "altPositions": [
             "CM",
             "LB"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p204580.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jensen-brentford",
@@ -7213,12 +7222,12 @@ const DEFAULT_PLAYERS = [
         "club": "Brentford",
         "clubBadge": "🐝",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p207283.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p207283.png",
+        "cardTheme": "standard"
     },
     {
         "id": "damsgaard-brentford",
@@ -7396,8 +7405,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "RW",
         "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/47l15r1763560990.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/47l15r1763560990.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gimenez-9",
@@ -7553,12 +7562,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Hilal",
         "clubBadge": "💙⚪",
         "position": "CDM",
-        "rating": 84,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/86rcde1750272409.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/86rcde1750272409.png",
+        "cardTheme": "standard"
     },
     {
         "id": "koulibaly-alhilal",
@@ -7619,8 +7628,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💙⚪",
         "position": "LB",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m4705d1769772365.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m4705d1769772365.png",
+        "cardTheme": "standard"
     },
     {
         "id": "aldawsari-alhilal",
@@ -7632,12 +7641,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Hilal",
         "clubBadge": "💙⚪",
         "position": "LM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "albulayhi-alhilal",
@@ -7650,8 +7659,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💙⚪",
         "position": "CB",
         "rating": 72,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "shahrani-alhilal",
@@ -7663,12 +7672,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Hilal",
         "clubBadge": "💙⚪",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "kanno-alhilal",
@@ -7680,12 +7689,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Hilal",
         "clubBadge": "💙⚪",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rd52j51750753527.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rd52j51750753527.png",
+        "cardTheme": "standard"
     },
     {
         "id": "benzema-alittihad",
@@ -7728,13 +7737,13 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ittihad",
         "clubBadge": "💛🖤",
         "position": "RM",
-        "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jxusnf1694202001.png",
         "altPositions": [
             "RW",
             "LM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jxusnf1694202001.png",
+        "cardTheme": "standard"
     },
     {
         "id": "fabinho-alittihad",
@@ -7746,12 +7755,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ittihad",
         "clubBadge": "💛🖤",
         "position": "CDM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0llctp1632777025.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0llctp1632777025.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bergwijn-alittihad",
@@ -7782,8 +7791,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💛🖤",
         "position": "GK",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2ef2qx1678829519.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2ef2qx1678829519.png",
+        "cardTheme": "standard"
     },
     {
         "id": "luizfelipe-alittihad",
@@ -7796,8 +7805,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💛🖤",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9puzif1762549716.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9puzif1762549716.png",
+        "cardTheme": "standard"
     },
     {
         "id": "danilo-alittihad",
@@ -7809,12 +7818,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ittihad",
         "clubBadge": "💛🖤",
         "position": "CB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tx14kl1704573855.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tx14kl1704573855.png",
+        "cardTheme": "standard"
     },
     {
         "id": "aouar-alittihad",
@@ -7826,12 +7835,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ittihad",
         "clubBadge": "💛🖤",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hm39tt1681230801.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hm39tt1681230801.png",
+        "cardTheme": "standard"
     },
     {
         "id": "shehri-alittihad",
@@ -7844,8 +7853,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💛🖤",
         "position": "ST",
         "rating": 71,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "yami-alittihad",
@@ -7858,8 +7867,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "💛🖤",
         "position": "RB",
         "rating": 70,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "shanqeeti-alittihad",
@@ -7871,12 +7880,12 @@ const DEFAULT_PLAYERS = [
         "club": "Al Ittihad",
         "clubBadge": "💛🖤",
         "position": "RB",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "kadesh-alittihad",
@@ -7921,8 +7930,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "⚪🟡",
         "position": "CB",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/omax4m1757076252.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/omax4m1757076252.png",
+        "cardTheme": "standard"
     },
     {
         "id": "struijk-leeds",
@@ -8016,13 +8025,13 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "RM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0yu6gm1757076315.png",
         "altPositions": [
             "RW",
             "LM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0yu6gm1757076315.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gnonto-leeds",
@@ -8034,14 +8043,14 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "LM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LW",
             "ST",
             "RM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "aaronson-leeds",
@@ -8103,13 +8112,13 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "LW",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8xfxe41762889351.png",
         "altPositions": [
             "LM",
             "RW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8xfxe41762889351.png",
+        "cardTheme": "standard"
     },
     {
         "id": "wober-leeds",
@@ -8121,12 +8130,12 @@ const DEFAULT_PLAYERS = [
         "club": "Leeds",
         "clubBadge": "⚪🟡",
         "position": "CB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wi4qc91763666341.png",
+        "cardTheme": "standard"
     },
     {
         "id": "conde-villarreal",
@@ -8139,8 +8148,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "GK",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7q0ic61762888783.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7q0ic61762888783.png",
+        "cardTheme": "standard"
     },
     {
         "id": "luizjunior-villarreal",
@@ -8153,8 +8162,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "GK",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/29ex1e1762888858.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/29ex1e1762888858.png",
+        "cardTheme": "standard"
     },
     {
         "id": "albiol-villarreal",
@@ -8167,8 +8176,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dn9af51764188587.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dn9af51764188587.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bailly-villarreal",
@@ -8195,8 +8204,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "CB",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tia4oq1762888798.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tia4oq1762888798.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cardona-villarreal",
@@ -8209,8 +8218,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "LB",
         "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9nt6t31762888747.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9nt6t31762888747.png",
+        "cardTheme": "standard"
     },
     {
         "id": "femenia-villarreal",
@@ -8223,8 +8232,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "RB",
         "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6x06cc1762430119.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6x06cc1762430119.png",
+        "cardTheme": "standard"
     },
     {
         "id": "parejo-villarreal",
@@ -8237,8 +8246,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "CM",
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "comesana-villarreal",
@@ -8251,8 +8260,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡",
         "position": "CM",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3tm35b1762888762.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3tm35b1762888762.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pgueye-villarreal",
@@ -8280,13 +8289,13 @@ const DEFAULT_PLAYERS = [
         "club": "Villarreal",
         "clubBadge": "🟡",
         "position": "CAM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/04ntmp1762890059.png",
         "altPositions": [
             "LM",
             "LW"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/04ntmp1762890059.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gmoreno-villarreal",
@@ -8298,13 +8307,13 @@ const DEFAULT_PLAYERS = [
         "club": "Villarreal",
         "clubBadge": "🟡",
         "position": "ST",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gyylkr1762888952.png",
         "altPositions": [
             "CF",
             "RW"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gyylkr1762888952.png",
+        "cardTheme": "standard"
     },
     {
         "id": "aperez-villarreal",
@@ -8316,13 +8325,13 @@ const DEFAULT_PLAYERS = [
         "club": "Villarreal",
         "clubBadge": "🟡",
         "position": "ST",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ty4duh1762889321.png",
         "altPositions": [
             "LM",
             "LW"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ty4duh1762889321.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ypino-villarreal",
@@ -8334,14 +8343,14 @@ const DEFAULT_PLAYERS = [
         "club": "Villarreal",
         "clubBadge": "🟡",
         "position": "RW",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c85ip51761492296.png",
         "altPositions": [
             "RM",
             "LW",
             "LM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c85ip51761492296.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pepe-villarreal",
@@ -8363,16 +8372,16 @@ const DEFAULT_PLAYERS = [
     {
         "id": "barry-villarreal",
         "name": "Thierno Barry",
-        "cardName": "Barry",
+        "cardName": "T. Barry",
         "nationality": "France",
         "flag": "🇫🇷",
-        "league": "La Liga",
-        "club": "Villarreal",
-        "clubBadge": "🟡",
+        "league": "Premier League",
+        "club": "Everton",
         "position": "ST",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jjmhdw1756977094.png"
+        "altPositions": [],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jjmhdw1756977094.png",
+        "cardTheme": "standard"
     },
     {
         "id": "akhomach-villarreal",
@@ -8384,12 +8393,12 @@ const DEFAULT_PLAYERS = [
         "club": "Villarreal",
         "clubBadge": "🟡",
         "position": "RW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ngqrqj1762888704.png",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ngqrqj1762888704.png",
+        "cardTheme": "standard"
     },
     {
         "id": "leno-fulham",
@@ -8432,8 +8441,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "⚪⚫",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8v9oyj1757070140.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8v9oyj1757070140.png",
+        "cardTheme": "standard"
     },
     {
         "id": "robinson-fulham",
@@ -8458,11 +8467,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "RB",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hv7rpd1757070082.png"
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hv7rpd1757070082.png",
+        "cardTheme": "standard"
     },
     {
         "id": "castagne-fulham",
@@ -8519,16 +8528,15 @@ const DEFAULT_PLAYERS = [
         "cardName": "Andreas",
         "nationality": "Brazil",
         "flag": "🇧🇷",
-        "league": "Premier League",
-        "club": "Fulham",
-        "clubBadge": "⚪⚫",
+        "league": "Brasileirao Serie A",
+        "club": "Palmeiras",
         "position": "CAM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0moxnx1767691272.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0moxnx1767691272.png",
+        "cardTheme": "standard"
     },
     {
         "id": "smithrowe-fulham",
@@ -8623,13 +8631,13 @@ const DEFAULT_PLAYERS = [
         "club": "Fulham",
         "clubBadge": "⚪⚫",
         "position": "LB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vnb8pt1757070401.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vnb8pt1757070401.png",
+        "cardTheme": "standard"
     },
     {
         "id": "suzuki-wc26",
@@ -8865,13 +8873,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "RM",
         "altPositions": [
             "RW"
         ],
         "rating": 82,
-        "photo": "",
+        "photo": "https://static.bongda24h.vn/medias/original/2026/01/28/tieu-su-rayan-2801145158.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -9157,8 +9164,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇪🇸",
         "position": "CB",
         "rating": 83,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "porro-wc26",
@@ -9170,12 +9177,12 @@ const DEFAULT_PLAYERS = [
         "club": "Spain",
         "clubBadge": "🇪🇸",
         "position": "RB",
-        "rating": 81,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "grimaldo-wc26",
@@ -9187,13 +9194,13 @@ const DEFAULT_PLAYERS = [
         "club": "Spain",
         "clubBadge": "🇪🇸",
         "position": "LB",
-        "rating": 84,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "cucurella-wc26",
@@ -9290,8 +9297,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇪🇸",
         "position": "CM",
         "rating": 82,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "olmo-wc26",
@@ -9559,8 +9566,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇦🇹",
         "position": "GK",
         "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "alaba-wc26",
@@ -9589,12 +9596,12 @@ const DEFAULT_PLAYERS = [
         "club": "Austria",
         "clubBadge": "🇦🇹",
         "position": "RB",
-        "rating": 79,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "wober-at-wc26",
@@ -9623,13 +9630,13 @@ const DEFAULT_PLAYERS = [
         "club": "Austria",
         "clubBadge": "🇦🇹",
         "position": "CM",
-        "rating": 81,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CAM",
             "CDM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "laimer-wc26",
@@ -9675,13 +9682,13 @@ const DEFAULT_PLAYERS = [
         "club": "Austria",
         "clubBadge": "🇦🇹",
         "position": "CAM",
-        "rating": 80,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CM",
             "ST"
-        ]
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "gregoritsch-wc26",
@@ -9694,8 +9701,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇦🇹",
         "position": "ST",
         "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "courtois-wc26",
@@ -9753,14 +9760,14 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "clubBadge": "🇧🇪",
         "position": "LM",
-        "rating": 83,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LW",
             "RM",
             "RW"
-        ]
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "trossard-wc26",
@@ -9772,14 +9779,14 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "clubBadge": "🇧🇪",
         "position": "LM",
-        "rating": 82,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LW",
             "ST",
             "CAM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "tielemans-wc26",
@@ -9789,14 +9796,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CM",
         "altPositions": [
             "CAM",
             "CDM"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://www.voetbalkrant.com/media/cache/full/images/2026/06/23/full/tielemans-youri.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -9809,12 +9815,12 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "clubBadge": "🇧🇪",
         "position": "CDM",
-        "rating": 81,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "castagne-be-wc26",
@@ -9844,12 +9850,12 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "clubBadge": "🇧🇪",
         "position": "CB",
-        "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "faes-wc26",
@@ -9862,8 +9868,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇧🇪",
         "position": "CB",
         "rating": 77,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bakayoko-be-wc26",
@@ -9875,12 +9881,12 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "clubBadge": "🇧🇪",
         "position": "RW",
-        "rating": 79,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "neves-psg",
@@ -10092,8 +10098,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🐺",
         "position": "ST",
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ef1yx51758815098.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ef1yx51758815098.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pellegrini-roma",
@@ -10123,8 +10129,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🐺",
         "position": "CB",
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tnamt91758815939.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tnamt91758815939.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ndicka-roma",
@@ -10150,12 +10156,12 @@ const DEFAULT_PLAYERS = [
         "club": "AS Roma",
         "clubBadge": "🐺",
         "position": "CM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/s4wyo21758815461.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/s4wyo21758815461.png",
+        "cardTheme": "standard"
     },
     {
         "id": "soule-roma",
@@ -10167,13 +10173,13 @@ const DEFAULT_PLAYERS = [
         "club": "AS Roma",
         "clubBadge": "🐺",
         "position": "RW",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/496dau1758815193.png",
         "altPositions": [
             "RM",
             "CAM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/496dau1758815193.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hermoso-roma",
@@ -10185,12 +10191,12 @@ const DEFAULT_PLAYERS = [
         "club": "AS Roma",
         "clubBadge": "🐺",
         "position": "CB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/59p2f91758815973.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/59p2f91758815973.png",
+        "cardTheme": "standard"
     },
     {
         "id": "angelino-roma",
@@ -10202,13 +10208,13 @@ const DEFAULT_PLAYERS = [
         "club": "AS Roma",
         "clubBadge": "🐺",
         "position": "LB",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5pw52n1758816456.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5pw52n1758816456.png",
+        "cardTheme": "standard"
     },
     {
         "id": "svilar-roma",
@@ -10234,12 +10240,12 @@ const DEFAULT_PLAYERS = [
         "club": "AS Roma",
         "clubBadge": "🐺",
         "position": "LW",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u84zag1758815313.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u84zag1758815313.png",
+        "cardTheme": "standard"
     },
     {
         "id": "paredes-roma",
@@ -10267,13 +10273,13 @@ const DEFAULT_PLAYERS = [
         "club": "AS Roma",
         "clubBadge": "🐺",
         "position": "CDM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0b2tmm1758815345.png",
         "altPositions": [
             "CM",
             "CB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0b2tmm1758815345.png",
+        "cardTheme": "standard"
     },
     {
         "id": "digregorio-juve",
@@ -10301,8 +10307,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦓",
         "position": "GK",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oo0l5m1759222361.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oo0l5m1759222361.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bremer-juve",
@@ -10330,8 +10336,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦓",
         "position": "CB",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z1jv3i1759224911.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z1jv3i1759224911.png",
+        "cardTheme": "standard"
     },
     {
         "id": "danilo-juve",
@@ -10343,12 +10349,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "CB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6hr4w81750454528.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6hr4w81750454528.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kalulu-juve",
@@ -10360,12 +10366,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "CB",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bl8oj61759224970.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bl8oj61759224970.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cambiaso-juve",
@@ -10377,14 +10383,14 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "RB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6r741t1759225481.png",
         "altPositions": [
             "LB",
             "RM",
             "LM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6r741t1759225481.png",
+        "cardTheme": "standard"
     },
     {
         "id": "locatelli-juve",
@@ -10396,12 +10402,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "CDM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0zlnug1759225148.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0zlnug1759225148.png",
+        "cardTheme": "standard"
     },
     {
         "id": "douglasluiz-juve",
@@ -10413,12 +10419,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "CM",
-        "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wiqihs1757163098.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wiqihs1757163098.png",
+        "cardTheme": "standard"
     },
     {
         "id": "koopmeiners-juve",
@@ -10512,13 +10518,13 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "CAM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zgep4d1759225554.png",
         "altPositions": [
             "LW",
             "LM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zgep4d1759225554.png",
+        "cardTheme": "standard"
     },
     {
         "id": "conceicao-juve",
@@ -10530,12 +10536,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "RW",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ekqivz1759225498.png",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ekqivz1759225498.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gonzalez-juve",
@@ -10547,13 +10553,13 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "RW",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e6mhnz1762288376.png",
         "altPositions": [
             "LW",
             "RM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e6mhnz1762288376.png",
+        "cardTheme": "standard"
     },
     {
         "id": "weah-juve",
@@ -10565,13 +10571,13 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "🦓",
         "position": "RM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mxdwu11766153578.png",
         "altPositions": [
             "RW",
             "ST"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mxdwu11766153578.png",
+        "cardTheme": "standard"
     },
     {
         "id": "barnes-newcastle",
@@ -10583,12 +10589,12 @@ const DEFAULT_PLAYERS = [
         "club": "Newcastle",
         "clubBadge": "⚫⚪",
         "position": "LW",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h4ujtn1766824904.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h4ujtn1766824904.png",
+        "cardTheme": "standard"
     },
     {
         "id": "burn-newcastle",
@@ -10618,8 +10624,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "⚫⚪",
         "position": "GK",
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7i0wgv1766824771.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7i0wgv1766824771.png",
+        "cardTheme": "standard"
     },
     {
         "id": "livramento-newcastle",
@@ -10701,12 +10707,12 @@ const DEFAULT_PLAYERS = [
         "club": "Newcastle",
         "clubBadge": "⚫⚪",
         "position": "RM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c17gy11766824892.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c17gy11766824892.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sorloth-atletico",
@@ -10719,8 +10725,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "ST",
         "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v3of4b1762288730.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v3of4b1762288730.png",
+        "cardTheme": "standard"
     },
     {
         "id": "llorente-atletico",
@@ -10732,12 +10738,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atletico Madrid",
         "clubBadge": "🔴⚪",
         "position": "RM",
-        "rating": 83,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/god7pd1762288454.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/god7pd1762288454.png",
+        "cardTheme": "standard"
     },
     {
         "id": "koke-atletico",
@@ -10749,12 +10755,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atletico Madrid",
         "clubBadge": "🔴⚪",
         "position": "CDM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dy8l941762288151.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dy8l941762288151.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lenormand-atletico",
@@ -10767,8 +10773,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "CB",
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ubsd6x1762288701.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ubsd6x1762288701.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gimenez-atletico",
@@ -10794,12 +10800,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atletico Madrid",
         "clubBadge": "🔴⚪",
         "position": "RB",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/36bdni1762288498.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/36bdni1762288498.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lino-atletico",
@@ -10860,13 +10866,13 @@ const DEFAULT_PLAYERS = [
         "club": "Atletico Madrid",
         "clubBadge": "🔴⚪",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sa32de1762457174.png",
         "altPositions": [
             "LM",
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sa32de1762457174.png",
+        "cardTheme": "standard"
     },
     {
         "id": "reinildo-atletico",
@@ -10910,8 +10916,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "CB",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ig3cp41762288430.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ig3cp41762288430.png",
+        "cardTheme": "standard"
     },
     {
         "id": "barrios-atletico",
@@ -10924,8 +10930,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "CM",
         "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6h070j1762288225.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6h070j1762288225.png",
+        "cardTheme": "standard"
     },
     {
         "id": "simeone-atletico",
@@ -10937,13 +10943,13 @@ const DEFAULT_PLAYERS = [
         "club": "Atletico Madrid",
         "clubBadge": "🔴⚪",
         "position": "RM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j97npy1762288635.png",
         "altPositions": [
             "ST",
             "LM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j97npy1762288635.png",
+        "cardTheme": "standard"
     },
     {
         "id": "simons-leipzig",
@@ -11016,12 +11022,12 @@ const DEFAULT_PLAYERS = [
         "club": "RB Leipzig",
         "clubBadge": "🔴🔵",
         "position": "LB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wxbgdk1763561343.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wxbgdk1763561343.png",
+        "cardTheme": "standard"
     },
     {
         "id": "haidara-leipzig",
@@ -11063,13 +11069,13 @@ const DEFAULT_PLAYERS = [
         "club": "RB Leipzig",
         "clubBadge": "🔴🔵",
         "position": "RB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/56aywn1763561180.png",
         "altPositions": [
             "LB",
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/56aywn1763561180.png",
+        "cardTheme": "standard"
     },
     {
         "id": "geertruida-leipzig",
@@ -11081,13 +11087,13 @@ const DEFAULT_PLAYERS = [
         "club": "RB Leipzig",
         "clubBadge": "🔴🔵",
         "position": "RB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f72hv61762198555.png",
         "altPositions": [
             "CB",
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f72hv61762198555.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gulacsi-leipzig",
@@ -11100,8 +11106,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴🔵",
         "position": "GK",
         "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f24kos1763561131.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f24kos1763561131.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vandevoordt-leipzig",
@@ -11145,14 +11151,14 @@ const DEFAULT_PLAYERS = [
         "club": "RB Leipzig",
         "clubBadge": "🔴🔵",
         "position": "CAM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7gy4ar1763561036.png",
         "altPositions": [
             "CM",
             "LM",
             "ST"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7gy4ar1763561036.png",
+        "cardTheme": "standard"
     },
     {
         "id": "elmas-leipzig",
@@ -11212,8 +11218,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪⚫",
         "position": "ST",
         "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6m74qc1763416796.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6m74qc1763416796.png",
+        "cardTheme": "standard"
     },
     {
         "id": "reis-hamburg",
@@ -11225,12 +11231,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "CM",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/45ersz1767634451.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/45ersz1767634451.png",
+        "cardTheme": "standard"
     },
     {
         "id": "elfadli-hamburg",
@@ -11242,12 +11248,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "CDM",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ed97rf1763416768.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ed97rf1763416768.png",
+        "cardTheme": "standard"
     },
     {
         "id": "schonlau-hamburg",
@@ -11260,8 +11266,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪⚫",
         "position": "CB",
         "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4limt81766435048.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4limt81766435048.png",
+        "cardTheme": "standard"
     },
     {
         "id": "meffert-hamburg",
@@ -11274,8 +11280,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪⚫",
         "position": "CDM",
         "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9v8fqa1773150155.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9v8fqa1773150155.png",
+        "cardTheme": "standard"
     },
     {
         "id": "raab-hamburg",
@@ -11302,8 +11308,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪⚫",
         "position": "GK",
         "rating": 72,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "muheim-hamburg",
@@ -11315,12 +11321,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ohb4za1763416967.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ohb4za1763416967.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hefti-hamburg",
@@ -11364,12 +11370,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "CAM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9ryxed1772568636.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9ryxed1772568636.png",
+        "cardTheme": "standard"
     },
     {
         "id": "konigsdoerffer-hamburg",
@@ -11381,13 +11387,13 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "ST",
-        "rating": 70,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/teu04x1763416900.png",
         "altPositions": [
             "RW",
             "LW"
-        ]
+        ],
+        "rating": 70,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/teu04x1763416900.png",
+        "cardTheme": "standard"
     },
     {
         "id": "dompe-hamburg",
@@ -11399,25 +11405,24 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "LM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b3x3jh1763416755.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b3x3jh1763416755.png",
+        "cardTheme": "standard"
     },
     {
         "id": "suarez-miami",
         "name": "Luis Suárez",
-        "cardName": "Suárez",
+        "cardName": "Luis Suárez",
         "nationality": "Uruguay",
         "flag": "🇺🇾",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "ST",
         "altPositions": [],
-        "rating": 79,
+        "rating": 76,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vfjd0w1750315193.png",
         "cardTheme": "standard"
     },
@@ -11480,8 +11485,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦩",
         "position": "CB",
         "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://www.thesportsdb.com/images/media/player/cutout/uqmlc11776502838.png"
+        "photo": "https://www.thesportsdb.com/images/media/player/cutout/uqmlc11776502838.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kryvtsov-miami",
@@ -11494,8 +11499,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦩",
         "position": "CB",
         "rating": 70,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "gressel-miami",
@@ -11507,13 +11512,13 @@ const DEFAULT_PLAYERS = [
         "club": "Inter Miami",
         "clubBadge": "🦩",
         "position": "RM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://www.thesportsdb.com/images/media/player/cutout/9p3siz1778161025.png",
         "altPositions": [
             "CM",
             "RB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://www.thesportsdb.com/images/media/player/cutout/9p3siz1778161025.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cremaschi-miami",
@@ -11526,8 +11531,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦩",
         "position": "CM",
         "rating": 69,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/enedma1759779839.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/enedma1759779839.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ruiz-miami",
@@ -11539,12 +11544,12 @@ const DEFAULT_PLAYERS = [
         "club": "Inter Miami",
         "clubBadge": "🦩",
         "position": "CM",
-        "rating": 68,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6mt0v11750313469.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 68,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6mt0v11750313469.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gomez-miami",
@@ -11556,13 +11561,13 @@ const DEFAULT_PLAYERS = [
         "club": "Inter Miami",
         "clubBadge": "🦩",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/alorj01756993808.png",
         "altPositions": [
             "LM",
             "CAM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/alorj01756993808.png",
+        "cardTheme": "standard"
     },
     {
         "id": "campana-miami",
@@ -11575,8 +11580,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦩",
         "position": "ST",
         "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3iy6561766743443.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3iy6561766743443.png",
+        "cardTheme": "standard"
     },
     {
         "id": "taylor-miami",
@@ -11604,12 +11609,12 @@ const DEFAULT_PLAYERS = [
         "club": "Inter Miami",
         "clubBadge": "🦩",
         "position": "CDM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/txrpr21762372139.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/txrpr21762372139.png",
+        "cardTheme": "standard"
     },
     {
         "id": "weigandt-miami",
@@ -11622,8 +11627,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🦩",
         "position": "RB",
         "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hhmtln1750316103.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hhmtln1750316103.png",
+        "cardTheme": "standard"
     },
     {
         "id": "frimpong-30",
@@ -11633,13 +11638,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "RM",
             "RWB"
         ],
-        "rating": 84,
+        "rating": 82,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ehf7fi1757088020.png",
         "cardTheme": "standard"
     },
@@ -11682,12 +11686,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "RB",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yojnr41757087630.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yojnr41757087630.png",
+        "cardTheme": "standard"
     },
     {
         "id": "szoboszlai-8",
@@ -11717,13 +11721,13 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "CM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ghs3g51757088342.png",
         "altPositions": [
             "CDM",
             "CAM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ghs3g51757088342.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ngumoha-lw",
@@ -11793,12 +11797,12 @@ const DEFAULT_PLAYERS = [
         "club": "Brighton",
         "clubBadge": "🔵⚪",
         "position": "LB",
-        "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/enrtu21756994489.png",
         "altPositions": [
             "RB",
             "LM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/enrtu21756994489.png"
     },
     {
         "id": "hinshelwood-13",
@@ -11808,13 +11812,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "RB",
-        "rating": 78,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4s1p831756994437.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4s1p831756994437.png",
+        "cardTheme": "standard"
     },
     {
         "id": "baleba-17",
@@ -11826,11 +11830,11 @@ const DEFAULT_PLAYERS = [
         "club": "Brighton",
         "clubBadge": "🔵⚪",
         "position": "CDM",
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/52x9bk1756994205.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/52x9bk1756994205.png"
     },
     {
         "id": "wieffer-27",
@@ -11842,11 +11846,11 @@ const DEFAULT_PLAYERS = [
         "club": "Brighton",
         "clubBadge": "🔵⚪",
         "position": "CDM",
-        "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/auo0d11756998840.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/auo0d11756998840.png"
     },
     {
         "id": "oriley-33",
@@ -11858,11 +11862,11 @@ const DEFAULT_PLAYERS = [
         "club": "Brighton",
         "clubBadge": "🔵⚪",
         "position": "CAM",
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a8vuts1766153421.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a8vuts1766153421.png"
     },
     {
         "id": "mitoma-22",
@@ -11874,11 +11878,11 @@ const DEFAULT_PLAYERS = [
         "club": "Brighton",
         "clubBadge": "🔵⚪",
         "position": "LW",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1hwrck1756998804.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1hwrck1756998804.png"
     },
     {
         "id": "minteh-11",
@@ -11904,8 +11908,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Brazil",
         "flag": "🇧🇷",
         "league": "Premier League",
-        "club": "Brighton",
-        "clubBadge": "🔵⚪",
+        "club": "Chelsea",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -11925,12 +11928,12 @@ const DEFAULT_PLAYERS = [
         "club": "Brighton",
         "clubBadge": "🔵⚪",
         "position": "CF",
-        "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/owp31w1756998606.png",
         "altPositions": [
             "CAM",
             "ST"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/owp31w1756998606.png"
     },
     {
         "id": "welbeck-18",
@@ -11996,12 +11999,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "RB",
-        "rating": 78,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qzuqwn1757163242.png",
         "altPositions": [
             "LB",
             "RWB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qzuqwn1757163242.png"
     },
     {
         "id": "aina-34",
@@ -12011,14 +12014,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "LB",
-        "rating": 78,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3rasdy1757162843.png",
         "altPositions": [
             "RB",
             "LWB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3rasdy1757162843.png",
+        "cardTheme": "standard"
     },
     {
         "id": "yates-22",
@@ -12030,11 +12033,11 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "CDM",
-        "rating": 78,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cnbo641757163276.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cnbo641757163276.png"
     },
     {
         "id": "sangare-6",
@@ -12046,11 +12049,11 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "CDM",
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qc7kcv1757163183.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qc7kcv1757163183.png"
     },
     {
         "id": "gibbswhite-10",
@@ -12062,11 +12065,11 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "CAM",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1xexg01757166443.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1xexg01757166443.png"
     },
     {
         "id": "eanderson-8",
@@ -12096,11 +12099,11 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "LW",
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rnr4t41757163029.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rnr4t41757163029.png"
     },
     {
         "id": "elanga-21",
@@ -12109,14 +12112,14 @@ const DEFAULT_PLAYERS = [
         "nationality": "Sweden",
         "flag": "🇸🇪",
         "league": "Premier League",
-        "club": "Nottingham",
-        "clubBadge": "🌳",
+        "club": "Newcastle",
         "position": "RW",
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zptapf1770796138.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zptapf1770796138.png",
+        "cardTheme": "standard"
     },
     {
         "id": "wood-11",
@@ -12228,11 +12231,11 @@ const DEFAULT_PLAYERS = [
         "club": "Crystal Palace",
         "clubBadge": "🦅",
         "position": "LB",
-        "rating": 78,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ltejjx1761492421.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ltejjx1761492421.png"
     },
     {
         "id": "wharton-20",
@@ -12261,11 +12264,11 @@ const DEFAULT_PLAYERS = [
         "club": "Crystal Palace",
         "clubBadge": "🦅",
         "position": "CDM",
-        "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bvf1oy1766828278.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bvf1oy1766828278.png"
     },
     {
         "id": "eze-10",
@@ -12314,11 +12317,11 @@ const DEFAULT_PLAYERS = [
         "club": "Crystal Palace",
         "clubBadge": "🦅",
         "position": "LW",
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c85ip51761492296.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c85ip51761492296.png"
     },
     {
         "id": "bjohnson-20",
@@ -12330,12 +12333,12 @@ const DEFAULT_PLAYERS = [
         "club": "Crystal Palace",
         "clubBadge": "🦅",
         "position": "RW",
-        "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fykhpn1772140729.png",
         "altPositions": [
             "LW",
             "ST"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fykhpn1772140729.png"
     },
     {
         "id": "mateta-14",
@@ -12690,14 +12693,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/by7qs71756903473.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "berghuis-23-s26",
@@ -12707,14 +12710,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "RW",
         "altPositions": [
             "CAM"
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jttj5w1722882695.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "brobbey-9-s26",
@@ -12739,12 +12742,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gqo5lv1750440419.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "pepe-11-s26",
@@ -12789,14 +12792,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "ST",
         "altPositions": [
             "LW"
         ],
         "rating": 74,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "hungdung-88-s26",
@@ -12806,12 +12809,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "veendorp-hanoi-s26",
@@ -12821,11 +12824,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "CDM",
         "rating": 68,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qiql1h1679573068.png",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "joaopedro-hanoi-s26",
@@ -12835,11 +12838,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "ST",
         "rating": 69,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "hailong-hanoi-s26",
@@ -12866,11 +12869,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "LW",
         "rating": 66,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "duymanh-hanoi-s26",
@@ -12880,11 +12883,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "CB",
         "rating": 70,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "thanhchung-hanoi-s26",
@@ -12894,11 +12897,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "CB",
         "rating": 70,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "xuanmanh-hanoi-s26",
@@ -12926,11 +12929,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
+        "clubBadge": "🗼",
         "position": "GK",
         "rating": 64,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🗼"
+        "cardTheme": "standard"
     },
     {
         "id": "vieira-porto-s26",
@@ -12940,14 +12943,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "RW"
         ],
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cqxh0s1763417157.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "samu-porto-s26",
@@ -12957,11 +12960,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "ST",
         "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gqo5lv1750440419.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "galeno-porto-s26",
@@ -12971,6 +12974,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -12978,8 +12982,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 81,
         "photo": "https://www.thesportsdb.com/images/media/player/cutout/00j75a1777238029.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "pepe-porto-s26",
@@ -13008,12 +13011,29 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
         ],
         "rating": 78,
         "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "eustaquio-porto-s26",
+        "name": "Stephen Eustáquio",
+        "cardName": "Eustáquio",
+        "nationality": "Canada",
+        "flag": "🇨🇦",
+        "league": "Liga Portugal",
+        "club": "FC Porto",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 77,
+        "photo": "https://www.thesportsdb.com/images/media/player/cutout/4q6t9d1778157858.png",
         "cardTheme": "standard",
         "clubBadge": "🔵⚪"
     },
@@ -13025,14 +13045,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2dgo351750441440.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "wendell-porto-s26",
@@ -13042,11 +13062,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "LB",
         "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fqg18o1767961409.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "otavio-porto-s26",
@@ -13056,11 +13076,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "CB",
         "rating": 75,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dkg4cz1679049726.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "perez-porto-s26",
@@ -13070,11 +13090,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "CB",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xjor2p1678457320.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "mariocruz-porto-s26",
@@ -13084,14 +13104,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
+        "clubBadge": "🔵⚪",
         "position": "RB",
         "altPositions": [
             "RM"
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fc2hqy1632996322.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "weghorst-ajax-s26",
@@ -13101,11 +13121,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "ST",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/i58a2q1726603016.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "godts-ajax-s26",
@@ -13115,14 +13135,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "LW",
         "altPositions": [
             "LM"
         ],
         "rating": 72,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e9ulvq1723380456.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "berghuis-ajax-s26",
@@ -13132,6 +13152,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -13139,8 +13160,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jttj5w1722882695.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "fitzjim-ajax-s26",
@@ -13150,14 +13170,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
         ],
         "rating": 72,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c8pm8v1722883221.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "henderson-ajax-s26",
@@ -13167,14 +13187,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/by7qs71756903473.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "hato-ajax-s26",
@@ -13200,11 +13220,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "CB",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4bdrsm1722880866.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "ramaj-ajax-s26",
@@ -13214,11 +13234,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Eredivisie",
         "club": "Ajax",
+        "clubBadge": "⚪🔴⚪",
         "position": "GK",
         "rating": 75,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rj504b1773672624.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚪🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "cornelius-fcc-s26",
@@ -13487,11 +13507,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "ST",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2etthn1770199634.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "morata-milan-s26",
@@ -13518,6 +13538,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -13526,8 +13547,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qwii9r1758893548.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "loftuscheek-milan-s26",
@@ -13537,14 +13557,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "CM",
         "altPositions": [
             "CAM"
         ],
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hydb081758892631.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "reijnders-milan-s26",
@@ -13554,6 +13574,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -13561,8 +13582,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 81,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/edgl5b1769182353.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "fofana-milan-s26",
@@ -13572,14 +13592,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 81,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3npg7a1758892447.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "calabria-milan-s26",
@@ -13618,11 +13638,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "AC Milan",
+        "clubBadge": "⚫🔴",
         "position": "CB",
         "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7a8yy11758893186.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚫🔴"
+        "cardTheme": "standard"
     },
     {
         "id": "maignan-milan-s26",
@@ -14318,7 +14338,7 @@ const DEFAULT_PLAYERS = [
             "CDM"
         ],
         "rating": 73,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5104945.png",
         "cardTheme": "standard"
     },
     {
@@ -14383,7 +14403,7 @@ const DEFAULT_PLAYERS = [
             "RB"
         ],
         "rating": 75,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/peadeh1757072711.png",
         "cardTheme": "standard"
     },
     {
@@ -14439,9 +14459,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Harrison",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Premier League",
-        "club": "Everton",
-        "clubBadge": "🔵",
+        "league": "Serie A",
+        "club": "Fiorentina",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -14491,14 +14510,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Mangala",
         "nationality": "Belgium",
         "flag": "🇧🇪",
-        "league": "Premier League",
-        "club": "Everton",
-        "clubBadge": "🔵",
+        "league": "Ligue 1",
+        "club": "Lyon",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
-        "rating": 76,
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1gmcji1766146434.png",
         "cardTheme": "standard"
     },
@@ -14510,12 +14528,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
-        "rating": 76,
+        "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zb9ap61771944918.png",
         "cardTheme": "standard"
     },
@@ -14543,9 +14560,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "RB",
-        "rating": 74,
+        "altPositions": [],
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ld8bsr1771945352.png",
         "cardTheme": "standard"
     },
@@ -15437,14 +15454,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CB",
         "altPositions": [
             "LB",
             "LWB"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0jNQfR5wCMxYiostUV959YnPzUoDZ57AaEA&s",
         "cardTheme": "worldcup26"
     },
     {
@@ -15530,10 +15546,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CM",
+        "altPositions": [],
         "rating": 83,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ZxO6ahnHN5F6kfQnshEiDZo1tUXEDV6jUw&s",
         "cardTheme": "worldcup26"
     },
     {
@@ -15544,10 +15560,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CM",
+        "altPositions": [],
         "rating": 86,
-        "photo": "",
+        "photo": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/6/26/luka-modric-croatia-ghana-world-cup-2026-1782489101143357059801.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -16841,9 +16857,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "GK",
-        "rating": 80,
+        "altPositions": [],
+        "rating": 81,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u9nk5p1750910221.png",
         "cardTheme": "standard"
     },
@@ -17411,12 +17427,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
-        "rating": 81,
+        "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yge8gq1762602923.png",
         "cardTheme": "standard"
     },
@@ -18904,11 +18919,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
+        "clubBadge": "👮",
         "position": "GK",
         "rating": 74,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "👮"
+        "cardTheme": "standard"
     },
     {
         "id": "vietanh-20-s26",
@@ -18933,6 +18948,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
+        "clubBadge": "👮",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -18940,8 +18956,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 71,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "👮"
+        "cardTheme": "standard"
     },
     {
         "id": "quanghai-19-s26",
@@ -18951,6 +18966,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
+        "clubBadge": "👮",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -18958,8 +18974,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 75,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "👮"
+        "cardTheme": "standard"
     },
     {
         "id": "leoartur-7-s26",
@@ -19020,11 +19035,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
+        "clubBadge": "🏰",
         "position": "CM",
         "rating": 71,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🏰"
+        "cardTheme": "standard"
     },
     {
         "id": "nguyenmanh-26-s26",
@@ -19034,11 +19049,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
+        "clubBadge": "🏰",
         "position": "GK",
         "rating": 70,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🏰"
+        "cardTheme": "standard"
     },
     {
         "id": "hongduy-7-s26",
@@ -19048,11 +19063,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
+        "clubBadge": "🏰",
         "position": "LB",
         "rating": 69,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🏰"
+        "cardTheme": "standard"
     },
     {
         "id": "lucasalves-4-s26",
@@ -19062,11 +19077,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "V-League",
         "club": "Nam Định",
+        "clubBadge": "🏰",
         "position": "CB",
         "rating": 71,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🏰"
+        "cardTheme": "standard"
     },
     {
         "id": "hendrio-10-s26",
@@ -19346,6 +19361,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
+        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -19353,8 +19369,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5123498.png",
-        "cardTheme": "mm",
-        "clubBadge": ""
+        "cardTheme": "mm"
     },
     {
         "id": "gdossantos-mm",
@@ -19364,6 +19379,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "",
         "club": "",
+        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -19371,8 +19387,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 84,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rpzbxg1512754215.png",
-        "cardTheme": "mm",
-        "clubBadge": ""
+        "cardTheme": "mm"
     },
     {
         "id": "barzagli-mm",
@@ -19536,11 +19551,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Nottingham Forest",
+        "clubBadge": "🌳",
         "position": "ST",
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/p5c7cf1750910956.png",
-        "cardTheme": "standard",
-        "clubBadge": "🌳"
+        "cardTheme": "standard"
     },
     {
         "id": "kroupi-bournemouth-s26",
@@ -19568,6 +19583,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -19575,8 +19591,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 84,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z968j71756984854.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "castellanos-westham-s26",
@@ -19586,11 +19601,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "ST",
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/40y5u71772132903.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "summerville-westham-s26",
@@ -19600,6 +19615,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -19607,8 +19623,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b51rjk1756984653.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "hermansen-westham-s26",
@@ -19618,11 +19633,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "GK",
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a55u3k1772134389.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "mavropanos-westham-s26",
@@ -19683,14 +19698,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "CDM",
         "altPositions": [
             "CB"
         ],
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nt933u1769179587.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "wanbissaka-westham-s26",
@@ -19700,6 +19715,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -19707,8 +19723,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xdt9hb1756984581.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "kilman-westham-s26",
@@ -19718,11 +19733,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
+        "clubBadge": "⚒️",
         "position": "CB",
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1ttexx1756984451.png",
-        "cardTheme": "standard",
-        "clubBadge": "⚒️"
+        "cardTheme": "standard"
     },
     {
         "id": "emerson-westham-s26",
@@ -19749,11 +19764,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "EFL Championship",
         "club": "Wolves",
+        "clubBadge": "🐺",
         "position": "ST",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oc10t41756976097.png",
-        "cardTheme": "standard",
-        "clubBadge": "🐺"
+        "cardTheme": "standard"
     },
     {
         "id": "mmane-wolves-s26",
@@ -19818,14 +19833,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "EFL Championship",
         "club": "Wolves",
+        "clubBadge": "🐺",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u8mcha1756975493.png",
-        "cardTheme": "standard",
-        "clubBadge": "🐺"
+        "cardTheme": "standard"
     },
     {
         "id": "lemina-wolves-s26",
@@ -19835,14 +19850,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇦",
         "league": "EFL Championship",
         "club": "Wolves",
+        "clubBadge": "🐺",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/scl5lc1769177813.png",
-        "cardTheme": "standard",
-        "clubBadge": "🐺"
+        "cardTheme": "standard"
     },
     {
         "id": "semedo-wolves-s26",
@@ -19887,14 +19902,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "EFL Championship",
         "club": "Wolves",
+        "clubBadge": "🐺",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ceggls1756975343.png",
-        "cardTheme": "standard",
-        "clubBadge": "🐺"
+        "cardTheme": "standard"
     },
     {
         "id": "sa-wolves-s26",
@@ -19904,11 +19919,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "EFL Championship",
         "club": "Wolves",
+        "clubBadge": "🐺",
         "position": "GK",
         "rating": 79,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🐺"
+        "cardTheme": "standard"
     },
     {
         "id": "trafford-burnley-s26",
@@ -19933,14 +19948,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "EFL Championship",
         "club": "Burnley",
+        "clubBadge": "🍇",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0fo5fd1757174497.png",
-        "cardTheme": "standard",
-        "clubBadge": "🍇"
+        "cardTheme": "standard"
     },
     {
         "id": "brownhill-burnley-s26",
@@ -19950,6 +19965,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Burnley",
+        "clubBadge": "🍇",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -19957,8 +19973,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 79,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rzg5ro1694089211.png",
-        "cardTheme": "standard",
-        "clubBadge": "🍇"
+        "cardTheme": "standard"
     },
     {
         "id": "koleosho-burnley-s26",
@@ -19968,6 +19983,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "EFL Championship",
         "club": "Burnley",
+        "clubBadge": "🍇",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -19975,8 +19991,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 76,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3wniem1762378768.png",
-        "cardTheme": "standard",
-        "clubBadge": "🍇"
+        "cardTheme": "standard"
     },
     {
         "id": "esteve-burnley-s26",
@@ -19986,11 +20001,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "EFL Championship",
         "club": "Burnley",
+        "clubBadge": "🍇",
         "position": "CB",
         "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gpwvq81757174459.png",
-        "cardTheme": "standard",
-        "clubBadge": "🍇"
+        "cardTheme": "standard"
     },
     {
         "id": "flemming-burnley-s26",
@@ -20018,11 +20033,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "EFL Championship",
         "club": "Stoke City",
+        "clubBadge": "🔴⚪",
         "position": "GK",
         "rating": 76,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jxtv4m1761251281.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "burger-stoke-s26",
@@ -20032,14 +20047,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "EFL Championship",
         "club": "Stoke City",
+        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
         "rating": 75,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qdd3u11763487234.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "bae-stoke-s26",
@@ -20049,6 +20064,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "EFL Championship",
         "club": "Stoke City",
+        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -20056,8 +20072,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 76,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "cannon-stoke-s26",
@@ -20081,14 +20096,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "EFL Championship",
         "club": "Stoke City",
+        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "ST"
         ],
         "rating": 72,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q8m42j1761931324.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔴⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "moran-stoke-s26",
@@ -20103,9 +20118,8 @@ const DEFAULT_PLAYERS = [
             "CM"
         ],
         "rating": 73,
-        "photo": "https://www.thesportsdb.com/images/media/player/cutout/b1ooms1778009961.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔴⚪"
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "ohashi-blackburn-s26",
@@ -20115,6 +20129,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
+        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -20122,8 +20137,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 74,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/33t3nj1762033924.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "tronstad-blackburn-s26",
@@ -20133,14 +20147,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
+        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 73,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "dolan-blackburn-s26",
@@ -20150,6 +20164,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
+        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -20157,8 +20172,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 75,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8n9z0n1762378568.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "travis-blackburn-s26",
@@ -20185,6 +20199,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
+        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -20192,8 +20207,7 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 75,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b6aw4v1762033708.png",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "hyam-blackburn-s26",
@@ -20203,11 +20217,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
+        "clubBadge": "🔵⚪",
         "position": "CB",
         "rating": 73,
         "photo": "",
-        "cardTheme": "standard",
-        "clubBadge": "🔵⚪"
+        "cardTheme": "standard"
     },
     {
         "id": "galindez-wc26",
@@ -20554,9 +20568,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "GK",
-        "rating": 72,
+        "altPositions": [],
+        "rating": 68,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -20695,10 +20709,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "RW",
         "altPositions": [],
-        "rating": 76,
+        "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -21025,9 +21038,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "CB",
-        "rating": 72,
+        "altPositions": [],
+        "rating": 76,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -21039,8 +21052,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
-        "position": "CDM",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
         "rating": 73,
         "photo": "",
         "cardTheme": "worldcup26"
@@ -21177,13 +21192,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Epassy",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "WC26",
-        "club": "Cameroon",
-        "clubBadge": "🇨🇲",
+        "league": "Premier League",
+        "club": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zz4jnb1668633959.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ngapandouetnbu-wc26",
@@ -21219,13 +21234,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Tchatchoua",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "WC26",
-        "club": "Cameroon",
-        "clubBadge": "🇨🇲",
+        "league": "EFL Championship",
+        "club": "Wolves",
         "position": "RB",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26"
+        "cardTheme": "standard"
     },
     {
         "id": "malone-wc26",
@@ -21388,13 +21403,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Castelletto",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "WC26",
-        "club": "Cameroon",
-        "clubBadge": "🇨🇲",
+        "league": "Qatar Stars League",
+        "club": "Al-Duhail",
         "position": "CB",
+        "altPositions": [],
         "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Castelletto_asse_fcn_2425.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ntcham-wc26",
@@ -21402,13 +21417,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Ntcham",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "WC26",
-        "club": "Cameroon",
-        "clubBadge": "🇨🇲",
+        "league": "Süper Lig",
+        "club": "Samsunspor",
         "position": "CM",
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26"
+        "altPositions": [],
+        "rating": 76,
+        "photo": "https://laai.blog/wp-content/uploads/2026/06/Olivier-Ntcham-la-ai.jpg",
+        "cardTheme": "standard"
     },
     {
         "id": "nkoudou-wc26",
@@ -21458,13 +21473,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "N'Jie",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "WC26",
-        "club": "Cameroon",
-        "clubBadge": "🇨🇲",
+        "league": "Premier League",
+        "club": "",
         "position": "RW",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26"
+        "altPositions": [],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/imw3rb1757759453.png",
+        "cardTheme": "standard"
     },
     {
         "id": "crepeau-wc26",
@@ -22779,9 +22794,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CB",
-        "rating": 73,
+        "altPositions": [],
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22826,14 +22841,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
-        "position": "CAM",
+        "position": "RM",
         "altPositions": [
+            "CAM",
             "CM",
             "CDM"
         ],
-        "rating": 80,
-        "photo": "",
+        "rating": 82,
+        "photo": "https://pbs.twimg.com/media/HL2dCFIW4AAnYh_.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -22919,9 +22934,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CM",
-        "rating": 75,
+        "altPositions": [],
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -23026,9 +23041,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CB",
-        "rating": 77,
+        "altPositions": [],
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -24313,14 +24328,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "RW",
         "altPositions": [
             "LW",
             "LM",
             "RM"
         ],
-        "rating": 80,
+        "rating": 83,
         "photo": "https://media.bongda.com.vn/news/editor/20260615_134612_kxkzl6wx.jpg",
         "cardTheme": "worldcup26"
     },
@@ -24658,13 +24672,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "RB",
-        "rating": 83,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/911945.png",
         "altPositions": [
             "CB",
             "RWB"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/911945.png",
+        "cardTheme": "mm"
     },
     {
         "id": "mandzukic-mm",
@@ -24710,13 +24724,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CB",
-        "rating": 87,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2265.png",
         "altPositions": [
             "LB",
             "RB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2265.png",
+        "cardTheme": "mm"
     },
     {
         "id": "huynhduc-vnlegend",
@@ -24930,12 +24944,12 @@ const DEFAULT_PLAYERS = [
         "club": "Mexico",
         "clubBadge": "🇲🇽",
         "position": "LW",
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "quinones-wc26",
@@ -25477,12 +25491,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "ST",
-        "rating": 87,
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/c54ln61526728491.jpg",
-        "cardTheme": "mm",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 87,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/c54ln61526728491.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "messi-gc",
@@ -25922,10 +25936,10 @@ const DEFAULT_PLAYERS = [
         "club": "Japan",
         "clubBadge": "🇯🇵",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jsuzuki-wc26",
@@ -26038,13 +26052,13 @@ const DEFAULT_PLAYERS = [
         "club": "Japan",
         "clubBadge": "🇯🇵",
         "position": "CAM",
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CF",
             "RW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "goto-wc26",
@@ -26056,10 +26070,10 @@ const DEFAULT_PLAYERS = [
         "club": "Japan",
         "clubBadge": "🇯🇵",
         "position": "ST",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "maeda-wc26",
@@ -26089,10 +26103,10 @@ const DEFAULT_PLAYERS = [
         "club": "Japan",
         "clubBadge": "🇯🇵",
         "position": "ST",
+        "altPositions": [],
         "rating": 70,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ueda-wc26",
@@ -26135,10 +26149,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "GK",
+        "altPositions": [],
         "rating": 78,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "sbumkeun-wc26",
@@ -26150,10 +26164,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "GK",
+        "altPositions": [],
         "rating": 73,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "syoungwoo-wc26",
@@ -26165,12 +26179,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "RB",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "cyumin-wc26",
@@ -26182,10 +26196,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "lhanbeom-wc26",
@@ -26197,10 +26211,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ktaehwan-wc26",
@@ -26212,10 +26226,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "RB",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "pjinseob-wc26",
@@ -26227,12 +26241,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CB",
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "likihyuk-wc26",
@@ -26244,12 +26258,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "LB",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ltaeseok-wc26",
@@ -26261,10 +26275,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "LB",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jcastrop-wc26",
@@ -26276,13 +26290,13 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CM",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM",
             "RM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kmoonhwan-wc26",
@@ -26294,10 +26308,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "RB",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "hinbeom-wc26",
@@ -26326,13 +26340,13 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CM",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CAM",
             "LM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "pseungho-wc26",
@@ -26344,12 +26358,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CM",
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bjunho-wc26",
@@ -26361,13 +26375,13 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CAM",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "LW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ldonggyeong-wc26",
@@ -26379,12 +26393,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CAM",
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "yhyunjun-wc26",
@@ -26396,12 +26410,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "RW",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ejisung-wc26",
@@ -26413,12 +26427,12 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "LW",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kjingyu-wc26",
@@ -26430,10 +26444,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "CM",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "cguesung-wc26",
@@ -26445,10 +26459,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "ST",
+        "altPositions": [],
         "rating": 76,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ohyeongyu-wc26",
@@ -26460,10 +26474,10 @@ const DEFAULT_PLAYERS = [
         "club": "South Korea",
         "clubBadge": "🇰🇷",
         "position": "ST",
+        "altPositions": [],
         "rating": 75,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "uyusupov-wc26",
@@ -26489,10 +26503,10 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "GK",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bergashev-wc26",
@@ -26504,10 +26518,10 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "GK",
+        "altPositions": [],
         "rating": 70,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ueshmurodov-wc26",
@@ -26519,10 +26533,10 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "rashurmatov-wc26",
@@ -26534,12 +26548,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CB",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aabdullayev-wc26",
@@ -26583,12 +26597,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "RB",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "snasrullayev-wc26",
@@ -26600,12 +26614,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "LB",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aulmasaliyev-wc26",
@@ -26617,10 +26631,10 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jorozov-wc26",
@@ -26632,10 +26646,10 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bkarimov-wc26",
@@ -26677,12 +26691,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CM",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jiskanderov-wc26",
@@ -26694,13 +26708,13 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CAM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "RM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aganiyev-wc26",
@@ -26712,12 +26726,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CDM",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "amozgovoy-wc26",
@@ -26729,12 +26743,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CM",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "sesanov-wc26",
@@ -26746,12 +26760,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "CM",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jmasharipov-wc26",
@@ -26763,13 +26777,13 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "LW",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CAM",
             "LM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ourunov-wc26",
@@ -26798,10 +26812,10 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "ST",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "dhamdamov-wc26",
@@ -26813,12 +26827,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "RW",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aamonov-wc26",
@@ -26830,12 +26844,12 @@ const DEFAULT_PLAYERS = [
         "club": "Uzbekistan",
         "clubBadge": "🇺🇿",
         "position": "ST",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "yabulaila-wc26",
@@ -26847,10 +26861,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "GK",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aalfakhouri-wc26",
@@ -26862,10 +26876,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "GK",
+        "altPositions": [],
         "rating": 70,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "nbaniattiah-wc26",
@@ -26877,10 +26891,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "GK",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "anasib-wc26",
@@ -26892,10 +26906,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CB",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "salrosan-wc26",
@@ -26907,12 +26921,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CB",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "yalarab-wc26",
@@ -26924,10 +26938,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CB",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "sobaid-wc26",
@@ -26939,12 +26953,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CB",
-        "rating": 68,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 68,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mabualnadi-wc26",
@@ -26956,10 +26970,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "habudahab-wc26",
@@ -26971,10 +26985,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CB",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ihaddad-wc26",
@@ -26986,12 +27000,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "RB",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "abadawi-wc26",
@@ -27003,10 +27017,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "LB",
+        "altPositions": [],
         "rating": 67,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mabutaha-wc26",
@@ -27018,12 +27032,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "LB",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mabuhashish-wc26",
@@ -27035,10 +27049,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "LB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "nalrawabdeh-wc26",
@@ -27050,12 +27064,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "nalrashdan-wc26",
@@ -27067,12 +27081,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CM",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "isaadeh-wc26",
@@ -27084,10 +27098,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CM",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "rayed-wc26",
@@ -27099,12 +27113,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CM",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ajamous-wc26",
@@ -27116,12 +27130,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CM",
-        "rating": 68,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 68,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "maldawoud-wc26",
@@ -27133,10 +27147,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "CM",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "malmardi-wc26",
@@ -27148,13 +27162,13 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "LM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CAM",
             "LW"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "oalfakhouri-wc26",
@@ -27166,10 +27180,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "ST",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mabuzrayq-wc26",
@@ -27181,13 +27195,13 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "RW",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "RM"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aazaizeh-wc26",
@@ -27199,12 +27213,12 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "RW",
-        "rating": 67,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 67,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "isabra-wc26",
@@ -27216,10 +27230,10 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "ST",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aolwan-wc26",
@@ -27231,13 +27245,13 @@ const DEFAULT_PLAYERS = [
         "club": "Jordan",
         "clubBadge": "🇯🇴",
         "position": "ST",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "CF"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kamada-18",
@@ -27484,10 +27498,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "GK",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "malowais-wc26",
@@ -27499,10 +27513,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "GK",
+        "altPositions": [],
         "rating": 75,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ahalkassar-wc26",
@@ -27514,10 +27528,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "GK",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "amajrashi-wc26",
@@ -27529,10 +27543,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "RB",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "alajami-wc26",
@@ -27573,10 +27587,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "nboushal-wc26",
@@ -27588,10 +27602,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "RB",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "hkadesh-wc26",
@@ -27603,12 +27617,12 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "LB",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "malharbi-wc26",
@@ -27620,10 +27634,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "LB",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jthakri-wc26",
@@ -27635,10 +27649,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mabualshamat-wc26",
@@ -27650,10 +27664,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "RB",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "naldawsari-wc26",
@@ -27665,12 +27679,12 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "LB",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "maljuwayr-wc26",
@@ -27682,10 +27696,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CM",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ayahya-wc26",
@@ -27697,10 +27711,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "RW",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aalkhaibari-wc26",
@@ -27712,10 +27726,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CDM",
+        "altPositions": [],
         "rating": 73,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "zaljohani-wc26",
@@ -27727,10 +27741,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CM",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aalhejji-wc26",
@@ -27742,10 +27756,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CM",
+        "altPositions": [],
         "rating": 70,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "smandash-wc26",
@@ -27757,10 +27771,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "RW",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mkanno-wc26",
@@ -27772,12 +27786,12 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "CM",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "falburaikan-wc26",
@@ -27789,10 +27803,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "ST",
+        "altPositions": [],
         "rating": 75,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "salshehri-wc26",
@@ -27804,10 +27818,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "ST",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kalghannam-wc26",
@@ -27819,10 +27833,10 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "LW",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aalhamdan-wc26",
@@ -27834,12 +27848,12 @@ const DEFAULT_PLAYERS = [
         "club": "Saudi Arabia",
         "clubBadge": "🇸🇦",
         "position": "ST",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "yengi-wc26",
@@ -27851,10 +27865,10 @@ const DEFAULT_PLAYERS = [
         "club": "Australia",
         "clubBadge": "🇦🇺",
         "position": "ST",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kobel-wc26",
@@ -27880,10 +27894,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "GK",
+        "altPositions": [],
         "rating": 78,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mkeller-wc26",
@@ -27895,10 +27909,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "GK",
+        "altPositions": [],
         "rating": 72,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "muheim-wc26",
@@ -27910,10 +27924,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "LB",
+        "altPositions": [],
         "rating": 75,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "widmer-wc26",
@@ -27957,12 +27971,12 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CB",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "comert-wc26",
@@ -27974,12 +27988,12 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CB",
-        "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "amenda-wc26",
@@ -27991,10 +28005,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jaquez-wc26",
@@ -28006,10 +28020,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CB",
+        "altPositions": [],
         "rating": 71,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "freuler-wc26",
@@ -28021,12 +28035,12 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CM",
-        "rating": 80,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "manzambi-wc26",
@@ -28060,12 +28074,12 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CDM",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "sow-wc26",
@@ -28077,12 +28091,12 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CM",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "fassnacht-wc26",
@@ -28094,13 +28108,13 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "RM",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "RW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aebischer-wc26",
@@ -28148,10 +28162,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "ST",
+        "altPositions": [],
         "rating": 79,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ndoye-wc26",
@@ -28163,13 +28177,13 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "RW",
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "RM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "okafor-wc26",
@@ -28181,13 +28195,13 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "ST",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "RW"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "amdouni-wc26",
@@ -28199,12 +28213,12 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "CAM",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "ST"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "itten-wc26",
@@ -28216,10 +28230,10 @@ const DEFAULT_PLAYERS = [
         "club": "Switzerland",
         "clubBadge": "🇨🇭",
         "position": "ST",
+        "altPositions": [],
         "rating": 75,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "crocombe-wc26",
@@ -28245,10 +28259,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "GK",
+        "altPositions": [],
         "rating": 67,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "payne-wc26",
@@ -28292,10 +28306,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "pijnaker-wc26",
@@ -28307,10 +28321,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 69,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "surman-wc26",
@@ -28322,10 +28336,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 68,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "elliot-wc26",
@@ -28337,10 +28351,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "RB",
+        "altPositions": [],
         "rating": 67,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "smith-wc26",
@@ -28352,10 +28366,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CB",
+        "altPositions": [],
         "rating": 66,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "singh-wc26",
@@ -28367,13 +28381,13 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CAM",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "RW"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "rufer-wc26",
@@ -28385,12 +28399,12 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CM",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "old-wc26",
@@ -28402,13 +28416,13 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "CAM",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "LM"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mccowatt-wc26",
@@ -28420,13 +28434,13 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "LW",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "ST"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "thomas-wc26",
@@ -28455,10 +28469,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "RM",
+        "altPositions": [],
         "rating": 66,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "barbarouses-wc26",
@@ -28470,13 +28484,13 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "RW",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "ST",
             "LW"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "randall-wc26",
@@ -28488,10 +28502,10 @@ const DEFAULT_PLAYERS = [
         "club": "New Zealand",
         "clubBadge": "🇳🇿",
         "position": "LW",
+        "altPositions": [],
         "rating": 65,
         "photo": "",
-        "cardTheme": "worldcup26",
-        "altPositions": []
+        "cardTheme": "worldcup26"
     },
     {
         "id": "melvinmastil-wc26",
@@ -28501,10 +28515,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "GK",
         "altPositions": [],
-        "rating": 72,
+        "rating": 66,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28516,10 +28529,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "GK",
         "altPositions": [],
-        "rating": 72,
+        "rating": 70,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28531,10 +28543,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "GK",
         "altPositions": [],
-        "rating": 74,
+        "rating": 73,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28561,13 +28572,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
-        "rating": 75,
-        "photo": "",
+        "rating": 79,
+        "photo": "https://media.worldsoccertalk.com/wp-content/uploads/sites/6/2026/06/22213254/algeria-mandi-740x416.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -28627,10 +28637,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
-        "position": "CB",
+        "position": "LB",
         "altPositions": [],
-        "rating": 71,
+        "rating": 73,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28642,12 +28651,15 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
-        "position": "CB",
+        "position": "RWB",
         "altPositions": [
-            "LB"
+            "CAM",
+            "LM",
+            "RM",
+            "RB",
+            "CB"
         ],
-        "rating": 71,
+        "rating": 79,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -29789,13 +29801,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
-        "rating": 79,
-        "photo": "",
+        "rating": 81,
+        "photo": "https://s.yimg.com/ny/api/res/1.2/FPt4hxu4F8yB8t7l_VZ2WA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNztjZj13ZWJw/https://media.zenfs.com/en/football_italia_articles_132/67477a7716f3c485de964c85c6228163",
         "cardTheme": "worldcup26"
     },
     {
@@ -29974,12 +29985,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "LW",
         "altPositions": [
             "LM"
         ],
-        "rating": 73,
+        "rating": 75,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -32693,18 +32703,17 @@ const DEFAULT_PLAYERS = [
     {
         "id": "hannibalmejbri-wc26",
         "name": "Hannibal Mejbri",
-        "cardName": "Mejbri",
+        "cardName": "Hannibal",
         "nationality": "Tunisia",
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
-        "rating": 72,
-        "photo": "",
+        "rating": 78,
+        "photo": "https://assets.goal.com/images/v3/getty-2282626844/crop/MM5DINJQGA5DENJTGE5G433XMU5DAORSGM2A====/GettyImages-2282626844.jpg?auto=webp&format=pjpg&width=3840&quality=60",
         "cardTheme": "worldcup26"
     },
     {
@@ -34000,11 +34009,11 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "CB",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 76,
+        "cardTheme": "standard"
     },
     {
         "id": "burrows-14",
@@ -34016,11 +34025,11 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "LB",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "mee-5",
@@ -34045,12 +34054,12 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "RB",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "RM",
             "CM"
-        ]
+        ],
+        "rating": 73,
+        "cardTheme": "standard"
     },
     {
         "id": "arblaster-24",
@@ -34062,11 +34071,11 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "hamer-8",
@@ -34078,11 +34087,11 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "cardTheme": "standard"
     },
     {
         "id": "ohare-10",
@@ -34094,11 +34103,11 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "cardTheme": "standard"
     },
     {
         "id": "phillips-23",
@@ -34110,11 +34119,11 @@ const DEFAULT_PLAYERS = [
         "club": "Sheffield United",
         "clubBadge": "⚔️",
         "position": "CDM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "cardTheme": "standard"
     },
     {
         "id": "cannon-9",
@@ -34124,9 +34133,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "ST",
+        "altPositions": [],
         "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8o3lh71761393134.png",
         "cardTheme": "standard"
     },
     {
@@ -34165,11 +34175,11 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "CB",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 76,
+        "cardTheme": "standard"
     },
     {
         "id": "calero-5",
@@ -34194,11 +34204,11 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "cardTheme": "standard"
     },
     {
         "id": "romero-22",
@@ -34227,11 +34237,11 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "CDM",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 73,
+        "cardTheme": "standard"
     },
     {
         "id": "terrats-14",
@@ -34243,11 +34253,11 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "exposito-8",
@@ -34259,11 +34269,11 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "puado-7",
@@ -34275,12 +34285,12 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "LW",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "LM",
             "ST"
-        ]
+        ],
+        "rating": 78,
+        "cardTheme": "standard"
     },
     {
         "id": "ngonge-16",
@@ -34292,12 +34302,12 @@ const DEFAULT_PLAYERS = [
         "club": "Espanyol",
         "clubBadge": "🔵⚪",
         "position": "RW",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "RM",
             "ST"
-        ]
+        ],
+        "rating": 77,
+        "cardTheme": "standard"
     },
     {
         "id": "fernandez-9",
@@ -34335,11 +34345,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "CB",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 78,
+        "cardTheme": "standard"
     },
     {
         "id": "abqar-4",
@@ -34364,11 +34374,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "LB",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 76,
+        "cardTheme": "standard"
     },
     {
         "id": "femenia-21",
@@ -34380,11 +34390,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "cardTheme": "standard"
     },
     {
         "id": "milla-6",
@@ -34396,11 +34406,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "CDM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "cardTheme": "standard"
     },
     {
         "id": "arambarri-8",
@@ -34443,11 +34453,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "RM",
-        "rating": 74,
-        "cardTheme": "standard",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 74,
+        "cardTheme": "standard"
     },
     {
         "id": "mayoral-9",
@@ -34459,11 +34469,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "ST",
-        "rating": 79,
-        "cardTheme": "standard",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 79,
+        "cardTheme": "standard"
     },
     {
         "id": "peter-17",
@@ -34475,11 +34485,11 @@ const DEFAULT_PLAYERS = [
         "club": "Getafe",
         "clubBadge": "🔵",
         "position": "LM",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 73,
+        "cardTheme": "standard"
     },
     {
         "id": "gordon-1",
@@ -34532,12 +34542,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "LB",
-        "rating": 71,
-        "cardTheme": "standard",
         "altPositions": [
             "CB",
             "LWB"
-        ]
+        ],
+        "rating": 71,
+        "cardTheme": "standard"
     },
     {
         "id": "forrester-28",
@@ -34549,11 +34559,11 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "RB",
-        "rating": 68,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 68,
+        "cardTheme": "standard"
     },
     {
         "id": "baningime-6",
@@ -34565,12 +34575,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "CDM",
-        "rating": 72,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://media.api-sports.io/football/players/19550.png"
+        "rating": 72,
+        "photo": "https://media.api-sports.io/football/players/19550.png",
+        "cardTheme": "standard"
     },
     {
         "id": "devlin-8",
@@ -34582,11 +34592,11 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "CM",
-        "rating": 71,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 71,
+        "cardTheme": "standard"
     },
     {
         "id": "leonard-14",
@@ -34598,11 +34608,11 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "CM",
-        "rating": 70,
-        "cardTheme": "standard",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 70,
+        "cardTheme": "standard"
     },
     {
         "id": "forrest-11",
@@ -34614,11 +34624,11 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "RM",
-        "rating": 69,
-        "cardTheme": "standard",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 69,
+        "cardTheme": "standard"
     },
     {
         "id": "chesnokov-77",
@@ -34630,11 +34640,11 @@ const DEFAULT_PLAYERS = [
         "club": "Hearts",
         "clubBadge": "❤️",
         "position": "RW",
-        "rating": 71,
-        "cardTheme": "standard",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 71,
+        "cardTheme": "standard"
     },
     {
         "id": "shankland-9",
@@ -34685,11 +34695,11 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "CB",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 73,
+        "cardTheme": "standard"
     },
     {
         "id": "elgezabal-5",
@@ -34714,11 +34724,11 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "pampin-6",
@@ -34730,11 +34740,11 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 72,
+        "cardTheme": "standard"
     },
     {
         "id": "vencedor-12",
@@ -34746,11 +34756,11 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "CDM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "arriaga-16",
@@ -34762,11 +34772,11 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "cardTheme": "standard"
     },
     {
         "id": "alvarez-24",
@@ -34778,12 +34788,12 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "RM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "RW",
             "CAM"
-        ]
+        ],
+        "rating": 75,
+        "cardTheme": "standard"
     },
     {
         "id": "abed-55",
@@ -34795,11 +34805,11 @@ const DEFAULT_PLAYERS = [
         "club": "Levante",
         "clubBadge": "🐸",
         "position": "RW",
-        "rating": 71,
-        "cardTheme": "standard",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 71,
+        "cardTheme": "standard"
     },
     {
         "id": "falcone-1",
@@ -34812,8 +34822,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡🔴",
         "position": "GK",
         "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6hqbx51759652180.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6hqbx51759652180.png",
+        "cardTheme": "standard"
     },
     {
         "id": "fruchtl-30",
@@ -34826,8 +34836,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡🔴",
         "position": "GK",
         "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8hfbp51759652197.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8hfbp51759652197.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gaspar-4",
@@ -34840,8 +34850,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡🔴",
         "position": "CB",
         "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hyn5eh1759691741.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hyn5eh1759691741.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jean-5",
@@ -34854,8 +34864,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡🔴",
         "position": "CB",
         "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5w7vw31764340247.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5w7vw31764340247.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gallo-25",
@@ -34867,12 +34877,12 @@ const DEFAULT_PLAYERS = [
         "club": "Lecce",
         "clubBadge": "🟡🔴",
         "position": "LB",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/s703fk1759691721.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/s703fk1759691721.png",
+        "cardTheme": "standard"
     },
     {
         "id": "veiga-22",
@@ -34884,12 +34894,12 @@ const DEFAULT_PLAYERS = [
         "club": "Lecce",
         "clubBadge": "🟡🔴",
         "position": "RB",
-        "rating": 71,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jviz5r1759694017.png"
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jviz5r1759694017.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ramadani-20",
@@ -34901,12 +34911,12 @@ const DEFAULT_PLAYERS = [
         "club": "Lecce",
         "clubBadge": "🟡🔴",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wwa1u31759693316.png"
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wwa1u31759693316.png",
+        "cardTheme": "standard"
     },
     {
         "id": "coulibaly-29",
@@ -34918,12 +34928,12 @@ const DEFAULT_PLAYERS = [
         "club": "Lecce",
         "clubBadge": "🟡🔴",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dmyjlr1759652166.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dmyjlr1759652166.png",
+        "cardTheme": "standard"
     },
     {
         "id": "marchwinski-10",
@@ -34935,12 +34945,12 @@ const DEFAULT_PLAYERS = [
         "club": "Lecce",
         "clubBadge": "🟡🔴",
         "position": "CAM",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dyopb41764339130.png"
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dyopb41764339130.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gandelman-8",
@@ -34952,12 +34962,12 @@ const DEFAULT_PLAYERS = [
         "club": "Lecce",
         "clubBadge": "🟡🔴",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
         "altPositions": [
             "CAM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tr1f0z1767536638.png"
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tr1f0z1767536638.png",
+        "cardTheme": "standard"
     },
     {
         "id": "krstovic-9",
@@ -34996,12 +35006,12 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "CB",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "LB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k2wp561763666046.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k2wp561763666046.png",
+        "cardTheme": "standard"
     },
     {
         "id": "stark-4",
@@ -35013,12 +35023,12 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "CB",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rbbp4y1763666280.png"
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rbbp4y1763666280.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sugawara-2",
@@ -35030,12 +35040,12 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "RB",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9znmfg1763666295.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9znmfg1763666295.png",
+        "cardTheme": "standard"
     },
     {
         "id": "weiser-20",
@@ -35047,13 +35057,13 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "RM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "RB",
             "RWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sn3mzq1763666324.png"
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sn3mzq1763666324.png",
+        "cardTheme": "standard"
     },
     {
         "id": "agu-27",
@@ -35065,13 +35075,13 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB",
             "RB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/31qtv91763665923.png"
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/31qtv91763665923.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lynen-6",
@@ -35083,12 +35093,12 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/705dt01763666125.png"
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/705dt01763666125.png",
+        "cardTheme": "standard"
     },
     {
         "id": "schmid-20",
@@ -35100,13 +35110,13 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "CAM",
-        "rating": 79,
-        "cardTheme": "standard",
         "altPositions": [
             "CM",
             "RW"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pc39yd1763666231.png"
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pc39yd1763666231.png",
+        "cardTheme": "standard"
     },
     {
         "id": "stage-8",
@@ -35118,12 +35128,12 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h974oh1763666264.png"
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h974oh1763666264.png",
+        "cardTheme": "standard"
     },
     {
         "id": "boniface-9",
@@ -35151,13 +35161,13 @@ const DEFAULT_PLAYERS = [
         "club": "Werder Bremen",
         "clubBadge": "🟢⚪",
         "position": "LW",
-        "rating": 74,
-        "cardTheme": "standard",
         "altPositions": [
             "LM",
             "ST"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lr1eoy1763666063.png"
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lr1eoy1763666063.png",
+        "cardTheme": "standard"
     },
     {
         "id": "atubolu-1",
@@ -35170,8 +35180,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚫",
         "position": "GK",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oocqhe1763328729.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oocqhe1763328729.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lienhart-3",
@@ -35181,11 +35191,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "CB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3scndj1763328973.png"
+        "altPositions": [],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3scndj1763328973.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ginter-28",
@@ -35198,8 +35208,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚫",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5q6niz1763328818.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5q6niz1763328818.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kuebler-17",
@@ -35211,12 +35221,12 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xn0vqv1763328938.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xn0vqv1763328938.png",
+        "cardTheme": "standard"
     },
     {
         "id": "guenter-30",
@@ -35228,12 +35238,12 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "LB",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ifd15q1763328846.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ifd15q1763328846.png",
+        "cardTheme": "standard"
     },
     {
         "id": "osterhage-6",
@@ -35245,12 +35255,12 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zl66qd1763329067.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zl66qd1763329067.png",
+        "cardTheme": "standard"
     },
     {
         "id": "eggestein-8",
@@ -35262,12 +35272,12 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "CM",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6lo1mc1763328805.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6lo1mc1763328805.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kyereh-10",
@@ -35279,12 +35289,12 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "CAM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CF"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dp7yns1763328957.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dp7yns1763328957.png",
+        "cardTheme": "standard"
     },
     {
         "id": "grifo-32",
@@ -35296,12 +35306,12 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "LW",
-        "rating": 80,
-        "cardTheme": "standard",
         "altPositions": [
             "LM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/i56g1d1763328832.png"
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/i56g1d1763328832.png",
+        "cardTheme": "standard"
     },
     {
         "id": "beste-7",
@@ -35313,13 +35323,13 @@ const DEFAULT_PLAYERS = [
         "club": "Freiburg",
         "clubBadge": "🔴⚫",
         "position": "LM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "LB",
             "LWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zl9dp11763328766.png"
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zl9dp11763328766.png",
+        "cardTheme": "standard"
     },
     {
         "id": "matanovic-9",
@@ -35332,8 +35342,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚫",
         "position": "ST",
         "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lm6j0a1763329018.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lm6j0a1763329018.png",
+        "cardTheme": "standard"
     },
     {
         "id": "baumann-1",
@@ -35346,8 +35356,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪",
         "position": "GK",
         "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zt5gvq1763487114.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zt5gvq1763487114.png",
+        "cardTheme": "standard"
     },
     {
         "id": "akpoguma-25",
@@ -35360,8 +35370,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪",
         "position": "CB",
         "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rbif1m1763487053.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rbif1m1763487053.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hranac-4",
@@ -35374,8 +35384,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔵⚪",
         "position": "CB",
         "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7aocs31763494358.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/7aocs31763494358.png",
+        "cardTheme": "standard"
     },
     {
         "id": "coufal-2",
@@ -35387,12 +35397,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "RB",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jucuwd1763494235.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jucuwd1763494235.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bernardo-3",
@@ -35404,13 +35414,13 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "LB",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "CB",
             "LWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/13ajsp1769182879.png"
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/13ajsp1769182879.png",
+        "cardTheme": "standard"
     },
     {
         "id": "avdullahu-6",
@@ -35422,12 +35432,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "CDM",
-        "rating": 72,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/acnllu1763487092.png"
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/acnllu1763487092.png",
+        "cardTheme": "standard"
     },
     {
         "id": "burger-8",
@@ -35439,12 +35449,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "CDM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qdd3u11763487234.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qdd3u11763487234.png",
+        "cardTheme": "standard"
     },
     {
         "id": "prass-15",
@@ -35456,13 +35466,13 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "LM",
-        "rating": 76,
-        "cardTheme": "standard",
         "altPositions": [
             "LB",
             "LWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1iv3r61763494556.png"
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1iv3r61763494556.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bebou-9",
@@ -35474,13 +35484,13 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "RM",
-        "rating": 75,
-        "cardTheme": "standard",
         "altPositions": [
             "RW",
             "ST"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qobokt1763487135.png"
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qobokt1763487135.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kramaric-27",
@@ -35492,13 +35502,13 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "CAM",
-        "rating": 80,
-        "cardTheme": "standard",
         "altPositions": [
             "ST",
             "CF"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9szvnr1763494431.png"
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9szvnr1763494431.png",
+        "cardTheme": "standard"
     },
     {
         "id": "toure-11",
@@ -35510,12 +35520,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hoffenheim",
         "clubBadge": "🔵⚪",
         "position": "LW",
-        "rating": 74,
-        "cardTheme": "standard",
         "altPositions": [
             "LM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sf2uwx1763494642.png"
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sf2uwx1763494642.png",
+        "cardTheme": "standard"
     },
     {
         "id": "nuebel-33",
@@ -35528,8 +35538,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "GK",
         "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9rz45t1763586401.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9rz45t1763586401.png",
+        "cardTheme": "standard"
     },
     {
         "id": "chabot-24",
@@ -35555,8 +35565,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "CB",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wj7q4u1763586528.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wj7q4u1763586528.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vagnoman-4",
@@ -35568,13 +35578,13 @@ const DEFAULT_PLAYERS = [
         "club": "Stuttgart",
         "clubBadge": "🔴⚪",
         "position": "RB",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "RWB",
             "LB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/imqnl11763586510.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/imqnl11763586510.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mittelstaedt-7",
@@ -35586,12 +35596,12 @@ const DEFAULT_PLAYERS = [
         "club": "Stuttgart",
         "clubBadge": "🔴⚪",
         "position": "LB",
-        "rating": 79,
-        "cardTheme": "standard",
         "altPositions": [
             "LWB"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jxttcl1763586349.png"
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jxttcl1763586349.png",
+        "cardTheme": "standard"
     },
     {
         "id": "stiller-6",
@@ -35619,12 +35629,12 @@ const DEFAULT_PLAYERS = [
         "club": "Stuttgart",
         "clubBadge": "🔴⚪",
         "position": "CDM",
-        "rating": 78,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ph1o781763586281.png"
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ph1o781763586281.png",
+        "cardTheme": "standard"
     },
     {
         "id": "fuehrich-10",
@@ -35636,12 +35646,12 @@ const DEFAULT_PLAYERS = [
         "club": "Stuttgart",
         "clubBadge": "🔴⚪",
         "position": "LW",
-        "rating": 79,
-        "cardTheme": "standard",
         "altPositions": [
             "LM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5vfcdt1763586219.png"
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5vfcdt1763586219.png",
+        "cardTheme": "standard"
     },
     {
         "id": "elkhannouss-11",
@@ -35653,12 +35663,12 @@ const DEFAULT_PLAYERS = [
         "club": "Stuttgart",
         "clubBadge": "🔴⚪",
         "position": "CAM",
-        "rating": 77,
-        "cardTheme": "standard",
         "altPositions": [
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ii2jau1763586312.png"
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ii2jau1763586312.png",
+        "cardTheme": "standard"
     },
     {
         "id": "millot-8",
@@ -35670,13 +35680,13 @@ const DEFAULT_PLAYERS = [
         "club": "Stuttgart",
         "clubBadge": "🔴⚪",
         "position": "CAM",
-        "rating": 80,
-        "cardTheme": "standard",
         "altPositions": [
             "RW",
             "CM"
         ],
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1h12c21777238191.png"
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1h12c21777238191.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ebtoure-9",
@@ -35689,8 +35699,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🔴⚪",
         "position": "ST",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yd9uz31769170246.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yd9uz31769170246.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lisandro-gc",
@@ -35917,9 +35927,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "GK",
+        "altPositions": [],
         "rating": 82,
+        "photo": "https://www.shutterstock.com/editorial/image-editorial/O8T1gaw7MfDeM6z8NjA2MQ==/france-goalkeeper-steve-mandanda-440nw-9727726cv.jpg",
         "cardTheme": "gc"
     },
     {
@@ -36039,11 +36050,11 @@ const DEFAULT_PLAYERS = [
         "club": "France 18",
         "clubBadge": "⚽",
         "position": "LM",
-        "rating": 83,
-        "cardTheme": "gc",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 83,
+        "cardTheme": "gc"
     },
     {
         "id": "tolisso-gc",
@@ -36211,11 +36222,11 @@ const DEFAULT_PLAYERS = [
         "club": "Germany 14",
         "clubBadge": "⚽",
         "position": "LB",
-        "rating": 85,
-        "cardTheme": "gc",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 85,
+        "cardTheme": "gc"
     },
     {
         "id": "mertesacker-gc",
@@ -36342,11 +36353,11 @@ const DEFAULT_PLAYERS = [
         "club": "Germany 14",
         "clubBadge": "⚽",
         "position": "LM",
-        "rating": 82,
-        "cardTheme": "gc",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 82,
+        "cardTheme": "gc"
     },
     {
         "id": "klose-gc",
@@ -36373,12 +36384,12 @@ const DEFAULT_PLAYERS = [
         "club": "Germany 14",
         "clubBadge": "⚽",
         "position": "ST",
-        "rating": 83,
-        "cardTheme": "gc",
         "altPositions": [
             "LM",
             "LW"
-        ]
+        ],
+        "rating": 83,
+        "cardTheme": "gc"
     },
     {
         "id": "sramos-gc",
@@ -36419,11 +36430,11 @@ const DEFAULT_PLAYERS = [
         "club": "Spain 10",
         "clubBadge": "⚽",
         "position": "RB",
-        "rating": 82,
-        "cardTheme": "gc",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 82,
+        "cardTheme": "gc"
     },
     {
         "id": "marchena-gc",
@@ -36535,11 +36546,11 @@ const DEFAULT_PLAYERS = [
         "club": "Spain 10",
         "clubBadge": "⚽",
         "position": "RW",
-        "rating": 85,
-        "cardTheme": "gc",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 85,
+        "cardTheme": "gc"
     },
     {
         "id": "navas-gc",
@@ -36551,11 +36562,11 @@ const DEFAULT_PLAYERS = [
         "club": "Spain 10",
         "clubBadge": "⚽",
         "position": "RM",
-        "rating": 83,
-        "cardTheme": "gc",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 83,
+        "cardTheme": "gc"
     },
     {
         "id": "mata-gc",
@@ -36567,12 +36578,12 @@ const DEFAULT_PLAYERS = [
         "club": "Spain 10",
         "clubBadge": "⚽",
         "position": "CAM",
-        "rating": 84,
-        "cardTheme": "gc",
         "altPositions": [
             "LM",
             "LW"
-        ]
+        ],
+        "rating": 84,
+        "cardTheme": "gc"
     },
     {
         "id": "dsilva-gc",
@@ -36868,11 +36879,11 @@ const DEFAULT_PLAYERS = [
         "club": "Italy 06",
         "clubBadge": "⚽",
         "position": "ST",
-        "rating": 83,
-        "cardTheme": "gc",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 83,
+        "cardTheme": "gc"
     },
     {
         "id": "inzaghi-gc",
@@ -36998,12 +37009,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CM",
-        "rating": 85,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tzq3go1634823389.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tzq3go1634823389.png",
+        "cardTheme": "mm"
     },
     {
         "id": "hesselink-mm",
@@ -37030,14 +37041,14 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CB",
-        "rating": 82,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cnru7s1714507229.png",
         "altPositions": [
             "RB",
             "LB",
             "CDM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cnru7s1714507229.png",
+        "cardTheme": "mm"
     },
     {
         "id": "irwin-mm",
@@ -37066,13 +37077,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LM",
-        "rating": 78,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5107571.png",
         "altPositions": [
             "LB",
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5107571.png",
+        "cardTheme": "mm"
     },
     {
         "id": "bendtner-mm",
@@ -37085,8 +37096,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "",
         "position": "ST",
         "rating": 83,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/940318.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/940318.png",
+        "cardTheme": "mm"
     },
     {
         "id": "lawrence-mm",
@@ -37113,12 +37124,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CM",
-        "rating": 82,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3lub9n1557311123.png",
-        "cardTheme": "mm",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3lub9n1557311123.png",
+        "cardTheme": "mm"
     },
     {
         "id": "cha-bum-kun-mm",
@@ -37146,12 +37157,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 88,
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/5miam11661857377.jpg",
-        "cardTheme": "mm",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/5miam11661857377.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "shankly-mm",
@@ -37224,12 +37235,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LM",
-        "rating": 85,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/byuzgq1683916331.png",
-        "cardTheme": "mm",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 85,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/byuzgq1683916331.png",
+        "cardTheme": "mm"
     },
     {
         "id": "clemence-icons",
@@ -37319,12 +37330,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "RM",
-        "rating": 84,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nufceh1632258921.png",
-        "cardTheme": "mm",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nufceh1632258921.png",
+        "cardTheme": "mm"
     },
     {
         "id": "ulloa-mm",
@@ -37521,13 +37532,13 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LW",
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1zclav1714028302.png",
-        "cardTheme": "mm",
         "altPositions": [
             "RW",
             "LM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1zclav1714028302.png",
+        "cardTheme": "mm"
     },
     {
         "id": "lopetegui-mm",
@@ -37886,6 +37897,24 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/thumb/lmdhd51515244675.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mcallister-mm-leeds",
+        "name": "Gary McAllister",
+        "cardName": "McAllister",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "LM",
+            "RM"
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uwk7am1718443297.png",
         "cardTheme": "mm"
     },
     {
@@ -38506,8 +38535,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇩🇪",
         "position": "GK",
         "rating": 80,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "thiaw-wc26",
@@ -38603,13 +38632,13 @@ const DEFAULT_PLAYERS = [
         "club": "Germany",
         "clubBadge": "🇩🇪",
         "position": "CAM",
-        "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CM",
             "LM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ouedraogo-wc26",
@@ -38656,8 +38685,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇲🇦",
         "position": "GK",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "elouahdi-wc26",
@@ -38669,12 +38698,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "issadiop-wc26",
@@ -38687,8 +38716,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇲🇦",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "belammari-wc26",
@@ -38700,12 +38729,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "halhal-wc26",
@@ -38718,8 +38747,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇲🇦",
         "position": "CB",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "salaheddine-wc26",
@@ -38731,12 +38760,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bouaddi-wc26",
@@ -38765,12 +38794,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "CAM",
-        "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "elmourabet-wc26",
@@ -38783,8 +38812,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇲🇦",
         "position": "CM",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "gessime-wc26",
@@ -38796,12 +38825,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "RW",
-        "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "elaynaoui-wc26",
@@ -38813,12 +38842,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "amaimouni-wc26",
@@ -38830,12 +38859,12 @@ const DEFAULT_PLAYERS = [
         "club": "Morocco",
         "clubBadge": "🇲🇦",
         "position": "ST",
-        "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ovargas-wc26",
@@ -38848,8 +38877,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇲🇽",
         "position": "CM",
         "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "barsham-wc26",
@@ -38862,8 +38891,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "GK",
         "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "abunada-wc26",
@@ -38876,8 +38905,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "GK",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "alawi-wc26",
@@ -38889,12 +38918,12 @@ const DEFAULT_PLAYERS = [
         "club": "Qatar",
         "clubBadge": "🇶🇦",
         "position": "RB",
-        "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "khoukhi-wc26",
@@ -38907,8 +38936,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CB",
         "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "miguel-wc26",
@@ -38921,8 +38950,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "RB",
         "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "laaye-wc26",
@@ -38935,8 +38964,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CB",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mendes-qa-wc26",
@@ -38949,8 +38978,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CB",
         "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "albrake-wc26",
@@ -38963,8 +38992,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "LB",
         "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "alamin-wc26",
@@ -38977,8 +39006,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "LB",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "almanai-wc26",
@@ -38991,8 +39020,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CAM",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jaber-wc26",
@@ -39004,12 +39033,12 @@ const DEFAULT_PLAYERS = [
         "club": "Qatar",
         "clubBadge": "🇶🇦",
         "position": "CM",
-        "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "boudiaf-wc26",
@@ -39021,12 +39050,12 @@ const DEFAULT_PLAYERS = [
         "club": "Qatar",
         "clubBadge": "🇶🇦",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "fathi-wc26",
@@ -39039,8 +39068,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CDM",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "hatem-wc26",
@@ -39053,8 +39082,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CM",
         "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "madibo-wc26",
@@ -39067,8 +39096,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CDM",
         "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "tahseen-wc26",
@@ -39081,8 +39110,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "RW",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "edmilson-wc26",
@@ -39094,12 +39123,12 @@ const DEFAULT_PLAYERS = [
         "club": "Qatar",
         "clubBadge": "🇶🇦",
         "position": "LW",
-        "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "almoez-wc26",
@@ -39112,8 +39141,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "ST",
         "rating": 77,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "afif-wc26",
@@ -39125,13 +39154,13 @@ const DEFAULT_PLAYERS = [
         "club": "Qatar",
         "clubBadge": "🇶🇦",
         "position": "LW",
-        "rating": 82,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "ST",
             "CF"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "muntari-wc26",
@@ -39144,8 +39173,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "ST",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "abdulrazzaq-wc26",
@@ -39158,8 +39187,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "RW",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "alaaeldin-wc26",
@@ -39172,8 +39201,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "ST",
         "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "alhaydos-wc26",
@@ -39185,12 +39214,12 @@ const DEFAULT_PLAYERS = [
         "club": "Qatar",
         "clubBadge": "🇶🇦",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aljanahi-wc26",
@@ -39203,8 +39232,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "RW",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "yfofana-wc26",
@@ -39217,8 +39246,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "GK",
         "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mkone-wc26",
@@ -39231,8 +39260,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "GK",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "lafont-wc26",
@@ -39245,8 +39274,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "GK",
         "rating": 79,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ndicka-wc26",
@@ -39259,8 +39288,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "CB",
         "rating": 82,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "odiomande-wc26",
@@ -39286,12 +39315,12 @@ const DEFAULT_PLAYERS = [
         "club": "Côte d'Ivoire",
         "clubBadge": "🇨🇮",
         "position": "CB",
-        "rating": 80,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "singo-wc26",
@@ -39321,8 +39350,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "CB",
         "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "gdoue-wc26",
@@ -39335,8 +39364,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "RB",
         "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "akpa-wc26",
@@ -39349,8 +39378,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "LB",
         "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "konan-wc26",
@@ -39363,8 +39392,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "LB",
         "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kessie-wc26",
@@ -39393,12 +39422,12 @@ const DEFAULT_PLAYERS = [
         "club": "Côte d'Ivoire",
         "clubBadge": "🇨🇮",
         "position": "CM",
-        "rating": 82,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "sangare-wc26",
@@ -39426,12 +39455,12 @@ const DEFAULT_PLAYERS = [
         "club": "Côte d'Ivoire",
         "clubBadge": "🇨🇮",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "guiagon-wc26",
@@ -39444,8 +39473,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "CAM",
         "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "oulai-wc26",
@@ -39458,8 +39487,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "CM",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "adingra-wc26",
@@ -39471,12 +39500,12 @@ const DEFAULT_PLAYERS = [
         "club": "Côte d'Ivoire",
         "clubBadge": "🇨🇮",
         "position": "LM",
-        "rating": 81,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "adiallo-wc26",
@@ -39488,12 +39517,12 @@ const DEFAULT_PLAYERS = [
         "club": "Côte d'Ivoire",
         "clubBadge": "🇨🇮",
         "position": "RM",
-        "rating": 81,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "odiakite-wc26",
@@ -39506,8 +39535,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "ST",
         "rating": 77,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "wahi-wc26",
@@ -39535,8 +39564,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "ST",
         "rating": 77,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bonny-wc26",
@@ -39549,8 +39578,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "ST",
         "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "pepe-wc26",
@@ -39581,8 +39610,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇮",
         "position": "LM",
         "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ydiomande-wc26",
@@ -39611,8 +39640,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "GK",
         "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mpasi-wc26",
@@ -39640,8 +39669,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "GK",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mbemba-wc26",
@@ -39654,8 +39683,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CB",
         "rating": 81,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "wanbissaka-wc26",
@@ -39668,8 +39697,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "RB",
         "rating": 80,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "masuaku-wc26",
@@ -39696,12 +39725,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CB",
         "altPositions": [
             "RB"
         ],
-        "rating": 79,
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39716,8 +39744,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CB",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "gkalulu-wc26",
@@ -39730,8 +39758,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "RB",
         "rating": 73,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "jkayembe-wc26",
@@ -39744,8 +39772,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "LB",
         "rating": 73,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kapuadi-wc26",
@@ -39758,8 +39786,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CB",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "batubinsika-wc26",
@@ -39772,8 +39800,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CB",
         "rating": 73,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "moutoussamy-wc26",
@@ -39785,12 +39813,12 @@ const DEFAULT_PLAYERS = [
         "club": "DR Congo",
         "clubBadge": "🇨🇩",
         "position": "CDM",
-        "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ekayembe-wc26",
@@ -39802,12 +39830,12 @@ const DEFAULT_PLAYERS = [
         "club": "DR Congo",
         "clubBadge": "🇨🇩",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "pickel-wc26",
@@ -39820,8 +39848,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CDM",
         "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "sadiki-wc26",
@@ -39834,8 +39862,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CM",
         "rating": 73,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "nmukau-wc26",
@@ -39848,8 +39876,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CM",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mbuku-wc26",
@@ -39861,12 +39889,12 @@ const DEFAULT_PLAYERS = [
         "club": "DR Congo",
         "clubBadge": "🇨🇩",
         "position": "RM",
-        "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "cipenga-wc26",
@@ -39879,8 +39907,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "LW",
         "rating": 71,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bongonda-wc26",
@@ -39892,12 +39920,12 @@ const DEFAULT_PLAYERS = [
         "club": "DR Congo",
         "clubBadge": "🇨🇩",
         "position": "RW",
-        "rating": 77,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "kakuta-wc26",
@@ -39910,8 +39938,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "CAM",
         "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "elia-wc26",
@@ -39923,12 +39951,12 @@ const DEFAULT_PLAYERS = [
         "club": "DR Congo",
         "clubBadge": "🇨🇩",
         "position": "ST",
-        "rating": 75,
-        "cardTheme": "worldcup26",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mayele-wc26",
@@ -39941,8 +39969,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "ST",
         "rating": 74,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bakambu-wc26",
@@ -39970,8 +39998,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇨🇩",
         "position": "ST",
         "rating": 78,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "wissa-wc26",
@@ -40015,8 +40043,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "GK",
         "rating": 72,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "hhussein-wc26",
@@ -40029,8 +40057,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🇶🇦",
         "position": "CB",
         "rating": 70,
-        "cardTheme": "worldcup26",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "toni-mm",
@@ -40042,10 +40070,10 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 87,
-        "cardTheme": "mm",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4003.png",
-        "altPositions": []
+        "cardTheme": "mm"
     },
     {
         "id": "wright-phillips-mm",
@@ -40057,12 +40085,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "RW",
-        "rating": 84,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9y8o891654258969.png",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9y8o891654258969.png",
+        "cardTheme": "mm"
     },
     {
         "id": "nakamura-mm",
@@ -40092,12 +40120,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 81,
-        "cardTheme": "mm",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/2/20/FabriceMuamba_cropped.jpg",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/2/20/FabriceMuamba_cropped.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "tiote-mm",
@@ -40109,12 +40137,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 84,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/v0xxnv1502446749.jpg",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/v0xxnv1502446749.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "jcesar-mm",
@@ -40126,10 +40154,10 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 85,
-        "cardTheme": "mm",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/twtrrq1424733649.png",
-        "altPositions": []
+        "cardTheme": "mm"
     },
     {
         "id": "schone-mm",
@@ -40141,12 +40169,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 84,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ps2sil1727107519.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ps2sil1727107519.png",
+        "cardTheme": "mm"
     },
     {
         "id": "dblind-mm",
@@ -40189,12 +40217,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "ST",
-        "rating": 87,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/bpzy3t1594034451.jpg",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 87,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/bpzy3t1594034451.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "monreal-mm",
@@ -40206,12 +40234,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LB",
-        "rating": 82,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z188og1632218505.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z188og1632218505.png",
+        "cardTheme": "mm"
     },
     {
         "id": "maxwell-mm",
@@ -40223,12 +40251,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "LB",
-        "rating": 83,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u5rezg1612700728.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u5rezg1612700728.png",
+        "cardTheme": "mm"
     },
     {
         "id": "higuaita-mm",
@@ -40240,10 +40268,10 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 88,
-        "cardTheme": "mm",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l0y05d1658255856.png",
-        "altPositions": []
+        "cardTheme": "mm"
     },
     {
         "id": "amorim-mm",
@@ -40272,12 +40300,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CM",
-        "rating": 81,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mny0gh1632597066.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mny0gh1632597066.png",
+        "cardTheme": "mm"
     },
     {
         "id": "carrick-mm",
@@ -40306,12 +40334,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CM",
-        "rating": 80,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/afeou51531845494.jpg",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/afeou51531845494.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "zabaleta-mm",
@@ -40323,12 +40351,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "RB",
-        "rating": 85,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wizsyf1557408017.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 85,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wizsyf1557408017.png",
+        "cardTheme": "mm"
     },
     {
         "id": "hart-mm",
@@ -40340,10 +40368,10 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 86,
-        "cardTheme": "mm",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/y04hln1701949363.png",
-        "altPositions": []
+        "cardTheme": "mm"
     },
     {
         "id": "bravo-mm",
@@ -40355,10 +40383,10 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 85,
-        "cardTheme": "mm",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qhugzd1701177015.png",
-        "altPositions": []
+        "cardTheme": "mm"
     },
     {
         "id": "aguero-mm",
@@ -40385,12 +40413,12 @@ const DEFAULT_PLAYERS = [
         "club": "",
         "clubBadge": "",
         "position": "CM",
-        "rating": 81,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o14zub1609786808.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o14zub1609786808.png",
+        "cardTheme": "mm"
     },
     {
         "id": "brehme-icons",
@@ -40420,10 +40448,10 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 82,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w3p74l1758891733.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "dodo-fiorentina",
@@ -40435,12 +40463,12 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "RB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/xpyvxy1469528923.jpg",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/xpyvxy1469528923.jpg",
+        "cardTheme": "standard"
     },
     {
         "id": "pongracic-fiorentina",
@@ -40452,10 +40480,10 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/siq0vs1758892100.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ranieri-fiorentina",
@@ -40467,12 +40495,12 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "CB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/78emts1758892112.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/78emts1758892112.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gosens-fiorentina",
@@ -40484,13 +40512,13 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "LB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5tj0m51758891747.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5tj0m51758891747.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mandragora-fiorentina",
@@ -40502,12 +40530,12 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "CDM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/slgfda1758891918.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/slgfda1758891918.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bove-fiorentina",
@@ -40586,10 +40614,10 @@ const DEFAULT_PLAYERS = [
         "club": "Fiorentina",
         "clubBadge": "💜⚪",
         "position": "ST",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1vjmgx1776938330.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "audero-como",
@@ -40629,10 +40657,10 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m0scmx1764278311.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "goldaniga-como",
@@ -40644,10 +40672,10 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2ban201764278291.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "moreno-como",
@@ -40659,12 +40687,12 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "LB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ntywfr1764278389.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ntywfr1764278389.png",
+        "cardTheme": "standard"
     },
     {
         "id": "perrone-como",
@@ -40676,12 +40704,12 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "CDM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gqcg4e1764278402.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gqcg4e1764278402.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sergiroberto-como",
@@ -40727,13 +40755,13 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "RW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bf3me51777708228.png",
         "altPositions": [
             "RM",
             "LW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bf3me51777708228.png",
+        "cardTheme": "standard"
     },
     {
         "id": "fadera-como",
@@ -40745,12 +40773,12 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "LW",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mybs2a1764106004.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mybs2a1764106004.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cutrone-como",
@@ -40762,10 +40790,10 @@ const DEFAULT_PLAYERS = [
         "club": "Como",
         "clubBadge": "🔵⚪",
         "position": "ST",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5bzbp41759779863.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "labrovic-augsburg",
@@ -40777,10 +40805,10 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/upolx01763034323.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "wolf-augsburg",
@@ -40792,13 +40820,13 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q6brgn1763034662.png",
         "altPositions": [
             "RM",
             "RWB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q6brgn1763034662.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gouweleeuw-augsburg",
@@ -40810,10 +40838,10 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/54jbzk1763034173.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "schlotterbeck-augsburg",
@@ -40840,10 +40868,10 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "LB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/r9huub1763034157.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "jakic-augsburg",
@@ -40855,13 +40883,13 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "CDM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tj2frb1763034190.png",
         "altPositions": [
             "CB",
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tj2frb1763034190.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rexhbecaj-augsburg",
@@ -40873,12 +40901,12 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5u1sth1763034389.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5u1sth1763034389.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rieder-augsburg",
@@ -40890,13 +40918,13 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8l9f3r1763034407.png",
         "altPositions": [
             "RW",
             "RM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8l9f3r1763034407.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vargas-augsburg",
@@ -40908,13 +40936,13 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "LM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9jkl9w1762860549.png",
         "altPositions": [
             "LW",
             "CAM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9jkl9w1762860549.png",
+        "cardTheme": "standard"
     },
     {
         "id": "tietz-augsburg",
@@ -40926,10 +40954,10 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "ST",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wdwbeh1775205775.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "essende-augsburg",
@@ -40941,10 +40969,10 @@ const DEFAULT_PLAYERS = [
         "club": "Augsburg",
         "clubBadge": "🟢🔴⚪",
         "position": "ST",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c2luq31763034114.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ronnow-unionberlin",
@@ -40956,10 +40984,10 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 79,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j9t7491763641303.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "trimmel-unionberlin",
@@ -40971,12 +40999,12 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/moe2t31763641424.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/moe2t31763641424.png",
+        "cardTheme": "standard"
     },
     {
         "id": "doekhi-unionberlin",
@@ -40988,10 +41016,10 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a0uy571763641061.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "leite-unionberlin",
@@ -41003,10 +41031,10 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q989lk1763641205.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "rothe-unionberlin",
@@ -41018,13 +41046,13 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8krbvz1763641318.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8krbvz1763641318.png",
+        "cardTheme": "standard"
     },
     {
         "id": "khedira-unionberlin",
@@ -41036,12 +41064,12 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "CDM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yb5kh51763641141.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yb5kh51763641141.png",
+        "cardTheme": "standard"
     },
     {
         "id": "benes-unionberlin",
@@ -41053,12 +41081,12 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w87wuf1742134602.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w87wuf1742134602.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jeong-unionberlin",
@@ -41070,13 +41098,13 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "CAM",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4aw8jx1763641404.png",
         "altPositions": [
             "RW",
             "LW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4aw8jx1763641404.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hollerbach-unionberlin",
@@ -41088,13 +41116,13 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "ST",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lryx771763554041.png",
         "altPositions": [
             "RW",
             "LW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lryx771763554041.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pefok-unionberlin",
@@ -41106,10 +41134,10 @@ const DEFAULT_PLAYERS = [
         "club": "Union Berlin",
         "clubBadge": "🔴⚪",
         "position": "ST",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9phywb1695110435.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "thiaw-newcastle",
@@ -41121,10 +41149,10 @@ const DEFAULT_PLAYERS = [
         "club": "Newcastle",
         "clubBadge": "⚫⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
-        "photo": "",
-        "altPositions": []
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/trsqwm1766824681.png",
+        "cardTheme": "standard"
     },
     {
         "id": "truffert-bournemouth",
@@ -41136,12 +41164,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bournemouth",
         "clubBadge": "🍒",
         "position": "LB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qmpz4n1757018404.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ronaldonazario-gc",
@@ -43723,8 +43751,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "",
         "position": "ST",
         "rating": 88,
-        "cardTheme": "mm",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/aojvd21650968325.jpg"
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/aojvd21650968325.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "gyokeres-sporting-s26",
@@ -43756,6 +43784,21 @@ const DEFAULT_PLAYERS = [
         "altPositions": [],
         "rating": 84,
         "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ed8muu1661430732.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "nquinn-mm-sunderland",
+        "name": "Niall Quinn",
+        "cardName": "Quinn",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e38ehw1619898211.png",
         "cardTheme": "mm"
     },
     {
@@ -44563,7 +44606,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -44578,7 +44620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -44594,15 +44635,14 @@ const DEFAULT_PLAYERS = [
         "cardName": "Kovačić",
         "nationality": "Croatia",
         "flag": "🇭🇷",
-        "league": "Premier League",
-        "club": "Chelsea",
-        "clubBadge": "🔵",
+        "league": "La Liga",
+        "club": "Real Madrid",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
-        "rating": 89,
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Chelsea_vs._Arsenal%2C_29_May_2019_18_Kovacic.jpg",
+        "rating": 90,
+        "photo": "https://pbs.twimg.com/media/DkGp415WwAI2TX3.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -44716,7 +44756,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -44731,7 +44770,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -45230,7 +45268,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -45494,7 +45531,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 87,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/p36mz01693941540.png",
         "cardTheme": "ucl"
     },
     {
@@ -45628,7 +45665,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -45643,7 +45679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -45665,7 +45700,7 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9p932j1654201066.png",
         "cardTheme": "ucl"
     },
     {
@@ -45676,7 +45711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇳",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -45693,7 +45727,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -45708,7 +45741,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -45977,7 +46009,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -46144,7 +46175,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -46341,14 +46371,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇰",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [
             "CF",
             "RW"
         ],
         "rating": 85,
-        "photo": "",
+        "photo": "https://sempreinter.com/wp-content/uploads/2017/10/Inter-Milans-Macedonian-forward-Goran-P-e1518873603766-825x510.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -46676,7 +46705,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -46701,7 +46729,7 @@ const DEFAULT_PLAYERS = [
             "LB"
         ],
         "rating": 84,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nu8h0u1757088152.png",
         "cardTheme": "ucl"
     },
     {
@@ -46729,13 +46757,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJwkjsIm4WmQXKzHpbC8KzAFP86tETG3mBrvZST2wqE373uuXQ7xc1fwQ&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -47317,8 +47344,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡⚫",
         "position": "GK",
         "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pu4lyb1610705748.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pu4lyb1610705748.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bjorkan-bodo",
@@ -47330,12 +47357,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bodo/Glimt",
         "clubBadge": "🟡⚫",
         "position": "LB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bc3jn51769181808.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bc3jn51769181808.png",
+        "cardTheme": "standard"
     },
     {
         "id": "berg-bodo",
@@ -47435,8 +47462,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡⚫",
         "position": "CB",
         "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1it5ea1769181895.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1it5ea1769181895.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gundersen-bodo",
@@ -47449,8 +47476,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟡⚫",
         "position": "CB",
         "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w5rtn91769181392.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w5rtn91769181392.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sjovold-bodo",
@@ -47462,13 +47489,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bodo/Glimt",
         "clubBadge": "🟡⚫",
         "position": "RB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6ulx7f1769182010.png",
         "altPositions": [
             "RWB",
             "CDM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6ulx7f1769182010.png",
+        "cardTheme": "standard"
     },
     {
         "id": "fet-bodo",
@@ -47480,12 +47507,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bodo/Glimt",
         "clubBadge": "🟡⚫",
         "position": "CM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uusbg41769181702.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uusbg41769181702.png",
+        "cardTheme": "standard"
     },
     {
         "id": "maatta-bodo",
@@ -47497,13 +47524,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bodo/Glimt",
         "clubBadge": "🟡⚫",
         "position": "LM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LB",
             "LWB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "riznyk-shakhtar",
@@ -47516,8 +47543,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟠⚫",
         "position": "GK",
         "rating": 77,
-        "cardTheme": "standard",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "matviyenko-shakhtar",
@@ -47529,12 +47556,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "CB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xwuahu1623752441.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xwuahu1623752441.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bondar-shakhtar",
@@ -47547,8 +47574,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "🟠⚫",
         "position": "CB",
         "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/bpudk31715901154.jpg"
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/bpudk31715901154.jpg",
+        "cardTheme": "standard"
     },
     {
         "id": "vtobias-shakhtar",
@@ -47560,12 +47587,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mokhi01673701104.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mokhi01673701104.png",
+        "cardTheme": "standard"
     },
     {
         "id": "phenrique-shakhtar",
@@ -47577,12 +47604,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "bondarenko-shakhtar",
@@ -47594,12 +47621,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oailig1719684690.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oailig1719684690.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kryskiv-shakhtar",
@@ -47611,12 +47638,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "CAM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "mgomes-shakhtar",
@@ -47628,13 +47655,13 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ym5sy51767967264.jpg",
         "altPositions": [
             "CDM",
             "CAM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ym5sy51767967264.jpg",
+        "cardTheme": "standard"
     },
     {
         "id": "pedrinho-shakhtar",
@@ -47664,13 +47691,13 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "ST",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LW",
             "RW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "traore-shakhtar",
@@ -47699,12 +47726,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "newerton-shakhtar",
@@ -47716,12 +47743,12 @@ const DEFAULT_PLAYERS = [
         "club": "Shakhtar Donetsk",
         "clubBadge": "🟠⚫",
         "position": "LW",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "gerets-ucl",
@@ -47765,13 +47792,13 @@ const DEFAULT_PLAYERS = [
         "club": "PSV Eindhoven",
         "clubBadge": "🔴⚪",
         "position": "RM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CAM",
             "RW"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "linskens-ucl",
@@ -47800,12 +47827,12 @@ const DEFAULT_PLAYERS = [
         "club": "PSV Eindhoven",
         "clubBadge": "🔴⚪",
         "position": "ST",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "iovan-ucl",
@@ -47834,12 +47861,12 @@ const DEFAULT_PLAYERS = [
         "club": "FCSB",
         "clubBadge": "🔴🔵",
         "position": "CM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "lacatus-ucl",
@@ -47886,14 +47913,14 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "RM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RW",
             "CAM",
             "ST"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "litmanen-ucl",
@@ -47940,12 +47967,12 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "CDM",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "rijkaard-ajax-ucl",
@@ -47957,13 +47984,13 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "CB",
-        "rating": 92,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM",
             "CM"
-        ]
+        ],
+        "rating": 92,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "reiziger-ucl",
@@ -47975,12 +48002,12 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "RB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "fdeboer-ucl",
@@ -47992,12 +48019,12 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "CB",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "dblind-ucl",
@@ -48061,13 +48088,13 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "LB",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CB",
             "LM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "stuy-ucl",
@@ -48093,12 +48120,12 @@ const DEFAULT_PLAYERS = [
         "club": "Ajax",
         "clubBadge": "⚪🔴⚪",
         "position": "RW",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "seedorf-ucl",
@@ -48176,12 +48203,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CB",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "colombo-ucl",
@@ -48193,12 +48220,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "RM",
-        "rating": 85,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "dida-ucl",
@@ -48224,12 +48251,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CDM",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "pirlo-ucl",
@@ -48258,13 +48285,13 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "LM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB",
             "LW"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "rcosta-ucl",
@@ -48276,12 +48303,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CAM",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "ambrosini-ucl",
@@ -48293,12 +48320,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CDM",
-        "rating": 85,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "jankulovski-ucl",
@@ -48376,8 +48403,8 @@ const DEFAULT_PLAYERS = [
         "clubBadge": "⚫🔴",
         "position": "ST",
         "rating": 90,
-        "cardTheme": "ucl",
-        "photo": ""
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "tassotti-ucl",
@@ -48389,12 +48416,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "RB",
-        "rating": 91,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 91,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "donadoni-ucl",
@@ -48406,13 +48433,13 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "LM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RM",
             "CM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "boban-ucl",
@@ -48424,13 +48451,13 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CAM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "CM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "baresi-ucl",
@@ -48442,12 +48469,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CB",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "SW"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "rijkaard-milan-ucl",
@@ -48477,14 +48504,14 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CF",
-        "rating": 91,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CAM",
             "CM",
             "ST"
-        ]
+        ],
+        "rating": 91,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "vanbasten-ucl",
@@ -48513,12 +48540,12 @@ const DEFAULT_PLAYERS = [
         "club": "AC Milan",
         "clubBadge": "⚫🔴",
         "position": "CM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "dokhai-vnlegend",
@@ -48649,12 +48676,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "RB",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 89,
+        "photo": "https://www.thesportsdb.com/images/media/player/cutout/ifb6zf1781812030.png",
+        "cardTheme": "ucl"
     },
     {
         "id": "mcgovern-ucl",
@@ -48664,14 +48691,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CM",
-        "rating": 91,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 91,
+        "photo": "https://i.ebayimg.com/images/g/5wMAAOSwX5heJxaz/s-l400.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "oneill-ucl",
@@ -48683,12 +48709,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "RM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "birtles-ucl",
@@ -48700,12 +48726,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "ST",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "bowyer-ucl",
@@ -48717,12 +48743,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "CM",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "francis-ucl",
@@ -48734,13 +48760,13 @@ const DEFAULT_PLAYERS = [
         "club": "Nottingham",
         "clubBadge": "🌳",
         "position": "ST",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "RW"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "withe-ucl",
@@ -48752,12 +48778,12 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "bremner-ucl",
@@ -48769,13 +48795,13 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "RM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM",
             "RB"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "mortimer-ucl",
@@ -48787,12 +48813,12 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "CM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "spink-ucl",
@@ -48804,10 +48830,10 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "GK",
+        "altPositions": [],
         "rating": 85,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "rimmer-ucl",
@@ -48819,10 +48845,10 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "GK",
+        "altPositions": [],
         "rating": 86,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "swain-ucl",
@@ -48834,13 +48860,13 @@ const DEFAULT_PLAYERS = [
         "club": "Aston Villa",
         "clubBadge": "🦁",
         "position": "RB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RWB",
             "RM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "stein-ucl",
@@ -48867,12 +48893,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "LB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "magath-ucl",
@@ -48901,10 +48927,10 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "ST",
+        "altPositions": [],
         "rating": 86,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "jakobs-ucl",
@@ -48916,10 +48942,10 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "CB",
+        "altPositions": [],
         "rating": 85,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "rolff-ucl",
@@ -48931,12 +48957,12 @@ const DEFAULT_PLAYERS = [
         "club": "Hamburg",
         "clubBadge": "🔵⚪⚫",
         "position": "CDM",
-        "rating": 85,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "kahn-ucl",
@@ -48962,10 +48988,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "CB",
+        "altPositions": [],
         "rating": 88,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "effenberg-ucl",
@@ -48993,12 +49019,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "RB",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "lizarazu-ucl",
@@ -49010,12 +49036,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "LB",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "salihamidzic-ucl",
@@ -49027,13 +49053,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "RM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "RB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "scholl-ucl",
@@ -49045,13 +49071,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "CAM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "RM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "elber-ucl",
@@ -49063,12 +49089,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "ST",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "figo-ucl",
@@ -49080,13 +49106,13 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "RW",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RM",
             "LW"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "canizares-ucl",
@@ -49098,10 +49124,10 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 86,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "salgado-ucl",
@@ -49113,12 +49139,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "RB",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "zidane-ucl",
@@ -49146,13 +49172,13 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "ST",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "CAM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "morientes-ucl",
@@ -49164,12 +49190,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "mcmanaman-ucl",
@@ -49181,13 +49207,13 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "RM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "CAM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "redondo-ucl",
@@ -49199,12 +49225,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CDM",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "karembeu-ucl",
@@ -49214,15 +49240,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM",
             "RB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "https://image.plo.vn/w1000/Uploaded/2026/bivxpcwk/2017_12_15/xem-el-clasico-cung-karembeu_MAYO.jpg.webp",
+        "cardTheme": "ucl"
     },
     {
         "id": "suker-ucl",
@@ -49234,12 +49259,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "ST",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "mijatovic-ucl",
@@ -49251,13 +49276,13 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "ST",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "LW"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "hierro-ucl",
@@ -49269,12 +49294,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CB",
-        "rating": 91,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 91,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "rcarlos-ucl",
@@ -49303,12 +49328,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CB",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "helguera-ucl",
@@ -49320,12 +49345,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CB",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "anelka-ucl",
@@ -49337,12 +49362,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "ST",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "zubizarreta-ucl",
@@ -49354,10 +49379,10 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "GK",
+        "altPositions": [],
         "rating": 89,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "ferrer-ucl",
@@ -49369,12 +49394,12 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "RB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "guardiola-ucl",
@@ -49386,12 +49411,12 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "CDM",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "laudrup-ucl",
@@ -49403,13 +49428,13 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "CAM",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "LW"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "salinas-ucl",
@@ -49421,12 +49446,12 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "ST",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "stoichkov-ucl",
@@ -49438,14 +49463,14 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "LW",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "ST",
             "CF",
             "RW"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "stojanovic-ucl",
@@ -49488,13 +49513,13 @@ const DEFAULT_PLAYERS = [
         "club": "Crvena zvezda",
         "clubBadge": "🔴⚪",
         "position": "CB",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB",
             "LWB"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "pancev-ucl",
@@ -49506,12 +49531,12 @@ const DEFAULT_PLAYERS = [
         "club": "Crvena zvezda",
         "clubBadge": "🔴⚪",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "savicevic-ucl",
@@ -49523,12 +49548,12 @@ const DEFAULT_PLAYERS = [
         "club": "Crvena zvezda",
         "clubBadge": "🔴⚪",
         "position": "CAM",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "belodedici-ucl",
@@ -49540,10 +49565,10 @@ const DEFAULT_PLAYERS = [
         "club": "Crvena zvezda",
         "clubBadge": "🔴⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 91,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "peruzzi-ucl",
@@ -49555,10 +49580,10 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 90,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "conte-ucl",
@@ -49570,13 +49595,13 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM",
             "RM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "deschamps-ucl",
@@ -49588,12 +49613,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CDM",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "vialli-ucl",
@@ -49605,12 +49630,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "delpiero-ucl",
@@ -49622,14 +49647,14 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CF",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "ST",
             "CAM",
             "LW"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "torricelli-ucl",
@@ -49641,13 +49666,13 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "RB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB",
             "RWB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "pessotto-ucl",
@@ -49659,13 +49684,13 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "LB",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LWB",
             "RB"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "platini-ucl",
@@ -49693,10 +49718,10 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 89,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "boniek-ucl",
@@ -49708,14 +49733,14 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CF",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "ST",
             "CAM",
             "RW"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "prandelli-ucl",
@@ -49727,12 +49752,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CM",
-        "rating": 82,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "vignola-ucl",
@@ -49744,12 +49769,12 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "clubBadge": "⚫⚪",
         "position": "CAM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "sammer-ucl",
@@ -49761,13 +49786,13 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "CB",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM",
             "CM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "riedle-ucl",
@@ -49779,12 +49804,12 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "ST",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "sousa-ucl",
@@ -49796,12 +49821,12 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "CDM",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "moller-ucl",
@@ -49813,13 +49838,13 @@ const DEFAULT_PLAYERS = [
         "club": "Borussia Dortmund",
         "clubBadge": "🟡⚫",
         "position": "CAM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "CF"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "barthez-ucl",
@@ -49831,10 +49856,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 89,
-        "cardTheme": "ucl",
         "photo": "https://r2.thesportsdb.com/images/media/player/thumb/3nypay1595098900.jpg",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "boli-ucl",
@@ -49846,10 +49871,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 88,
-        "cardTheme": "ucl",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6a6q861767187456.png",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "desailly-ucl",
@@ -49861,12 +49886,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "CB",
-        "rating": 92,
-        "cardTheme": "ucl",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/6rq3ad1558809950.jpg",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 92,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/6rq3ad1558809950.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "voller-ucl",
@@ -49878,12 +49903,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "ST",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/8h8xip1530037226.jpg",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 88,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/8h8xip1530037226.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "abedipele-ucl",
@@ -49895,14 +49920,14 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "🔵⚪",
         "position": "CAM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2mkknd1629291016.png",
         "altPositions": [
             "CF",
             "LM",
             "RM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2mkknd1629291016.png",
+        "cardTheme": "ucl"
     },
     {
         "id": "player-1781821216072",
@@ -49948,10 +49973,10 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "CB",
+        "altPositions": [],
         "rating": 86,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "riise-ucl",
@@ -49981,14 +50006,14 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "LW",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "CF",
             "CAM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "baros-ucl",
@@ -50017,12 +50042,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "ST",
-        "rating": 82,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "grobbelaar-ucl",
@@ -50133,13 +50158,13 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "CM",
-        "rating": 85,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "CDM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "clemence-ucl",
@@ -50184,12 +50209,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "CM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "keegan-ucl",
@@ -50201,13 +50226,13 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "ST",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "CAM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "callaghan-ucl",
@@ -50219,13 +50244,13 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "RM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM",
             "LM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "jimmycase-ucl",
@@ -50237,12 +50262,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "RM",
-        "rating": 85,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "tommysmith-ucl",
@@ -50254,12 +50279,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "CB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "emlynhughes-ucl",
@@ -50271,13 +50296,13 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "CB",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB",
             "CDM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "fairclough-ucl",
@@ -50289,12 +50314,12 @@ const DEFAULT_PLAYERS = [
         "club": "Liverpool",
         "clubBadge": "🔴",
         "position": "ST",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "futre-ucl",
@@ -50306,13 +50331,13 @@ const DEFAULT_PLAYERS = [
         "club": "FC Porto",
         "clubBadge": "🔵⚪",
         "position": "LW",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RW",
             "LM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "madjer-ucl",
@@ -50324,13 +50349,13 @@ const DEFAULT_PLAYERS = [
         "club": "FC Porto",
         "clubBadge": "🔵⚪",
         "position": "ST",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "CAM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "mlynarczyk-ucl",
@@ -50342,10 +50367,10 @@ const DEFAULT_PLAYERS = [
         "club": "FC Porto",
         "clubBadge": "🔵⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 87,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "player-1781822788012",
@@ -50393,12 +50418,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "cole-ucl",
@@ -50410,12 +50435,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "keane-ucl",
@@ -50427,12 +50452,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "CDM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "butt-ucl",
@@ -50444,12 +50469,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "CDM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "blomqvist-ucl",
@@ -50461,12 +50486,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "LM",
-        "rating": 85,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "gnevile-ucl",
@@ -50478,12 +50503,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "RB",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "irwin-ucl",
@@ -50495,13 +50520,13 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "LB",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LWB",
             "RB"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "stam-ucl",
@@ -50513,10 +50538,10 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "CB",
+        "altPositions": [],
         "rating": 89,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "parkjisung-ucl",
@@ -50546,12 +50571,12 @@ const DEFAULT_PLAYERS = [
         "club": "Chelsea",
         "clubBadge": "🔵",
         "position": "CB",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "ramires-ucl",
@@ -50563,13 +50588,13 @@ const DEFAULT_PLAYERS = [
         "club": "Chelsea",
         "clubBadge": "🔵",
         "position": "CM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM",
             "RM"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "meireles-ucl",
@@ -50581,12 +50606,12 @@ const DEFAULT_PLAYERS = [
         "club": "Chelsea",
         "clubBadge": "🔵",
         "position": "CM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "yayatoure-ucl",
@@ -50598,13 +50623,13 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "CDM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM",
             "CB"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "maxwell-ucl",
@@ -50616,12 +50641,12 @@ const DEFAULT_PLAYERS = [
         "club": "Barcelona",
         "clubBadge": "🔴🔵",
         "position": "LB",
-        "rating": 82,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "smaier-ucl",
@@ -50696,10 +50721,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "CB",
+        "altPositions": [],
         "rating": 88,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "breitner-ucl",
@@ -50729,12 +50754,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "CM",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "kapellmann-ucl",
@@ -50746,13 +50771,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "RM",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LM",
             "RB"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "rummenigge-ucl",
@@ -50764,13 +50789,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "ST",
-        "rating": 89,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF",
             "RM"
-        ]
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "jhansen-ucl",
@@ -50782,12 +50807,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bayern Munich",
         "clubBadge": "🔴",
         "position": "RB",
-        "rating": 88,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "bathenay-ucl",
@@ -50799,13 +50824,13 @@ const DEFAULT_PLAYERS = [
         "club": "Saint-Etienne",
         "clubBadge": "🟢⚪",
         "position": "CDM",
-        "rating": 86,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CB",
             "CM"
-        ]
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "forster-ucl",
@@ -50832,13 +50857,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bayer Leverkusen",
         "clubBadge": "🔴⚫",
         "position": "CAM",
-        "rating": 84,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM",
             "LM"
-        ]
+        ],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "player-1781869534365",
@@ -50898,12 +50923,12 @@ const DEFAULT_PLAYERS = [
         "club": "Man United",
         "clubBadge": "😈",
         "position": "ST",
-        "rating": 90,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "henry-ucl",
@@ -50913,15 +50938,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
-        "rating": 91,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "ST",
             "LM"
-        ]
+        ],
+        "rating": 91,
+        "photo": "https://pbs.twimg.com/media/FylVUznXwAEhWfZ.jpg",
+        "cardTheme": "ucl"
     },
     {
         "id": "casillas-ucl",
@@ -51026,12 +51050,12 @@ const DEFAULT_PLAYERS = [
         "club": "Real Madrid",
         "clubBadge": "⚪",
         "position": "CAM",
-        "rating": 87,
-        "cardTheme": "ucl",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "ucl"
     },
     {
         "id": "carvalho-ucl",
@@ -51043,10 +51067,10 @@ const DEFAULT_PLAYERS = [
         "club": "FC Porto",
         "clubBadge": "🔵⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 87,
-        "cardTheme": "ucl",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "ucl"
     },
     {
         "id": "baia-ucl",
@@ -51166,11 +51190,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 88,
-        "photo": "",
+        "photo": "https://futbol90.wordpress.com/files/2009/12/adriano_deportes-orange-es1.jpg",
         "cardTheme": "mm"
     },
     {
@@ -51199,14 +51222,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
-            "LW",
-            "SS"
+            "LW"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8BtD148eyUl1bxKOWJxbNNhSC7Hqv3cvmfLIL_pPbkjzTy66be3WRfkegrl6XkzWLMfhRu2_xsSsV3FDHhf6x9WCFvRu0lh58xT8KBQ&s=10",
         "cardTheme": "mm"
     },
     {
@@ -51217,14 +51238,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "",
         "club": "",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
-            "LM",
-            "CM"
+            "CM",
+            "LM"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADCopCwM25uvzzq6cfy6-XXUDR50d5CcsIA&s",
         "cardTheme": "mm"
     },
     {
@@ -52488,12 +52508,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CB",
-        "rating": 82,
-        "cardTheme": "standard",
+        "altPositions": [],
+        "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fwqgth1769178122.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "nelsson-galatasaray",
@@ -52519,10 +52538,10 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "CB",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uncf0f1769178149.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ayhan-galatasaray",
@@ -52534,13 +52553,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "RB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nlihpf1717533911.png",
         "altPositions": [
             "CB",
             "CDM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nlihpf1717533911.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jakobs-galatasaray",
@@ -52552,13 +52571,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "LB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/iq9jcp1769177723.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/iq9jcp1769177723.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jelert-galatasaray",
@@ -52570,13 +52589,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/aflf4q1780063881.png",
         "altPositions": [
             "LB",
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/aflf4q1780063881.png",
+        "cardTheme": "standard"
     },
     {
         "id": "torreira-galatasaray",
@@ -52588,12 +52607,12 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "CDM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/123f851769178178.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/123f851769178178.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sara-galatasaray",
@@ -52605,13 +52624,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "CM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rwwlzp1769177840.png",
         "altPositions": [
             "CAM",
             "CDM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rwwlzp1769177840.png",
+        "cardTheme": "standard"
     },
     {
         "id": "demirbay-galatasaray",
@@ -52623,12 +52642,12 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qmzqk11717534188.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qmzqk11717534188.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kutlu-galatasaray",
@@ -52640,13 +52659,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rdlbe71717536148.png",
         "altPositions": [
             "CDM",
             "LB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rdlbe71717536148.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mertens-galatasaray",
@@ -52658,13 +52677,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "CAM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9nciec1717533249.png",
         "altPositions": [
             "CF",
             "ST"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9nciec1717533249.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ziyech-galatasaray",
@@ -52676,12 +52695,12 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "RW",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k1xzte1717537373.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k1xzte1717537373.png",
+        "cardTheme": "standard"
     },
     {
         "id": "yilmaz-galatasaray",
@@ -52693,14 +52712,14 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "RW",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bmtzkn1717532810.png",
         "altPositions": [
             "LW",
             "ST",
             "RB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bmtzkn1717532810.png",
+        "cardTheme": "standard"
     },
     {
         "id": "akgun-galatasaray",
@@ -52712,13 +52731,13 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "LW",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b701we1724945952.png",
         "altPositions": [
             "RW",
             "CAM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b701we1724945952.png",
+        "cardTheme": "standard"
     },
     {
         "id": "icardi-galatasaray",
@@ -52730,10 +52749,10 @@ const DEFAULT_PLAYERS = [
         "club": "Galatasaray",
         "clubBadge": "❤️💛",
         "position": "ST",
+        "altPositions": [],
         "rating": 83,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w5ilco1717534510.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "batshuayi-galatasaray",
@@ -52759,10 +52778,10 @@ const DEFAULT_PLAYERS = [
         "club": "Fenerbahçe",
         "clubBadge": "💛💙",
         "position": "GK",
+        "altPositions": [],
         "rating": 81,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pp3yab1762457197.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "soyuncu-fenerbahce",
@@ -52774,10 +52793,10 @@ const DEFAULT_PLAYERS = [
         "club": "Fenerbahçe",
         "clubBadge": "💛💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ndlact1769179871.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "djiku-fenerbahce",
@@ -52836,12 +52855,12 @@ const DEFAULT_PLAYERS = [
         "club": "Fenerbahçe",
         "clubBadge": "💛💙",
         "position": "LB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w0b1a71724844526.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w0b1a71724844526.png",
+        "cardTheme": "standard"
     },
     {
         "id": "muldur-fenerbahce",
@@ -52853,13 +52872,13 @@ const DEFAULT_PLAYERS = [
         "club": "Fenerbahçe",
         "clubBadge": "💛💙",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l5nngn1724845876.png",
         "altPositions": [
             "LB",
             "RWB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l5nngn1724845876.png",
+        "cardTheme": "standard"
     },
     {
         "id": "yuksek-fenerbahce",
@@ -52871,12 +52890,12 @@ const DEFAULT_PLAYERS = [
         "club": "Fenerbahçe",
         "clubBadge": "💛💙",
         "position": "CDM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yl8ono1724846159.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yl8ono1724846159.png",
+        "cardTheme": "standard"
     },
     {
         "id": "amrabat-fenerbahce",
@@ -52904,12 +52923,12 @@ const DEFAULT_PLAYERS = [
         "club": "Fenerbahçe",
         "clubBadge": "💛💙",
         "position": "CM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yxvjpo1768228542.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yxvjpo1768228542.png",
+        "cardTheme": "standard"
     },
     {
         "id": "szymanski-fenerbahce",
@@ -53018,10 +53037,10 @@ const DEFAULT_PLAYERS = [
         "club": "Beşiktaş",
         "clubBadge": "🖤🤍",
         "position": "GK",
+        "altPositions": [],
         "rating": 79,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nmg1ye1725038024.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "uduokhai-besiktas",
@@ -53033,10 +53052,10 @@ const DEFAULT_PLAYERS = [
         "club": "Beşiktaş",
         "clubBadge": "🖤🤍",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kn804y1769170047.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "masuaku-besiktas",
@@ -53065,12 +53084,12 @@ const DEFAULT_PLAYERS = [
         "club": "Beşiktaş",
         "clubBadge": "🖤🤍",
         "position": "CDM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/axwghv1759161508.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/axwghv1759161508.png",
+        "cardTheme": "standard"
     },
     {
         "id": "fernandes-besiktas",
@@ -53099,13 +53118,13 @@ const DEFAULT_PLAYERS = [
         "club": "Beşiktaş",
         "clubBadge": "🖤🤍",
         "position": "LM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fc2hqy1632996322.png",
         "altPositions": [
             "CM",
             "CAM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fc2hqy1632996322.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rafasilva-besiktas",
@@ -53133,13 +53152,13 @@ const DEFAULT_PLAYERS = [
         "club": "Beşiktaş",
         "clubBadge": "🖤🤍",
         "position": "RW",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oj51tj1769170077.png",
         "altPositions": [
             "RM",
             "LW"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oj51tj1769170077.png",
+        "cardTheme": "standard"
     },
     {
         "id": "immobile-besiktas",
@@ -53182,10 +53201,10 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "GK",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c98xoe1769177452.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "savic-trabzonspor",
@@ -53197,10 +53216,10 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5v7otr1679064890.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "mendy-trabzonspor",
@@ -53212,12 +53231,12 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "CB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6ofvvz1762860230.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6ofvvz1762860230.png",
+        "cardTheme": "standard"
     },
     {
         "id": "denswil-trabzonspor",
@@ -53229,12 +53248,12 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "CB",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qy0inf1623843435.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qy0inf1623843435.png",
+        "cardTheme": "standard"
     },
     {
         "id": "elmali-trabzonspor",
@@ -53246,10 +53265,10 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "LB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/y81fb11769177306.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "malheiro-trabzonspor",
@@ -53261,10 +53280,10 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "RB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "yokuslu-trabzonspor",
@@ -53276,13 +53295,13 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wahdnd1694274285.png",
         "altPositions": [
             "CM",
             "CB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wahdnd1694274285.png",
+        "cardTheme": "standard"
     },
     {
         "id": "visca-trabzonspor",
@@ -53294,12 +53313,12 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "RW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "banza-trabzonspor",
@@ -53311,10 +53330,10 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "ST",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l8hn6u1608329377.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "dragus-trabzonspor",
@@ -53326,13 +53345,13 @@ const DEFAULT_PLAYERS = [
         "club": "Trabzonspor",
         "clubBadge": "❤️💙",
         "position": "ST",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/trsuwv1607356072.png",
         "altPositions": [
             "LW",
             "CF"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/trsuwv1607356072.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sengezer-basaksehir",
@@ -53344,10 +53363,10 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "GK",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "duarte-basaksehir",
@@ -53359,10 +53378,10 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/05vvw21598646501.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ba-basaksehir",
@@ -53374,10 +53393,10 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/thumb/xojq5s1511619706.jpg",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "lucaslima-basaksehir",
@@ -53389,10 +53408,10 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "LB",
+        "altPositions": [],
         "rating": 72,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "crespo-basaksehir",
@@ -53404,12 +53423,12 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "turuc-basaksehir",
@@ -53421,13 +53440,13 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "RW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "RM",
             "CAM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "piatek-basaksehir",
@@ -53439,10 +53458,10 @@ const DEFAULT_PLAYERS = [
         "club": "İstanbul Başakşehir",
         "clubBadge": "🧡💙",
         "position": "ST",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jsl6gr1679411511.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "usor-lask",
@@ -53454,13 +53473,13 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "RW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gzvpwm1769636079.png",
         "altPositions": [
             "ST",
             "LW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gzvpwm1769636079.png",
+        "cardTheme": "standard"
     },
     {
         "id": "adeniran-lask",
@@ -53472,12 +53491,12 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "ST",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a1gyuq1769635615.png",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a1gyuq1769635615.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bogarde-lask",
@@ -53489,13 +53508,13 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "CDM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dd1nit1769635702.png",
         "altPositions": [
             "CB",
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dd1nit1769635702.png",
+        "cardTheme": "standard"
     },
     {
         "id": "horvath-lask",
@@ -53507,13 +53526,13 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "CM",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/usdh1n1769635823.png",
         "altPositions": [
             "CAM",
             "LM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/usdh1n1769635823.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jorgensen-lask",
@@ -53525,12 +53544,12 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "RB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/47sd141769635845.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/47sd141769635845.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bello-lask",
@@ -53542,13 +53561,13 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/otc4h21769635669.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/otc4h21769635669.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mbuyamba-lask",
@@ -53560,10 +53579,10 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u9dqbc1769636670.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "jungwirth-lask",
@@ -53575,10 +53594,10 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 68,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m7r76e1769635864.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "berisha-lask",
@@ -53590,12 +53609,12 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yju6tk1769635687.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yju6tk1769635687.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ljubicic-lask",
@@ -53607,10 +53626,10 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "ST",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a51r4j1772721954.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "zulj-lask",
@@ -53622,12 +53641,12 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/787a601678453969.png",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/787a601678453969.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ziereis-lask",
@@ -53639,25 +53658,24 @@ const DEFAULT_PLAYERS = [
         "club": "LASK",
         "clubBadge": "⚫⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5qnz0x1772816849.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "schlager-salzburg",
         "name": "Alexander Schlager",
-        "cardName": "Schlager",
+        "cardName": "A. Schlager",
         "nationality": "Austria",
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "GK",
+        "altPositions": [],
         "rating": 79,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ib5u2k1769721863.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "terzic-salzburg",
@@ -53669,12 +53687,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8un0xc1769722219.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8un0xc1769722219.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mellberg-salzburg",
@@ -53700,13 +53718,13 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "LB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h1qmuj1769722092.png",
         "altPositions": [
             "LM",
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h1qmuj1769722092.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lainer-salzburg",
@@ -53718,12 +53736,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1344cm1769722107.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1344cm1769722107.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bidstrup-salzburg",
@@ -53735,12 +53753,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o5qarc1769721920.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o5qarc1769721920.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kawamura-salzburg",
@@ -53752,12 +53770,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5guzqg1769722029.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5guzqg1769722029.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kjaergaard-salzburg",
@@ -53769,12 +53787,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "CM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/s15w5x1769722058.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/s15w5x1769722058.png",
+        "cardTheme": "standard"
     },
     {
         "id": "diambou-salzburg",
@@ -53786,12 +53804,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "CDM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xp0xcx1769721977.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xp0xcx1769721977.png",
+        "cardTheme": "standard"
     },
     {
         "id": "konate-salzburg",
@@ -53817,13 +53835,13 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "LW",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qefarb1769722250.png",
         "altPositions": [
             "RW",
             "ST"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qefarb1769722250.png",
+        "cardTheme": "standard"
     },
     {
         "id": "onisiwo-salzburg",
@@ -53835,12 +53853,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "ST",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x8du2e1769722139.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x8du2e1769722139.png",
+        "cardTheme": "standard"
     },
     {
         "id": "baidoo-salzburg",
@@ -53852,12 +53870,12 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "RW",
-        "rating": 70,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xcysnq1769721886.png",
         "altPositions": [
             "ST"
-        ]
+        ],
+        "rating": 70,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xcysnq1769721886.png",
+        "cardTheme": "standard"
     },
     {
         "id": "piatkowski-salzburg",
@@ -53869,10 +53887,10 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "sbaidoo-salzburg",
@@ -53884,10 +53902,10 @@ const DEFAULT_PLAYERS = [
         "club": "Red Bull Salzburg",
         "clubBadge": "🔴⚪",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m41uua1766006836.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "skorupski-bologna",
@@ -53899,10 +53917,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "GK",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nuwfv21758897094.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "holm-bologna",
@@ -53930,12 +53948,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CB",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1l1l641758897053.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1l1l641758897053.png",
+        "cardTheme": "standard"
     },
     {
         "id": "casale-bologna",
@@ -53947,10 +53965,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/eengna1758896987.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "lykogiannis-bologna",
@@ -53962,12 +53980,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v2jr3w1758896742.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v2jr3w1758896742.png",
+        "cardTheme": "standard"
     },
     {
         "id": "miranda-bologna",
@@ -53979,12 +53997,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "LB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/myhl881731100920.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/myhl881731100920.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vitik-bologna",
@@ -53996,10 +54014,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xzer651758896676.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ferguson-bologna",
@@ -54011,12 +54029,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CAM",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/84eiy01758896812.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/84eiy01758896812.png",
+        "cardTheme": "standard"
     },
     {
         "id": "moro-bologna",
@@ -54028,12 +54046,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5el95a1678801446.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5el95a1678801446.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pobega-bologna",
@@ -54045,12 +54063,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/856mb71758897503.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/856mb71758897503.png",
+        "cardTheme": "standard"
     },
     {
         "id": "orsolini-bologna",
@@ -54062,12 +54080,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "RW",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hkoyvk1758897555.png",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hkoyvk1758897555.png",
+        "cardTheme": "standard"
     },
     {
         "id": "castro-bologna",
@@ -54079,10 +54097,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "ST",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mrbdis1758896882.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "dallinga-bologna",
@@ -54094,10 +54112,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "ST",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/nfez0e1758897126.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "odgaard-bologna",
@@ -54109,13 +54127,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "RW",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ls06i11758896851.png",
         "altPositions": [
             "ST",
             "CAM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ls06i11758896851.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cambiaghi-bologna",
@@ -54127,12 +54145,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "LW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4x68lo1758896955.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4x68lo1758896955.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rowe-bologna",
@@ -54144,13 +54162,13 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "LW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4m6nhs1758897233.png",
         "altPositions": [
             "LM",
             "RW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4m6nhs1758897233.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ndoye-bologna",
@@ -54179,10 +54197,10 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CB",
+        "altPositions": [],
         "rating": 79,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kifz5o1758896707.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "freuler-bologna",
@@ -54194,12 +54212,12 @@ const DEFAULT_PLAYERS = [
         "club": "Bologna",
         "clubBadge": "❤️💙",
         "position": "CDM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gwqmdw1758896917.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gwqmdw1758896917.png",
+        "cardTheme": "standard"
     },
     {
         "id": "aebischer-bologna",
@@ -54260,10 +54278,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "GK",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xpdp8z1777707330.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "paleari-torino",
@@ -54275,10 +54293,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "GK",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9shadg1758814075.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "tameze-torino",
@@ -54288,15 +54306,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ebzzj81758814264.png",
         "altPositions": [
-            "CB",
-            "CM"
-        ]
+            "CM",
+            "CB"
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ebzzj81758814264.png",
+        "cardTheme": "standard"
     },
     {
         "id": "biraghi-torino",
@@ -54308,13 +54325,13 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "LB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/39grvw1758813369.png",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/39grvw1758813369.png",
+        "cardTheme": "standard"
     },
     {
         "id": "nkounkou-torino",
@@ -54326,13 +54343,13 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "LWB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dcb1f81764099911.png",
         "altPositions": [
             "LB",
             "LM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dcb1f81764099911.png",
+        "cardTheme": "standard"
     },
     {
         "id": "obrador-torino",
@@ -54344,12 +54361,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "LB",
-        "rating": 69,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "ismajli-torino",
@@ -54361,10 +54378,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4t6b4k1758813395.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ebosse-torino",
@@ -54376,12 +54393,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/583adc1777706743.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/583adc1777706743.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vlasic-torino",
@@ -54393,13 +54410,13 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CAM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tmii4q1758814229.png",
         "altPositions": [
             "CM",
             "RW"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tmii4q1758814229.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ilic-torino",
@@ -54411,12 +54428,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bd6s9a1758813427.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bd6s9a1758813427.png",
+        "cardTheme": "standard"
     },
     {
         "id": "prati-torino",
@@ -54428,12 +54445,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CDM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xuxc1k1764336469.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xuxc1k1764336469.png",
+        "cardTheme": "standard"
     },
     {
         "id": "anjorin-torino",
@@ -54445,13 +54462,13 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CAM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4eexa61758813492.png",
         "altPositions": [
             "CM",
             "LM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4eexa61758813492.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lazaro-torino",
@@ -54463,14 +54480,14 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "RWB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uo75pz1758813312.png",
         "altPositions": [
             "LWB",
             "RM",
             "LM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uo75pz1758813312.png",
+        "cardTheme": "standard"
     },
     {
         "id": "casadei-torino",
@@ -54482,12 +54499,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9i4mcp1758813564.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9i4mcp1758813564.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gineitis-torino",
@@ -54499,12 +54516,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CM",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ihkzws1766831086.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ihkzws1766831086.png",
+        "cardTheme": "standard"
     },
     {
         "id": "zapata-torino",
@@ -54516,10 +54533,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "ST",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z3pk7r1758814292.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "adams-torino",
@@ -54531,12 +54548,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "ST",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fiwc2j1758813462.png",
         "altPositions": [
             "CF"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fiwc2j1758813462.png",
+        "cardTheme": "standard"
     },
     {
         "id": "aboukhlal-torino",
@@ -54548,13 +54565,13 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "RW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qub2901758813269.png",
         "altPositions": [
             "LW",
             "ST"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qub2901758813269.png",
+        "cardTheme": "standard"
     },
     {
         "id": "simeone-torino",
@@ -54566,10 +54583,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "ST",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vyiclr1758813227.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "njie-torino",
@@ -54581,12 +54598,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "LW",
-        "rating": 68,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "ST"
-        ]
+        ],
+        "rating": 68,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "coco-torino",
@@ -54598,10 +54615,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6yf5p41758813163.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "walukiewicz-torino",
@@ -54613,10 +54630,10 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1jmkqz1764106519.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "pedersen-torino",
@@ -54628,13 +54645,13 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "RB",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8slbdf1758814099.png",
         "altPositions": [
             "RWB",
             "LB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8slbdf1758814099.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ricci-torino",
@@ -54646,12 +54663,12 @@ const DEFAULT_PLAYERS = [
         "club": "Torino",
         "clubBadge": "🤎🤍",
         "position": "CDM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/syjck91758893445.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/syjck91758893445.png",
+        "cardTheme": "standard"
     },
     {
         "id": "carnesecchi-atalanta",
@@ -54663,10 +54680,10 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 82,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tjx3t51695157205.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "patricio-atalanta",
@@ -54678,10 +54695,10 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ekricq1679567053.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "scalvini-atalanta",
@@ -54721,12 +54738,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CB",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ae2jmk1695157289.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ae2jmk1695157289.png",
+        "cardTheme": "standard"
     },
     {
         "id": "djimsiti-atalanta",
@@ -54738,10 +54755,10 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a1u2x81695157220.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "kossounou-atalanta",
@@ -54753,12 +54770,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/p876cf1764331393.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/p876cf1764331393.png",
+        "cardTheme": "standard"
     },
     {
         "id": "zappacosta-atalanta",
@@ -54770,14 +54787,14 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "RWB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sofred1695157710.png",
         "altPositions": [
             "LWB",
             "RM",
             "LM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/sofred1695157710.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bellanova-atalanta",
@@ -54789,12 +54806,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "RWB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ueud6b1762957228.png",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ueud6b1762957228.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ruggeri-atalanta",
@@ -54823,12 +54840,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xhlait1769179027.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xhlait1769179027.png",
+        "cardTheme": "standard"
     },
     {
         "id": "deroon-atalanta",
@@ -54840,13 +54857,13 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vd6v6q1695157451.png",
         "altPositions": [
             "CB",
             "CM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vd6v6q1695157451.png",
+        "cardTheme": "standard"
     },
     {
         "id": "pasalic-atalanta",
@@ -54858,12 +54875,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CM",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/akmxr91695157400.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/akmxr91695157400.png",
+        "cardTheme": "standard"
     },
     {
         "id": "samardzic-atalanta",
@@ -54875,12 +54892,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/43jwpu1764331634.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/43jwpu1764331634.png",
+        "cardTheme": "standard"
     },
     {
         "id": "deketelaere-atalanta",
@@ -54892,14 +54909,14 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CF",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wqo9ia1695157273.png",
         "altPositions": [
             "RW",
             "ST",
             "CAM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wqo9ia1695157273.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lookman-atalanta",
@@ -54928,10 +54945,10 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 81,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xp4bqm1695157525.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "retegui-atalanta",
@@ -54973,12 +54990,12 @@ const DEFAULT_PLAYERS = [
         "club": "Atalanta",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e4sjm51758897476.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/e4sjm51758897476.png",
+        "cardTheme": "standard"
     },
     {
         "id": "brescianini-atalanta",
@@ -55006,10 +55023,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 67,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2g36le1721292730.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "scuffet-cagliari",
@@ -55021,10 +55038,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/y67vhu1764188991.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "luperto-cagliari",
@@ -55036,10 +55053,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c8rkv21776936705.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "mina-cagliari",
@@ -55051,10 +55068,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9gq0ca1764336694.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "zappa-cagliari",
@@ -55066,13 +55083,13 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zpmc0g1764336529.png",
         "altPositions": [
             "CB",
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zpmc0g1764336529.png",
+        "cardTheme": "standard"
     },
     {
         "id": "augello-cagliari",
@@ -55084,12 +55101,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "LB",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fdafue1697923597.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fdafue1697923597.png",
+        "cardTheme": "standard"
     },
     {
         "id": "palomino-cagliari",
@@ -55101,10 +55118,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5h53jr1765488132.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "zortea-cagliari",
@@ -55116,13 +55133,13 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "RWB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0lkq3b1758896611.png",
         "altPositions": [
             "RM",
             "RB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0lkq3b1758896611.png",
+        "cardTheme": "standard"
     },
     {
         "id": "makoumbou-cagliari",
@@ -55134,12 +55151,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cdjjyw1697923799.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cdjjyw1697923799.png",
+        "cardTheme": "standard"
     },
     {
         "id": "marin-cagliari",
@@ -55151,12 +55168,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gauxnu1697890458.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gauxnu1697890458.png",
+        "cardTheme": "standard"
     },
     {
         "id": "adopo-cagliari",
@@ -55168,12 +55185,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "gaetano-cagliari",
@@ -55185,12 +55202,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rjct8m1764336260.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rjct8m1764336260.png",
+        "cardTheme": "standard"
     },
     {
         "id": "viola-cagliari",
@@ -55202,10 +55219,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CAM",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/llamn81697923974.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "luvumbo-cagliari",
@@ -55217,13 +55234,13 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "LW",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l8i0ku1775288106.png",
         "altPositions": [
             "RW",
             "ST"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l8i0ku1775288106.png",
+        "cardTheme": "standard"
     },
     {
         "id": "piccoli-cagliari",
@@ -55235,10 +55252,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jtmqm31758892088.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "lapadula-cagliari",
@@ -55264,10 +55281,10 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 64,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qsir7i1770241696.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "azzi-cagliari",
@@ -55279,13 +55296,13 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "LM",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uxk2se1697923610.png",
         "altPositions": [
             "LB",
             "LWB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uxk2se1697923610.png",
+        "cardTheme": "standard"
     },
     {
         "id": "deiola-cagliari",
@@ -55297,12 +55314,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CM",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c0xapn1764336191.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c0xapn1764336191.png",
+        "cardTheme": "standard"
     },
     {
         "id": "obert-cagliari",
@@ -55314,12 +55331,12 @@ const DEFAULT_PLAYERS = [
         "club": "Cagliari",
         "clubBadge": "",
         "position": "CB",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6kky8y1764336387.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6kky8y1764336387.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rulli-marseille",
@@ -55331,10 +55348,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cpkkmg1766153528.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "delange-marseille",
@@ -55346,10 +55363,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 72,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/25hbtn1766152469.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "balerdi-marseille",
@@ -55361,10 +55378,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 80,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qmafbd1766151863.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "cornelius-marseille",
@@ -55376,10 +55393,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8ifr0w1777017367.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "brassier-marseille",
@@ -55391,12 +55408,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ln63ex1766136158.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ln63ex1766136158.png",
+        "cardTheme": "standard"
     },
     {
         "id": "murillo-marseille",
@@ -55408,12 +55425,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/693hds1766153380.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/693hds1766153380.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lirola-marseille",
@@ -55425,12 +55442,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "RB",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u2opeo1766153155.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/u2opeo1766153155.png",
+        "cardTheme": "standard"
     },
     {
         "id": "merlin-marseille",
@@ -55442,12 +55459,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "LB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k9coon1766138062.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k9coon1766138062.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hojbjerg-marseille",
@@ -55459,12 +55476,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "kondogbia-marseille",
@@ -55476,13 +55493,13 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/atlueu1766152448.png",
         "altPositions": [
             "CB",
             "CM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/atlueu1766152448.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kone-marseille",
@@ -55494,12 +55511,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kiabdn1764106047.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kiabdn1764106047.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rongier-marseille",
@@ -55511,12 +55528,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l1y41h1766136373.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l1y41h1766136373.png",
+        "cardTheme": "standard"
     },
     {
         "id": "harit-marseille",
@@ -55528,12 +55545,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tn1y8q1724525279.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tn1y8q1724525279.png",
+        "cardTheme": "standard"
     },
     {
         "id": "greenwood-marseille",
@@ -55545,13 +55562,13 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "RW",
-        "rating": 82,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4zpjv11766153131.png",
         "altPositions": [
             "ST",
             "LW"
-        ]
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4zpjv11766153131.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lhenrique-marseille",
@@ -55563,12 +55580,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "LW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nazanp1527521197.jpg",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nazanp1527521197.jpg",
+        "cardTheme": "standard"
     },
     {
         "id": "jrowe-marseille",
@@ -55580,13 +55597,13 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "LW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4m6nhs1758897233.png",
         "altPositions": [
             "LM",
             "RW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4m6nhs1758897233.png",
+        "cardTheme": "standard"
     },
     {
         "id": "wahi-marseille",
@@ -55598,10 +55615,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/uuqh371762287642.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "maupay-marseille",
@@ -55613,10 +55630,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/gn9rkt1766152487.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "rabiot-marseille",
@@ -55628,12 +55645,12 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CM",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m2upnx1758893486.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m2upnx1758893486.png",
+        "cardTheme": "standard"
     },
     {
         "id": "meite-marseille",
@@ -55645,10 +55662,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lh5gtj1766054092.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "moumbagna-marseille",
@@ -55660,10 +55677,10 @@ const DEFAULT_PLAYERS = [
         "club": "Marseille",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m5n5jp1758886388.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "kohn-monaco",
@@ -55675,10 +55692,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f5ekdp1766238148.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "majecki-monaco",
@@ -55690,10 +55707,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 75,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/r6awrf1765982795.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "kehrer-monaco",
@@ -55705,10 +55722,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 79,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/f1a7kt1766238123.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "salisu-monaco",
@@ -55720,10 +55737,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lrp4yl1766238308.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "singo-monaco",
@@ -55735,12 +55752,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zwfgmo1769177983.png",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zwfgmo1769177983.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mawissa-monaco",
@@ -55752,12 +55769,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/znr18c1766238182.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/znr18c1766238182.png",
+        "cardTheme": "standard"
     },
     {
         "id": "vanderson-monaco",
@@ -55769,12 +55786,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "RB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/51sbyv1766238350.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/51sbyv1766238350.png",
+        "cardTheme": "standard"
     },
     {
         "id": "teze-monaco",
@@ -55786,12 +55803,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "RB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/woqyln1766238330.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/woqyln1766238330.png",
+        "cardTheme": "standard"
     },
     {
         "id": "caiolenrique-monaco",
@@ -55803,12 +55820,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "LB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mhzdcn1766238061.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/mhzdcn1766238061.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ouattara-monaco",
@@ -55820,10 +55837,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "LB",
+        "altPositions": [],
         "rating": 71,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rk8zgx1766238276.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "zakaria-monaco",
@@ -55835,13 +55852,13 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 81,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xh4nwr1766238364.png",
         "altPositions": [
             "CM",
             "CB"
-        ]
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xh4nwr1766238364.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lcamara-monaco",
@@ -55853,12 +55870,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1fl2tg1766237973.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1fl2tg1766237973.png",
+        "cardTheme": "standard"
     },
     {
         "id": "magassa-monaco",
@@ -55870,12 +55887,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/czkp211772133444.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/czkp211772133444.png",
+        "cardTheme": "standard"
     },
     {
         "id": "golovin-monaco",
@@ -55887,13 +55904,13 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ljnuwy1766238045.png",
         "altPositions": [
             "LW",
             "CM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ljnuwy1766238045.png",
+        "cardTheme": "standard"
     },
     {
         "id": "akliouche-monaco",
@@ -55905,12 +55922,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2x2cfx1766237890.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2x2cfx1766237890.png",
+        "cardTheme": "standard"
     },
     {
         "id": "benseghir-monaco",
@@ -55922,12 +55939,12 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vlvhj31762962673.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vlvhj31762962673.png",
+        "cardTheme": "standard"
     },
     {
         "id": "minamino-monaco",
@@ -55939,13 +55956,13 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a6g0551766238256.png",
         "altPositions": [
             "RW",
             "LW"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a6g0551766238256.png",
+        "cardTheme": "standard"
     },
     {
         "id": "embolo-monaco",
@@ -55957,10 +55974,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k5xqvx1766136320.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "balogun-monaco",
@@ -55972,10 +55989,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ic7kq51781348516.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ilenikhena-monaco",
@@ -55987,10 +56004,10 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 72,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/1oxhek1766238106.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "diatta-monaco",
@@ -56002,13 +56019,13 @@ const DEFAULT_PLAYERS = [
         "club": "Monaco",
         "clubBadge": "",
         "position": "RW",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5uag2g1766238000.png",
         "altPositions": [
             "RM",
             "RB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5uag2g1766238000.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bulka-nice",
@@ -56020,10 +56037,10 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 81,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h45mgc1681397422.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "boulhendi-nice",
@@ -56035,10 +56052,10 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 62,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "dante-nice",
@@ -56050,10 +56067,10 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 77,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xmvthz1766319711.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "bombito-nice",
@@ -56065,10 +56082,10 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pz6zo51766319628.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ndayishimiye-nice",
@@ -56080,12 +56097,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CB",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k0ku531766319844.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k0ku531766319844.png",
+        "cardTheme": "standard"
     },
     {
         "id": "clauss-nice",
@@ -56097,12 +56114,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "RB",
-        "rating": 80,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lmb4f41766319695.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lmb4f41766319695.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bard-nice",
@@ -56114,12 +56131,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "LB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yree541766319573.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yree541766319573.png",
+        "cardTheme": "standard"
     },
     {
         "id": "abdi-nice",
@@ -56131,12 +56148,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "LB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3v1p3u1766319540.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3v1p3u1766319540.png",
+        "cardTheme": "standard"
     },
     {
         "id": "mendy-nice",
@@ -56148,12 +56165,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "RB",
-        "rating": 69,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2otk4v1766319808.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 69,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2otk4v1766319808.png",
+        "cardTheme": "standard"
     },
     {
         "id": "rosario-nice",
@@ -56165,12 +56182,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4ksqzj1700558601.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4ksqzj1700558601.png",
+        "cardTheme": "standard"
     },
     {
         "id": "boudaoui-nice",
@@ -56182,12 +56199,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pkjb4y1766319645.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pkjb4y1766319645.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ndombele-nice",
@@ -56199,12 +56216,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2hw5fx1766319860.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2hw5fx1766319860.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sanson-nice",
@@ -56216,12 +56233,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bqld1d1766319928.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bqld1d1766319928.png",
+        "cardTheme": "standard"
     },
     {
         "id": "boga-nice",
@@ -56233,12 +56250,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "LW",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9dndpt1776674931.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9dndpt1776674931.png",
+        "cardTheme": "standard"
     },
     {
         "id": "diop-nice",
@@ -56250,12 +56267,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "LW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tgvdby1766319728.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tgvdby1766319728.png",
+        "cardTheme": "standard"
     },
     {
         "id": "cho-nice",
@@ -56267,13 +56284,13 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "RW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fy5wo31766319678.png",
         "altPositions": [
             "LW",
             "ST"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fy5wo31766319678.png",
+        "cardTheme": "standard"
     },
     {
         "id": "laborde-nice",
@@ -56285,12 +56302,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "RW",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a5epyx1700558648.png",
         "altPositions": [
             "ST"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/a5epyx1700558648.png",
+        "cardTheme": "standard"
     },
     {
         "id": "guessand-nice",
@@ -56302,12 +56319,12 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "ST",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x99loi1772141649.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x99loi1772141649.png",
+        "cardTheme": "standard"
     },
     {
         "id": "moukoko-nice",
@@ -56319,10 +56336,10 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/83foiy1762288605.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "bouanani-nice",
@@ -56334,10 +56351,10 @@ const DEFAULT_PLAYERS = [
         "club": "Nice",
         "clubBadge": "",
         "position": "RW",
+        "altPositions": [],
         "rating": 71,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/k1dd471763586061.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "mandanda-rennes",
@@ -56345,14 +56362,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Mandanda",
         "nationality": "France",
         "flag": "🇫🇷",
-        "league": "Ligue 1",
-        "club": "Rennes",
-        "clubBadge": "",
+        "league": "",
+        "club": "",
         "position": "GK",
-        "rating": 76,
-        "cardTheme": "standard",
+        "altPositions": [],
+        "rating": 83,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/p6ct6i1681417167.png",
-        "altPositions": []
+        "cardTheme": "mm"
     },
     {
         "id": "gallon-rennes",
@@ -56364,10 +56380,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 72,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zq71j51766137652.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "faye-rennes",
@@ -56379,10 +56395,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 72,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l435gx1758886311.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "wooh-rennes",
@@ -56392,12 +56408,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CB",
-        "rating": 74,
-        "cardTheme": "standard",
+        "altPositions": [],
+        "rating": 72,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cc23hy1681417318.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "ostigard-rennes",
@@ -56409,10 +56424,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/riue4t1758997507.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "seidu-rennes",
@@ -56424,12 +56439,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "RB",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cb7p4h1766137895.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cb7p4h1766137895.png",
+        "cardTheme": "standard"
     },
     {
         "id": "assignon-rennes",
@@ -56441,10 +56456,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "RB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x1m4e91763586046.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "truffert-rennes",
@@ -56456,12 +56471,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "LB",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qmpz4n1757018404.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qmpz4n1757018404.png",
+        "cardTheme": "standard"
     },
     {
         "id": "hateboer-rennes",
@@ -56473,12 +56488,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "RB",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jsrw8a1766147138.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jsrw8a1766147138.png",
+        "cardTheme": "standard"
     },
     {
         "id": "matusiwa-rennes",
@@ -56490,12 +56505,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/adr3nq1761909049.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/adr3nq1761909049.png",
+        "cardTheme": "standard"
     },
     {
         "id": "santamaria-rennes",
@@ -56507,12 +56522,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cnzepy1762865806.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cnzepy1762865806.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gkamara-rennes",
@@ -56524,12 +56539,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CM",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6scu291766137803.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6scu291766137803.png",
+        "cardTheme": "standard"
     },
     {
         "id": "blas-rennes",
@@ -56541,12 +56556,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2oryuj1766137548.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2oryuj1766137548.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gronbaek-rennes",
@@ -56558,12 +56573,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pnhhc71758989216.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/pnhhc71758989216.png",
+        "cardTheme": "standard"
     },
     {
         "id": "gouiri-rennes",
@@ -56575,12 +56590,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "LW",
-        "rating": 78,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/74eam91766152411.png",
         "altPositions": [
             "ST"
-        ]
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/74eam91766152411.png",
+        "cardTheme": "standard"
     },
     {
         "id": "jota-rennes",
@@ -56592,12 +56607,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "LW",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l7t30j1609973056.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l7t30j1609973056.png",
+        "cardTheme": "standard"
     },
     {
         "id": "kalimuendo-rennes",
@@ -56609,10 +56624,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 78,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o0mmzp1773671528.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "meister-rennes",
@@ -56624,10 +56639,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 66,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/y7erjj1764188918.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "gomez-rennes",
@@ -56639,12 +56654,12 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "RW",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/emzyri1767963292.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/emzyri1767963292.png",
+        "cardTheme": "standard"
     },
     {
         "id": "james-rennes",
@@ -56656,10 +56671,10 @@ const DEFAULT_PLAYERS = [
         "club": "Rennes",
         "clubBadge": "",
         "position": "CM",
+        "altPositions": [],
         "rating": 70,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ypsw151761861565.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "diouf-reims",
@@ -56671,10 +56686,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3iat8f1766319747.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "olliero-reims",
@@ -56686,10 +56701,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 67,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6j7jmp1681483224.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "agbadou-reims",
@@ -56701,10 +56716,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vwlqq91756975538.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "okumu-reims",
@@ -56716,10 +56731,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fl8sts1683812997.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "buta-reims",
@@ -56731,12 +56746,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "RB",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qsmrsx1762975856.png",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 74,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qsmrsx1762975856.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sangui-reims",
@@ -56748,10 +56763,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "LB",
+        "altPositions": [],
         "rating": 64,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/z53emh1766329377.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "akieme-reims",
@@ -56763,10 +56778,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "LB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/78clxm1678555270.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "atangana-reims",
@@ -56778,12 +56793,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 70,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ugwatt1771663066.png",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 70,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ugwatt1771663066.png",
+        "cardTheme": "standard"
     },
     {
         "id": "munetsi-reims",
@@ -56795,12 +56810,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m43af41756975574.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/m43af41756975574.png",
+        "cardTheme": "standard"
     },
     {
         "id": "teuma-reims",
@@ -56812,12 +56827,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/f65x0q1724976397.jpg",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/f65x0q1724976397.jpg",
+        "cardTheme": "standard"
     },
     {
         "id": "khadra-reims",
@@ -56829,12 +56844,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CAM",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o5i7z31765990495.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o5i7z31765990495.png",
+        "cardTheme": "standard"
     },
     {
         "id": "ito-reims",
@@ -56862,12 +56877,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "LW",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rvg6ub1678454947.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rvg6ub1678454947.png",
+        "cardTheme": "standard"
     },
     {
         "id": "diakite-reims",
@@ -56879,10 +56894,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2s5slh1767799799.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "salama-reims",
@@ -56894,12 +56909,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "ST",
-        "rating": 68,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0rj5h51674740531.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 68,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0rj5h51674740531.png",
+        "cardTheme": "standard"
     },
     {
         "id": "daramy-reims",
@@ -56911,12 +56926,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "LW",
-        "rating": 74,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "moscardo-reims",
@@ -56928,12 +56943,12 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "fofana-reims",
@@ -56945,10 +56960,10 @@ const DEFAULT_PLAYERS = [
         "club": "Reims",
         "clubBadge": "",
         "position": "CM",
+        "altPositions": [],
         "rating": 67,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "petrovic-strasbourg",
@@ -56960,10 +56975,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 76,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zo91cp1766827442.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "johnsson-strasbourg",
@@ -56975,10 +56990,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "GK",
+        "altPositions": [],
         "rating": 70,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jbtbfq1766402422.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "sylla-strasbourg",
@@ -56990,10 +57005,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/kpw05r1766402544.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "sow-strasbourg",
@@ -57005,10 +57020,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "CB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/cpa8qq1766402524.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "sarr-strasbourg",
@@ -57034,10 +57049,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "RB",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/l18qe01766402363.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "senaya-strasbourg",
@@ -57049,12 +57064,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "RB",
-        "rating": 72,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/scdnlk1765920733.png",
         "altPositions": [
             "LB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/scdnlk1765920733.png",
+        "cardTheme": "standard"
     },
     {
         "id": "wiley-strasbourg",
@@ -57066,12 +57081,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "LB",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/enx98v1761216806.png",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/enx98v1761216806.png",
+        "cardTheme": "standard"
     },
     {
         "id": "sobol-strasbourg",
@@ -57083,10 +57098,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "LB",
+        "altPositions": [],
         "rating": 70,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/q48yfs1766402505.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "santos-strasbourg",
@@ -57098,12 +57113,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "CM",
-        "rating": 79,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jt1o7i1757010267.png",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jt1o7i1757010267.png",
+        "cardTheme": "standard"
     },
     {
         "id": "doukoure-strasbourg",
@@ -57115,12 +57130,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "CDM",
-        "rating": 73,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/621aao1766053623.png",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 73,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/621aao1766053623.png",
+        "cardTheme": "standard"
     },
     {
         "id": "diarra-strasbourg",
@@ -57132,12 +57147,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "CM",
-        "rating": 76,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fbklgi1756903777.png",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fbklgi1756903777.png",
+        "cardTheme": "standard"
     },
     {
         "id": "lemarechal-strasbourg",
@@ -57149,12 +57164,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "CM",
-        "rating": 69,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9267i41766402439.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 69,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9267i41766402439.png",
+        "cardTheme": "standard"
     },
     {
         "id": "nanasi-strasbourg",
@@ -57166,12 +57181,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "LW",
-        "rating": 77,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lk0r361766053527.png",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/lk0r361766053527.png",
+        "cardTheme": "standard"
     },
     {
         "id": "bakwa-strasbourg",
@@ -57183,12 +57198,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "RW",
-        "rating": 75,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b5kuwi1757164573.png",
         "altPositions": [
             "LW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/b5kuwi1757164573.png",
+        "cardTheme": "standard"
     },
     {
         "id": "moreira-strasbourg",
@@ -57200,12 +57215,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "LW",
-        "rating": 71,
-        "cardTheme": "standard",
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/eyaz0q1766053833.png",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 71,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/eyaz0q1766053833.png",
+        "cardTheme": "standard"
     },
     {
         "id": "emegha-strasbourg",
@@ -57217,10 +57232,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 74,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/v56o471766402381.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "mara-strasbourg",
@@ -57232,10 +57247,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 73,
-        "cardTheme": "standard",
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/bsmwp41765920539.png",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "lukovic-strasbourg",
@@ -57247,10 +57262,10 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "ST",
+        "altPositions": [],
         "rating": 69,
-        "cardTheme": "standard",
         "photo": "",
-        "altPositions": []
+        "cardTheme": "standard"
     },
     {
         "id": "messi-strasbourg",
@@ -57262,12 +57277,12 @@ const DEFAULT_PLAYERS = [
         "club": "Strasbourg",
         "clubBadge": "",
         "position": "LW",
-        "rating": 65,
-        "cardTheme": "standard",
-        "photo": "",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 65,
+        "photo": "",
+        "cardTheme": "standard"
     },
     {
         "id": "player-1782072847154",
@@ -57467,11 +57482,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 88,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghEjd6k-ghFpOUOgqfCxr7ZWg4S7Cg5iVjB0dIdubrYP3NviG73Lur3eBDOa_m74463ZsBM7pmBiXSK3hn29FXGQ27zkpG2OVV5AWMmk&s=10",
         "cardTheme": "mm"
     },
     {
@@ -59241,12 +59255,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "kevinparedes-wolfsburg",
         "name": "Kevin Paredes",
-        "cardName": "Paredes",
+        "cardName": "K. Paredes",
         "nationality": "United States",
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -61259,14 +61272,14 @@ const DEFAULT_PLAYERS = [
     {
         "id": "xaverschlager-rbleipzig",
         "name": "Xaver Schlager",
-        "cardName": "Schlager",
+        "cardName": "X. Schlager",
         "nationality": "Austria",
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "RB Leipzig",
         "position": "CM",
         "altPositions": [],
-        "rating": 78,
+        "rating": 80,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -62707,7 +62720,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CDM"
         ],
-        "rating": 80,
+        "rating": 81,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -63030,15 +63043,31 @@ const DEFAULT_PLAYERS = [
     {
         "id": "davis-udinese-s26",
         "name": "Keinan Davis",
-        "cardName": "Davis",
+        "cardName": "K. Davis",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [],
-        "rating": 75,
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "gueye-udinese-s26",
+        "name": "Idrissa Gueye",
+        "cardName": "I. Gueye",
+        "nationality": "Senegal",
+        "flag": "🇸🇳",
+        "league": "Serie A",
+        "club": "Udinese",
+        "clubBadge": "⚫⚪",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -63249,7 +63278,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 88,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Passarella_copa_mundo.jpg",
         "cardTheme": "gc"
     },
     {
@@ -63348,7 +63377,7 @@ const DEFAULT_PLAYERS = [
             "CF"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIt012-Ruu62wJEdYRJ40361fK1aMJRUpTnCvcQuAGGHoQfPRnmXmGmSl1L3IPxeJm4-DhAv6DkEzpvY62Adjkjlhxe02f3dWFy1-ILQ&s=10",
         "cardTheme": "mm"
     },
     {
@@ -63365,7 +63394,7 @@ const DEFAULT_PLAYERS = [
             "LM"
         ],
         "rating": 84,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/jiuy1b1654271024.png",
         "cardTheme": "mm"
     },
     {
@@ -63576,7 +63605,7 @@ const DEFAULT_PLAYERS = [
     {
         "id": "navas-mm",
         "name": "Jesús Navas",
-        "cardName": "Navas",
+        "cardName": "J. Navas",
         "nationality": "Spain",
         "flag": "🇪🇸",
         "league": "",
@@ -63584,10 +63613,11 @@ const DEFAULT_PLAYERS = [
         "position": "RM",
         "altPositions": [
             "RW",
-            "RB"
+            "RB",
+            "RWB"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://m.media-amazon.com/images/M/MV5BMmVmMzY5YzYtZTQ0OS00MjczLTg0ZDctNGIxYjYwMjc4ZmVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         "cardTheme": "mm"
     },
     {
@@ -63755,568 +63785,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "standard"
     },
     {
-        "id": "player-1782324384127",
-        "name": "Marco Asensio",
-        "cardName": "Asensio",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Süper Lig",
-        "club": "Fenerbahçe",
-        "position": "RW",
-        "altPositions": [
-            "LW",
-            "CAM",
-            "RM"
-        ],
-        "rating": 81,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782324595689",
-        "name": "Kerem Aktürkoğlu",
-        "cardName": "Akturkoglu",
-        "nationality": "Türkiye",
-        "flag": "🇹🇷",
-        "league": "Süper Lig",
-        "club": "Fenerbahçe",
-        "position": "ST",
-        "altPositions": [
-            "CF",
-            "RW"
-        ],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782324918673",
-        "name": "Ayase Ueda",
-        "cardName": "Ueda",
-        "nationality": "Japan",
-        "flag": "🇯🇵",
-        "league": "Eredivisie",
-        "club": "Feyenoord",
-        "position": "ST",
-        "altPositions": [
-            "CF"
-        ],
-        "rating": 80,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "gonzalojara-mm",
-        "name": "Gonzalo Jara",
-        "cardName": "Jara",
-        "nationality": "Chile",
-        "flag": "🇨🇱",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CB",
-        "altPositions": [
-            "RB",
-            "LB"
-        ],
-        "rating": 80,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "viktorfischer-mm",
-        "name": "Viktor Fischer",
-        "cardName": "Fischer",
-        "nationality": "Denmark",
-        "flag": "🇩🇰",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "LW",
-        "altPositions": [
-            "LM",
-            "ST"
-        ],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "freddyadu-mm",
-        "name": "Freddy Adu",
-        "cardName": "Adu",
-        "nationality": "United States",
-        "flag": "🇺🇸",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CAM",
-        "altPositions": [
-            "LW",
-            "ST"
-        ],
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "zeroberto-mm",
-        "name": "Zé Roberto",
-        "cardName": "Zé Roberto",
-        "nationality": "Brazil",
-        "flag": "🇧🇷",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "LM",
-        "altPositions": [
-            "CM",
-            "LB"
-        ],
-        "rating": 83,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "zambrotta-mm",
-        "name": "Gianluca Zambrotta",
-        "cardName": "Zambrotta",
-        "nationality": "Italy",
-        "flag": "🇮🇹",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "RB",
-        "altPositions": [
-            "LB",
-            "RWB"
-        ],
-        "rating": 84,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "sylvinho-mm",
-        "name": "Sylvinho",
-        "cardName": "Sylvinho",
-        "nationality": "Brazil",
-        "flag": "🇧🇷",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "LB",
-        "altPositions": [
-            "LWB"
-        ],
-        "rating": 82,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "altintop-mm",
-        "name": "Hamit Altıntop",
-        "cardName": "Altıntop",
-        "nationality": "Turkey",
-        "flag": "🇹🇷",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "RM",
-        "altPositions": [
-            "CM",
-            "RB"
-        ],
-        "rating": 82,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "marcelljansen-mm",
-        "name": "Marcell Jansen",
-        "cardName": "Jansen",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "LB",
-        "altPositions": [
-            "LM",
-            "LWB"
-        ],
-        "rating": 80,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "teemutainio-mm",
-        "name": "Teemu Tainio",
-        "cardName": "Tainio",
-        "nationality": "Finland",
-        "flag": "🇫🇮",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CM",
-        "altPositions": [
-            "CDM",
-            "RB"
-        ],
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "michaeldawson-mm",
-        "name": "Michael Dawson",
-        "cardName": "Dawson",
-        "nationality": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "taulantxhaka-mm",
-        "name": "Taulant Xhaka",
-        "cardName": "T. Xhaka",
-        "nationality": "Albania",
-        "flag": "🇦🇱",
-        "league": "",
-        "club": "",
-        "clubBadge": "",
-        "position": "CDM",
-        "altPositions": [
-            "CM",
-            "RB"
-        ],
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "player-1782419194341",
-        "name": "Inaki Williams",
-        "cardName": "I. Williams",
-        "nationality": "Ghana",
-        "flag": "🇬🇭",
-        "league": "La Liga",
-        "club": "Athletic Club",
-        "position": "ST",
-        "altPositions": [
-            "RW"
-        ],
-        "rating": 78,
-        "photo": "https://laai.blog/wp-content/uploads/2026/06/Inaki-Williams-la-ai.jpg",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782419252866",
-        "name": "Nico Williams",
-        "cardName": "Nico",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "La Liga",
-        "club": "Athletic Club",
-        "position": "LW",
-        "altPositions": [
-            "RW",
-            "LM"
-        ],
-        "rating": 80,
-        "photo": "https://s.yimg.com/ny/api/res/1.2/x8.bWXSd_LYT1BkvPay_9A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyODtjZj13ZWJw/https://media.zenfs.com/en/the_football_faithful_articles_458/ca629b0bf4e6243fdbf2ffe61d8bfd77",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782419430482",
-        "name": "Ben Gannon-Doak",
-        "cardName": "Gannon-Doak",
-        "nationality": "Scotland",
-        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "league": "Premier League",
-        "club": "Bournemouth",
-        "position": "RW",
-        "altPositions": [],
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782419824095",
-        "name": "Jordan Ayew",
-        "cardName": "J. Ayew",
-        "nationality": "Ghana",
-        "flag": "🇬🇭",
-        "league": "EFL League One",
-        "club": "Leicester City",
-        "position": "ST",
-        "altPositions": [],
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782419998345",
-        "name": "Víctor Muñoz",
-        "cardName": "V. Muñoz",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "Premier League",
-        "club": "Liverpool",
-        "position": "ST",
-        "altPositions": [],
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782421121145",
-        "name": "Unai Simón",
-        "cardName": "Unai Simón",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "La Liga",
-        "club": "Athletic Club",
-        "position": "GK",
-        "altPositions": [],
-        "rating": 82,
-        "photo": "https://i.guim.co.uk/img/media/a9e8fbd74ce79c268692aceba9004c0311fe0eaa/695_0_6640_5311/master/6640.jpg?width=1200&quality=85&auto=format&fit=max&s=a3314ccc6b29fa453ac1440c4e4cfe74",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782421456243",
-        "name": "Deniz Undav",
-        "cardName": "Undav",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Bundesliga",
-        "club": "Stuttgart",
-        "position": "ST",
-        "altPositions": [],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782421513242",
-        "name": "Tahith Chong",
-        "cardName": "Chong",
-        "nationality": "Curaçao",
-        "flag": "🇨🇼",
-        "league": "EFL Championship",
-        "club": "Sheffield United",
-        "position": "RW",
-        "altPositions": [
-            "RM"
-        ],
-        "rating": 76,
-        "photo": "https://assets.goal.com/images/v3/getty-2169504714/crop/MM5DENBRGY5DCMZVHE5G433XMU5DAORTGQ2Q====/GettyImages-2169504714.jpg?auto=webp&format=pjpg&width=3840&quality=60",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782421616939",
-        "name": "Tarik Muharemović",
-        "cardName": "Muharemovic",
-        "nationality": "Bosnia",
-        "flag": "🇧🇦",
-        "league": "Serie B",
-        "club": "Sassuolo",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782421670684",
-        "name": "Diney Borges",
-        "cardName": "Diney",
-        "nationality": "Cape Verde",
-        "flag": "🇨🇻",
-        "league": "UAE Pro League",
-        "club": "",
-        "position": "CB",
-        "altPositions": [
-            "LB"
-        ],
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782434698808",
-        "name": "Carlos Marchena",
-        "cardName": "Marchena",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "",
-        "club": "",
-        "position": "CB",
-        "altPositions": [
-            "CDM"
-        ],
-        "rating": 82,
-        "photo": "",
-        "cardTheme": "mm"
-    },
-    {
-        "id": "player-1782434893372",
-        "name": "Arijon Ibrahimović",
-        "cardName": "Ibrahimović",
-        "nationality": "Germany",
-        "flag": "🇩🇪",
-        "league": "Bundesliga",
-        "club": "Heidenheim",
-        "position": "ST",
-        "altPositions": [
-            "CAM"
-        ],
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782501086762",
-        "name": "Fredrik Aursnes",
-        "cardName": "Aursnes",
-        "nationality": "Norway",
-        "flag": "🇳🇴",
-        "league": "Liga Portugal",
-        "club": "Benfica",
-        "position": "CDM",
-        "altPositions": [
-            "CAM",
-            "CM",
-            "LM",
-            "RM",
-            "RB",
-            "RWB"
-        ],
-        "rating": 77,
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Fredrik_Aursnes_Morocco_v_Norway_7_June_2026-109.jpg/250px-Fredrik_Aursnes_Morocco_v_Norway_7_June_2026-109.jpg",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782502388372",
-        "name": "Takefusa Kubo",
-        "cardName": "Kubo",
-        "nationality": "Japan",
-        "flag": "🇯🇵",
-        "league": "La Liga",
-        "club": "Real Sociedad",
-        "position": "RW",
-        "altPositions": [
-            "CAM",
-            "RM"
-        ],
-        "rating": 83,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782503202552",
-        "name": "Andreas Schjelderup",
-        "cardName": "Schjelderup",
-        "nationality": "Norway",
-        "flag": "🇳🇴",
-        "league": "Liga Portugal",
-        "club": "Benfica",
-        "position": "LW",
-        "altPositions": [
-            "CF",
-            "CAM",
-            "LM"
-        ],
-        "rating": 77,
-        "photo": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1e81/live/2144a9a0-c557-11f0-a1c2-758f53fd6195.jpg",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782506986585",
-        "name": "Alejo Véliz",
-        "cardName": "Véliz",
-        "nationality": "Argentina",
-        "flag": "🇦🇷",
-        "league": "Brasileirao Serie A",
-        "club": "Bahia",
-        "position": "ST",
-        "altPositions": [
-            "CF"
-        ],
-        "rating": 73,
-        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTugM-sDp-rnVSMxLuWAjl-qHHvw0J_uqfhSXDJSQbAozp6R5T2AXNRThg&s=10",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782527043074",
-        "name": "Darwin Núñez",
-        "cardName": "Darwin",
-        "nationality": "Uruguay",
-        "flag": "🇺🇾",
-        "league": "Saudi Pro League",
-        "club": "Al Hilal",
-        "position": "ST",
-        "altPositions": [
-            "CF"
-        ],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782527144380",
-        "name": "Santiago Bueno",
-        "cardName": "Bueno",
-        "nationality": "Uruguay",
-        "flag": "🇺🇾",
-        "league": "EFL Championship",
-        "club": "Wolves",
-        "position": "CB",
-        "altPositions": [
-            "LB"
-        ],
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782527677208",
-        "name": "Cherif Ndiaye",
-        "cardName": "C. Ndiaye",
-        "nationality": "Senegal",
-        "flag": "🇸🇳",
-        "league": "Süper Lig",
-        "club": "Samsunspor",
-        "position": "RW",
-        "altPositions": [
-            "RM"
-        ],
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "player-1782527889358",
-        "name": "Moussa Dembélé",
-        "cardName": "M. Dembélé",
-        "nationality": "France",
-        "flag": "🇫🇷",
-        "league": "Saudi Pro League",
-        "club": "Al Ettifaq",
-        "position": "ST",
-        "altPositions": [
-            "CF"
-        ],
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
         "id": "ochoa-wc26",
         "name": "Guillermo Ochoa",
         "cardName": "Ochoa",
@@ -64339,12 +63807,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Mexico",
         "position": "CDM",
-        "rating": 82,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CB"
-        ]
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "montes-wc26",
@@ -64384,12 +63852,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Mexico",
         "position": "RB",
-        "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "romo-wc26",
@@ -64400,13 +63868,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Mexico",
         "position": "CDM",
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM",
             "CB"
-        ]
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "pineda-wc26",
@@ -64417,13 +63885,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Mexico",
         "position": "CAM",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "CM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "gimenez-wc26",
@@ -64450,13 +63918,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Mexico",
         "position": "RW",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CAM",
             "LW"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "vega-wc26",
@@ -64500,13 +63968,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "South Africa",
         "position": "LB",
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "LW"
-        ]
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "mokoena-wc26",
@@ -64517,12 +63985,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "South Africa",
         "position": "CM",
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "zwane-wc26",
@@ -64533,13 +64001,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "South Africa",
         "position": "CAM",
-        "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LW",
             "RW"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "appollis-wc26",
@@ -64962,13 +64430,13 @@ const DEFAULT_PLAYERS = [
         "league": "",
         "club": "",
         "position": "CAM",
-        "rating": 89,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/npga531590234026.png",
-        "cardTheme": "mm",
         "altPositions": [
             "RM",
             "RW"
-        ]
+        ],
+        "rating": 89,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/npga531590234026.png",
+        "cardTheme": "mm"
     },
     {
         "id": "hitzlsperger-mm",
@@ -64979,13 +64447,13 @@ const DEFAULT_PLAYERS = [
         "league": "",
         "club": "",
         "position": "CM",
-        "rating": 76,
-        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nhglmp1611000797.jpg",
-        "cardTheme": "mm",
         "altPositions": [
             "LM",
             "CDM"
-        ]
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nhglmp1611000797.jpg",
+        "cardTheme": "mm"
     },
     {
         "id": "klavan-mm",
@@ -65039,12 +64507,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Saudi Arabia",
         "position": "RB",
-        "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "aldawsari-wc26",
@@ -65055,13 +64523,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Saudi Arabia",
         "position": "LW",
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM",
             "CAM"
-        ]
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "ryan-wc26",
@@ -65111,12 +64579,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CB",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "circati-wc26",
@@ -65140,12 +64608,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "RB",
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RWB"
-        ]
+        ],
+        "rating": 69,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bos-wc26",
@@ -65156,12 +64624,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "LB",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "geria-wc26",
@@ -65172,12 +64640,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CB",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "trewin-wc26",
@@ -65201,12 +64669,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "LB",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LWB"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "souttar-wc26",
@@ -65256,12 +64724,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CM",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CAM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "hrustic-wc26",
@@ -65272,12 +64740,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CAM",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "oneill-wc26",
@@ -65288,12 +64756,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "devlin-wc26",
@@ -65304,12 +64772,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CDM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "irvine-wc26",
@@ -65320,12 +64788,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CM",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CDM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "okon-wc26",
@@ -65349,13 +64817,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "LM",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RM",
             "ST"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "toure-wc26",
@@ -65379,12 +64847,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "LW",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "irankunda-wc26",
@@ -65395,12 +64863,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "RW",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RM"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "volpato-wc26",
@@ -65411,12 +64879,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Australia",
         "position": "CAM",
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RW"
-        ]
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "velupillay-wc26",
@@ -65456,12 +64924,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Switzerland",
         "position": "CDM",
-        "rating": 81,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "gxhaka-wc26-wc",
@@ -65501,12 +64969,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "New Zealand",
         "position": "CB",
-        "rating": 70,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "RB"
-        ]
+        ],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "cacace-wc26",
@@ -65517,13 +64985,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "New Zealand",
         "position": "LB",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "LWB",
             "LM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "bell-wc26",
@@ -65534,12 +65002,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "New Zealand",
         "position": "CDM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "garbett-wc26",
@@ -65550,13 +65018,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "New Zealand",
         "position": "CAM",
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM",
             "RW"
-        ]
+        ],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "stamenic-wc26",
@@ -65567,12 +65035,12 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "New Zealand",
         "position": "CDM",
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26",
         "altPositions": [
             "CM"
-        ]
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "worldcup26"
     },
     {
         "id": "just-wc26",
@@ -65873,7 +65341,8 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Czechia",
         "position": "CB",
-        "rating": 76,
+        "altPositions": [],
+        "rating": 78,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -66321,7 +65790,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 82,
-        "photo": "",
+        "photo": "https://media.worldsoccertalk.com/wp-content/uploads/sites/6/2026/06/21173041/Ronald-Araujo-of-Uruguay-740x416.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -66387,6 +65856,538 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "worldcup26"
     },
     {
+        "id": "player-1782324384127",
+        "name": "Marco Asensio",
+        "cardName": "Asensio",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Süper Lig",
+        "club": "Fenerbahçe",
+        "position": "RW",
+        "altPositions": [
+            "LW",
+            "CAM",
+            "RM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782324595689",
+        "name": "Kerem Aktürkoğlu",
+        "cardName": "Akturkoglu",
+        "nationality": "Türkiye",
+        "flag": "🇹🇷",
+        "league": "Süper Lig",
+        "club": "Fenerbahçe",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "RW"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782324918673",
+        "name": "Ayase Ueda",
+        "cardName": "Ueda",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "Eredivisie",
+        "club": "Feyenoord",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "gonzalojara-mm",
+        "name": "Gonzalo Jara",
+        "cardName": "Jara",
+        "nationality": "Chile",
+        "flag": "🇨🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "RB",
+            "LB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "viktorfischer-mm",
+        "name": "Viktor Fischer",
+        "cardName": "Fischer",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LW",
+        "altPositions": [
+            "LM",
+            "ST"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "freddyadu-mm",
+        "name": "Freddy Adu",
+        "cardName": "Adu",
+        "nationality": "United States",
+        "flag": "🇺🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "altPositions": [
+            "LW",
+            "ST"
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "zeroberto-mm",
+        "name": "Zé Roberto",
+        "cardName": "Zé Roberto",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "CM",
+            "LB"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "zambrotta-mm",
+        "name": "Gianluca Zambrotta",
+        "cardName": "Zambrotta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "LB",
+            "RWB"
+        ],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "sylvinho-mm",
+        "name": "Sylvinho",
+        "cardName": "Sylvinho",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LWB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "altintop-mm",
+        "name": "Hamit Altıntop",
+        "cardName": "Altıntop",
+        "nationality": "Turkey",
+        "flag": "🇹🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "CM",
+            "RB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "marcelljansen-mm",
+        "name": "Marcell Jansen",
+        "cardName": "Jansen",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LM",
+            "LWB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "teemutainio-mm",
+        "name": "Teemu Tainio",
+        "cardName": "Tainio",
+        "nationality": "Finland",
+        "flag": "🇫🇮",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM",
+            "RB"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "michaeldawson-mm",
+        "name": "Michael Dawson",
+        "cardName": "Dawson",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "taulantxhaka-mm",
+        "name": "Taulant Xhaka",
+        "cardName": "T. Xhaka",
+        "nationality": "Albania",
+        "flag": "🇦🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM",
+            "RB"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782419194341",
+        "name": "Inaki Williams",
+        "cardName": "I. Williams",
+        "nationality": "Ghana",
+        "flag": "🇬🇭",
+        "league": "La Liga",
+        "club": "Athletic Club",
+        "position": "ST",
+        "altPositions": [
+            "RW"
+        ],
+        "rating": 78,
+        "photo": "https://laai.blog/wp-content/uploads/2026/06/Inaki-Williams-la-ai.jpg",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782419252866",
+        "name": "Nico Williams",
+        "cardName": "Nico",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "La Liga",
+        "club": "Athletic Club",
+        "position": "LW",
+        "altPositions": [
+            "RW",
+            "LM"
+        ],
+        "rating": 80,
+        "photo": "https://s.yimg.com/ny/api/res/1.2/x8.bWXSd_LYT1BkvPay_9A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyODtjZj13ZWJw/https://media.zenfs.com/en/the_football_faithful_articles_458/ca629b0bf4e6243fdbf2ffe61d8bfd77",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782419824095",
+        "name": "Jordan Ayew",
+        "cardName": "J. Ayew",
+        "nationality": "Ghana",
+        "flag": "🇬🇭",
+        "league": "EFL League One",
+        "club": "Leicester City",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782419998345",
+        "name": "Víctor Muñoz",
+        "cardName": "V. Muñoz",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Premier League",
+        "club": "Liverpool",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782421121145",
+        "name": "Unai Simón",
+        "cardName": "Unai Simón",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "La Liga",
+        "club": "Athletic Club",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "https://i.guim.co.uk/img/media/a9e8fbd74ce79c268692aceba9004c0311fe0eaa/695_0_6640_5311/master/6640.jpg?width=1200&quality=85&auto=format&fit=max&s=a3314ccc6b29fa453ac1440c4e4cfe74",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782421456243",
+        "name": "Deniz Undav",
+        "cardName": "Undav",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "Stuttgart",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782421513242",
+        "name": "Tahith Chong",
+        "cardName": "Chong",
+        "nationality": "Curaçao",
+        "flag": "🇨🇼",
+        "league": "EFL Championship",
+        "club": "Sheffield United",
+        "position": "RW",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 76,
+        "photo": "https://assets.goal.com/images/v3/getty-2169504714/crop/MM5DENBRGY5DCMZVHE5G433XMU5DAORTGQ2Q====/GettyImages-2169504714.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782421616939",
+        "name": "Tarik Muharemović",
+        "cardName": "Muharemovic",
+        "nationality": "Bosnia",
+        "flag": "🇧🇦",
+        "league": "Serie B",
+        "club": "Sassuolo",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782421670684",
+        "name": "Diney Borges",
+        "cardName": "Diney",
+        "nationality": "Cape Verde",
+        "flag": "🇨🇻",
+        "league": "UAE Pro League",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782434698808",
+        "name": "Carlos Marchena",
+        "cardName": "Marchena",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782434893372",
+        "name": "Arijon Ibrahimović",
+        "cardName": "Ibrahimović",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Bundesliga",
+        "club": "Heidenheim",
+        "position": "ST",
+        "altPositions": [
+            "CAM"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782501086762",
+        "name": "Fredrik Aursnes",
+        "cardName": "Aursnes",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "Liga Portugal",
+        "club": "Benfica",
+        "position": "CDM",
+        "altPositions": [
+            "CAM",
+            "CM",
+            "LM",
+            "RM",
+            "RB",
+            "RWB"
+        ],
+        "rating": 77,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Fredrik_Aursnes_Morocco_v_Norway_7_June_2026-109.jpg/250px-Fredrik_Aursnes_Morocco_v_Norway_7_June_2026-109.jpg",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782502388372",
+        "name": "Takefusa Kubo",
+        "cardName": "Kubo",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "La Liga",
+        "club": "Real Sociedad",
+        "position": "RW",
+        "altPositions": [
+            "CAM",
+            "RM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782503202552",
+        "name": "Andreas Schjelderup",
+        "cardName": "Schjelderup",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "Liga Portugal",
+        "club": "Benfica",
+        "position": "LW",
+        "altPositions": [
+            "CF",
+            "CAM",
+            "LM"
+        ],
+        "rating": 77,
+        "photo": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1e81/live/2144a9a0-c557-11f0-a1c2-758f53fd6195.jpg",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782506986585",
+        "name": "Alejo Véliz",
+        "cardName": "Véliz",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Brasileirao Serie A",
+        "club": "Bahia",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 73,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTugM-sDp-rnVSMxLuWAjl-qHHvw0J_uqfhSXDJSQbAozp6R5T2AXNRThg&s=10",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782527043074",
+        "name": "Darwin Núñez",
+        "cardName": "Darwin",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "Saudi Pro League",
+        "club": "Al Hilal",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782527677208",
+        "name": "Cherif Ndiaye",
+        "cardName": "C. Ndiaye",
+        "nationality": "Senegal",
+        "flag": "🇸🇳",
+        "league": "Süper Lig",
+        "club": "Samsunspor",
+        "position": "RW",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 72,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782527889358",
+        "name": "Moussa Dembélé",
+        "cardName": "M. Dembélé",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Saudi Pro League",
+        "club": "Al Ettifaq",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
         "id": "player-1782595251248",
         "name": "Gideon Mensah",
         "cardName": "G. Mensah",
@@ -66415,24 +66416,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "standard"
     },
     {
-        "id": "player-1782595450716",
-        "name": "Brandon Thomas-Asante",
-        "cardName": "Thomas-Asante",
-        "nationality": "Ghana",
-        "flag": "🇬🇭",
-        "league": "Premier League",
-        "club": "Coventry",
-        "position": "LW",
-        "altPositions": [
-            "CF",
-            "RW",
-            "CAM"
-        ],
-        "rating": 68,
-        "photo": "",
-        "cardTheme": "standard"
-    },
-    {
         "id": "player-1782595480181",
         "name": "Elisha Owusu",
         "cardName": "E. Owusu",
@@ -66445,6 +66428,2312 @@ const DEFAULT_PLAYERS = [
         "rating": 71,
         "photo": "",
         "cardTheme": "standard"
+    },
+    {
+        "id": "valderrama-mm",
+        "name": "Carlos Valderrama",
+        "cardName": "Valderrama",
+        "nationality": "Colombia",
+        "flag": "🇨🇴",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 87,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDITFjKlvN9lTo9AU2y6YY0FhgXDQnCpxPajeCPDKpPrPnhxQkKHTUw0S8YXOkOWOrH3YCnBG8e2NkKlJu2kFM29RbzEosg0qWvrYwPg&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "aquilani-mm",
+        "name": "Alberto Aquilani",
+        "cardName": "Aquilani",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "CDM"
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/836911.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "squillaci-mm",
+        "name": "Sébastien Squillaci",
+        "cardName": "Squillaci",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rrwwwp1425221665.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "sagna-mm",
+        "name": "Bacary Sagna",
+        "cardName": "Sagna",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB",
+            "CB"
+        ],
+        "rating": 83,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8430030.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "rodwell-mm",
+        "name": "Jack Rodwell",
+        "cardName": "Rodwell",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CB",
+            "CM"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/40dbnc1716117960.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "almeida-mm",
+        "name": "Hugo Almeida",
+        "cardName": "Almeida",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/6/61/KUB-CSKA_(4).jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "forlan-mm",
+        "name": "Diego Forlán",
+        "cardName": "Forlán",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 86,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/0girmu1578399934.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "muntari-mm",
+        "name": "Sulley Muntari",
+        "cardName": "Muntari",
+        "nationality": "Ghana",
+        "flag": "🇬🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM",
+            "LM"
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/x5mbga1512208706.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gyan-mm",
+        "name": "Asamoah Gyan",
+        "cardName": "Gyan",
+        "nationality": "Ghana",
+        "flag": "🇬🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c0k2qk1715782155.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "fucile-mm",
+        "name": "Jorge Fucile",
+        "cardName": "Fucile",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "",
+        "club": "",
+        "position": "RB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 80,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/U04_Jorge_Fucile_7560.jpg/500px-U04_Jorge_Fucile_7560.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "eboue-mm",
+        "name": "Emmanuel Eboué",
+        "cardName": "Eboué",
+        "nationality": "Côte d'Ivoire",
+        "flag": "🇨🇮",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB",
+            "RM"
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/i19rxq1540750581.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "diaby-mm",
+        "name": "Abou Diaby",
+        "cardName": "Diaby",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM",
+            "CAM"
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/8428484.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782598799866",
+        "name": "Daniel Passarella",
+        "cardName": "Passarella",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "https://s.hs-data.com/gfx/person/l/45885.jpg?fallback=male",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782599067077",
+        "name": "Milan Baroš",
+        "cardName": "Baroš",
+        "nationality": "Czechia",
+        "flag": "🇨🇿",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw0O3eNr59m6l_zxcaFkB3FQWzBP6f3rKBxctAm4822XTOnvhq8j0RcZPrUjxbXDIYcv09kKCCOa7jdBvz026IQruAsEc0a7QTusLInsY&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782599609160",
+        "name": "Franck Ribéry",
+        "cardName": "Ribéry",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "LM",
+        "altPositions": [
+            "LW",
+            "CAM"
+        ],
+        "rating": 90,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMaD6yO4X62uF60oTgZYqNlWKbpWuG6GmNSvNlpznRDdrFk2wtmOdIlejE60-n3VrJu7Uk7QudWRyh5EZ8rPE4Up5wYF8b2tF-oGuMsw&s=10",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "player-1782599642304",
+        "name": "Arjen Robben",
+        "cardName": "Robben",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "LW",
+            "RW"
+        ],
+        "rating": 91,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Robben_Real_Madrid.jpg/250px-Robben_Real_Madrid.jpg",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "flamini-mm",
+        "name": "Mathieu Flamini",
+        "cardName": "Flamini",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM",
+            "LB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "strachan-mm",
+        "name": "Gordon Strachan",
+        "cardName": "Strachan",
+        "nationality": "Scotland",
+        "flag": "🏴‍󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "RW",
+            "CAM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gray-mm",
+        "name": "Frank Gray",
+        "cardName": "Gray",
+        "nationality": "Scotland",
+        "flag": "🏴‍󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LWB",
+            "LM"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "brazil-mm",
+        "name": "Alan Brazil",
+        "cardName": "Brazil",
+        "nationality": "Scotland",
+        "flag": "🏴‍󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "robson-mm",
+        "name": "Bryan Robson",
+        "cardName": "Robson",
+        "nationality": "England",
+        "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "CDM"
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "francis-mm",
+        "name": "Trevor Francis",
+        "cardName": "Francis",
+        "nationality": "England",
+        "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "giresse-mm",
+        "name": "Alain Giresse",
+        "cardName": "Giresse",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "blokhin-mm",
+        "name": "Oleg Blokhin",
+        "cardName": "Blokhin",
+        "nationality": "Ukraine",
+        "flag": "🇺🇦",
+        "league": "",
+        "club": "",
+        "position": "LW",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnlCcOrlkur1Oy9wdpFgJu86l9WWgyfFbRLtamqQvSpg-JkNuztwwTBJs-&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gavrilov-mm",
+        "name": "Yuri Gavrilov",
+        "cardName": "Gavrilov",
+        "nationality": "Russia",
+        "flag": "🇷🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "charisteas-mm",
+        "name": "Angelos Charisteas",
+        "cardName": "Charisteas",
+        "nationality": "Greece",
+        "flag": "🇬🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "karagounis-mm",
+        "name": "Georgios Karagounis",
+        "cardName": "Karagounis",
+        "nationality": "Greece",
+        "flag": "🇬🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "CDM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "koller-mm",
+        "name": "Jan Koller",
+        "cardName": "Koller",
+        "nationality": "Czechia",
+        "flag": "🇨🇿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "poulsen-mm",
+        "name": "Christian Poulsen",
+        "cardName": "C. Poulsen",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782601371220",
+        "name": "Yussuf Poulsen",
+        "cardName": "Y. Poulsen",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "Bundesliga",
+        "club": "Hamburg",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782601477560",
+        "name": "Vangelis Pavlidis",
+        "cardName": "Pavlidis",
+        "nationality": "Greece",
+        "flag": "🇬🇷",
+        "league": "Liga Portugal",
+        "club": "Benfica",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782601596011",
+        "name": "Thomas Partey",
+        "cardName": "Partey",
+        "nationality": "Ghana",
+        "flag": "🇬🇭",
+        "league": "La Liga",
+        "club": "Villarreal",
+        "position": "CDM",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782606479778",
+        "name": "Christian Karembeu",
+        "cardName": "Karembeu",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "CM",
+            "RB"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtf54dp2PWZAweMsb-zDVXFC8okggqDlOt8wbmd-UN6s9HiiVXXZHyHDoMNCxIV7e4LDZMWFajM5jhf3ATDjeUCnQwrVtChhxwVhb27jc&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782608129580",
+        "name": "Florentino Luis",
+        "cardName": "Florentino",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "EFL Championship",
+        "club": "Burnley",
+        "position": "CDM",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782608221101",
+        "name": "Ladislav Krejčí",
+        "cardName": "Krejčí",
+        "nationality": "Czechia",
+        "flag": "🇨🇿",
+        "league": "EFL Championship",
+        "club": "Wolves",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782608320839",
+        "name": "Stuart Armstrong",
+        "cardName": "S. Armstrong",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "Scottish Premiership",
+        "club": "Aberdeen",
+        "position": "CM",
+        "altPositions": [],
+        "rating": 77,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/2/23/Stuart_Armstrong_2019.jpg",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782608428777",
+        "name": "Iván Azon",
+        "cardName": "Azon",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Premier League",
+        "club": "Ipswich",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782608478126",
+        "name": "Leif Davis",
+        "cardName": "L. Davis",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Ipswich",
+        "position": "LB",
+        "altPositions": [],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782609318750",
+        "name": "Jérémy Mathieu",
+        "cardName": "Mathieu",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782609665364",
+        "name": "Goran Pandev",
+        "cardName": "Pandev",
+        "nationality": "North Macedonia",
+        "flag": "🇲🇰",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "RW"
+        ],
+        "rating": 81,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa7COlJPiZCPKMUtr9Nnrvp-5GGEX2MiBCkW3KszUfk8VU6BK6DRyO5kiEvQl1SLHcpoxuu4jSete1zCsdEuy-7ZRhfufcG0iphaxUCw&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "inler-mm",
+        "name": "Gökhan Inler",
+        "cardName": "Inler",
+        "nationality": "Switzerland",
+        "flag": "🇨🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "senderos-mm",
+        "name": "Philippe Senderos",
+        "cardName": "Senderos",
+        "nationality": "Switzerland",
+        "flag": "🇨🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "behrami-mm",
+        "name": "Valon Behrami",
+        "cardName": "Behrami",
+        "nationality": "Switzerland",
+        "flag": "🇨🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM",
+            "RM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "simao-mm",
+        "name": "Simão Sabrosa",
+        "cardName": "Simão",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "LW",
+            "RM",
+            "RW"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "ricardo-mm",
+        "name": "Ricardo",
+        "cardName": "Ricardo",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "petric-mm",
+        "name": "Mladen Petrić",
+        "cardName": "Petrić",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "CAM"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "corluka-mm",
+        "name": "Vedran Ćorluka",
+        "cardName": "Ćorluka",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "srna-mm",
+        "name": "Darijo Srna",
+        "cardName": "Srna",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RM",
+            "RWB"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pletikosa-mm",
+        "name": "Stipe Pletikosa",
+        "cardName": "Pletikosa",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "boruc-mm",
+        "name": "Artur Boruc",
+        "cardName": "Boruc",
+        "nationality": "Poland",
+        "flag": "🇵🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mutu-mm",
+        "name": "Adrian Mutu",
+        "cardName": "Mutu",
+        "nationality": "Romania",
+        "flag": "🇷🇴",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "LW"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "toulalan-mm",
+        "name": "Jérémy Toulalan",
+        "cardName": "Toulalan",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM",
+            "CB"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gomis-mm",
+        "name": "Bafétimbi Gomis",
+        "cardName": "Gomis",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "govou-mm",
+        "name": "Sidney Govou",
+        "cardName": "Govou",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RW",
+        "altPositions": [
+            "RM",
+            "ST"
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dinatale-mm",
+        "name": "Antonio Di Natale",
+        "cardName": "Di Natale",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "LW"
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "cassano-mm",
+        "name": "Antonio Cassano",
+        "cardName": "Cassano",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CF",
+        "altPositions": [
+            "ST",
+            "CAM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "perrotta-mm",
+        "name": "Simone Perrotta",
+        "cardName": "Perrotta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "LM"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "borriello-mm",
+        "name": "Marco Borriello",
+        "cardName": "Borriello",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "guiza-mm",
+        "name": "Daniel Güiza",
+        "cardName": "Güiza",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "anyukov-mm",
+        "name": "Aleksandr Anyukov",
+        "cardName": "Anyukov",
+        "nationality": "Russia",
+        "flag": "🇷🇺",
+        "league": "",
+        "club": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 82,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/4/46/Zenit-Slavia_Pr_%288%29.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "aberezutski-mm",
+        "name": "Aleksei Berezutski",
+        "cardName": "A. Berezutski",
+        "nationality": "Russia",
+        "flag": "🇷🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "vberezutski-mm",
+        "name": "Vasili Berezutski",
+        "cardName": "V. Berezutski",
+        "nationality": "Russia",
+        "flag": "🇷🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mellberg-mm",
+        "name": "Olof Mellberg",
+        "cardName": "Mellberg",
+        "nationality": "Sweden",
+        "flag": "🇸🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "ljungberg-mm",
+        "name": "Freddie Ljungberg",
+        "cardName": "Ljungberg",
+        "nationality": "Sweden",
+        "flag": "🇸🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "RM",
+            "LW",
+            "RW"
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "samaras-mm",
+        "name": "Georgios Samaras",
+        "cardName": "Samaras",
+        "nationality": "Greece",
+        "flag": "🇬🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "LW",
+            "LM"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "slarsson-mm",
+        "name": "Sebastian Larsson",
+        "cardName": "Larsson",
+        "nationality": "Sweden",
+        "flag": "🇸🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "CM",
+            "RB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "blaszczykowski-82-mm",
+        "name": "Jakub Błaszczykowski",
+        "cardName": "Błaszczykowski",
+        "nationality": "Poland",
+        "flag": "🇵🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "RW"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "holden-mm",
+        "name": "Stuart Holden",
+        "cardName": "Holden",
+        "nationality": "United States",
+        "flag": "🇺🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "RM"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "ngog-mm",
+        "name": "David N'Gog",
+        "cardName": "N'Gog",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "debuchy-mm",
+        "name": "Mathieu Debuchy",
+        "cardName": "Debuchy",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mexes-mm",
+        "name": "Philippe Mexès",
+        "cardName": "Mexès",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "schwarzer-mm",
+        "name": "Mark Schwarzer",
+        "cardName": "Schwarzer",
+        "nationality": "Australia",
+        "flag": "🇦🇺",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "saviola-mm",
+        "name": "Javier Saviola",
+        "cardName": "Saviola",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "beto-everton-s26",
+        "name": "Beto",
+        "cardName": "Beto",
+        "nationality": "Guinea-Bissau",
+        "flag": "🇬🇼",
+        "league": "Premier League",
+        "club": "Everton",
+        "clubBadge": "🔵",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "keane-everton-s26",
+        "name": "Michael Keane",
+        "cardName": "Keane",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Everton",
+        "clubBadge": "🔵",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "obrien-everton-s26",
+        "name": "Jake O'Brien",
+        "cardName": "O'Brien",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "Premier League",
+        "club": "Everton",
+        "clubBadge": "🔵",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "aznou-bayern-s26",
+        "name": "Adam Aznou",
+        "cardName": "Aznou",
+        "nationality": "Morocco",
+        "flag": "🇲🇦",
+        "league": "Premier League",
+        "club": "Everton",
+        "position": "LB",
+        "altPositions": [
+            "LM",
+            "RB",
+            "LWB"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "iroegbunam-everton-s26",
+        "name": "Tim Iroegbunam",
+        "cardName": "Iroegbunam",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Everton",
+        "clubBadge": "🔵",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "coleman-everton-s26",
+        "name": "Seamus Coleman",
+        "cardName": "Coleman",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "Premier League",
+        "club": "Everton",
+        "clubBadge": "🔵",
+        "position": "LB",
+        "altPositions": [
+            "RB",
+            "RWB"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "george-chelsea-s26",
+        "name": "Tyrique George",
+        "cardName": "George",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Everton",
+        "position": "LW",
+        "altPositions": [
+            "RW"
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "dibling-southampton-s26",
+        "name": "Tyler Dibling",
+        "cardName": "Dibling",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Everton",
+        "position": "RW",
+        "altPositions": [
+            "CAM",
+            "RM"
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "rohl-freiburg-s26",
+        "name": "Merlin Röhl",
+        "cardName": "Röhl",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Premier League",
+        "club": "Everton",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "pastore-mm",
+        "name": "Javier Pastore",
+        "cardName": "Pastore",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "given-mm",
+        "name": "Shay Given",
+        "cardName": "Given",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "shorey-mm",
+        "name": "Nicky Shorey",
+        "cardName": "Shorey",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "LB",
+        "altPositions": [
+            "LWB"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kehl-mm",
+        "name": "Sebastian Kehl",
+        "cardName": "Kehl",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CB",
+            "CM"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "parker-mm",
+        "name": "Scott Parker",
+        "cardName": "Parker",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "adler-mm",
+        "name": "René Adler",
+        "cardName": "Adler",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "tymoshchuk-mm",
+        "name": "Anatoliy Tymoshchuk",
+        "cardName": "Tymoshchuk",
+        "nationality": "Ukraine",
+        "flag": "🇺🇦",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CB"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "diegoribas-mm",
+        "name": "Diego",
+        "cardName": "Diego",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "barry-mm",
+        "name": "Gareth Barry",
+        "cardName": "Barry",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM",
+            "LB"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "amauri-mm",
+        "name": "Amauri",
+        "cardName": "Amauri",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "sessegnon-mm",
+        "name": "Stéphane Sessègnon",
+        "cardName": "Sessègnon",
+        "nationality": "Benin",
+        "flag": "🇧🇯",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "RM",
+            "LM",
+            "ST"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gourcuff-mm",
+        "name": "Yoann Gourcuff",
+        "cardName": "Gourcuff",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gjohnson-mm",
+        "name": "Glen Johnson",
+        "cardName": "G. Johnson",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "heskey-mm",
+        "name": "Emile Heskey",
+        "cardName": "Heskey",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782614880281",
+        "name": "Rafik Belghali",
+        "cardName": "Belghali",
+        "nationality": "Algeria",
+        "flag": "🇩🇿",
+        "league": "Premier League",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "CAM",
+            "LM",
+            "RB",
+            "CB",
+            "RWB"
+        ],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782614996619",
+        "name": "Jaouen Hadjam",
+        "cardName": "Hadjam",
+        "nationality": "Algeria",
+        "flag": "🇩🇿",
+        "league": "Premier League",
+        "club": "",
+        "position": "LB",
+        "altPositions": [],
+        "rating": 71,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782615048332",
+        "name": "Aïssa Mandi",
+        "cardName": "Mandi",
+        "nationality": "Algeria",
+        "flag": "🇩🇿",
+        "league": "Ligue 1",
+        "club": "Lille",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782615391704",
+        "name": "Mehdi Taremi",
+        "cardName": "Taremi",
+        "nationality": "Iran",
+        "flag": "🇮🇷",
+        "league": "Others (UEFA)",
+        "club": "Olympiakos",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "huth-mm",
+        "name": "Robert Huth",
+        "cardName": "Huth",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "fuchs-mm",
+        "name": "Christian Fuchs",
+        "cardName": "Fuchs",
+        "nationality": "Austria",
+        "flag": "🇦🇹",
+        "league": "",
+        "club": "",
+        "position": "LB",
+        "altPositions": [
+            "LWB",
+            "LM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "whelan-mm",
+        "name": "Glenn Whelan",
+        "cardName": "Whelan",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "farfan-mm",
+        "name": "Jefferson Farfán",
+        "cardName": "Farfán",
+        "nationality": "Peru",
+        "flag": "🇵🇪",
+        "league": "",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "RW",
+            "ST",
+            "CAM"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "avalencia-mm",
+        "name": "Antonio Valencia",
+        "cardName": "A. Valencia",
+        "nationality": "Ecuador",
+        "flag": "🇪🇨",
+        "league": "",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "RB",
+            "RWB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dfletcher-mm",
+        "name": "Darren Fletcher",
+        "cardName": "Fletcher",
+        "nationality": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "league": "",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "remy-mm",
+        "name": "Loïc Rémy",
+        "cardName": "Rémy",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [
+            "LW",
+            "RW"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dejong-mm",
+        "name": "Nigel de Jong",
+        "cardName": "de Jong",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "honda-mm",
+        "name": "Keisuke Honda",
+        "cardName": "Honda",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "RW",
+            "CF"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "reyes-mm",
+        "name": "José Antonio Reyes",
+        "cardName": "Reyes",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "LM",
+        "altPositions": [
+            "LW",
+            "RW",
+            "ST"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "joaquin-mm",
+        "name": "Joaquín",
+        "cardName": "Joaquín",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "RM",
+        "altPositions": [
+            "RW",
+            "LM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kompany-mm",
+        "name": "Vincent Kompany",
+        "cardName": "Kompany",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP_0TD3djcIoL_kOxDVuGSENDYy8OekVbe2LKgwnS557A7QUyrfSxbNKs&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "sahin-mm",
+        "name": "Nuri Şahin",
+        "cardName": "Şahin",
+        "nationality": "Turkey",
+        "flag": "🇹🇷",
+        "league": "",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pazzini-mm",
+        "name": "Giampaolo Pazzini",
+        "cardName": "Pazzini",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kiessling-mm",
+        "name": "Stefan Kießling",
+        "cardName": "Kießling",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kimshinwook-mm",
+        "name": "Kim Shin-wook",
+        "cardName": "Kim S.W.",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "akinfenwa-mm",
+        "name": "Adebayo Akinfenwa",
+        "cardName": "Akinfenwa",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 68,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "matuidi-mm",
+        "name": "Blaise Matuidi",
+        "cardName": "Matuidi",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM",
+            "LM"
+        ],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "zurutuza-mm",
+        "name": "David Zurutuza",
+        "cardName": "Zurutuza",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM"
+        ],
+        "rating": 79,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "badstuber-mm",
+        "name": "Holger Badstuber",
+        "cardName": "Badstuber",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gonalons-mm",
+        "name": "Maxime Gonalons",
+        "cardName": "Gonalons",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "juanfran-mm",
+        "name": "Juanfran",
+        "cardName": "Juanfran",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782616804763",
+        "name": "Dejan Lovren",
+        "cardName": "Lovren",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "Others (UEFA)",
+        "club": "PAOK",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3146yu1702910369.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782616903926",
+        "name": "Adam Lallana",
+        "cardName": "Lallana",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3ytcc21725548971.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782616929218",
+        "name": "Naby Keïta",
+        "cardName": "N. Keïta",
+        "nationality": "Guinea",
+        "flag": "🇬🇳",
+        "league": "Premier League",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM"
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/tet87v1761732166.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782642336841",
+        "name": "Cristian Chivu",
+        "cardName": "Chivu",
+        "nationality": "Romania",
+        "flag": "🇷🇴",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "garrincha-gc62",
+        "name": "Garrincha",
+        "cardName": "Garrincha",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "Global Champions",
+        "club": "Brazil 62",
+        "position": "RW",
+        "altPositions": [
+            "CAM"
+        ],
+        "rating": 93,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/MFdSantos-Garrincha.jpg",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "vava-gc62",
+        "name": "Vavá",
+        "cardName": "Vavá",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "Global Champions",
+        "club": "Brazil 62",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "pele-gc58",
+        "name": "Pelé",
+        "cardName": "Pelé",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "Global Champions",
+        "club": "Brazil 58",
+        "clubBadge": "⚽",
+        "position": "CF",
+        "altPositions": [
+            "ST",
+            "CAM"
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "didi-gc58",
+        "name": "Didi",
+        "cardName": "Didi",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "Global Champions",
+        "club": "Brazil 58",
+        "clubBadge": "⚽",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "CDM"
+        ],
+        "rating": 92,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "morlock-gc54",
+        "name": "Max Morlock",
+        "cardName": "Morlock",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 54",
+        "clubBadge": "⚽",
+        "position": "RW",
+        "altPositions": [
+            "CF",
+            "ST"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "ghiggia-gc50",
+        "name": "Alcides Ghiggia",
+        "cardName": "Ghiggia",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "Global Champions",
+        "club": "Uruguay 50",
+        "clubBadge": "⚽",
+        "position": "RW",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 91,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "maspoli-gc50",
+        "name": "Roque Máspoli",
+        "cardName": "Máspoli",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "Global Champions",
+        "club": "Uruguay 50",
+        "clubBadge": "⚽",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "colaussi-gc38",
+        "name": "Gino Colaussi",
+        "cardName": "Colaussi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 38",
+        "clubBadge": "⚽",
+        "position": "LW",
+        "altPositions": [
+            "LM"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "piola-gc38",
+        "name": "Silvio Piola",
+        "cardName": "Piola",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 38",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "meazza-gc34",
+        "name": "Giuseppe Meazza",
+        "cardName": "Meazza",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 34",
+        "position": "CF",
+        "altPositions": [
+            "ST",
+            "CAM"
+        ],
+        "rating": 92,
+        "photo": "https://static01.nyt.com/athletic/uploads/wp/2025/03/28125959/GettyImages-1231058939-scaled.jpg",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "ferrari-gc34",
+        "name": "Giovanni Ferrari",
+        "cardName": "Ferrari",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 34",
+        "clubBadge": "⚽",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 90,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "schiavio-gc34",
+        "name": "Angelo Schiavio",
+        "cardName": "Schiavio",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 34",
+        "clubBadge": "⚽",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 89,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "orsi-gc34",
+        "name": "Raimundo Orsi",
+        "cardName": "Orsi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Global Champions",
+        "club": "Italy 34",
+        "clubBadge": "⚽",
+        "position": "LW",
+        "altPositions": [
+            "LM"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "anselmo-gc30",
+        "name": "Peregrino Anselmo",
+        "cardName": "Anselmo",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "Global Champions",
+        "club": "Uruguay 30",
+        "clubBadge": "⚽",
+        "position": "CF",
+        "altPositions": [
+            "ST"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "gc"
+    },
+    {
+        "id": "meazza-icons",
+        "name": "Giuseppe Meazza",
+        "cardName": "Meazza",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "position": "CF",
+        "altPositions": [
+            "ST",
+            "CAM"
+        ],
+        "rating": 93,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/1/19/Giuseppe_Meazza_1935.jpg",
+        "cardTheme": "icons"
     }
 ];
 
