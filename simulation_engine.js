@@ -87,17 +87,17 @@
         "BEL": [
             { name: "Club Brugge", prob: 0.70, atk: 77, def: 76, mid: 75 },
             { name: "Genk", prob: 0.55, atk: 74, def: 73, mid: 72 },
-            { name: "Union Saint-Gilloise", prob: 0.50, atk: 75, def: 73, mid: 73 },
+            { name: "Union SG", prob: 0.50, atk: 75, def: 73, mid: 73 },
             { name: "Anderlecht", prob: 0.30, atk: 74, def: 72, mid: 72 }
         ],
         "TUR": [
             { name: "Galatasaray", prob: 0.70, atk: 78, def: 75, mid: 75 },
             { name: "Fenerbahçe", prob: 0.55, atk: 77, def: 74, mid: 74 },
-            { name: "Besiktas", prob: 0.20, atk: 73, def: 71, mid: 71 },
-            { name: "Istanbul Basaksehir", prob: 0.12, atk: 70, def: 69, mid: 68 }
+            { name: "Beşiktaş", prob: 0.20, atk: 73, def: 71, mid: 71 },
+            { name: "İstanbul Başakşehir", prob: 0.12, atk: 70, def: 69, mid: 68 }
         ],
         "AUT": [
-            { name: "Salzburg", prob: 0.80, atk: 76, def: 74, mid: 74 },
+            { name: "Red Bull Salzburg", prob: 0.80, atk: 76, def: 74, mid: 74 },
             { name: "Sturm Graz", prob: 0.40, atk: 71, def: 70, mid: 69 },
             { name: "LASK", prob: 0.20, atk: 69, def: 68, mid: 67 },
             { name: "Wolfsberger AC", prob: 0.10, atk: 66, def: 65, mid: 64 }
@@ -118,8 +118,8 @@
         "DEN": [
             { name: "FC Copenhagen", prob: 0.60, atk: 71, def: 70, mid: 69 },
             { name: "Midtjylland", prob: 0.40, atk: 70, def: 69, mid: 68 },
-            { name: "Brondby", prob: 0.18, atk: 67, def: 66, mid: 65 },
-            { name: "Nordsjaelland", prob: 0.12, atk: 66, def: 65, mid: 64 }
+            { name: "Brøndby", prob: 0.18, atk: 67, def: 66, mid: 65 },
+            { name: "Nordsjælland", prob: 0.12, atk: 66, def: 65, mid: 64 }
         ],
         "GRE": [
             { name: "Olympiakos", prob: 0.60, atk: 72, def: 71, mid: 70 },
@@ -141,7 +141,7 @@
         ],
         "POL": [
             { name: "Legia Warsaw", prob: 0.10, atk: 68, def: 67, mid: 66 },
-            { name: "Lech Poznań", prob: 0.10, atk: 67, def: 66, mid: 65 },
+            { name: "Lech Poznan", prob: 0.10, atk: 67, def: 66, mid: 65 },
             { name: "Wisla Krakow", prob: 0.01, atk: 62, def: 62, mid: 61 }
         ],
         "CYP": [
@@ -153,7 +153,7 @@
             { name: "BATE Borisov", prob: 0.05, atk: 63, def: 62, mid: 61 }
         ],
         "SWE": [
-            { name: "Malmö FF", prob: 0.25, atk: 67, def: 66, mid: 65 },
+            { name: "Malmo", prob: 0.25, atk: 67, def: 66, mid: 65 },
             { name: "AIK Solna", prob: 0.01, atk: 65, def: 65, mid: 64 },
             { name: "Elfsborg", prob: 0.01, atk: 65, def: 65, mid: 64 }
         ],
@@ -801,7 +801,7 @@
             { name: "Igor Julio", pos: "DF", rating: 25 },
             { name: "Webster", pos: "DF", rating: 5 },
         ],
-        "brondby": [
+        "brndby": [
             { name: "Vallys", pos: "FW", rating: 134 },
             { name: "Mortensen", pos: "FW", rating: 134 },
             { name: "Bundgaard", pos: "FW", rating: 134 },
@@ -1476,7 +1476,7 @@
             { name: "Maitland-Niles", pos: "DF", rating: 15 },
             { name: "Hateboer", pos: "DF", rating: 2 },
         ],
-        "malmoff": [
+        "malmo": [
             { name: "Botheim", pos: "FW", rating: 134 },
             { name: "D. García", pos: "FW", rating: 134 },
             { name: "Ekong", pos: "FW", rating: 134 },
@@ -1667,7 +1667,7 @@
             { name: "Bah", pos: "DF", rating: 5 },
             { name: "A. Mendy", pos: "DF", rating: 15 },
         ],
-        "nordsjaelland": [
+        "nordsjlland": [
             { name: "Solbakken", pos: "FW", rating: 134 },
             { name: "Lind", pos: "FW", rating: 134 },
             { name: "Adel", pos: "FW", rating: 134 },
@@ -2000,7 +2000,7 @@
             { name: "Ceïde", pos: "DF", rating: 5 },
             { name: "Volden", pos: "DF", rating: 5 },
         ],
-        "salzburg": [
+        "redbullsalzburg": [
             { name: "Konaté", pos: "FW", rating: 134 },
             { name: "Baidoo", pos: "FW", rating: 134 },
             { name: "Vertessen", pos: "FW", rating: 134 },
@@ -2223,7 +2223,7 @@
             { name: "Querfeld", pos: "DF", rating: 5 },
             { name: "Rothe", pos: "DF", rating: 5 },
         ],
-        "unionsaintgilloise": [
+        "unionsg": [
             { name: "Fuseini", pos: "FW", rating: 134 },
             { name: "Biondić", pos: "FW", rating: 134 },
             { name: "Smith", pos: "FW", rating: 134 },
