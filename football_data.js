@@ -775,6 +775,44 @@ const LEAGUES_DATA = {
             "Málaga"
         ],
         "badge": "🇪🇸"
+    },
+    "Liga MX": {
+        "clubs": [
+            "Atlante",
+            "Atlas",
+            "San Luis",
+            "Chivas",
+            "América",
+            "Cruz Azul",
+            "Monterrey",
+            "Pachuca",
+            "León",
+            "Necaxa",
+            "Puebla",
+            "Santos Laguna",
+            "Tijuana",
+            "Toluca",
+            "Juarez",
+            "Pumas UNAM",
+            "Querétaro",
+            "Tigres"
+        ],
+        "badge": "🇲🇽"
+    },
+    "Others (AFC)": {
+        "clubs": [
+            "JDT",
+            "Sepahan",
+            "Esteghlal",
+            "Kaya FC",
+            "Tampines Rovers",
+            "Lion City Sailors",
+            "Selangor",
+            "Istiklol",
+            "4.25 SC",
+            "Tractor"
+        ],
+        "badge": "🌏"
     }
 };
 
@@ -1181,231 +1219,6 @@ const COUNTRY_CODES = {
     "indonesia": "id"
 };
 
-const SOFIFA_IDS = {
-    "messi-10": 158023,
-    "ronaldo-7": 20801,
-    "haaland-9": 239085,
-    "kdb-17": 192985,
-    "messi-wc26": 158023,
-    "ronaldo-wc26": 20801,
-    "haaland-wc26": 239085,
-    "bellingham-5": 252371,
-    "mbappe-7": 231747,
-    "kane-9": 208012,
-    "salah-11": 209331,
-    "rodri-16": 231866,
-    "saka-7": 246669,
-    "griezmann-7": 194765,
-    "vini-7": 238794,
-    "odegaard-8": 222492,
-    "bernardo-20": 218667,
-    "dias-3": 239818,
-    "foden-47": 237692,
-    "stones-5": 211300,
-    "walker-2": 188377,
-    "ederson-31": 210257,
-    "ake-6": 203263,
-    "akanji-25": 229558,
-    "gvardiol-24": 251517,
-    "kovacic-8": 205452,
-    "gundogan-19": 186942,
-    "nunes-27": 253163,
-    "grealish-10": 206585,
-    "doku-11": 253755,
-    "bobb-52": 268393,
-    "savinho-26": 268434,
-    "lewis-82": 270964,
-    "ortega-18": 205245,
-    "mcatee-87": 257523,
-    "vicario-13": 240091,
-    "romero-17": 232488,
-    "vandeven-37": 136184,
-    "porro-23": 119828,
-    "udogie-38": 258162,
-    "dragusin-6": 256338,
-    "gray-14": 272314,
-    "bissouma-8": 235168,
-    "sarr-29": 260024,
-    "bentancur-30": 228618,
-    "maddison-10": 220697,
-    "kulusevski-21": 248243,
-    "bergvall-15": 276632,
-    "son-7": 200104,
-    "solanke-19": 224232,
-    "johnson-22": 251563,
-    "werner-16": 224411,
-    "richarlison-9": 231943,
-    "onana-24": 238314,
-    "deligt-4": 235243,
-    "martinez-6": 239301,
-    "maguire-5": 209658,
-    "yoro-15": 271573,
-    "shaw-23": 202652,
-    "dalot-20": 234574,
-    "mazraoui-3": 236403,
-    "casemiro-18": 200145,
-    "ugarte-25": 251676,
-    "mainoo-37": 272214,
-    "eriksen-14": 190352,
-    "mount-19": 233064,
-    "bruno-8": 212198,
-    "rashford-10": 231677,
-    "garnacho-17": 268438,
-    "amad-16": 254823,
-    "antony-21": 248674,
-    "hojlund-9": 259399,
-    "zirkzee-11": 246191,
-    "sanchez-1": 228789,
-    "colwill-6": 262859,
-    "fofana-29": 248695,
-    "disasi-2": 229942,
-    "badiashile-5": 246473,
-    "james-24": 211514,
-    "gusto-27": 258923,
-    "cucurella-3": 239231,
-    "chilwell-21": 216447,
-    "caicedo-25": 256079,
-    "lavia-45": 263620,
-    "enzo-8": 247090,
-    "dewsbury-22": 238036,
-    "palmer-20": 257534,
-    "nkunku-18": 232411,
-    "felix-14": 242444,
-    "madueke-11": 254796,
-    "neto-7": 238616,
-    "sancho-19": 233049,
-    "mudryk-10": 263590,
-    "jackson-15": 259197,
-    "stegen-1": 192448,
-    "kounde-23": 237681,
-    "araujo-4": 247477,
-    "christensen-15": 213331,
-    "cubarsi-2": 277762,
-    "inigo-5": 204525,
-    "balde-3": 263620,
-    "dejong-21": 226226,
-    "gavi-6": 264240,
-    "pedri-8": 251854,
-    "casado-17": 273605,
-    "olmo-20": 244260,
-    "fermin-16": 271501,
-    "yamal-19": 277643,
-    "raphinha-11": 233419,
-    "lewandowski-9": 188545,
-    "torres-7": 239862,
-    "fati-10": 251785,
-    "pauvictor-18": 260383,
-    "carvajal-2": 204963,
-    "militao-3": 240130,
-    "rudiger-22": 205452,
-    "alaba-4": 197445,
-    "tchouameni-14": 241637,
-    "mendy-23": 228618,
-    "frangarcia-20": 246182,
-    "vazquez-17": 208618,
-    "valverde-8": 239053,
-    "camavinga-6": 248243,
-    "modric-10": 177003,
-    "guler-15": 264309,
-    "brahim-21": 231443,
-    "vinicius-7": 238794,
-    "rodrygo-11": 243812,
-    "endrick-16": 268593,
-    "raya-1": 220977,
-    "saliba-2": 243715,
-    "gabriel-6": 236583,
-    "white-4": 234903,
-    "timber-12": 253072,
-    "rice-41": 234396,
-    "martinelli-11": 251566,
-    "havertz-29": 235790,
-    "trossard-19": 221634,
-    "jesus-9": 230666,
-    "sommer-1": 177353,
-    "bastoni-95": 237086,
-    "pavard-28": 226851,
-    "devrij-6": 215333,
-    "dimarco-32": 223121,
-    "dumfries-2": 224254,
-    "calhanoglu-20": 208574,
-    "barella-23": 224168,
-    "mkhitaryan-22": 189330,
-    "martinez-10": 231478,
-    "thuram-9": 230938,
-    "musiala-42": 256790,
-    "sane-10": 208333,
-    "kimmich-6": 212622,
-    "davies-19": 234396,
-    "kim-3": 231443,
-    "muller-25": 189352,
-    "kobel-1": 235073,
-    "schlotterbeck-4": 244588,
-    "anton-3": 226968,
-    "brandt-10": 212190,
-    "sabitzer-20": 201155,
-    "can-23": 207865,
-    "malen-21": 236820,
-    "adeyemi-27": 251852,
-    "guirassy-9": 216110,
-    "couto-2": 247394,
-    "martinez-23": 205600,
-    "watkins-11": 223058,
-    "mcginn-7": 216594,
-    "donnarumma-99": 230621,
-    "dembele-10": 231443,
-    "marquinhos-5": 207865,
-    "hakimi-2": 235212,
-    "vitinha-17": 251862,
-    "barcola-29": 264652,
-    "greenwood-10": 248244,
-    "rabiot-25": 199434,
-    "hojbjerg-23": 206058,
-    "guimaraes-39": 239862,
-    "isak-14": 232363,
-    "gordon-10": 245367,
-    "gakpo-11": 256630,
-    "vandijk-4": 203376,
-    "alisson-1": 216267,
-    "arnold-66": 231281,
-    "macallister-10": 239837,
-    "diaz-7": 239088,
-    "oblak-13": 200389,
-    "alvarez-19": 239840,
-    "depaul-5": 220569,
-    "gallagher-4": 243812,
-    "dejong-9": 189805,
-    "bakayoko-11": 265450,
-    "gimenez-9": 245152,
-    "gyokeres-9": 241651,
-    "dimaria-11": 183898,
-    "diogocosta-99": 234577,
-    "icardi-9": 201399,
-    "osimhen-45": 232293,
-    "dzeko-9": 180930,
-    "verbruggen-1": 259275,
-    "dunk-5": 201880,
-    "vanhecke-6": 252957,
-    "kadioglu-24": 234857,
-    "hinshelwood-13": 272828,
-    "baleba-17": 272823,
-    "wieffer-27": 251649,
-    "oriley-33": 248386,
-    "mitoma-22": 255319,
-    "minteh-11": 275306,
-    "joaopedro-9": 248332,
-    "rutter-10": 257121,
-    "welbeck-18": 185122,
-    "sels-1": 203895,
-    "murillo-40": 279313,
-    "milenkovic-31": 237930,
-    "nwilliams-7": 251413,
-    "aina-34": 219808,
-    "yates-22": 236142,
-    "sangare-6": 235081,
-    "gibbswhite-10": 236496,
-    "eanderson-8": 259345
-};
-
 const DEFAULT_PLAYERS = [
     {
         "id": "mane-alnassr",
@@ -1415,7 +1228,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -1433,7 +1245,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -1448,7 +1259,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -1465,7 +1275,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -1482,7 +1291,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "CAM",
         "altPositions": [
             "RM",
@@ -1518,7 +1326,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -1533,7 +1340,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -1550,7 +1356,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "💛💙",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -1597,7 +1402,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -1614,7 +1418,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
@@ -1629,7 +1432,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -1646,7 +1448,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -1679,7 +1480,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -1697,7 +1497,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -1726,7 +1525,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -1741,7 +1539,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -1759,7 +1556,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "LB",
         "altPositions": [],
         "rating": 75,
@@ -1774,7 +1570,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -1791,7 +1586,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ahli",
-        "clubBadge": "💚🤍",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -1836,7 +1630,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "ST",
         "altPositions": [],
         "rating": 92,
@@ -1879,10 +1672,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "GK",
         "altPositions": [],
-        "rating": 89,
+        "rating": 88,
         "photo": "https://editorial.uefa.com/resources/028f-1b53c9be8aa4-aae3eb60f087-1000/england_v_switzerland_quarter-final_-_uefa_euro_2024.jpeg",
         "cardTheme": "worldcup26"
     },
@@ -1894,7 +1686,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -1909,7 +1700,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -1938,7 +1728,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -1955,7 +1744,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -1970,10 +1758,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "RB",
         "altPositions": [],
-        "rating": 87,
+        "rating": 86,
         "photo": "https://media.readchelsea.com/readchelsea/2026/06/WmOBXmS7iAdT.webp",
         "cardTheme": "worldcup26"
     },
@@ -1985,7 +1772,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "LB",
         "altPositions": [
             "CM",
@@ -2003,7 +1789,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -2020,11 +1805,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
-        "photo": "",
+        "photo": "https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2026/07/01/1782917637811_jarell_quansah.jpeg",
         "cardTheme": "worldcup26"
     },
     {
@@ -2035,14 +1819,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "LB",
         "altPositions": [
             "RB",
             "RWB"
         ],
         "rating": 79,
-        "photo": "",
+        "photo": "https://cdn2.tuoitre.vn/zoom/700_700/471584752817336320/2026/6/24/thumb-djed-spence-tuyen-anh-world-cup-17822876486051871186112-1782287649739851251933-149-240-803-1490-crop-1782287697019242195587.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -2053,7 +1836,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CDM",
         "altPositions": [],
         "rating": 91,
@@ -2068,7 +1850,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CAM",
         "altPositions": [],
         "rating": 90,
@@ -2083,7 +1864,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CAM",
         "altPositions": [],
         "rating": 85,
@@ -2098,11 +1878,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CM",
-        "altPositions": [],
-        "rating": 79,
-        "photo": "",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 78,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX3SN-Mr-5DdoOqilGt4OVLxDsuhByCRH0V1oV-ReQRwVIlTHJZP2ldN40&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -2113,10 +1894,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CM",
         "altPositions": [],
-        "rating": 83,
+        "rating": 82,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxAXVpIaR01gYtEUP_kMHH1XiVICwFTJXzCk6lOLK2FWEDIpggDN62eHiecJZDi_Mq8vvJkmMLhoN0-iwWdzgsQDVeEMpsYOVeoiVHYQ&s=10",
         "cardTheme": "worldcup26"
     },
@@ -2128,7 +1908,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 84,
@@ -2143,7 +1922,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -2161,11 +1939,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "ST",
-        "altPositions": [],
-        "rating": 92,
-        "photo": "https://dims.apnews.com/dims4/default/1bc8b8b/2147483647/strip/true/crop/4252x2835+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Ff5%2F2a%2F5569230ba55a4236261d8f20cf7d%2F2c4be83a69914fdabb03296bf1065f4b",
+        "altPositions": [
+            "CF",
+            "CAM"
+        ],
+        "rating": 93,
+        "photo": "https://media.rnztools.nz/rnz/image/upload/s--ggMFoMLT--/t_kt-crop-16x10/w_800/f_auto/q_auto:eco/4JM4WCJ_AFP__20260701__B8Y436L__v1__HighRes__FblWc2026Match80EngCod_jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -2176,7 +1956,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "RW",
         "altPositions": [],
         "rating": 88,
@@ -2191,11 +1970,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "LW",
         "altPositions": [],
-        "rating": 83,
-        "photo": "https://static.dezeen.com/uploads/2026/03/england-kit-world-cup-2026-nike-all-white_dezeen_2364_col_8-scaled.jpg",
+        "rating": 82,
+        "photo": "https://media.bongda.com.vn/news/editor/20260701_070245_iisko5uh.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -2206,11 +1984,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
-        "photo": "",
+        "photo": "https://s.yimg.com/ny/api/res/1.2/PJs9hRPt5q25qSqKWu62ZQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyMDtjZj13ZWJw/https://media.zenfs.com/en/futbol_chronicle_671/1bdf3f73a6f9da8f5873e9cb404c4434",
         "cardTheme": "worldcup26"
     },
     {
@@ -2221,7 +1998,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "LW",
         "altPositions": [],
         "rating": 83,
@@ -2236,7 +2012,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -2254,7 +2029,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "WC26",
         "club": "England",
-        "clubBadge": "🦁",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -2269,7 +2043,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -2284,7 +2057,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -2299,10 +2071,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "GK",
         "altPositions": [],
-        "rating": 76,
+        "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -2314,7 +2085,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -2329,7 +2099,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -2344,7 +2113,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 88,
@@ -2359,7 +2127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -2388,7 +2155,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 82,
@@ -2403,7 +2169,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 81,
@@ -2418,11 +2183,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "LB",
         "altPositions": [],
-        "rating": 82,
-        "photo": "",
+        "rating": 83,
+        "photo": "https://www.lequipe.fr/_medias/img-photo-jpg/lucas-digne-face-a-la-suede-p-lahalle-l-equipe/1500000002518038/0:0,2000:1333-828-552-75/7595b.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -2433,7 +2197,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -2448,7 +2211,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CDM",
         "altPositions": [],
         "rating": 87,
@@ -2463,10 +2225,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CDM",
         "altPositions": [],
-        "rating": 86,
+        "rating": 84,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -2478,7 +2239,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 82,
@@ -2493,7 +2253,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 84,
@@ -2508,7 +2267,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 78,
@@ -2523,7 +2281,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 93,
@@ -2555,10 +2312,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "ST",
         "altPositions": [],
-        "rating": 86,
+        "rating": 85,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -2570,10 +2326,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "RW",
         "altPositions": [],
-        "rating": 89,
+        "rating": 90,
         "photo": "https://platform.bavarianfootballworks.com/wp-content/uploads/sites/24/2026/06/gettyimages-2281944920.jpg?quality=90&strip=all&crop=0,0,100,100",
         "cardTheme": "worldcup26"
     },
@@ -2585,12 +2340,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "LW",
         "altPositions": [
             "RW"
         ],
-        "rating": 84,
+        "rating": 85,
         "photo": "https://pbs.twimg.com/media/HK9p0MiXMAAyaYq.jpg",
         "cardTheme": "worldcup26"
     },
@@ -2602,7 +2356,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CAM",
         "altPositions": [],
         "rating": 87,
@@ -2617,7 +2370,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "RW",
         "altPositions": [
             "CF",
@@ -2636,11 +2388,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://media.bongda.com.vn/news/editor/20260615_074714_updedjwm.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -2651,7 +2402,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "WC26",
         "club": "France",
-        "clubBadge": "🇫🇷",
         "position": "CAM",
         "altPositions": [],
         "rating": 80,
@@ -2666,7 +2416,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -2681,7 +2430,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -2696,7 +2444,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -2711,7 +2458,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -2740,7 +2486,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -2769,7 +2514,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -2786,7 +2530,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 83,
@@ -2801,7 +2544,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 82,
@@ -2816,7 +2558,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 80,
@@ -2831,7 +2572,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 88,
@@ -2846,7 +2586,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -2861,7 +2600,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -2924,7 +2662,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "LB",
         "altPositions": [
             "CM"
@@ -2941,7 +2678,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 87,
@@ -2970,7 +2706,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "CAM",
         "altPositions": [
             "LM"
@@ -2987,7 +2722,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "RW",
         "altPositions": [],
         "rating": 79,
@@ -3030,7 +2764,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "🇦🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -3045,7 +2778,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "RW",
         "altPositions": [],
         "rating": 86,
@@ -3060,7 +2792,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "🟡🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -3075,7 +2806,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 89,
@@ -3090,7 +2820,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -3105,7 +2834,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -3120,7 +2848,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -3135,7 +2862,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [],
         "rating": 87,
@@ -3149,7 +2875,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -3166,7 +2891,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -3180,7 +2904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Süper Lig",
         "club": "Fenerbahçe",
-        "clubBadge": "🟡🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -3209,7 +2932,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Burnley",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -3227,7 +2949,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [],
         "rating": 79,
@@ -3242,7 +2963,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -3257,7 +2977,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -3274,7 +2993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -3289,7 +3007,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [],
         "rating": 86,
@@ -3304,7 +3021,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [],
         "rating": 88,
@@ -3319,7 +3035,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 80,
@@ -3334,7 +3049,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "🟡🔴",
         "position": "CM",
         "altPositions": [],
         "rating": 82,
@@ -3367,7 +3081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [],
         "rating": 84,
@@ -3398,7 +3111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "LW",
         "altPositions": [],
         "rating": 84,
@@ -3412,7 +3124,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [],
         "rating": 78,
@@ -3427,7 +3138,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "RW",
         "altPositions": [],
         "rating": 79,
@@ -3441,7 +3151,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "😈",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -3456,7 +3165,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -3471,7 +3179,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -3486,7 +3193,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -3501,7 +3207,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -3515,7 +3220,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LB",
         "altPositions": [],
         "rating": 83,
@@ -3530,7 +3234,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "RB",
         "altPositions": [],
         "rating": 80,
@@ -3544,7 +3247,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "RB",
         "altPositions": [],
         "rating": 80,
@@ -3558,7 +3260,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CDM",
         "altPositions": [],
         "rating": 84,
@@ -3572,7 +3273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CDM",
         "altPositions": [],
         "rating": 79,
@@ -3587,7 +3287,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CM",
         "altPositions": [],
         "rating": 81,
@@ -3602,7 +3301,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "😈",
         "position": "CM",
         "altPositions": [],
         "rating": 80,
@@ -3616,7 +3314,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CAM",
         "altPositions": [],
         "rating": 80,
@@ -3645,7 +3342,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LW",
         "altPositions": [],
         "rating": 81,
@@ -3659,7 +3355,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "😈",
         "position": "LW",
         "altPositions": [],
         "rating": 78,
@@ -3674,7 +3369,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "RW",
         "altPositions": [],
         "rating": 78,
@@ -3716,7 +3410,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -3745,7 +3438,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -3760,7 +3452,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -3775,7 +3466,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [],
         "rating": 82,
@@ -3790,7 +3480,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 80,
@@ -3805,7 +3494,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -3820,7 +3508,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [
             "CM",
@@ -3840,7 +3527,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [],
         "rating": 81,
@@ -3869,7 +3555,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [],
         "rating": 81,
@@ -3883,7 +3568,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [],
         "rating": 85,
@@ -3897,7 +3581,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -3915,7 +3598,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -3932,7 +3614,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "LW",
         "altPositions": [],
         "rating": 83,
@@ -3947,7 +3628,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -3962,7 +3642,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "MLS",
         "club": "San Jose Earthquakes",
-        "clubBadge": "🔵",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -3979,7 +3658,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -4007,7 +3685,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -4022,7 +3699,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -4037,7 +3713,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -4051,7 +3726,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -4065,7 +3739,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [],
         "rating": 86,
@@ -4080,7 +3753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [],
         "rating": 80,
@@ -4108,7 +3780,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [],
         "rating": 79,
@@ -4123,7 +3794,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [],
         "rating": 84,
@@ -4138,7 +3808,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [],
         "rating": 77,
@@ -4152,7 +3821,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 85,
@@ -4167,7 +3835,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 80,
@@ -4182,7 +3849,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [],
         "rating": 86,
@@ -4197,7 +3863,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CAM",
         "altPositions": [],
         "rating": 83,
@@ -4226,7 +3891,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -4244,7 +3908,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [],
         "rating": 81,
@@ -4259,7 +3922,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "LW",
         "altPositions": [],
         "rating": 80,
@@ -4274,7 +3936,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "LW",
         "altPositions": [],
         "rating": 74,
@@ -4289,7 +3950,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -4304,7 +3964,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -4319,7 +3978,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [],
         "rating": 85,
@@ -4361,7 +4019,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -4376,7 +4033,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -4391,7 +4047,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [],
         "rating": 83,
@@ -4406,7 +4061,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 86,
@@ -4435,7 +4089,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -4453,7 +4106,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [],
         "rating": 78,
@@ -4467,7 +4119,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [],
         "rating": 84,
@@ -4481,7 +4132,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [],
         "rating": 81,
@@ -4496,7 +4146,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RW",
         "altPositions": [],
         "rating": 89,
@@ -4511,7 +4160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [],
         "rating": 88,
@@ -4526,7 +4174,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 87,
@@ -4541,7 +4188,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [],
         "rating": 80,
@@ -4583,7 +4229,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [],
         "rating": 82,
@@ -4598,7 +4243,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -4612,7 +4256,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -4627,7 +4270,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -4642,7 +4284,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [],
         "rating": 85,
@@ -4656,7 +4297,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 84,
@@ -4671,7 +4311,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 78,
@@ -4686,7 +4325,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "RB",
         "altPositions": [
             "CM"
@@ -4703,7 +4341,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -4718,11 +4355,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [],
-        "rating": 83,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/viijpx1733653403.png"
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/viijpx1733653403.png",
+        "cardTheme": "standard"
     },
     {
         "id": "modric-10",
@@ -4746,7 +4383,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [],
         "rating": 87,
@@ -4761,7 +4397,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [],
         "rating": 83,
@@ -4776,7 +4411,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [],
         "rating": 79,
@@ -4791,7 +4425,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LW",
         "altPositions": [],
         "rating": 89,
@@ -4806,7 +4439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [],
         "rating": 82,
@@ -4821,7 +4453,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -4836,7 +4467,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -4851,7 +4481,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -4866,7 +4495,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -4881,7 +4509,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -4896,7 +4523,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -4913,7 +4539,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -4943,7 +4568,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [],
         "rating": 80,
@@ -4958,7 +4582,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "RB",
@@ -4976,7 +4599,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "CM",
@@ -4993,7 +4615,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -5010,7 +4631,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -5026,7 +4646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [],
         "rating": 83,
@@ -5041,7 +4660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5058,7 +4676,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -5075,7 +4692,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -5091,7 +4707,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -5108,7 +4723,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -5123,7 +4737,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CAM",
@@ -5140,7 +4753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -5157,7 +4769,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -5172,7 +4783,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -5187,7 +4797,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -5203,7 +4812,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -5264,7 +4872,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -5278,7 +4885,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇲",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 82,
@@ -5293,7 +4899,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -5308,7 +4913,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -5326,7 +4930,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -5341,7 +4944,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 95,
@@ -5356,7 +4958,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -5371,7 +4972,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 91,
@@ -5386,7 +4986,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5403,7 +5002,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 96,
@@ -5418,7 +5016,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -5435,7 +5032,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 98,
@@ -5450,7 +5046,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [],
         "rating": 97,
@@ -5465,7 +5060,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 96,
@@ -5480,7 +5074,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 97,
@@ -5495,7 +5088,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -5512,7 +5104,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -5529,7 +5120,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -5546,7 +5136,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 95,
@@ -5561,11 +5150,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [],
         "rating": 97,
-        "photo": "https://cdn.britannica.com/79/91579-050-4062AD04/Footballer-George-Best-soccer.jpg",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRxm5xb3BY9MkB7ZU7sykKOKeQ6J_z-S1prPO_qKJf7x8av0c8R9E0NZxB&s=10",
         "cardTheme": "icons"
     },
     {
@@ -5576,7 +5164,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 90,
@@ -5591,7 +5178,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 94,
@@ -5606,7 +5192,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5623,7 +5208,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5640,7 +5224,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -5657,7 +5240,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 91,
@@ -5672,7 +5254,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 96,
@@ -5687,7 +5268,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -5720,7 +5300,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 95,
@@ -5735,7 +5314,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -5750,7 +5328,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -5765,7 +5342,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "ST"
@@ -5782,7 +5358,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -5799,7 +5374,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -5816,7 +5390,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -5834,7 +5407,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -5852,7 +5424,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -5867,7 +5438,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -5882,7 +5452,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -5897,7 +5466,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -5912,7 +5480,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -5927,7 +5494,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -5945,7 +5511,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -5960,7 +5525,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -5978,7 +5542,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -5996,9 +5559,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
-        "altPositions": [],
+        "altPositions": [
+            "CF",
+            "CAM"
+        ],
         "rating": 90,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/j4ouvd1756408895.png",
         "cardTheme": "standard"
@@ -6011,7 +5576,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -6029,7 +5593,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "🟡🔴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -6047,7 +5610,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "CM",
@@ -6065,7 +5627,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -6083,7 +5644,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -6098,7 +5658,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -6113,7 +5672,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [
             "CAM"
@@ -6130,7 +5688,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "MLS",
         "club": "Vancouver Whitecaps",
-        "clubBadge": "🌊",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -6148,7 +5705,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -6163,7 +5719,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -6192,7 +5747,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -6224,7 +5778,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -6242,7 +5795,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -6277,7 +5829,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -6295,7 +5846,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇳",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -6310,7 +5860,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -6327,7 +5876,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -6356,7 +5904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -6373,7 +5920,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -6388,7 +5934,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -6403,7 +5948,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "RB",
         "altPositions": [],
         "rating": 81,
@@ -6418,7 +5962,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "LB",
         "altPositions": [],
         "rating": 80,
@@ -6433,7 +5976,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -6451,7 +5993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -6468,7 +6009,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -6485,7 +6025,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -6502,7 +6041,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -6520,7 +6058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇲",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -6538,7 +6075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -6555,7 +6091,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -6573,7 +6108,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -6588,7 +6122,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Saudi Pro League",
         "club": "Al Nassr",
-        "clubBadge": "🟡🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -6603,7 +6136,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -6618,7 +6150,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -6635,7 +6166,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -6650,7 +6180,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -6667,7 +6196,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -6684,7 +6212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "CF",
@@ -6703,7 +6230,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇲",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -6721,7 +6247,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -6738,7 +6263,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -6755,7 +6279,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -6772,7 +6295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -6787,7 +6309,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -6805,7 +6326,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [],
         "rating": 87,
@@ -6820,7 +6340,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -6835,7 +6354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -6850,7 +6368,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -6885,7 +6402,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -6902,7 +6418,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -6920,7 +6435,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -6935,7 +6449,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -6950,7 +6463,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -6965,7 +6477,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -6980,7 +6491,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "RB",
         "altPositions": [],
         "rating": 76,
@@ -6995,7 +6505,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -7012,7 +6521,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -7029,7 +6537,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -7046,7 +6553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -7063,7 +6569,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -7081,7 +6586,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -7099,7 +6603,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -7117,7 +6620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -7132,7 +6634,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -7147,7 +6648,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -7162,7 +6662,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇲",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -7177,7 +6676,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -7192,10 +6690,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CB",
         "altPositions": [
-            "RB"
+            "CDM"
         ],
         "rating": 78,
         "photo": "https://resources.premierleague.com/premierleague/photos/players/250x250/p191866.png",
@@ -7209,7 +6706,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -7226,7 +6722,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -7243,7 +6738,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "RB",
         "altPositions": [],
         "rating": 78,
@@ -7258,7 +6752,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -7275,7 +6768,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -7293,7 +6785,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -7310,7 +6801,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -7328,7 +6818,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -7346,7 +6835,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -7364,7 +6852,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -7379,7 +6866,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇮",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -7411,7 +6897,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "ST",
@@ -7460,7 +6945,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -7475,7 +6959,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [],
         "rating": 80,
@@ -7522,7 +7005,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -7537,7 +7019,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "🟡🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -7552,7 +7033,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "🟡🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -7584,7 +7064,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -7602,7 +7081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -7617,7 +7095,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -7634,7 +7111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -7651,7 +7127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -7666,7 +7141,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -7681,7 +7155,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "🔵⚪",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -7699,7 +7172,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 79,
@@ -7714,7 +7186,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -7731,7 +7202,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -7746,7 +7216,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
         "position": "LB",
         "altPositions": [
             "RB"
@@ -7763,7 +7232,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "💙⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -7780,7 +7248,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Saudi Pro League",
         "club": "Al Hilal",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -7811,7 +7278,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -7829,7 +7295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -7846,7 +7311,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "🟡⚫",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -7864,7 +7328,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -7879,7 +7342,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -7894,7 +7356,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -7911,10 +7372,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "CAM",
         "altPositions": [
-            "CM"
+            "LW",
+            "LM"
         ],
         "rating": 76,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hm39tt1681230801.png",
@@ -7928,7 +7389,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -7943,7 +7403,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "RB",
         "altPositions": [],
         "rating": 70,
@@ -7958,7 +7417,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "💛🖤",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -7975,7 +7433,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "Saudi Pro League",
         "club": "Al Ittihad",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -7992,7 +7449,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -8007,7 +7463,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -8022,7 +7477,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -8037,7 +7491,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "RB",
         "altPositions": [],
         "rating": 78,
@@ -8052,7 +7505,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇴",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -8069,7 +7521,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -8087,7 +7538,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇬",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -8104,7 +7554,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -8122,7 +7571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -8141,7 +7589,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -8159,7 +7606,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -8174,7 +7620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -8191,7 +7636,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇱",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -8209,7 +7653,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -8226,7 +7669,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -8241,7 +7683,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -8284,7 +7725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -8299,7 +7739,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "LB",
         "altPositions": [],
         "rating": 76,
@@ -8314,7 +7753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "RB",
         "altPositions": [],
         "rating": 75,
@@ -8329,7 +7767,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "CM",
         "altPositions": [],
         "rating": 81,
@@ -8344,7 +7781,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "CM",
         "altPositions": [],
         "rating": 78,
@@ -8375,7 +7811,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -8393,7 +7828,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -8411,7 +7845,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "ST",
         "altPositions": [
             "LM",
@@ -8429,7 +7862,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -8479,7 +7911,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -8496,7 +7927,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -8511,7 +7941,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -8526,7 +7955,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -8541,7 +7969,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "LB",
         "altPositions": [],
         "rating": 81,
@@ -8570,7 +7997,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "RB",
         "altPositions": [],
         "rating": 79,
@@ -8585,7 +8011,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -8602,7 +8027,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -8635,7 +8059,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "CAM",
         "altPositions": [
             "LM"
@@ -8652,7 +8075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "LM",
         "altPositions": [
             "CAM",
@@ -8670,7 +8092,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -8688,7 +8109,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -8703,7 +8123,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -8718,7 +8137,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚪⚫",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -8750,7 +8168,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -8797,7 +8214,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -8818,7 +8234,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CDM"
         ],
-        "rating": 79,
+        "rating": 78,
         "photo": "https://contentfulproxy.stadion.io/phva2knh4vy5/6otrrINhAxApsTBEqVWT8e/407b186f6292195835a9f54cd5f9de1a/Ao_Tanaka_Japan_Sweden_Jun_26_Pointing.jpg?fm=webp&fit=fill&f=center&w=3000&h=1687",
         "cardTheme": "worldcup26"
     },
@@ -8865,7 +8281,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -8883,7 +8298,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -8898,7 +8312,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -8913,7 +8326,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -8928,7 +8340,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -8943,7 +8354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -8974,7 +8384,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "RWB",
         "altPositions": [
             "RB"
@@ -8991,7 +8400,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -9008,7 +8416,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 79,
@@ -9023,7 +8430,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -9054,7 +8460,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -9073,7 +8478,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -9090,7 +8494,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -9107,7 +8510,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CDM",
         "altPositions": [],
         "rating": 84,
@@ -9136,7 +8538,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -9151,11 +8552,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LOsj0hTFE5V_qI1pA97GIdYIY-0od_8xDHGPv4Jty7dPnegLKL9YRpY&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -9166,7 +8566,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -9231,7 +8630,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -9246,11 +8644,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CB",
         "altPositions": [],
-        "rating": 83,
-        "photo": "",
+        "rating": 84,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEswJyrigd_LbjRFa7yfONdLa0KiCwyqibfSum5866sJLFFgTfRrwlmD-r&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -9261,7 +8658,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -9278,7 +8674,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -9312,7 +8707,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -9329,7 +8723,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -9347,7 +8740,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CM",
         "altPositions": [
             "ST"
@@ -9380,7 +8772,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CM",
         "altPositions": [],
         "rating": 82,
@@ -9395,7 +8786,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -9508,7 +8898,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -9523,7 +8912,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "RB",
         "altPositions": [
             "CM",
@@ -9541,7 +8929,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -9558,7 +8945,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CM",
         "altPositions": [
             "ST",
@@ -9576,7 +8962,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -9595,7 +8980,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -9631,7 +9015,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -9649,7 +9032,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -9681,7 +9063,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -9698,7 +9079,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -9715,7 +9095,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -9750,7 +9129,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -9767,7 +9145,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -9785,7 +9162,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -9800,7 +9176,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -9815,7 +9190,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -9834,7 +9208,7 @@ const DEFAULT_PLAYERS = [
         "club": "Belgium",
         "position": "ST",
         "altPositions": [],
-        "rating": 85,
+        "rating": 86,
         "photo": "https://prod-media.beinsports.com/image/1781560800905_f02847d7-16db-42c7-b624-2da56dce8224.jpg?ver=03-06-2025",
         "cardTheme": "worldcup26"
     },
@@ -9846,15 +9220,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "LM",
         "altPositions": [
             "LW",
-            "RM",
-            "RW"
+            "RW",
+            "RM"
         ],
-        "rating": 83,
-        "photo": "",
+        "rating": 86,
+        "photo": "https://cdn2.tuoitre.vn/zoom/1200_1200/471584752817336320/2026/6/22/jeremy-doku-bi-world-cup-2026-1782172333810350440785-99-0-1439-2560-crop-17821723678961654341293.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -9865,15 +9238,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "LM",
         "altPositions": [
-            "LW",
             "ST",
+            "LW",
             "CAM"
         ],
-        "rating": 82,
-        "photo": "",
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqH-xqpYDNlAubIWSfFc_9ZpZO0j2FmkmsoOvwij3UCy1OF2EcUIptMVZS&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -9889,8 +9261,8 @@ const DEFAULT_PLAYERS = [
             "CAM",
             "CDM"
         ],
-        "rating": 86,
-        "photo": "https://www.voetbalkrant.com/media/cache/full/images/2026/06/23/full/tielemans-youri.webp",
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKP2V3tiM1oojf0zzwNlAb9OcdbXCNCWhlvzJvb1Chvw&s",
         "cardTheme": "worldcup26"
     },
     {
@@ -9901,7 +9273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -9918,14 +9289,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "RB",
         "altPositions": [
             "LB",
             "RWB"
         ],
-        "rating": 82,
-        "photo": "",
+        "rating": 81,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nlSVsmXeVmwQYpGB4h3U7CKSc9RJ-49izRh6aPU48a_JsxBOzigxEVgw&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -9936,45 +9306,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
-        "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "faes-wc26",
-        "name": "Wout Faes",
-        "cardName": "Faes",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 77,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "bakayoko-be-wc26",
-        "name": "Johan Bakayoko",
-        "cardName": "Bakayoko",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "RW",
-        "altPositions": [
-            "RM"
-        ],
         "rating": 79,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJcjbm9UgT7irbSNJLr01SKS3DHx-nPAFTk6tjlC6XCcpi3C3a9vZHLEx&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -10017,7 +9354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -10035,7 +9371,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "CDM",
@@ -10053,7 +9388,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇪",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -10071,7 +9405,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -10086,7 +9419,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -10101,7 +9433,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -10116,7 +9447,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -10149,7 +9479,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -10184,7 +9513,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -10199,7 +9527,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -10216,7 +9543,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -10245,7 +9571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -10262,7 +9587,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -10280,7 +9604,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -10297,7 +9620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -10329,7 +9651,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -10362,7 +9683,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🐺",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -10380,7 +9700,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -10395,7 +9714,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -10410,7 +9728,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -10425,7 +9742,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -10440,7 +9756,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -10457,7 +9772,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -10474,7 +9788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -10493,7 +9806,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -10510,7 +9822,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -10527,7 +9838,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -10544,7 +9854,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -10577,7 +9886,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -10594,7 +9902,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
@@ -10609,7 +9916,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -10627,7 +9933,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -10661,7 +9966,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "🦓",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -10679,7 +9983,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -10696,7 +9999,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -10713,7 +10015,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -10728,7 +10029,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -10745,8 +10045,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Italy",
         "flag": "🇮🇹",
         "league": "Premier League",
-        "club": "Newcastle",
-        "clubBadge": "⚫⚪",
+        "club": "Tottenham",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -10763,7 +10062,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -10780,7 +10078,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -10797,7 +10094,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
@@ -10812,7 +10108,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "RM",
         "altPositions": [
             "RB"
@@ -10829,7 +10124,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -10846,7 +10140,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -10875,7 +10168,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -10941,7 +10233,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "LM",
@@ -10975,7 +10266,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -10990,7 +10280,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -11005,7 +10294,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 76,
@@ -11020,7 +10308,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "RM",
         "altPositions": [
             "ST",
@@ -11038,7 +10325,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -11099,7 +10385,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -11146,7 +10431,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -11164,7 +10448,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -11182,7 +10465,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -11229,7 +10511,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -11295,7 +10576,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -11310,7 +10590,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -11327,7 +10606,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇾",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -11344,7 +10622,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -11359,7 +10636,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CDM",
         "altPositions": [],
         "rating": 73,
@@ -11388,7 +10664,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -11403,7 +10678,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -11434,7 +10708,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇲",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -11452,7 +10725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -11469,7 +10741,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -11487,7 +10758,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -11518,7 +10788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -11535,7 +10804,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -11566,7 +10834,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -11581,7 +10848,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -11596,7 +10862,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -11614,7 +10879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "CM",
         "altPositions": [],
         "rating": 69,
@@ -11629,7 +10893,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇳",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -11663,7 +10926,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -11694,7 +10956,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -11711,7 +10972,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "MLS",
         "club": "Inter Miami",
-        "clubBadge": "🦩",
         "position": "RB",
         "altPositions": [],
         "rating": 71,
@@ -11771,7 +11031,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -11788,7 +11047,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -11806,7 +11064,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -11824,7 +11081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -11841,7 +11097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -11855,7 +11110,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -11869,7 +11123,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -11884,7 +11137,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [
             "RB",
@@ -11917,7 +11169,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -11949,7 +11200,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -11965,7 +11215,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -11981,7 +11230,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇲",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -12015,7 +11263,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "CF",
         "altPositions": [
             "CAM",
@@ -12032,7 +11279,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Brighton",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -12046,7 +11292,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -12060,7 +11305,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -12074,7 +11318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -12089,7 +11332,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -12123,7 +11365,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -12139,7 +11380,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -12155,7 +11395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -12170,8 +11409,7 @@ const DEFAULT_PLAYERS = [
         "nationality": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
-        "club": "Nottingham",
-        "clubBadge": "🌳",
+        "club": "Man City",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -12189,7 +11427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -12221,7 +11458,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -12235,7 +11471,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -12249,7 +11484,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -12264,7 +11498,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -12279,7 +11512,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -12289,16 +11521,16 @@ const DEFAULT_PLAYERS = [
     {
         "id": "riad-20",
         "name": "Chadi Riad",
-        "cardName": "Riad",
+        "cardName": "Chadi Riad",
         "nationality": "Morocco",
         "flag": "🇲🇦",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/euw1zp1766828464.png"
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/euw1zp1766828464.png",
+        "cardTheme": "standard"
     },
     {
         "id": "munoz-12",
@@ -12324,7 +11556,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -12340,7 +11571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -12357,7 +11587,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -12373,7 +11602,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -12410,7 +11638,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -12426,7 +11653,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -12443,7 +11669,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -12458,7 +11683,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -12472,7 +11696,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -12490,7 +11713,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -12507,7 +11729,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "CF",
@@ -12525,7 +11746,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -12542,7 +11762,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -12560,7 +11779,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -12577,7 +11795,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -12594,7 +11811,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -12609,7 +11825,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -12626,7 +11841,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -12643,7 +11857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Celtic",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -12660,7 +11873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "EFL Championship",
         "club": "Birmingham",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -12689,7 +11901,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -12707,7 +11918,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -12771,7 +11981,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -12788,7 +11997,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RW",
         "altPositions": [
             "CAM"
@@ -12805,7 +12013,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -12820,7 +12027,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -12852,7 +12058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -12870,7 +12075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -12887,7 +12091,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -12902,7 +12105,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "CDM",
         "altPositions": [],
         "rating": 68,
@@ -12917,7 +12119,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
@@ -12932,7 +12133,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -12949,7 +12149,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "LW",
         "altPositions": [],
         "rating": 66,
@@ -12964,7 +12163,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -12973,16 +12171,15 @@ const DEFAULT_PLAYERS = [
     },
     {
         "id": "thanhchung-hanoi-s26",
-        "name": "Nguyễn Thành Chung",
-        "cardName": "Thành Chung",
+        "name": "Quế Ngọc Hải",
+        "cardName": "Ngọc Hải",
         "nationality": "Vietnam",
         "flag": "🇻🇳",
         "league": "V-League",
-        "club": "Hà Nội",
-        "clubBadge": "🗼",
+        "club": "Đà Nẵng",
         "position": "CB",
         "altPositions": [],
-        "rating": 70,
+        "rating": 62,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -12994,7 +12191,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "RB",
         "altPositions": [
             "RM",
@@ -13012,7 +12208,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "GK",
         "altPositions": [],
         "rating": 64,
@@ -13043,7 +12238,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -13075,7 +12269,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -13110,7 +12303,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -13127,7 +12319,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 78,
@@ -13142,7 +12333,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -13157,7 +12347,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -13172,7 +12361,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "RB",
         "altPositions": [
             "RM"
@@ -13189,7 +12377,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -13204,7 +12391,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -13221,7 +12407,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -13239,7 +12424,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -13256,7 +12440,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -13289,7 +12472,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -13304,7 +12486,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -13509,7 +12690,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Scottish Premiership",
         "club": "Celtic",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -13568,7 +12748,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -13583,7 +12762,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -13600,7 +12778,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -13619,7 +12796,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -13653,7 +12829,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -13684,7 +12859,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -13699,7 +12873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -13714,7 +12887,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -13729,7 +12901,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -13744,7 +12915,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -13761,7 +12931,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CAM",
         "altPositions": [
             "RM"
@@ -13795,7 +12964,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -13812,7 +12980,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -13829,7 +12996,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -13847,7 +13013,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "LWB",
         "altPositions": [
             "LM",
@@ -13893,7 +13058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -13922,7 +13086,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [],
         "rating": 76,
@@ -13937,7 +13100,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [],
         "rating": 76,
@@ -13952,7 +13114,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇽🇰",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -13969,7 +13130,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [],
         "rating": 72,
@@ -13984,7 +13144,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -14001,7 +13160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -14018,7 +13176,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -14035,7 +13192,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -14052,7 +13208,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Lille",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -14083,7 +13238,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [],
         "rating": 79,
@@ -14098,7 +13252,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -14113,7 +13266,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -14130,7 +13282,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Saudi Pro League",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -14147,7 +13298,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -14165,7 +13315,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "CM",
         "altPositions": [],
         "rating": 78,
@@ -14196,7 +13345,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "CDM",
         "altPositions": [],
         "rating": 79,
@@ -14211,7 +13359,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "LB",
         "altPositions": [],
         "rating": 78,
@@ -14226,7 +13373,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇴",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -14243,7 +13389,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -14258,7 +13403,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Ligue 1",
         "club": "Lyon",
-        "clubBadge": "🔵🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -14273,7 +13417,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -14304,7 +13447,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "CM",
@@ -14322,7 +13464,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Birmingham",
-        "clubBadge": "🔵⚪",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -14339,7 +13480,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -14356,7 +13496,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -14373,7 +13512,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -14390,7 +13528,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -14407,7 +13544,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Birmingham",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -14422,7 +13558,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -14439,7 +13574,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -14454,7 +13588,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [
             "CDM",
@@ -14472,7 +13605,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Sunderland",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -14487,7 +13619,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -14536,7 +13667,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -14554,7 +13684,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -14633,7 +13762,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [],
         "rating": 78,
@@ -14648,7 +13776,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -14663,7 +13790,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -14678,7 +13804,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -14707,7 +13832,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -14752,10 +13876,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "ST",
         "altPositions": [],
-        "rating": 86,
+        "rating": 85,
         "photo": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0603%2Fr1501898_1296x729_16%2D9.jpg",
         "cardTheme": "worldcup26"
     },
@@ -14781,7 +13904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -14798,7 +13920,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "RW",
         "altPositions": [
             "CAM"
@@ -14815,7 +13936,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -14830,7 +13950,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "LW",
         "altPositions": [],
         "rating": 88,
@@ -14859,7 +13978,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 80,
@@ -14888,7 +14006,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 85,
@@ -14903,7 +14020,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "LB",
         "altPositions": [],
         "rating": 85,
@@ -14918,7 +14034,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -14935,7 +14050,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "CM",
         "altPositions": [],
         "rating": 91,
@@ -15030,9 +14144,13 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Norway",
         "position": "LW",
-        "altPositions": [],
+        "altPositions": [
+            "RW",
+            "LM",
+            "RM"
+        ],
         "rating": 83,
-        "photo": "",
+        "photo": "https://pbs.twimg.com/media/HMFFi5oXcAAs3DR.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -15071,11 +14189,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMkFWqM91C5WvXDWPdpaShQHUabixAmghYNVa7aqG3_mfXy3zhDaXZCsk&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -15086,7 +14203,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -15117,7 +14233,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CM",
         "altPositions": [],
         "rating": 84,
@@ -15132,7 +14247,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CDM",
         "altPositions": [],
         "rating": 81,
@@ -15147,7 +14261,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -15178,11 +14291,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CB",
         "altPositions": [],
-        "rating": 83,
-        "photo": "",
+        "rating": 82,
+        "photo": "https://s.yimg.com/ny/api/res/1.2/OskQYOtNcSWiWVq.dacv8w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNztjZj13ZWJw/https://media.zenfs.com/en/city_xtra_articles_863/aa9a28dd9cdbcb6e28acdcbb10defcc4",
         "cardTheme": "worldcup26"
     },
     {
@@ -15193,7 +14305,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CDM",
         "altPositions": [
             "CAM",
@@ -15211,25 +14322,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
         "photo": "https://photo.znews.vn/w660/Uploaded/wobjcak/2026_06_15/2026_06_14T220544Z_2019442335_UP1EM6E1PDJFU_RTRMADP_3_SOCCER_WORLDCUP_NLD_JPN.JPG",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "ennesyri-wc26",
-        "name": "Youssef En-Nesyri",
-        "cardName": "En-Nesyri",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "position": "ST",
-        "altPositions": [],
-        "rating": 84,
-        "photo": "",
         "cardTheme": "worldcup26"
     },
     {
@@ -15240,11 +14336,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CDM",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://media.futbolcentroamerica.com/wp-content/uploads/sites/5/2026/06/29181012/sofyan-amrabat-marruecos-paises-bajos-mundial-2026-714x535.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -15255,7 +14350,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "LB",
         "altPositions": [
             "RB",
@@ -15274,11 +14368,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CAM",
         "altPositions": [],
-        "rating": 83,
-        "photo": "",
+        "rating": 82,
+        "photo": "https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w440/f_auto/primary/d2ubc3il9pgxwogf8vme",
         "cardTheme": "worldcup26"
     },
     {
@@ -15289,10 +14382,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "GK",
         "altPositions": [],
-        "rating": 86,
+        "rating": 87,
         "photo": "https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/32df6bf3-9bc5-40d7-bdfe-e53ec7eed2f9.jpeg",
         "cardTheme": "worldcup26"
     },
@@ -15304,7 +14396,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -15321,7 +14412,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "RW",
         "altPositions": [],
         "rating": 76,
@@ -15336,7 +14426,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -15351,7 +14440,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -15412,7 +14500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "RW",
         "altPositions": [],
         "rating": 86,
@@ -15427,7 +14514,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LW",
         "altPositions": [],
         "rating": 77,
@@ -15442,7 +14528,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -15457,7 +14542,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -15475,7 +14559,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "RW",
         "altPositions": [
             "CF",
@@ -15493,7 +14576,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -15508,7 +14590,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "LB",
         "altPositions": [],
         "rating": 81,
@@ -15540,7 +14621,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CDM",
         "altPositions": [],
         "rating": 82,
@@ -15555,7 +14635,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -15570,7 +14649,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -15585,7 +14663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CAM",
         "altPositions": [],
         "rating": 82,
@@ -15644,7 +14721,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "RB",
         "altPositions": [],
         "rating": 77,
@@ -15673,7 +14749,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -15690,7 +14765,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
@@ -15705,7 +14779,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "LB",
         "altPositions": [],
         "rating": 83,
@@ -15720,7 +14793,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "A-League",
         "club": "Melbourne Victory",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -15738,7 +14810,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -15755,7 +14826,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -15770,7 +14840,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -15788,7 +14857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -15805,7 +14873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -15822,7 +14889,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -15839,7 +14905,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -15856,7 +14921,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -15871,7 +14935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -15904,7 +14967,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -15921,7 +14983,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -15939,7 +15000,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -15957,7 +15017,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 89,
@@ -15972,7 +15031,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -16006,7 +15064,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "K-League",
         "club": "Pohang Steelers",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
@@ -16021,7 +15078,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "K-League",
         "club": "Pohang Steelers",
-        "clubBadge": "🔴⚫",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -16038,7 +15094,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "K-League",
         "club": "Pohang Steelers",
-        "clubBadge": "🔴⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16055,7 +15110,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "K-League",
         "club": "FC Seoul",
-        "clubBadge": "🔴⚫",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -16072,7 +15126,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "K-League",
         "club": "FC Seoul",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
@@ -16087,7 +15140,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "K-League",
         "club": "FC Seoul",
-        "clubBadge": "🔴⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16104,7 +15156,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "K-League",
         "club": "FC Seoul",
-        "clubBadge": "🔴⚫",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -16122,7 +15173,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "K-League",
         "club": "Jeonbuk Hyundai Motors",
-        "clubBadge": "🟢",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -16137,7 +15187,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "K-League",
         "club": "Jeonbuk Hyundai Motors",
-        "clubBadge": "🟢",
         "position": "LB",
         "altPositions": [],
         "rating": 71,
@@ -16152,7 +15201,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "K-League",
         "club": "Jeonbuk Hyundai Motors",
-        "clubBadge": "🟢",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16169,7 +15217,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "K-League",
         "club": "Jeonbuk Hyundai Motors",
-        "clubBadge": "🟢",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -16187,7 +15234,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "K-League",
         "club": "Ulsan HD FC",
-        "clubBadge": "🐯",
         "position": "CM",
         "altPositions": [],
         "rating": 71,
@@ -16202,7 +15248,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "K-League",
         "club": "Ulsan HD FC",
-        "clubBadge": "🐯",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -16217,7 +15262,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "K-League",
         "club": "Ulsan HD FC",
-        "clubBadge": "🐯",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -16234,7 +15278,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "K-League",
         "club": "Ulsan HD FC",
-        "clubBadge": "🐯",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -16249,7 +15292,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "J-League",
         "club": "Urawa Red Diamonds",
-        "clubBadge": "💎",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16266,7 +15308,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "J-League",
         "club": "Urawa Red Diamonds",
-        "clubBadge": "💎",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -16281,7 +15322,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Urawa Red Diamonds",
-        "clubBadge": "💎",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -16296,7 +15336,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇾",
         "league": "J-League",
         "club": "Sanfrecce Hiroshima",
-        "clubBadge": "🏹",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -16311,7 +15350,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Sanfrecce Hiroshima",
-        "clubBadge": "🏹",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -16329,7 +15367,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Sanfrecce Hiroshima",
-        "clubBadge": "🏹",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -16344,7 +15381,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Kawasaki Frontale",
-        "clubBadge": "🐬",
         "position": "RW",
         "altPositions": [],
         "rating": 71,
@@ -16359,7 +15395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "J-League",
         "club": "Kawasaki Frontale",
-        "clubBadge": "🐬",
         "position": "LW",
         "altPositions": [],
         "rating": 71,
@@ -16374,7 +15409,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Kawasaki Frontale",
-        "clubBadge": "🐬",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -16391,7 +15425,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "J-League",
         "club": "Yokohama F. Marinos",
-        "clubBadge": "⚓",
         "position": "LW",
         "altPositions": [],
         "rating": 72,
@@ -16406,7 +15439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "J-League",
         "club": "Yokohama F. Marinos",
-        "clubBadge": "⚓",
         "position": "RW",
         "altPositions": [],
         "rating": 72,
@@ -16421,7 +15453,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "J-League",
         "club": "Yokohama F. Marinos",
-        "clubBadge": "⚓",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -16436,7 +15467,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Vissel Kobe",
-        "clubBadge": "🐮",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16453,7 +15483,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Vissel Kobe",
-        "clubBadge": "🐮",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -16471,7 +15500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "J-League",
         "club": "Vissel Kobe",
-        "clubBadge": "🐮",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -16486,7 +15514,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -16501,7 +15528,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -16519,7 +15545,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -16536,7 +15561,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -16554,7 +15578,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -16571,7 +15594,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -16588,7 +15610,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -16605,7 +15626,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -16620,7 +15640,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -16637,7 +15656,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -16654,7 +15672,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -16669,7 +15686,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -16684,7 +15700,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -16701,7 +15716,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -16719,7 +15733,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -16736,7 +15749,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -16751,7 +15763,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -16769,7 +15780,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -16786,7 +15796,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CDM",
@@ -16804,7 +15813,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -16822,7 +15830,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 79,
@@ -16837,7 +15844,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16854,7 +15860,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 83,
@@ -16869,7 +15874,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -16900,7 +15904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇦",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -16918,7 +15921,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -16933,7 +15935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -16948,7 +15949,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -16965,7 +15965,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "CDM",
         "altPositions": [],
         "rating": 74,
@@ -16994,7 +15993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "MLS",
         "club": "LAFC",
-        "clubBadge": "👑",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -17009,7 +16007,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -17026,7 +16023,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "RW",
         "altPositions": [
             "CAM"
@@ -17057,7 +16053,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -17074,7 +16069,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -17089,7 +16083,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -17104,7 +16097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇪",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -17121,7 +16113,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -17136,7 +16127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "MLS",
         "club": "Atlanta United",
-        "clubBadge": "🔴⚫",
         "position": "LB",
         "altPositions": [],
         "rating": 72,
@@ -17168,7 +16158,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Russian PL",
         "club": "Zenit",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -17186,7 +16175,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Russian PL",
         "club": "Zenit",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -17204,7 +16192,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Russian PL",
         "club": "Zenit",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -17235,7 +16222,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "Russian PL",
         "club": "Zenit",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -17267,7 +16253,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "Russian PL",
         "club": "Zenit",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -17282,7 +16267,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -17334,7 +16318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -17352,7 +16335,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -17369,7 +16351,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -17384,7 +16365,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -17399,7 +16379,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -17416,7 +16395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -17433,7 +16411,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Girona",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -17448,7 +16425,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -17482,7 +16458,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -17589,7 +16564,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -17606,7 +16580,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -17623,7 +16596,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -17641,7 +16613,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -17658,7 +16629,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "LW",
@@ -17676,7 +16646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -17693,7 +16662,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "LB",
@@ -17711,7 +16679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -17728,7 +16695,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -17746,7 +16712,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -17761,7 +16726,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -17779,7 +16743,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -17796,7 +16759,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -17814,7 +16776,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -17829,7 +16790,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -17844,7 +16804,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -17859,7 +16818,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -17876,7 +16834,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -17895,7 +16852,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -17913,7 +16869,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -17931,7 +16886,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -17946,7 +16900,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -17961,7 +16914,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -17979,7 +16931,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -17996,7 +16947,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -18013,7 +16963,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 90,
@@ -18028,7 +16977,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -18043,7 +16991,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -18061,7 +17008,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -18092,7 +17038,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -18110,7 +17055,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -18127,7 +17071,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "CAM",
         "altPositions": [],
         "rating": 78,
@@ -18142,7 +17085,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -18157,7 +17099,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "CDM",
         "altPositions": [],
         "rating": 79,
@@ -18172,7 +17113,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -18187,7 +17127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "RM",
         "altPositions": [],
         "rating": 77,
@@ -18202,7 +17141,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -18217,7 +17155,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Bundesliga",
         "club": "Eintracht Frankfurt",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 78,
@@ -18372,7 +17309,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Monchengladbach",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 76,
@@ -18401,7 +17337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -18416,7 +17351,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -18431,7 +17365,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -18446,7 +17379,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -18461,7 +17393,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -18478,7 +17409,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CAM"
@@ -18495,7 +17425,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LM"
@@ -18512,7 +17441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 80,
@@ -18527,7 +17455,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -18542,7 +17469,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -18557,7 +17483,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -18574,7 +17499,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -18592,7 +17516,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -18610,7 +17533,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -18627,7 +17549,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -18642,7 +17563,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -18659,7 +17579,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -18676,7 +17595,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -18694,7 +17612,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 86,
@@ -18709,7 +17626,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -18744,7 +17660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -18759,7 +17674,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -18776,7 +17690,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -18791,7 +17704,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -18809,7 +17721,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -18842,7 +17753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -18859,7 +17769,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM",
@@ -18877,7 +17786,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇧",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -18906,7 +17814,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -18921,7 +17828,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -18938,7 +17844,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -18953,7 +17858,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -18968,7 +17872,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
-        "clubBadge": "👮",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -18983,7 +17886,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
-        "clubBadge": "👮",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -18998,7 +17900,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
-        "clubBadge": "👮",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -19016,7 +17917,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "CAHN",
-        "clubBadge": "👮",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -19034,7 +17934,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "V-League",
         "club": "CAHN",
-        "clubBadge": "👮",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -19053,7 +17952,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "V-League",
         "club": "CAHN",
-        "clubBadge": "👮",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -19068,7 +17966,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
-        "clubBadge": "🏰",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -19085,7 +17982,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
-        "clubBadge": "🏰",
         "position": "CM",
         "altPositions": [],
         "rating": 71,
@@ -19100,7 +17996,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
-        "clubBadge": "🏰",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -19115,7 +18010,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Nam Định",
-        "clubBadge": "🏰",
         "position": "LB",
         "altPositions": [],
         "rating": 69,
@@ -19130,7 +18024,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "V-League",
         "club": "Nam Định",
-        "clubBadge": "🏰",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -19145,7 +18038,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "V-League",
         "club": "Hà Nội",
-        "clubBadge": "🗼",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -19180,7 +18072,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 92,
@@ -19195,7 +18086,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -19212,7 +18102,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -19227,7 +18116,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -19246,7 +18134,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "CAM",
@@ -19264,7 +18151,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -19281,7 +18167,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "RWB",
         "altPositions": [
             "RW",
@@ -19300,7 +18185,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 94,
@@ -19315,7 +18199,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 92,
@@ -19330,7 +18213,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -19345,7 +18227,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -19363,7 +18244,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -19378,7 +18258,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -19396,7 +18275,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -19415,7 +18293,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -19433,7 +18310,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -19451,7 +18327,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -19466,7 +18341,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -19483,7 +18357,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -19498,7 +18371,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -19515,7 +18387,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -19533,7 +18404,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "ST",
@@ -19552,7 +18422,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -19570,7 +18439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -19587,7 +18455,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Brentford",
-        "clubBadge": "🐝",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -19605,7 +18472,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Nottingham Forest",
-        "clubBadge": "🌳",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -19620,7 +18486,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -19638,7 +18503,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -19656,7 +18520,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -19671,7 +18534,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -19689,7 +18551,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -19704,7 +18565,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -19719,7 +18579,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -19737,7 +18596,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -19755,7 +18613,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -19772,7 +18629,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -19790,7 +18646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -19805,7 +18660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -19822,7 +18676,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -19837,7 +18690,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -19855,7 +18707,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -19874,7 +18725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -19892,7 +18742,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -19909,7 +18758,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇦",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -19926,7 +18774,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -19943,7 +18790,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -19961,7 +18807,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -19978,7 +18823,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "🐺",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -19993,7 +18837,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -20008,7 +18851,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "EFL Championship",
         "club": "Burnley",
-        "clubBadge": "🍇",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -20025,7 +18867,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Burnley",
-        "clubBadge": "🍇",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -20043,7 +18884,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "EFL Championship",
         "club": "Burnley",
-        "clubBadge": "🍇",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -20061,7 +18901,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "EFL Championship",
         "club": "Burnley",
-        "clubBadge": "🍇",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -20076,7 +18915,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "EFL Championship",
         "club": "Stoke City",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -20091,7 +18929,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "EFL Championship",
         "club": "Stoke City",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -20108,7 +18945,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "EFL Championship",
         "club": "Stoke City",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -20126,7 +18962,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "EFL Championship",
         "club": "Stoke City",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -20159,7 +18994,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -20177,7 +19011,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -20194,7 +19027,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -20212,7 +19044,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "RB"
@@ -20229,7 +19060,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -20247,7 +19077,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "EFL Championship",
         "club": "Blackburn Rovers",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -20262,7 +19091,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -20277,7 +19105,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -20292,7 +19119,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -20307,7 +19133,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "RB",
         "altPositions": [],
         "rating": 76,
@@ -20322,7 +19147,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -20351,7 +19175,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -20366,7 +19189,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "LM",
         "altPositions": [],
         "rating": 71,
@@ -20381,7 +19203,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -20396,7 +19217,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "RM",
         "altPositions": [],
         "rating": 77,
@@ -20411,7 +19231,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CAM",
         "altPositions": [],
         "rating": 76,
@@ -20440,7 +19259,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -20455,7 +19273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "CDM",
         "altPositions": [],
         "rating": 71,
@@ -20470,7 +19287,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "RW",
         "altPositions": [],
         "rating": 74,
@@ -20499,7 +19315,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "RW",
         "altPositions": [],
         "rating": 74,
@@ -20514,7 +19329,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "RW",
         "altPositions": [],
         "rating": 70,
@@ -20529,7 +19343,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "ST",
         "altPositions": [],
         "rating": 68,
@@ -20544,7 +19357,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -20559,7 +19371,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -20574,7 +19385,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "WC26",
         "club": "Ecuador",
-        "clubBadge": "🇪🇨",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -20589,7 +19399,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -20604,7 +19413,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 71,
@@ -20633,7 +19441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 73,
@@ -20648,7 +19455,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -20663,7 +19469,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -20678,7 +19483,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 68,
@@ -20693,7 +19497,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -20708,7 +19511,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -20723,7 +19525,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 71,
@@ -20738,7 +19539,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 78,
@@ -20753,7 +19553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "RM",
         "altPositions": [],
         "rating": 69,
@@ -20782,7 +19581,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CDM",
         "altPositions": [],
         "rating": 77,
@@ -20797,7 +19595,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CDM",
         "altPositions": [],
         "rating": 71,
@@ -20812,7 +19609,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 67,
@@ -20827,7 +19623,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "LW",
         "altPositions": [],
         "rating": 73,
@@ -20842,7 +19637,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CAM",
         "altPositions": [],
         "rating": 79,
@@ -20857,7 +19651,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -20872,7 +19665,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "LM",
         "altPositions": [],
         "rating": 72,
@@ -20887,7 +19679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -20906,7 +19697,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -20921,7 +19711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -20936,7 +19725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "CAM",
         "altPositions": [],
         "rating": 71,
@@ -20965,7 +19753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -20980,7 +19767,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -20995,7 +19781,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "LB",
         "altPositions": [],
         "rating": 75,
@@ -21052,7 +19837,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -21095,7 +19879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -21154,7 +19937,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "CAM",
         "altPositions": [],
         "rating": 72,
@@ -21211,7 +19993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "RW",
         "altPositions": [],
         "rating": 72,
@@ -21240,7 +20021,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "WC26",
         "club": "Ghana",
-        "clubBadge": "🇬🇭",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -21339,7 +20119,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -21354,7 +20133,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -21369,7 +20147,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -21384,7 +20161,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -21399,7 +20175,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -21414,7 +20189,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -21429,7 +20203,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -21444,7 +20217,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "LB",
         "altPositions": [
             "RB"
@@ -21461,7 +20233,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -21476,7 +20247,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "RM",
         "altPositions": [],
         "rating": 75,
@@ -21491,7 +20261,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "RM",
         "altPositions": [],
         "rating": 70,
@@ -21506,7 +20275,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "LM",
         "altPositions": [],
         "rating": 73,
@@ -21521,7 +20289,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -21536,7 +20303,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -21551,7 +20317,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "LM",
         "altPositions": [],
         "rating": 73,
@@ -21566,7 +20331,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -21581,7 +20345,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -21610,7 +20373,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "RB",
         "altPositions": [
             "CDM"
@@ -21627,7 +20389,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -21642,7 +20403,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "WC26",
         "club": "Canada",
-        "clubBadge": "🇨🇦",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -21660,7 +20420,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -21675,7 +20434,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "GK",
         "altPositions": [],
         "rating": 71,
@@ -21690,7 +20448,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "GK",
         "altPositions": [],
         "rating": 69,
@@ -21705,7 +20462,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "GK",
         "altPositions": [],
         "rating": 67,
@@ -21720,7 +20476,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -21735,7 +20490,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "RB",
         "altPositions": [],
         "rating": 68,
@@ -21750,7 +20504,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CDM",
         "altPositions": [],
         "rating": 74,
@@ -21765,7 +20518,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -21780,7 +20532,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -21795,7 +20546,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LB",
         "altPositions": [],
         "rating": 72,
@@ -21810,7 +20560,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -21825,7 +20574,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -21840,7 +20588,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -21855,7 +20602,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -21873,7 +20619,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CDM",
         "altPositions": [],
         "rating": 74,
@@ -21888,7 +20633,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CDM",
         "altPositions": [],
         "rating": 73,
@@ -21903,7 +20647,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "RM",
         "altPositions": [],
         "rating": 76,
@@ -21918,7 +20661,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LM",
         "altPositions": [],
         "rating": 74,
@@ -21933,7 +20675,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LW",
         "altPositions": [],
         "rating": 73,
@@ -21948,7 +20689,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -21963,7 +20703,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -21978,7 +20717,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LW",
         "altPositions": [],
         "rating": 72,
@@ -21993,11 +20731,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "GK",
         "altPositions": [],
-        "rating": 75,
-        "photo": "",
+        "rating": 80,
+        "photo": "https://dims.apnews.com/dims4/default/47d7f6d/2147483647/strip/true/crop/5271x3514+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd0%2F7c%2F1dec778f10829505536c242f99e3%2Fb8389150afa24d4399340a87c59a5cd7",
         "cardTheme": "worldcup26"
     },
     {
@@ -22008,7 +20745,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 71,
@@ -22023,10 +20759,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "GK",
         "altPositions": [],
-        "rating": 69,
+        "rating": 71,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22038,11 +20773,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CB",
-        "altPositions": [],
-        "rating": 76,
-        "photo": "",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 80,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazXuo-voME9hj9DKiQMrR2rK5Ht0n4TlCMuNcR2tmfw&s",
         "cardTheme": "worldcup26"
     },
     {
@@ -22053,10 +20789,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "LB",
         "altPositions": [],
-        "rating": 72,
+        "rating": 74,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22068,7 +20803,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 67,
@@ -22083,7 +20817,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -22098,7 +20831,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -22113,10 +20845,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "LB",
         "altPositions": [],
-        "rating": 73,
+        "rating": 74,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22128,7 +20859,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -22143,10 +20873,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CB",
         "altPositions": [],
-        "rating": 75,
+        "rating": 79,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22194,9 +20923,11 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "Norway",
         "position": "CDM",
-        "altPositions": [],
-        "rating": 81,
-        "photo": "",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP0XC2VeUlONkos1Q9yps4PhYMOFWzWNakONdm6FSFKxF5Mh5aj_XGiUQ&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -22207,7 +20938,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -22222,10 +20952,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "CM",
         "altPositions": [],
-        "rating": 74,
+        "rating": 78,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22240,7 +20969,7 @@ const DEFAULT_PLAYERS = [
         "position": "RW",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJXwzALS0EbqgUfQvyHVG0qbT6c2nyagspwEIJKynHnacRvP-BYPBFsDQ&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -22251,10 +20980,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "LW",
         "altPositions": [],
-        "rating": 73,
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -22266,11 +20994,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "WC26",
         "club": "Norway",
-        "clubBadge": "🇳🇴",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShoi7qqRlpVXCzXO_skBp_BlVsJGwwd6VDHxe9hruXVAIP5LfJrin7Zir0&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -22299,7 +21026,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -22328,7 +21054,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -22343,7 +21068,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -22358,7 +21082,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -22373,7 +21096,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "RB",
         "altPositions": [],
         "rating": 82,
@@ -22388,7 +21110,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -22403,7 +21124,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -22418,7 +21138,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -22433,7 +21152,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "RB",
         "altPositions": [],
         "rating": 71,
@@ -22448,7 +21166,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -22463,7 +21180,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -22478,7 +21194,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CAM",
         "altPositions": [],
         "rating": 76,
@@ -22493,7 +21208,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 67,
@@ -22508,7 +21222,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 78,
@@ -22523,7 +21236,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 68,
@@ -22552,7 +21264,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -22567,7 +21278,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -22582,7 +21292,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -22597,7 +21306,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
-        "clubBadge": "🏴‍󠁧󠁢󠁳󠁣󠁴󠁿",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -22626,7 +21334,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -22641,7 +21348,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -22656,7 +21362,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -22671,7 +21376,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -22686,7 +21390,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -22715,7 +21418,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -22730,7 +21432,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "RWB",
         "altPositions": [
             "RB",
@@ -22766,7 +21467,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -22783,7 +21483,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 73,
@@ -22798,7 +21497,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CDM",
         "altPositions": [],
         "rating": 73,
@@ -22813,7 +21511,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 82,
@@ -22856,7 +21553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -22875,7 +21571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -22892,7 +21587,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "RW",
         "altPositions": [],
         "rating": 71,
@@ -22907,7 +21601,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "WC26",
         "club": "Croatia",
-        "clubBadge": "🇭🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -22936,7 +21629,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -22965,7 +21657,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -22980,7 +21671,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -22995,7 +21685,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -23010,7 +21699,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -23025,7 +21713,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -23040,7 +21727,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CDM",
         "altPositions": [],
         "rating": 76,
@@ -23055,7 +21741,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CDM",
         "altPositions": [],
         "rating": 75,
@@ -23070,7 +21755,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -23099,7 +21783,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "RM",
         "altPositions": [],
         "rating": 73,
@@ -23114,7 +21797,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "RW",
         "altPositions": [],
         "rating": 70,
@@ -23129,7 +21811,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -23144,7 +21825,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -23159,55 +21839,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "WC26",
         "club": "Austria",
-        "clubBadge": "🇦🇹",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "casteels-wc26",
-        "name": "Koen Casteels",
-        "cardName": "Casteels",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "GK",
-        "altPositions": [],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "kaminski-wc26",
-        "name": "Thomas Kaminski",
-        "cardName": "Kaminski",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "GK",
-        "altPositions": [],
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "debast-wc26",
-        "name": "Zeno Debast",
-        "cardName": "Debast",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 76,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -23222,7 +21856,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://www.omanobserver.om/omanobserver/uploads/images/2026/07/01/3436772.JPG",
         "cardTheme": "worldcup26"
     },
     {
@@ -23250,41 +21884,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "RB",
         "altPositions": [],
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "mangala-wc26",
-        "name": "Orel Mangala",
-        "cardName": "Mangala",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "CDM",
-        "altPositions": [],
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "vermeeren-wc26",
-        "name": "Arthur Vermeeren",
-        "cardName": "Vermeeren",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "CM",
-        "altPositions": [],
-        "rating": 73,
-        "photo": "",
+        "rating": 77,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8sb5g0EXCGs8xChOJkQ4EplzAgz6zz1SO-gz0mDcFlW3aIIPqUzf85oA&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -23295,26 +21898,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CF",
         "altPositions": [],
         "rating": 82,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "carrasco-wc26",
-        "name": "Yannick Carrasco",
-        "cardName": "Carrasco",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "LM",
-        "altPositions": [],
-        "rating": 80,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcknbsRriYUsAe-ynBqld0Yq8q1i0xUW52pmI1_eX9yTggwrs8NO8-3m3G&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -23325,56 +21912,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "RW",
         "altPositions": [],
-        "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "lokonga-wc26",
-        "name": "Albert Sambi Lokonga",
-        "cardName": "Lokonga",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "CM",
-        "altPositions": [],
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "batshuayi-wc26",
-        "name": "Michy Batshuayi",
-        "cardName": "Batshuayi",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "ST",
-        "altPositions": [],
-        "rating": 75,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "benteke-wc26",
-        "name": "Christian Benteke",
-        "cardName": "Benteke",
-        "nationality": "Belgium",
-        "flag": "🇧🇪",
-        "league": "WC26",
-        "club": "Belgium",
-        "clubBadge": "🇧🇪",
-        "position": "ST",
-        "altPositions": [],
-        "rating": 73,
-        "photo": "",
+        "rating": 78,
+        "photo": "https://s1.abcstatics.com/abc/www/multimedia/deportes/2026/06/26/lukebakio-sevilla-plusvalia-RwvUMsWs2jJEaNyLXZbWqJM-1200x840@diario_abc.JPG",
         "cardTheme": "worldcup26"
     },
     {
@@ -23385,7 +21926,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -23400,7 +21940,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -23415,7 +21954,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -23432,7 +21970,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -23449,7 +21986,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -23478,7 +22014,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -23507,7 +22042,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -23536,7 +22070,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -23551,7 +22084,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -23566,7 +22098,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "RB",
         "altPositions": [],
         "rating": 79,
@@ -23595,7 +22126,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "RB",
         "altPositions": [],
         "rating": 81,
@@ -23610,7 +22140,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -23644,7 +22173,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "CDM",
         "altPositions": [],
         "rating": 84,
@@ -23659,7 +22187,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "RB",
         "altPositions": [
             "CM"
@@ -23707,7 +22234,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "WC26",
         "club": "Portugal",
-        "clubBadge": "🇵🇹",
         "position": "CF",
         "altPositions": [],
         "rating": 80,
@@ -23750,55 +22276,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "GK",
         "altPositions": [],
-        "rating": 72,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "benabid-wc26",
-        "name": "El Mehdi Benabid",
-        "cardName": "Benabid",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "GK",
-        "altPositions": [],
-        "rating": 69,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "aguerd-wc26",
-        "name": "Nayef Aguerd",
-        "cardName": "Aguerd",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 79,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "saiss-wc26",
-        "name": "Romain Saïss",
-        "cardName": "Saïss",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 76,
+        "rating": 68,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -23810,71 +22290,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "abqar-wc26",
-        "name": "Abdel Abqar",
-        "cardName": "Abqar",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "CB",
-        "altPositions": [],
-        "rating": 74,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "attiyatallah-wc26",
-        "name": "Yahia Attiyat Allah",
-        "cardName": "Attiyat Allah",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "LB",
-        "altPositions": [],
-        "rating": 73,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "chibi-wc26",
-        "name": "Mohamed Chibi",
-        "cardName": "Chibi",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "RB",
-        "altPositions": [],
-        "rating": 71,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "elazzouzi-wc26",
-        "name": "Oussama El Azzouzi",
-        "cardName": "El Azzouzi",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "CDM",
-        "altPositions": [],
-        "rating": 73,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt5_4QZLNgYvpI_Ggpom_zR_b3CT6U49dN2i3AHge2Ol5TAxeGCSOUFZCp&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -23885,28 +22304,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
         "rating": 78,
         "photo": "https://pbs.twimg.com/media/HKwqhujXwAAu2Gi.jpg",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "richardson-wc26",
-        "name": "Amir Richardson",
-        "cardName": "Richardson",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "CM",
-        "altPositions": [],
-        "rating": 75,
-        "photo": "",
         "cardTheme": "worldcup26"
     },
     {
@@ -23917,14 +22320,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "LM",
         "altPositions": [
             "LW",
             "CAM"
         ],
         "rating": 78,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_-jh0wyekS53NePiyOOxsVTJXHaGnthwDeWqk3MbyFEPivFGMqFcVfTk7&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -23952,10 +22354,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CAM",
         "altPositions": [],
-        "rating": 77,
+        "rating": 79,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -23967,7 +22368,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -23978,20 +22378,6 @@ const DEFAULT_PLAYERS = [
         "cardTheme": "ucl"
     },
     {
-        "id": "adli-wc26",
-        "name": "Amine Adli",
-        "cardName": "Adli",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "position": "LW",
-        "altPositions": [],
-        "rating": 83,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
         "id": "abde-wc26",
         "name": "Abde Ezzalzouli",
         "cardName": "Abde",
@@ -23999,25 +22385,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "LW",
         "altPositions": [],
         "rating": 76,
-        "photo": "",
-        "cardTheme": "worldcup26"
-    },
-    {
-        "id": "benseghir-wc26",
-        "name": "Eliesse Ben Seghir",
-        "cardName": "Ben Seghir",
-        "nationality": "Morocco",
-        "flag": "🇲🇦",
-        "league": "WC26",
-        "club": "Morocco",
-        "clubBadge": "🇲🇦",
-        "position": "LW",
-        "altPositions": [],
-        "rating": 74,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -24029,7 +22399,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -24058,7 +22427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -24073,7 +22441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -24088,7 +22455,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -24103,7 +22469,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -24120,7 +22485,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -24137,7 +22501,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -24152,7 +22515,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -24183,7 +22545,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "RB",
         "altPositions": [],
         "rating": 79,
@@ -24198,7 +22559,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -24217,7 +22577,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CM",
         "altPositions": [],
         "rating": 88,
@@ -24232,7 +22591,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CAM",
         "altPositions": [],
         "rating": 82,
@@ -24247,7 +22605,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CM",
         "altPositions": [],
         "rating": 84,
@@ -24262,7 +22619,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -24297,7 +22653,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -24314,7 +22669,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "WC26",
         "club": "Netherlands",
-        "clubBadge": "🇳🇱",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -24332,7 +22686,7 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "altPositions": [],
         "rating": 83,
-        "photo": "",
+        "photo": "https://vcdn1-thethao.vnecdn.net/2026/06/24/Brobbey-PNG-1782313195-7856-1782313881.png?w=1020&h=0&q=100&dpr=1&fit=crop&s=_5_dfbBh7fxknPewYrvi6A",
         "cardTheme": "worldcup26"
     },
     {
@@ -24343,7 +22697,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -24358,7 +22711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -24373,7 +22725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -24390,7 +22741,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -24405,10 +22755,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CB",
         "altPositions": [],
-        "rating": 74,
+        "rating": 75,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -24420,7 +22769,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "LWB",
         "altPositions": [
             "LB"
@@ -24437,7 +22785,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "LM",
         "altPositions": [],
         "rating": 71,
@@ -24452,7 +22799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "RW",
         "altPositions": [],
         "rating": 82,
@@ -24467,7 +22813,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -24484,7 +22829,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -24499,10 +22843,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CB",
         "altPositions": [],
-        "rating": 75,
+        "rating": 78,
         "photo": "https://pbs.twimg.com/media/HK1q4pRWsAADIVR.jpg",
         "cardTheme": "worldcup26"
     },
@@ -24514,7 +22857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -24529,7 +22871,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "RB",
         "altPositions": [],
         "rating": 76,
@@ -24558,7 +22899,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -24573,7 +22913,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -24616,7 +22955,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "WC26",
         "club": "Spain",
-        "clubBadge": "🇪🇸",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -24631,7 +22969,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -24649,7 +22986,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -24666,7 +23002,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -24683,7 +23018,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -24701,7 +23035,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -24718,7 +23051,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -24735,7 +23067,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -24752,7 +23083,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -24781,7 +23111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -24796,7 +23125,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -24843,7 +23171,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -24860,7 +23187,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "CDM",
         "altPositions": [],
         "rating": 77,
@@ -24875,7 +23201,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "CAM",
         "altPositions": [],
         "rating": 74,
@@ -24890,7 +23215,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -24905,7 +23229,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -24939,7 +23262,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -24954,7 +23276,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -24969,7 +23290,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -24984,7 +23304,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -24999,7 +23318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -25014,7 +23332,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -25029,7 +23346,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -25044,7 +23360,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "LB",
         "altPositions": [],
         "rating": 68,
@@ -25059,7 +23374,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "RB",
         "altPositions": [],
         "rating": 71,
@@ -25074,7 +23388,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "LB",
         "altPositions": [],
         "rating": 69,
@@ -25089,7 +23402,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -25136,7 +23448,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -25170,7 +23481,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -25199,7 +23509,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 71,
@@ -25214,7 +23523,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 70,
@@ -25229,7 +23537,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -25246,7 +23553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -25264,7 +23570,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CDM",
@@ -25282,7 +23587,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -25299,7 +23603,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -25332,7 +23635,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -25349,7 +23651,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -25364,7 +23665,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -25379,7 +23679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -25396,7 +23695,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 94,
@@ -25411,7 +23709,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -25428,7 +23725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -25445,7 +23741,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "WC26",
         "club": "South Africa",
-        "clubBadge": "🇿🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -25460,7 +23755,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -25477,7 +23771,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -25495,7 +23788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -25510,7 +23802,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -25525,7 +23816,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -25540,7 +23830,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -25558,7 +23847,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -25576,7 +23864,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -25593,7 +23880,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -25611,7 +23897,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CM",
@@ -25629,7 +23914,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -25647,7 +23931,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -25680,7 +23963,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -25695,7 +23977,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -25714,7 +23995,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 94,
@@ -25729,7 +24009,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -25746,7 +24025,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -25764,7 +24042,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [],
         "rating": 93,
@@ -25779,7 +24056,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -25813,7 +24089,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -25828,7 +24103,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -25845,11 +24119,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKAPFkBSzA5Iu8l3gbfgMIgZ7UkZJe-P3M8hhjactxk-nwmtHfcr3wLZI&s=10",
         "cardTheme": "gc"
     },
     {
@@ -25860,7 +24133,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -25875,7 +24147,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -25904,7 +24175,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -25935,7 +24205,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -25953,7 +24222,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -25968,7 +24236,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -25985,7 +24252,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -26035,7 +24301,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -26050,7 +24315,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -26068,7 +24332,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
-        "clubBadge": "🇯🇵",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -26088,7 +24351,7 @@ const DEFAULT_PLAYERS = [
             "CF"
         ],
         "rating": 83,
-        "photo": "",
+        "photo": "https://cdnmedia.webthethao.vn/uploads/2026-06-29/ayase-ueda-nhat-ban-brazil-3.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -26099,7 +24362,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -26114,7 +24376,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -26129,7 +24390,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -26144,7 +24404,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -26161,7 +24420,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -26176,7 +24434,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -26191,7 +24448,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 72,
@@ -26206,7 +24462,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -26223,7 +24478,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -26240,7 +24494,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "LB",
         "altPositions": [],
         "rating": 71,
@@ -26255,7 +24508,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -26273,7 +24525,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -26288,7 +24539,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -26305,7 +24555,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -26323,7 +24572,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -26340,7 +24588,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -26358,7 +24605,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -26375,7 +24621,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -26392,7 +24637,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -26409,7 +24653,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -26424,7 +24667,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -26439,7 +24681,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "🇰🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -26468,7 +24709,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "GK",
         "altPositions": [],
         "rating": 71,
@@ -26483,7 +24723,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -26498,7 +24737,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -26513,7 +24751,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -26562,7 +24799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -26579,7 +24815,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -26596,7 +24831,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -26611,7 +24845,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -26656,7 +24889,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -26673,7 +24905,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -26691,7 +24922,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -26708,7 +24938,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -26725,7 +24954,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -26742,7 +24970,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "LW",
         "altPositions": [
             "CAM",
@@ -26777,7 +25004,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -26792,7 +25018,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -26809,7 +25034,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "WC26",
         "club": "Uzbekistan",
-        "clubBadge": "🇺🇿",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -26826,7 +25050,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -26841,7 +25064,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -26856,7 +25078,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -26871,7 +25092,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -26886,7 +25106,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -26903,7 +25122,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -26918,7 +25136,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -26935,7 +25152,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -26950,7 +25166,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 68,
@@ -26965,7 +25180,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "RB",
         "altPositions": [
             "RM"
@@ -26982,7 +25196,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "LB",
         "altPositions": [],
         "rating": 67,
@@ -26997,7 +25210,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -27014,7 +25226,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "LB",
         "altPositions": [],
         "rating": 69,
@@ -27029,7 +25240,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -27046,7 +25256,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -27063,7 +25272,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CM",
         "altPositions": [],
         "rating": 69,
@@ -27078,7 +25286,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -27095,7 +25302,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -27112,7 +25318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "CM",
         "altPositions": [],
         "rating": 68,
@@ -27127,7 +25332,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "LM",
         "altPositions": [
             "CAM",
@@ -27145,7 +25349,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "ST",
         "altPositions": [],
         "rating": 68,
@@ -27160,7 +25363,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -27178,7 +25380,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -27195,7 +25396,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "ST",
         "altPositions": [],
         "rating": 68,
@@ -27210,7 +25410,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇴",
         "league": "WC26",
         "club": "Jordan",
-        "clubBadge": "🇯🇴",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -27228,7 +25427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -27245,7 +25443,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Crystal Palace",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -27262,7 +25459,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -27279,7 +25475,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "RM",
@@ -27297,7 +25492,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 86,
@@ -27312,7 +25506,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 93,
@@ -27327,7 +25520,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -27344,7 +25536,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -27361,7 +25552,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "🐓",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -27376,7 +25566,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -27394,7 +25583,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -27411,7 +25599,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "🐓",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -27428,7 +25615,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "🐓",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -27445,7 +25631,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -27463,7 +25648,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -27478,7 +25662,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -27493,7 +25676,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -27508,7 +25690,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "RB",
         "altPositions": [],
         "rating": 72,
@@ -27537,7 +25718,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -27552,7 +25732,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -27567,7 +25746,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "RB",
         "altPositions": [],
         "rating": 71,
@@ -27582,7 +25760,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -27599,7 +25776,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -27614,7 +25790,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -27629,7 +25804,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "RB",
         "altPositions": [],
         "rating": 68,
@@ -27644,7 +25818,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "LB",
         "altPositions": [
             "CM"
@@ -27661,7 +25834,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -27676,7 +25848,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 72,
@@ -27691,7 +25862,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CDM",
         "altPositions": [],
         "rating": 73,
@@ -27706,7 +25876,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 71,
@@ -27721,7 +25890,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -27736,7 +25904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 71,
@@ -27751,7 +25918,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -27768,7 +25934,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -27783,7 +25948,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -27798,7 +25962,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "LW",
         "altPositions": [],
         "rating": 71,
@@ -27813,7 +25976,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇦",
         "league": "WC26",
         "club": "Saudi Arabia",
-        "clubBadge": "🇸🇦",
         "position": "ST",
         "altPositions": [
             "CAM"
@@ -27830,7 +25992,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "WC26",
         "club": "Australia",
-        "clubBadge": "🇦🇺",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
@@ -27859,7 +26020,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -27874,7 +26034,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -27889,7 +26048,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "LB",
         "altPositions": [],
         "rating": 75,
@@ -27904,7 +26062,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -27921,7 +26078,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -27936,7 +26092,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -27953,7 +26108,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -27970,7 +26124,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -27985,7 +26138,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -28000,7 +26152,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -28039,7 +26190,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -28056,7 +26206,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -28073,7 +26222,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -28091,7 +26239,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CM",
         "altPositions": [
             "LM",
@@ -28109,7 +26256,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -28127,7 +26273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -28142,7 +26287,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -28160,7 +26304,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -28178,7 +26321,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "CAM",
         "altPositions": [
             "ST"
@@ -28195,7 +26337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "WC26",
         "club": "Switzerland",
-        "clubBadge": "🇨🇭",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -28224,7 +26365,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "GK",
         "altPositions": [],
         "rating": 67,
@@ -28239,7 +26379,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -28256,7 +26395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "LB",
         "altPositions": [],
         "rating": 72,
@@ -28271,7 +26409,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -28286,7 +26423,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -28301,7 +26437,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 68,
@@ -28316,7 +26451,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "RB",
         "altPositions": [],
         "rating": 67,
@@ -28331,7 +26465,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 66,
@@ -28346,7 +26479,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -28364,7 +26496,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -28381,7 +26512,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -28399,7 +26529,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -28417,7 +26546,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -28434,7 +26562,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "RM",
         "altPositions": [],
         "rating": 66,
@@ -28449,7 +26576,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -28467,7 +26593,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
-        "clubBadge": "🇳🇿",
         "position": "LW",
         "altPositions": [],
         "rating": 65,
@@ -28513,7 +26638,7 @@ const DEFAULT_PLAYERS = [
         "position": "GK",
         "altPositions": [],
         "rating": 73,
-        "photo": "",
+        "photo": "https://photo.znews.vn/w1210/Uploaded/wqdyqdxwp/2026_06_25/Luca_Zidane_World_Cup_2026_06_03T185921Z_1917674091_UP1EM631GQWAY_RTRMADP_3_SOCCER_FRIENDLY_NLD_DZA.JPG",
         "cardTheme": "worldcup26"
     },
     {
@@ -28524,7 +26649,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -28555,7 +26679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -28570,7 +26693,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -28587,7 +26709,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -28606,7 +26727,7 @@ const DEFAULT_PLAYERS = [
         "club": "Algeria",
         "position": "LB",
         "altPositions": [],
-        "rating": 73,
+        "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28627,7 +26748,7 @@ const DEFAULT_PLAYERS = [
             "CB"
         ],
         "rating": 79,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZdUNr0ZcV09g9B2nllOj8NgRpwUzWYqjpFQFuJfbmV8Vb7yc9piHPW8v&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -28638,11 +26759,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtr47fRCJkhUOdBBTAL6_89z1NElzYLmJTKJWQG4i1Ag&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -28653,7 +26773,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -28670,7 +26789,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -28687,12 +26805,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
-        "rating": 72,
+        "rating": 75,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28704,12 +26821,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
-        "rating": 75,
+        "rating": 72,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28721,13 +26837,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
-        "rating": 78,
-        "photo": "",
+        "rating": 79,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdPBU7DLaVPFCM5GyLaNaIEv7wGmjImKk3EKY2l6omzmM0Lgm5-vduyv1&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -28738,13 +26853,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 80,
-        "photo": "",
+        "photo": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/6/4/ibrahim-maza-1-17805860075581326771702.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -28755,7 +26869,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -28772,12 +26885,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "RW",
         "altPositions": [
             "RM"
         ],
-        "rating": 73,
+        "rating": 68,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -28789,7 +26901,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -28804,7 +26915,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -28821,7 +26931,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "🇩🇿",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -28838,7 +26947,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -28853,7 +26961,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 69,
@@ -28868,7 +26975,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -28883,7 +26989,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -28900,7 +27005,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -28931,7 +27035,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -28946,7 +27049,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -28963,7 +27065,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -28980,7 +27081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -28997,7 +27097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29014,7 +27113,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29031,7 +27129,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29048,7 +27145,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "RM",
         "altPositions": [
             "CAM"
@@ -29065,7 +27161,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29082,7 +27177,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29115,7 +27209,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29132,7 +27225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29149,7 +27241,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -29166,7 +27257,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -29183,7 +27273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "WC26",
         "club": "Bosnia",
-        "clubBadge": "🇧🇦",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -29200,7 +27289,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -29215,7 +27303,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -29230,7 +27317,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -29245,7 +27331,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -29278,7 +27363,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -29293,7 +27377,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -29310,7 +27393,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -29327,7 +27409,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "LB",
         "altPositions": [],
         "rating": 73,
@@ -29337,12 +27418,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "stevenmoreira-wc26",
         "name": "Steven Moreira",
-        "cardName": "Moreira",
+        "cardName": "S. Moreira",
         "nationality": "Cape Verde",
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -29359,7 +27439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -29376,7 +27455,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CB",
         "altPositions": [],
         "rating": 66,
@@ -29391,7 +27469,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29408,7 +27485,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29425,7 +27501,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29442,7 +27517,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29459,7 +27533,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29476,7 +27549,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29493,7 +27565,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -29510,7 +27581,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -29527,7 +27597,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -29542,7 +27611,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -29559,7 +27627,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -29576,7 +27643,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -29591,7 +27657,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -29608,7 +27673,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "🇨🇻",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -29625,7 +27689,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -29640,7 +27703,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -29655,7 +27717,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -29670,7 +27731,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -29687,7 +27747,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -29702,7 +27761,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -29719,7 +27777,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -29736,7 +27793,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -29751,7 +27807,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -29784,7 +27839,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29801,7 +27855,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29818,7 +27871,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29835,7 +27887,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29852,7 +27903,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29869,7 +27919,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29886,7 +27935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -29903,7 +27951,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -29920,7 +27967,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -29937,7 +27983,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -29968,7 +28013,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "WC26",
         "club": "Colombia",
-        "clubBadge": "🇨🇴",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -29999,7 +28043,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "GK",
         "altPositions": [],
         "rating": 64,
@@ -30014,7 +28057,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "GK",
         "altPositions": [],
         "rating": 63,
@@ -30029,7 +28071,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -30046,7 +28087,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -30063,7 +28103,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -30078,7 +28117,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -30095,7 +28133,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -30126,7 +28163,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -30143,7 +28179,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -30160,7 +28195,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30177,7 +28211,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30194,7 +28227,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30211,7 +28243,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -30228,7 +28259,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30245,7 +28275,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -30262,7 +28291,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -30279,7 +28307,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -30294,7 +28321,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -30311,7 +28337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -30328,7 +28353,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "ST",
         "altPositions": [],
         "rating": 67,
@@ -30343,7 +28367,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇼",
         "league": "WC26",
         "club": "Curaçao",
-        "clubBadge": "🇨🇼",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -30376,7 +28399,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -30391,7 +28413,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "GK",
         "altPositions": [],
         "rating": 69,
@@ -30406,7 +28427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -30421,7 +28441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -30438,7 +28457,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "LWB",
         "altPositions": [
             "LB",
@@ -30456,7 +28474,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -30471,7 +28488,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30488,7 +28504,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -30505,7 +28520,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30522,7 +28536,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -30539,7 +28552,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -30554,7 +28566,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -30571,7 +28582,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "WC26",
         "club": "Czechia",
-        "clubBadge": "🇨🇿",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -30588,7 +28598,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -30603,7 +28612,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -30618,7 +28626,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -30633,7 +28640,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -30650,7 +28656,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -30667,7 +28672,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -30682,7 +28686,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -30699,7 +28702,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -30716,7 +28718,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -30731,7 +28732,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -30748,7 +28748,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -30765,7 +28764,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -30780,7 +28778,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -30797,7 +28794,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30814,7 +28810,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -30831,7 +28826,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -30848,7 +28842,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -30865,7 +28858,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -30880,7 +28872,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -30897,7 +28888,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -30914,7 +28904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "RM",
         "altPositions": [
             "ST",
@@ -30933,7 +28922,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -30966,7 +28954,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -30981,7 +28968,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇹",
         "league": "WC26",
         "club": "Haiti",
-        "clubBadge": "🇭🇹",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -30998,7 +28984,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "GK",
         "altPositions": [],
         "rating": 64,
@@ -31013,7 +28998,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -31028,7 +29012,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "GK",
         "altPositions": [],
         "rating": 65,
@@ -31059,7 +29042,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -31076,7 +29058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -31091,7 +29072,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31108,7 +29088,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -31125,7 +29104,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CB",
         "altPositions": [],
         "rating": 67,
@@ -31156,7 +29134,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -31203,7 +29180,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31236,7 +29212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31253,7 +29228,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -31270,7 +29244,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31303,7 +29276,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31320,7 +29292,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -31337,7 +29308,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31354,7 +29324,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -31371,7 +29340,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇶",
         "league": "WC26",
         "club": "Iraq",
-        "clubBadge": "🇮🇶",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -31444,7 +29412,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31461,7 +29428,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -31478,7 +29444,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -31493,7 +29458,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31540,7 +29504,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31557,7 +29520,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -31572,7 +29534,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31605,7 +29566,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -31622,7 +29582,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31639,7 +29598,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -31688,7 +29646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31705,7 +29662,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -31738,7 +29694,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -31755,7 +29710,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -31770,7 +29724,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "WC26",
         "club": "Panama",
-        "clubBadge": "🇵🇦",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -31803,7 +29756,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -31832,7 +29784,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "GK",
         "altPositions": [],
         "rating": 67,
@@ -31847,7 +29798,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31864,7 +29814,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -31881,7 +29830,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -31900,8 +29848,8 @@ const DEFAULT_PLAYERS = [
         "club": "Paraguay",
         "position": "CB",
         "altPositions": [],
-        "rating": 75,
-        "photo": "",
+        "rating": 79,
+        "photo": "https://s.yimg.com/ny/api/res/1.2/rnJUXngYKcw_HrXF0hhWJA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyMztjZj13ZWJw/https://media.zenfs.com/en/fromthespot_articles_398/e783b20fd9106973e5dc35ac8af0dfc8",
         "cardTheme": "worldcup26"
     },
     {
@@ -31912,7 +29860,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -31929,7 +29876,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -31946,7 +29892,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31979,7 +29924,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -31996,7 +29940,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -32030,7 +29973,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -32047,7 +29989,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32064,7 +30005,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -32081,7 +30021,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "WC26",
         "club": "Paraguay",
-        "clubBadge": "🇵🇾",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32098,7 +30037,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -32113,11 +30051,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "GK",
         "altPositions": [],
-        "rating": 69,
-        "photo": "",
+        "rating": 76,
+        "photo": "https://assets.nst.com.my/images/articles/C31D11A150237B4EE6BFD2E2F1FE0FCD_low.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -32144,7 +30081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -32159,7 +30095,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32176,7 +30111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -32193,10 +30127,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CB",
         "altPositions": [],
-        "rating": 78,
+        "rating": 81,
         "photo": "https://media.bongda.com.vn/news/editor/20260616_225035_lhpvg83a.webp",
         "cardTheme": "worldcup26"
     },
@@ -32208,7 +30141,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32225,7 +30157,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -32258,7 +30189,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -32275,7 +30205,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -32308,13 +30237,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
-        "rating": 77,
-        "photo": "",
+        "rating": 80,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6fcrk67MdWMKG--45XUY6iNEEcAC7u3sOGOwWLHce1Yt8xcIH8fn6EzBmL5cWYNUcI9WCAW0OCfEvf7hvt3-s9bkeh3Ha6ASAFiaXA&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -32358,7 +30286,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -32375,7 +30302,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32392,7 +30318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32446,7 +30371,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "WC26",
         "club": "Senegal",
-        "clubBadge": "🇸🇳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32463,7 +30387,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -32478,7 +30401,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -32493,7 +30415,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -32508,7 +30429,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32525,7 +30445,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -32542,7 +30461,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -32557,7 +30475,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32574,7 +30491,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -32591,7 +30507,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -32606,7 +30521,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32623,7 +30537,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -32640,7 +30553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -32655,7 +30567,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32688,7 +30599,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -32721,7 +30631,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -32738,7 +30647,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -32755,7 +30663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32772,7 +30679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -32787,7 +30693,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -32804,7 +30709,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32821,7 +30725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -32836,7 +30739,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -32853,7 +30755,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "WC26",
         "club": "Tunisia",
-        "clubBadge": "🇹🇳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -32870,7 +30771,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -32885,7 +30785,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -32900,7 +30799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -32915,7 +30813,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32948,7 +30845,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -32963,7 +30859,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -32980,7 +30875,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -32997,7 +30891,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -33012,7 +30905,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -33029,7 +30921,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -33044,7 +30935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33061,7 +30951,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -33078,7 +30967,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -33095,7 +30983,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33126,7 +31013,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -33143,7 +31029,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -33174,7 +31059,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -33191,7 +31075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -33206,7 +31089,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -33223,7 +31105,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "WC26",
         "club": "Türkiye",
-        "clubBadge": "🇹🇷",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -33240,10 +31121,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "GK",
         "altPositions": [],
-        "rating": 77,
+        "rating": 78,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -33255,7 +31135,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -33270,7 +31149,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -33285,15 +31163,14 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "RB",
         "altPositions": [
             "RM",
-            "CB",
+            "LB",
             "RWB"
         ],
         "rating": 78,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ4KLSeECNG7Knl2_8MQOq9u2TlFOKFtt50xCAVbpYHXmNTeeyyXWtJCGP&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -33304,7 +31181,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -33321,12 +31197,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [
             "RB"
         ],
-        "rating": 75,
+        "rating": 76,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -33338,7 +31213,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -33355,7 +31229,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -33370,7 +31243,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -33387,7 +31259,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -33404,7 +31275,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -33419,12 +31289,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CB",
         "altPositions": [
             "RB"
         ],
-        "rating": 71,
+        "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -33436,7 +31305,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -33453,7 +31321,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33470,7 +31337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -33487,7 +31353,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33504,13 +31369,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "RW",
         "altPositions": [
             "RM"
         ],
-        "rating": 76,
-        "photo": "",
+        "rating": 77,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4iffa6WWUNd8x7O-P0LQyQK5S29lqHbbMTCePXM-4Aw&s",
         "cardTheme": "worldcup26"
     },
     {
@@ -33521,12 +31385,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "LW",
         "altPositions": [
             "LM"
         ],
-        "rating": 73,
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -33538,7 +31401,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -33555,7 +31417,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
@@ -33570,12 +31431,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "LW",
         "altPositions": [
             "LM"
         ],
-        "rating": 73,
+        "rating": 79,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -33587,7 +31447,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "WC26",
         "club": "United States",
-        "clubBadge": "🇺🇸",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -33641,7 +31500,7 @@ const DEFAULT_PLAYERS = [
     {
         "id": "josemariagimenez-wc26",
         "name": "José María Giménez",
-        "cardName": "Gimenez",
+        "cardName": "J. Gimenez",
         "nationality": "Uruguay",
         "flag": "🇺🇾",
         "league": "WC26",
@@ -33724,7 +31583,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "🇺🇾",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -33757,7 +31615,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "🇺🇾",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33838,7 +31695,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "🇺🇾",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33871,7 +31727,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "🇺🇾",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -33907,7 +31762,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "🇺🇾",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -33940,7 +31794,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "🇺🇾",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -33957,7 +31810,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -33972,7 +31824,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -33989,7 +31840,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -34006,7 +31856,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -34021,7 +31870,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "RB",
         "altPositions": [
             "RM",
@@ -34039,7 +31887,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -34072,7 +31919,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -34089,7 +31935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -34120,7 +31965,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Sheffield United",
-        "clubBadge": "⚔️",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -34135,7 +31979,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -34150,7 +31993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -34167,7 +32009,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -34182,7 +32023,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -34199,7 +32039,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -34216,7 +32055,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -34233,7 +32071,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -34250,7 +32087,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -34284,7 +32120,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -34302,7 +32137,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Espanyol",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -34317,7 +32151,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -34332,7 +32165,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇬",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -34349,7 +32181,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -34364,7 +32195,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -34381,7 +32211,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -34398,7 +32227,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -34431,7 +32259,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 76,
@@ -34446,7 +32273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -34463,7 +32289,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -34480,7 +32305,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇴",
         "league": "La Liga",
         "club": "Getafe",
-        "clubBadge": "🔵",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -34497,7 +32321,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -34512,7 +32335,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -34527,7 +32349,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -34542,7 +32363,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "LB",
         "altPositions": [
             "CB",
@@ -34560,7 +32380,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -34577,7 +32396,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -34594,7 +32412,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -34611,7 +32428,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -34628,7 +32444,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "RM",
         "altPositions": [
             "LM"
@@ -34645,7 +32460,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -34662,7 +32476,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Scottish Premiership",
         "club": "Hearts",
-        "clubBadge": "❤️",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -34677,7 +32490,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -34692,7 +32504,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -34707,7 +32518,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -34724,7 +32534,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -34739,7 +32548,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -34756,7 +32564,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -34773,7 +32580,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -34790,7 +32596,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇳",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -34807,7 +32612,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -34825,7 +32629,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇱",
         "league": "La Liga",
         "club": "Levante",
-        "clubBadge": "🐸",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -34842,7 +32645,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -34857,7 +32659,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -34872,7 +32673,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇴",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -34887,7 +32687,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -34902,7 +32701,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -34919,7 +32717,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -34936,7 +32733,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇱",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -34953,7 +32749,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -34970,7 +32765,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -34987,7 +32781,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇱",
         "league": "Serie A",
         "club": "Lecce",
-        "clubBadge": "🟡🔴",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -35018,7 +32811,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇪",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -35033,7 +32825,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -35050,7 +32841,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -35067,7 +32857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -35084,7 +32873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "RM",
         "altPositions": [
             "RB",
@@ -35102,7 +32890,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -35120,7 +32907,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -35137,7 +32923,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -35155,7 +32940,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -35188,7 +32972,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Werder Bremen",
-        "clubBadge": "🟢⚪",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -35206,7 +32989,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -35235,7 +33017,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -35250,7 +33031,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -35267,7 +33047,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -35284,7 +33063,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -35301,7 +33079,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -35318,7 +33095,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -35335,7 +33111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -35352,7 +33127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -35370,7 +33144,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Freiburg",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -35385,7 +33158,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -35400,7 +33172,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -35415,7 +33186,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -35430,7 +33200,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -35464,7 +33233,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -35481,7 +33249,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -35498,7 +33265,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -35516,7 +33282,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇬",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -35534,7 +33299,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -35552,7 +33316,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Bundesliga",
         "club": "Hoffenheim",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -35569,7 +33332,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -35584,7 +33346,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -35599,7 +33360,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -35614,7 +33374,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -35632,7 +33391,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -35665,7 +33423,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -35682,7 +33439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -35699,7 +33455,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -35716,7 +33471,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -35734,7 +33488,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -35749,7 +33502,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -35766,7 +33518,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -35781,7 +33532,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -35798,7 +33548,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -35816,7 +33565,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -35833,7 +33581,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -35850,7 +33597,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [],
         "rating": 82,
@@ -35865,7 +33611,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -35883,7 +33628,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -35900,7 +33644,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "LW"
@@ -35917,7 +33660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -35935,7 +33677,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -35952,7 +33693,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -35981,7 +33721,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -35998,7 +33737,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -36013,7 +33751,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -36028,7 +33765,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [],
         "rating": 80,
@@ -36043,7 +33779,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -36060,7 +33795,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [],
         "rating": 81,
@@ -36075,7 +33809,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -36092,7 +33825,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -36109,7 +33841,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -36126,7 +33857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "LM",
         "altPositions": [
             "CM"
@@ -36143,7 +33873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [],
         "rating": 80,
@@ -36158,7 +33887,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -36176,7 +33904,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 86,
@@ -36191,7 +33918,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "ST"
@@ -36208,7 +33934,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 18",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [],
         "rating": 82,
@@ -36223,7 +33948,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [],
         "rating": 91,
@@ -36252,7 +33976,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -36267,7 +33990,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -36284,7 +34006,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -36299,7 +34020,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -36316,7 +34036,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -36333,7 +34052,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -36350,7 +34068,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -36367,7 +34084,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "LW"
@@ -36384,7 +34100,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -36401,7 +34116,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -36418,7 +34132,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 88,
@@ -36433,7 +34146,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 14",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "LM",
@@ -36467,7 +34179,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [],
         "rating": 85,
@@ -36482,7 +34193,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -36515,7 +34225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -36532,7 +34241,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -36549,7 +34257,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -36566,7 +34273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -36599,7 +34305,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -36616,7 +34321,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -36633,7 +34337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -36651,7 +34354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -36669,7 +34371,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Global Champions",
         "club": "Spain 10",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -36684,7 +34385,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 93,
@@ -36699,7 +34399,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [],
         "rating": 80,
@@ -36714,7 +34413,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 92,
@@ -36729,7 +34427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -36744,7 +34441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -36761,7 +34457,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -36776,7 +34471,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [],
         "rating": 81,
@@ -36791,7 +34485,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -36808,7 +34501,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [],
         "rating": 89,
@@ -36823,7 +34515,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -36840,7 +34531,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -36857,7 +34547,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [],
         "rating": 79,
@@ -36872,7 +34561,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -36889,7 +34577,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CF",
         "altPositions": [
             "LW",
@@ -36907,7 +34594,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -36924,7 +34610,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -36939,7 +34624,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -36956,7 +34640,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 87,
@@ -36971,7 +34654,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 06",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 88,
@@ -36986,7 +34668,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CM",
@@ -37004,7 +34685,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "A-League",
         "club": "Central Coast Mariners",
-        "clubBadge": "🟡🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -37019,7 +34699,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -37037,7 +34716,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -37070,7 +34748,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -37087,7 +34764,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -37102,7 +34778,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB",
@@ -37121,7 +34796,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "RB"
@@ -37138,7 +34812,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -37156,7 +34829,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -37171,7 +34843,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -37186,7 +34857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -37219,7 +34889,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -37254,7 +34923,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -37269,7 +34937,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -37284,7 +34951,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -37299,7 +34965,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -37316,7 +34981,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -37331,7 +34995,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -37348,7 +35011,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇵",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 82,
@@ -37363,7 +35025,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 84,
@@ -37378,7 +35039,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "CM",
@@ -37396,7 +35056,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "LM"
@@ -37413,7 +35072,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -37428,7 +35086,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇲",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -37443,7 +35100,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -37458,7 +35114,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -37475,7 +35130,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 88,
@@ -37490,7 +35144,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RM"
@@ -37507,7 +35160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 86,
@@ -37522,7 +35174,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 87,
@@ -37537,7 +35188,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -37552,7 +35202,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -37569,7 +35218,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -37584,7 +35232,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -37601,7 +35248,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -37619,7 +35265,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -37634,7 +35279,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -37651,7 +35295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "CM"
@@ -37668,7 +35311,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -37703,7 +35345,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -37722,7 +35363,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -37740,7 +35380,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -37757,7 +35396,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -37786,7 +35424,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -37803,7 +35440,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -37820,7 +35456,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -37855,7 +35490,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇿",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "RWB",
         "altPositions": [
             "RM",
@@ -37874,7 +35508,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "RWB",
         "altPositions": [
             "RM",
@@ -37892,7 +35525,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -37909,7 +35541,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -37927,7 +35558,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -37942,7 +35572,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CM",
@@ -37960,7 +35589,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -37977,7 +35605,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -37992,7 +35619,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -38007,7 +35633,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -38022,7 +35647,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 86,
@@ -38037,7 +35661,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -38052,7 +35675,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -38069,7 +35691,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -38101,7 +35722,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -38118,7 +35738,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -38135,7 +35754,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -38153,7 +35771,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -38171,7 +35788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -38189,7 +35805,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -38206,7 +35821,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -38223,7 +35837,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -38238,7 +35851,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -38255,7 +35867,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -38273,7 +35884,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -38291,7 +35901,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -38309,7 +35918,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -38326,7 +35934,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -38343,7 +35950,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -38358,7 +35964,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -38375,7 +35980,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -38390,7 +35994,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 85,
@@ -38405,7 +36008,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -38420,7 +36022,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "Icons",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -38435,7 +36036,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -38466,7 +36066,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CDM",
         "altPositions": [
             "CAM",
@@ -38484,7 +36083,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "RW",
         "altPositions": [
             "CF",
@@ -38503,7 +36101,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -38518,7 +36115,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "WC26",
         "club": "Brazil",
-        "clubBadge": "🇧🇷",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -38535,7 +36131,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -38552,7 +36147,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -38569,7 +36163,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -38584,7 +36177,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -38599,7 +36191,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -38616,7 +36207,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -38633,7 +36223,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -38651,7 +36240,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -38685,7 +36273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "WC26",
         "club": "Germany",
-        "clubBadge": "🇩🇪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -38718,10 +36305,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "GK",
         "altPositions": [],
-        "rating": 70,
+        "rating": 65,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -38733,13 +36319,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "RB",
         "altPositions": [
             "LB"
         ],
         "rating": 75,
-        "photo": "",
+        "photo": "https://m.elbotola.com/_next/image/?url=https%3A%2F%2Fimages2.elbotola.com%2Farticle%2F6a426f4dc564c05cecf41e14_default.jpg&w=3840&q=75",
         "cardTheme": "worldcup26"
     },
     {
@@ -38750,11 +36335,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQHrpFFDhBxj-LWCHYmziLY4lEcOGOWcIkXgli1NEfL5nI4yZsj92aj56u&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -38765,7 +36349,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -38782,10 +36365,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CB",
         "altPositions": [],
-        "rating": 70,
+        "rating": 72,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -38797,13 +36379,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "LB",
         "altPositions": [
             "LM"
         ],
         "rating": 72,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1KJkYCrKo1Eg-ihfuGZHNvb2KSnFWzct7XmgGKmaszQ&s",
         "cardTheme": "worldcup26"
     },
     {
@@ -38814,7 +36395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -38831,12 +36411,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CAM",
         "altPositions": [
             "LM"
         ],
-        "rating": 71,
+        "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -38848,27 +36427,25 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
-        "photo": "",
+        "photo": "https://pbs.twimg.com/media/HMDa2h-XIAAl8hM.jpg",
         "cardTheme": "worldcup26"
     },
     {
         "id": "gessime-wc26",
-        "name": "Yassine Gessime",
-        "cardName": "Gessime",
+        "name": "Gessime Yassine",
+        "cardName": "Yassine",
         "nationality": "Morocco",
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "RW",
         "altPositions": [
             "RM"
         ],
-        "rating": 71,
+        "rating": 72,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -38880,29 +36457,27 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
         "rating": 76,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Neil_El_Aynaoui_Neil_El_Aynaoui_Morocco_v_Norway_7_June_2026-13_%28cropped%29.jpg/330px-Neil_El_Aynaoui_Neil_El_Aynaoui_Morocco_v_Norway_7_June_2026-13_%28cropped%29.jpg",
         "cardTheme": "worldcup26"
     },
     {
         "id": "amaimouni-wc26",
-        "name": "Ayoub Amaimouni",
+        "name": "Ayoub Amaimouni-Echghouyab",
         "cardName": "Amaimouni",
         "nationality": "Morocco",
         "flag": "🇲🇦",
         "league": "WC26",
         "club": "Morocco",
-        "clubBadge": "🇲🇦",
         "position": "ST",
         "altPositions": [
             "RW"
         ],
-        "rating": 72,
+        "rating": 73,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -38914,7 +36489,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "WC26",
         "club": "Mexico",
-        "clubBadge": "🇲🇽",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -38929,7 +36503,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -38944,7 +36517,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -38959,7 +36531,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -38976,7 +36547,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -38991,7 +36561,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -39006,7 +36575,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -39021,7 +36589,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -39036,7 +36603,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "LB",
         "altPositions": [],
         "rating": 71,
@@ -39051,7 +36617,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "LB",
         "altPositions": [],
         "rating": 72,
@@ -39066,7 +36631,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CAM",
         "altPositions": [],
         "rating": 70,
@@ -39081,7 +36645,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CM",
         "altPositions": [
             "CB"
@@ -39098,7 +36661,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -39115,7 +36677,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CDM",
         "altPositions": [],
         "rating": 72,
@@ -39130,7 +36691,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -39145,7 +36705,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CDM",
         "altPositions": [],
         "rating": 71,
@@ -39160,7 +36719,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 70,
@@ -39175,7 +36733,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -39192,7 +36749,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -39207,7 +36763,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -39225,7 +36780,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -39240,7 +36794,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 72,
@@ -39255,7 +36808,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -39270,7 +36822,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -39287,7 +36838,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "RW",
         "altPositions": [],
         "rating": 70,
@@ -39302,7 +36852,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -39317,7 +36866,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -39332,10 +36880,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "GK",
         "altPositions": [],
-        "rating": 79,
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39347,7 +36894,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -39365,7 +36911,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 82,
-        "photo": "",
+        "photo": "https://kickfieber-de.imgix.net/assets/uploads/blog/user/58148/_800x418_crop_center-center_82_none/FIFA-WM-2026-Ousmane-Diomande.jpg?mtime=1782222030",
         "cardTheme": "worldcup26"
     },
     {
@@ -39376,7 +36922,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -39393,13 +36938,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "RB",
         "altPositions": [
             "CB"
         ],
         "rating": 82,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv1JRzBqcBlpXvhb-ALbfvH-pRqlGlIfrueSZsCYOpztJ2eq6zlt-h4P_3&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -39410,7 +36954,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -39425,10 +36968,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "RB",
         "altPositions": [],
-        "rating": 76,
+        "rating": 79,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39440,7 +36982,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -39455,7 +36996,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "LB",
         "altPositions": [],
         "rating": 76,
@@ -39470,13 +37010,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
         "rating": 84,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLNsxmbkH5LKQnLbw3nzSGJWAmJmCWDak2Vc4lOCmBP046xrt6YSknR-Jq&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -39487,7 +37026,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -39520,7 +37058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -39537,7 +37074,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CAM",
         "altPositions": [],
         "rating": 75,
@@ -39552,7 +37088,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -39567,7 +37102,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -39584,13 +37118,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "RM",
         "altPositions": [
             "RW"
         ],
-        "rating": 81,
-        "photo": "",
+        "rating": 85,
+        "photo": "https://img.allfootballapp.com/www1/M00/11/53/rBAAN2pEEDiAXLBTAAG9AdtPb5E857.jpg.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -39601,10 +37134,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "ST",
         "altPositions": [],
-        "rating": 77,
+        "rating": 73,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39616,11 +37148,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Elye_Wahi_Cote_D%27Ivoire_v_Ecuador_14_June_2026-51_%28cropped%29.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -39631,10 +37162,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "ST",
         "altPositions": [],
-        "rating": 77,
+        "rating": 78,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39646,10 +37176,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "ST",
         "altPositions": [],
-        "rating": 76,
+        "rating": 74,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39679,7 +37208,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "WC26",
         "club": "Côte d'Ivoire",
-        "clubBadge": "🇨🇮",
         "position": "LM",
         "altPositions": [],
         "rating": 74,
@@ -39710,7 +37238,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "GK",
         "altPositions": [],
         "rating": 71,
@@ -39725,11 +37252,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "GK",
         "altPositions": [],
-        "rating": 78,
-        "photo": "",
+        "rating": 80,
+        "photo": "https://heavy.com/wp-content/uploads/2026/07/Lionel-Mpasi-e1782925047957.jpg?quality=65&strip=all&w=780",
         "cardTheme": "worldcup26"
     },
     {
@@ -39740,7 +37266,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -39755,11 +37280,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
-        "photo": "",
+        "photo": "https://pbs.twimg.com/media/HMJ9xJvX0AAII12.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -39770,11 +37294,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "RB",
         "altPositions": [],
-        "rating": 80,
-        "photo": "",
+        "rating": 81,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYPSyUtxpux5dSjHYr7yGcfF6A4KhsaZx-m-gRBhmx_DwMhF5nrthZVGC&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -39785,13 +37308,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "LB",
         "altPositions": [
             "LWB"
         ],
-        "rating": 80,
-        "photo": "",
+        "rating": 81,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKNeerRiKXqatkWmhkz4Tq8hhm1Fvohq5aqqr5Tp3UrRPgBrBwTQ22wMY&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -39806,8 +37328,8 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "RB"
         ],
-        "rating": 80,
-        "photo": "",
+        "rating": 81,
+        "photo": "https://s.yimg.com/ny/api/res/1.2/0HzGmIcLzJXq2LCWf_Nwuw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/video.nbcsports.com/77b4d297e8510deb59f1dd224a53a8c8",
         "cardTheme": "worldcup26"
     },
     {
@@ -39818,7 +37340,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -39833,7 +37354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -39848,7 +37368,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "LB",
         "altPositions": [],
         "rating": 73,
@@ -39863,7 +37382,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -39878,7 +37396,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -39893,12 +37410,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
-        "rating": 74,
+        "rating": 77,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39910,7 +37426,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -39927,10 +37442,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CDM",
         "altPositions": [],
-        "rating": 75,
+        "rating": 72,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39942,10 +37456,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CM",
         "altPositions": [],
-        "rating": 73,
+        "rating": 76,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -39957,7 +37470,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -39972,7 +37484,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -39989,7 +37500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "LW",
         "altPositions": [],
         "rating": 71,
@@ -40004,12 +37514,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "RW",
         "altPositions": [
             "RM"
         ],
-        "rating": 77,
+        "rating": 75,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -40021,7 +37530,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "CAM",
         "altPositions": [],
         "rating": 75,
@@ -40036,7 +37544,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -40053,7 +37560,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -40068,7 +37574,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -40083,10 +37588,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "ST",
         "altPositions": [],
-        "rating": 78,
+        "rating": 73,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -40098,13 +37602,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "WC26",
         "club": "DR Congo",
-        "clubBadge": "🇨🇩",
         "position": "ST",
         "altPositions": [
             "LW"
         ],
-        "rating": 81,
-        "photo": "",
+        "rating": 82,
+        "photo": "https://static.bongda24h.vn/medias/standard/2026/06/30/yoane-wissa-congo-3006180631.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -40129,7 +37632,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -40144,7 +37646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇶🇦",
         "league": "WC26",
         "club": "Qatar",
-        "clubBadge": "🇶🇦",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -40159,7 +37660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 87,
@@ -40174,7 +37674,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -40191,7 +37690,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -40209,7 +37707,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -40226,7 +37723,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -40243,7 +37739,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -40258,7 +37753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -40289,7 +37783,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -40306,7 +37799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -40323,7 +37815,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -40340,7 +37831,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -40357,7 +37847,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -40372,7 +37861,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -40389,7 +37877,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -40406,7 +37893,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -40423,7 +37909,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -40440,7 +37925,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -40457,7 +37941,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -40472,7 +37955,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -40487,7 +37969,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 89,
@@ -40502,7 +37983,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -40519,7 +37999,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -40537,7 +38016,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -40552,7 +38030,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -40569,7 +38046,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -40584,7 +38060,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -40601,7 +38076,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -40619,7 +38093,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -40668,7 +38141,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇸",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "🟣",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -40703,7 +38175,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Fiorentina",
-        "clubBadge": "💜⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -40746,7 +38217,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -40761,7 +38231,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -40776,7 +38245,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -40793,7 +38261,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -40844,7 +38311,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -40862,7 +38328,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇲",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -40879,7 +38344,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -40894,7 +38358,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -40909,7 +38372,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "RB",
         "altPositions": [
             "RM",
@@ -40927,7 +38389,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -40942,7 +38403,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🔴🟢",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -40957,7 +38417,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -40972,7 +38431,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -40990,7 +38448,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇽🇰",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -41007,7 +38464,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -41025,7 +38481,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -41043,7 +38498,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -41058,7 +38512,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Bundesliga",
         "club": "Augsburg",
-        "clubBadge": "🟢🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -41073,7 +38526,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -41088,7 +38540,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -41105,7 +38556,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -41120,7 +38570,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -41135,7 +38584,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -41153,7 +38601,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -41170,7 +38617,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -41187,7 +38633,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -41205,7 +38650,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -41223,7 +38667,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -41238,7 +38681,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -41253,7 +38695,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -41270,7 +38711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -41287,7 +38727,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -41304,7 +38743,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "LW",
         "altPositions": [
             "CF",
@@ -41322,7 +38760,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -41339,7 +38776,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -41356,7 +38792,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 90",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -41374,7 +38809,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 86",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -41392,7 +38826,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -41409,7 +38842,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -41424,7 +38856,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 78",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -41441,7 +38872,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -41458,7 +38888,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 70",
-        "clubBadge": "⚽",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -41476,7 +38905,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 70",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -41493,7 +38921,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "RM",
         "altPositions": [
             "CAM",
@@ -41511,7 +38938,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 92,
@@ -41526,7 +38952,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CAM",
@@ -41544,7 +38969,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -41561,7 +38985,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 91,
@@ -41576,7 +38999,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -41593,7 +39015,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "CB"
@@ -41610,7 +39031,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -41625,7 +39045,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 94",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [
             "GK"
@@ -41642,7 +39061,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 94",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -41659,7 +39077,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 94",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -41676,7 +39093,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [],
         "rating": 95,
@@ -41691,7 +39107,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "RM",
         "altPositions": [
             "CDM"
@@ -41708,7 +39123,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -41726,7 +39140,8 @@ const DEFAULT_PLAYERS = [
         "position": "LB",
         "altPositions": [
             "CM",
-            "LWB"
+            "LWB",
+            "RWB"
         ],
         "rating": 80,
         "photo": "https://gbaike-image.cdn.bcebos.com/e4dde71190ef76c6a7ef925b8b4beafaaf51f3dec934/e4dde71190ef76c6a7ef925b8b4beafaaf51f3dec934_url?x-bce-process=image/format,f_auto/resize,m_lfit,w_400,limit_1",
@@ -41740,7 +39155,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -41755,12 +39169,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CB",
         "altPositions": [
             "CDM"
         ],
-        "rating": 75,
+        "rating": 74,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -41772,7 +39185,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "LWB",
         "altPositions": [
             "LB"
@@ -41789,7 +39201,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "RB",
         "altPositions": [
             "RM"
@@ -41806,7 +39217,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -41823,7 +39233,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -41841,7 +39250,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -41859,7 +39267,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -41876,7 +39283,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -41894,7 +39300,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -41913,7 +39318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "WC26",
         "club": "Sweden",
-        "clubBadge": "🇸🇪",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -41946,7 +39350,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -41977,7 +39380,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -42008,7 +39410,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -42026,7 +39427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -42041,7 +39441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -42074,7 +39473,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -42105,7 +39503,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -42156,7 +39553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -42171,7 +39567,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -42220,7 +39615,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -42235,7 +39629,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -42252,7 +39645,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -42267,7 +39659,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -42282,7 +39673,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 92,
@@ -42297,7 +39687,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -42312,7 +39701,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -42331,7 +39719,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -42349,7 +39736,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -42367,7 +39753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Others (CONMEBOL)",
         "club": "Millonarios",
-        "clubBadge": "🇨🇴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -42384,7 +39769,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇱",
         "league": "Others (CONMEBOL)",
         "club": "Colo Colo",
-        "clubBadge": "🇨🇱",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -42402,7 +39786,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "Others (CONMEBOL)",
         "club": "LDU Quito",
-        "clubBadge": "🇪🇨",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -42419,7 +39802,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "Others (CONMEBOL)",
         "club": "Olimpia",
-        "clubBadge": "🇵🇾",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -42437,7 +39819,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "Others (CONMEBOL)",
         "club": "Barcelona SC",
-        "clubBadge": "🇪🇨",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -42452,7 +39833,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "Others (CONMEBOL)",
         "club": "Libertad",
-        "clubBadge": "🇵🇾",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -42467,7 +39847,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇱",
         "league": "Others (CONMEBOL)",
         "club": "Audax Italiano",
-        "clubBadge": "🇨🇱",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
@@ -42482,7 +39861,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇾",
         "league": "Others (CONMEBOL)",
         "club": "Nacional (Paraguay)",
-        "clubBadge": "🇵🇾",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -42499,7 +39877,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "Others (CONMEBOL)",
         "club": "Barcelona SC",
-        "clubBadge": "🇪🇨",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -42516,7 +39893,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇱",
         "league": "Others (CONMEBOL)",
         "club": "Audax Italiano",
-        "clubBadge": "🇨🇱",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -42534,7 +39910,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -42552,7 +39927,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -42569,7 +39943,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -42586,7 +39959,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -42601,7 +39973,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -42616,7 +39987,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -42633,7 +40003,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "CM",
@@ -42651,7 +40020,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -42668,7 +40036,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇪",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -42686,7 +40053,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -42704,7 +40070,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -42721,7 +40086,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -42754,7 +40118,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "LM",
         "altPositions": [
             "CAM",
@@ -42772,7 +40135,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -42789,7 +40151,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇨",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -42804,7 +40165,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -42837,7 +40197,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -42852,7 +40211,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -42867,7 +40225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 94,
@@ -42882,7 +40239,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -42899,7 +40255,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -42916,7 +40271,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -42931,7 +40285,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -42946,7 +40299,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -42963,7 +40315,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -42980,7 +40331,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -42998,7 +40348,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -43013,7 +40362,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -43030,7 +40378,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -43048,7 +40395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -43065,7 +40411,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CDM",
         "altPositions": [],
         "rating": 72,
@@ -43080,7 +40425,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -43097,7 +40441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -43114,7 +40457,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇬",
         "league": "WC26",
         "club": "Egypt",
-        "clubBadge": "🇪🇬",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -43132,7 +40474,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇷",
         "league": "WC26",
         "club": "Iran",
-        "clubBadge": "🇮🇷",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -43149,10 +40490,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "GK",
         "altPositions": [],
-        "rating": 72,
+        "rating": 80,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -43164,7 +40504,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -43179,11 +40518,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/0/00/Brandon_Mechele_USMNT_v_Belgium_Mar_28_2026-78_%28cropped%29.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -43194,7 +40532,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -43209,7 +40546,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -43232,7 +40568,7 @@ const DEFAULT_PLAYERS = [
             "CDM"
         ],
         "rating": 76,
-        "photo": "",
+        "photo": "https://s.yimg.com/ny/api/res/1.2/.biInBJwNR_CFKFgPB4EmA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MDtjZj13ZWJw/https://media.zenfs.com/en/bbc_us_articles_995/f464c5eae1fe5b0363be41adc80e2721",
         "cardTheme": "worldcup26"
     },
     {
@@ -43243,13 +40579,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
         "rating": 78,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIlRyuZW3YCHvJ7QaPQV0GeeSV0m51RYwpEu1U9cJ_RyGDU_LAxqkX4iU&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -43260,7 +40595,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -43277,7 +40611,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -43290,19 +40623,18 @@ const DEFAULT_PLAYERS = [
     {
         "id": "diegomoreira-wc26",
         "name": "Diego Moreira",
-        "cardName": "Diego Moreira",
+        "cardName": "D. Moreira",
         "nationality": "Belgium",
         "flag": "🇧🇪",
         "league": "WC26",
         "club": "Belgium",
-        "clubBadge": "🇧🇪",
         "position": "LW",
         "altPositions": [
             "RW",
             "LM"
         ],
-        "rating": 73,
-        "photo": "",
+        "rating": 75,
+        "photo": "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQhFtvxMlHi8OEjoUV9B24PETWZr4zJQLbKv8BFe2bj0d4Gma4kvTrREHu7TBESBc5lrTQ8BimDSlGAXQk",
         "cardTheme": "worldcup26"
     },
     {
@@ -43331,7 +40663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -43348,7 +40679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -43366,7 +40696,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -43383,7 +40712,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -43401,7 +40729,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RM",
         "altPositions": [
             "LW",
@@ -43419,7 +40746,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -43436,7 +40762,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 94,
@@ -43451,7 +40776,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -43469,7 +40793,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -43487,7 +40810,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -43502,7 +40824,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -43520,7 +40841,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -43538,7 +40858,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -43555,7 +40874,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -43574,7 +40892,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -43592,7 +40909,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -43609,7 +40925,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -43626,7 +40941,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -43643,7 +40957,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [
             "LM"
@@ -43660,7 +40973,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -43675,7 +40987,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Ligue 1",
         "club": "Paris Saint-Germain",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -43690,7 +41001,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -43707,7 +41017,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -43724,7 +41033,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -43742,7 +41050,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -43757,7 +41064,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -43772,7 +41078,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -43787,7 +41092,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 88,
@@ -43802,7 +41106,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Liga Portugal",
         "club": "Sporting CP",
-        "clubBadge": "🦁",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -43819,7 +41122,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -43834,7 +41136,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -43852,7 +41153,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -43869,7 +41169,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -43919,7 +41218,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [
             "CDM",
@@ -43937,7 +41235,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -43952,7 +41249,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 78",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -43969,13 +41265,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/it/b/bd/Marco_Tardelli%2C_Juventus_1981-82.jpg",
         "cardTheme": "gc"
     },
     {
@@ -43986,7 +41281,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 86",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -44005,7 +41299,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 90",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -44022,13 +41315,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 90",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh_9EeJQBrVfukzYYXyWO_ONKKdem7hQE3HzXuMdRZITlGLeQgY3DtNqE2&s=10",
         "cardTheme": "gc"
     },
     {
@@ -44045,7 +41337,7 @@ const DEFAULT_PLAYERS = [
             "LWB"
         ],
         "rating": 91,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8RfX4DAXcYYdTtukPfE5F6XbAfMOVap_kASHKBLOpyXObA5eSzlCcE1g&s=10",
         "cardTheme": "gc"
     },
     {
@@ -44056,7 +41348,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -44074,7 +41365,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -44105,7 +41395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 89,
@@ -44136,7 +41425,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -44153,7 +41441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -44171,7 +41458,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -44190,7 +41476,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -44208,7 +41493,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -44225,7 +41509,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -44256,7 +41539,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -44271,7 +41553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -44286,7 +41567,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -44303,7 +41583,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -44321,7 +41600,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "CF",
@@ -44339,7 +41617,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -44356,7 +41633,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -44371,7 +41647,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -44388,7 +41663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -44406,7 +41680,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -44423,7 +41696,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -44442,7 +41714,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -44459,7 +41730,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "LW",
         "altPositions": [
             "CF",
@@ -44478,7 +41748,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -44495,7 +41764,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -44512,7 +41780,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -44529,7 +41796,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -44546,7 +41812,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -44565,7 +41830,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -44580,7 +41844,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -44595,7 +41858,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -44613,7 +41875,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -44677,7 +41938,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 92,
@@ -44692,7 +41952,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -44709,7 +41968,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -44724,7 +41982,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -44741,7 +41998,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -44760,7 +42016,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -44810,7 +42065,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -44827,7 +42081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -44844,7 +42097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "CDM",
@@ -44862,7 +42114,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -44877,7 +42128,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -44894,7 +42144,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -44912,7 +42161,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -44930,7 +42178,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -44947,7 +42194,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RM",
         "altPositions": [
             "LW",
@@ -44966,7 +42212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -44985,7 +42230,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 92,
@@ -45000,7 +42244,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -45019,7 +42262,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -45036,7 +42278,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -45054,7 +42295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -45072,7 +42312,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -45089,7 +42328,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -45106,7 +42344,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -45121,7 +42358,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "CDM",
@@ -45139,7 +42375,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -45157,7 +42392,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 86,
@@ -45172,7 +42406,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -45189,7 +42422,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -45206,7 +42438,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "São Paulo",
-        "clubBadge": "🔴⚪⚫",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -45223,7 +42454,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -45241,7 +42471,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -45275,7 +42504,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -45290,7 +42518,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -45307,7 +42534,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -45325,7 +42551,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -45344,7 +42569,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -45361,7 +42585,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 92,
@@ -45376,7 +42599,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -45396,7 +42618,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -45414,7 +42635,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -45431,7 +42651,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -45450,7 +42669,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -45467,7 +42685,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -45484,7 +42701,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "CM",
@@ -45503,7 +42719,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 94,
@@ -45518,11 +42733,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/p36mz01693941540.png",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTwzzVjl-ZcYuXUBeV0PtTOL3rhKGR8_vW9dwHwh_Ojq2npBSMJKVcKI0&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -45533,7 +42747,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -45550,7 +42763,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -45567,13 +42779,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CB"
         ],
         "rating": 89,
-        "photo": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/10/24/09/fabinho.jpg",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_VQ-VkHCifMsTXhYQ6i_hryvIotUhbiUjO69CCtOuW7FecsZ5azaT0Jt&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -45584,7 +42795,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -45602,7 +42812,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -45619,7 +42828,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -45637,7 +42845,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -45659,7 +42866,7 @@ const DEFAULT_PLAYERS = [
         "position": "GK",
         "altPositions": [],
         "rating": 77,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk0CctDX4B29BFF9PNK2YIU6IqkVDTP207qqZ2zDAkqkS6L-bQ_GmBFjv&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -45687,11 +42894,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9p932j1654201066.png",
+        "photo": "https://pbs.twimg.com/media/D8AioaEXsAU5GvI.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -45748,7 +42954,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -45766,7 +42971,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -45783,7 +42987,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -45801,7 +43004,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -45818,7 +43020,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -45836,7 +43037,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -45854,7 +43054,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 93,
@@ -45869,7 +43068,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -45886,7 +43084,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -45901,7 +43098,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [
             "RM",
@@ -45919,7 +43115,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -45934,7 +43129,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -45952,7 +43146,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -45967,7 +43160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -45985,7 +43177,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -46016,7 +43207,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -46031,7 +43221,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 90,
@@ -46046,7 +43235,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -46063,14 +43251,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CDM",
         "altPositions": [
             "CM",
             "RB"
         ],
         "rating": 88,
-        "photo": "https://images.ps-aws.com/c?url=https%3A%2F%2Fd2x51gyc4ptf2q.cloudfront.net%2Fcontent%2Fuploads%2F2020%2F02%2F05075314%2FOwen-Hargreaves-Manchester-United.jpg",
+        "photo": "https://www.sporting-heroes.net/content/thumbnails/00218/21704-zoom.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -46081,7 +43268,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -46098,13 +43284,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 87,
-        "photo": "https://www.thesun.co.uk/wp-content/uploads/2018/10/NINTCHDBPICT000004186905-e1539088763146.jpg?strip=all&w=543",
+        "photo": "https://cdn-images.vtv.vn/2018/5/14/nguoi-con-lai-cua-dem-mua-2008-15262347000041460372116.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -46115,7 +43300,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46132,13 +43316,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CM",
         "altPositions": [
             "CAM"
         ],
         "rating": 84,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0jeglfZTqI6-wjH-satXzlk422jXH5R7q-T2Kbieew&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -46149,7 +43332,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -46197,7 +43379,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -46212,7 +43393,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -46229,7 +43409,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -46244,7 +43423,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -46261,7 +43439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -46276,7 +43453,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "RB",
         "altPositions": [
             "CDM",
@@ -46294,7 +43470,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -46311,7 +43486,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -46328,7 +43502,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46345,7 +43518,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46379,7 +43551,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 84,
@@ -46394,7 +43565,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -46412,7 +43582,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -46429,7 +43598,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -46444,7 +43612,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -46461,7 +43628,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -46478,7 +43644,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -46496,7 +43661,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -46513,7 +43677,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -46530,7 +43693,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -46547,7 +43709,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46564,7 +43725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -46581,7 +43741,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46598,7 +43757,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "CM"
@@ -46615,7 +43773,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -46632,7 +43789,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [],
         "rating": 89,
@@ -46647,7 +43803,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [],
         "rating": 88,
@@ -46662,7 +43817,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 88,
@@ -46694,7 +43848,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "RB",
@@ -46712,7 +43865,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -46745,7 +43897,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -46763,7 +43914,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CF",
         "altPositions": [],
         "rating": 96,
@@ -46778,7 +43928,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46795,7 +43944,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -46812,7 +43960,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -46830,7 +43977,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -46849,7 +43995,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -46866,7 +44011,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -46897,7 +44041,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 86,
@@ -46912,7 +44055,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -46941,7 +44083,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -46956,7 +44097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [],
         "rating": 89,
@@ -46971,7 +44111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -46988,7 +44127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "RB",
         "altPositions": [],
         "rating": 87,
@@ -47003,7 +44141,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RM",
         "altPositions": [
             "LW",
@@ -47022,7 +44159,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "LW",
@@ -47041,7 +44177,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -47056,7 +44191,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -47071,7 +44205,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -47100,7 +44233,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 91,
@@ -47115,7 +44247,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "🔴⚪",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -47132,7 +44263,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -47149,7 +44279,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -47166,7 +44295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -47184,7 +44312,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -47201,7 +44328,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -47232,7 +44358,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -47247,7 +44372,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -47280,7 +44404,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -47295,7 +44418,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -47312,7 +44434,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -47329,7 +44450,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -47347,7 +44467,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -47364,7 +44483,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -47382,7 +44500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -47399,7 +44516,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -47414,7 +44530,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -47429,7 +44544,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -47447,7 +44561,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -47464,7 +44577,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -47482,7 +44594,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -47513,7 +44624,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -47528,7 +44638,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -47545,7 +44654,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -47562,7 +44670,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -47579,7 +44686,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -47596,7 +44702,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -47614,7 +44719,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -47632,7 +44736,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -47650,7 +44753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇫",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -47667,7 +44769,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇪",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -47684,7 +44785,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Others (UEFA)",
         "club": "Shakhtar Donetsk",
-        "clubBadge": "🟠⚫",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -47701,7 +44801,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [],
         "rating": 89,
@@ -47716,7 +44815,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "RM"
@@ -47733,7 +44831,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "RM",
         "altPositions": [
             "CAM",
@@ -47751,7 +44848,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -47768,7 +44864,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "PSV Eindhoven",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -47785,7 +44880,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Others (UEFA)",
         "club": "FCSB",
-        "clubBadge": "🔴🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -47802,7 +44896,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Others (UEFA)",
         "club": "FCSB",
-        "clubBadge": "🔴🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -47819,7 +44912,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Others (UEFA)",
         "club": "FCSB",
-        "clubBadge": "🔴🔵",
         "position": "RM",
         "altPositions": [
             "ST",
@@ -47837,7 +44929,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Others (UEFA)",
         "club": "FCSB",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -47854,7 +44945,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -47873,7 +44963,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CAM",
         "altPositions": [
             "ST",
@@ -47891,7 +44980,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -47908,7 +44996,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -47925,14 +45012,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CB",
         "altPositions": [
-            "CDM",
-            "CM"
+            "CM",
+            "CDM"
         ],
         "rating": 92,
-        "photo": "",
+        "photo": "https://pbs.twimg.com/media/EjJ5zJ0WsAEKhwr.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -47943,7 +45029,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -47960,7 +45045,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -47993,7 +45077,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -48011,7 +45094,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -48029,7 +45111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "LB",
         "altPositions": [
             "CB",
@@ -48061,7 +45142,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -48078,7 +45158,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -48113,7 +45192,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 92,
@@ -48160,7 +45238,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "RM",
         "altPositions": [
             "CM"
@@ -48191,7 +45268,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -48225,7 +45301,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -48243,7 +45318,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -48260,7 +45334,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -48277,7 +45350,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -48311,7 +45383,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -48342,7 +45413,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 90,
@@ -48373,7 +45443,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -48391,7 +45460,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -48409,7 +45477,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [
             "SW"
@@ -48426,7 +45493,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -48462,7 +45528,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -48479,7 +45544,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -48496,7 +45560,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -48511,7 +45574,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -48529,7 +45591,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -48547,7 +45608,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "CAM",
@@ -48565,7 +45625,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -48582,7 +45641,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "LW",
@@ -48615,13 +45673,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "RB",
         "altPositions": [
             "RWB"
         ],
         "rating": 89,
-        "photo": "https://www.thesportsdb.com/images/media/player/cutout/ifb6zf1781812030.png",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6SNRtp0xDgwBEpPWFbZdQ4awGozDA2lO-NlQpHhV8PK16mYYeO41LqWmm&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -48643,18 +45700,17 @@ const DEFAULT_PLAYERS = [
     {
         "id": "oneill-ucl",
         "name": "Martin O'Neill",
-        "cardName": "M. O'Neill",
+        "cardName": "O'Neill",
         "nationality": "Northern Ireland",
         "flag": "🇬🇧",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "RM",
         "altPositions": [
             "CM"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsyOI6TZMH3Zl3lbWXiwqjWK-z7PdExgtErRTy8mpK1KDAIZ62bWZeTvs&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -48665,7 +45721,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -48682,7 +45737,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -48699,7 +45753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -48717,7 +45770,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -48734,7 +45786,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -48752,7 +45803,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -48769,7 +45819,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
@@ -48784,7 +45833,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -48799,7 +45847,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🦁",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -48817,7 +45864,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -48832,7 +45878,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -48849,7 +45894,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -48866,7 +45910,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 86,
@@ -48881,7 +45924,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -48896,7 +45938,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Hamburg",
-        "clubBadge": "🔵⚪⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -48927,7 +45968,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -48958,7 +45998,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -48975,7 +46014,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -48992,7 +46030,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -49010,7 +46047,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -49028,7 +46064,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49045,7 +46080,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -49063,7 +46097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -49078,7 +46111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -49111,7 +46143,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -49129,7 +46160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49146,7 +46176,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -49164,7 +46193,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -49198,7 +46226,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49215,7 +46242,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇪",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -49233,7 +46259,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -49267,7 +46292,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -49284,7 +46308,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -49301,7 +46324,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49318,7 +46340,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -49333,7 +46354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -49350,7 +46370,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -49367,7 +46386,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -49385,7 +46403,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49402,7 +46419,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇬",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -49435,7 +46451,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Others (UEFA)",
         "club": "Crvena zvezda",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -49452,7 +46467,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Others (UEFA)",
         "club": "Crvena zvezda",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -49470,7 +46484,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇰",
         "league": "Others (UEFA)",
         "club": "Crvena zvezda",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49487,7 +46500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇪",
         "league": "Others (UEFA)",
         "club": "Crvena zvezda",
-        "clubBadge": "🔴⚪",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -49518,7 +46530,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 90,
@@ -49533,7 +46544,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -49551,7 +46561,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -49568,7 +46577,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49585,7 +46593,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -49604,7 +46611,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -49622,7 +46628,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -49656,7 +46661,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -49671,7 +46675,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -49690,7 +46693,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -49707,7 +46709,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -49724,7 +46725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [
             "CDM",
@@ -49742,7 +46742,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49759,7 +46758,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -49776,7 +46774,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡⚫",
         "position": "CAM",
         "altPositions": [
             "LM",
@@ -49794,7 +46791,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 89,
@@ -49809,7 +46805,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
@@ -49824,7 +46819,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -49841,7 +46835,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49858,7 +46851,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -49877,7 +46869,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -49894,7 +46885,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -49911,7 +46901,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -49926,7 +46915,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -49944,7 +46932,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -49963,7 +46950,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -49980,7 +46966,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -49997,7 +46982,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇼",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -50012,7 +46996,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -50027,7 +47010,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -50044,7 +47026,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -50061,7 +47042,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -50079,7 +47059,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -50096,7 +47075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "LM",
@@ -50114,7 +47092,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 91,
@@ -50129,7 +47106,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "LM",
         "altPositions": [
             "ST",
@@ -50147,7 +47123,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "RM"
@@ -50164,7 +47139,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -50182,7 +47156,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -50200,7 +47173,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RM",
         "altPositions": [
             "CM"
@@ -50217,7 +47189,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -50234,7 +47205,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -50252,7 +47222,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -50269,7 +47238,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -50287,7 +47255,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -50305,7 +47272,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 87,
@@ -50320,7 +47286,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Serie A",
         "club": "Juventus",
-        "clubBadge": "⚫⚪",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -50338,7 +47303,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -50356,7 +47320,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇹",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -50373,7 +47336,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -50390,7 +47352,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -50407,7 +47368,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -50424,7 +47384,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LM",
         "altPositions": [
             "LW"
@@ -50441,13 +47400,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "RB",
         "altPositions": [
             "RWB"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Gary_Neville_crop.jpg/250px-Gary_Neville_crop.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -50458,7 +47416,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -50476,7 +47433,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -50491,7 +47447,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -50509,7 +47464,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -50526,7 +47480,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -50544,7 +47497,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Chelsea",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -50561,7 +47513,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -50579,7 +47530,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -50659,11 +47609,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 88,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXNAVyoTZpkPR6Mt7_UOrhvIBEUFGbVenIUpBsxQ8saD5VfLQ3hCZpyo8&s=10",
         "cardTheme": "ucl"
     },
     {
@@ -50692,7 +47641,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -50709,7 +47657,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RM",
         "altPositions": [
             "LM",
@@ -50727,7 +47674,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -50745,7 +47691,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -50762,7 +47707,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Saint-Etienne",
-        "clubBadge": "🟢⚪",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -50780,7 +47724,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Scottish Premiership",
         "club": "Celtic",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -50795,7 +47738,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -50813,7 +47755,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CB",
         "altPositions": [
             "CM"
@@ -50861,7 +47802,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Man United",
-        "clubBadge": "😈",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -50988,7 +47928,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -51005,7 +47944,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -51020,7 +47958,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
@@ -51035,7 +47972,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -51052,7 +47988,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "🟢⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -51067,7 +48002,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -51082,7 +48016,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "",
         "club": "",
-        "clubBadge": "🦁",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -51097,7 +48030,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "⚫🔴",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -51115,7 +48047,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇦",
         "league": "",
         "club": "",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -51144,7 +48075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "🔴🔵",
         "position": "LB",
         "altPositions": [
             "RB",
@@ -51195,7 +48125,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "🔵",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -51213,7 +48142,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "⚪",
         "position": "LB",
         "altPositions": [
             "LW",
@@ -51231,7 +48159,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "",
         "club": "",
-        "clubBadge": "⚫🔵",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -51249,7 +48176,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "",
         "club": "",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -51266,7 +48192,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -51281,7 +48206,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇴🇲",
         "league": "",
         "club": "",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
@@ -51296,7 +48220,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "",
         "club": "",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -52332,7 +49255,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "RW",
@@ -52350,7 +49272,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -52367,7 +49288,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -52384,7 +49304,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -52401,7 +49320,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -52416,7 +49334,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -52476,7 +49393,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -52491,7 +49407,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -52509,7 +49424,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -52527,7 +49441,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -52545,7 +49458,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -52562,7 +49474,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -52580,7 +49491,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -52597,7 +49507,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -52615,7 +49524,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "CAM",
         "altPositions": [
             "CF",
@@ -52633,7 +49541,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "RW",
         "altPositions": [
             "CAM"
@@ -52650,7 +49557,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -52669,7 +49575,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -52687,7 +49592,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Süper Lig",
         "club": "Galatasaray",
-        "clubBadge": "❤️💛",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
@@ -52716,7 +49620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Süper Lig",
         "club": "Fenerbahçe",
-        "clubBadge": "💛💙",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -52731,7 +49634,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Fenerbahçe",
-        "clubBadge": "💛💙",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -52793,7 +49695,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Süper Lig",
         "club": "Fenerbahçe",
-        "clubBadge": "💛💙",
         "position": "LB",
         "altPositions": [
             "CB"
@@ -52810,7 +49711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Fenerbahçe",
-        "clubBadge": "💛💙",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -52828,7 +49728,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Fenerbahçe",
-        "clubBadge": "💛💙",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -52974,7 +49873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -52989,7 +49887,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -53021,7 +49918,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇾",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -53055,7 +49951,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "LM",
         "altPositions": [
             "CM",
@@ -53089,7 +49984,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇽🇰",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -53138,7 +50032,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -53153,7 +50046,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇪",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -53168,7 +50060,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -53185,7 +50076,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇷",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -53202,7 +50092,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -53217,7 +50106,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -53232,7 +50120,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -53250,7 +50137,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -53267,7 +50153,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -53282,7 +50167,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Süper Lig",
         "club": "Trabzonspor",
-        "clubBadge": "❤️💙",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -53300,7 +50184,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -53315,7 +50198,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -53330,7 +50212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -53345,7 +50226,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "LB",
         "altPositions": [],
         "rating": 72,
@@ -53360,7 +50240,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -53377,7 +50256,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -53395,7 +50273,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Süper Lig",
         "club": "İstanbul Başakşehir",
-        "clubBadge": "🧡💙",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -53410,7 +50287,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -53428,7 +50304,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -53445,7 +50320,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -53463,7 +50337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -53481,7 +50354,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -53498,7 +50370,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -53516,7 +50387,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -53531,7 +50401,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -53546,7 +50415,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇽🇰",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -53563,7 +50431,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -53578,7 +50445,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -53595,7 +50461,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Austrian Bundesliga",
         "club": "LASK",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -53624,7 +50489,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -53655,7 +50519,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -53673,7 +50536,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -53690,7 +50552,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -53707,7 +50568,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -53724,7 +50584,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -53741,7 +50600,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -53772,7 +50630,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -53790,7 +50647,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -53807,7 +50663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -53824,7 +50679,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -53839,7 +50693,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Austrian Bundesliga",
         "club": "Red Bull Salzburg",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -53854,7 +50707,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -53885,7 +50737,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -53902,7 +50753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -53917,7 +50767,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -53934,7 +50783,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -53951,7 +50799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -53966,7 +50813,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -53983,7 +50829,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -54000,7 +50845,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -54017,7 +50861,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -54034,7 +50877,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -54049,7 +50891,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -54064,7 +50905,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -54082,7 +50922,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -54099,7 +50938,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -54134,7 +50972,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -54149,7 +50986,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -54215,7 +51051,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -54230,7 +51065,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -54262,7 +51096,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -54280,7 +51113,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "LWB",
         "altPositions": [
             "LB",
@@ -54298,7 +51130,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -54315,7 +51146,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇱",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -54330,7 +51160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -54347,7 +51176,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -54365,7 +51193,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -54382,7 +51209,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -54399,7 +51225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -54417,7 +51242,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "RWB",
         "altPositions": [
             "LWB",
@@ -54436,7 +51260,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -54453,7 +51276,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇹",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -54470,7 +51292,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -54485,7 +51306,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -54502,7 +51322,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -54520,7 +51339,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -54535,7 +51353,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -54552,7 +51369,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇶",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -54567,7 +51383,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -54582,7 +51397,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Serie A",
         "club": "Torino",
-        "clubBadge": "🤎🤍",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -54600,7 +51414,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -54615,7 +51428,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -54658,7 +51470,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -54675,7 +51486,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇱",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -54690,7 +51500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -54707,7 +51516,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "RWB",
         "altPositions": [
             "LWB",
@@ -54726,7 +51534,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "RWB",
         "altPositions": [
             "RM"
@@ -54776,7 +51583,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -54794,7 +51600,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -54811,7 +51616,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -54828,7 +51632,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "RW",
@@ -54864,7 +51667,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -54909,7 +51711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -54942,7 +51743,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇱",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 67,
@@ -54957,7 +51757,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -54972,7 +51771,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -54987,7 +51785,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -55002,7 +51799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -55020,7 +51816,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -55037,7 +51832,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -55069,7 +51863,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇬",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -55086,7 +51879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -55103,7 +51895,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -55120,7 +51911,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -55137,7 +51927,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 73,
@@ -55152,7 +51941,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇴",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -55170,7 +51958,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -55199,7 +51986,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇲",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 64,
@@ -55214,7 +52000,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LB",
@@ -55232,7 +52017,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -55249,7 +52033,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "Serie A",
         "club": "Cagliari",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -55266,7 +52049,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -55281,7 +52063,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -55296,7 +52077,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -55311,7 +52091,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -55326,7 +52105,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -55343,7 +52121,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇦",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -55360,7 +52137,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -55377,7 +52153,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -55394,7 +52169,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -55411,7 +52185,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇫",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -55429,7 +52202,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -55446,7 +52218,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -55463,7 +52234,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW"
@@ -55480,7 +52250,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -55497,7 +52266,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -55513,9 +52281,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Wahi",
         "nationality": "France",
         "flag": "🇫🇷",
-        "league": "Ligue 1",
-        "club": "Marseille",
-        "clubBadge": "",
+        "league": "Bundesliga",
+        "club": "Eintracht Frankfurt",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -55544,7 +52311,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -55559,7 +52325,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Ligue 1",
         "club": "Marseille",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -55574,7 +52339,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -55589,7 +52353,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -55604,7 +52367,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -55619,7 +52381,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -55634,7 +52395,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -55651,7 +52411,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -55668,7 +52427,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -55685,7 +52443,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -55702,7 +52459,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -55719,7 +52475,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 71,
@@ -55734,7 +52489,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -55752,7 +52506,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -55769,7 +52522,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -55786,7 +52538,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -55804,7 +52555,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -55821,7 +52571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW"
@@ -55838,7 +52587,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -55856,7 +52604,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -55871,7 +52618,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -55886,7 +52632,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -55901,7 +52646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Ligue 1",
         "club": "Monaco",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -55919,7 +52663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -55934,7 +52677,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 62,
@@ -55949,7 +52691,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -55964,7 +52705,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -55979,7 +52719,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇮",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -55996,7 +52735,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -56013,7 +52751,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -56030,7 +52767,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇳",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -56047,7 +52783,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -56064,7 +52799,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -56081,7 +52815,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -56098,7 +52831,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -56115,7 +52847,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -56132,7 +52863,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -56149,7 +52879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -56166,7 +52895,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -56184,7 +52912,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -56199,9 +52926,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Guessand",
         "nationality": "France",
         "flag": "🇫🇷",
-        "league": "Ligue 1",
-        "club": "Nice",
-        "clubBadge": "",
+        "league": "Premier League",
+        "club": "Crystal Palace",
         "position": "ST",
         "altPositions": [
             "RW"
@@ -56218,7 +52944,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -56233,7 +52958,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Ligue 1",
         "club": "Nice",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [],
         "rating": 71,
@@ -56262,7 +52986,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -56277,7 +53000,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -56306,7 +53028,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -56321,7 +53042,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -56338,7 +53058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -56353,7 +53072,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -56370,7 +53088,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -56387,7 +53104,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -56404,7 +53120,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -56421,7 +53136,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -56438,7 +53152,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "RW"
@@ -56455,7 +53168,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -56472,7 +53184,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "ST"
@@ -56489,7 +53200,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -56506,7 +53216,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -56521,7 +53230,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 66,
@@ -56536,7 +53244,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -56553,7 +53260,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Ligue 1",
         "club": "Rennes",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -56568,7 +53274,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -56583,7 +53288,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 67,
@@ -56598,7 +53302,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -56613,7 +53316,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇪",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -56628,7 +53330,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -56645,7 +53346,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 64,
@@ -56660,7 +53360,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -56675,7 +53374,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -56692,7 +53390,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇼",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -56709,7 +53406,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇹",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -56726,7 +53422,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW"
@@ -56759,7 +53454,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -56776,7 +53470,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -56791,7 +53484,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -56808,7 +53500,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -56825,7 +53516,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -56842,7 +53532,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Ligue 1",
         "club": "Reims",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 67,
@@ -56857,7 +53546,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -56872,7 +53560,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -56887,7 +53574,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -56902,7 +53588,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇳",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -56931,7 +53616,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 73,
@@ -56946,7 +53630,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -56963,7 +53646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -56980,7 +53662,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 70,
@@ -56995,7 +53676,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -57012,7 +53692,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -57027,14 +53706,13 @@ const DEFAULT_PLAYERS = [
         "cardName": "Diarra",
         "nationality": "Senegal",
         "flag": "🇸🇳",
-        "league": "Ligue 1",
-        "club": "Strasbourg",
-        "clubBadge": "",
+        "league": "Premier League",
+        "club": "Sunderland",
         "position": "CM",
         "altPositions": [
             "LM"
         ],
-        "rating": 76,
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/fbklgi1756903777.png",
         "cardTheme": "standard"
     },
@@ -57046,7 +53724,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -57063,7 +53740,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "CAM"
@@ -57080,7 +53756,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -57092,17 +53767,16 @@ const DEFAULT_PLAYERS = [
     {
         "id": "moreira-strasbourg",
         "name": "Diego Moreira",
-        "cardName": "Moreira",
+        "cardName": "D. Moreira",
         "nationality": "Portugal",
         "flag": "🇵🇹",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW"
         ],
-        "rating": 71,
+        "rating": 74,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/eyaz0q1766053833.png",
         "cardTheme": "standard"
     },
@@ -57114,7 +53788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -57129,7 +53802,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -57144,7 +53816,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 69,
@@ -57159,7 +53830,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Ligue 1",
         "club": "Strasbourg",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -57379,7 +54049,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -57408,7 +54077,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇳",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -57425,7 +54093,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -57440,7 +54107,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -57455,7 +54121,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -57470,7 +54135,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -57487,7 +54151,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "RB"
@@ -57504,7 +54167,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -57519,7 +54181,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -57534,7 +54195,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -57551,7 +54211,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 85,
@@ -57566,7 +54225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -57581,7 +54239,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -57596,7 +54253,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -57687,7 +54343,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Corinthians",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 79,
@@ -57732,7 +54387,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇪",
         "league": "Brasileirao Serie A",
         "club": "Corinthians",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [],
         "rating": 76,
@@ -57747,7 +54401,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Corinthians",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -57762,7 +54415,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Corinthians",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -57791,7 +54443,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Corinthians",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -57806,7 +54457,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Corinthians",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -57893,7 +54543,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇱",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [],
         "rating": 78,
@@ -57908,7 +54557,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -57923,7 +54571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -57966,7 +54613,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 77,
@@ -57981,7 +54627,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 77,
@@ -57996,7 +54641,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [],
         "rating": 77,
@@ -58011,7 +54655,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Flamengo",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [],
         "rating": 77,
@@ -58054,7 +54697,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -58069,7 +54711,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -58084,7 +54725,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 77,
@@ -58099,7 +54739,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [],
         "rating": 75,
@@ -58114,7 +54753,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 76,
@@ -58129,7 +54767,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -58144,7 +54781,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [],
         "rating": 75,
@@ -58159,7 +54795,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [],
         "rating": 75,
@@ -58174,7 +54809,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -58203,7 +54837,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -58218,7 +54851,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Brasileirao Serie A",
         "club": "Fluminense",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [],
         "rating": 75,
@@ -58233,7 +54865,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 66,
@@ -58248,7 +54879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -58263,7 +54893,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇪",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -58292,7 +54921,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -58307,7 +54935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -58322,7 +54949,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -58337,7 +54963,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -58352,7 +54977,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇲",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -58367,7 +54991,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇺",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -58382,7 +55005,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -58397,7 +55019,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -58412,7 +55033,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -58441,7 +55061,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -58456,7 +55075,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -58471,7 +55089,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -58486,7 +55103,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -58501,7 +55117,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -58516,7 +55131,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -58545,7 +55159,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -58574,7 +55187,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇯",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -58589,7 +55201,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -58604,7 +55215,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -58619,7 +55229,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -58634,7 +55243,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "Bundesliga",
         "club": "St. Pauli",
-        "clubBadge": "🟤⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -58663,7 +55271,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -58706,7 +55313,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -58721,7 +55327,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -58764,7 +55369,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -58779,7 +55383,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 79,
@@ -58794,7 +55397,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -58809,7 +55411,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -58838,7 +55439,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -58853,7 +55453,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -58868,7 +55467,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -58883,7 +55481,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -58912,7 +55509,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -58927,7 +55523,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -58942,7 +55537,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -58957,7 +55551,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -58972,7 +55565,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -58987,7 +55579,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 79,
@@ -59002,7 +55593,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -59017,7 +55607,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -59032,7 +55621,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59061,7 +55649,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59076,7 +55663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59091,7 +55677,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59139,7 +55724,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59154,7 +55738,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59169,7 +55752,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "🟢⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59184,7 +55766,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -59199,7 +55780,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇹",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59214,7 +55794,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -59257,7 +55836,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -59286,7 +55864,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59301,7 +55878,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59316,7 +55892,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -59331,7 +55906,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59346,7 +55920,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59361,7 +55934,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -59376,7 +55948,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59391,7 +55962,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -59406,7 +55976,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇷",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59421,7 +55990,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59436,7 +56004,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59451,7 +56018,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59466,7 +56032,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -59481,7 +56046,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59512,7 +56076,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -59527,7 +56090,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -59542,7 +56104,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59557,7 +56118,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59572,7 +56132,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59587,7 +56146,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -59602,7 +56160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 68,
@@ -59631,7 +56188,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59646,7 +56202,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -59661,7 +56216,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -59690,7 +56244,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 73,
@@ -59719,7 +56272,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -59762,7 +56314,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59777,7 +56328,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 70,
@@ -59792,7 +56342,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59807,7 +56356,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -59822,7 +56370,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59879,7 +56426,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59908,7 +56454,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59923,7 +56468,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -59938,7 +56482,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59953,7 +56496,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -59968,7 +56510,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -59983,7 +56524,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -59998,7 +56538,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -60013,7 +56552,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -60042,7 +56580,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -60071,7 +56608,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -60100,7 +56636,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -60115,7 +56650,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -60144,7 +56678,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -60173,7 +56706,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bochum",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -60188,7 +56720,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60219,7 +56750,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60262,7 +56792,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -60277,7 +56806,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60306,7 +56834,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -60321,7 +56848,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -60364,7 +56890,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -60449,7 +56974,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -60478,7 +57002,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "GK",
         "altPositions": [],
         "rating": 73,
@@ -60493,7 +57016,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60522,7 +57044,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -60537,7 +57058,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Borussia Dortmund",
-        "clubBadge": "🟡🖤",
         "position": "CB",
         "altPositions": [],
         "rating": 63,
@@ -60608,7 +57128,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60623,7 +57142,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60638,7 +57156,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60653,7 +57170,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -60668,7 +57184,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60683,7 +57198,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60698,7 +57212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60713,7 +57226,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -60728,7 +57240,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -60743,7 +57254,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -60758,7 +57268,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -60773,7 +57282,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60802,7 +57310,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -60817,7 +57324,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60832,7 +57338,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60847,7 +57352,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -60862,7 +57366,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 66,
@@ -60877,7 +57380,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -60892,7 +57394,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60907,7 +57408,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60922,7 +57422,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60951,7 +57450,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -60961,12 +57459,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "emmanuelchigozieowen-bayerleverkusen",
         "name": "Emmanuel Chigozie Owen",
-        "cardName": "Owen",
+        "cardName": "E. Owen",
         "nationality": "Germany",
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Bayer Leverkusen",
-        "clubBadge": "🔴⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -60981,7 +57478,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -60996,7 +57492,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -61011,7 +57506,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -61082,7 +57576,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -61097,7 +57590,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -61112,7 +57604,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -61127,7 +57618,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -61156,7 +57646,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -61171,7 +57660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -61186,7 +57674,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -61201,7 +57688,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -61216,7 +57702,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -61231,7 +57716,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -61246,7 +57730,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -61261,7 +57744,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -61292,7 +57774,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇦",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -61309,7 +57790,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "RM",
         "altPositions": [
             "ST",
@@ -61343,7 +57823,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61372,7 +57851,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -61387,7 +57865,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -61402,7 +57879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -61417,7 +57893,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61432,7 +57907,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "AS Roma",
-        "clubBadge": "🟡🔴",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -61461,7 +57935,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -61476,7 +57949,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -61491,7 +57963,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -61506,7 +57977,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61521,7 +57991,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61536,7 +58005,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61551,7 +58019,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇽🇰",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61594,7 +58061,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -61625,7 +58091,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -61656,7 +58121,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -61687,7 +58151,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Como",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -61702,7 +58165,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -61734,7 +58196,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -61751,7 +58212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "GK",
         "altPositions": [],
         "rating": 75,
@@ -61780,7 +58240,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -61809,7 +58268,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -61838,7 +58296,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61853,7 +58310,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "⚫🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -61910,7 +58366,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -61953,7 +58408,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -61996,7 +58450,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62039,7 +58492,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62068,7 +58520,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62113,7 +58564,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62156,7 +58606,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -62171,7 +58620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62348,7 +58796,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇽🇰",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62393,7 +58840,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇰",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -62428,7 +58874,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62443,7 +58888,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62472,7 +58916,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62487,7 +58930,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Napoli",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62592,7 +59034,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62607,7 +59048,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62622,7 +59062,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "RWB",
         "altPositions": [
             "RB"
@@ -62667,7 +59106,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62696,7 +59134,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "LWB",
         "altPositions": [
             "LB"
@@ -62713,7 +59150,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62728,7 +59164,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇿🇼",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -62757,7 +59192,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -62772,7 +59206,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -62787,7 +59220,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -62804,7 +59236,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 75,
@@ -62864,7 +59295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏳️",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62879,7 +59309,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -62910,11 +59339,11 @@ const DEFAULT_PLAYERS = [
         "club": "England 66",
         "position": "LM",
         "altPositions": [
-            "RM",
-            "CM"
+            "CM",
+            "RM"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QnVPh4nqmrkTrJeAgsRWgVv4i6GZrDaCmnvBpSw8rITjFPkx8TjnHxg&s=10",
         "cardTheme": "gc"
     },
     {
@@ -63028,7 +59457,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 89,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5U-fPcMieVbqnlixswFIlQRz4yhk647V4DTOfTN-UHCVkuV_DOz3kh7E&s=10",
         "cardTheme": "gc"
     },
     {
@@ -63630,7 +60059,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB",
@@ -63648,7 +60076,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -63666,7 +60093,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -63684,7 +60110,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "CM",
@@ -63702,7 +60127,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "LB",
@@ -63720,7 +60144,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -63737,7 +60160,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -63755,7 +60177,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -63773,7 +60194,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -63791,7 +60211,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -63806,7 +60225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -64153,7 +60571,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -64171,7 +60588,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -64186,7 +60602,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -64204,7 +60619,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CB",
@@ -64236,7 +60650,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -64253,7 +60666,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -64271,7 +60683,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 81,
@@ -64302,7 +60713,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB",
@@ -64320,7 +60730,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -64419,7 +60828,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW",
@@ -64437,7 +60845,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "LWB",
@@ -64455,7 +60862,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -64472,7 +60878,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -64490,7 +60895,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁥󠁮󠁧󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -64507,7 +60911,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -64541,7 +60944,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -64558,7 +60960,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -64575,7 +60976,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -64593,7 +60993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 85,
@@ -64727,7 +61126,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -64742,7 +61140,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "LB",
         "altPositions": [],
         "rating": 77,
@@ -64790,7 +61187,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -64807,7 +61203,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -64822,7 +61217,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -64840,7 +61234,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -64859,7 +61252,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 82,
@@ -64874,7 +61266,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -64892,7 +61283,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -64909,7 +61299,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RM",
@@ -64927,7 +61316,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
@@ -64942,7 +61330,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -64957,7 +61344,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇴",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -64975,14 +61361,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM",
             "CB"
         ],
         "rating": 81,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmfJ7jSe1P-AO3rV9GOkdczWU0RI2KydomQ85YqchH3g&s=10",
         "cardTheme": "mm"
     },
     {
@@ -64993,7 +61378,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -65008,7 +61392,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "RM",
@@ -65026,7 +61409,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -65044,7 +61426,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -65062,7 +61443,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "LM"
@@ -65079,7 +61459,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -65094,7 +61473,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -65125,7 +61503,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -65142,7 +61519,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -65159,7 +61535,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -65176,7 +61551,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "RM",
@@ -65195,7 +61569,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -65213,7 +61586,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "CM",
@@ -65231,7 +61603,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -65248,7 +61619,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -65266,7 +61636,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -65281,7 +61650,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -65298,7 +61666,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -65313,7 +61680,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇺",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 81,
@@ -65328,7 +61694,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -65345,7 +61710,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇼",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -65360,7 +61724,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -65375,7 +61738,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -65410,7 +61772,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -65427,7 +61788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Everton",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "RB",
@@ -66206,13 +62566,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 62",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://media.licdn.com/dms/image/v2/D4E12AQGDFa9xrPxCUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1684871327560?e=2147483647&v=beta&t=O8NnJyWSu6sTtvOfFKRsy_FzEJPcUqIhjcXNeEXKpB4",
         "cardTheme": "gc"
     },
     {
@@ -66223,7 +62582,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 58",
-        "clubBadge": "⚽",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -66241,14 +62599,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 58",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM",
             "CDM"
         ],
         "rating": 92,
-        "photo": "",
+        "photo": "https://i0.wp.com/worldfootballindex.com/wp-content/uploads/2018/03/didi.jpg?fit=956%2C500&ssl=1",
         "cardTheme": "gc"
     },
     {
@@ -66259,7 +62616,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 54",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [
             "CF",
@@ -66277,13 +62633,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Global Champions",
         "club": "Uruguay 50",
-        "clubBadge": "⚽",
         "position": "RW",
         "altPositions": [
             "RM"
         ],
         "rating": 91,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcMjWsTE1TuiW0gWuPAgeplRNTFEhUk-vRa_zg36k-Iw&s",
         "cardTheme": "gc"
     },
     {
@@ -66294,7 +62649,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Global Champions",
         "club": "Uruguay 50",
-        "clubBadge": "⚽",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -66309,7 +62663,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 38",
-        "clubBadge": "⚽",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -66326,13 +62679,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 38",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEMI61fB2g1gcQBN76mY8KK4KuQSiSc0fVLFm0pyhE1m1mT6z4zIanRx0&s=10",
         "cardTheme": "gc"
     },
     {
@@ -66360,13 +62712,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 34",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CM"
         ],
         "rating": 90,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e6/FBC_Juventus_-_1930s_-_Giovanni_Ferrari.jpg",
         "cardTheme": "gc"
     },
     {
@@ -66377,13 +62728,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 34",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/4/46/Angelo_Schiavio_-_1925_-_Bologna_FC.jpg",
         "cardTheme": "gc"
     },
     {
@@ -66394,7 +62744,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 34",
-        "clubBadge": "⚽",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -66411,7 +62760,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "Global Champions",
         "club": "Uruguay 30",
-        "clubBadge": "⚽",
         "position": "CF",
         "altPositions": [
             "ST"
@@ -66461,7 +62809,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -66479,7 +62826,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "Liga Portugal",
         "club": "FC Porto",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -66496,7 +62842,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CB",
         "altPositions": [],
         "rating": 75,
@@ -66511,7 +62856,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -66526,7 +62870,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "RW",
         "altPositions": [],
         "rating": 86,
@@ -66541,7 +62884,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CM",
         "altPositions": [],
         "rating": 81,
@@ -66556,7 +62898,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "EFL Championship",
         "club": "Burnley",
-        "clubBadge": "🍇",
         "position": "CF",
         "altPositions": [
             "ST",
@@ -66574,7 +62915,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "EFL Championship",
         "club": "Stoke City",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -66589,7 +62929,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -66604,7 +62943,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -66619,7 +62957,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CB",
         "altPositions": [],
         "rating": 71,
@@ -66634,7 +62971,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "LB",
         "altPositions": [],
         "rating": 72,
@@ -66649,7 +62985,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CB",
         "altPositions": [],
         "rating": 69,
@@ -66664,7 +62999,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CM",
         "altPositions": [],
         "rating": 70,
@@ -66679,7 +63013,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CM",
         "altPositions": [],
         "rating": 69,
@@ -66694,7 +63027,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CDM",
         "altPositions": [],
         "rating": 68,
@@ -66709,7 +63041,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -66724,7 +63055,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "ST",
         "altPositions": [],
         "rating": 67,
@@ -66739,7 +63069,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "LB",
         "altPositions": [],
         "rating": 74,
@@ -66754,7 +63083,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CDM",
         "altPositions": [],
         "rating": 83,
@@ -66769,7 +63097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -66784,7 +63111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "LW",
         "altPositions": [],
         "rating": 76,
@@ -66799,7 +63125,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "LW",
         "altPositions": [],
         "rating": 76,
@@ -66814,7 +63139,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇲",
         "league": "WC26",
         "club": "Cameroon",
-        "clubBadge": "🇨🇲",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -66829,7 +63153,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "LM",
@@ -66847,7 +63170,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -66862,7 +63184,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 84,
@@ -66877,7 +63198,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "GK",
         "altPositions": [],
         "rating": 78,
@@ -66892,7 +63212,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Premier League",
         "club": "Leeds",
-        "clubBadge": "⚪🟡",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -66910,7 +63229,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "CF",
@@ -66929,7 +63247,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "🍒",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -66944,7 +63261,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "LB",
         "altPositions": [
             "CM",
@@ -66979,7 +63295,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇳",
         "league": "Serie A",
         "club": "Udinese",
-        "clubBadge": "⚫⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -67008,8 +63323,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "M. Fernandes",
         "nationality": "Portugal",
         "flag": "🇵🇹",
-        "league": "EFL Championship",
-        "club": "West Ham",
+        "league": "Premier League",
+        "club": "Tottenham",
         "position": "CM",
         "altPositions": [],
         "rating": 81,
@@ -67038,7 +63353,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇩",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫⚪",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -67851,7 +64165,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "GK",
         "altPositions": [],
         "rating": 70,
@@ -67866,7 +64179,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "GK",
         "altPositions": [],
         "rating": 74,
@@ -67881,7 +64193,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "LB",
         "altPositions": [
             "RB"
@@ -67898,7 +64209,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -67913,7 +64223,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "CAM",
         "altPositions": [
             "CF"
@@ -67930,7 +64239,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "LW",
         "altPositions": [],
         "rating": 76,
@@ -67945,7 +64253,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -68160,7 +64467,7 @@ const DEFAULT_PLAYERS = [
             "RB"
         ],
         "rating": 72,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt7xVpmYIpYEQyCs4Or5LqCxkPRH_tF4yy9sMFT0aA27VHDQOt7vJCR0Q&s=10",
         "cardTheme": "standard"
     },
     {
@@ -68201,7 +64508,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -68218,7 +64524,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -68233,7 +64538,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 81,
@@ -68248,7 +64552,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -68266,7 +64569,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -68283,7 +64585,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "RB",
         "altPositions": [],
         "rating": 78,
@@ -68298,7 +64599,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "LB",
         "altPositions": [],
         "rating": 77,
@@ -68313,7 +64613,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -68331,7 +64630,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "⚫",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -68349,7 +64647,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "GK",
         "altPositions": [],
         "rating": 76,
@@ -68364,7 +64661,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "CDM",
         "altPositions": [],
         "rating": 78,
@@ -68379,7 +64675,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 79,
@@ -68394,7 +64689,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -68409,7 +64703,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -68424,7 +64717,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "LW",
         "altPositions": [],
         "rating": 76,
@@ -68439,7 +64731,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "CAM",
         "altPositions": [],
         "rating": 77,
@@ -68454,7 +64745,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Fulham",
-        "clubBadge": "⚫",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -68469,7 +64759,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "GK",
         "altPositions": [],
         "rating": 72,
@@ -68484,7 +64773,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "EFL Championship",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -68501,7 +64789,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "EFL Championship",
         "club": "Ipswich",
-        "clubBadge": "🚜",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -68518,7 +64805,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "GK",
         "altPositions": [],
         "rating": 77,
@@ -68533,7 +64819,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -68548,7 +64833,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -68563,7 +64847,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -68580,7 +64863,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -68597,7 +64879,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -68614,7 +64895,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -68631,7 +64911,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -68648,7 +64927,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "RW",
         "altPositions": [
             "RM"
@@ -68665,7 +64943,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Nottingham",
-        "clubBadge": "🌳",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -68682,7 +64959,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -68699,7 +64975,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -68716,7 +64991,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🔵",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -68731,7 +65005,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -68748,7 +65021,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -68765,7 +65037,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -68780,7 +65051,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -68797,7 +65067,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -68812,7 +65081,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -68829,7 +65097,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -68846,7 +65113,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Serie A",
         "club": "AC Milan",
-        "clubBadge": "⚫🔴",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -68863,7 +65129,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -68878,7 +65143,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 72,
@@ -68893,7 +65157,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -68910,7 +65173,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM",
@@ -68928,7 +65190,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -68945,7 +65206,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -68962,7 +65222,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -68979,7 +65238,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -68996,7 +65254,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "⚪🔴⚪",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -69013,7 +65270,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🔵",
         "position": "CAM",
         "altPositions": [
             "RW",
@@ -69031,7 +65287,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -69048,7 +65303,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CAM",
@@ -69066,7 +65320,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -69084,7 +65337,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇱",
         "league": "Serie A",
         "club": "Atalanta",
-        "clubBadge": "",
         "position": "LM",
         "altPositions": [
             "LW",
@@ -69307,7 +65559,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "CAM",
@@ -69325,7 +65576,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇰",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -69342,7 +65592,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "🔴",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -69357,7 +65606,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -69372,7 +65620,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -69389,7 +65636,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇦",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -69406,7 +65652,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -69423,7 +65668,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CM",
         "altPositions": [],
         "rating": 72,
@@ -69438,7 +65682,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇱🇺",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -69455,7 +65698,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -69473,7 +65715,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "RW",
         "altPositions": [
             "ST",
@@ -69491,7 +65732,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -69509,7 +65749,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "RB",
         "altPositions": [
             "RWB"
@@ -69526,7 +65765,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -69543,7 +65781,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇸🇪",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -69560,7 +65797,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Liga Portugal",
         "club": "Benfica",
-        "clubBadge": "🦅",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -69575,7 +65811,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -69592,7 +65827,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -69607,7 +65841,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -69624,7 +65857,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇱",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -69641,7 +65873,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -69658,7 +65889,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -69675,7 +65905,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇯",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -69692,7 +65921,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -69709,7 +65937,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -69726,7 +65953,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇱",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "ST",
         "altPositions": [
             "LW"
@@ -69743,7 +65969,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "ST",
         "altPositions": [],
         "rating": 76,
@@ -69758,7 +65983,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇮",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -69773,7 +65997,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -69790,7 +66013,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Süper Lig",
         "club": "Beşiktaş",
-        "clubBadge": "🖤🤍",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -69807,7 +66029,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -69825,7 +66046,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -69843,7 +66063,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CM",
         "altPositions": [],
         "rating": 71,
@@ -69858,7 +66077,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "LW",
         "altPositions": [
             "RW",
@@ -69876,7 +66094,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -69894,7 +66111,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [],
         "rating": 74,
@@ -69909,7 +66125,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Others (UEFA)",
         "club": "Bodo/Glimt",
-        "clubBadge": "🟡⚫",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -69927,7 +66142,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -69945,7 +66159,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇴",
         "league": "Serie A",
         "club": "Bologna",
-        "clubBadge": "❤️💙",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -70174,7 +66387,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "🔴",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -70192,7 +66404,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇿",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -70207,7 +66418,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "🔵",
         "position": "CM",
         "altPositions": [
             "RM",
@@ -70225,7 +66435,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Premier League",
         "club": "Newcastle",
-        "clubBadge": "🖤🤍",
         "position": "ST",
         "altPositions": [],
         "rating": 79,
@@ -70240,7 +66449,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "EFL Championship",
         "club": "West Ham",
-        "clubBadge": "⚒️",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -70255,7 +66463,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "CB",
         "altPositions": [
             "LB"
@@ -70272,7 +66479,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "⚪",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -70289,7 +66495,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -70304,7 +66509,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "RB",
         "altPositions": [],
         "rating": 78,
@@ -70319,7 +66523,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -70334,7 +66537,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -70351,7 +66553,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇴",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 76,
@@ -70366,7 +66567,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -70383,7 +66583,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Betis",
-        "clubBadge": "🟢⚪",
         "position": "LW",
         "altPositions": [
             "LM",
@@ -70401,7 +66600,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [],
         "rating": 79,
@@ -70416,7 +66614,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇪",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "RB",
         "altPositions": [
             "LB"
@@ -70433,7 +66630,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 77,
@@ -70448,7 +66644,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -70465,7 +66660,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "RB",
         "altPositions": [],
         "rating": 79,
@@ -70480,7 +66674,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -70495,7 +66688,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "LB",
         "altPositions": [
             "LM",
@@ -70514,7 +66706,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -70532,7 +66723,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "RM",
@@ -70550,7 +66740,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇷",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -70567,7 +66756,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -70584,7 +66772,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇻🇪",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -70601,7 +66788,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -70618,7 +66804,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "LW",
         "altPositions": [
             "ST",
@@ -70637,7 +66822,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇸",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 80,
@@ -70652,7 +66836,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇺",
         "league": "La Liga",
         "club": "Real Sociedad",
-        "clubBadge": "🔵⚪",
         "position": "CAM",
         "altPositions": [
             "LW",
@@ -70670,7 +66853,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "RB",
         "altPositions": [
             "CB"
@@ -70687,7 +66869,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 78,
@@ -70702,7 +66883,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 79,
@@ -70717,7 +66897,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -70734,7 +66913,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "CDM",
         "altPositions": [
             "CB"
@@ -70751,7 +66929,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [
             "CDM"
@@ -70768,7 +66945,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 74,
@@ -70783,7 +66959,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "La Liga",
         "club": "Sevilla",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -70801,7 +66976,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga 2",
         "club": "Cádiz",
-        "clubBadge": "🟡🔵",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -70819,7 +66993,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "GK",
         "altPositions": [],
         "rating": 79,
@@ -70834,7 +67007,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "RB",
         "altPositions": [
             "CB",
@@ -70852,7 +67024,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "CB",
         "altPositions": [
             "CDM",
@@ -70870,7 +67041,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇸",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "RB",
         "altPositions": [],
         "rating": 74,
@@ -70885,7 +67055,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "CB",
         "altPositions": [],
         "rating": 76,
@@ -70900,7 +67069,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "RM",
         "altPositions": [
             "RB",
@@ -70919,7 +67087,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇬🇪",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "ST",
         "altPositions": [],
         "rating": 78,
@@ -70934,7 +67101,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇦",
         "league": "La Liga",
         "club": "Villarreal",
-        "clubBadge": "🟡",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -70949,7 +67115,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇬",
         "league": "Bundesliga",
         "club": "RB Leipzig",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -70966,7 +67131,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Elversberg",
-        "clubBadge": "🖤⚪",
         "position": "CAM",
         "altPositions": [
             "CM",
@@ -70984,7 +67148,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 70,
@@ -70999,7 +67162,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇭",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -71014,7 +67176,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇦",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 77,
@@ -71029,7 +67190,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "LW",
@@ -71048,7 +67208,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇵🇹",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -71066,7 +67225,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Bundesliga",
         "club": "Stuttgart",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "LW"
@@ -71083,7 +67241,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CB",
         "altPositions": [],
         "rating": 73,
@@ -71098,7 +67255,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "LB",
         "altPositions": [
             "LM"
@@ -71115,7 +67271,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇰",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "LM",
         "altPositions": [
             "LWB",
@@ -71134,7 +67289,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 71,
@@ -71149,7 +67303,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇭🇺",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -71164,7 +67317,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [
             "LW",
@@ -71182,7 +67334,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "LW",
         "altPositions": [
             "RW"
@@ -71199,7 +67350,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁧‍󠁢‍󠁳‍󠁣‍󠁴‍󠁿",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "RW",
         "altPositions": [
             "ST"
@@ -71216,7 +67366,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "🔴⚪",
         "position": "ST",
         "altPositions": [],
         "rating": 71,
@@ -71388,7 +67537,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CDM",
@@ -71422,7 +67570,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 02",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -71455,7 +67602,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇫🇷",
         "league": "Global Champions",
         "club": "France 98",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "CDM"
@@ -71467,7 +67613,7 @@ const DEFAULT_PLAYERS = [
     {
         "id": "thuram-gc",
         "name": "Lilian Thuram",
-        "cardName": "Thuram",
+        "cardName": "L. Thuram",
         "nationality": "France",
         "flag": "🇫🇷",
         "league": "Global Champions",
@@ -71477,7 +67623,7 @@ const DEFAULT_PLAYERS = [
             "CB"
         ],
         "rating": 91,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlo3JyhfPbqml3vbPmOngeyBaFdoMeLiAenYht6PzT8sHOHIbhuuZQ1DE&s=10",
         "cardTheme": "gc"
     },
     {
@@ -71494,7 +67640,7 @@ const DEFAULT_PLAYERS = [
             "LM"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsNiOibVev-9iRyNvD9c9L1EwW5YfU0ogvMdgV4lylUqsvumEOYrN6YjMx&s=10",
         "cardTheme": "gc"
     },
     {
@@ -71511,7 +67657,7 @@ const DEFAULT_PLAYERS = [
             "LW"
         ],
         "rating": 91,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBKirdSv6t94kZGyb8e3H2MJGao4_NepCtW7P4Z7DnNur4dGDRv5GSFc&s=10",
         "cardTheme": "gc"
     },
     {
@@ -71568,7 +67714,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 94",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -71602,7 +67747,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 94",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF",
@@ -71688,7 +67832,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 86",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 89,
@@ -71703,7 +67846,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 86",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "RB"
@@ -71720,7 +67862,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 86",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM",
@@ -71738,13 +67879,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [
             "CDM"
         ],
-        "rating": 93,
-        "photo": null,
+        "rating": 92,
+        "photo": "https://pbs.twimg.com/media/Fvm0_Y7WYAEeBUQ.jpg",
         "cardTheme": "gc"
     },
     {
@@ -71755,7 +67895,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "LB",
         "altPositions": [
             "LWB"
@@ -71772,7 +67911,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -71787,7 +67925,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Global Champions",
         "club": "Italy 82",
-        "clubBadge": "⚽",
         "position": "RM",
         "altPositions": [
             "RW"
@@ -71804,7 +67941,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 78",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -71821,7 +67957,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 78",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 87,
@@ -71836,7 +67971,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -71853,7 +67987,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "CAM",
         "altPositions": [
             "CM"
@@ -71870,7 +68003,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 74",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -71887,7 +68019,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 70",
-        "clubBadge": "⚽",
         "position": "CM",
         "altPositions": [
             "CAM"
@@ -71904,13 +68035,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 70",
-        "clubBadge": "⚽",
         "position": "CF",
         "altPositions": [
             "ST"
         ],
         "rating": 88,
-        "photo": null,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tost%C3%A3o_1970.jpg/960px-Tost%C3%A3o_1970.jpg",
         "cardTheme": "gc"
     },
     {
@@ -71921,7 +68051,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Global Champions",
         "club": "Brazil 70",
-        "clubBadge": "⚽",
         "position": "LM",
         "altPositions": [
             "CAM",
@@ -71939,7 +68068,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -71954,7 +68082,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "ST",
         "altPositions": [
             "CF"
@@ -71971,7 +68098,6 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Global Champions",
         "club": "England 66",
-        "clubBadge": "⚽",
         "position": "CDM",
         "altPositions": [
             "CM"
@@ -72701,7 +68827,7 @@ const DEFAULT_PLAYERS = [
             "RM"
         ],
         "rating": 83,
-        "photo": "https://assets.goal.com/images/v3/bltc5b2642d5b92dcca/15fed40a4fad1756229ceead35085b4b0175c8d9.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsjS83MjsDCP2ujyEQtrbLlu6gx6qrGyG_HZ9_tthHphC1HueHzGx6vNc&s=10",
         "cardTheme": "mm"
     },
     {
@@ -73315,8 +69441,8 @@ const DEFAULT_PLAYERS = [
         "club": "Algeria",
         "position": "LB",
         "altPositions": [],
-        "rating": 79,
-        "photo": "",
+        "rating": 80,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfHSD4Q2npWtE3ZyPma6BVweyZtRYMX6WfnIaN6kwHCmIs0FwJLGrE3M&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -73327,10 +69453,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "position": "CAM",
-        "altPositions": [],
-        "rating": 78,
-        "photo": "",
+        "position": "LM",
+        "altPositions": [
+            "LW",
+            "CAM"
+        ],
+        "rating": 80,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTctiNM_4DLqZNRic7jW08ChozPI5VyaPF__M_1_oK_wagYIHJylcaScU0&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -73344,7 +69473,7 @@ const DEFAULT_PLAYERS = [
         "position": "RW",
         "altPositions": [],
         "rating": 84,
-        "photo": "https://media.worldsoccertalk.com/wp-content/uploads/sites/6/2026/06/16202303/mahrez-740x416.webp",
+        "photo": "https://www.cafonline.com/media/ldajqb4d/mahrez-algeria-v-austria-group-j-fifa-world-cup-2026.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -73876,7 +70005,7 @@ const DEFAULT_PLAYERS = [
         "club": "Senegal",
         "position": "GK",
         "altPositions": [],
-        "rating": 84,
+        "rating": 82,
         "photo": "https://assets-cms.thescore.com/uploads/image/file/838335/w640xh360_GettyImages-2281947199.jpg?ts=1781651494",
         "cardTheme": "worldcup26"
     },
@@ -74002,8 +70131,8 @@ const DEFAULT_PLAYERS = [
         "club": "United States",
         "position": "CDM",
         "altPositions": [],
-        "rating": 78,
-        "photo": "",
+        "rating": 82,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Tyler_Adams_Australia_v_USA_19_June_2026-32.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -74016,8 +70145,8 @@ const DEFAULT_PLAYERS = [
         "club": "United States",
         "position": "CM",
         "altPositions": [],
-        "rating": 79,
-        "photo": "",
+        "rating": 82,
+        "photo": "https://sportshub.cbsistatic.com/i/2026/07/01/8a2f3c79-9e1b-4e37-8ede-86179549eef5/usmnt-mckennie.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -74029,9 +70158,11 @@ const DEFAULT_PLAYERS = [
         "league": "WC26",
         "club": "United States",
         "position": "RW",
-        "altPositions": [],
+        "altPositions": [
+            "RM"
+        ],
         "rating": 83,
-        "photo": "",
+        "photo": "https://cdn.bongdaplus.vn/Assets/Media/2026/06/30/77/pulisic2.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -74116,7 +70247,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Kaladze",
         "nationality": "Georgia",
         "flag": "🇬🇪",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "position": "CB",
         "altPositions": [
@@ -74125,6 +70256,247 @@ const DEFAULT_PLAYERS = [
         "rating": 82,
         "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Kaladze_%28cropped%29.jpg/250px-Kaladze_%28cropped%29.jpg",
         "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782842939987",
+        "name": "José Canale",
+        "cardName": "Canale",
+        "nationality": "Paraguay",
+        "flag": "🇵🇾",
+        "league": "Liga Profesional de Fútbol",
+        "club": "Lanús",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782925249997",
+        "name": "Jérémy Jacquet",
+        "cardName": "Jacquet",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Premier League",
+        "club": "Liverpool",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782925416240",
+        "name": "Nguyễn Thành Chung",
+        "cardName": "Thành Chung",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "V-League",
+        "club": "Hà Nội",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 70,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782925444657",
+        "name": "Nguyễn Phi Hoàng",
+        "cardName": "Phi Hoàng",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "V-League",
+        "club": "Đà Nẵng",
+        "position": "LWB",
+        "altPositions": [
+            "LM",
+            "RM",
+            "LB"
+        ],
+        "rating": 64,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782925474874",
+        "name": "Phan Văn Biểu",
+        "cardName": "Văn Biểu",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "V-League",
+        "club": "Đà Nẵng",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 58,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782937790852",
+        "name": "Owen Hargreaves",
+        "cardName": "Hargreaves",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM",
+            "RB"
+        ],
+        "rating": 88,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1782937807355",
+        "name": "Michael Owen",
+        "cardName": "Owen",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "",
+        "club": "",
+        "position": "CF",
+        "altPositions": [
+            "ST"
+        ],
+        "rating": 90,
+        "photo": "https://backend.liverpoolfc.com/sites/default/files/styles/xl/public/2025-02/past-players-michael-owen-15022025_ca92bcb0049f678e080174875d11d706.webp?itok=szjS2auL",
+        "cardTheme": "icons"
+    },
+    {
+        "id": "player-1782940002361",
+        "name": "Ayoub El Kaabi",
+        "cardName": "El Kaabi",
+        "nationality": "Morocco",
+        "flag": "🇲🇦",
+        "league": "Others (UEFA)",
+        "club": "Olympiakos",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782940143165",
+        "name": "Mory Diaw",
+        "cardName": "Diaw",
+        "nationality": "Senegal",
+        "flag": "🇸🇳",
+        "league": "Ligue 1",
+        "club": "Le Havre",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782940627019",
+        "name": "Brandon Mechele",
+        "cardName": "Mechele",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "Belgian Pro League",
+        "club": "Club Brugge",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 74,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmyS2FRp5U1yk4iN_6aqNdW7CoDZ3tpt33M0HIUxA8y9yQ2GsmFf8lgWJltCRzyxpoHu1bUM4nLRZBFI7K_b9CE8ynBulMpcFSJl4qatY&s=10",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782940720947",
+        "name": "Hans Vanaken",
+        "cardName": "Vanaken",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "Belgian Pro League",
+        "club": "Club Brugge",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782941006448",
+        "name": "Axel Witsel",
+        "cardName": "Witsel",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "Premier League",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782941017459",
+        "name": "Thomas Meunier",
+        "cardName": "Meunier",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "Premier League",
+        "club": "",
+        "position": "RB",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782941336001",
+        "name": "Nabil Bentaleb",
+        "cardName": "Bentaleb",
+        "nationality": "Algeria",
+        "flag": "🇩🇿",
+        "league": "Ligue 1",
+        "club": "Lille",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 77,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782951929760",
+        "name": "Matt Freese",
+        "cardName": "Freese",
+        "nationality": "United States",
+        "flag": "🇺🇸",
+        "league": "MLS",
+        "club": "New York City FC",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1782952382248",
+        "name": "Alejandro Zendejas",
+        "cardName": "Zendejas",
+        "nationality": "United States",
+        "flag": "🇺🇸",
+        "league": "Liga MX",
+        "club": "América",
+        "position": "RW",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "standard"
     }
 ];
 

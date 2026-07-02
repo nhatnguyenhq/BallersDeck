@@ -4042,8 +4042,8 @@
                 'Serie B', '2. Bundesliga', 'Ligue 2', 'La Liga 2'
             ];
             const conmebolLeagues = ['Brasileirao Serie A', 'Brasileirão Série A', 'Brasileirao Série A', 'Brasileirão Serie A', 'Liga Profesional de Fútbol', 'Others (CONMEBOL)'];
-            const concacafLeagues = ['MLS'];
-            const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League', 'Qatar Stars League', 'UAE Pro League'];
+            const concacafLeagues = ['MLS', 'Liga MX'];
+            const afcLeagues = ['Saudi Pro League', 'A-League', 'V-League', 'Thai League', 'J-League', 'K-League', 'Qatar Stars League', 'UAE Pro League', 'Others (AFC)'];
             
             if (uefaLeagues.includes(leagueName)) return 'UEFA';
             if (conmebolLeagues.includes(leagueName)) return 'CONMEBOL';
@@ -4068,7 +4068,11 @@
                 }
                 return sorted;
             }
-            return [...list].sort();
+            
+            // Với các liên đoàn khác, sắp xếp theo alphabet nhưng đẩy 'Others' xuống cuối cùng
+            const normal = list.filter(l => !l.startsWith('Others')).sort();
+            const othersLeagues = list.filter(l => l.startsWith('Others')).sort();
+            return [...normal, ...othersLeagues];
         }
 
         const POSITION_ORDER = {
@@ -4218,8 +4222,6 @@ const CONFEDERATIONS = ${JSON.stringify(CONFEDERATIONS, null, 4)};
 const COUNTRY_FLAGS = ${JSON.stringify(COUNTRY_FLAGS, null, 4)};
 
 const COUNTRY_CODES = ${JSON.stringify(COUNTRY_CODES, null, 4)};
-
-const SOFIFA_IDS = ${JSON.stringify(SOFIFA_IDS, null, 4)};
 
 const DEFAULT_PLAYERS = ${JSON.stringify(players, null, 4)};
 
