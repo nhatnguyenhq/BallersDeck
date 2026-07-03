@@ -1688,7 +1688,7 @@ const DEFAULT_PLAYERS = [
         "club": "England",
         "position": "GK",
         "altPositions": [],
-        "rating": 82,
+        "rating": 83,
         "photo": "https://th.bing.com/th?id=ORMS.1c2ff6e69e8a322ad564bf8e0662bd94&pid=Wdp&w=392&h=205&qlt=80&c=1&rs=1",
         "cardTheme": "worldcup26"
     },
@@ -7160,7 +7160,7 @@ const DEFAULT_PLAYERS = [
             "CAM",
             "RM"
         ],
-        "rating": 79,
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/g7dcub1732915651.png",
         "cardTheme": "standard"
     },
@@ -7852,24 +7852,6 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 80,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ty4duh1762889321.png",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "ypino-villarreal",
-        "name": "Yéremy Pino",
-        "cardName": "Y. Pino",
-        "nationality": "Spain",
-        "flag": "🇪🇸",
-        "league": "La Liga",
-        "club": "Villarreal",
-        "position": "RW",
-        "altPositions": [
-            "RM",
-            "LW",
-            "LM"
-        ],
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c85ip51761492296.png",
         "cardTheme": "standard"
     },
     {
@@ -8841,8 +8823,8 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "LW"
         ],
-        "rating": 85,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/9apeaz1762709253.png",
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNzQkFwGUc-h1e2ab-XJuwuor9f64-_AVw4GxPJLzHSOaoP1N463UH6Y&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -9194,7 +9176,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CM"
         ],
-        "rating": 90,
+        "rating": 89,
         "photo": "https://e0.365dm.com/18/07/1600x900/kevin-de-bruyne-brazil-v-belgium_4355304.jpg?20180706194353",
         "cardTheme": "worldcup26"
     },
@@ -9790,11 +9772,11 @@ const DEFAULT_PLAYERS = [
         "club": "Juventus",
         "position": "RB",
         "altPositions": [
-            "LB",
+            "LM",
             "RM",
-            "LM"
+            "LB"
         ],
-        "rating": 79,
+        "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6r741t1759225481.png",
         "cardTheme": "standard"
     },
@@ -10792,7 +10774,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CB"
         ],
-        "rating": 79,
+        "rating": 77,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/oggynb1750317136.png",
         "cardTheme": "standard"
     },
@@ -11479,7 +11461,7 @@ const DEFAULT_PLAYERS = [
     {
         "id": "henderson-1",
         "name": "Dean Henderson",
-        "cardName": "Henderson",
+        "cardName": "D. Henderson",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
@@ -11976,7 +11958,7 @@ const DEFAULT_PLAYERS = [
     {
         "id": "henderson-6-s26",
         "name": "Jordan Henderson",
-        "cardName": "Henderson",
+        "cardName": "J. Henderson",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Eredivisie",
@@ -11985,7 +11967,7 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CM"
         ],
-        "rating": 79,
+        "rating": 78,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/by7qs71756903473.png",
         "cardTheme": "standard"
     },
@@ -12430,22 +12412,6 @@ const DEFAULT_PLAYERS = [
         ],
         "rating": 72,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c8pm8v1722883221.png",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "henderson-ajax-s26",
-        "name": "Jordan Henderson",
-        "cardName": "Henderson",
-        "nationality": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Eredivisie",
-        "club": "Ajax",
-        "position": "CDM",
-        "altPositions": [
-            "CM"
-        ],
-        "rating": 79,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/by7qs71756903473.png",
         "cardTheme": "standard"
     },
     {
@@ -14324,7 +14290,7 @@ const DEFAULT_PLAYERS = [
         "club": "Netherlands",
         "position": "CB",
         "altPositions": [],
-        "rating": 90,
+        "rating": 89,
         "photo": "https://photo.znews.vn/w660/Uploaded/wobjcak/2026_06_15/2026_06_14T220544Z_2019442335_UP1EM6E1PDJFU_RTRMADP_3_SOCCER_WORLDCUP_NLD_JPN.JPG",
         "cardTheme": "worldcup26"
     },
@@ -21407,7 +21373,7 @@ const DEFAULT_PLAYERS = [
         "position": "CB",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://cdn.breakingthelines.app/media/wp/2024/08/Marin-Pongracic.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -21542,7 +21508,7 @@ const DEFAULT_PLAYERS = [
         "position": "CM",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQY2jceamTfgf3af0XOKQC_NP77GCqm5h9938Q5WsIi_0Xgds_5wAwCEW&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -21645,8 +21611,8 @@ const DEFAULT_PLAYERS = [
         "club": "Austria",
         "position": "CB",
         "altPositions": [],
-        "rating": 80,
-        "photo": "",
+        "rating": 79,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCMBMQSZCb5hhieloq8gaTudF9M2COhAHulQTZEwssSzIFxk30xMJ_iFP8&s=10",
         "cardTheme": "worldcup26"
     },
     {
@@ -42758,7 +42724,7 @@ const DEFAULT_PLAYERS = [
     {
         "id": "henderson-ucl",
         "name": "Jordan Henderson",
-        "cardName": "Henderson",
+        "cardName": "J. Henderson",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
@@ -56739,7 +56705,7 @@ const DEFAULT_PLAYERS = [
             "LB"
         ],
         "rating": 82,
-        "photo": "",
+        "photo": "https://assets.bundesliga.com/contender/2025/2/2425_MD25_FCBBOC_SW_244.jpg?crop=416px,0px,4166px,3333px&fit=540,540",
         "cardTheme": "standard"
     },
     {
@@ -69131,8 +69097,8 @@ const DEFAULT_PLAYERS = [
         "altPositions": [
             "CDM"
         ],
-        "rating": 73,
-        "photo": "",
+        "rating": 77,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Jackson_Irvine_Australia_v_USA_19_June_2026-118.jpg/250px-Jackson_Irvine_Australia_v_USA_19_June_2026-118.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -70048,7 +70014,7 @@ const DEFAULT_PLAYERS = [
         "position": "ST",
         "altPositions": [],
         "rating": 82,
-        "photo": "https://pbs.twimg.com/card_img/2067021014471426050/Ihw5UR0y?format=jpg&name=orig",
+        "photo": "https://media.bolavip.com/wp-content/uploads/sites/10/2026/07/01144135/Nicolas-Jackson-1200x740.webp",
         "cardTheme": "worldcup26"
     },
     {
@@ -70497,6 +70463,118 @@ const DEFAULT_PLAYERS = [
         "rating": 74,
         "photo": "",
         "cardTheme": "standard"
+    },
+    {
+        "id": "player-1783022981815",
+        "name": "Robinho",
+        "cardName": "Robinho",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "position": "LW",
+        "altPositions": [
+            "RW"
+        ],
+        "rating": 78,
+        "photo": "https://thanhnien.mediacdn.vn/Uploaded/gianglao/2022_01_21/robinho-6418.jpeg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "ypino-villarreal",
+        "name": "Yéremy Pino",
+        "cardName": "Y. Pino",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "La Liga",
+        "club": "Villarreal",
+        "position": "RW",
+        "altPositions": [
+            "RM",
+            "LW",
+            "LM"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/c85ip51761492296.png",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "congvinh-affglory",
+        "name": "Lê Công Vinh",
+        "cardName": "Công Vinh",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "AFF Glory",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 94,
+        "photo": "https://thanhnien.mediacdn.vn/uploaded/quocviet/2018_05_21/CV9/2008congvinhcupvangaffcongvinhanmung-anhbd-01_IEVB.jpeg?width=600",
+        "cardTheme": "affglory"
+    },
+    {
+        "id": "player-1783036360737",
+        "name": "Nguyễn Xuân Son",
+        "cardName": "Xuân Son",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "AFF Glory",
+        "club": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "LW",
+            "RW"
+        ],
+        "rating": 94,
+        "photo": "https://laodongthudo.vn/stores/news_dataimages/2025/012025/01/20/anh-1-1735530998-797-width660height44020250101203636.jpg",
+        "cardTheme": "affglory"
+    },
+    {
+        "id": "player-1783036424700",
+        "name": "Nguyễn Quang Hải",
+        "cardName": "Quang Hải",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "AFF Glory",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [],
+        "rating": 94,
+        "photo": "https://baoxaydung.mediacdn.vn/files/hiep.ta/2018/12/18/183321-quang-hai.jpg",
+        "cardTheme": "affglory"
+    },
+    {
+        "id": "player-1783036475569",
+        "name": "Phạm Tuấn Hải",
+        "cardName": "Tuấn Hải",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "AFF Glory",
+        "club": "",
+        "position": "LW",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 89,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTSVC11YL9smn5VU7zDtqp3GNIwFeIHaSUFUmaBtN_AN0k_Wbc0j1Oe41t&s=10",
+        "cardTheme": "affglory"
+    },
+    {
+        "id": "player-1783036519965",
+        "name": "Nguyễn Đình Triệu",
+        "cardName": "Đình Triệu",
+        "nationality": "Vietnam",
+        "flag": "🇻🇳",
+        "league": "AFF Glory",
+        "club": "",
+        "position": "GK",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 90,
+        "photo": "https://images2.thanhnien.vn/528068263637045248/2025/5/12/dinhtrieu2vff12-5-25-1747025555663744681714.png",
+        "cardTheme": "affglory"
     }
 ];
 

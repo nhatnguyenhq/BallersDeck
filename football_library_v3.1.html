@@ -906,6 +906,41 @@
             color: #ffd700 !important;
         }
 
+        /* ─── WC26 TIERS (SILVER < 80 & DIAMOND >= 90) - STYLE CÁCH 1 ─── */
+        .card-wc26.card-wc26-silver {
+            border-color: #94a3b8 !important;
+            box-shadow: 0 6px 20px rgba(148, 163, 184, 0.2) !important;
+        }
+        .card-wc26-silver .panini-band { border-bottom-color: #94a3b8 !important; }
+        .card-wc26-silver .panini-ovr, .card-wc26-silver .panini-pos, .card-wc26-silver .panini-name {
+            color: #f1f5f9 !important;
+            text-shadow: 0 0 8px rgba(148, 163, 184, 0.5) !important;
+        }
+        .card-wc26-silver .panini-band::before { filter: grayscale(1) brightness(1.2); }
+        .slot-player-mini.card-wc26-silver {
+            border-color: #94a3b8 !important;
+            box-shadow: 0 0 10px rgba(148, 163, 184, 0.35) !important;
+        }
+        .slot-player-mini.card-wc26-silver .mini-ovr, .slot-player-mini.card-wc26-silver .mini-name { color: #f1f5f9 !important; }
+        .slot-player-mini.card-wc26-silver .mini-ovr { text-shadow: 0 0 4px rgba(148, 163, 184, 0.5) !important; }
+
+        .card-wc26.card-wc26-diamond {
+            border-color: #00f2fe !important;
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.3) !important;
+        }
+        .card-wc26-diamond .panini-band { border-bottom-color: #00f2fe !important; }
+        .card-wc26-diamond .panini-ovr, .card-wc26-diamond .panini-pos, .card-wc26-diamond .panini-name {
+            color: #cffafe !important;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.7) !important;
+        }
+        .card-wc26-diamond .panini-band::before { filter: hue-rotate(180deg) brightness(1.5) saturate(1.5); }
+        .slot-player-mini.card-wc26-diamond {
+            border-color: #00f2fe !important;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4) !important;
+        }
+        .slot-player-mini.card-wc26-diamond .mini-ovr, .slot-player-mini.card-wc26-diamond .mini-name { color: #cffafe !important; }
+        .slot-player-mini.card-wc26-diamond .mini-ovr { text-shadow: 0 0 6px rgba(0, 242, 254, 0.7) !important; }
+
         /* ===== ICONS THEME — Legends / Hall of Fame ===== */
         .card-icons {
             background:
@@ -916,6 +951,21 @@
                 0 0 0 1px rgba(255, 225, 125, 0.35),
                 0 6px 28px rgba(0, 0, 0, 0.65),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+        }
+
+        /* Holographic Foil Shine - Gold Edition */
+        .card-icons .card-shine {
+            background: linear-gradient(
+                115deg,
+                transparent 20%,
+                rgba(255, 255, 255, 0.6) 30%,
+                rgba(255, 223, 0, 0.8) 40%,
+                rgba(255, 245, 180, 0.5) 45%,
+                transparent 55%
+            );
+            background-size: 250% 100%;
+            animation: shine-sweep 1.8s ease-out infinite;
+            mix-blend-mode: color-dodge;
         }
         /* Inner shimmer layer */
         .card-icons::before {
@@ -1467,6 +1517,156 @@
         }
         .slot-player-mini.card-vnlegends .mini-ovr { color: #fca5a5 !important; text-shadow: 0 0 4px rgba(239,68,68,0.5) !important; }
         .slot-player-mini.card-vnlegends .mini-name { color: #fca5a5 !important; }
+
+        /* ─── SHINE EFFECT BASE ──────────────────────────────────────── */
+        .card-shine {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10;
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .player-card:hover .card-shine {
+            opacity: 1;
+        }
+        @keyframes shine-sweep {
+            0% { background-position: 250% 0; }
+            100% { background-position: -250% 0; }
+        }
+
+        /* ─── AFF GLORY ──────────────────────────────────────────────── */
+        .card-affglory .card-shine {
+            background: linear-gradient(
+                115deg,
+                transparent 20%,
+                rgba(255, 255, 255, 0.4) 30%,
+                rgba(251, 191, 36, 0.6) 40%,
+                transparent 50%
+            );
+            background-size: 250% 100%;
+            animation: shine-sweep 1.8s ease-out infinite;
+            mix-blend-mode: color-dodge; /* Tạo độ chói chân thực */
+        }
+
+        .card-affglory {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.45) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 100%, rgba(220,38,38,0.7) 0%, transparent 70%),
+                linear-gradient(170deg, #4a0404 0%, #b91c1c 45%, #2a0404 100%) !important;
+            border: 2px solid #ef4444 !important;
+            outline: 2px solid rgba(251,191,36,0.75);
+            outline-offset: 1px;
+            box-shadow:
+                0 0 0 2px rgba(251,191,36,0.3),
+                0 0 35px rgba(251,191,36,0.3),
+                0 6px 28px rgba(0,0,0,0.85),
+                inset 0 0 15px rgba(251,191,36,0.25) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #991b1b 50%) !important;
+            --triangle-color: #fbbf24 !important;
+        }
+        .card-affglory .card-theme-triangle-icon {
+            font-size: 0.6rem;
+            text-shadow: 0 0 6px #fbbf24;
+        }
+        .card-affglory::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.18) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-affglory::after {
+            content: '2008 · 2018 · 2026';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.42rem;
+            font-weight: 800;
+            color: rgba(251,191,36,0.75);
+            letter-spacing: 4px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 3;
+            text-shadow: 0 0 8px rgba(251,191,36,0.5);
+        }
+        .card-affglory .panini-band {
+            background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 50%, #450a0a 100%) !important;
+            border-bottom: 1px solid rgba(251,191,36,0.4) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-affglory .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 26px; height: 26px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M8 20 Q8 12 16 10 L24 8 L32 10 Q40 12 40 20 L36 30 H12 Z' fill='%23fbbf24' opacity='0.9'/%3E%3Crect x='10' y='30' width='28' height='4' rx='2' fill='%23fbbf24'/%3E%3Crect x='12' y='34' width='24' height='3' rx='1' fill='%23dc2626'/%3E%3Ccircle cx='24' cy='10' r='3' fill='%23ffd700'/%3E%3Ccircle cx='14' cy='16' r='2' fill='%23ffd700'/%3E%3Ccircle cx='34' cy='16' r='2' fill='%23ffd700'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.92;
+            z-index: 1;
+        }
+        .card-affglory .panini-ovr {
+            color: #fbbf24 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 12px rgba(251,191,36,0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-affglory .panini-pos {
+            color: rgba(253,224,71,0.95) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 8px rgba(251,191,36,0.6), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-affglory .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.1) 0%, transparent 60%),
+                linear-gradient(180deg, rgba(127,29,29,0.1) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-affglory .panini-photo-silhouette {
+            fill: rgba(251,191,36,0.22) !important;
+        }
+        .card-affglory .panini-footer {
+            background: linear-gradient(180deg, rgba(60,10,10,0.6) 0%, rgba(10,2,2,0.97) 100%) !important;
+            border-top: 1px solid rgba(251,191,36,0.35) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-affglory .panini-name {
+            color: #fbbf24 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 8px rgba(251,191,36,0.5) !important;
+        }
+        .card-affglory .panini-era {
+            font-size: 0.44rem;
+            font-weight: 700;
+            color: rgba(251,191,36,0.65);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .slot-player-mini.card-affglory {
+            background: linear-gradient(135deg, #3b0a0a 0%, #7f1d1d 100%) !important;
+            border: 2px solid #dc2626 !important;
+            outline: 1px solid rgba(251,191,36,0.4);
+            outline-offset: 1px;
+            box-shadow: 0 0 10px rgba(251,191,36,0.2) !important;
+        }
+        .slot-player-mini.card-affglory .mini-ovr { color: #fbbf24 !important; text-shadow: 0 0 6px rgba(251,191,36,0.6) !important; }
+        .slot-player-mini.card-affglory .mini-name { color: #fbbf24 !important; }
 
         /* ===== GLOBAL CHAMPIONS (GC) THEME — Brazil Lime/Green & Gold ===== */
         .card-gc {
@@ -3948,18 +4148,11 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="player-theme">Loại Thẻ (Theme)</label>
-                    <select id="player-theme" style="width: 100%; background: var(--bg-darker); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem 1rem; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer;">
-                        <option value="standard">Mùa 26 (Standard)</option>
-                        <option value="worldcup26">World Cup 2026 (Special)</option>
-                        <option value="icons">⭐ Icons (Huyền thoại)</option>
-                        <option value="mm">📷 Memoir</option>
-                        <option value="toty">❄️ TOTY</option>
-                        <option value="ucl">🏆 UCL Hero</option>
-                        <option value="vnlegends">🇻🇳 VN Legends</option>
-                        <option value="gc">👑 Global Champions</option>
-                    </select>
+                <div class="form-group custom-dropdown" id="group-edit-theme">
+                    <label>Loại Thẻ (Theme)</label>
+                    <div class="custom-select-trigger" id="edit-theme-trigger-val" style="width: 100%; background: var(--bg-darker); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem 1rem; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer; display: flex; align-items: center; gap: 8px;">Mùa 26</div>
+                    <input type="hidden" id="player-theme" value="standard">
+                    <div class="custom-dropdown-menu" id="edit-theme-dropdown-menu"></div>
                 </div>
 
                 <div class="form-group">
@@ -4260,6 +4453,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         });
 
         // Build the static dropdowns (position, theme, sort) that don't change with data
+        // Global themeItems — needed by both buildStaticDropdowns and openEditDrawer
+        let themeItems = [];
+
         function buildStaticDropdowns() {
             // --- Position ---
             const posItems = [
@@ -4276,7 +4472,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             });
 
             // --- Theme / Season ---
-            const themeItems = [
+            themeItems = [
                 { value: '', label: 'All', icon: '' },
                 { value: 'standard', label: 'Mùa 26', icon: '⚽' },
                 { value: 'worldcup26', label: 'WC26', icon: '🏆' },
@@ -4292,12 +4488,21 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     value: 'vnlegends',
                     label: 'VN Legends',
                     icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
-                }
+                },
+                { value: 'affglory', label: 'AFF Glory', icon: '👑' }
             ];
             buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
                 selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
                 updateChipActiveStates();
                 applyFilters();
+            });
+
+            // Initialize editor theme dropdown (exclude "All" option)
+            buildSimpleDropdown('edit-theme-dropdown-menu', themeItems.filter(i => i.value !== ''), (val, lbl, icon) => {
+                const trigger = document.getElementById('edit-theme-trigger-val');
+                trigger.innerHTML = icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${icon}</span> <span>${lbl}</span>` : `<span>${lbl}</span>`;
+                document.getElementById('player-theme').value = val;
+                document.getElementById('edit-theme-dropdown-menu').classList.remove('show');
             });
 
             // --- Sort ---
@@ -4853,14 +5058,19 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // --- 6. RENDER CASUAL CARDS ---
         function getCardThemeClass(p) {
-            if (p && p.cardTheme === 'worldcup26') return 'card-wc26';
+            const rating = (p && p.rating) || p || 0;
+            if (p && p.cardTheme === 'worldcup26') {
+                if (rating >= 90) return 'card-wc26 card-wc26-diamond';
+                if (rating >= 80) return 'card-wc26';
+                return 'card-wc26 card-wc26-silver';
+            }
             if (p && p.cardTheme === 'icons') return 'card-icons';
             if (p && p.cardTheme === 'mm') return 'card-mm';
             if (p && p.cardTheme === 'toty') return 'card-toty';
             if (p && p.cardTheme === 'ucl') return 'card-ucl';
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
+            if (p && p.cardTheme === 'affglory') return 'card-affglory';
             if (p && p.cardTheme === 'gc') return 'card-gc';
-            const rating = (p && p.rating) || p || 0;
             if (rating >= 90) return 'card-icon';
             if (rating >= 80) return 'card-gold';
             if (rating >= 70) return 'card-silver';
@@ -4874,6 +5084,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p.cardTheme === 'toty') return '❄';
             if (p.cardTheme === 'ucl') return '✦';
             if (p.cardTheme === 'vnlegends') return '★';
+            if (p.cardTheme === 'affglory') return '👑';
             if (p.cardTheme === 'gc') return '👑';
             
             const themeClass = getCardThemeClass(p);
@@ -4891,6 +5102,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const isTOTY = p.cardTheme === 'toty';
             const isUCL = p.cardTheme === 'ucl';
             const isVNLegends = p.cardTheme === 'vnlegends';
+            const isAFFGlory = p.cardTheme === 'affglory';
             const isGC = p.cardTheme === 'gc';
 
             let photoHTML;
@@ -4917,12 +5129,16 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 : isVNLegends
                 ? `<div class="panini-name">${displayName}</div>
                    <div class="panini-era">★ VIETNAM LEGENDS ★</div>`
+                : isAFFGlory
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">👑 AFF GLORY 👑</div>`
                 : `<div class="panini-name">${displayName}</div>
                    <div class="panini-club">${p.club || ''}</div>`;
 
             return `
                 <div class="player-card-wrapper" onclick="openEditDrawer('${p.id}')">
                     <div class="player-card ${themeClass}" id="card-${p.id}">
+                        <div class="card-shine"></div>
                         <div class="card-actions">
                             <button class="card-action-btn" onclick="event.stopPropagation(); openEditDrawer('${p.id}')" title="Sửa">
                                 <i data-lucide="edit-3" style="width:11px;height:11px;"></i>
@@ -5341,6 +5557,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
             document.getElementById('player-card-name').value = "";
             document.getElementById('player-theme').value = "standard";
+            const defaultTheme = themeItems.find(t => t.value === 'standard');
+            const editTrigger = document.getElementById('edit-theme-trigger-val');
+            if (editTrigger && defaultTheme) {
+                editTrigger.innerHTML = defaultTheme.icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${defaultTheme.icon}</span> <span>${defaultTheme.label}</span>` : `<span>${defaultTheme.label}</span>`;
+            }
             document.getElementById('player-position').value = "ST";
             document.getElementById('player-club').disabled = true;
             document.getElementById('player-club').innerHTML = '<option value="">-- Chọn Câu lạc bộ --</option>';
@@ -5386,7 +5607,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
             }
             document.getElementById('player-club').value = p.club;
-            document.getElementById('player-theme').value = p.cardTheme || 'standard';
+            const editThemeVal = p.cardTheme || 'standard';
+            document.getElementById('player-theme').value = editThemeVal;
+            const themeItem = themeItems.find(t => t.value === editThemeVal) || themeItems.find(t => t.value === 'standard');
+            const editTrigger = document.getElementById('edit-theme-trigger-val');
+            if (editTrigger && themeItem) {
+                editTrigger.innerHTML = themeItem.icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${themeItem.icon}</span> <span>${themeItem.label}</span>` : `<span>${themeItem.label}</span>`;
+            }
 
             // Restore alt positions
             const altPos = p.altPositions || [];
