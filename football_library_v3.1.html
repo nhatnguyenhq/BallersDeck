@@ -957,13 +957,12 @@
         .card-icons .card-shine {
             background: linear-gradient(
                 115deg,
-                transparent 20%,
-                rgba(255, 255, 255, 0.6) 30%,
-                rgba(255, 223, 0, 0.8) 40%,
-                rgba(255, 245, 180, 0.5) 45%,
+                transparent 40%,
+                rgba(255, 255, 255, 0.6) 45%,
+                rgba(255, 223, 0, 0.8) 48%,
+                rgba(255, 245, 180, 0.5) 50%,
                 transparent 55%
             );
-            background-size: 250% 100%;
             animation: shine-sweep 1.8s ease-out infinite;
             mix-blend-mode: color-dodge;
         }
@@ -1521,48 +1520,44 @@
         /* ─── SHINE EFFECT BASE ──────────────────────────────────────── */
         .card-shine {
             position: absolute;
-            inset: 0;
+            top: 0; bottom: 0;
+            left: -100%; right: -100%; /* Make width 300% */
             pointer-events: none;
             z-index: 10;
-            border-radius: inherit;
             opacity: 0;
             transition: opacity 0.4s ease;
+            will-change: transform, opacity;
         }
         .player-card:hover .card-shine {
             opacity: 1;
         }
         @keyframes shine-sweep {
-            0% { background-position: 250% 0; }
-            100% { background-position: -250% 0; }
+            0% { transform: translateX(-33.33%); }
+            100% { transform: translateX(33.33%); }
         }
 
         /* ─── AFF GLORY ──────────────────────────────────────────────── */
         .card-affglory .card-shine {
             background: linear-gradient(
                 115deg,
-                transparent 20%,
-                rgba(255, 255, 255, 0.4) 30%,
-                rgba(251, 191, 36, 0.6) 40%,
-                transparent 50%
+                transparent 40%,
+                rgba(255, 255, 255, 0.4) 45%,
+                rgba(251, 191, 36, 0.6) 48%,
+                transparent 55%
             );
-            background-size: 250% 100%;
             animation: shine-sweep 1.8s ease-out infinite;
-            mix-blend-mode: color-dodge; /* Tạo độ chói chân thực */
+            mix-blend-mode: color-dodge;
         }
 
         .card-affglory {
-            background:
-                radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.45) 0%, transparent 55%),
-                radial-gradient(ellipse at 50% 100%, rgba(220,38,38,0.7) 0%, transparent 70%),
-                linear-gradient(170deg, #4a0404 0%, #b91c1c 45%, #2a0404 100%) !important;
+            background: linear-gradient(170deg, #4a0404 0%, #b91c1c 45%, #2a0404 100%) !important;
             border: 2px solid #ef4444 !important;
-            outline: 2px solid rgba(251,191,36,0.75);
-            outline-offset: 1px;
             box-shadow:
-                0 0 0 2px rgba(251,191,36,0.3),
-                0 0 35px rgba(251,191,36,0.3),
-                0 6px 28px rgba(0,0,0,0.85),
-                inset 0 0 15px rgba(251,191,36,0.25) !important;
+                0 0 0 1px #2a0404,
+                0 0 0 3px rgba(251,191,36,0.75),
+                0 0 20px rgba(251,191,36,0.3),
+                0 6px 20px rgba(0,0,0,0.65),
+                inset 0 0 10px rgba(251,191,36,0.25) !important;
             --triangle-bg: linear-gradient(135deg, transparent 50%, #991b1b 50%) !important;
             --triangle-color: #fbbf24 !important;
         }
@@ -1574,14 +1569,14 @@
             content: '';
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.18) 0%, transparent 50%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAABEREQyMjKZmZlwcHCqqqr///+9tG1oAAAAAnRSTlMzMzP//8h2AAAAZklEQVQ4y2NgQAX8DIxgTBEoAhbCgIFBxIEVwYLIAhYgLmAOcgELY0EcMAdZARLChjBgsYA5KApYIA4oDFjALmCOQoEFLA7mgChgAcuAOQgKWMASYI4iBUuABTBBwAKWgDkgAizAAQAGgDtxrW2i0wAAAABJRU5ErkJggg==');
+            background-repeat: repeat;
+            opacity: 0.8;
             pointer-events: none;
             z-index: 0;
         }
         .card-affglory::after {
-            content: '2008 · 2018 · 2026';
+            content: '2008 · 2018 · 2024';
             position: absolute;
             bottom: 36px;
             left: 50%;
@@ -1661,9 +1656,10 @@
         .slot-player-mini.card-affglory {
             background: linear-gradient(135deg, #3b0a0a 0%, #7f1d1d 100%) !important;
             border: 2px solid #dc2626 !important;
-            outline: 1px solid rgba(251,191,36,0.4);
-            outline-offset: 1px;
-            box-shadow: 0 0 10px rgba(251,191,36,0.2) !important;
+            box-shadow: 
+                0 0 0 1px #3b0a0a, 
+                0 0 0 2px rgba(251,191,36,0.4), 
+                0 0 10px rgba(251,191,36,0.2) !important;
         }
         .slot-player-mini.card-affglory .mini-ovr { color: #fbbf24 !important; text-shadow: 0 0 6px rgba(251,191,36,0.6) !important; }
         .slot-player-mini.card-affglory .mini-name { color: #fbbf24 !important; }
@@ -4744,7 +4740,12 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             // Auto-migration step to fill missing league fields on legacy cards
             let updated = false;
             players.forEach(p => {
-                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends') {
+                // Clear accidentally assigned Premier League for affglory
+                if (p.cardTheme === 'affglory' && p.league === 'Premier League') {
+                    p.league = '';
+                    updated = true;
+                }
+                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends' && p.cardTheme !== 'affglory') {
                     for (const [leagueName, data] of Object.entries(LEAGUES_DATA)) {
                         if (data.clubs.includes(p.club)) {
                             p.league = leagueName;
