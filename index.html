@@ -906,6 +906,41 @@
             color: #ffd700 !important;
         }
 
+        /* ─── WC26 TIERS (SILVER < 80 & DIAMOND >= 90) - STYLE CÁCH 1 ─── */
+        .card-wc26.card-wc26-silver {
+            border-color: #94a3b8 !important;
+            box-shadow: 0 6px 20px rgba(148, 163, 184, 0.2) !important;
+        }
+        .card-wc26-silver .panini-band { border-bottom-color: #94a3b8 !important; }
+        .card-wc26-silver .panini-ovr, .card-wc26-silver .panini-pos, .card-wc26-silver .panini-name {
+            color: #f1f5f9 !important;
+            text-shadow: 0 0 8px rgba(148, 163, 184, 0.5) !important;
+        }
+        .card-wc26-silver .panini-band::before { filter: grayscale(1) brightness(1.2); }
+        .slot-player-mini.card-wc26-silver {
+            border-color: #94a3b8 !important;
+            box-shadow: 0 0 10px rgba(148, 163, 184, 0.35) !important;
+        }
+        .slot-player-mini.card-wc26-silver .mini-ovr, .slot-player-mini.card-wc26-silver .mini-name { color: #f1f5f9 !important; }
+        .slot-player-mini.card-wc26-silver .mini-ovr { text-shadow: 0 0 4px rgba(148, 163, 184, 0.5) !important; }
+
+        .card-wc26.card-wc26-diamond {
+            border-color: #00f2fe !important;
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.3) !important;
+        }
+        .card-wc26-diamond .panini-band { border-bottom-color: #00f2fe !important; }
+        .card-wc26-diamond .panini-ovr, .card-wc26-diamond .panini-pos, .card-wc26-diamond .panini-name {
+            color: #cffafe !important;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.7) !important;
+        }
+        .card-wc26-diamond .panini-band::before { filter: hue-rotate(180deg) brightness(1.5) saturate(1.5); }
+        .slot-player-mini.card-wc26-diamond {
+            border-color: #00f2fe !important;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4) !important;
+        }
+        .slot-player-mini.card-wc26-diamond .mini-ovr, .slot-player-mini.card-wc26-diamond .mini-name { color: #cffafe !important; }
+        .slot-player-mini.card-wc26-diamond .mini-ovr { text-shadow: 0 0 6px rgba(0, 242, 254, 0.7) !important; }
+
         /* ===== ICONS THEME — Legends / Hall of Fame ===== */
         .card-icons {
             background:
@@ -916,6 +951,20 @@
                 0 0 0 1px rgba(255, 225, 125, 0.35),
                 0 6px 28px rgba(0, 0, 0, 0.65),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+        }
+
+        /* Holographic Foil Shine - Gold Edition */
+        .card-icons .card-shine {
+            background: linear-gradient(
+                115deg,
+                transparent 40%,
+                rgba(255, 255, 255, 0.6) 45%,
+                rgba(255, 223, 0, 0.8) 48%,
+                rgba(255, 245, 180, 0.5) 50%,
+                transparent 55%
+            );
+            animation: shine-sweep 1.8s ease-out infinite;
+            mix-blend-mode: color-dodge;
         }
         /* Inner shimmer layer */
         .card-icons::before {
@@ -1467,6 +1516,153 @@
         }
         .slot-player-mini.card-vnlegends .mini-ovr { color: #fca5a5 !important; text-shadow: 0 0 4px rgba(239,68,68,0.5) !important; }
         .slot-player-mini.card-vnlegends .mini-name { color: #fca5a5 !important; }
+
+        /* ─── SHINE EFFECT BASE ──────────────────────────────────────── */
+        .card-shine {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: -100%; right: -100%; /* Make width 300% */
+            pointer-events: none;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            will-change: transform, opacity;
+        }
+        .player-card:hover .card-shine {
+            opacity: 1;
+        }
+        @keyframes shine-sweep {
+            0% { transform: translateX(-33.33%); }
+            100% { transform: translateX(33.33%); }
+        }
+
+        /* ─── AFF GLORY ──────────────────────────────────────────────── */
+        .card-affglory .card-shine {
+            background: linear-gradient(
+                115deg,
+                transparent 40%,
+                rgba(255, 255, 255, 0.4) 45%,
+                rgba(251, 191, 36, 0.6) 48%,
+                transparent 55%
+            );
+            animation: shine-sweep 1.8s ease-out infinite;
+            mix-blend-mode: color-dodge;
+        }
+
+        .card-affglory {
+            background: linear-gradient(170deg, #4a0404 0%, #b91c1c 45%, #2a0404 100%) !important;
+            border: 2px solid #ef4444 !important;
+            box-shadow:
+                0 0 0 1px #2a0404,
+                0 0 0 3px rgba(251,191,36,0.75),
+                0 0 20px rgba(251,191,36,0.3),
+                0 6px 20px rgba(0,0,0,0.65),
+                inset 0 0 10px rgba(251,191,36,0.25) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #991b1b 50%) !important;
+            --triangle-color: #fbbf24 !important;
+        }
+        .card-affglory .card-theme-triangle-icon {
+            font-size: 0.6rem;
+            text-shadow: 0 0 6px #fbbf24;
+        }
+        .card-affglory::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAABEREQyMjKZmZlwcHCqqqr///+9tG1oAAAAAnRSTlMzMzP//8h2AAAAZklEQVQ4y2NgQAX8DIxgTBEoAhbCgIFBxIEVwYLIAhYgLmAOcgELY0EcMAdZARLChjBgsYA5KApYIA4oDFjALmCOQoEFLA7mgChgAcuAOQgKWMASYI4iBUuABTBBwAKWgDkgAizAAQAGgDtxrW2i0wAAAABJRU5ErkJggg==');
+            background-repeat: repeat;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-affglory::after {
+            content: '2008 · 2018 · 2024';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.42rem;
+            font-weight: 800;
+            color: rgba(251,191,36,0.75);
+            letter-spacing: 4px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 3;
+            text-shadow: 0 0 8px rgba(251,191,36,0.5);
+        }
+        .card-affglory .panini-band {
+            background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 50%, #450a0a 100%) !important;
+            border-bottom: 1px solid rgba(251,191,36,0.4) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-affglory .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 26px; height: 26px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M8 20 Q8 12 16 10 L24 8 L32 10 Q40 12 40 20 L36 30 H12 Z' fill='%23fbbf24' opacity='0.9'/%3E%3Crect x='10' y='30' width='28' height='4' rx='2' fill='%23fbbf24'/%3E%3Crect x='12' y='34' width='24' height='3' rx='1' fill='%23dc2626'/%3E%3Ccircle cx='24' cy='10' r='3' fill='%23ffd700'/%3E%3Ccircle cx='14' cy='16' r='2' fill='%23ffd700'/%3E%3Ccircle cx='34' cy='16' r='2' fill='%23ffd700'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.92;
+            z-index: 1;
+        }
+        .card-affglory .panini-ovr {
+            color: #fbbf24 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 12px rgba(251,191,36,0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-affglory .panini-pos {
+            color: rgba(253,224,71,0.95) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 8px rgba(251,191,36,0.6), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-affglory .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.1) 0%, transparent 60%),
+                linear-gradient(180deg, rgba(127,29,29,0.1) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-affglory .panini-photo-silhouette {
+            fill: rgba(251,191,36,0.22) !important;
+        }
+        .card-affglory .panini-footer {
+            background: linear-gradient(180deg, rgba(60,10,10,0.6) 0%, rgba(10,2,2,0.97) 100%) !important;
+            border-top: 1px solid rgba(251,191,36,0.35) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-affglory .panini-name {
+            color: #fbbf24 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 8px rgba(251,191,36,0.5) !important;
+        }
+        .card-affglory .panini-era {
+            font-size: 0.44rem;
+            font-weight: 700;
+            color: rgba(251,191,36,0.65);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .slot-player-mini.card-affglory {
+            background: linear-gradient(135deg, #3b0a0a 0%, #7f1d1d 100%) !important;
+            border: 2px solid #dc2626 !important;
+            box-shadow: 
+                0 0 0 1px #3b0a0a, 
+                0 0 0 2px rgba(251,191,36,0.4), 
+                0 0 10px rgba(251,191,36,0.2) !important;
+        }
+        .slot-player-mini.card-affglory .mini-ovr { color: #fbbf24 !important; text-shadow: 0 0 6px rgba(251,191,36,0.6) !important; }
+        .slot-player-mini.card-affglory .mini-name { color: #fbbf24 !important; }
 
         /* ===== GLOBAL CHAMPIONS (GC) THEME — Brazil Lime/Green & Gold ===== */
         .card-gc {
@@ -3628,6 +3824,188 @@
             color: #fff !important;
         }
 
+        /* ===== LEGACY MONUMENT — Concept 1: Amethyst Monolith ===== */
+        .card-legacy-monument {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.22) 0%, transparent 55%),
+                radial-gradient(ellipse at 30% 100%, rgba(76,29,149,0.25) 0%, transparent 65%),
+                linear-gradient(160deg, #090521 0%, #1d0f54 50%, #060314 100%) !important;
+            border: 2px solid #5b21b6 !important;
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.2),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 1px 0 rgba(255,215,0,0.12) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #7c3aed 50%);
+            --triangle-color: #ffd700;
+        }
+        .card-legacy-monument.legacy-glow-active {
+            border: 2px solid #7c3aed !important;
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.45),
+                0 6px 28px rgba(0,0,0,0.75),
+                0 0 20px 5px rgba(124,58,237,0.6),
+                inset 0 0 14px rgba(76,29,149,0.3) !important;
+            animation: pulse-glow-monument 3s infinite alternate;
+        }
+        @keyframes pulse-glow-monument {
+            0% { box-shadow: 0 0 0 1px rgba(124,58,237,0.3), 0 6px 28px rgba(0,0,0,0.75), 0 0 10px 3px rgba(76,29,149,0.45), inset 0 0 8px rgba(76,29,149,0.2); }
+            100% { box-shadow: 0 0 0 1px rgba(124,58,237,0.65), 0 6px 28px rgba(0,0,0,0.75), 0 0 26px 8px rgba(124,58,237,0.8), inset 0 0 20px rgba(232,121,249,0.35); }
+        }
+        /* --- LEGACY ELITE (90+): Aurora Band --- */
+        .card-legacy-monument.legacy-elite {
+            border: 2px solid #d946ef !important;
+            box-shadow:
+                0 0 0 1px #ffd700,
+                0 0 0 3px rgba(217,70,239,0.5),
+                0 0 30px 8px rgba(124,58,237,0.7),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 0 20px rgba(76,29,149,0.4) !important;
+            animation: pulse-glow-elite 2.5s infinite alternate;
+        }
+        @keyframes pulse-glow-elite {
+            0%   { box-shadow: 0 0 0 1px #ffd700, 0 0 0 3px rgba(217,70,239,0.35), 0 0 18px 5px rgba(76,29,149,0.55), 0 6px 28px rgba(0,0,0,0.75); }
+            100% { box-shadow: 0 0 0 1px #ffd700, 0 0 0 3px rgba(217,70,239,0.75), 0 0 35px 12px rgba(217,70,239,0.75), 0 6px 28px rgba(0,0,0,0.75); }
+        }
+        /* Aurora overlay pseudo-element for elite cards */
+        .card-legacy-monument.legacy-elite::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg,
+                    rgba(217,70,239,0.0)   0%,
+                    rgba(124,58,237,0.18) 12%,
+                    rgba(76,29,149,0.28)  20%,
+                    rgba(255,215,0,0.08)   28%,
+                    rgba(76,29,149,0.1)   38%,
+                    transparent            55%
+                );
+            animation: aurora-shift 5s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: inherit;
+        }
+        @keyframes aurora-shift {
+            0%   { opacity: 0.7; background-position: 0% 0%; transform: scaleX(1); }
+            33%  { opacity: 1;   background-position: 10% 0%; transform: scaleX(1.04); }
+            66%  { opacity: 0.8; background-position: -8% 0%; transform: scaleX(0.97); }
+            100% { opacity: 1;   background-position: 5% 0%;  transform: scaleX(1.02); }
+        }
+        .card-legacy-monument::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 12px,
+                    rgba(124,58,237,0.03) 12px,
+                    rgba(124,58,237,0.03) 13px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-legacy-monument:not(.legacy-elite)::after {
+            content: '✦ 💎 ✦';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.42rem;
+            font-weight: 800;
+            color: rgba(124,58,237,0.55);
+            letter-spacing: 4px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 3;
+            text-shadow: 0 0 8px rgba(124,58,237,0.5);
+        }
+        .card-legacy-monument .panini-band {
+            background: linear-gradient(135deg, #090521 0%, #4c1d95 50%, #090521 100%) !important;
+            border-bottom: 1px solid rgba(124,58,237,0.5) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-legacy-monument .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 26px; height: 26px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%23180030' stroke='%23af4cf8' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='none' stroke='%23af4cf8' stroke-width='0.5' stroke-dasharray='2,2'/%3E%3Cpath d='M10 33 L38 33 M12 30 L36 30 M14 27 L34 27' stroke='%23ffd700' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 16 V27 M21.33 16 V27 M26.66 16 V27 M32 16 V27' stroke='%23ffd700' stroke-width='2'/%3E%3Cpath d='M12 16 L36 16' stroke='%23ffd700' stroke-width='2' stroke-linecap='round'/%3E%3Cpolygon points='24,6 12,14 36,14' fill='%23ffd700'/%3E%3Cpolygon points='24,9 16,13 32,13' fill='%23180030'/%3E%3Cpolygon points='24,10 22,12 24,13 26,12' fill='%23af4cf8'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.95;
+            z-index: 1;
+        }
+        .card-legacy-monument .panini-ovr {
+            color: #ffd700 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 14px rgba(255,215,0,0.7), 0 2px 4px rgba(0,0,0,0.9) !important;
+            z-index: 2;
+        }
+        .card-legacy-monument.legacy-elite .panini-ovr,
+        .card-legacy-monument.legacy-elite .panini-pos,
+        .card-legacy-monument.legacy-elite .panini-name {
+            color: #ffd700 !important;
+            text-shadow: 
+                0 0 15px rgba(255,215,0,0.85),
+                0 0 8px rgba(232,121,249,0.7),
+                0 2px 4px rgba(0,0,0,0.9) !important;
+        }
+        .card-legacy-monument .panini-pos {
+            color: rgba(253,224,71,0.95) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 8px rgba(255,215,0,0.55), 0 2px 4px rgba(0,0,0,0.9) !important;
+            z-index: 2;
+        }
+        .card-legacy-monument .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 80%, rgba(76,29,149,0.1) 0%, transparent 65%),
+                linear-gradient(180deg, rgba(9,5,33,0.15) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-legacy-monument .panini-photo-silhouette {
+            fill: rgba(124,58,237,0.22) !important;
+        }
+        .card-legacy-monument .panini-footer {
+            background: linear-gradient(180deg, rgba(15,8,45,0.6) 0%, rgba(4,2,15,0.97) 100%) !important;
+            border-top: 1px solid rgba(124,58,237,0.38) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-legacy-monument .panini-name {
+            color: #ffd700 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px !important;
+            text-shadow: 0 0 8px rgba(255,215,0,0.55) !important;
+        }
+        .card-legacy-monument .panini-era {
+            font-size: 0.44rem;
+            font-weight: 700;
+            color: rgba(124,58,237,0.8);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .slot-player-mini.card-legacy-monument {
+            background: linear-gradient(135deg, #090521 0%, #4c1d95 100%) !important;
+            border: 2px solid #7c3aed !important;
+            box-shadow: 0 0 10px rgba(124,58,237,0.45) !important;
+        }
+        .slot-player-mini.card-legacy-monument.legacy-elite {
+            border: 2px solid #d946ef !important;
+            box-shadow: 0 0 0 1px #ffd700, 0 0 12px rgba(217,70,239,0.6) !important;
+        }
+        .slot-player-mini.card-legacy-monument .mini-ovr { color: #ffd700 !important; text-shadow: 0 0 6px rgba(255,215,0,0.65) !important; }
+        .slot-player-mini.card-legacy-monument .mini-name { color: #ffd700 !important; }
+
     </style>
 </head>
 <body>
@@ -3948,18 +4326,11 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="player-theme">Loại Thẻ (Theme)</label>
-                    <select id="player-theme" style="width: 100%; background: var(--bg-darker); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem 1rem; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer;">
-                        <option value="standard">Mùa 26 (Standard)</option>
-                        <option value="worldcup26">World Cup 2026 (Special)</option>
-                        <option value="icons">⭐ Icons (Huyền thoại)</option>
-                        <option value="mm">📷 Memoir</option>
-                        <option value="toty">❄️ TOTY</option>
-                        <option value="ucl">🏆 UCL Hero</option>
-                        <option value="vnlegends">🇻🇳 VN Legends</option>
-                        <option value="gc">👑 Global Champions</option>
-                    </select>
+                <div class="form-group custom-dropdown" id="group-edit-theme">
+                    <label>Loại Thẻ (Theme)</label>
+                    <div class="custom-select-trigger" id="edit-theme-trigger-val" style="width: 100%; background: var(--bg-darker); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem 1rem; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer; display: flex; align-items: center; gap: 8px;">Mùa 26</div>
+                    <input type="hidden" id="player-theme" value="standard">
+                    <div class="custom-dropdown-menu" id="edit-theme-dropdown-menu"></div>
                 </div>
 
                 <div class="form-group">
@@ -4260,6 +4631,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         });
 
         // Build the static dropdowns (position, theme, sort) that don't change with data
+        // Global themeItems — needed by both buildStaticDropdowns and openEditDrawer
+        let themeItems = [];
+
         function buildStaticDropdowns() {
             // --- Position ---
             const posItems = [
@@ -4276,7 +4650,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             });
 
             // --- Theme / Season ---
-            const themeItems = [
+            themeItems = [
                 { value: '', label: 'All', icon: '' },
                 { value: 'standard', label: 'Mùa 26', icon: '⚽' },
                 { value: 'worldcup26', label: 'WC26', icon: '🏆' },
@@ -4292,12 +4666,22 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     value: 'vnlegends',
                     label: 'VN Legends',
                     icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
-                }
+                },
+                { value: 'affglory', label: 'AFF Glory', icon: '👑' },
+                { value: 'legacy_monument', label: 'Legacy Monument', icon: '🏛️' }
             ];
             buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
                 selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
                 updateChipActiveStates();
                 applyFilters();
+            });
+
+            // Initialize editor theme dropdown (exclude "All" option)
+            buildSimpleDropdown('edit-theme-dropdown-menu', themeItems.filter(i => i.value !== ''), (val, lbl, icon) => {
+                const trigger = document.getElementById('edit-theme-trigger-val');
+                trigger.innerHTML = icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${icon}</span> <span>${lbl}</span>` : `<span>${lbl}</span>`;
+                document.getElementById('player-theme').value = val;
+                document.getElementById('edit-theme-dropdown-menu').classList.remove('show');
             });
 
             // --- Sort ---
@@ -4361,7 +4745,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // Load data from LocalStorage or seed defaults
         const DB_VERSION_KEY = 'pitchdeck_db_version_v3';
-        const DB_CURRENT_VERSION = 'v3.2';
+        const DB_CURRENT_VERSION = 'v3.4';
 
         function loadDatabase() {
             const savedVersion = localStorage.getItem(DB_VERSION_KEY);
@@ -4539,7 +4923,12 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             // Auto-migration step to fill missing league fields on legacy cards
             let updated = false;
             players.forEach(p => {
-                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends') {
+                // Clear accidentally assigned Premier League for affglory
+                if (p.cardTheme === 'affglory' && p.league === 'Premier League') {
+                    p.league = '';
+                    updated = true;
+                }
+                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends' && p.cardTheme !== 'affglory') {
                     for (const [leagueName, data] of Object.entries(LEAGUES_DATA)) {
                         if (data.clubs.includes(p.club)) {
                             p.league = leagueName;
@@ -4853,14 +5242,24 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // --- 6. RENDER CASUAL CARDS ---
         function getCardThemeClass(p) {
-            if (p && p.cardTheme === 'worldcup26') return 'card-wc26';
+            const rating = (p && p.rating) || p || 0;
+            if (p && p.cardTheme === 'worldcup26') {
+                if (rating >= 90) return 'card-wc26 card-wc26-diamond';
+                if (rating >= 80) return 'card-wc26';
+                return 'card-wc26 card-wc26-silver';
+            }
             if (p && p.cardTheme === 'icons') return 'card-icons';
             if (p && p.cardTheme === 'mm') return 'card-mm';
             if (p && p.cardTheme === 'toty') return 'card-toty';
             if (p && p.cardTheme === 'ucl') return 'card-ucl';
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
+            if (p && p.cardTheme === 'affglory') return 'card-affglory';
             if (p && p.cardTheme === 'gc') return 'card-gc';
-            const rating = (p && p.rating) || p || 0;
+            if (p && p.cardTheme === 'legacy_monument') {
+                if (rating >= 90) return 'card-legacy-monument legacy-glow-active legacy-elite';
+                if (rating > 80) return 'card-legacy-monument legacy-glow-active';
+                return 'card-legacy-monument';
+            }
             if (rating >= 90) return 'card-icon';
             if (rating >= 80) return 'card-gold';
             if (rating >= 70) return 'card-silver';
@@ -4874,7 +5273,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p.cardTheme === 'toty') return '❄';
             if (p.cardTheme === 'ucl') return '✦';
             if (p.cardTheme === 'vnlegends') return '★';
+            if (p.cardTheme === 'affglory') return '👑';
             if (p.cardTheme === 'gc') return '👑';
+            if (p.cardTheme === 'legacy_monument') return '🏛️';
             
             const themeClass = getCardThemeClass(p);
             if (themeClass === 'card-icon') return '💎';
@@ -4891,7 +5292,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const isTOTY = p.cardTheme === 'toty';
             const isUCL = p.cardTheme === 'ucl';
             const isVNLegends = p.cardTheme === 'vnlegends';
+            const isAFFGlory = p.cardTheme === 'affglory';
             const isGC = p.cardTheme === 'gc';
+            const isLegacyMonument = p.cardTheme === 'legacy_monument';
 
             let photoHTML;
             if (p.photo) {
@@ -4917,12 +5320,16 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 : isVNLegends
                 ? `<div class="panini-name">${displayName}</div>
                    <div class="panini-era">★ VIETNAM LEGENDS ★</div>`
+                : isAFFGlory
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">👑 AFF GLORY 👑</div>`
                 : `<div class="panini-name">${displayName}</div>
                    <div class="panini-club">${p.club || ''}</div>`;
 
             return `
                 <div class="player-card-wrapper" onclick="openEditDrawer('${p.id}')">
                     <div class="player-card ${themeClass}" id="card-${p.id}">
+                        <div class="card-shine"></div>
                         <div class="card-actions">
                             <button class="card-action-btn" onclick="event.stopPropagation(); openEditDrawer('${p.id}')" title="Sửa">
                                 <i data-lucide="edit-3" style="width:11px;height:11px;"></i>
@@ -4983,7 +5390,17 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // --- 7. SEARCH, FILTER, SORT ---
         function removeDiacritics(str) {
-            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D");
+            if (!str) return "";
+            return str.replace(/Ø/g, "O").replace(/ø/g, "o")
+                      .replace(/Æ/g, "AE").replace(/æ/g, "ae")
+                      .replace(/Œ/g, "OE").replace(/œ/g, "oe")
+                      .replace(/Ł/g, "L").replace(/ł/g, "l")
+                      .replace(/ß/g, "ss")
+                      .replace(/Đ/g, "D").replace(/đ/g, "d")
+                      .replace(/Ð/g, "D").replace(/ð/g, "d")
+                      .replace(/Þ/g, "TH").replace(/þ/g, "th")
+                      .replace(/ı/g, "i").replace(/İ/g, "I")
+                      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         }
 
         function applyFilters() {
@@ -5341,6 +5758,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
             document.getElementById('player-card-name').value = "";
             document.getElementById('player-theme').value = "standard";
+            const defaultTheme = themeItems.find(t => t.value === 'standard');
+            const editTrigger = document.getElementById('edit-theme-trigger-val');
+            if (editTrigger && defaultTheme) {
+                editTrigger.innerHTML = defaultTheme.icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${defaultTheme.icon}</span> <span>${defaultTheme.label}</span>` : `<span>${defaultTheme.label}</span>`;
+            }
             document.getElementById('player-position').value = "ST";
             document.getElementById('player-club').disabled = true;
             document.getElementById('player-club').innerHTML = '<option value="">-- Chọn Câu lạc bộ --</option>';
@@ -5386,7 +5808,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
             }
             document.getElementById('player-club').value = p.club;
-            document.getElementById('player-theme').value = p.cardTheme || 'standard';
+            const editThemeVal = p.cardTheme || 'standard';
+            document.getElementById('player-theme').value = editThemeVal;
+            const themeItem = themeItems.find(t => t.value === editThemeVal) || themeItems.find(t => t.value === 'standard');
+            const editTrigger = document.getElementById('edit-theme-trigger-val');
+            if (editTrigger && themeItem) {
+                editTrigger.innerHTML = themeItem.icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${themeItem.icon}</span> <span>${themeItem.label}</span>` : `<span>${themeItem.label}</span>`;
+            }
 
             // Restore alt positions
             const altPos = p.altPositions || [];
@@ -5915,7 +6343,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         }
 
         function renderModalPlayers() {
-            const query = document.getElementById('modal-search-input').value.toLowerCase().trim();
+            const queryRaw = document.getElementById('modal-search-input').value.toLowerCase().trim();
+            const query = removeDiacritics(queryRaw);
             const listContainer = document.getElementById('modal-player-list');
             const selectedIds = Object.values(squad);
 
@@ -5930,9 +6359,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 }
                 
                 if (query) {
-                    return p.name.toLowerCase().includes(query) ||
-                           p.club.toLowerCase().includes(query) ||
-                           p.position.toLowerCase().includes(query);
+                    const searchName = removeDiacritics((p.name || '').toLowerCase());
+                    const searchClub = removeDiacritics((p.club || '').toLowerCase());
+                    return searchName.includes(query) ||
+                           searchClub.includes(query) ||
+                           (p.position || '').toLowerCase().includes(query);
                 }
                 return true;
             });

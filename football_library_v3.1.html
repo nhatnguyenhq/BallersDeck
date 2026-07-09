@@ -3824,6 +3824,188 @@
             color: #fff !important;
         }
 
+        /* ===== LEGACY MONUMENT — Concept 1: Amethyst Monolith ===== */
+        .card-legacy-monument {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.22) 0%, transparent 55%),
+                radial-gradient(ellipse at 30% 100%, rgba(76,29,149,0.25) 0%, transparent 65%),
+                linear-gradient(160deg, #090521 0%, #1d0f54 50%, #060314 100%) !important;
+            border: 2px solid #5b21b6 !important;
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.2),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 1px 0 rgba(255,215,0,0.12) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #7c3aed 50%);
+            --triangle-color: #ffd700;
+        }
+        .card-legacy-monument.legacy-glow-active {
+            border: 2px solid #7c3aed !important;
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.45),
+                0 6px 28px rgba(0,0,0,0.75),
+                0 0 20px 5px rgba(124,58,237,0.6),
+                inset 0 0 14px rgba(76,29,149,0.3) !important;
+            animation: pulse-glow-monument 3s infinite alternate;
+        }
+        @keyframes pulse-glow-monument {
+            0% { box-shadow: 0 0 0 1px rgba(124,58,237,0.3), 0 6px 28px rgba(0,0,0,0.75), 0 0 10px 3px rgba(76,29,149,0.45), inset 0 0 8px rgba(76,29,149,0.2); }
+            100% { box-shadow: 0 0 0 1px rgba(124,58,237,0.65), 0 6px 28px rgba(0,0,0,0.75), 0 0 26px 8px rgba(124,58,237,0.8), inset 0 0 20px rgba(232,121,249,0.35); }
+        }
+        /* --- LEGACY ELITE (90+): Aurora Band --- */
+        .card-legacy-monument.legacy-elite {
+            border: 2px solid #d946ef !important;
+            box-shadow:
+                0 0 0 1px #ffd700,
+                0 0 0 3px rgba(217,70,239,0.5),
+                0 0 30px 8px rgba(124,58,237,0.7),
+                0 6px 28px rgba(0,0,0,0.75),
+                inset 0 0 20px rgba(76,29,149,0.4) !important;
+            animation: pulse-glow-elite 2.5s infinite alternate;
+        }
+        @keyframes pulse-glow-elite {
+            0%   { box-shadow: 0 0 0 1px #ffd700, 0 0 0 3px rgba(217,70,239,0.35), 0 0 18px 5px rgba(76,29,149,0.55), 0 6px 28px rgba(0,0,0,0.75); }
+            100% { box-shadow: 0 0 0 1px #ffd700, 0 0 0 3px rgba(217,70,239,0.75), 0 0 35px 12px rgba(217,70,239,0.75), 0 6px 28px rgba(0,0,0,0.75); }
+        }
+        /* Aurora overlay pseudo-element for elite cards */
+        .card-legacy-monument.legacy-elite::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg,
+                    rgba(217,70,239,0.0)   0%,
+                    rgba(124,58,237,0.18) 12%,
+                    rgba(76,29,149,0.28)  20%,
+                    rgba(255,215,0,0.08)   28%,
+                    rgba(76,29,149,0.1)   38%,
+                    transparent            55%
+                );
+            animation: aurora-shift 5s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: inherit;
+        }
+        @keyframes aurora-shift {
+            0%   { opacity: 0.7; background-position: 0% 0%; transform: scaleX(1); }
+            33%  { opacity: 1;   background-position: 10% 0%; transform: scaleX(1.04); }
+            66%  { opacity: 0.8; background-position: -8% 0%; transform: scaleX(0.97); }
+            100% { opacity: 1;   background-position: 5% 0%;  transform: scaleX(1.02); }
+        }
+        .card-legacy-monument::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 12px,
+                    rgba(124,58,237,0.03) 12px,
+                    rgba(124,58,237,0.03) 13px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .card-legacy-monument:not(.legacy-elite)::after {
+            content: '✦ 💎 ✦';
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.42rem;
+            font-weight: 800;
+            color: rgba(124,58,237,0.55);
+            letter-spacing: 4px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 3;
+            text-shadow: 0 0 8px rgba(124,58,237,0.5);
+        }
+        .card-legacy-monument .panini-band {
+            background: linear-gradient(135deg, #090521 0%, #4c1d95 50%, #090521 100%) !important;
+            border-bottom: 1px solid rgba(124,58,237,0.5) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .card-legacy-monument .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 26px; height: 26px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%23180030' stroke='%23af4cf8' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='none' stroke='%23af4cf8' stroke-width='0.5' stroke-dasharray='2,2'/%3E%3Cpath d='M10 33 L38 33 M12 30 L36 30 M14 27 L34 27' stroke='%23ffd700' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 16 V27 M21.33 16 V27 M26.66 16 V27 M32 16 V27' stroke='%23ffd700' stroke-width='2'/%3E%3Cpath d='M12 16 L36 16' stroke='%23ffd700' stroke-width='2' stroke-linecap='round'/%3E%3Cpolygon points='24,6 12,14 36,14' fill='%23ffd700'/%3E%3Cpolygon points='24,9 16,13 32,13' fill='%23180030'/%3E%3Cpolygon points='24,10 22,12 24,13 26,12' fill='%23af4cf8'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.95;
+            z-index: 1;
+        }
+        .card-legacy-monument .panini-ovr {
+            color: #ffd700 !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 14px rgba(255,215,0,0.7), 0 2px 4px rgba(0,0,0,0.9) !important;
+            z-index: 2;
+        }
+        .card-legacy-monument.legacy-elite .panini-ovr,
+        .card-legacy-monument.legacy-elite .panini-pos,
+        .card-legacy-monument.legacy-elite .panini-name {
+            color: #ffd700 !important;
+            text-shadow: 
+                0 0 15px rgba(255,215,0,0.85),
+                0 0 8px rgba(232,121,249,0.7),
+                0 2px 4px rgba(0,0,0,0.9) !important;
+        }
+        .card-legacy-monument .panini-pos {
+            color: rgba(253,224,71,0.95) !important;
+            font-size: 1.15rem !important;
+            text-shadow: 0 0 8px rgba(255,215,0,0.55), 0 2px 4px rgba(0,0,0,0.9) !important;
+            z-index: 2;
+        }
+        .card-legacy-monument .panini-photo {
+            background:
+                radial-gradient(ellipse at 50% 80%, rgba(76,29,149,0.1) 0%, transparent 65%),
+                linear-gradient(180deg, rgba(9,5,33,0.15) 0%, transparent 40%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-legacy-monument .panini-photo-silhouette {
+            fill: rgba(124,58,237,0.22) !important;
+        }
+        .card-legacy-monument .panini-footer {
+            background: linear-gradient(180deg, rgba(15,8,45,0.6) 0%, rgba(4,2,15,0.97) 100%) !important;
+            border-top: 1px solid rgba(124,58,237,0.38) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-legacy-monument .panini-name {
+            color: #ffd700 !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px !important;
+            text-shadow: 0 0 8px rgba(255,215,0,0.55) !important;
+        }
+        .card-legacy-monument .panini-era {
+            font-size: 0.44rem;
+            font-weight: 700;
+            color: rgba(124,58,237,0.8);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .slot-player-mini.card-legacy-monument {
+            background: linear-gradient(135deg, #090521 0%, #4c1d95 100%) !important;
+            border: 2px solid #7c3aed !important;
+            box-shadow: 0 0 10px rgba(124,58,237,0.45) !important;
+        }
+        .slot-player-mini.card-legacy-monument.legacy-elite {
+            border: 2px solid #d946ef !important;
+            box-shadow: 0 0 0 1px #ffd700, 0 0 12px rgba(217,70,239,0.6) !important;
+        }
+        .slot-player-mini.card-legacy-monument .mini-ovr { color: #ffd700 !important; text-shadow: 0 0 6px rgba(255,215,0,0.65) !important; }
+        .slot-player-mini.card-legacy-monument .mini-name { color: #ffd700 !important; }
+
     </style>
 </head>
 <body>
@@ -4485,7 +4667,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     label: 'VN Legends',
                     icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
                 },
-                { value: 'affglory', label: 'AFF Glory', icon: '👑' }
+                { value: 'affglory', label: 'AFF Glory', icon: '👑' },
+                { value: 'legacy_monument', label: 'Legacy Monument', icon: '🏛️' }
             ];
             buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
                 selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
@@ -4562,7 +4745,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // Load data from LocalStorage or seed defaults
         const DB_VERSION_KEY = 'pitchdeck_db_version_v3';
-        const DB_CURRENT_VERSION = 'v3.2';
+        const DB_CURRENT_VERSION = 'v3.4';
 
         function loadDatabase() {
             const savedVersion = localStorage.getItem(DB_VERSION_KEY);
@@ -5072,6 +5255,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
             if (p && p.cardTheme === 'affglory') return 'card-affglory';
             if (p && p.cardTheme === 'gc') return 'card-gc';
+            if (p && p.cardTheme === 'legacy_monument') {
+                if (rating >= 90) return 'card-legacy-monument legacy-glow-active legacy-elite';
+                if (rating > 80) return 'card-legacy-monument legacy-glow-active';
+                return 'card-legacy-monument';
+            }
             if (rating >= 90) return 'card-icon';
             if (rating >= 80) return 'card-gold';
             if (rating >= 70) return 'card-silver';
@@ -5087,6 +5275,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p.cardTheme === 'vnlegends') return '★';
             if (p.cardTheme === 'affglory') return '👑';
             if (p.cardTheme === 'gc') return '👑';
+            if (p.cardTheme === 'legacy_monument') return '🏛️';
             
             const themeClass = getCardThemeClass(p);
             if (themeClass === 'card-icon') return '💎';
@@ -5105,6 +5294,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const isVNLegends = p.cardTheme === 'vnlegends';
             const isAFFGlory = p.cardTheme === 'affglory';
             const isGC = p.cardTheme === 'gc';
+            const isLegacyMonument = p.cardTheme === 'legacy_monument';
 
             let photoHTML;
             if (p.photo) {
@@ -5200,7 +5390,17 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // --- 7. SEARCH, FILTER, SORT ---
         function removeDiacritics(str) {
-            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D");
+            if (!str) return "";
+            return str.replace(/Ø/g, "O").replace(/ø/g, "o")
+                      .replace(/Æ/g, "AE").replace(/æ/g, "ae")
+                      .replace(/Œ/g, "OE").replace(/œ/g, "oe")
+                      .replace(/Ł/g, "L").replace(/ł/g, "l")
+                      .replace(/ß/g, "ss")
+                      .replace(/Đ/g, "D").replace(/đ/g, "d")
+                      .replace(/Ð/g, "D").replace(/ð/g, "d")
+                      .replace(/Þ/g, "TH").replace(/þ/g, "th")
+                      .replace(/ı/g, "i").replace(/İ/g, "I")
+                      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         }
 
         function applyFilters() {
@@ -6143,7 +6343,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         }
 
         function renderModalPlayers() {
-            const query = document.getElementById('modal-search-input').value.toLowerCase().trim();
+            const queryRaw = document.getElementById('modal-search-input').value.toLowerCase().trim();
+            const query = removeDiacritics(queryRaw);
             const listContainer = document.getElementById('modal-player-list');
             const selectedIds = Object.values(squad);
 
@@ -6158,9 +6359,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 }
                 
                 if (query) {
-                    return p.name.toLowerCase().includes(query) ||
-                           p.club.toLowerCase().includes(query) ||
-                           p.position.toLowerCase().includes(query);
+                    const searchName = removeDiacritics((p.name || '').toLowerCase());
+                    const searchClub = removeDiacritics((p.club || '').toLowerCase());
+                    return searchName.includes(query) ||
+                           searchClub.includes(query) ||
+                           (p.position || '').toLowerCase().includes(query);
                 }
                 return true;
             });
