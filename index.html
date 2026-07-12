@@ -4745,7 +4745,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // Load data from LocalStorage or seed defaults
         const DB_VERSION_KEY = 'pitchdeck_db_version_v3';
-        const DB_CURRENT_VERSION = 'v3.4';
+        const DB_CURRENT_VERSION = 'v5.2';
 
         function loadDatabase() {
             const savedVersion = localStorage.getItem(DB_VERSION_KEY);
@@ -4758,7 +4758,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 if (savedPlayers) {
                     try {
                         const parsed = JSON.parse(savedPlayers);
-                        customPlayers = parsed.filter(p => p.id && p.id.startsWith('player-'));
+                        const defaultIds = new Set(DEFAULT_PLAYERS.map(dp => dp.id));
+                        customPlayers = parsed.filter(p => p.id && p.id.startsWith('player-') && !defaultIds.has(p.id));
                     } catch (e) {
                         console.warn("Failed to parse existing players, resetting entirely", e);
                     }
@@ -4863,10 +4864,19 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                         }
                     });
 
-                    // Remove stale IDs: keep custom user players + valid DEFAULT_PLAYERS IDs only
+                    // Remove stale IDs and deduplicate: keep custom user players + valid DEFAULT_PLAYERS IDs only
                     const validIds = new Set(DEFAULT_PLAYERS.map(dp => dp.id));
                     const beforePruneLen = players.length;
-                    players = players.filter(p => p.id.startsWith('player-') || validIds.has(p.id));
+                    const seenLocalIds = new Set();
+                    players = players.filter(p => {
+                        const isCustom = p.id.startsWith('player-');
+                        const isValid = isCustom || validIds.has(p.id);
+                        if (isValid && !seenLocalIds.has(p.id)) {
+                            seenLocalIds.add(p.id);
+                            return true;
+                        }
+                        return false;
+                    });
                     if (players.length !== beforePruneLen) needsSave = true;
 
                     // Merge any missing DEFAULT_PLAYERS (new players added since last load)
