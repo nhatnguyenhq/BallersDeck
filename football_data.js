@@ -3724,7 +3724,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Bissouma",
         "nationality": "Mali",
         "flag": "🇲🇱",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CDM",
@@ -6775,16 +6775,15 @@ const DEFAULT_PLAYERS = [
     {
         "id": "arnold-66",
         "name": "Trent Alexander-Arnold",
-        "cardName": "Alexander-Arnold",
+        "cardName": "Trent",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
-            "RWB",
-            "CM"
+            "CM",
+            "RWB"
         ],
         "rating": 86,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/rw1mkk1750271928.png",
@@ -10838,7 +10837,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "A. Correa",
         "nationality": "Argentina",
         "flag": "🇦🇷",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "ST",
@@ -14824,10 +14823,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [],
-        "rating": 88,
+        "rating": 84,
         "photo": "https://static.independent.co.uk/2022/11/07/18/GettyImages-1427959742.jpg",
         "cardTheme": "worldcup26"
     },
@@ -21310,7 +21308,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Epassy",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "GK",
@@ -21370,7 +21368,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "N'Jie",
         "nationality": "Cameroon",
         "flag": "🇨🇲",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "RW",
@@ -28527,12 +28525,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "WC26",
         "club": "Algeria",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "LM"
         ],
-        "rating": 73,
+        "rating": 75,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -42466,12 +42463,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "trent-ucl",
         "name": "Trent Alexander-Arnold",
-        "cardName": "Alexander-Arnold",
+        "cardName": "Trent",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Liverpool",
-        "clubBadge": "",
         "position": "RB",
         "altPositions": [
             "CM",
@@ -43416,13 +43412,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "ST",
             "LM"
         ],
-        "rating": 87,
+        "rating": 86,
         "photo": "https://a.espncdn.com/photo/2019/0417/r530653_1296x729_16-9.jpg",
         "cardTheme": "ucl"
     },
@@ -45040,7 +45035,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Dele",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CAM",
@@ -46712,7 +46707,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Tello",
         "nationality": "Spain",
         "flag": "🇪🇸",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "RW",
@@ -48636,11 +48631,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Aston Villa",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 85,
-        "photo": "",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/2/27/Nigel_Spink_%28cropped%29.jpg",
         "cardTheme": "ucl"
     },
     {
@@ -58758,10 +58752,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇿",
         "league": "Bundesliga",
         "club": "Wolfsburg",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
-        "rating": 77,
+        "rating": 74,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -65898,7 +65891,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Belghali",
         "nationality": "Algeria",
         "flag": "🇩🇿",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "RM",
@@ -65919,7 +65912,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Hadjam",
         "nationality": "Algeria",
         "flag": "🇩🇿",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "LB",
@@ -66085,18 +66078,17 @@ const DEFAULT_PLAYERS = [
     {
         "id": "dejong-mm",
         "name": "Nigel de Jong",
-        "cardName": "de Jong",
+        "cardName": "N. de Jong",
         "nationality": "Netherlands",
         "flag": "🇳🇱",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 81,
-        "photo": "",
+        "photo": "https://m.media-amazon.com/images/M/MV5BMjI2YThjZWItN2U1ZS00NGE0LTkwYTYtM2Y3OTA0MjI1MTI4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         "cardTheme": "mm"
     },
     {
@@ -66370,7 +66362,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "N. Keïta",
         "nationality": "Guinea",
         "flag": "🇬🇳",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CM",
@@ -71956,14 +71948,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇩🇪",
         "league": "Global Champions",
         "club": "Germany 90",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CM",
             "CDM"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp7HLfDBd7tsspnFXH3RR0Qjvbt-iS12Gn8ab0Cs-mP8amxA6lALBs-Cum&s=10",
         "cardTheme": "gc"
     },
     {
@@ -72144,13 +72135,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 78",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 89,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_0VRrSmT7D9wB5eJ_ppjgyFNRjww4-qB_F2bJN0jmnA&s=10",
         "cardTheme": "gc"
     },
     {
@@ -74794,7 +74784,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Witsel",
         "nationality": "Belgium",
         "flag": "🇧🇪",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CB",
@@ -74811,7 +74801,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Meunier",
         "nationality": "Belgium",
         "flag": "🇧🇪",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "RB",
@@ -79345,7 +79335,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Nzonzi",
         "nationality": "France",
         "flag": "🇫🇷",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CDM",
@@ -81126,7 +81116,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Tomiyasu",
         "nationality": "Japan",
         "flag": "🇯🇵",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "clubBadge": "",
         "position": "CB",
@@ -81779,14 +81769,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "ST",
             "CF"
         ],
         "rating": 85,
-        "photo": "",
+        "photo": "https://s.yimg.com/ny/api/res/1.2/kugA0azJEuz7DMZmd_Ma2A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04NDI7Y2Y9d2VicA--/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/c4fbde73891c8adc0035b02b2e37730f",
         "cardTheme": "frozen",
         "match": "Real vs Liverpool"
     },
@@ -81798,16 +81787,15 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Barcelona",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
-            "RB",
-            "RM"
+            "RM",
+            "RB"
         ],
-        "rating": 82,
-        "photo": "",
+        "rating": 83,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG9DSK48fu-bCDeWglV-uVAtHew0GBIYRWRZ56UFIDr2TDXAIi1Cpb4MA&s=10",
         "cardTheme": "frozen",
-        "match": "Barca vs PSG"
+        "match": "La Remontada"
     },
     {
         "id": "aguero-frozen",
@@ -81817,13 +81805,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Premier League",
         "club": "Man City",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [
             "CF"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://resources.premierleague.pulselive.com/premierleague/photo/2025/03/26/58bf156e-72e1-41d1-993f-d651dfd519bb/AGUERO_QPR_2012.jpg",
         "cardTheme": "frozen",
         "match": "MC vs QPR"
     },
@@ -81848,12 +81835,12 @@ const DEFAULT_PLAYERS = [
         "cardName": "Krul",
         "nationality": "Netherlands",
         "flag": "🇳🇱",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "position": "GK",
         "altPositions": [],
         "rating": 86,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD_hdPGZbD-cN_6tNPOYB7jZ-V8k0226W0RffVgYGZZMMg_izN3AryYO2_&s=10",
         "cardTheme": "frozen",
         "match": "NED vs CRC"
     },
@@ -81863,12 +81850,12 @@ const DEFAULT_PLAYERS = [
         "cardName": "En-Nesyri",
         "nationality": "Morocco",
         "flag": "🇲🇦",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "position": "ST",
         "altPositions": [],
         "rating": 83,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRBFp_A61ypf4b4KQMwbW1PI-Clo4tnZ77uqo4O6K3cf_tNNeb2ILVKSa&s=10",
         "cardTheme": "frozen",
         "match": "MAR vs POR"
     },
@@ -81880,14 +81867,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇷",
         "league": "Premier League",
         "club": "Tottenham",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
-            "RW",
-            "ST"
+            "ST",
+            "RW"
         ],
         "rating": 86,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTehnxKakdbyoJ-mFddLZuoVr6AOHcLrkLBObPLvX63glVum7JrVKTisIQ&s=10",
         "cardTheme": "frozen",
         "match": "Spurs vs Ajax"
     },
@@ -81922,7 +81908,7 @@ const DEFAULT_PLAYERS = [
             "ST",
             "CF"
         ],
-        "rating": 91,
+        "rating": 88,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmgukXCNAqQh5gaa-fUvB5bAw1MPUbUbQ4zmRLsRNOuegB6BtSleeNsiTm&s=10",
         "cardTheme": "frozen",
         "match": "Barca vs MU"
@@ -81933,7 +81919,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "Yamal",
         "nationality": "Spain",
         "flag": "🇪🇸",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "position": "RW",
         "altPositions": [
@@ -81950,14 +81936,14 @@ const DEFAULT_PLAYERS = [
         "cardName": "Trippier",
         "nationality": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "position": "RB",
         "altPositions": [
             "RWB"
         ],
         "rating": 81,
-        "photo": "",
+        "photo": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/07/11/19/England-goal.jpg?width=1200&height=800&crop=1200:800",
         "cardTheme": "frozen",
         "match": "ENG vs CRO"
     },
@@ -81967,8 +81953,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "Romero",
         "nationality": "Argentina",
         "flag": "🇦🇷",
-        "league": "Premier League",
-        "club": "",
+        "league": "Global Champions",
+        "club": "Argentina 22",
         "position": "CB",
         "altPositions": [],
         "rating": 86,
@@ -81982,8 +81968,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "E. Martínez",
         "nationality": "Argentina",
         "flag": "🇦🇷",
-        "league": "Premier League",
-        "club": "",
+        "league": "Global Champions",
+        "club": "Argentina 22",
         "position": "GK",
         "altPositions": [],
         "rating": 88,
@@ -82004,7 +81990,7 @@ const DEFAULT_PLAYERS = [
             "CF",
             "CAM"
         ],
-        "rating": 88,
+        "rating": 89,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFffv9KV8UBOdc2c1rezDfoVQr1wjma2gRNPI_Ivhs_sk_CjukXiKdEsF5&s=10",
         "cardTheme": "frozen",
         "match": "MU vs MC"
@@ -82015,7 +82001,7 @@ const DEFAULT_PLAYERS = [
         "cardName": "F. Ruiz",
         "nationality": "Spain",
         "flag": "🇪🇸",
-        "league": "Premier League",
+        "league": "",
         "club": "",
         "position": "CM",
         "altPositions": [
@@ -82034,13 +82020,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "league": "Premier League",
         "club": "Arsenal",
-        "clubBadge": "",
         "position": "CDM",
         "altPositions": [
             "CM"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_9H2pBh4dpQEBao9tJlcsLrQ1qaO27B_pS8H0aljti8FIF8gFnxlNSk&s=10",
         "cardTheme": "frozen",
         "match": "Arsenal vs Real"
     },
@@ -82061,6 +82046,517 @@ const DEFAULT_PLAYERS = [
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyR8f36clX4QpGVgyUQCUfieAQ3k67xGYXf10uDMFpnxwH1e7JXknAdeFQ&s=10",
         "cardTheme": "frozen",
         "match": "Spurs vs Arsenal"
+    },
+    {
+        "id": "balotelli-frozen",
+        "name": "Mario Balotelli",
+        "cardName": "Balotelli",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 87,
+        "photo": "https://img.lemde.fr/2012/06/29/27/0/1024/512/664/0/75/0/ill_1726740_3bbc_975244.jpg",
+        "cardTheme": "frozen",
+        "match": "ITA vs GER"
+    },
+    {
+        "id": "rodrygo-frozen",
+        "name": "Rodrygo",
+        "cardName": "Rodrygo",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "La Liga",
+        "club": "Real Madrid",
+        "position": "RW",
+        "altPositions": [
+            "ST",
+            "LW"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaYH1mC51KEtHNk-cTCudMSpG9N_tXZ6q9bWZHQHLSEVjqa_ufNW4ocE&s=10",
+        "cardTheme": "frozen",
+        "match": "Real vs MC"
+    },
+    {
+        "id": "kane-frozen",
+        "name": "Harry Kane",
+        "cardName": "Kane",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "WC26",
+        "club": "England",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 86,
+        "photo": "https://media-cldnry.s-nbcnews.com/image/upload/t_focal-760x428,f_auto,q_auto:best/telemundocms/i/rockcms/2026-07/541348/Kane-Goal-2-e92c6e_d9ddc0a30dda3d0d3a3ae2ddd1efd6774a130cd8.jpg",
+        "cardTheme": "frozen",
+        "match": "ENG vs DRC"
+    },
+    {
+        "id": "messi-frozen-getafe",
+        "name": "Lionel Messi",
+        "cardName": "Messi",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "La Liga",
+        "club": "Barcelona",
+        "position": "RW",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 91,
+        "photo": "https://i.ytimg.com/vi/mMiL4_1Yewg/maxresdefault.jpg",
+        "cardTheme": "frozen",
+        "match": "Ankara Messi"
+    },
+    {
+        "id": "maradona-frozen",
+        "name": "Diego Maradona",
+        "cardName": "Maradona",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Global Champions",
+        "club": "Argentina 86",
+        "position": "CAM",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 92,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Maradona_gol_a_inglaterra.jpg",
+        "cardTheme": "frozen",
+        "match": "Gol del Siglo"
+    },
+    {
+        "id": "ghiggia-frozen",
+        "name": "Alcides Ghiggia",
+        "cardName": "Ghiggia",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "",
+        "club": "",
+        "position": "RW",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDCtRyrKt7lZF5RGjx4wUiNC3h4GqoKke3k3-sANHtQx0TT2UZhbJ_soI&s=10",
+        "cardTheme": "frozen",
+        "match": "URU vs BRA"
+    },
+    {
+        "id": "drogba-frozen",
+        "name": "Didier Drogba",
+        "cardName": "Drogba",
+        "nationality": "Côte d'Ivoire",
+        "flag": "🇨🇮",
+        "league": "Premier League",
+        "club": "Chelsea",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa_OgJ26-anq64-_-k-UHNtx65ISpt35MB3N9VeVo0bZvj2c7tXvGIetFX&s=10",
+        "cardTheme": "frozen",
+        "match": "Chelsea vs Bayern"
+    },
+    {
+        "id": "havertz-frozen",
+        "name": "Kai Havertz",
+        "cardName": "Havertz",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Premier League",
+        "club": "Chelsea",
+        "position": "CAM",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 84,
+        "photo": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/JVLYHMHJMVIPTIH6NDZDKQLGSU.jpg",
+        "cardTheme": "frozen",
+        "match": "Chelsea vs MC"
+    },
+    {
+        "id": "crouch-frozen",
+        "name": "Peter Crouch",
+        "cardName": "Crouch",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "EFL Championship",
+        "club": "Stoke City",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkr_atgL3HOcTJAV6fb4gXibWejmrjpiB9JRchtn6x2xvm6PQluvbQ9xqv&s=10",
+        "cardTheme": "frozen",
+        "match": "Stoke vs MC"
+    },
+    {
+        "id": "iniesta-frozen",
+        "name": "Andrés Iniesta",
+        "cardName": "Iniesta",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Global Champions",
+        "club": "Spain 10",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "LM"
+        ],
+        "rating": 87,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsRJ0MX8bilEV-22PXGObUTssYT_oA_kL5_wHmjAgIh2W7Vk8l7MCGNA&s=10",
+        "cardTheme": "frozen",
+        "match": "ESP vs NED"
+    },
+    {
+        "id": "gotze-frozen",
+        "name": "Mario Götze",
+        "cardName": "Götze",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "Global Champions",
+        "club": "Germany 14",
+        "position": "CAM",
+        "altPositions": [
+            "CF",
+            "LM"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGycDnZNk_58B0G_-eRTqqch09aMDZUX61-QLWUTCiFb6kekNEg2cAM7rA&s=10",
+        "cardTheme": "frozen",
+        "match": "GER vs ARG"
+    },
+    {
+        "id": "jrodriguez-frozen",
+        "name": "James Rodríguez",
+        "cardName": "James",
+        "nationality": "Colombia",
+        "flag": "🇨🇴",
+        "league": "",
+        "club": "",
+        "position": "CAM",
+        "altPositions": [
+            "LM",
+            "RM"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRXizXtSldnsPxkYj6cD7oWQEglK1MplP_-zhQxUIFPl0iZ_Ivp43TU&s=10",
+        "cardTheme": "frozen",
+        "match": "COL vs URU"
+    },
+    {
+        "id": "player-1783973127453",
+        "name": "Mario Balotelli",
+        "cardName": "Balotelli",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Premier League",
+        "club": "Man City",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 83,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK6Jt2s4CP_HvI41cVtPci7Nv0yHUezohhLe6neCdhejR7MfgFD_pLu9Xw&s=10",
+        "cardTheme": "frozen",
+        "match": "Why Always Me?"
+    },
+    {
+        "id": "player-1783974003056",
+        "name": "Lionel Messi",
+        "cardName": "Messi",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "La Liga",
+        "club": "Barcelona",
+        "position": "CAM",
+        "altPositions": [
+            "CF",
+            "RW"
+        ],
+        "rating": 91,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXl0EB_7U9lVVjA9zyLXWvjucP-a_7f24YaDIvhOXr7Q9XJ6ZWgMW5Xvj&s=10",
+        "cardTheme": "frozen",
+        "match": "Barca vs Liverpool"
+    },
+    {
+        "id": "player-1783974020655",
+        "name": "Lionel Messi",
+        "cardName": "Messi",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "La Liga",
+        "club": "Barcelona",
+        "position": "RW",
+        "altPositions": [
+            "CF",
+            "CAM"
+        ],
+        "rating": 91,
+        "photo": "https://i.ytimg.com/vi/wQZQADpna9Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA4IBhlC4VbgExJbQJx95tF54IHSg",
+        "cardTheme": "frozen",
+        "match": "Barca vs Real"
+    },
+    {
+        "id": "player-1783974145321",
+        "name": "Lionel Messi",
+        "cardName": "Messi",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Global Champions",
+        "club": "Argentina 22",
+        "position": "CAM",
+        "altPositions": [
+            "CF",
+            "RW"
+        ],
+        "rating": 90,
+        "photo": "https://cdnphoto.dantri.com.vn/btTg_7v6mR3q8-WPLyIKy9wRgmI=/thumb_w/1020/2022/12/14/gvardiol-1670976845504.jpg",
+        "cardTheme": "frozen",
+        "match": "ARG vs CRO"
+    },
+    {
+        "id": "haaland-frozen",
+        "name": "Erling Haaland",
+        "cardName": "Haaland",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "WC26",
+        "club": "Norway",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "https://www.sabcnews.com/sabcnews/wp-content/uploads/2026/07/Erling-Haaland-885x577.jpg",
+        "cardTheme": "frozen",
+        "match": "NOR vs BRA"
+    },
+    {
+        "id": "eder-frozen",
+        "name": "Éder",
+        "cardName": "Éder",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 84,
+        "photo": "https://imgnvsk.vnanet.vn/MediaUpload/Content/2024/06/12/212-8-53-57.jpg",
+        "cardTheme": "frozen",
+        "match": "POR vs FRA"
+    },
+    {
+        "id": "ronaldo-frozen-juve",
+        "name": "Cristiano Ronaldo",
+        "cardName": "C. Ronaldo",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "La Liga",
+        "club": "Real Madrid",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "LW"
+        ],
+        "rating": 91,
+        "photo": "https://i.guim.co.uk/img/media/3518924a10436f43fbb4d9146e7c719523b829c5/0_57_5568_3341/master/5568.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=8215d15a7f48224112d89252e90160e3",
+        "cardTheme": "frozen",
+        "match": "Real vs Juve"
+    },
+    {
+        "id": "ronaldo-frozen-sampdoria",
+        "name": "Cristiano Ronaldo",
+        "cardName": "C. Ronaldo",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "Serie A",
+        "club": "Juventus",
+        "position": "ST",
+        "altPositions": [
+            "LW"
+        ],
+        "rating": 89,
+        "photo": "https://i.guim.co.uk/img/media/c3dabb52aa1158cad3bcb3b7a39cf6dea6d9f4da/1035_0_2565_1539/master/2565.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=129edf434c78dc580b88537e0a0b0703",
+        "cardTheme": "frozen",
+        "match": "Juve vs Sampdoria"
+    },
+    {
+        "id": "lewandowski-frozen",
+        "name": "Robert Lewandowski",
+        "cardName": "Lewandowski",
+        "nationality": "Poland",
+        "flag": "🇵🇱",
+        "league": "Bundesliga",
+        "club": "Bayern Munich",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 90,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwkvAKXNy0QfOEXlcJ-cDQ3DPvY9ySw437HZCWaO55fl3hH1SctPVO-f_T&s=10",
+        "cardTheme": "frozen",
+        "match": "Bayern vs Wolfsburg"
+    },
+    {
+        "id": "kompany-frozen",
+        "name": "Vincent Kompany",
+        "cardName": "Kompany",
+        "nationality": "Belgium",
+        "flag": "🇧🇪",
+        "league": "Premier League",
+        "club": "Man City",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 87,
+        "photo": "https://pbs.twimg.com/media/E9ZK-clXMAUHX7s.jpg",
+        "cardTheme": "frozen",
+        "match": "MC vs Leicester"
+    },
+    {
+        "id": "stones-frozen",
+        "name": "John Stones",
+        "cardName": "Stones",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Man City",
+        "position": "CB",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVNWriJR9zuQlPeJrOF6UOhCA_1Kz6mO3NeM1H-Y69KUHZiFhUIenFwKQt&s=10",
+        "cardTheme": "frozen",
+        "match": "MC vs Liverpool"
+    },
+    {
+        "id": "mitoma-frozen",
+        "name": "Kaoru Mitoma",
+        "cardName": "Mitoma",
+        "nationality": "Japan",
+        "flag": "🇯🇵",
+        "league": "",
+        "club": "",
+        "position": "LM",
+        "altPositions": [
+            "LW"
+        ],
+        "rating": 83,
+        "photo": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_scale,w_640/v1/media/gmg/3XFA7GECIFGQ5C3ASHU6IABLOI.jpg?_a=DAJHqpDbZAAA",
+        "cardTheme": "frozen",
+        "match": "JPN vs ESP"
+    },
+    {
+        "id": "bale-frozen-copadelrey",
+        "name": "Gareth Bale",
+        "cardName": "Bale",
+        "nationality": "Wales",
+        "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+        "league": "La Liga",
+        "club": "Real Madrid",
+        "position": "LW",
+        "altPositions": [
+            "RW",
+            "LM"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvoEzLBAmZkQxohipAF4Wc2TBK8f28s93S-KvUDI6klqB5rZhRfkRri87j&s=10",
+        "cardTheme": "frozen",
+        "match": "Real vs Barca"
+    },
+    {
+        "id": "player-1783975807975",
+        "name": "Andrés Iniesta",
+        "cardName": "Iniesta",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CAM",
+            "LM"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyKZOe0yMVbB9TJRme9tKsWW8WWGb3K3FdAwABd5NJ_TTQvNJHMwWSdysL&s=10",
+        "cardTheme": "frozen",
+        "match": "ESP vs ITA"
+    },
+    {
+        "id": "player-1783976050626",
+        "name": "Trent Alexander-Arnold",
+        "cardName": "Trent",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Liverpool",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 88,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEUj4wBa2NyO7jfl96ziE83awYU62i-AK2VVl_yT_JCay0YZziU-l667EB&s=10",
+        "cardTheme": "frozen",
+        "match": "Corner Taken Quickly"
+    },
+    {
+        "id": "player-1783976154135",
+        "name": "Frenkie de Jong",
+        "cardName": "F. De Jong",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "Eredivisie",
+        "club": "Ajax",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 86,
+        "photo": "https://pbs.twimg.com/media/D0-4L5qWkAAJzUc.jpg",
+        "cardTheme": "frozen",
+        "match": "La Croqueta"
+    },
+    {
+        "id": "player-1783976286385",
+        "name": "Marco van Basten",
+        "cardName": "van Basten",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 91,
+        "photo": "https://pbs.twimg.com/media/CgFAMHUXEAA_ujK.jpg",
+        "cardTheme": "frozen",
+        "match": "NED vs URS"
+    },
+    {
+        "id": "player-1783976346355",
+        "name": "Dennis Bergkamp",
+        "cardName": "Bergkamp",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "Premier League",
+        "club": "Arsenal",
+        "position": "CF",
+        "altPositions": [
+            "ST",
+            "CF",
+            "CAM"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppLiSuc53lBGLDhKH7m2OzknOdKJoqUH3923XmrXlBFKT0mslKwdhJvA&s=10",
+        "cardTheme": "frozen",
+        "match": ""
     }
 ];
 

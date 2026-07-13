@@ -1551,14 +1551,46 @@
             line-height: 1.1;
         }
         .card-ucl .panini-photo-silhouette { fill: rgba(0, 212, 255, 0.15) !important; }
-        .card-ucl { --triangle-bg: linear-gradient(135deg, transparent 50%, #00d4ff 50%); --triangle-color: #010614; }
+        .card-ucl {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #0c2b70 50%) !important;
+            --triangle-color: #00d4ff !important;
+        }
+        @keyframes ucl-elite-glow {
+            0% {
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.5), inset 0 0 8px rgba(0, 212, 255, 0.2), 0 6px 28px rgba(0,0,0,0.7);
+                border-color: #00d4ff !important;
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(168, 85, 247, 0.8), inset 0 0 15px rgba(168, 85, 247, 0.4), 0 6px 28px rgba(0,0,0,0.7);
+                border-color: #a855f7 !important;
+            }
+            100% {
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.5), inset 0 0 8px rgba(0, 212, 255, 0.2), 0 6px 28px rgba(0,0,0,0.7);
+                border-color: #00d4ff !important;
+            }
+        }
+        .card-ucl.card-ucl-elite {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.35) 0%, transparent 70%),
+                radial-gradient(ellipse at 50% 100%, rgba(168, 85, 247, 0.25) 0%, transparent 70%),
+                linear-gradient(160deg, #010614 0%, #081d4b 55%, #180933 100%) !important;
+            animation: ucl-elite-glow 4s infinite ease-in-out !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #ffd700 50%) !important;
+            --triangle-color: #010614 !important;
+        }
         .slot-player-mini.card-ucl {
             background: linear-gradient(135deg, #010614 0%, #051435 100%) !important;
             border: 2px solid #00d4ff !important;
             box-shadow: 0 0 10px rgba(0, 212, 255, 0.35) !important;
         }
+        .slot-player-mini.card-ucl.card-ucl-elite {
+            border-color: #ffd700 !important;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
+        }
         .slot-player-mini.card-ucl .mini-ovr { color: #00d4ff !important; text-shadow: 0 0 4px rgba(0,212,255,0.5) !important; }
+        .slot-player-mini.card-ucl.card-ucl-elite .mini-ovr { color: #ffd700 !important; text-shadow: 0 0 4px rgba(255,215,0,0.5) !important; }
         .slot-player-mini.card-ucl .mini-name { color: #00d4ff !important; }
+        .slot-player-mini.card-ucl.card-ucl-elite .mini-name { color: #ffd700 !important; }
 
         /* ===== VN LEGENDS (Vietnam Legends) THEME — Crimson & Gold ===== */
         .card-vnlegends {
@@ -4974,6 +5006,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 needsSave = true;
                             }
                         }
+                        // Clear accidentally assigned Premier League for any card with empty club
+                        if (p.club === '' && p.league === 'Premier League') {
+                            p.league = '';
+                            needsSave = true;
+                        }
                     });
 
                     // General field migrations
@@ -5110,17 +5147,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     p.league = '';
                     updated = true;
                 }
-                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends' && p.cardTheme !== 'affglory') {
+                if (!p.league && p.club) {
                     for (const [leagueName, data] of Object.entries(LEAGUES_DATA)) {
                         if (data.clubs.includes(p.club)) {
                             p.league = leagueName;
                             updated = true;
                             break;
                         }
-                    }
-                    if (!p.league) {
-                        p.league = "Premier League";
-                        updated = true;
                     }
                 }
             });
@@ -5433,7 +5466,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p && p.cardTheme === 'icons') return 'card-icons';
             if (p && p.cardTheme === 'mm') return 'card-mm';
             if (p && p.cardTheme === 'toty') return 'card-toty';
-            if (p && p.cardTheme === 'ucl') return 'card-ucl';
+            if (p && p.cardTheme === 'ucl') {
+                if (rating >= 90) return 'card-ucl card-ucl-elite';
+                return 'card-ucl';
+            }
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
             if (p && p.cardTheme === 'affglory') return 'card-affglory';
             if (p && p.cardTheme === 'gc') return 'card-gc';
