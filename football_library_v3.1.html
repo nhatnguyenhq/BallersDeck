@@ -1183,6 +1183,166 @@
             color: #d4a054 !important;
         }
 
+        /* ===== FROZEN IN TIME THEME — Ice-shatter Glacial Glow ===== */
+        .card-frozen {
+            background:
+                radial-gradient(circle at 50% 0%, rgba(100, 255, 218, 0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #0a2540 0%, #153e68 45%, #051424 100%) !important;
+            border: 2.5px solid #ffffff !important;
+            box-shadow:
+                0 0 0 2px #64FFDA,
+                0 0 15px rgba(100, 255, 218, 0.8),
+                0 8px 32px rgba(0,0,0,0.85),
+                inset 0 0 8px rgba(100, 255, 218, 0.3) !important;
+            position: relative;
+            overflow: hidden;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #64ffda 50%) !important;
+            --triangle-color: #0A192F !important;
+        }
+        /* Ice-shatter overlay pattern */
+        .card-frozen::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 15px,
+                    rgba(100, 255, 218, 0.02) 15px,
+                    rgba(100, 255, 218, 0.02) 16px
+                );
+            pointer-events: none;
+            z-index: 0;
+            transition: opacity 0.5s ease;
+        }
+        /* Snowflake / Sparkle accent in background */
+        .card-frozen::after {
+            content: '❄';
+            position: absolute;
+            bottom: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.52rem;
+            color: rgba(100, 255, 218, 0.35);
+            letter-spacing: 4px;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .card-frozen .panini-band {
+            background: linear-gradient(135deg, #05142b 0%, #0d2a4a 50%, #05142b 100%) !important;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.5) !important;
+            position: relative;
+            z-index: 2;
+        }
+        /* Snowflake Icon in the middle of the OVR/POS band */
+        .card-frozen .panini-band::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 28px; height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='%2364ffda' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%2364ffda' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%230A192F' stroke='%2364ffda' stroke-width='1'/%3E%3Cline x1='24' y1='12' x2='24' y2='36'/%3E%3Cline x1='12' y1='24' x2='36' y2='24'/%3E%3Cline x1='15.5' y1='15.5' x2='32.5' y2='32.5'/%3E%3Cline x1='15.5' y1='32.5' x2='32.5' y2='15.5'/%3E%3Cpolyline points='20,17 24,13 28,17'/%3E%3Cpolyline points='20,31 24,35 28,31'/%3E%3Cpolyline points='17,20 13,24 17,28'/%3E%3Cpolyline points='31,20 35,24 31,28'/%3E%3Cpolyline points='17.5,21.5 19,19 21.5,17.5'/%3E%3Cpolyline points='26.5,30.5 29,29 30.5,26.5'/%3E%3Cpolyline points='26.5,17.5 29,19 30.5,21.5'/%3E%3Cpolyline points='17.5,30.5 19,29 21.5,26.5'/%3E%3Ccircle cx='24' cy='24' r='2.5' fill='%2364ffda'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.95;
+            z-index: 1;
+        }
+        .card-frozen .panini-ovr {
+            color: #64FFDA !important;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 12px rgba(100, 255, 218, 0.7), 0 2px 4px rgba(0,0,0,0.8) !important;
+            z-index: 2;
+        }
+        .card-frozen .panini-pos {
+            color: rgba(100, 255, 218, 0.9) !important;
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6) !important;
+            z-index: 2;
+        }
+        .card-frozen .panini-photo {
+            background: radial-gradient(ellipse at 50% 80%, rgba(100, 255, 218, 0.08) 0%, transparent 65%) !important;
+            z-index: 2;
+            position: relative;
+        }
+        .card-frozen .panini-photo img {
+            filter: brightness(1.2) contrast(1.1) saturate(0.85) !important;
+        }
+        .card-frozen .panini-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(100, 255, 218, 0.15) 50%, transparent 100%);
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            z-index: 3;
+        }
+        /* Glassmorphism footer */
+        .card-frozen .panini-footer {
+            background: rgba(10, 25, 47, 0.6) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            border-top: 1px solid rgba(100, 255, 218, 0.3) !important;
+            z-index: 2;
+            position: relative;
+            padding: 0.25rem 0.4rem 0.3rem;
+        }
+        .card-frozen .panini-name {
+            color: #ffffff !important;
+            font-size: 0.68rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 0 0 6px rgba(100, 255, 218, 0.5) !important;
+        }
+        .card-frozen .panini-era {
+            font-size: 0.44rem;
+            font-weight: 700;
+            color: #64FFDA !important;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+            line-height: 1.1;
+            text-shadow: 0 0 4px rgba(100, 255, 218, 0.3);
+        }
+        .card-frozen .panini-photo-silhouette { fill: rgba(100, 255, 218, 0.15) !important; }
+        
+        .card-frozen .snow-particles {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.7) 1px, transparent 1px),
+                radial-gradient(circle at 75% 15%, rgba(255,255,255,0.6) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 40% 70%, rgba(255,255,255,0.5) 1px, transparent 1px),
+                radial-gradient(circle at 85% 80%, rgba(100,255,218,0.5) 1px, transparent 1px);
+            background-size: 200px 200px;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1;
+            transition: opacity 0.4s ease;
+        }
+        .player-card-wrapper:hover .card-frozen .snow-particles {
+            opacity: 0.8;
+            animation: snowFall 4s linear infinite;
+        }
+        @keyframes snowFall {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: 50px 150px;
+            }
+        }
+        
+        .card-frozen { --triangle-bg: linear-gradient(135deg, transparent 50%, #64ffda 50%); --triangle-color: #0A192F; }
+        
+        /* Mini slot styles for Frozen */
+        .slot-player-mini.card-frozen {
+            background: linear-gradient(135deg, #020c1b 0%, #0d2242 100%) !important;
+            border: 2px solid #64ffda !important;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.35) !important;
+        }
+        .slot-player-mini.card-frozen .mini-ovr { color: #64ffda !important; text-shadow: 0 0 4px rgba(100,255,218,0.5) !important; }
+        .slot-player-mini.card-frozen .mini-name { color: #ffffff !important; }
 
         /* ===== TOTY (Team of the Year) THEME — Ice Blue Electric ===== */
         .card-toty {
@@ -4332,6 +4492,11 @@
                     <input type="hidden" id="player-theme" value="standard">
                     <div class="custom-dropdown-menu" id="edit-theme-dropdown-menu"></div>
                 </div>
+ 
+                <div class="form-group" id="group-edit-match" style="display: none;">
+                    <label for="player-match">Tên trận đấu (Frozen in Time)</label>
+                    <input type="text" id="player-match" placeholder="Ví dụ: Spurs vs Burnley">
+                </div>
 
                 <div class="form-group">
                     <label>Vị trí phụ (Alt Positions)</label>
@@ -4668,7 +4833,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
                 },
                 { value: 'affglory', label: 'AFF Glory', icon: '👑' },
-                { value: 'legacy_monument', label: 'Legacy Monument', icon: '🏛️' }
+                { value: 'legacy_monument', label: 'Club Legacy', icon: '🏛️' },
+                { value: 'frozen', label: 'Frozen in Time', icon: '❄️' }
             ];
             buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
                 selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
@@ -4682,6 +4848,12 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 trigger.innerHTML = icon ? `<span style="font-size: 1.1em; display: inline-flex; align-items: center;">${icon}</span> <span>${lbl}</span>` : `<span>${lbl}</span>`;
                 document.getElementById('player-theme').value = val;
                 document.getElementById('edit-theme-dropdown-menu').classList.remove('show');
+                
+                // Show/hide match group based on theme value
+                const matchGroup = document.getElementById('group-edit-match');
+                if (matchGroup) {
+                    matchGroup.style.display = val === 'frozen' ? 'block' : 'none';
+                }
             });
 
             // --- Sort ---
@@ -4745,7 +4917,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // Load data from LocalStorage or seed defaults
         const DB_VERSION_KEY = 'pitchdeck_db_version_v3';
-        const DB_CURRENT_VERSION = 'v5.2';
+        const DB_CURRENT_VERSION = 'v5.4';
 
         function loadDatabase() {
             const savedVersion = localStorage.getItem(DB_VERSION_KEY);
@@ -5265,6 +5437,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
             if (p && p.cardTheme === 'affglory') return 'card-affglory';
             if (p && p.cardTheme === 'gc') return 'card-gc';
+            if (p && p.cardTheme === 'frozen') return 'card-frozen';
             if (p && p.cardTheme === 'legacy_monument') {
                 if (rating >= 90) return 'card-legacy-monument legacy-glow-active legacy-elite';
                 if (rating > 80) return 'card-legacy-monument legacy-glow-active';
@@ -5285,6 +5458,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p.cardTheme === 'vnlegends') return '★';
             if (p.cardTheme === 'affglory') return '👑';
             if (p.cardTheme === 'gc') return '👑';
+            if (p.cardTheme === 'frozen') return '❄';
             if (p.cardTheme === 'legacy_monument') return '🏛️';
             
             const themeClass = getCardThemeClass(p);
@@ -5305,6 +5479,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const isAFFGlory = p.cardTheme === 'affglory';
             const isGC = p.cardTheme === 'gc';
             const isLegacyMonument = p.cardTheme === 'legacy_monument';
+            const isFrozen = p.cardTheme === 'frozen';
 
             let photoHTML;
             if (p.photo) {
@@ -5333,6 +5508,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 : isAFFGlory
                 ? `<div class="panini-name">${displayName}</div>
                    <div class="panini-era">👑 AFF GLORY 👑</div>`
+                : isFrozen
+                ? `<div class="panini-name">${displayName}</div>
+                   <div class="panini-era">${(p.match || 'FROZEN IN TIME').toUpperCase()}</div>`
                 : `<div class="panini-name">${displayName}</div>
                    <div class="panini-club">${p.club || ''}</div>`;
 
@@ -5340,6 +5518,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 <div class="player-card-wrapper" onclick="openEditDrawer('${p.id}')">
                     <div class="player-card ${themeClass}" id="card-${p.id}">
                         <div class="card-shine"></div>
+                        ${isFrozen ? '<div class="snow-particles"></div>' : ''}
                         <div class="card-actions">
                             <button class="card-action-btn" onclick="event.stopPropagation(); openEditDrawer('${p.id}')" title="Sửa">
                                 <i data-lucide="edit-3" style="width:11px;height:11px;"></i>
@@ -5768,6 +5947,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             document.getElementById('form-league-trigger-val').textContent = "-- Chọn Giải đấu --";
             document.getElementById('player-card-name').value = "";
             document.getElementById('player-theme').value = "standard";
+            document.getElementById('player-match').value = "";
+            const matchGroup = document.getElementById('group-edit-match');
+            if (matchGroup) matchGroup.style.display = 'none';
             const defaultTheme = themeItems.find(t => t.value === 'standard');
             const editTrigger = document.getElementById('edit-theme-trigger-val');
             if (editTrigger && defaultTheme) {
@@ -5820,6 +6002,14 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             document.getElementById('player-club').value = p.club;
             const editThemeVal = p.cardTheme || 'standard';
             document.getElementById('player-theme').value = editThemeVal;
+            
+            // Set match value and visibility
+            document.getElementById('player-match').value = p.match || '';
+            const matchGroup = document.getElementById('group-edit-match');
+            if (matchGroup) {
+                matchGroup.style.display = editThemeVal === 'frozen' ? 'block' : 'none';
+            }
+            
             const themeItem = themeItems.find(t => t.value === editThemeVal) || themeItems.find(t => t.value === 'standard');
             const editTrigger = document.getElementById('edit-theme-trigger-val');
             if (editTrigger && themeItem) {
@@ -5882,6 +6072,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const rating = parseInt(document.getElementById('player-rating').value);
             const photo = document.getElementById('player-photo').value;
             const cardTheme = document.getElementById('player-theme').value;
+            const match = document.getElementById('player-match').value.trim();
 
             const altPositions = Array.from(
                 document.querySelectorAll('#alt-positions-grid input:checked')
@@ -5891,6 +6082,9 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 id: id || 'player-' + Date.now(),
                 name, cardName, nationality, flag, league, club, position, altPositions, rating, photo, cardTheme
             };
+            if (cardTheme === 'frozen') {
+                playerData.match = match;
+            }
 
             if (id) {
                 const idx = players.findIndex(x => x.id === id);

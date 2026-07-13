@@ -6019,13 +6019,12 @@ const DEFAULT_PLAYERS = [
     },
     {
         "id": "kim-3",
-        "name": "Kim Min Jae",
-        "cardName": "Kim Min Jae",
+        "name": "Kim Min-jae",
+        "cardName": "Kim Min-jae",
         "nationality": "South Korea",
         "flag": "🇰🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -7109,6 +7108,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇪",
         "league": "Premier League",
         "club": "Brentford",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -8761,6 +8761,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
+        "clubBadge": "",
         "position": "RW",
         "altPositions": [
             "CAM",
@@ -14804,12 +14805,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "kim-wc26",
         "name": "Kim Min-jae",
-        "cardName": "Min-jae",
+        "cardName": "Kim Min-jae",
         "nationality": "South Korea",
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -20132,13 +20132,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇰🇷",
         "league": "EFL Championship",
         "club": "Stoke City",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
-            "LM",
-            "LW"
+            "LW",
+            "LM"
         ],
-        "rating": 76,
+        "rating": 75,
         "photo": "",
         "cardTheme": "standard"
     },
@@ -22478,6 +22477,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "league": "WC26",
         "club": "Scotland",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 74,
@@ -25640,6 +25640,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "WC26",
         "club": "Japan",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -26042,16 +26043,15 @@ const DEFAULT_PLAYERS = [
     {
         "id": "bjunho-wc26",
         "name": "Bae Jun-ho",
-        "cardName": "Jun-ho",
+        "cardName": "Bae Jun-ho",
         "nationality": "South Korea",
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
-            "LM",
-            "LW"
+            "LW",
+            "LM"
         ],
         "rating": 75,
         "photo": "",
@@ -26094,12 +26094,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "ejisung-wc26",
         "name": "Eom Ji-sung",
-        "cardName": "Ji-sung",
+        "cardName": "E. Ji-sung",
         "nationality": "South Korea",
         "flag": "🇰🇷",
         "league": "WC26",
         "club": "South Korea",
-        "clubBadge": "",
         "position": "LW",
         "altPositions": [
             "LM"
@@ -28019,6 +28018,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇿",
         "league": "WC26",
         "club": "New Zealand",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 72,
@@ -41010,16 +41010,15 @@ const DEFAULT_PLAYERS = [
     {
         "id": "jeong-unionberlin",
         "name": "Jeong Woo-yeong",
-        "cardName": "Jeong",
+        "cardName": "Woo-yeong",
         "nationality": "South Korea",
         "flag": "🇰🇷",
         "league": "Bundesliga",
         "club": "Union Berlin",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
         ],
         "rating": 74,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4aw8jx1763641404.png",
@@ -46124,6 +46123,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 87,
@@ -59298,12 +59298,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "lennardmaloney-mainz",
         "name": "Lennard Maloney",
-        "cardName": "Maloney",
+        "cardName": "L. Maloney",
         "nationality": "United States",
         "flag": "🇺🇸",
         "league": "Bundesliga",
         "club": "Mainz",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 73,
@@ -62240,6 +62239,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lazio",
+        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 68,
@@ -63491,6 +63491,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🏴‍󠁢󠁷󠁬󠁳󠁿",
         "league": "",
         "club": "",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 80,
@@ -69640,12 +69641,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "kimminjae-s26",
         "name": "Kim Min-jae",
-        "cardName": "Min-jae",
+        "cardName": "Kim Min-jae",
         "nationality": "South Korea",
         "flag": "🇰🇷",
         "league": "Bundesliga",
         "club": "Bayern Munich",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 82,
@@ -81111,8 +81111,8 @@ const DEFAULT_PLAYERS = [
         "cardName": "J. Adams",
         "nationality": "South Africa",
         "flag": "🇿🇦",
-        "league": "WC26",
-        "club": "South Africa",
+        "league": "",
+        "club": "",
         "clubBadge": "",
         "position": "CM",
         "altPositions": [],
@@ -81128,6 +81128,7 @@ const DEFAULT_PLAYERS = [
         "flag": "🇯🇵",
         "league": "Premier League",
         "club": "",
+        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB",
@@ -81145,11 +81146,921 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "",
         "club": "",
+        "clubBadge": "",
         "position": "CM",
         "altPositions": [],
         "rating": 83,
         "photo": "",
         "cardTheme": "mm"
+    },
+    {
+        "id": "campagnaro-mm",
+        "name": "Hugo Campagnaro",
+        "cardName": "Campagnaro",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/6300344.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "elia-mm",
+        "name": "Eljero Elia",
+        "cardName": "Elia",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "LW",
+            "RW"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/jq860e1543348281.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "cardozo-mm",
+        "name": "Óscar Cardozo",
+        "cardName": "Cardozo",
+        "nationality": "Paraguay",
+        "flag": "🇵🇾",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "stevendavis-mm",
+        "name": "Steven Davis",
+        "cardName": "S. Davis",
+        "nationality": "Northern Ireland",
+        "flag": "🇬🇧",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/ls1m3a1701946934.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "salihamidzic-mm",
+        "name": "Hasan Salihamidžić",
+        "cardName": "Salihamidzic",
+        "nationality": "Bosnia",
+        "flag": "🇧🇦",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "RB",
+            "LB",
+            "LM"
+        ],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/6tmdjn1610998146.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "almunia-mm",
+        "name": "Manuel Almunia",
+        "cardName": "Almunia",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4203301.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "maloney-mm",
+        "name": "Shaun Maloney",
+        "cardName": "S. Maloney",
+        "nationality": "Scotland",
+        "flag": "🏴‍󠁢‍󠁳‍󠁣‍󠁴‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "CAM",
+            "LW"
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5201881.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "vazte-mm",
+        "name": "Ricardo Vaz Tê",
+        "cardName": "Vaz Te",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "LW",
+            "RW"
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/wrupsy1432743178.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "jaaskelainen-mm",
+        "name": "Jussi Jääskeläinen",
+        "cardName": "Jaaskelainen",
+        "nationality": "Finland",
+        "flag": "🇫🇮",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/3pbyhy1713531872.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "bridge-mm",
+        "name": "Wayne Bridge",
+        "cardName": "Bridge",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LWB"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/4l021t1654259841.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "lescott-mm",
+        "name": "Joleon Lescott",
+        "cardName": "Lescott",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/xdktjw1654246676.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "markhughes-mm",
+        "name": "Mark Hughes",
+        "cardName": "M. Hughes",
+        "nationality": "Wales",
+        "flag": "🏴‍󠁢‍󠁷‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5003741.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "routledge-mm",
+        "name": "Wayne Routledge",
+        "cardName": "Routledge",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RW",
+        "altPositions": [
+            "LW",
+            "RM",
+            "LM"
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/91emuq1609183838.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "bellamy-mm",
+        "name": "Craig Bellamy",
+        "cardName": "Bellamy",
+        "nationality": "Wales",
+        "flag": "🏴‍󠁢‍󠁷‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "LW",
+            "CF"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2018954.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "guthrie-mm",
+        "name": "Danny Guthrie",
+        "cardName": "Guthrie",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5118005.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "sunjihai-mm",
+        "name": "Sun Jihai",
+        "cardName": "Sun Jihai",
+        "nationality": "China",
+        "flag": "🇨🇳",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "CB",
+            "LB"
+        ],
+        "rating": 73,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "duff-mm",
+        "name": "Damien Duff",
+        "cardName": "Duff",
+        "nationality": "Ireland",
+        "flag": "🇮🇪",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "RM",
+            "LW"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/2014387.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kuszczak-mm",
+        "name": "Tomasz Kuszczak",
+        "cardName": "Kuszczak",
+        "nationality": "Poland",
+        "flag": "🇵🇱",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/884670.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "woodgate-mm",
+        "name": "Jonathan Woodgate",
+        "cardName": "Woodgate",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/106708.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "nzogbia-mm",
+        "name": "Charles N'Zogbia",
+        "cardName": "N'Zogbia",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LM",
+        "altPositions": [
+            "LW",
+            "CAM"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nus7l51716880618.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "steventaylor-mm",
+        "name": "Steven Taylor",
+        "cardName": "S. Taylor",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5114243.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "lualua-mm",
+        "name": "Lomana LuaLua",
+        "cardName": "Lualua",
+        "nationality": "DR Congo",
+        "flag": "🇨🇩",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "LW"
+        ],
+        "rating": 76,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/r672q71514985469.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "litie-mm",
+        "name": "Li Tie",
+        "cardName": "Li Tie",
+        "nationality": "China",
+        "flag": "🇨🇳",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 73,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmNgrf_mQxRstJyefTztgssLTTe3ZmTTAQrC8rH8QUIzOLZSvnMJNMni0GYR-7IAwTdklsEzaPapBncQElCOt95PgYqn8QKPS5HrSOw&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mido-mm",
+        "name": "Mido",
+        "cardName": "Mido",
+        "nationality": "Egypt",
+        "flag": "🇪🇬",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "ameobi-mm",
+        "name": "Shola Ameobi",
+        "cardName": "Ameobi",
+        "nationality": "Nigeria",
+        "flag": "🇳🇬",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/0gqsdq1715780523.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "jenas-mm",
+        "name": "Jermaine Jenas",
+        "cardName": "Jenas",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5103363.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "malbranque-mm",
+        "name": "Steed Malbranque",
+        "cardName": "Malbranque",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "CAM",
+            "LM"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/3501514.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "leeyoungpyo-mm",
+        "name": "Lee Young-pyo",
+        "cardName": "Young-pyo",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "",
+        "club": "",
+        "position": "LB",
+        "altPositions": [
+            "RB"
+        ],
+        "rating": 79,
+        "photo": "https://phunuvietnam.mediacdn.vn/thumb_w/1098/179072216278405120/2024/8/22/screenshot20240822190307samsung-internet-1724328216674884145502-464-0-1139-1080-crop-1724328222782473296755-25-64-625-1024-crop-17243282319922070787379.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "zokora-mm",
+        "name": "Didier Zokora",
+        "cardName": "Zokora",
+        "nationality": "Ivory Coast",
+        "flag": "🇨🇮",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/527746.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "winstonreid-mm",
+        "name": "Winston Reid",
+        "cardName": "Reid",
+        "nationality": "New Zealand",
+        "flag": "🇳🇿",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/qiceke1557407921.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "konchesky-mm",
+        "name": "Paul Konchesky",
+        "cardName": "Konchesky",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/hpz6961604490565.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "boamorte-mm",
+        "name": "Luís Boa Morte",
+        "cardName": "Boa Morte",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LW",
+        "altPositions": [
+            "LM"
+        ],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kirkland-mm",
+        "name": "Chris Kirkland",
+        "cardName": "Kirkland",
+        "nationality": "England",
+        "flag": "🏴‍󠁢‍󠁥‍󠁮‍󠁧‍󠁬‍󠁿",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/107544.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "simoneinzaghi-mm",
+        "name": "Simone Inzaghi",
+        "cardName": "S. Inzaghi",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/x2f7d81750672697.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "serginho-mm",
+        "name": "Serginho",
+        "cardName": "Serginho",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "LB",
+        "altPositions": [
+            "LM",
+            "LW"
+        ],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/uvxrvt1421419461.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "son-frozen",
+        "name": "Son Heung-min",
+        "cardName": "Son",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "position": "LW",
+        "altPositions": [
+            "ST",
+            "LM"
+        ],
+        "rating": 88,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6lbdl-23gVbCFNAQa53QuyV6Iej-7egxGgOhIsplkxloWeBiiHILQIs&s=10",
+        "cardTheme": "frozen",
+        "match": "Spurs vs Burnley"
+    },
+    {
+        "id": "bale-frozen-tottenham",
+        "name": "Gareth Bale",
+        "cardName": "Bale",
+        "nationality": "Wales",
+        "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "position": "LW",
+        "altPositions": [
+            "RW",
+            "LM"
+        ],
+        "rating": 88,
+        "photo": "https://www.thesun.co.uk/wp-content/uploads/2020/10/a7fb9431-9ba2-4912-a718-9cf354a47f94.jpg?strip=all&w=671",
+        "cardTheme": "frozen",
+        "match": "Spurs vs Inter"
+    },
+    {
+        "id": "bale-frozen-realmadrid",
+        "name": "Gareth Bale",
+        "cardName": "Bale",
+        "nationality": "Wales",
+        "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+        "league": "La Liga",
+        "club": "Real Madrid",
+        "clubBadge": "",
+        "position": "RW",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 85,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "Real vs Liverpool"
+    },
+    {
+        "id": "sergiroberto-frozen",
+        "name": "Sergi Roberto",
+        "cardName": "S. Roberto",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "La Liga",
+        "club": "Barcelona",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "RB",
+            "RM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "Barca vs PSG"
+    },
+    {
+        "id": "aguero-frozen",
+        "name": "Sergio Agüero",
+        "cardName": "Agüero",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Premier League",
+        "club": "Man City",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [
+            "CF"
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "MC vs QPR"
+    },
+    {
+        "id": "bono-frozen",
+        "name": "Yassine Bounou",
+        "cardName": "Bono",
+        "nationality": "Morocco",
+        "flag": "🇲🇦",
+        "league": "WC26",
+        "club": "Morocco",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdhYq9NeMoL403xOIf5B0w0XuxjQrWrpAFwAMOQK6OTFKILwWjKKzjVg&s=10",
+        "cardTheme": "frozen",
+        "match": "MAR vs NED"
+    },
+    {
+        "id": "krul-frozen",
+        "name": "Tim Krul",
+        "cardName": "Krul",
+        "nationality": "Netherlands",
+        "flag": "🇳🇱",
+        "league": "Premier League",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "NED vs CRC"
+    },
+    {
+        "id": "ennesyri-frozen",
+        "name": "Youssef En-Nesyri",
+        "cardName": "En-Nesyri",
+        "nationality": "Morocco",
+        "flag": "🇲🇦",
+        "league": "Premier League",
+        "club": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 83,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "MAR vs POR"
+    },
+    {
+        "id": "lucasmoura-frozen",
+        "name": "Lucas Moura",
+        "cardName": "Moura",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "clubBadge": "",
+        "position": "RM",
+        "altPositions": [
+            "RW",
+            "ST"
+        ],
+        "rating": 86,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "Spurs vs Ajax"
+    },
+    {
+        "id": "delealli-frozen",
+        "name": "Dele Alli",
+        "cardName": "Dele",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "position": "CAM",
+        "altPositions": [
+            "CF",
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfBY0YDs7oQscbboXAlaUN3LDhpSQxurVfW4D6qcKL-jhLINcOcMokePDU&s=10",
+        "cardTheme": "frozen",
+        "match": "Spurs vs Palace"
+    },
+    {
+        "id": "messi-frozen",
+        "name": "Lionel Messi",
+        "cardName": "Messi",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "La Liga",
+        "club": "Barcelona",
+        "position": "RW",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 91,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmgukXCNAqQh5gaa-fUvB5bAw1MPUbUbQ4zmRLsRNOuegB6BtSleeNsiTm&s=10",
+        "cardTheme": "frozen",
+        "match": "Barca vs MU"
+    },
+    {
+        "id": "yamal-frozen",
+        "name": "Lamine Yamal",
+        "cardName": "Yamal",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Premier League",
+        "club": "",
+        "position": "RW",
+        "altPositions": [
+            "RM"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMVchAPy-CgKD3oyZzMGntSyHt7BLPqYXu_LrbYHRKo1ICPehQW57Bl3Sg&s=10",
+        "cardTheme": "frozen",
+        "match": "ESP vs FRA"
+    },
+    {
+        "id": "trippier-frozen",
+        "name": "Kieran Trippier",
+        "cardName": "Trippier",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "ENG vs CRO"
+    },
+    {
+        "id": "romero-frozen",
+        "name": "Cristian Romero",
+        "cardName": "Romero",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Premier League",
+        "club": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 86,
+        "photo": "https://www.thesun.co.uk/wp-content/uploads/2022/12/2022-frances-randal-kolo-muani-783760659.jpg?strip=all&w=960",
+        "cardTheme": "frozen",
+        "match": "ARG vs FRA"
+    },
+    {
+        "id": "martinez-frozen",
+        "name": "Emiliano Martínez",
+        "cardName": "E. Martínez",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Premier League",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 88,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjepML6W6NsE45mOGViuKsDbWh2yUYlZGKK_iBGfZ8qs86ThKcYS9aqqsa&s=10",
+        "cardTheme": "frozen",
+        "match": "ARG vs FRA"
+    },
+    {
+        "id": "rooney-frozen",
+        "name": "Wayne Rooney",
+        "cardName": "Rooney",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Man United",
+        "position": "ST",
+        "altPositions": [
+            "CF",
+            "CAM"
+        ],
+        "rating": 88,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFffv9KV8UBOdc2c1rezDfoVQr1wjma2gRNPI_Ivhs_sk_CjukXiKdEsF5&s=10",
+        "cardTheme": "frozen",
+        "match": "MU vs MC"
+    },
+    {
+        "id": "fabianruiz-frozen",
+        "name": "Fabián Ruiz",
+        "cardName": "F. Ruiz",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "Premier League",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 82,
+        "photo": "https://www.dhnet.be/resizer/v2/CIJXCEJZ75E3NLOWNMPCEGU7OA.jpg?auth=2364eec790435b0548640707d2065f855296fd24d4a922d53d5a3cbe9fcf0476&width=1200&height=931&quality=85&focal=561%2C435",
+        "cardTheme": "frozen",
+        "match": "ESP vs GER"
+    },
+    {
+        "id": "rice-frozen",
+        "name": "Declan Rice",
+        "cardName": "Rice",
+        "nationality": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "league": "Premier League",
+        "club": "Arsenal",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 87,
+        "photo": "",
+        "cardTheme": "frozen",
+        "match": "Arsenal vs Real"
+    },
+    {
+        "id": "lamela-frozen",
+        "name": "Erik Lamela",
+        "cardName": "Lamela",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "position": "RW",
+        "altPositions": [
+            "CAM",
+            "RM"
+        ],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyR8f36clX4QpGVgyUQCUfieAQ3k67xGYXf10uDMFpnxwH1e7JXknAdeFQ&s=10",
+        "cardTheme": "frozen",
+        "match": "Spurs vs Arsenal"
     }
 ];
 
