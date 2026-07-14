@@ -1233,6 +1233,17 @@
                 0 6px 28px rgba(0,0,0,0.75),
                 inset 0 1px 0 rgba(220,170,90,0.1) !important;
         }
+        /* MM Elite Style (OVR >= 80) */
+        .card-mm.card-mm-elite {
+            background:
+                radial-gradient(ellipse at 50% 15%, rgba(212,160,84,0.4) 0%, transparent 60%),
+                linear-gradient(160deg, #24180b 0%, #35230f 45%, #180f07 100%) !important;
+            border: 2px solid #d4a054 !important;
+            box-shadow:
+                0 0 15px rgba(212, 160, 84, 0.3),
+                0 6px 28px rgba(0,0,0,0.85),
+                inset 0 1px 0 rgba(255,220,150,0.25) !important;
+        }
         /* Film-grain + aged paper texture overlay */
         .card-mm::before {
             content: '';
@@ -1269,14 +1280,14 @@
             position: relative;
             z-index: 2;
         }
-        /* MM logo icon: vintage camera/film reel in sepia gold */
+        /* MM logo icon: stylized camera in sepia gold */
         .card-mm .panini-band::before {
             content: '';
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 28px; height: 28px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='none' stroke='%23b88a3c' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%231a0e05' stroke='%23b88a3c' stroke-width='1'/%3E%3Crect x='13' y='17' width='22' height='15' rx='2' fill='none' stroke='%23b88a3c' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24.5' r='5' fill='none' stroke='%23b88a3c' stroke-width='1.5'/%3E%3Ccircle cx='24' cy='24.5' r='2' fill='%23b88a3c'/%3E%3Crect x='10' y='20' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Crect x='35' y='20' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Crect x='10' y='25' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Crect x='35' y='25' width='3' height='3' rx='0.5' fill='%23b88a3c'/%3E%3Ctext x='24' y='14' font-family='Impact%2Csans-serif' font-size='5' fill='%23b88a3c' text-anchor='middle'%3EMM%3C/text%3E%3C/svg%3E");
+            width: 24px; height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='8' width='5' height='4' rx='1' fill='%23b88a3c'/%3E%3Cpath d='M 12 16 L 15 12 H 33 L 36 16 H 40 A 3 3 0 0 1 43 19 V 37 A 3 3 0 0 1 40 40 H 8 A 3 3 0 0 1 5 37 V 19 A 3 3 0 0 1 8 16 Z' fill='%231a0e05' stroke='%23b88a3c' stroke-width='3' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='28' r='8' fill='%231a0e05' stroke='%23b88a3c' stroke-width='3'/%3E%3Ccircle cx='24' cy='28' r='3' fill='%23b88a3c'/%3E%3Crect x='10' y='20' width='4' height='4' rx='0.5' fill='%23b88a3c'/%3E%3C/svg%3E");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -1336,6 +1347,11 @@
             background: linear-gradient(135deg, #1c1208 0%, #2a1c0c 100%) !important;
             border: 2px solid #8b6338 !important;
             box-shadow: 0 0 10px rgba(180,130,60,0.3) !important;
+        }
+        .slot-player-mini.card-mm.card-mm-elite {
+            background: linear-gradient(135deg, #24180b 0%, #1c1208 100%) !important;
+            border: 2px solid #d4a054 !important;
+            box-shadow: 0 0 12px rgba(212,160,84,0.4) !important;
         }
         .slot-player-mini.card-mm .mini-ovr {
             color: #c8943a !important;
@@ -1737,7 +1753,7 @@
                 radial-gradient(ellipse at 50% 100%, rgba(168, 85, 247, 0.25) 0%, transparent 70%),
                 linear-gradient(160deg, #010614 0%, #081d4b 55%, #180933 100%) !important;
             animation: ucl-elite-glow 4s infinite ease-in-out !important;
-            --triangle-bg: linear-gradient(135deg, transparent 50%, #ffd700 50%) !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #00f2fe 50%) !important;
             --triangle-color: #010614 !important;
         }
         .slot-player-mini.card-ucl {
@@ -5077,6 +5093,14 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const items = themeItems.filter(item => item.value !== '');
                 
                 items.forEach(item => {
+                    // Force a line break before Club Legacy (legacy_monument)
+                    if (item.value === 'legacy_monument') {
+                        const br = document.createElement('div');
+                        br.style.width = '100%';
+                        br.style.height = '0';
+                        container.appendChild(br);
+                    }
+                    
                     const label = document.createElement('label');
                     label.className = 'theme-checkbox-item';
                     
@@ -5699,7 +5723,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 return 'card-wc26 card-wc26-silver';
             }
             if (p && p.cardTheme === 'icons') return 'card-icons';
-            if (p && p.cardTheme === 'mm') return 'card-mm';
+            if (p && p.cardTheme === 'mm') {
+                if (rating >= 80) return 'card-mm card-mm-elite';
+                return 'card-mm';
+            }
             if (p && p.cardTheme === 'toty') return 'card-toty';
             if (p && p.cardTheme === 'ucl') {
                 if (rating >= 90) return 'card-ucl card-ucl-elite';
