@@ -238,6 +238,121 @@
             flex-wrap: wrap;
         }
 
+        /* Multiple Season Checkboxes Row */
+        .theme-checkbox-row {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .theme-checkbox-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .theme-checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .theme-checkbox-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.35rem 0.65rem;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: var(--transition);
+            user-select: none;
+            position: relative;
+        }
+
+        .theme-checkbox-item:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+            background: rgba(16, 185, 129, 0.04);
+        }
+
+        .theme-checkbox-item input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .theme-checkbox-item .custom-checkbox {
+            width: 13px;
+            height: 13px;
+            border: 1.5px solid var(--text-muted);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .theme-checkbox-item .custom-checkbox::after {
+            content: '';
+            width: 3px;
+            height: 6px;
+            border: solid white;
+            border-width: 0 1.5px 1.5px 0;
+            transform: rotate(45deg) scale(0);
+            transition: transform 0.15s ease;
+            margin-bottom: 2px;
+        }
+
+        .theme-checkbox-item input[type="checkbox"]:checked ~ .custom-checkbox {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+        }
+
+        .theme-checkbox-item input[type="checkbox"]:checked ~ .custom-checkbox::after {
+            transform: rotate(45deg) scale(1);
+        }
+
+        .theme-checkbox-item input[type="checkbox"]:checked ~ .theme-label-text {
+            color: #fff;
+        }
+
+        .theme-checkbox-item:has(input[type="checkbox"]:checked) {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.08);
+            box-shadow: inset 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .theme-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-right: -0.15rem;
+        }
+
+        .theme-label-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: color 0.15s ease;
+        }
+
         .filter-chip {
             display: inline-flex;
             align-items: center;
@@ -248,6 +363,53 @@
             gap: 0.4rem;
             transition: var(--transition);
             position: relative;
+        }
+
+        .ovr-range-chip {
+            padding: 0.35rem 0.85rem !important;
+            gap: 0.6rem !important;
+        }
+
+        .ovr-inputs-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .ovr-inputs-wrapper input[type="number"] {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            width: 46px;
+            height: 22px;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .ovr-inputs-wrapper input[type="number"]::-webkit-outer-spin-button,
+        .ovr-inputs-wrapper input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .ovr-inputs-wrapper input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .ovr-inputs-wrapper input[type="number"]:focus {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.08);
+            box-shadow: 0 0 4px rgba(16, 185, 129, 0.2);
+        }
+
+        .ovr-range-separator {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
         }
 
         .filter-chip label {
@@ -846,9 +1008,9 @@
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 32px;
-            height: 32px;
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIj48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQtZ3JhZCkiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTkiIGZpbGw9InJnYmEoMiwgMTIsIDI3LCAwLjg1KSIgc3Ryb2tlPSJ1cmwoI2dvbGQtZ3JhZCkiIHN0cm9rZS13aWR0aD0iMSIvPjxwYXRoIGQ9Ik0xNiAxMmgxNnYxMGMwIDQuNDItMy41OCA4LTggOHMtOC0zLjU4LTgtOFYxMnoiIGZpbGw9InVybCgjZ29sZC1ncmFkKSIvPjxwYXRoIGQ9Ik0xMyAxNGMtMS41IDAtMyAxLjUtMyAzLjVzMSAzLjUgMyAzLjVoM3YtN2gtM3ptMjIgMGMxLjUgMCAzIDEuNSAzIDMuNXMtMSAzLjUtMyAzLjVoLTN2LTdoM3oiIGZpbGw9InVybCgjZ29sZC1ncmFkKSIvPjxwYXRoIGQ9Ik0yMCAzMGg4djRoLTh6bS0yIDRoMTJ2M0gxOHoiIGZpbGw9InVybCgjZ29sZC1ncmFkKSIvPjx0ZXh0IHg9IjI0IiB5PSIyMiIgZm9udC1mYW1pbHk9IkltcGFjdCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI5IiBmaWxsPSIjMDIwYzFiIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4yNjwvdGV4dD48cGF0aCBkPSJNMjQgNWwwLjggMS42IDEuOCAwLjMtMS4zIDEuMyAwLjMgMS44LTEuNi0wLjgtMS42IDAuOCAwLjMtMS44LTEuMy0xLjMgMS44LTAuM3oiIGZpbGw9IiNmZmZmZmYiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQtZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZTg3NSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZjdiODAxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGI5NjAwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+");
+            width: 24px;
+            height: 24px;
+            background-image: url("https://assets.football-logos.cc/logos/tournaments/700x700/fifa-world-cup-2026--white.9ba8a004.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -1551,14 +1713,46 @@
             line-height: 1.1;
         }
         .card-ucl .panini-photo-silhouette { fill: rgba(0, 212, 255, 0.15) !important; }
-        .card-ucl { --triangle-bg: linear-gradient(135deg, transparent 50%, #00d4ff 50%); --triangle-color: #010614; }
+        .card-ucl {
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #0c2b70 50%) !important;
+            --triangle-color: #00d4ff !important;
+        }
+        @keyframes ucl-elite-glow {
+            0% {
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.5), inset 0 0 8px rgba(0, 212, 255, 0.2), 0 6px 28px rgba(0,0,0,0.7);
+                border-color: #00d4ff !important;
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(168, 85, 247, 0.8), inset 0 0 15px rgba(168, 85, 247, 0.4), 0 6px 28px rgba(0,0,0,0.7);
+                border-color: #a855f7 !important;
+            }
+            100% {
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.5), inset 0 0 8px rgba(0, 212, 255, 0.2), 0 6px 28px rgba(0,0,0,0.7);
+                border-color: #00d4ff !important;
+            }
+        }
+        .card-ucl.card-ucl-elite {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.35) 0%, transparent 70%),
+                radial-gradient(ellipse at 50% 100%, rgba(168, 85, 247, 0.25) 0%, transparent 70%),
+                linear-gradient(160deg, #010614 0%, #081d4b 55%, #180933 100%) !important;
+            animation: ucl-elite-glow 4s infinite ease-in-out !important;
+            --triangle-bg: linear-gradient(135deg, transparent 50%, #ffd700 50%) !important;
+            --triangle-color: #010614 !important;
+        }
         .slot-player-mini.card-ucl {
             background: linear-gradient(135deg, #010614 0%, #051435 100%) !important;
             border: 2px solid #00d4ff !important;
             box-shadow: 0 0 10px rgba(0, 212, 255, 0.35) !important;
         }
+        .slot-player-mini.card-ucl.card-ucl-elite {
+            border-color: #ffd700 !important;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
+        }
         .slot-player-mini.card-ucl .mini-ovr { color: #00d4ff !important; text-shadow: 0 0 4px rgba(0,212,255,0.5) !important; }
+        .slot-player-mini.card-ucl.card-ucl-elite .mini-ovr { color: #ffd700 !important; text-shadow: 0 0 4px rgba(255,215,0,0.5) !important; }
         .slot-player-mini.card-ucl .mini-name { color: #00d4ff !important; }
+        .slot-player-mini.card-ucl.card-ucl-elite .mini-name { color: #ffd700 !important; }
 
         /* ===== VN LEGENDS (Vietnam Legends) THEME — Crimson & Gold ===== */
         .card-vnlegends {
@@ -1997,6 +2191,7 @@
         .card-wc26 {
             --triangle-bg: linear-gradient(135deg, transparent 50%, #ffd700 50%);
             --triangle-color: #020c1b;
+            --wc26-stroke: #ffd700;
         }
         .card-icons {
             --triangle-bg: linear-gradient(135deg, transparent 50%, #2c1a04 50%);
@@ -4263,22 +4458,24 @@
 
                     <div class="filter-divider"></div>
 
-                    <!-- Season / Theme -->
-                    <div class="filter-chip custom-dropdown" id="chip-theme">
-                        <label>Mùa thẻ</label>
-                        <span class="custom-select-trigger" id="theme-trigger-val">All</span>
-                        <input type="hidden" id="filter-theme" value="">
-                        <div class="custom-dropdown-menu" id="theme-dropdown-menu"></div>
-                    </div>
-
-                    <div class="filter-divider"></div>
-
                     <!-- Sort -->
                     <div class="filter-chip custom-dropdown" id="chip-sort">
                         <label>Sắp xếp</label>
                         <span class="custom-select-trigger" id="sort-trigger-val">OVR ↓</span>
                         <input type="hidden" id="sort-by" value="rating-desc">
                         <div class="custom-dropdown-menu" id="sort-dropdown-menu"></div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <!-- OVR Range Filter -->
+                    <div class="filter-chip ovr-range-chip" id="chip-ovr-range">
+                        <label>Chỉ số OVR</label>
+                        <div class="ovr-inputs-wrapper">
+                            <input type="number" id="filter-ovr-min" min="0" max="200" placeholder="Min" oninput="applyFilters()">
+                            <span class="ovr-range-separator">-</span>
+                            <input type="number" id="filter-ovr-max" min="0" max="200" placeholder="Max" oninput="applyFilters()">
+                        </div>
                     </div>
 
                     <div id="filter-count-box" class="filter-count-box">
@@ -4288,6 +4485,11 @@
                     <button class="filter-reset-btn" onclick="resetFilters()" title="Xóa bộ lọc">
                         <i data-lucide="x" style="width:12px;height:12px;"></i> Xóa lọc
                     </button>
+                </div>
+                <!-- Checkboxes for Season/Theme -->
+                <div class="theme-checkbox-row" id="theme-checkbox-row">
+                    <span class="theme-checkbox-label">Lọc mùa thẻ:</span>
+                    <div class="theme-checkbox-group" id="theme-checkbox-container"></div>
                 </div>
             </div>
 
@@ -4817,30 +5019,81 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             // --- Theme / Season ---
             themeItems = [
                 { value: '', label: 'All', icon: '' },
-                { value: 'standard', label: 'Mùa 26', icon: '⚽' },
-                { value: 'worldcup26', label: 'WC26', icon: '🏆' },
-                { value: 'icons', label: 'Icons', icon: '⭐' },
-                { value: 'mm', label: 'Memoir', icon: '📷' },
+                {
+                    value: 'standard',
+                    label: 'Mùa 26',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="stdGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34d399" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><text x="12" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="900" fill="url(#stdGrad)" text-anchor="middle">26</text></svg>`
+                },
+                { value: 'worldcup26', label: 'WC26', icon: `<img src="https://assets.football-logos.cc/logos/tournaments/700x700/fifa-world-cup-2026--white.9ba8a004.png" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; display: inline-block;">` },
+                {
+                    value: 'icons',
+                    label: 'Icons',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="starCircleGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff2a3" /><stop offset="100%" stop-color="#ffd700" /></linearGradient></defs><circle cx="12" cy="12" r="10" fill="none" stroke="url(#starCircleGrad)" stroke-width="2" /><polygon points="12 6 13.8 9.8 18 10.3 14.8 13.2 15.7 17.4 12 15.2 8.3 17.4 9.2 13.2 6 10.3 10.2 9.8 12 6" fill="url(#starCircleGrad)" /></svg>`
+                },
+                {
+                    value: 'mm',
+                    label: 'Memoir',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="memGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ff7eb9" /><stop offset="100%" stop-color="#7652ff" /></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="url(#memGrad)" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="url(#memGrad)" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="url(#memGrad)"/></svg>`
+                },
                 {
                     value: 'ucl',
                     label: 'UCL Hero',
-                    icon: `<svg viewBox="0 0 200 200" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><g fill="#00d4ff"><polygon points="162.7,76.2 163.1,94.1 180.0,100.0 163.1,105.9 162.7,123.8 151.9,109.5 134.8,114.7 145.0,100.0 134.8,85.3 151.9,90.5"/><polygon points="161.2,127.5 148.8,140.5 156.6,156.6 140.5,148.8 127.5,161.2 130.0,143.4 114.2,135.0 131.8,131.8 135.0,114.2 143.4,130.0"/><polygon points="123.8,162.7 105.9,163.1 100.0,180.0 94.1,163.1 76.2,162.7 90.5,151.9 85.3,134.8 100.0,145.0 114.7,134.8 109.5,151.9"/><polygon points="72.5,161.2 59.5,148.8 43.4,156.6 51.2,140.5 38.8,127.5 56.6,130.0 65.0,114.2 68.2,131.8 85.8,135.0 70.0,143.4"/><polygon points="37.3,123.8 36.9,105.9 20.0,100.0 36.9,94.1 37.3,76.2 48.1,90.5 65.2,85.3 55.0,100.0 65.2,114.7 48.1,109.5"/><polygon points="38.8,72.5 51.2,59.5 43.4,43.4 59.5,51.2 72.5,38.8 70.0,56.6 85.8,65.0 68.2,68.2 65.0,85.8 56.6,70.0"/><polygon points="76.2,37.3 94.1,36.9 100.0,20.0 105.9,36.9 123.8,37.3 109.5,48.1 114.7,65.2 100.0,55.0 85.3,65.2 90.5,48.1"/><polygon points="127.5,38.8 140.5,51.2 156.6,43.4 148.8,59.5 161.2,72.5 143.4,70.0 135.0,85.8 131.8,68.2 114.2,65.0 130.0,56.6"/></g></svg>`
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="uclGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00f0ff" /><stop offset="100%" stop-color="#0055ff" /></linearGradient></defs><g transform="translate(12, 12)" fill="url(#uclGrad)"><g transform="rotate(0) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(45) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(90) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(135) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(180) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(225) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(270) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g><g transform="rotate(315) translate(0, -6.5)"><polygon points="0,-3.5 0.9,-1 3.3,-1 1.4,0.5 2.1,3 0,1.5 -2.1,3 -1.4,0.5 -3.3,-1 -0.9,-1"/></g></g></svg>`
                 },
-                { value: 'gc', label: 'Global Champions', icon: '👑' },
+                {
+                    value: 'gc',
+                    label: 'Global Champions',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffe66d" /><stop offset="100%" stop-color="#ff9f1c" /></linearGradient></defs><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" fill="url(#crownGrad)"/><rect x="5" y="18" width="14" height="2" rx="1" fill="url(#crownGrad)"/></svg>`
+                },
                 {
                     value: 'vnlegends',
                     label: 'VN Legends',
-                    icon: `<svg viewBox="0 0 48 48" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
+                    icon: `<svg viewBox="0 0 48 48" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><path d="M24 4 L38 9 V25 C38 34 24 42 24 42 C24 42 10 34 10 25 V9 Z" fill="#b91c1c" stroke="#ffd700" stroke-width="3" stroke-linejoin="round"/><path d="M24 13 l2.2 4.5 5 .4-3.6 3.3 1 4.9-4.6-2.7-4.6 2.7 1-4.9-3.6-3.3 5-.4z" fill="#ffd700"/></svg>`
                 },
-                { value: 'affglory', label: 'AFF Glory', icon: '👑' },
-                { value: 'legacy_monument', label: 'Club Legacy', icon: '🏛️' },
-                { value: 'frozen', label: 'Frozen in Time', icon: '❄️' }
+                {
+                    value: 'affglory',
+                    label: 'AFF Glory',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="affGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff2a3" /><stop offset="100%" stop-color="#ffd700" /></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="4" fill="#b91c1c" /><text x="12" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="900" fill="url(#affGold)" text-anchor="middle">AFF</text></svg>`
+                },
+                {
+                    value: 'legacy_monument',
+                    label: 'Club Legacy',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="parthenonGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b8c0ff" /><stop offset="100%" stop-color="#ffd700" /></linearGradient></defs><path fill="url(#parthenonGrad)" d="M 12 2 L 3 8 h 18 Z M 4 8 v 2 h 16 v -2 Z M 5 10 h 2 v 8 H 5 z M 9 10 h 2 v 8 H 9 z M 13 10 h 2 v 8 H 13 z M 17 10 h 2 v 8 H 17 z M 4 18 v 2 h 16 v -2 Z M 2 20 v 2 h 20 v -2 Z" /></svg>`
+                },
+                {
+                    value: 'frozen',
+                    label: 'Frozen in Time',
+                    icon: `<svg viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"><defs><linearGradient id="iceGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00ffff" /><stop offset="100%" stop-color="#0055ff" /></linearGradient></defs><g stroke="url(#iceGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(12, 12)"><g><line x1="0" y1="0" x2="0" y2="-10" /><path d="M-3,-7 L0,-10 L3,-7" /></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-10" /><path d="M-3,-7 L0,-10 L3,-7" /></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-10" /><path d="M-3,-7 L0,-10 L3,-7" /></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-10" /><path d="M-3,-7 L0,-10 L3,-7" /></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-10" /><path d="M-3,-7 L0,-10 L3,-7" /></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-10" /><path d="M-3,-7 L0,-10 L3,-7" /></g></g></svg>`
+                }
             ];
-            buildSimpleDropdown('theme-dropdown-menu', themeItems, (val, lbl) => {
-                selectCustomValue('filter-theme', 'theme-trigger-val', 'theme-dropdown-menu', val, lbl || 'All');
-                updateChipActiveStates();
-                applyFilters();
-            });
+            buildThemeCheckboxes();
+
+            function buildThemeCheckboxes() {
+                const container = document.getElementById('theme-checkbox-container');
+                if (!container) return;
+                container.innerHTML = '';
+                
+                // Exclude "All" option
+                const items = themeItems.filter(item => item.value !== '');
+                
+                items.forEach(item => {
+                    const label = document.createElement('label');
+                    label.className = 'theme-checkbox-item';
+                    
+                    const isHtml = item.icon && item.icon.trim().startsWith('<');
+                    const iconHTML = isHtml 
+                        ? item.icon 
+                        : `<span style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.1rem;">${item.icon || ''}</span>`;
+                    
+                    label.innerHTML = `
+                        <input type="checkbox" value="${item.value}" onchange="applyFilters()">
+                        <span class="custom-checkbox"></span>
+                        <div class="theme-icon-wrapper">${iconHTML}</div>
+                        <span class="theme-label-text">${item.label}</span>
+                    `;
+                    container.appendChild(label);
+                });
+            }
 
             // Initialize editor theme dropdown (exclude "All" option)
             buildSimpleDropdown('edit-theme-dropdown-menu', themeItems.filter(i => i.value !== ''), (val, lbl, icon) => {
@@ -4885,8 +5138,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 el.className = 'custom-dropdown-item';
                 
                 if (hasIcons) {
-                    const isSvg = item.icon && item.icon.trim().startsWith('<svg');
-                    const iconHTML = isSvg 
+                    const isHtml = item.icon && item.icon.trim().startsWith('<');
+                    const iconHTML = isHtml 
                         ? item.icon 
                         : `<span style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; font-size: 1.1rem;">${item.icon || ''}</span>`;
                     
@@ -4973,6 +5226,11 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 p.club = '';
                                 needsSave = true;
                             }
+                        }
+                        // Clear accidentally assigned Premier League for any card with empty club
+                        if (p.club === '' && p.league === 'Premier League') {
+                            p.league = '';
+                            needsSave = true;
                         }
                     });
 
@@ -5110,17 +5368,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     p.league = '';
                     updated = true;
                 }
-                if (!p.league && p.cardTheme !== 'icons' && p.cardTheme !== 'mm' && p.cardTheme !== 'vnlegends' && p.cardTheme !== 'affglory') {
+                if (!p.league && p.club) {
                     for (const [leagueName, data] of Object.entries(LEAGUES_DATA)) {
                         if (data.clubs.includes(p.club)) {
                             p.league = leagueName;
                             updated = true;
                             break;
                         }
-                    }
-                    if (!p.league) {
-                        p.league = "Premier League";
-                        updated = true;
                     }
                 }
             });
@@ -5336,7 +5590,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 'chip-club': 'filter-club',
                 'chip-nation': 'filter-nation',
                 'chip-position': 'filter-position',
-                'chip-theme': 'filter-theme',
                 'chip-sort': 'sort-by'
             };
             for (const [chipId, hiddenId] of Object.entries(chips)) {
@@ -5347,6 +5600,14 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                     ? hidden.value !== 'rating-desc'
                     : hidden.value !== '';
                 chip.classList.toggle('active', isActive);
+            }
+
+            // OVR Range chip active state
+            const chipOvr = document.getElementById('chip-ovr-range');
+            if (chipOvr) {
+                const minVal = document.getElementById('filter-ovr-min').value;
+                const maxVal = document.getElementById('filter-ovr-max').value;
+                chipOvr.classList.toggle('active', minVal !== '' || maxVal !== '');
             }
         }
 
@@ -5359,7 +5620,6 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 { hidden: 'filter-club',      trigger: 'club-trigger-val',     label: 'All' },
                 { hidden: 'filter-nation',    trigger: 'nation-trigger-val',   label: 'All' },
                 { hidden: 'filter-position',  trigger: 'position-trigger-val', label: 'All' },
-                { hidden: 'filter-theme',     trigger: 'theme-trigger-val',    label: 'All' },
                 { hidden: 'sort-by',          trigger: 'sort-trigger-val',     label: 'OVR ↓', value: 'rating-desc' }
             ];
             resets.forEach(r => {
@@ -5368,6 +5628,14 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 if (h) h.value = r.value !== undefined ? r.value : '';
                 if (t) t.textContent = r.label;
             });
+            // Uncheck all theme checkboxes
+            document.querySelectorAll('#theme-checkbox-container input[type="checkbox"]').forEach(cb => cb.checked = false);
+            // Reset OVR Range inputs
+            const minOvr = document.getElementById('filter-ovr-min');
+            const maxOvr = document.getElementById('filter-ovr-max');
+            if (minOvr) minOvr.value = '';
+            if (maxOvr) maxOvr.value = '';
+
             updateClubFilterOptions();
             updateChipActiveStates();
             applyFilters();
@@ -5433,7 +5701,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             if (p && p.cardTheme === 'icons') return 'card-icons';
             if (p && p.cardTheme === 'mm') return 'card-mm';
             if (p && p.cardTheme === 'toty') return 'card-toty';
-            if (p && p.cardTheme === 'ucl') return 'card-ucl';
+            if (p && p.cardTheme === 'ucl') {
+                if (rating >= 90) return 'card-ucl card-ucl-elite';
+                return 'card-ucl';
+            }
             if (p && p.cardTheme === 'vnlegends') return 'card-vnlegends';
             if (p && p.cardTheme === 'affglory') return 'card-affglory';
             if (p && p.cardTheme === 'gc') return 'card-gc';
@@ -5450,7 +5721,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         }
 
         function getCardThemeIcon(p) {
-            if (p.cardTheme === 'worldcup26') return '🏆';
+            if (p.cardTheme === 'worldcup26') return `<img src="https://assets.football-logos.cc/logos/tournaments/700x700/fifa-world-cup-2026--white.9ba8a004.png" style="width: 1.25em; height: 1.25em; object-fit: contain; vertical-align: middle; display: inline-block;">`;
             if (p.cardTheme === 'icons') return '★';
             if (p.cardTheme === 'mm') return '✦';
             if (p.cardTheme === 'toty') return '❄';
@@ -5627,10 +5898,27 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 filtered = filtered.filter(p => p.nationality === nationFilter);
             }
 
-            // Filter by card theme/season
-            const themeFilter = document.getElementById('filter-theme').value;
-            if (themeFilter) {
-                filtered = filtered.filter(p => (p.cardTheme || 'standard') === themeFilter);
+            // Filter by card theme/season (multiple checkboxes supported)
+            const checkedBoxes = document.querySelectorAll('#theme-checkbox-container input[type="checkbox"]:checked');
+            if (checkedBoxes.length > 0) {
+                const selectedThemes = Array.from(checkedBoxes).map(cb => cb.value);
+                filtered = filtered.filter(p => selectedThemes.includes(p.cardTheme || 'standard'));
+            }
+
+            // Filter by OVR range
+            const minOvrVal = document.getElementById('filter-ovr-min').value;
+            const maxOvrVal = document.getElementById('filter-ovr-max').value;
+            if (minOvrVal !== '') {
+                const minVal = parseInt(minOvrVal, 10);
+                if (!isNaN(minVal)) {
+                    filtered = filtered.filter(p => p.rating >= minVal);
+                }
+            }
+            if (maxOvrVal !== '') {
+                const maxVal = parseInt(maxOvrVal, 10);
+                if (!isNaN(maxVal)) {
+                    filtered = filtered.filter(p => p.rating <= maxVal);
+                }
             }
 
             // Filter by position categories (check main position or any alt position)
@@ -5694,8 +5982,10 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const clubFilter = document.getElementById('filter-club').value;
                 const nationFilter = document.getElementById('filter-nation').value;
                 const posFilter = document.getElementById('filter-position').value;
-                const themeFilter = document.getElementById('filter-theme').value;
-                const isFilterActive = queryRaw || leagueFilter || clubFilter || nationFilter || posFilter || themeFilter;
+                const themeChecked = document.querySelectorAll('#theme-checkbox-container input[type="checkbox"]:checked').length > 0;
+                const minOvrVal = document.getElementById('filter-ovr-min').value;
+                const maxOvrVal = document.getElementById('filter-ovr-max').value;
+                const isFilterActive = queryRaw || leagueFilter || clubFilter || nationFilter || posFilter || themeChecked || minOvrVal !== '' || maxOvrVal !== '';
 
                 if (isFilterActive) {
                     countNum.textContent = filtered.length;

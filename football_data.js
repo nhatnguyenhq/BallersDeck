@@ -198,7 +198,8 @@ const LEAGUES_DATA = {
             "Le Havre",
             "Saint-Etienne",
             "Angers",
-            "Auxerre"
+            "Auxerre",
+            "Bordeaux"
         ]
     },
     "MLS": {
@@ -2896,11 +2897,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "WC26",
         "club": "Argentina",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
-        "rating": 76,
-        "photo": "",
+        "rating": 77,
+        "photo": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTsw673GcMl83oSg932Ra8g79um72pJpHiDgxmiTUJOfigol0goza5aPWmZwoHmVSowgm75jgpuwSEK9YA",
         "cardTheme": "worldcup26"
     },
     {
@@ -8614,10 +8614,9 @@ const DEFAULT_PLAYERS = [
         "flag": "🇲🇽",
         "league": "EFL Championship",
         "club": "Wolves",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
-        "rating": 80,
+        "rating": 81,
         "photo": "https://r2.thesportsdb.com/images/media/player/cutout/w4chsd1757070949.png",
         "cardTheme": "standard"
     },
@@ -10784,12 +10783,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "gimenez-atletico",
         "name": "José María Giménez",
-        "cardName": "Giménez",
+        "cardName": "J. Giménez",
         "nationality": "Uruguay",
         "flag": "🇺🇾",
         "league": "La Liga",
         "club": "Atletico Madrid",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [],
         "rating": 83,
@@ -17415,13 +17413,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga 2",
         "club": "Girona",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "CDM"
         ],
         "rating": 77,
-        "photo": "",
+        "photo": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ-3yume-_Ym8tIB6UZQbJQLCv5SkvuOWKFbK5TZpO9DPXgGcHurYofVco-AXwhCRjaS09yFGffidOlwB0",
         "cardTheme": "standard"
     },
     {
@@ -28922,11 +28919,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇨🇻",
         "league": "WC26",
         "club": "Cape Verde",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 83,
-        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG8oi3NZt8h2N-cI2qSY_lb4Oy6W2anSc1D-YpPcXQPU4qprfs76iedxk&s=10",
+        "photo": "https://cdn2.tuoitre.vn/zoom/1200_1200/471584752817336320/2026/6/23/vozinha-ngay-22-6-read-only-1782177517456541416646-20-0-517-950-crop-17821780127241125627054.jpg",
         "cardTheme": "worldcup26"
     },
     {
@@ -33520,12 +33516,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇺🇾",
         "league": "WC26",
         "club": "Uruguay",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
-        "rating": 75,
+        "rating": 76,
         "photo": "",
         "cardTheme": "worldcup26"
     },
@@ -35545,13 +35540,12 @@ const DEFAULT_PLAYERS = [
         "flag": "🇦🇷",
         "league": "Global Champions",
         "club": "Argentina 22",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB"
         ],
         "rating": 84,
-        "photo": "https://assets.goal.com/images/v3/blt09f3c09d577a6f0d/header.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPEfmUSfm29gkX6gkJcCzQMFxfAKeMYKjy6Km6l1lRbHMJaDxymbLUVgxs&s=10",
         "cardTheme": "gc"
     },
     {
@@ -43417,7 +43411,7 @@ const DEFAULT_PLAYERS = [
             "ST",
             "LM"
         ],
-        "rating": 86,
+        "rating": 87,
         "photo": "https://a.espncdn.com/photo/2019/0417/r530653_1296x729_16-9.jpg",
         "cardTheme": "ucl"
     },
@@ -43429,12 +43423,11 @@ const DEFAULT_PLAYERS = [
         "flag": "🇳🇱",
         "league": "Eredivisie",
         "club": "Ajax",
-        "clubBadge": "",
         "position": "CM",
         "altPositions": [
             "CDM"
         ],
-        "rating": 87,
+        "rating": 86,
         "photo": "https://pbs.twimg.com/media/D4TzF07XkAIA7lQ.jpg",
         "cardTheme": "ucl"
     },
@@ -51726,20 +51719,19 @@ const DEFAULT_PLAYERS = [
     },
     {
         "id": "diego-lopez-valencia",
-        "name": "Diego López",
+        "name": "Diego López Noguerol",
         "cardName": "D. López",
         "nationality": "Spain",
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Valencia",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
         ],
         "rating": 77,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/h0ki6y1679054841.png",
+        "photo": "",
         "cardTheme": "standard"
     },
     {
@@ -56810,21 +56802,6 @@ const DEFAULT_PLAYERS = [
         "altPositions": [],
         "rating": 67,
         "photo": "",
-        "cardTheme": "standard"
-    },
-    {
-        "id": "petrovic-strasbourg",
-        "name": "Đorđe Petrović",
-        "cardName": "Petrović",
-        "nationality": "Serbia",
-        "flag": "🇷🇸",
-        "league": "Ligue 1",
-        "club": "Strasbourg",
-        "clubBadge": "",
-        "position": "GK",
-        "altPositions": [],
-        "rating": 76,
-        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zo91cp1766827442.png",
         "cardTheme": "standard"
     },
     {
@@ -62152,12 +62129,11 @@ const DEFAULT_PLAYERS = [
     {
         "id": "maldini-27-s26",
         "name": "Daniel Maldini",
-        "cardName": "Maldini",
+        "cardName": "D. Maldini",
         "nationality": "Italy",
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Lazio",
-        "clubBadge": "",
         "position": "ST",
         "altPositions": [],
         "rating": 75,
@@ -63858,14 +63834,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇹🇷",
         "league": "",
         "club": "",
-        "clubBadge": "",
         "position": "RM",
         "altPositions": [
             "CM",
             "RB"
         ],
         "rating": 82,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNVUlaKBNnctucwfcgY7tLkDD0f89uuXJdZ0hXCT_z5gQrefycZdQMPVSkF4FBZg4Sb7o7qdjto-g1JJfYSdkY9h63B3OB0bzw9npIKw&s=10",
         "cardTheme": "mm"
     },
     {
@@ -67350,11 +67325,10 @@ const DEFAULT_PLAYERS = [
         "flag": "🇷🇸",
         "league": "Premier League",
         "club": "Bournemouth",
-        "clubBadge": "",
         "position": "GK",
         "altPositions": [],
         "rating": 80,
-        "photo": "",
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/zo91cp1766827442.png",
         "cardTheme": "standard"
     },
     {
@@ -78111,14 +78085,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇪🇸",
         "league": "La Liga",
         "club": "Real Madrid",
-        "clubBadge": "",
         "position": "CB",
         "altPositions": [
             "LB",
             "RB"
         ],
         "rating": 84,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdGhY879JmEqBNXoGaULUIpQ73XQSrv_f9YXscQbdum54f2ghEFC-6gBI&s=10",
         "cardTheme": "legacy_monument"
     },
     {
@@ -80498,14 +80471,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇮🇹",
         "league": "Serie A",
         "club": "Inter Milan",
-        "clubBadge": "",
         "position": "LB",
         "altPositions": [
             "CB",
             "LWB"
         ],
         "rating": 88,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8vikfbdVBaGzIWu5f0z2qhMFvDBG0DHdxvS7D4biUFsqp5yhh2S3PnPE&s=10",
         "cardTheme": "legacy_monument"
     },
     {
@@ -80516,14 +80488,13 @@ const DEFAULT_PLAYERS = [
         "flag": "🇧🇪",
         "league": "Belgian Pro League",
         "club": "Club Brugge",
-        "clubBadge": "",
         "position": "CAM",
         "altPositions": [
             "ST",
             "CF"
         ],
         "rating": 87,
-        "photo": "",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx62_QP6o1PYNEgasLmAo0b0h3TWUnovEPur4yn2Nk94OqqPVt2TBS3y1K&s=10",
         "cardTheme": "legacy_monument"
     },
     {
@@ -81756,7 +81727,7 @@ const DEFAULT_PLAYERS = [
             "RW",
             "LM"
         ],
-        "rating": 88,
+        "rating": 89,
         "photo": "https://www.thesun.co.uk/wp-content/uploads/2020/10/a7fb9431-9ba2-4912-a718-9cf354a47f94.jpg?strip=all&w=671",
         "cardTheme": "frozen",
         "match": "Spurs vs Inter"
@@ -82148,7 +82119,7 @@ const DEFAULT_PLAYERS = [
         "rating": 86,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDCtRyrKt7lZF5RGjx4wUiNC3h4GqoKke3k3-sANHtQx0TT2UZhbJ_soI&s=10",
         "cardTheme": "frozen",
-        "match": "URU vs BRA"
+        "match": "Maracanazo"
     },
     {
         "id": "drogba-frozen",
@@ -82401,7 +82372,7 @@ const DEFAULT_PLAYERS = [
         "rating": 90,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwkvAKXNy0QfOEXlcJ-cDQ3DPvY9ySw437HZCWaO55fl3hH1SctPVO-f_T&s=10",
         "cardTheme": "frozen",
-        "match": "Bayern vs Wolfsburg"
+        "match": "5 goals in 9 min"
     },
     {
         "id": "kompany-frozen",
@@ -82483,7 +82454,7 @@ const DEFAULT_PLAYERS = [
             "CAM",
             "LM"
         ],
-        "rating": 86,
+        "rating": 87,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyKZOe0yMVbB9TJRme9tKsWW8WWGb3K3FdAwABd5NJ_TTQvNJHMwWSdysL&s=10",
         "cardTheme": "frozen",
         "match": "ESP vs ITA"
@@ -82553,10 +82524,619 @@ const DEFAULT_PLAYERS = [
             "CF",
             "CAM"
         ],
-        "rating": 86,
+        "rating": 87,
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppLiSuc53lBGLDhKH7m2OzknOdKJoqUH3923XmrXlBFKT0mslKwdhJvA&s=10",
         "cardTheme": "frozen",
-        "match": ""
+        "match": "Ars vs New"
+    },
+    {
+        "id": "player-1783980526728",
+        "name": "Santiago Bueno",
+        "cardName": "Bueno",
+        "nationality": "Uruguay",
+        "flag": "🇺🇾",
+        "league": "EFL Championship",
+        "club": "Wolves",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 76,
+        "photo": "",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "player-1783980698484",
+        "name": "Sidny Lopes Cabral",
+        "cardName": "S. Cabral",
+        "nationality": "Cape Verde",
+        "flag": "🇨🇻",
+        "league": "WC26",
+        "club": "Cape Verde",
+        "position": "LB",
+        "altPositions": [
+            "LM",
+            "LWB"
+        ],
+        "rating": 83,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_HmJAv-owJ2HFu1WAn0XNgjffZpu9erORM35ezEJdjGGd-uzdifs8Lrg&s=10",
+        "cardTheme": "frozen",
+        "match": "CPV vs ARG"
+    },
+    {
+        "id": "player-1783980782243",
+        "name": "Vozinha",
+        "cardName": "Vozinha",
+        "nationality": "Cape Verde",
+        "flag": "🇨🇻",
+        "league": "WC26",
+        "club": "Cape Verde",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 85,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG8oi3NZt8h2N-cI2qSY_lb4Oy6W2anSc1D-YpPcXQPU4qprfs76iedxk&s=10",
+        "cardTheme": "frozen",
+        "match": "CPV vs ESP"
+    },
+    {
+        "id": "player-1783981056633",
+        "name": "Toni Kroos",
+        "cardName": "Kroos",
+        "nationality": "Germany",
+        "flag": "🇩🇪",
+        "league": "",
+        "club": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 86,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlf1cynn3bdLg3fhjJPQshIF4TKN7qBf3GnVDmyPGsdkTZwE2ldr21LPk&s=10",
+        "cardTheme": "frozen",
+        "match": "GER vs SWE"
+    },
+    {
+        "id": "player-1783981093150",
+        "name": "Son Heung-min",
+        "cardName": "Son",
+        "nationality": "South Korea",
+        "flag": "🇰🇷",
+        "league": "Premier League",
+        "club": "Tottenham",
+        "position": "LW",
+        "altPositions": [
+            "ST"
+        ],
+        "rating": 84,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn-Q12flWyctVsTPf6-6YUKxuuGOs3oF8DwQVSjuA4o92wkk0icz2DYGu-&s=10",
+        "cardTheme": "frozen",
+        "match": "KOR vs GER"
+    },
+    {
+        "id": "planus-legacy",
+        "name": "Marc Planus",
+        "cardName": "Planus",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "Ligue 1",
+        "club": "Bordeaux",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 83,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyd447NniXPXlKeIqG5j037_8FdmK-Q45AGkzlDrgisSbKTQlA0Bc6g8ib&s=10",
+        "cardTheme": "legacy_monument"
+    },
+    {
+        "id": "maldini-legacy",
+        "name": "Paolo Maldini",
+        "cardName": "Maldini",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Serie A",
+        "club": "AC Milan",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 92,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ75T8rmQLolNCHAtgmGEKDxlkndUShRTBrSrC2LBZikqalKMOSceXiZpo&s=10",
+        "cardTheme": "legacy_monument"
+    },
+    {
+        "id": "c-maldini-legacy",
+        "name": "Cesare Maldini",
+        "cardName": "C. Maldini",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Serie A",
+        "club": "AC Milan",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 88,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cesare_Maldini_-_AC_Milan.jpg/250px-Cesare_Maldini_-_AC_Milan.jpg",
+        "cardTheme": "legacy_monument"
+    },
+    {
+        "id": "gabi-legacy",
+        "name": "Gabriel Fernández Arenas",
+        "cardName": "Gabi",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "La Liga",
+        "club": "Atletico Madrid",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 84,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGGWu4CbVfhikDyqAg0XKtg8KInXLxVLTskMsXCZmFbLcOOF0oe7bQbE-y&s=10",
+        "cardTheme": "legacy_monument"
+    },
+    {
+        "id": "planus-mm",
+        "name": "Marc Planus",
+        "cardName": "Planus",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "tiago-mm",
+        "name": "Tiago Mendes",
+        "cardName": "Tiago",
+        "nationality": "Portugal",
+        "flag": "🇵🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "menez-mm",
+        "name": "Jérémy Ménez",
+        "cardName": "Ménez",
+        "nationality": "France",
+        "flag": "🇫🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CF",
+        "altPositions": [
+            "LW",
+            "RW",
+            "CAM"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "storari-mm",
+        "name": "Marco Storari",
+        "cardName": "Storari",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "krohndehli-mm",
+        "name": "Michael Krohn-Dehli",
+        "cardName": "Krohn-Dehli",
+        "nationality": "Denmark",
+        "flag": "🇩🇰",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "LM",
+            "LW"
+        ],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pavon-mm",
+        "name": "Francisco Pavón",
+        "cardName": "F. Pavón",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 74,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "salgado-mm",
+        "name": "Míchel Salgado",
+        "cardName": "Salgado",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "cicinho-mm",
+        "name": "Cicinho",
+        "cardName": "Cicinho",
+        "nationality": "Brazil",
+        "flag": "🇧🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "RWB",
+            "RM"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "leenguyen-mm",
+        "name": "Lee Nguyen",
+        "cardName": "Lee Nguyen",
+        "nationality": "United States",
+        "flag": "🇺🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "diegolopez-mm",
+        "name": "Diego López Rodríguez",
+        "cardName": "Diego López",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGQRHOOsJT_4mvvv1hvsWWHdpDw7lye10H9nK2l3S7VnN-gRU_yMLdfR3sLhKvFciqLEzVS9a7l03Orv6wU9rcgyUZrbB4eVcO1AHRZs&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "gabi-mm",
+        "name": "Gabriel Fernández Arenas",
+        "cardName": "Gabi",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 82,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "canizares-mm",
+        "name": "Santiago Cañizares",
+        "cardName": "Cañizares",
+        "nationality": "Spain",
+        "flag": "🇪🇸",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1783981511725",
+        "name": "Cesare Maldini",
+        "cardName": "C. Maldini",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "position": "CB",
+        "altPositions": [
+            "LB"
+        ],
+        "rating": 86,
+        "photo": "https://img.a.transfermarkt.technology/portrait/big/174159-1459843123.jpg?lm=1",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "player-1783981565116",
+        "name": "Alessandro Costacurta",
+        "cardName": "Costacurta",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Serie A",
+        "club": "AC Milan",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 89,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJwA30SSP29ycsHZINV0s1jjRfPMeitA6jsSOru--1A&s=10",
+        "cardTheme": "legacy_monument"
+    },
+    {
+        "id": "player-1783981617614",
+        "name": "Mauro Tassotti",
+        "cardName": "Tassotti",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "Serie A",
+        "club": "AC Milan",
+        "position": "RB",
+        "altPositions": [
+            "CB"
+        ],
+        "rating": 90,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Mauro_Tassotti_Milan_1983-1984.jpg/250px-Mauro_Tassotti_Milan_1983-1984.jpg",
+        "cardTheme": "legacy_monument"
+    },
+    {
+        "id": "player-1783981826916",
+        "name": "José Manuel López",
+        "cardName": "JM López",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "Brasileirao Serie A",
+        "club": "Palmeiras",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 76,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR75QHWu__ILCGt4CMsp7zraOeOQdDCEXkqUqC7D0Znt0kvcEkw_60Ks_CN&s=10",
+        "cardTheme": "standard"
+    },
+    {
+        "id": "mirante-mm",
+        "name": "Antonio Mirante",
+        "cardName": "Mirante",
+        "nationality": "Italy",
+        "flag": "🇮🇹",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/vc74zl1675028357.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "mpetrov-mm",
+        "name": "Martin Petrov",
+        "cardName": "Petrov",
+        "nationality": "Bulgaria",
+        "flag": "🇧🇬",
+        "league": "",
+        "club": "",
+        "position": "LW",
+        "altPositions": [
+            "LM"
+        ],
+        "rating": 80,
+        "photo": "",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "kovac-mm",
+        "name": "Niko Kovač",
+        "cardName": "Kovac",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "position": "CDM",
+        "altPositions": [
+            "CM"
+        ],
+        "rating": 80,
+        "photo": "https://e2.365dm.com/08/06/480/niko-kovac_962899.jpg?20080619155910",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "klasnic-mm",
+        "name": "Ivan Klasnić",
+        "cardName": "Klasnić",
+        "nationality": "Croatia",
+        "flag": "🇭🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "ST",
+        "altPositions": [],
+        "rating": 82,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/toy20m1610998475.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "jarstein-mm",
+        "name": "Rune Jarstein",
+        "cardName": "Jarstein",
+        "nationality": "Norway",
+        "flag": "🇳🇴",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 78,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/yq6h5p1680092253.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "baird-mm",
+        "name": "Chris Baird",
+        "cardName": "Baird",
+        "nationality": "Northern Ireland",
+        "flag": "🇬🇧",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "RB",
+        "altPositions": [
+            "CB",
+            "CDM"
+        ],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/wsppvu1471355631.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "chyhrynskyi-mm",
+        "name": "Dmytro Chyhrynskyi",
+        "cardName": "Chyhrynskyi",
+        "nationality": "Ukraine",
+        "flag": "🇺🇦",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 75,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Dmytro_Chygrynskiy.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "pyatov-mm",
+        "name": "Andriy Pyatov",
+        "cardName": "Pyatov",
+        "nationality": "Ukraine",
+        "flag": "🇺🇦",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 81,
+        "photo": "https://r2.thesportsdb.com/images/media/player/thumb/vhb1ci1533306187.jpg",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "rebrov-mm",
+        "name": "Sergiy Rebrov",
+        "cardName": "Rebrov",
+        "nationality": "Ukraine",
+        "flag": "🇺🇦",
+        "league": "",
+        "club": "",
+        "position": "CF",
+        "altPositions": [
+            "ST",
+            "CAM"
+        ],
+        "rating": 84,
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUPuWoehSdldpPTaVy28xKif7j2v_DM1C4Y0BguiUHg&s=10",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "dzemaili-mm",
+        "name": "Blerim Džemaili",
+        "cardName": "Dzemaili",
+        "nationality": "Switzerland",
+        "flag": "🇨🇭",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CM",
+        "altPositions": [
+            "CDM"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/5725580.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "haltintop-mm",
+        "name": "Halil Altıntop",
+        "cardName": "H. Altintop",
+        "nationality": "Turkey",
+        "flag": "🇹🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CAM",
+        "altPositions": [
+            "ST",
+            "CF"
+        ],
+        "rating": 79,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/o8k78h1672995858.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "toprak-mm",
+        "name": "Ömer Toprak",
+        "cardName": "Toprak",
+        "nationality": "Turkey",
+        "flag": "🇹🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "CB",
+        "altPositions": [],
+        "rating": 80,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/dov6q21578084156.png",
+        "cardTheme": "mm"
+    },
+    {
+        "id": "ustari-mm",
+        "name": "Oscar Ustari",
+        "cardName": "Ustari",
+        "nationality": "Argentina",
+        "flag": "🇦🇷",
+        "league": "",
+        "club": "",
+        "clubBadge": "",
+        "position": "GK",
+        "altPositions": [],
+        "rating": 77,
+        "photo": "https://r2.thesportsdb.com/images/media/player/cutout/znrdd31750312977.png",
+        "cardTheme": "mm"
     }
 ];
 
