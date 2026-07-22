@@ -2837,6 +2837,27 @@
         .zone-stat-box.mid .zone-stat-val { color: #fde047; text-shadow: 0 0 8px rgba(234,179,8,0.4); }
         .zone-stat-box.atk .zone-stat-val { color: #fca5a5; text-shadow: 0 0 8px rgba(239,68,68,0.4); }
 
+        /* --- Chemistry Links 2.0 SVG Lines --- */
+        #chem-links-svg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: visible;
+        }
+        .chem-link-line {
+            stroke-width: 2.5px;
+            stroke-linecap: round;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .chem-link-line.visible { opacity: 1; }
+        .chem-link-3 { stroke: #22c55e; filter: drop-shadow(0 0 5px rgba(34,197,94,0.75)); }
+        .chem-link-2 { stroke: #eab308; filter: drop-shadow(0 0 4px rgba(234,179,8,0.65)); }
+        .chem-link-1 { stroke: #f97316; filter: drop-shadow(0 0 3px rgba(249,115,22,0.55)); }
+        .chem-link-0 { stroke: rgba(255,255,255,0.22); stroke-dasharray: 5 4; }
+
         /* --- Chemistry bar --- */
         .chem-block {
             background: var(--bg-darker);
@@ -4533,6 +4554,8 @@
                         <div class="pitch-corner-tr"></div>
                         <div class="pitch-corner-br"></div>
                     </div>
+                    <!-- Chemistry Links 2.0 SVG Overlay -->
+                    <svg id="chem-links-svg" xmlns="http://www.w3.org/2000/svg"></svg>
                     <!-- Dynamically generated slots will go here -->
                 </div>
 
@@ -4564,7 +4587,7 @@
                     <div class="chem-block">
                         <div class="chem-header">
                             <span class="chem-label">⚗ Chemistry</span>
-                            <span class="chem-score" id="team-chemistry">0/33</span>
+                            <span class="chem-score" id="team-chemistry">0</span>
                         </div>
                         <div class="chem-bar-track">
                             <div class="chem-bar-fill" id="chem-bar-fill"></div>
@@ -5194,7 +5217,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
 
         // Load data from LocalStorage or seed defaults
         const DB_VERSION_KEY = 'pitchdeck_db_version_v3';
-        const DB_CURRENT_VERSION = 'v5.4';
+        const DB_CURRENT_VERSION = 'v5.9';
 
         function loadDatabase() {
             const savedVersion = localStorage.getItem(DB_VERSION_KEY);
@@ -6729,6 +6752,8 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 pitch.appendChild(slotDiv);
             }
             lucide.createIcons();
+            // Chemistry Links 2.0: redraw after pitch is built
+            requestAnimationFrame(drawChemLinks);
         }
 
         function changeFormation() {
@@ -7047,23 +7072,27 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 const p = item.player;
                 const slot = item.slot;
 
-                let posMatch = false;
-                if (slot.includes("GK") && p.position === "GK") posMatch = true;
-                else if ((slot.includes("ST") || slot.includes("LW") || slot.includes("RW")) && ["ST", "CF", "LW", "RW"].includes(p.position)) posMatch = true;
-                else if ((slot.includes("CM") || slot.includes("DM") || slot.includes("CAM")) && ["CM", "CDM", "CAM"].includes(p.position)) posMatch = true;
-                else if ((slot.includes("LM") || slot.includes("RM")) && ["LM", "RM", "LW", "RW"].includes(p.position)) posMatch = true;
-                else if ((slot.includes("CB") || slot.includes("DF")) && p.position === "CB") posMatch = true;
-                else if ((slot.includes("LB") || slot.includes("RB")) && ["LB", "RB", "CB"].includes(p.position)) posMatch = true;
+                if (p.cardTheme === 'icons') {
+                    pChem = 3;
+                } else {
+                    let posMatch = false;
+                    if (slot.includes("GK") && p.position === "GK") posMatch = true;
+                    else if ((slot.includes("ST") || slot.includes("LW") || slot.includes("RW")) && ["ST", "CF", "LW", "RW"].includes(p.position)) posMatch = true;
+                    else if ((slot.includes("CM") || slot.includes("DM") || slot.includes("CAM")) && ["CM", "CDM", "CAM"].includes(p.position)) posMatch = true;
+                    else if ((slot.includes("LM") || slot.includes("RM")) && ["LM", "RM", "LW", "RW"].includes(p.position)) posMatch = true;
+                    else if ((slot.includes("CB") || slot.includes("DF")) && p.position === "CB") posMatch = true;
+                    else if ((slot.includes("LB") || slot.includes("RB")) && ["LB", "RB", "CB"].includes(p.position)) posMatch = true;
 
-                if (posMatch) pChem += 1;
+                    if (posMatch) pChem += 1;
 
-                const sameClubCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.club === p.club).length;
-                if (sameClubCount >= 2) pChem += 1;
-                else if (sameClubCount >= 1 && pChem < 2) pChem += 1;
+                    const sameClubCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.club === p.club).length;
+                    if (sameClubCount >= 2) pChem += 1;
+                    else if (sameClubCount >= 1 && pChem < 2) pChem += 1;
 
-                const sameNationCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.nationality === p.nationality).length;
-                if (sameNationCount >= 2) pChem += 1;
-                else if (sameNationCount >= 1 && pChem < 3) pChem += 1;
+                    const sameNationCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.nationality === p.nationality).length;
+                    if (sameNationCount >= 2) pChem += 1;
+                    else if (sameNationCount >= 1 && pChem < 3) pChem += 1;
+                }
 
                 totalChem += Math.min(3, pChem);
             });
@@ -7071,18 +7100,21 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const maxPossibleChem = count * 3;
             const chemEl = document.getElementById('team-chemistry');
             const chemBar = document.getElementById('chem-bar-fill');
-            chemEl.textContent = `${totalChem}/${maxPossibleChem}`;
 
-            const chemPct = maxPossibleChem > 0 ? (totalChem / maxPossibleChem) * 100 : 0;
+            // Chemistry hệ 100
+            const chem100 = maxPossibleChem > 0 ? Math.round((totalChem / maxPossibleChem) * 100) : 0;
+            chemEl.textContent = chem100;
+
+            const chemPct = chem100;
             if (chemBar) chemBar.style.width = chemPct + '%';
 
             let chemColor = 'var(--text-muted)';
             let barColor = 'rgba(255,255,255,0.2)';
-            if (count === 11) {
-                if (totalChem >= 28) {
+            if (count > 0) {
+                if (chem100 >= 85) {
                     chemColor = 'var(--accent)';
                     barColor = 'var(--accent)';
-                } else if (totalChem >= 15) {
+                } else if (chem100 >= 50) {
                     chemColor = '#e5a93b';
                     barColor = '#e5a93b';
                 } else {
@@ -7092,6 +7124,109 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             }
             chemEl.style.color = chemColor;
             if (chemBar) chemBar.style.background = barColor;
+
+            // Chemistry Links 2.0: redraw after stats update
+            requestAnimationFrame(drawChemLinks);
+        }
+
+        // --- Chemistry Links 2.0: Draw connection lines between adjacent slots ---
+        function drawChemLinks() {
+            const svg = document.getElementById('chem-links-svg');
+            const pitch = document.getElementById('football-pitch');
+            if (!svg || !pitch) return;
+
+            const formationVal = document.getElementById('formation-select').value;
+            const slotsData = FORMATIONS[formationVal];
+            if (!slotsData) return;
+
+            // Gather slot elements and their center positions relative to pitch
+            const pitchRect = pitch.getBoundingClientRect();
+            const slotInfos = [];
+
+            Object.keys(slotsData).forEach(slotKey => {
+                const slotEl = pitch.querySelector(`[data-slot="${slotKey}"]`);
+                if (!slotEl) return;
+                const r = slotEl.getBoundingClientRect();
+                const cx = r.left + r.width / 2 - pitchRect.left;
+                const cy = r.top + r.height / 2 - pitchRect.top;
+
+                const playerId = squad[slotKey];
+                const player = players.find(p => p.id === playerId) || null;
+
+                slotInfos.push({ slotKey, cx, cy, player });
+            });
+
+            if (slotInfos.length === 0) { svg.innerHTML = ''; return; }
+
+            // Auto-adjacency: connect truly adjacent pairs only (FIFA/FC style)
+            // Threshold = 28% of pitch diagonal — tight enough to exclude cross-pitch links (LB↔RB, GK↔CAM)
+            const pitchW = pitchRect.width;
+            const pitchH = pitchRect.height;
+            const threshold = Math.sqrt(pitchW * pitchW + pitchH * pitchH) * 0.28;
+
+            // Build unique pairs
+            const pairs = [];
+            const seen = new Set();
+            for (let i = 0; i < slotInfos.length; i++) {
+                for (let j = i + 1; j < slotInfos.length; j++) {
+                    const a = slotInfos[i];
+                    const b = slotInfos[j];
+                    const dx = a.cx - b.cx;
+                    const dy = a.cy - b.cy;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    // Check forced extra link for 4-3-3 and 3-4-3 (ST <-> LCM/RCM)
+                    let isForcedLink = false;
+                    if (formationVal.startsWith('4-3-3') || formationVal.startsWith('3-4-3')) {
+                        const keys = [a.slotKey, b.slotKey];
+                        if (keys.includes('ST')) {
+                            const otherKey = keys.find(k => k !== 'ST');
+                            if (['LCM', 'RCM', 'LCDM', 'RCDM', 'LDM', 'RDM'].includes(otherKey)) {
+                                isForcedLink = true;
+                            }
+                        }
+                    }
+
+                    if (dist < threshold || isForcedLink) {
+                        const key = [a.slotKey, b.slotKey].sort().join('|');
+                        if (!seen.has(key)) {
+                            seen.add(key);
+                            pairs.push({ a, b });
+                        }
+                    }
+                }
+            }
+
+            // Clear and rebuild SVG
+            svg.innerHTML = '';
+            const svgW = pitchRect.width;
+            const svgH = pitchRect.height;
+            svg.setAttribute('viewBox', `0 0 ${svgW} ${svgH}`);
+
+            pairs.forEach(({ a, b }) => {
+                let score = 0;
+                if (a.player && b.player) {
+                    if (a.player.cardTheme === 'icons' || b.player.cardTheme === 'icons') {
+                        score = 3;
+                    } else {
+                        if (a.player.club && b.player.club && a.player.club === b.player.club) score++;
+                        if (a.player.nationality && b.player.nationality && a.player.nationality === b.player.nationality) score++;
+                        if (a.player.league && b.player.league && a.player.league === b.player.league) score++;
+                    }
+                }
+
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', a.cx);
+                line.setAttribute('y1', a.cy);
+                line.setAttribute('x2', b.cx);
+                line.setAttribute('y2', b.cy);
+                line.classList.add('chem-link-line', `chem-link-${score}`);
+                svg.appendChild(line);
+            });
+
+            // Animate in
+            requestAnimationFrame(() => {
+                svg.querySelectorAll('.chem-link-line').forEach(l => l.classList.add('visible'));
+            });
         }
 
         // --- Formation custom dropdown (2-level: Back 3 / Back 4 / Back 5) ---
@@ -7318,7 +7453,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
         function getSquadStatsForSim() {
             const formationVal = document.getElementById('formation-select').value;
             if (!FORMATIONS[formationVal]) {
-                return { atk: 60, def: 60, mid: 60, count: 0 };
+                return { atk: 60, def: 60, mid: 60, chem: 0, count: 0 };
             }
             const slots = Object.keys(FORMATIONS[formationVal]);
             
@@ -7327,6 +7462,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             let defTotal = 0, defCount = 0;
             let midTotal = 0, midCount = 0;
             let atkTotal = 0, atkCount = 0;
+            let activePlayersOnPitch = [];
 
             slots.forEach(slot => {
                 const pid = squad[slot];
@@ -7334,6 +7470,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 if (player) {
                     totalRating += player.rating;
                     count++;
+                    activePlayersOnPitch.push({ player, slot });
                     const s = slot.toUpperCase();
                     if (s.includes('GK') || s.includes('CB') || s.includes('LB') || s.includes('RB') || s.includes('LWB') || s.includes('RWB') || s.includes('DF')) {
                         defTotal += player.rating; defCount++;
@@ -7345,10 +7482,44 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                 }
             });
 
+            let totalChem = 0;
+            activePlayersOnPitch.forEach(item => {
+                let pChem = 0;
+                const p = item.player;
+                const slot = item.slot;
+
+                if (p.cardTheme === 'icons') {
+                    pChem = 3;
+                } else {
+                    let posMatch = false;
+                    if (slot.includes("GK") && p.position === "GK") posMatch = true;
+                    else if ((slot.includes("ST") || slot.includes("LW") || slot.includes("RW")) && ["ST", "CF", "LW", "RW"].includes(p.position)) posMatch = true;
+                    else if ((slot.includes("CM") || slot.includes("DM") || slot.includes("CAM")) && ["CM", "CDM", "CAM"].includes(p.position)) posMatch = true;
+                    else if ((slot.includes("LM") || slot.includes("RM")) && ["LM", "RM", "LW", "RW"].includes(p.position)) posMatch = true;
+                    else if ((slot.includes("CB") || slot.includes("DF")) && p.position === "CB") posMatch = true;
+                    else if ((slot.includes("LB") || slot.includes("RB")) && ["LB", "RB", "CB"].includes(p.position)) posMatch = true;
+
+                    if (posMatch) pChem += 1;
+
+                    const sameClubCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.club === p.club).length;
+                    if (sameClubCount >= 2) pChem += 1;
+                    else if (sameClubCount >= 1 && pChem < 2) pChem += 1;
+
+                    const sameNationCount = activePlayersOnPitch.filter(x => x.player.id !== p.id && x.player.nationality === p.nationality).length;
+                    if (sameNationCount >= 2) pChem += 1;
+                    else if (sameNationCount >= 1 && pChem < 3) pChem += 1;
+                }
+                totalChem += Math.min(3, pChem);
+            });
+
+            const maxPossibleChem = count * 3;
+            const chem100 = maxPossibleChem > 0 ? Math.round((totalChem / maxPossibleChem) * 100) : 0;
+
             return {
                 atk: atkCount > 0 ? Math.round(atkTotal / atkCount) : 60,
                 def: defCount > 0 ? Math.round(defTotal / defCount) : 60,
                 mid: midCount > 0 ? Math.round(midTotal / midCount) : 60,
+                chem: chem100,
                 count: count
             };
         }
@@ -7394,9 +7565,13 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
                                 <div class="sim-setup-stat-label">⚙️ Tuyến giữa</div>
                                 <div class="sim-setup-stat-value" style="color: #3b82f6;">${stats.mid}</div>
                             </div>
-                            <div class="sim-setup-stat-item">
+                            <div class="sim-setup-stat-item" style="border-right: 1px solid rgba(201,162,39,0.15);">
                                 <div class="sim-setup-stat-label">🛡️ Phòng thủ</div>
                                 <div class="sim-setup-stat-value" style="color: #10b981;">${stats.def}</div>
+                            </div>
+                            <div class="sim-setup-stat-item">
+                                <div class="sim-setup-stat-label">⚗️ Chemistry</div>
+                                <div class="sim-setup-stat-value" style="color: #22c55e;">${stats.chem}</div>
                             </div>
                         </div>
 
@@ -7458,7 +7633,7 @@ const FORMATIONS = ${JSON.stringify(FORMATIONS, null, 4)};
             const teamName = teamNameInput ? teamNameInput.value.trim() || "My Squad" : "My Squad";
             const stats = getSquadStatsForSim();
 
-            window.currentUCLSim = new UCLSimulation(teamName, stats.atk, stats.def, stats.mid);
+            window.currentUCLSim = new UCLSimulation(teamName, stats.atk, stats.def, stats.mid, stats.chem);
             window.currentUCLSim.drawTeams();
             showToast("Bốc thăm thành công! Khởi tạo lịch thi đấu Swiss Stage 8 vòng đấu.");
             renderSimulationDashboard();

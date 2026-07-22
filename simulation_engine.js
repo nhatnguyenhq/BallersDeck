@@ -91,7 +91,7 @@
             { name: "Anderlecht", prob: 0.30, atk: 74, def: 72, mid: 72 }
         ],
         "TUR": [
-            { name: "Galatasaray", prob: 0.70, atk: 78, def: 75, mid: 75 },
+            { name: "Galatasaray", prob: 0.70, atk: 79, def: 76, mid: 76 },
             { name: "Fenerbahçe", prob: 0.55, atk: 77, def: 74, mid: 74 },
             { name: "Beşiktaş", prob: 0.20, atk: 73, def: 71, mid: 71 },
             { name: "İstanbul Başakşehir", prob: 0.12, atk: 70, def: 69, mid: 68 }
@@ -158,7 +158,7 @@
             { name: "Elfsborg", prob: 0.01, atk: 65, def: 65, mid: 64 }
         ],
         "NOR": [
-            { name: "Bodo/Glimt", prob: 0.30, atk: 72, def: 70, mid: 70 },
+            { name: "Bodo/Glimt", prob: 0.30, atk: 73, def: 71, mid: 71 },
             { name: "Rosenborg", prob: 0.01, atk: 64, def: 63, mid: 62 }
         ],
         "BUL": [
@@ -2471,9 +2471,9 @@
 
     // 2. BỘ ĐIỀU PHỐI GIẢI ĐẤU
     class UCLSimulation {
-        constructor(userSquadName, userAtk, userDef, userMid) {
+        constructor(userSquadName, userAtk, userDef, userMid, userChem = 100) {
             this.userSquadName = userSquadName || "My Squad";
-            this.userStats = { name: this.userSquadName, country: "USR", atk: userAtk, def: userDef, mid: userMid, isUser: true };
+            this.userStats = { name: this.userSquadName, country: "USR", atk: userAtk, def: userDef, mid: userMid, chem: userChem, isUser: true };
             this.teams = [];
             this.swissTable = [];
             this.swissMatches = []; // mảng chứa tất cả trận của 8 vòng
@@ -2861,6 +2861,33 @@
             return Math.random() < probA ? teamA : teamB;
         }
 
+        // Tính điểm phong độ ngẫu nhiên dựa trên Chemistry (Phương án 2)
+        calculateFormFactor(chem) {
+            const c = (chem !== undefined && chem !== null) ? Math.max(0, Math.min(100, chem)) : 100;
+            let minForm = -5.0;
+            let maxForm = 5.0;
+
+            if (c >= 60) {
+                // Chem >= 60: Hưởng lợi (tăng độ ổn định, bóp nghẹt nguy cơ rớt phong độ)
+                // chem=60: [-3.5, +5.0] | chem=100: [0.0, +6.0]
+                const t = (c - 60) / 40;
+                minForm = -3.5 + t * 3.5;
+                maxForm = 5.0 + t * 1.0;
+            } else if (c >= 40) {
+                // Chem 40 - 59: Trung lập [-5.0, +5.0]
+                minForm = -5.0;
+                maxForm = 5.0;
+            } else {
+                // Chem < 40: Thiệt hại (tăng rủi ro thi đấu kém)
+                // chem=39: [-6.0, +4.5] | chem=0: [-10.0, +2.0]
+                const t = (40 - c) / 40;
+                minForm = -5.0 - t * 5.0;
+                maxForm = 5.0 - t * 3.0;
+            }
+
+            return minForm + Math.random() * (maxForm - minForm);
+        }
+
         // Mô phỏng 1 trận đấu
         simulateMatch(teamA, teamB, isHome, leg1Score = null) {
             let atkA = teamA.atk;
@@ -2917,9 +2944,12 @@
             if (isHome) rA += 2.0; // Lợi thế sân nhà thực tế
             else rB += 2.0;
             
-            // Hệ số biến thiên ngẫu nhiên (-5.0 đến +5.0) cho form đấu
-            let formA = (Math.random() - 0.5) * 10;
-            let formB = (Math.random() - 0.5) * 10;
+            // Hệ số biến thiên ngẫu nhiên phong độ (Phương án 2: Consistency Control dựa vào Chemistry)
+            // Chem >= 60: Hưởng lợi (tăng độ ổn định, bóp nguy cơ rớt phong độ)
+            // Chem 40 - 59: Trung lập [-5.0, +5.0]
+            // Chem < 40: Thiệt hại (tăng rủi ro thi đấu kém)
+            let formA = this.calculateFormFactor(teamA.chem);
+            let formB = this.calculateFormFactor(teamB.chem);
             
             let powerA = rA + formA;
             let powerB = rB + formB;
